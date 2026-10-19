@@ -2,8 +2,8 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/kitap/:slug/:bolum", "destination": "/oku.html" },
-    { "source": "/kitap/:slug", "destination": "/kitap.html" }
+    { "source": "/kitap/:slug/:bolum", "destination": "/oku" },
+    { "source": "/kitap/:slug", "destination": "/kitap" }
   ],
   "headers": [
     {
