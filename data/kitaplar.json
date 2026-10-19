@@ -14,7 +14,8 @@
           "baslik": "Havf bâbı",
           "ar": "باب قول الله تعالى: ﴿إِنَّمَا ذَلِكُمُ الشَّيْطَانُ يُخَوِّفُ أَوْلِيَاءَهُ﴾",
           "alt": "Önsöz · Âl-i İmrân 175 · Tevbe 18 · Ankebût 10",
-          "dosya": "32-havf.html"
+          "dosya": "32-havf.html",
+          "kisa": "32. Bâb"
         }
       ]
     },
@@ -31,14 +32,16 @@
           "no": 5,
           "baslik": "Resûlullah'ın ﷺ getirdiği bir şeye buğzetmek",
           "ar": "الخامس: من أبغض شيئا مما جاء به الرسول ﷺ",
-          "dosya": "05-bugz.html"
+          "dosya": "05-bugz.html",
+          "kisa": "5. Nâkıd"
         },
         {
           "id": "7",
           "no": 7,
           "baslik": "Sihir",
           "ar": "السابع: السحر",
-          "dosya": "07-sihir.html"
+          "dosya": "07-sihir.html",
+          "kisa": "7. Nâkıd"
         }
       ]
     },
@@ -66,7 +69,80 @@
       "yazar": "Abdurrahman es-Sa'dî",
       "alt": "Beyit beyit dersler",
       "renk": "#7A4E0E",
-      "bolumler": []
+      "bolumler": [
+        {
+          "id": "40",
+          "no": 40,
+          "kisa": "40. Beyit",
+          "baslik": "Hüküm, illetiyle beraber döner",
+          "ar": "وَكُلُّ حُكْمٍ دَائِرٌ مَعَ عِلَّتِهِ . . . وَهِيَ الَّتِي قَدْ أَوْجَبَتْ لِشِرْعَتِهِ",
+          "alt": "50.–51. Dersler",
+          "dosya": "beyit-40.html"
+        },
+        {
+          "id": "41-42",
+          "etiket": "41–42",
+          "kisa": "41.–42. Beyitler",
+          "baslik": "Akitlerdeki şartlar bağlayıcıdır",
+          "ar": "وَكُلُّ شَرْطٍ لَازِمٌ لِلْعَاقِدِ . . . فِي الْبَيْعِ وَالنِّكَاحِ وَالْمَقَاصِدِ",
+          "alt": "52.–53. Dersler",
+          "dosya": "beyit-41-42.html"
+        },
+        {
+          "id": "43",
+          "no": 43,
+          "kisa": "43. Beyit",
+          "baslik": "Kur'a ne zaman kullanılır?",
+          "ar": "تُسْتَعْمَلُ الْقُرْعَةُ عِنْدَ الْمُبْهَمِ . . . مِنَ الْحُقُوقِ أَوْ لَدَى التَّزَاحُمِ",
+          "alt": "53.–54. Dersler",
+          "dosya": "beyit-43.html"
+        },
+        {
+          "id": "44",
+          "no": 44,
+          "kisa": "44. Beyit",
+          "baslik": "İbadetlerin tedâhülü",
+          "ar": "وَإِنْ تَسَاوَى الْعَمَلَانِ اجْتَمَعَا . . . وَفِعْلُ أَحَدِهِمَا فَاسْتَمِعَا",
+          "alt": "54.–55. Dersler",
+          "dosya": "beyit-44.html"
+        },
+        {
+          "id": "45",
+          "no": 45,
+          "kisa": "45. Beyit",
+          "baslik": "Meşgul olan şey, başka bir şeyle meşgul edilmez",
+          "ar": "وَكُلُّ مَشْغُولٍ فَلَا يُشَغَّلُ . . . مِثَالُهُ الْمَرْهُونُ وَالْمُسَبَّلُ",
+          "alt": "56. Ders",
+          "dosya": "beyit-45.html"
+        },
+        {
+          "id": "46",
+          "no": 46,
+          "kisa": "46. Beyit",
+          "baslik": "Başkasının yerine vacip bir hakkı ödeyenin geri isteme hakkı",
+          "ar": "وَمَنْ يُؤَدِّ عَنْ أَخِيهِ وَاجِبًا . . . لَهُ الرُّجُوعُ إِنْ نَوَى يُطَالِبَا",
+          "alt": "57. Ders",
+          "dosya": "beyit-46.html"
+        },
+        {
+          "id": "47",
+          "no": 47,
+          "kisa": "47. Beyit",
+          "baslik": "Tabiî engel ile şer'î engelin aynı hükümde olması",
+          "ar": "وَالْوَازِعُ الطَّبْعِيُّ عَنِ الْعِصْيَانِ . . . كَالْوَازِعِ الشَّرْعِيِّ بِلَا نُكْرَانِ",
+          "alt": "58. Ders",
+          "dosya": "beyit-47.html"
+        },
+        {
+          "id": "48-49",
+          "etiket": "48–49",
+          "kisa": "48.–49. Beyitler",
+          "baslik": "Manzûmenin hâtimesi: hamd, salât ve selâm",
+          "ar": "وَالْحَمْدُ لِلَّهِ عَلَى التَّمَامِ . . . فِي الْبَدْءِ وَالْخِتَامِ وَالدَّوَامِ",
+          "alt": "59. Ders",
+          "dosya": "beyit-48-49.html"
+        }
+      ]
     },
     {
       "slug": "siyer",

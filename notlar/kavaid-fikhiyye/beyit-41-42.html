@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kavâid-i Fıkhiyye · 41.–42. Beyitler</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#123a5f;
+    --navy-soft:#1d5183;
+    --ink:#20262e;
+    --ink-soft:#4a5462;
+    --paper:#fbfaf7;
+    --card:#ffffff;
+    --rule:#e2ddd3;
+
+    --green:#1e6b46;
+    --green-bg:#eef7f1;
+    --green-edge:#a8d3bb;
+
+    --amber:#8a5a12;
+    --amber-bg:#fdf5e6;
+    --amber-edge:#e2c184;
+
+    --blue:#1a4f80;
+    --blue-bg:#eef4fa;
+    --blue-edge:#a9c6e2;
+
+    --bordo:#75194c;
+    --bordo-bg:#fbf2f6;
+    --bordo-edge:#e3c3d4;
+
+    --red:#8d2f2f;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Source Serif 4","Cambria","Georgia",serif;
+    font-size:18px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .sayfa{
+    max-width:820px;
+    margin:0 auto;
+    padding:0 26px 90px;
+  }
+
+  /* ---------- KAPAK ---------- */
+  header.kapak{
+    color:var(--bordo);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:56px 0;
+    margin-bottom:60px;
+  }
+  header.kapak .marka{
+    font-size:.95rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:#d54220;
+    font-weight:600;
+    line-height:1.7;
+    max-width:26ch;
+  }
+  header.kapak .marka-cizgi{
+    width:120px;
+    height:1px;
+    background:var(--rule);
+    margin:26px auto 34px;
+  }
+  header.kapak h1{
+    font-size:clamp(3.3rem,9.5vw,5.8rem);
+    line-height:1.1;
+    color:var(--bordo);
+    margin:0;
+    font-weight:700;
+    letter-spacing:-.015em;
+    max-width:15ch;
+  }
+  header.kapak .altbaslik{
+    font-size:1.16rem;
+    color:var(--bordo);
+    font-style:italic;
+    margin:34px 0 0;
+    max-width:38ch;
+    line-height:1.7;
+  }
+  header.kapak .kunye{
+    margin-top:0;
+    padding-top:72px;
+    font-size:.94rem;
+    color:var(--bordo);
+    letter-spacing:.09em;
+  }
+  header.kapak .kapak-ayet{
+    max-width:540px;
+    margin:0 auto 10px;
+    font-size:1.04rem;
+    line-height:1.75;
+    letter-spacing:0;
+    font-style:italic;
+    color:var(--bordo);
+  }
+  header.kapak .kapak-ayet-kaynak{
+    margin:0;
+    font-size:.86rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  header.kapak .kunye .cizgi{
+    width:56px;
+    height:2px;
+    background:var(--bordo);
+    margin:0 auto 18px;
+  }
+  .besmele{
+    font-family:"Scheherazade New",serif;
+    font-size:2.5rem;
+    color:var(--bordo);
+    direction:rtl;
+    margin:0 0 46px;
+  }
+
+  /* ---------- NÂKID ---------- */
+  section.nakid{margin-bottom:70px;}
+
+  .nakid-baslik{
+    background:var(--navy);
+    color:#fff;
+    border-radius:4px;
+    padding:22px 28px;
+    margin-bottom:34px;
+  }
+  .nakid-baslik .etiket{
+    display:block;
+    font-size:.74rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    opacity:.72;
+    margin-bottom:8px;
+  }
+  .nakid-baslik h2{
+    margin:0;
+    font-size:1.42rem;
+    line-height:1.45;
+    font-weight:600;
+  }
+
+  /* ---------- METİN (müellifin sözü) ---------- */
+  .metin{
+    background:var(--bordo-bg);
+    border:1px solid var(--bordo-edge);
+    border-top:5px solid var(--bordo);
+    border-radius:4px;
+    padding:28px 32px 26px;
+    margin:0 0 20px;
+  }
+  .metin .metin-etiket{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px 12px;
+    font-size:.78rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--bordo);
+    margin-bottom:18px;
+  }
+  .metin .metin-etiket .rozet{
+    background:var(--bordo);
+    color:#fff;
+    padding:3px 11px;
+    border-radius:3px;
+    letter-spacing:.2em;
+  }
+  .metin .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:2rem;
+    line-height:2.1;
+    direction:rtl;
+    text-align:right;
+    color:var(--bordo);
+    margin:0 0 18px;
+  }
+  .metin .tr{
+    margin:0;
+    padding-top:16px;
+    border-top:1px dotted var(--bordo-edge);
+    font-size:1.06rem;
+  }
+
+  /* ---------- ŞERH AYRACI ---------- */
+  .serh-ayrac{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin:54px 0 10px;
+    color:var(--navy);
+  }
+  .serh-ayrac::before,.serh-ayrac::after{
+    content:"";
+    flex:1;
+    height:2px;
+    background:var(--navy-soft);
+    opacity:.35;
+  }
+  .serh-ayrac span{
+    font-size:1.05rem;
+    font-weight:700;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+  }
+
+  h3.altbolum{
+    font-size:1.55rem;
+    line-height:1.4;
+    color:var(--navy);
+    margin:60px 0 20px;
+    padding-bottom:12px;
+    border-bottom:3px solid var(--rule);
+    font-weight:700;
+  }
+  h3.altbolum .no{
+    display:inline-block;
+    min-width:38px;
+    height:38px;
+    line-height:38px;
+    text-align:center;
+    background:var(--navy-soft);
+    color:#fff;
+    border-radius:50%;
+    font-size:1rem;
+    margin-right:13px;
+    vertical-align:3px;
+  }
+
+  p{margin:0 0 17px;}
+
+  h4.kisim{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:1.2rem;
+    color:var(--navy-soft);
+    margin:34px 0 12px;
+    font-weight:700;
+  }
+  h4.kisim .no{
+    flex:0 0 auto;
+    width:28px;
+    height:28px;
+    line-height:25px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    background:var(--card);
+    font-size:.82rem;
+  }
+  .kisim-govde{
+    border-left:2px solid var(--rule);
+    margin-left:13px;
+    padding-left:27px;
+  }
+
+  .delil{
+    display:grid;
+    grid-template-columns:34px 1fr;
+    gap:0 18px;
+    margin:30px 0;
+    padding-bottom:8px;
+    border-bottom:1px dotted var(--rule);
+  }
+  .delil:last-of-type{border-bottom:none;}
+  .delil > .no{
+    width:34px;
+    height:34px;
+    line-height:34px;
+    text-align:center;
+    border-radius:50%;
+    background:var(--navy);
+    color:#fff;
+    font-size:.88rem;
+    font-weight:700;
+    margin-top:2px;
+  }
+  .delil > .govde > .blok:first-child{margin-top:0;}
+  .delil-etiket{
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--navy);
+    margin:6px 0 12px;
+  }
+  .delil > .govde > .delil-etiket + .blok{margin-top:0;}
+
+  .ikaz{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-left:5px solid var(--red);
+    border-radius:4px;
+    padding:20px 26px 6px;
+    margin:28px 0;
+  }
+  .ikaz .ikaz-etiket{
+    display:block;
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--red);
+    margin-bottom:10px;
+  }
+  .ikaz ol.sayili{margin:10px 0 14px;}
+  ol.sayili li p.alt-tanim{margin:10px 0 0;padding-left:14px;border-left:2px solid var(--rule);}
+  ol.sayili > li > p{margin:12px 0 0;}
+  ol.sayili li .blok{margin:16px 0 8px;}
+  ul.madde li .blok{margin:14px 0 8px;}
+  ol.sayili > li ul.madde{margin:12px 0 4px;}
+  h4.kisim .baslik-alt{font-weight:400;color:var(--ink);}
+  h4.kisim .lafz-ar{font-family:"Scheherazade New",serif;font-weight:700;font-size:1.08em;line-height:1;color:var(--bordo);margin-left:8px;white-space:nowrap;}
+  .ar-ic{font-family:"Scheherazade New",serif;font-size:1.25em;line-height:1;unicode-bidi:isolate;display:inline-block;white-space:nowrap;}
+  .lafz{margin:22px 0;text-align:center;}
+  .lafz .ar-buyuk{display:block;font-family:"Scheherazade New",serif;font-size:1.7rem;line-height:1.9;color:var(--bordo);}
+  .lafz .lafz-tr{display:block;margin-top:2px;color:var(--ink-soft);}
+  .bolum-baslik{
+    margin:60px 0 28px;
+    padding:15px 18px;
+    text-align:center;
+    font-size:1.3rem;
+    font-weight:700;
+    line-height:1.4;
+    color:var(--navy);
+    background:var(--card);
+    border-top:2px solid var(--navy-soft);
+    border-bottom:2px solid var(--navy-soft);
+  }
+  .notkutu{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--navy-soft);border-radius:3px;padding:22px 24px 6px;margin:32px 0;}
+  .notkutu .not-etiket{display:block;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--navy-soft);margin-bottom:12px;}
+  ul.ikili{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:9px 30px;list-style:none;margin:26px 0;padding:0;}
+  ul.ikili li{position:relative;padding-left:18px;line-height:1.7;}
+  ul.ikili li::before{content:"";position:absolute;left:0;top:11px;width:6px;height:6px;background:var(--navy-soft);transform:rotate(45deg);}
+
+  /* ---------- VURGU ---------- */
+  .vurgu{
+    font-size:1.24rem;
+    line-height:1.7;
+    color:var(--navy);
+    font-weight:600;
+    border-left:4px solid var(--navy-soft);
+    padding:6px 0 6px 20px;
+    margin:30px 0;
+  }
+  .vurgu-buyuk{
+    font-size:1.42rem;
+    line-height:1.6;
+    text-align:center;
+    color:var(--navy);
+    font-weight:700;
+    margin:38px 0;
+    padding:26px 22px;
+    background:var(--card);
+    border-top:2px solid var(--navy-soft);
+    border-bottom:2px solid var(--navy-soft);
+  }
+  strong{color:var(--navy);font-weight:700;}
+  .sav{font-family:"Scheherazade New",serif;font-size:1.2em;line-height:1;font-weight:400;}
+
+  /* ---------- ALINTI BLOKLARI ---------- */
+  .blok{
+    border-radius:4px;
+    padding:22px 26px;
+    margin:26px 0;
+    border-left-width:5px;
+    border-left-style:solid;
+  }
+  .blok .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:1.75rem;
+    line-height:2.05;
+    direction:rtl;
+    text-align:right;
+    margin-bottom:14px;
+  }
+  .blok .tr{margin:0 0 12px;}
+  .blok .kaynak{
+    font-size:.9rem;
+    color:var(--ink-soft);
+    font-style:italic;
+    margin:0;
+    padding-top:10px;
+    border-top:1px dotted currentColor;
+  }
+  .blok .soyleyen{
+    display:block;
+    font-size:.79rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:600;
+    margin-bottom:13px;
+  }
+
+  .ayet{background:var(--green-bg);border-left-color:var(--green-edge);}
+  .ayet .ar,.ayet .soyleyen{color:var(--green);}
+
+  .alim{background:var(--amber-bg);border-left-color:var(--amber-edge);}
+  .alim .ar,.alim .soyleyen{color:var(--amber);}
+
+  .hadis{background:var(--blue-bg);border-left-color:var(--blue-edge);}
+  .hadis .ar,.hadis .soyleyen{color:var(--blue);}
+
+  /* ---------- LİSTELER ---------- */
+  ul.madde{
+    list-style:none;
+    padding:0;
+    margin:20px 0;
+  }
+  ul.madde li{
+    position:relative;
+    padding:7px 0 7px 26px;
+  }
+  ul.madde li::before{
+    content:"◆";
+    position:absolute;
+    left:2px;
+    color:var(--navy-soft);
+    font-size:.68rem;
+    top:12px;
+  }
+
+  ol.sayili{
+    list-style:none;
+    counter-reset:sira;
+    padding:0;
+    margin:22px 0;
+  }
+  ol.sayili > li{
+    counter-increment:sira;
+    position:relative;
+    padding:10px 0 10px 46px;
+    border-bottom:1px dotted var(--rule);
+  }
+  ol.sayili > li:last-child{border-bottom:none;}
+  ol.sayili > li::before{
+    content:counter(sira);
+    position:absolute;
+    left:0;
+    top:13px;
+    width:30px;
+    height:30px;
+    line-height:27px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    color:var(--navy-soft);
+    background:var(--card);
+    font-size:.84rem;
+    font-weight:700;
+  }
+
+  /* ---------- ÖZET ---------- */
+  .ozet{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-top:4px solid var(--navy);
+    border-radius:4px;
+    padding:26px 30px;
+    margin-top:34px;
+  }
+  .ozet h4{
+    margin:0 0 16px;
+    color:var(--navy);
+    font-size:1.06rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+  .ozet ul{margin:0;padding-left:22px;}
+  .ozet li{margin-bottom:11px;}
+  .ozet li:last-child{margin-bottom:0;}
+
+  .ayirac{
+    text-align:center;
+    color:var(--rule);
+    letter-spacing:.5em;
+    margin:38px 0;
+    font-size:.8rem;
+  }
+
+  footer{
+    margin-top:70px;
+    padding-top:26px;
+    border-top:3px double var(--rule);
+    text-align:center;
+    color:#d54220;
+    font-size:.9rem;
+  }
+  footer .marka{
+    font-size:1rem;
+    color:#d54220;
+    font-weight:600;
+    letter-spacing:.1em;
+    margin-bottom:6px;
+  }
+
+  @media (max-width:620px){
+    body{font-size:16.5px;}
+    .sayfa{padding:0 16px 60px;}
+    header.kapak h1{font-size:2.8rem;}
+    .besmele{font-size:2rem;}
+    .nakid-baslik h2{font-size:1.16rem;}
+    h3.altbolum{font-size:1.3rem;margin:48px 0 16px;}
+    h3.altbolum .no{min-width:32px;height:32px;line-height:32px;font-size:.9rem;}
+    .metin{padding:22px 18px 20px;}
+    .metin .ar{font-size:1.65rem;line-height:2;}
+    .blok{padding:18px 18px;}
+    .ikaz{padding:18px 18px 4px;}
+    .kisim-govde{margin-left:0;padding-left:14px;}
+    .delil{grid-template-columns:28px 1fr;gap:0 10px;}
+    .delil > .no{width:28px;height:28px;line-height:28px;font-size:.8rem;}
+    .blok .ar{font-size:1.5rem;line-height:1.95;}
+    .vurgu-buyuk{font-size:1.18rem;padding:20px 16px;}
+    .vurgu{font-size:1.1rem;}
+  }
+
+  @media print{
+    @page{margin:18mm 16mm;}
+    body{background:#fff;font-size:11.5pt;}
+    .sayfa{max-width:none;padding:0;}
+    section.nakid{page-break-before:always;}
+    section.nakid:first-of-type{page-break-before:auto;}
+    .ayirac{display:none;}
+    header.kapak{
+      min-height:238mm;
+      page-break-after:always;
+      margin-bottom:0;
+    }
+    header.kapak h1{font-size:54pt;}
+    .besmele{font-size:26pt;}
+    section.nakid{page-break-inside:auto;}
+    .nakid-baslik{page-break-after:avoid;background:var(--navy) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .metin,.blok,.ozet,.vurgu-buyuk{page-break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    h3.altbolum,.serh-ayrac{page-break-after:avoid;}
+  }
+
+  /* ---------- KAVÂİD EKLERİ ---------- */
+  header.kapak h1{font-size:clamp(2.6rem,8vw,5rem);max-width:none;}
+  header.kapak .kapak-ar{font-family:"Scheherazade New",serif;font-size:2rem;line-height:1.6;color:var(--bordo);margin:0 0 8px;}
+  .metin .okunus{margin:0 0 14px;font-style:italic;color:var(--ink-soft);font-size:1rem;}
+  .metin .ar{font-size:1.72rem;}
+  .ders-isaret{display:flex;align-items:center;gap:14px;margin:48px 0 26px;color:var(--bordo);}
+  .ders-isaret::before,.ders-isaret::after{content:"";flex:1;height:1px;background:var(--bordo-edge);}
+  .ders-isaret span{font-size:.8rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;padding:3px 12px;border:1px solid var(--bordo-edge);border-radius:3px;background:var(--bordo-bg);}
+  section.nakid > .ders-isaret:first-child{margin-top:0;}
+  @media (max-width:620px){h4.kisim .lafz-ar,.ar-ic{white-space:normal;} header.kapak h1{font-size:2.3rem;} header.kapak .kapak-ar{font-size:1.6rem;}}
+</style>
+<style>.sayfa > section.nakid:first-of-type{margin-top:32px;}</style>
+</head>
+<body>
+<div class="sayfa">
+
+<section class="nakid">
+  <div class="ders-isaret"><span>52. Ders</span></div>
+
+  <div class="nakid-baslik">
+    <span class="etiket">41.–42. Beyitler</span>
+    <h2>Akitlerdeki şartlar bağlayıcıdır</h2>
+  </div>
+
+  <div class="metin">
+    <div class="metin-etiket"><span class="rozet">Beyit 41</span>Şeyh rahimehullah dedi ki</div>
+    <p class="ar">وَكُلُّ شَرْطٍ لَازِمٌ لِلْعَاقِدِ . . . فِي الْبَيْعِ وَالنِّكَاحِ وَالْمَقَاصِدِ</p>
+    <p class="okunus">Ve kullu şartin lâzimun li'l-âkıdi, fi'l-bey'i ve'n-nikâhi ve'l-mekâsıdi.</p>
+    <p class="tr">"Alışverişte, nikâhta ve diğer akitlerde, akit yapan kimseler için her şart bağlayıcıdır."</p>
+  </div>
+
+  <div class="metin">
+    <div class="metin-etiket"><span class="rozet">Beyit 42</span>Şeyh rahimehullah dedi ki</div>
+    <p class="ar">إِلَّا شُرُوطًا حَلَّلَتْ مُحَرَّمَا . . . أَوْ عَكْسَهُ فَبَاطِلَاتٌ فَاعْلَمَا</p>
+    <p class="okunus">İllâ şurûtan hallelet muharremâ, ev 'aksehû fe-bâtılâtun fa'lemâ.</p>
+    <p class="tr">"Ancak haramı helal kılan veya bunun tersini yapan, yani helali haram kılan şartlar geçersizdir; bunu iyi bil."</p>
+  </div>
+
+  <div class="serh-ayrac"><span>Şerh</span></div>
+
+
+  <h3 class="altbolum"><span class="no">1</span>Bu kaide nedir?</h3>
+
+  <p>Şeyhin dediği şudur: Akit yapan iki tarafın bu akde şartlar eklemesi caizdir ve her iki tarafın kabul ettiği bu şartlara riayet etmesi vaciptir. Ancak bu şartlar şeriata aykırı ise batıl, yani geçersiz olur.</p>
+
+
+  <h3 class="altbolum"><span class="no">2</span>Bu kaidenin delilleri nelerdir?</h3>
+
+  <div class="delil">
+    <div class="no">1</div>
+    <div class="govde">
+      <div class="delil-etiket">Birinci delil — Kur'an</div>
+      <div class="blok ayet">
+        <span class="soyleyen">Allah Teâlâ şöyle buyurur</span>
+        <p class="ar">﴿يَا أَيُّهَا الَّذِينَ آمَنُوا أَوْفُوا بِالْعُقُودِ﴾</p>
+        <p class="tr">"Ey iman edenler! Akitlerinizi yerine getirin."</p>
+        <p class="kaynak">📚 Mâide, 1.</p>
+      </div>
+      <p>Allah Teâlâ bu âyette akitlere bağlı kalmayı ve yapılan anlaşmaları yerine getirmeyi emretmiştir. Akit içerisinde tarafların karşılıklı olarak kabul ettiği meşru şartlar da bu emrin kapsamına girer.</p>
+    </div>
+  </div>
+
+  <div class="delil">
+    <div class="no">2</div>
+    <div class="govde">
+      <div class="delil-etiket">İkinci delil — Ebû Hureyre radıyallahu anh hadisi</div>
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah ﷺ şöyle buyurdu</span>
+        <p class="ar">«الصُّلْحُ جَائِزٌ بَيْنَ الْمُسْلِمِينَ إِلَّا صُلْحًا أَحَلَّ حَرَامًا أَوْ حَرَّمَ حَلَالًا، ... الْمُسْلِمُونَ عَلَى شُرُوطِهِمْ»</p>
+        <p class="tr">"Müslümanlar arasında sulh caizdir; ancak haramı helal veya helali haram kılan bir sulh müstesnadır... Müslümanlar, aralarında belirledikleri şartlara bağlıdırlar."</p>
+        <p class="kaynak">📚 Ebû Dâvûd, 3594. Şeyh Elbânî hadise "hasen sahih" demiştir.</p>
+      </div>
+      <p>Dolayısıyla aslolan, tarafların kabul ettikleri meşru şartlara riayet etmeleridir. Ancak şart şeriata aykırı ise ona riayet edilmez.</p>
+    </div>
+  </div>
+
+  <div class="delil">
+    <div class="no">3</div>
+    <div class="govde">
+      <div class="delil-etiket">Üçüncü delil — Âişe radıyallahu anhâ hadisi</div>
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah ﷺ şöyle buyurdu</span>
+        <p class="ar">«مَا كَانَ مِنْ شَرْطٍ لَيْسَ فِي كِتَابِ اللَّهِ فَهُوَ بَاطِلٌ، وَإِنْ كَانَ مِائَةَ شَرْطٍ»</p>
+        <p class="tr">"Allah'ın Kitabı'nda olmayan her şart batıldır; yüz şart dahi olsa."</p>
+        <p class="kaynak">📚 Buhârî, 2168; Muslim, 1504.</p>
+      </div>
+      <p>Burada "Allah'ın Kitabı'nda olmayan" ifadesinden maksat, Kur'an'da tek tek zikredilmeyen şartlar değil; Allah'ın hükmüne ve şeriata aykırı olan şartlardır.</p>
+      <p>Hadisin mefhûmundan da anlaşılır ki şeriata aykırı olmayan, helali haram veya haramı helal kılmayan şartlar aslen geçerlidir.</p>
+    </div>
+  </div>
+
+  <div class="delil">
+    <div class="no">4</div>
+    <div class="govde">
+      <div class="delil-etiket">Dördüncü delil — Muhammed b. Mesleme radıyallahu anh kıssası</div>
+      <p>Muhammed b. Mesleme radıyallahu anh bir Nabatî'den bir demet odun satın aldı ve alışveriş sırasında satıcıya odunları istediği yere kadar taşımasını şart koştu. Satıcı da bu şartı kabul etti. İmam Ahmed rahimehullah, alışveriş içerisinde böyle meşru bir menfaatin şart koşulabileceğine bu olayı delil getirmiştir.</p>
+      <div class="blok alim">
+        <span class="soyleyen">İbn Kudâme rahimehullah (v. 620)</span>
+        <p class="ar">«وَاحْتَجَّ أَحْمَدُ بِأَنَّ مُحَمَّدَ بْنَ مَسْلَمَةَ اشْتَرَى مِنْ نَبَطِيٍّ جُرْزَةَ حَطَبٍ، وَشَارَطَهُ عَلَى حَمْلِهَا»</p>
+        <p class="tr">"Ahmed, Muhammed b. Mesleme'nin bir Nabatî'den bir demet odun satın alıp onu taşımasını şart koşmasını delil getirmiştir."</p>
+        <p class="kaynak">📚 İbn Kudâme, el-Muğnî, Kitâbu'l-Buyû', c. 4.</p>
+      </div>
+      <p>Olayın daha geniş tarihî anlatımında, Muhammed b. Mesleme'nin Ömer radıyallahu anh tarafından Kûfe'deki Sa'd b. Ebî Vakkâs radıyallahu anh'ın kasrına gönderildiği ve odunları satın alırken satıcıya Sa'd'ın kasrına kadar taşımasını şart koştuğu zikredilir.</p>
+      <p>Buradaki delil şudur: Satın alınan malın yanında, şeriata aykırı olmayan belirli bir hizmet de akdin şartı hâline getirilebilir.</p>
+    </div>
+  </div>
+
+  <div class="delil">
+    <div class="no">5</div>
+    <div class="govde">
+      <div class="delil-etiket">Beşinci delil — Ömer b. el-Hattâb radıyallahu anh'ın sözü</div>
+      <div class="blok alim">
+        <span class="soyleyen">Ömer radıyallahu anh şöyle demiştir</span>
+        <p class="ar">«إِنَّ مَقَاطِعَ الْحُقُوقِ عِنْدَ الشُّرُوطِ، وَلَكَ مَا شَرَطْتَ»</p>
+        <p class="tr">"Hakların belirlenmesi, konulan şartlara göredir. Şart koştuğun şey senindir."</p>
+        <p class="kaynak">📚 Buhârî, Kitâbu'ş-Şurût (muallak olarak); Said b. Mansûr ve İbn Ebî Şeybe (isnadla). "وَلَكَ مَا شَرَطْتَ" ifadesi bir rivayette geçer.</p>
+      </div>
+      <p>Bu sözün sebebi de önemlidir: Bir adam evlenirken hanımına belirli bir yerde oturmasını şart olarak kabul etmişti. Daha sonra oradan taşınmak isteyince mesele Ömer radıyallahu anh'a götürüldü. Ömer radıyallahu anh kadının şartının geçerli olduğuna hükmetti ve bu sözü söyledi. Yani tarafların birbirleri üzerindeki hakları, akit esnasında kabul ettikleri meşru şartlarla belirlenir.</p>
+    </div>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">3</span>Beyitte geçen kelimelerin manaları</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Şart <span class="lafz-ar" dir="rtl">الشَّرْطُ</span></span></h4>
+  <div class="kisim-govde">
+    <div class="lafz">
+      <span class="ar-buyuk" dir="rtl">هُوَ إِلْزَامُ أَحَدِ الْمُتَعَاقِدَيْنِ الْآخَرَ بِمَا لَهُ فِيهِ مَنْفَعَةٌ أَوْ مَصْلَحَةٌ</span>
+      <span class="lafz-tr">Huve ilzâmu ehadi'l-mute'âkideyni'l-âhara bimâ lehû fîhi menfeatun ev maslahatun</span>
+    </div>
+    <p>Şart; akit yapan iki taraftan birinin, kendisi için bir fayda veya maslahat bulunan bir hususu diğer tarafa yükümlülük olarak koymasıdır.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>el-Âkıd <span class="lafz-ar" dir="rtl">الْعَاقِدُ</span></span></h4>
+  <div class="kisim-govde">
+    <p>İki taraflı bir sözleşme yapan, buluğa ermiş, akıl sahibi ve reşit kişidir.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>ve'l-Mekâsıd <span class="lafz-ar" dir="rtl">وَالْمَقَاصِدِ</span></span></h4>
+  <div class="kisim-govde">
+    <p>"Maksad" kelimesinin çoğuludur. Bu kelimeden kasıt, diğer bütün akit çeşitleridir: kiralama, ortaklık sözleşmeleri gibi.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">4</span>Şartlar iki kısımdır</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Sahih olan şartlar</span></h4>
+  <div class="kisim-govde">
+    <ol class="sayili">
+      <li>Bunlar, şeriata uygun olan ve şeriatın yasaklamadığı şartlardır.</li>
+      <li>Râcih görüşe göre bu tür şartları akit içerisinde koşmak caizdir. Cumhur âlimleri de genel olarak bu görüştedir. Ancak İbn Hazm rahimehullah gibi bazı âlimler bu konuda daha dar bir görüş benimsemiş ve birçok şartın geçerliliğini kabul etmemiştir.</li>
+      <li>Sahih bir şart, tarafların karşılıklı rızasıyla akde konulduğu zaman bağlayıcı hâle gelir. Artık akit yapan tarafların bu şarta riayet etmeleri vaciptir.</li>
+      <li>Bu şartların konulma sebebi genellikle ya alıcı ile satıcının her ikisinin menfaatine ya da taraflardan yalnızca birinin menfaatine dönmesidir.</li>
+    </ol>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Sahih olmayan şartlar</span></h4>
+  <div class="kisim-govde">
+    <p>Şeriata aykırı olan, yani haramı helal veya helali haram kılan şartlardır.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">5</span>Sahih olan şartlar iki kısımdır</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Akdin kendisinde bulunan şartlar</span></h4>
+  <div class="kisim-govde">
+    <p><strong>Örnek:</strong> Bir kişi bir eşya satın aldığında o eşyanın sahibi olur ve onunla istediği şekilde tasarrufta bulunabilir.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Kendisinde bir maslahat bulunan şartlar</span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Bu maslahat akit sahiplerinden birine veya her ikisine döner.</li>
+      <li>Şeriata aykırı değilse caizdir.</li>
+      <li><strong>Örnek:</strong> "Sana arabamı satıyorum, ama bana bir kefil getirmen şartıyla."</li>
+      <li><strong>Örnek:</strong> Bir kadın: "Seninle evlenirim, ama bana bir ev alman şartıyla." diyebilir.</li>
+    </ul>
+  </div>
+
+  <div class="ikaz">
+    <span class="ikaz-etiket">Batıl olan şartlar</span>
+    <ul class="madde">
+      <li><strong>Örnek:</strong> "Birinci eşini boşarsan seninle evlenirim."</li>
+      <li><strong>Örnek:</strong> "Sana bu üzümü satıyorum, ama bununla içki yapman şartıyla."</li>
+    </ul>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">6</span>Cumhur âlimlerine göre şartlara uymak vaciptir</h3>
+
+  <p>Hanbelî mezhebinin, İbn Teymiyye, İbnu'l-Kayyim, Şeyh es-Sa'dî ve İbn Useymîn'in görüşü budur. Bunun delillerini yukarıda zikrettik.</p>
+
+  <p>Ancak İbn Hazm bu görüşe muhalefet ederek akitlerde şart koşmanın aslen caiz olmadığını söylemiştir. Delil olarak Resûlullah ﷺ'in şu hadisini zikretmiştir: "Allah'ın Kitabı'nda bulunmayan her şart batıldır."</p>
+
+  <p>Fakat bu delilden böyle bir sonuç çıkarmak doğru değildir. Çünkü hadiste kastedilen, Kur'an'da açıkça zikredilmeyen her şartın batıl olması değil, Allah'ın hükmüne ve şeriata aykırı olan şartların batıl olmasıdır.</p>
+
+
+  <h3 class="altbolum"><span class="no">7</span>Akitlerin şartlarla birlikte üç hâli vardır</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Şartın ve akdin sahih olması</span></h4>
+  <div class="kisim-govde">
+    <p><strong>Örnek:</strong> Câbir radıyallahu anh devesini Resûlullah ﷺ'e sattı ve Medine'ye kadar deveye binmeyi şart koştu.</p>
+    <div class="blok hadis">
+      <span class="soyleyen">Câbir radıyallahu anh şöyle dedi</span>
+      <p class="ar">«فَبِعْتُهُ بِوُقِيَّةٍ، وَاسْتَثْنَيْتُ عَلَيْهِ حُمْلَانَهُ إِلَى أَهْلِي»</p>
+      <p class="tr">"Onu bir ukiyyeye sattım ve aileme varıncaya kadar ona binmeyi şart koştum."</p>
+      <p class="kaynak">📚 Buhârî, 2718; Muslim, 715.</p>
+    </div>
+    <p><strong>Örnek:</strong> "Bu arabayı sana satıyorum, ama bir hafta daha kullanmam şartıyla."</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Şartın fâsit, akdin sahih olması</span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li><strong>Örnek:</strong> "Sana telefonumu satıyorum, ama sen onu kimseye satmayacaksın."</li>
+      <li><strong>Örnek:</strong> "Sana arabamı satıyorum, ama tekrar satarsan şu fiyata satacaksın."</li>
+    </ul>
+    <p>Bu şart caiz değildir; çünkü malı satın alan kişi artık o malın sahibidir ve onda istediği şekilde tasarruf edebilir. Burada akit geçerli olur, fakat şart iptal edilir.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Hem şartın hem de akdin fâsit olması</span></h4>
+  <div class="kisim-govde">
+    <ol class="sayili">
+      <li>"Sen bana evini satarsan ben de sana arabamı satarım." Bir satışı başka bir satışa şart olarak bağlamak caiz değildir.</li>
+      <li>"Sana borç veririm, ama aldığın evi iki sene sonra bana satman şartıyla." Borç vermeyi, borç verenin menfaatine olan başka bir akde bağlamak caiz değildir.</li>
+      <li>Bir kadının, ilk eşine tekrar helal olmak amacıyla ve bunu şart koşarak başka bir adamla evlenmesi (hülle nikâhı).</li>
+      <li>"Kız kardeşini bana nikâhlarsan ben de kız kardeşimi sana nikâhlarım." Bu, şiğâr nikâhıdır.</li>
+    </ol>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">8</span>Bu kaide için örnekler</h3>
+
+  <ol class="sayili">
+    <li>Bir kişi arabasını başkasına satıyor ve arabayı bir hafta daha kullanma şartı koşuyor.
+      <p>Bu şart geçerlidir. Her iki taraf bu şartı kabul ederse ona uymaları gerekir.</p></li>
+    <li>Bir kişi başkasıyla ortak oluyor, ancak zarara ortak olmama şartı koşuyor.
+      <p>Bu şart geçersizdir. Çünkü ortaklıkta zarar, sermaye oranına göre ortaklara aittir. Bu sebeple böyle bir şart şeriata aykırıdır.</p></li>
+    <li>Bir kadın, başka bir şehre taşınmama ve okulunu bitirmesine izin verilmesi şartıyla bir adamla evlenmeyi kabul ediyor.
+      <p>Bu şart geçerlidir. Adam bu şartları kabul ederse onlara uyması vaciptir. Evlendikten sonra bu şartlara uymazsa kadının nikâhın feshini talep etme hakkı olur. Ancak kadın hakkından feragat edebilir.</p></li>
+    <li>Bir kadın, adamın ikinci bir evlilik yapmaması şartıyla onunla evlenmeyi kabul ediyor.
+      <p>Bu meselede ihtilaf vardır. Râcih görüşe göre bu şart geçerlidir. Adam daha sonra ikinci bir evlilik yaparsa kadının fesih hakkı olur.</p></li>
+    <li>Hizmete ihtiyacı olan yaşlı bir adam bir kadınla evlenecek. Adamın çocukları ona: "Çocuğu olmaması için onunla cinsel ilişkide bulunmaman şartıyla evlen." diyorlar.
+      <p>Bu şart batıldır.</p></li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">9</span>Akit yapılırken konulan şartlar ile akdin şartları arasındaki farklar</h3>
+
+  <ul class="madde">
+    <li><strong>Akdin şartları:</strong> Akdin sahih olması için bulunması gereken şartlardır.</li>
+    <li><strong>Akit yapılırken konulan şartlar:</strong> Tarafların kendi menfaatleri için akde ilave ettikleri şartlardır.</li>
+  </ul>
+
+  <h4 class="kisim"><span class="no">1</span><span>Birinci fark</span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Akdin şartlarını şeriat belirler. Mesela satılan malın ne olduğunun bilinmesi, fiyatın bilinmesi ve malın teslim edilebilir olması.</li>
+      <li>Akit yapılırken konulan şartları ise akit yapan taraflar belirler.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>İkinci fark</span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Akdin şartlarını kimse iptal edemez; bunlar akdin sahih olması için gereklidir.</li>
+      <li>Akit yapılırken konulan şartları ise kişi isterse hiç koymayabilir veya koyduktan sonra hakkından feragat edebilir.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Üçüncü fark</span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Akdin kendi şartlarından biri ihlal edilirse akit sahih olmaz.</li>
+      <li>Akit yapılırken konulan ilave bir şarta uyulmazsa akit mutlaka iptal olmaz.</li>
+    </ul>
+  </div>
+
+  <div class="ders-isaret"><span>53. Ders</span></div>
+
+  <h4 class="kisim"><span class="no">4</span><span>Dördüncü fark</span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Akdin şartları aslen sözleşmeden önce vardır; çünkü onlar akdin rükünlerinden veya vaciplerindendir.</li>
+      <li>Akit yapılırken konulan ilave şartlar ise akitten önce, akit yapılırken veya akitten sonra hâlâ aynı meclisteyken (hıyâru'l-meclis) konulabilir.</li>
+    </ul>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">10</span>Bu kaideden türeyen bazı kaideler</h3>
+
+  <div class="lafz">
+    <span class="ar-buyuk" dir="rtl">الْمُبَاحَاتُ تَصِيرُ بِالشُّرُوطِ وَاجِبَاتٍ</span>
+    <span class="lafz-tr">"Mubah olan şeyler, şartlarla vacip hâle gelir."</span>
+  </div>
+
+  <div class="lafz">
+    <span class="ar-buyuk" dir="rtl">يَثْبُتُ بِالشَّرْطِ مَا لَمْ يَثْبُتْ بِالشَّرْعِ</span>
+    <span class="lafz-tr">"Şeriat ile bağlayıcı olmayan bir şey, geçerli bir şart ile bağlayıcı hâle gelir."</span>
+  </div>
+
+</section>
+
+<footer>
+  <div class="marka">İlim Dersleri</div>
+  <div>Manzûmetu'l-Kavâidi'l-Fıkhiyye</div>
+</footer>
+
+</div>
+</body>
+</html>

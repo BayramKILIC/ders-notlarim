@@ -72,7 +72,19 @@
   const bolumUrl = (k, b) => kitapUrl(k) + '/' + encodeURIComponent(b.id);
   const dosyaUrl = (k, b) => '/notlar/' + encodeURIComponent(k.slug) + '/' + encodeURIComponent(b.dosya);
   const bolumEtiketi = (b) => (b.etiket ? b.etiket : (b.no !== undefined ? String(b.no) : ''));
-  const bolumAdi = (k, b) => (b.etiket ? b.etiket : (b.no !== undefined ? b.no + '. ' : '') + b.baslik);
+  // Une étiquette « numérique » (40, 41–42) est suivie du titre ; une étiquette texte (Önsöz) se suffit
+  const sayisal = (t) => /^[\d\s.–-]+$/.test(t);
+  const bolumAdi = (k, b) => {
+    const e = bolumEtiketi(b);
+    if (!e) return b.baslik;
+    return sayisal(e) ? e + '. ' + b.baslik : e;
+  };
+  // Nom court pour le fil d'Ariane : champ « kisa », sinon « 32. Bölüm » ou l'étiquette texte
+  const kisaAd = (b) => {
+    if (b.kisa) return b.kisa;
+    const e = bolumEtiketi(b);
+    return sayisal(e) ? e + '. Bölüm' : (e || b.baslik);
+  };
 
   // Taille du texte arabe sur la couverture selon sa longueur
   function arBoyut(t) {
@@ -189,7 +201,7 @@
       const gorunen = bolumler.filter((b) => {
         if (filtre === 'hazir' && !b.dosya) return false;
         if (!s) return true;
-        return sade([b.baslik, b.ar, b.alt, b.etiket, b.no].join(' ')).includes(s);
+        return sade([b.baslik, b.ar, b.alt, b.etiket, b.no, b.kisa].join(' ')).includes(s);
       });
       liste.replaceChildren(...gorunen.map(satir));
       sonucYok.hidden = gorunen.length > 0;
@@ -262,7 +274,7 @@
           el('span', { class: 'ayrac', 'aria-hidden': 'true' }, '/'),
           el('a', { href: kitapUrl(k) }, k.baslik),
           el('span', { class: 'ayrac', 'aria-hidden': 'true' }, '/'),
-          el('span', { class: 'simdi' }, b.etiket ? b.etiket : (b.no !== undefined ? b.no + '. Bölüm' : b.baslik))
+          el('span', { class: 'simdi' }, kisaAd(b))
         ),
         el('div', { class: 'gezinti' },
           gezintiDugmesi(onceki, 'sol'),

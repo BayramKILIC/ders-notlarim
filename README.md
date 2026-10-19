@@ -39,6 +39,7 @@ Champs d'un chapitre :
 | `id`      | identifiant dans l'URL : `/kitap/nevakidul-islam/onsoz` (unique dans le livre) |
 | `no`      | numéro affiché dans la pastille (ex. `32`) |
 | `etiket`  | texte affiché à la place du numéro (ex. `"Önsöz"`, `"Sonuç"`) |
+| `kisa`    | nom court du fil d'Ariane (ex. `"41.–42. Beyitler"`, `"32. Bâb"`) |
 | `baslik`  | titre turc |
 | `ar`      | titre arabe (facultatif) |
 | `alt`     | petite ligne sous le titre (facultatif) |

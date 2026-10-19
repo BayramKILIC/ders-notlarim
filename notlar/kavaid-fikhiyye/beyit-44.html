@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kavâid-i Fıkhiyye · 44. Beyit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#123a5f;
+    --navy-soft:#1d5183;
+    --ink:#20262e;
+    --ink-soft:#4a5462;
+    --paper:#fbfaf7;
+    --card:#ffffff;
+    --rule:#e2ddd3;
+
+    --green:#1e6b46;
+    --green-bg:#eef7f1;
+    --green-edge:#a8d3bb;
+
+    --amber:#8a5a12;
+    --amber-bg:#fdf5e6;
+    --amber-edge:#e2c184;
+
+    --blue:#1a4f80;
+    --blue-bg:#eef4fa;
+    --blue-edge:#a9c6e2;
+
+    --bordo:#75194c;
+    --bordo-bg:#fbf2f6;
+    --bordo-edge:#e3c3d4;
+
+    --red:#8d2f2f;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Source Serif 4","Cambria","Georgia",serif;
+    font-size:18px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .sayfa{
+    max-width:820px;
+    margin:0 auto;
+    padding:0 26px 90px;
+  }
+
+  /* ---------- KAPAK ---------- */
+  header.kapak{
+    color:var(--bordo);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:56px 0;
+    margin-bottom:60px;
+  }
+  header.kapak .marka{
+    font-size:.95rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:#d54220;
+    font-weight:600;
+    line-height:1.7;
+    max-width:26ch;
+  }
+  header.kapak .marka-cizgi{
+    width:120px;
+    height:1px;
+    background:var(--rule);
+    margin:26px auto 34px;
+  }
+  header.kapak h1{
+    font-size:clamp(3.3rem,9.5vw,5.8rem);
+    line-height:1.1;
+    color:var(--bordo);
+    margin:0;
+    font-weight:700;
+    letter-spacing:-.015em;
+    max-width:15ch;
+  }
+  header.kapak .altbaslik{
+    font-size:1.16rem;
+    color:var(--bordo);
+    font-style:italic;
+    margin:34px 0 0;
+    max-width:38ch;
+    line-height:1.7;
+  }
+  header.kapak .kunye{
+    margin-top:0;
+    padding-top:72px;
+    font-size:.94rem;
+    color:var(--bordo);
+    letter-spacing:.09em;
+  }
+  header.kapak .kapak-ayet{
+    max-width:540px;
+    margin:0 auto 10px;
+    font-size:1.04rem;
+    line-height:1.75;
+    letter-spacing:0;
+    font-style:italic;
+    color:var(--bordo);
+  }
+  header.kapak .kapak-ayet-kaynak{
+    margin:0;
+    font-size:.86rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  header.kapak .kunye .cizgi{
+    width:56px;
+    height:2px;
+    background:var(--bordo);
+    margin:0 auto 18px;
+  }
+  .besmele{
+    font-family:"Scheherazade New",serif;
+    font-size:2.5rem;
+    color:var(--bordo);
+    direction:rtl;
+    margin:0 0 46px;
+  }
+
+  /* ---------- NÂKID ---------- */
+  section.nakid{margin-bottom:70px;}
+
+  .nakid-baslik{
+    background:var(--navy);
+    color:#fff;
+    border-radius:4px;
+    padding:22px 28px;
+    margin-bottom:34px;
+  }
+  .nakid-baslik .etiket{
+    display:block;
+    font-size:.74rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    opacity:.72;
+    margin-bottom:8px;
+  }
+  .nakid-baslik h2{
+    margin:0;
+    font-size:1.42rem;
+    line-height:1.45;
+    font-weight:600;
+  }
+
+  /* ---------- METİN (müellifin sözü) ---------- */
+  .metin{
+    background:var(--bordo-bg);
+    border:1px solid var(--bordo-edge);
+    border-top:5px solid var(--bordo);
+    border-radius:4px;
+    padding:28px 32px 26px;
+    margin:0 0 20px;
+  }
+  .metin .metin-etiket{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px 12px;
+    font-size:.78rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--bordo);
+    margin-bottom:18px;
+  }
+  .metin .metin-etiket .rozet{
+    background:var(--bordo);
+    color:#fff;
+    padding:3px 11px;
+    border-radius:3px;
+    letter-spacing:.2em;
+  }
+  .metin .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:2rem;
+    line-height:2.1;
+    direction:rtl;
+    text-align:right;
+    color:var(--bordo);
+    margin:0 0 18px;
+  }
+  .metin .tr{
+    margin:0;
+    padding-top:16px;
+    border-top:1px dotted var(--bordo-edge);
+    font-size:1.06rem;
+  }
+
+  /* ---------- ŞERH AYRACI ---------- */
+  .serh-ayrac{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin:54px 0 10px;
+    color:var(--navy);
+  }
+  .serh-ayrac::before,.serh-ayrac::after{
+    content:"";
+    flex:1;
+    height:2px;
+    background:var(--navy-soft);
+    opacity:.35;
+  }
+  .serh-ayrac span{
+    font-size:1.05rem;
+    font-weight:700;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+  }
+
+  h3.altbolum{
+    font-size:1.55rem;
+    line-height:1.4;
+    color:var(--navy);
+    margin:60px 0 20px;
+    padding-bottom:12px;
+    border-bottom:3px solid var(--rule);
+    font-weight:700;
+  }
+  h3.altbolum .no{
+    display:inline-block;
+    min-width:38px;
+    height:38px;
+    line-height:38px;
+    text-align:center;
+    background:var(--navy-soft);
+    color:#fff;
+    border-radius:50%;
+    font-size:1rem;
+    margin-right:13px;
+    vertical-align:3px;
+  }
+
+  p{margin:0 0 17px;}
+
+  h4.kisim{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:1.2rem;
+    color:var(--navy-soft);
+    margin:34px 0 12px;
+    font-weight:700;
+  }
+  h4.kisim .no{
+    flex:0 0 auto;
+    width:28px;
+    height:28px;
+    line-height:25px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    background:var(--card);
+    font-size:.82rem;
+  }
+  .kisim-govde{
+    border-left:2px solid var(--rule);
+    margin-left:13px;
+    padding-left:27px;
+  }
+
+  .delil{
+    display:grid;
+    grid-template-columns:34px 1fr;
+    gap:0 18px;
+    margin:30px 0;
+    padding-bottom:8px;
+    border-bottom:1px dotted var(--rule);
+  }
+  .delil:last-of-type{border-bottom:none;}
+  .delil > .no{
+    width:34px;
+    height:34px;
+    line-height:34px;
+    text-align:center;
+    border-radius:50%;
+    background:var(--navy);
+    color:#fff;
+    font-size:.88rem;
+    font-weight:700;
+    margin-top:2px;
+  }
+  .delil > .govde > .blok:first-child{margin-top:0;}
+  .delil-etiket{
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--navy);
+    margin:6px 0 12px;
+  }
+  .delil > .govde > .delil-etiket + .blok{margin-top:0;}
+
+  .ikaz{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-left:5px solid var(--red);
+    border-radius:4px;
+    padding:20px 26px 6px;
+    margin:28px 0;
+  }
+  .ikaz .ikaz-etiket{
+    display:block;
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--red);
+    margin-bottom:10px;
+  }
+  .ikaz ol.sayili{margin:10px 0 14px;}
+  ol.sayili li p.alt-tanim{margin:10px 0 0;padding-left:14px;border-left:2px solid var(--rule);}
+  ol.sayili > li > p{margin:12px 0 0;}
+  ol.sayili li .blok{margin:16px 0 8px;}
+  ul.madde li .blok{margin:14px 0 8px;}
+  ol.sayili > li ul.madde{margin:12px 0 4px;}
+  h4.kisim .baslik-alt{font-weight:400;color:var(--ink);}
+  h4.kisim .lafz-ar{font-family:"Scheherazade New",serif;font-weight:700;font-size:1.08em;line-height:1;color:var(--bordo);margin-left:8px;white-space:nowrap;}
+  .ar-ic{font-family:"Scheherazade New",serif;font-size:1.25em;line-height:1;unicode-bidi:isolate;display:inline-block;white-space:nowrap;}
+  .lafz{margin:22px 0;text-align:center;}
+  .lafz .ar-buyuk{display:block;font-family:"Scheherazade New",serif;font-size:1.7rem;line-height:1.9;color:var(--bordo);}
+  .lafz .lafz-tr{display:block;margin-top:2px;color:var(--ink-soft);}
+  .bolum-baslik{
+    margin:60px 0 28px;
+    padding:15px 18px;
+    text-align:center;
+    font-size:1.3rem;
+    font-weight:700;
+    line-height:1.4;
+    color:var(--navy);
+    background:var(--card);
+    border-top:2px solid var(--navy-soft);
+    border-bottom:2px solid var(--navy-soft);
+  }
+  .notkutu{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--navy-soft);border-radius:3px;padding:22px 24px 6px;margin:32px 0;}
+  .notkutu .not-etiket{display:block;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--navy-soft);margin-bottom:12px;}
+  ul.ikili{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:9px 30px;list-style:none;margin:26px 0;padding:0;}
+  ul.ikili li{position:relative;padding-left:18px;line-height:1.7;}
+  ul.ikili li::before{content:"";position:absolute;left:0;top:11px;width:6px;height:6px;background:var(--navy-soft);transform:rotate(45deg);}
+
+  /* ---------- VURGU ---------- */
+  .vurgu{
+    font-size:1.24rem;
+    line-height:1.7;
+    color:var(--navy);
+    font-weight:600;
+    border-left:4px solid var(--navy-soft);
+    padding:6px 0 6px 20px;
+    margin:30px 0;
+  }
+  .vurgu-buyuk{
+    font-size:1.42rem;
+    line-height:1.6;
+    text-align:center;
+    color:var(--navy);
+    font-weight:700;
+    margin:38px 0;
+    padding:26px 22px;
+    background:var(--card);
+    border-top:2px solid var(--navy-soft);
+    border-bottom:2px solid var(--navy-soft);
+  }
+  strong{color:var(--navy);font-weight:700;}
+  .sav{font-family:"Scheherazade New",serif;font-size:1.2em;line-height:1;font-weight:400;}
+
+  /* ---------- ALINTI BLOKLARI ---------- */
+  .blok{
+    border-radius:4px;
+    padding:22px 26px;
+    margin:26px 0;
+    border-left-width:5px;
+    border-left-style:solid;
+  }
+  .blok .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:1.75rem;
+    line-height:2.05;
+    direction:rtl;
+    text-align:right;
+    margin-bottom:14px;
+  }
+  .blok .tr{margin:0 0 12px;}
+  .blok .kaynak{
+    font-size:.9rem;
+    color:var(--ink-soft);
+    font-style:italic;
+    margin:0;
+    padding-top:10px;
+    border-top:1px dotted currentColor;
+  }
+  .blok .soyleyen{
+    display:block;
+    font-size:.79rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:600;
+    margin-bottom:13px;
+  }
+
+  .ayet{background:var(--green-bg);border-left-color:var(--green-edge);}
+  .ayet .ar,.ayet .soyleyen{color:var(--green);}
+
+  .alim{background:var(--amber-bg);border-left-color:var(--amber-edge);}
+  .alim .ar,.alim .soyleyen{color:var(--amber);}
+
+  .hadis{background:var(--blue-bg);border-left-color:var(--blue-edge);}
+  .hadis .ar,.hadis .soyleyen{color:var(--blue);}
+
+  /* ---------- LİSTELER ---------- */
+  ul.madde{
+    list-style:none;
+    padding:0;
+    margin:20px 0;
+  }
+  ul.madde li{
+    position:relative;
+    padding:7px 0 7px 26px;
+  }
+  ul.madde li::before{
+    content:"◆";
+    position:absolute;
+    left:2px;
+    color:var(--navy-soft);
+    font-size:.68rem;
+    top:12px;
+  }
+
+  ol.sayili{
+    list-style:none;
+    counter-reset:sira;
+    padding:0;
+    margin:22px 0;
+  }
+  ol.sayili > li{
+    counter-increment:sira;
+    position:relative;
+    padding:10px 0 10px 46px;
+    border-bottom:1px dotted var(--rule);
+  }
+  ol.sayili > li:last-child{border-bottom:none;}
+  ol.sayili > li::before{
+    content:counter(sira);
+    position:absolute;
+    left:0;
+    top:13px;
+    width:30px;
+    height:30px;
+    line-height:27px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    color:var(--navy-soft);
+    background:var(--card);
+    font-size:.84rem;
+    font-weight:700;
+  }
+
+  /* ---------- ÖZET ---------- */
+  .ozet{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-top:4px solid var(--navy);
+    border-radius:4px;
+    padding:26px 30px;
+    margin-top:34px;
+  }
+  .ozet h4{
+    margin:0 0 16px;
+    color:var(--navy);
+    font-size:1.06rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+  .ozet ul{margin:0;padding-left:22px;}
+  .ozet li{margin-bottom:11px;}
+  .ozet li:last-child{margin-bottom:0;}
+
+  .ayirac{
+    text-align:center;
+    color:var(--rule);
+    letter-spacing:.5em;
+    margin:38px 0;
+    font-size:.8rem;
+  }
+
+  footer{
+    margin-top:70px;
+    padding-top:26px;
+    border-top:3px double var(--rule);
+    text-align:center;
+    color:#d54220;
+    font-size:.9rem;
+  }
+  footer .marka{
+    font-size:1rem;
+    color:#d54220;
+    font-weight:600;
+    letter-spacing:.1em;
+    margin-bottom:6px;
+  }
+
+  @media (max-width:620px){
+    body{font-size:16.5px;}
+    .sayfa{padding:0 16px 60px;}
+    header.kapak h1{font-size:2.8rem;}
+    .besmele{font-size:2rem;}
+    .nakid-baslik h2{font-size:1.16rem;}
+    h3.altbolum{font-size:1.3rem;margin:48px 0 16px;}
+    h3.altbolum .no{min-width:32px;height:32px;line-height:32px;font-size:.9rem;}
+    .metin{padding:22px 18px 20px;}
+    .metin .ar{font-size:1.65rem;line-height:2;}
+    .blok{padding:18px 18px;}
+    .ikaz{padding:18px 18px 4px;}
+    .kisim-govde{margin-left:0;padding-left:14px;}
+    .delil{grid-template-columns:28px 1fr;gap:0 10px;}
+    .delil > .no{width:28px;height:28px;line-height:28px;font-size:.8rem;}
+    .blok .ar{font-size:1.5rem;line-height:1.95;}
+    .vurgu-buyuk{font-size:1.18rem;padding:20px 16px;}
+    .vurgu{font-size:1.1rem;}
+  }
+
+  @media print{
+    @page{margin:18mm 16mm;}
+    body{background:#fff;font-size:11.5pt;}
+    .sayfa{max-width:none;padding:0;}
+    section.nakid{page-break-before:always;}
+    section.nakid:first-of-type{page-break-before:auto;}
+    .ayirac{display:none;}
+    header.kapak{
+      min-height:238mm;
+      page-break-after:always;
+      margin-bottom:0;
+    }
+    header.kapak h1{font-size:54pt;}
+    .besmele{font-size:26pt;}
+    section.nakid{page-break-inside:auto;}
+    .nakid-baslik{page-break-after:avoid;background:var(--navy) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .metin,.blok,.ozet,.vurgu-buyuk{page-break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    h3.altbolum,.serh-ayrac{page-break-after:avoid;}
+  }
+
+  /* ---------- KAVÂİD EKLERİ ---------- */
+  header.kapak h1{font-size:clamp(2.6rem,8vw,5rem);max-width:none;}
+  header.kapak .kapak-ar{font-family:"Scheherazade New",serif;font-size:2rem;line-height:1.6;color:var(--bordo);margin:0 0 8px;}
+  .metin .okunus{margin:0 0 14px;font-style:italic;color:var(--ink-soft);font-size:1rem;}
+  .metin .ar{font-size:1.72rem;}
+  .ders-isaret{display:flex;align-items:center;gap:14px;margin:48px 0 26px;color:var(--bordo);}
+  .ders-isaret::before,.ders-isaret::after{content:"";flex:1;height:1px;background:var(--bordo-edge);}
+  .ders-isaret span{font-size:.8rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;padding:3px 12px;border:1px solid var(--bordo-edge);border-radius:3px;background:var(--bordo-bg);}
+  section.nakid > .ders-isaret:first-child{margin-top:0;}
+  @media (max-width:620px){h4.kisim .lafz-ar,.ar-ic{white-space:normal;} header.kapak h1{font-size:2.3rem;} header.kapak .kapak-ar{font-size:1.6rem;}}
+</style>
+<style>.sayfa > section.nakid:first-of-type{margin-top:32px;}</style>
+</head>
+<body>
+<div class="sayfa">
+
+<section class="nakid">
+  <div class="nakid-baslik">
+    <span class="etiket">44. Beyit</span>
+    <h2>İbadetlerin tedâhülü</h2>
+  </div>
+
+  <div class="metin">
+    <div class="metin-etiket"><span class="rozet">Beyit 44</span>Şeyh rahimehullah dedi ki</div>
+    <p class="ar">وَإِنْ تَسَاوَى الْعَمَلَانِ اجْتَمَعَا . . . وَفِعْلُ أَحَدِهِمَا فَاسْتَمِعَا</p>
+    <p class="okunus">Ve in tesâve'l-ʿamelâni'ctemeʿâ, ve fiʿlu ehadihimâ fe'stemiʿâ.</p>
+    <p class="tr">"İki amel birbirine eşit olursa birleşir ve onlardan birini yapmak yeterli olur; bunu iyi dinle."</p>
+  </div>
+
+  <div class="serh-ayrac"><span>Şerh</span></div>
+
+
+  <h3 class="altbolum"><span class="no">1</span>Bu beyitte geçen kaide nedir?</h3>
+
+  <div class="lafz">
+    <span class="ar-buyuk" dir="rtl">تَدَاخُلُ الْعِبَادَاتِ</span>
+    <span class="lafz-tr">Tedâhulu'l-ibâdât — İbadetlerin birbirine dâhil olması</span>
+  </div>
+
+  <p>Aynı cinsten olan iki veya daha fazla ibadetin, belirli şartlar altında tek bir amelde birleşmesidir. Böylece kişi tek bir amel yaparak iki ibadeti gerçekleştirmiş olur ve ikisinin de sevabını elde edebilir.</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">Şeyh es-Sa'dî rahimehullah şöyle der</span>
+    <p class="ar">«وَهَذَا مِنْ نِعْمَةِ اللَّهِ وَتَيْسِيرِهِ أَنَّ الْعَمَلَ الْوَاحِدَ يَقُومُ مَقَامَ أَعْمَالٍ»</p>
+    <p class="tr">"Tek bir amelin birden fazla amelin yerine geçmesi, Allah'ın nimetlerinden ve kolaylaştırmasındandır."</p>
+    <p class="kaynak">📚 İbn Useymîn de el-Kavâid ve'l-Usûlu'l-Câmi'a şerhinde bu ifadeyi aynı şekilde aktararak açıklar.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">2</span>Kaidenin farklı ifadeleri</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Şeyh es-Sa'dî'nin kaidesi olarak nakledilen ifade</span></h4>
+  <div class="kisim-govde">
+    <div class="blok alim">
+      <span class="soyleyen">Şeyh es-Sa'dî rahimehullah</span>
+      <p class="ar">«إِذَا اجْتَمَعَتْ عِبَادَتَانِ مِنْ جِنْسٍ وَاحِدٍ، تَدَاخَلَتْ أَفْعَالُهُمَا، وَاكْتُفِيَ عَنْهُمَا بِفِعْلٍ وَاحِدٍ، إِذَا كَانَ مَقْصُودُهُمَا وَاحِدًا»</p>
+      <p class="tr">"Aynı cinsten iki ibadet bir araya gelir ve maksatları aynı olursa, fiilleri birbirine dâhil olur ve ikisi için tek bir fiille yetinilir."</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>İkinci ifade</span></h4>
+  <div class="kisim-govde">
+    <div class="lafz">
+      <span class="ar-buyuk" dir="rtl">إِذَا اجْتَمَعَ عَمَلَانِ، وَتَسَاوَيَا وَاتَّفَقَا فِي الْأَفْعَالِ، وَكَانَ أَحَدُهُمَا غَيْرَ مَقْصُودٍ لِذَاتِهِ، فَإِنَّ أَحَدَهُمَا يَكْفِي عَنِ الْآخَرِ</span>
+    </div>
+    <p>"İki amel bir araya gelir, birbirine denk olur ve fiilleri de aynı olursa, ayrıca bunlardan biri bizzat kendisi için maksut değilse, onlardan biri diğerinin yerine yeterli olur."</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">3</span>Bu kaide için örnekler</h3>
+
+  <ol class="sayili">
+    <li>Bir kişinin abdesti hem uyku sebebiyle hem de başka bir hades sebebiyle bozulmuşsa, her biri için ayrı ayrı abdest almasına gerek yoktur. Bir abdest hepsi için yeterlidir.</li>
+    <li>Bir kişinin cuma günü hem cünüplük guslü hem de cuma guslü alması gerekiyorsa tek gusül alması yeterlidir; çünkü bunu yaparak temizlenmiş olur.</li>
+    <li>Bir kişi sabah mescide girip sabah namazının ratibesini kılarsa, aynı namazla tahiyyetu'l-mescid namazı da yerine gelmiş olur.</li>
+    <li>Bir kişi namaza başladıktan sonra Fâtiha'yı okumadan önce hapşırır ve hapşırdığı için "Elhamdulillah" derse, bu hamd Fâtiha'daki hamdin yerine geçer.</li>
+    <li>Bir kişi namazda birden fazla sehiv yaparsa tek bir sehiv secdesi yeterli olur.</li>
+    <li>Bir kişi aynı mecliste aynı şey hakkında birden fazla yemin ederse bir kefaret vermesi yeterli olur.</li>
+    <li>Bir kişi gece namazı kılmak ister ve abdest aldıktan sonra namaza durursa, kıldığı namaz hem abdest namazı hem de gece namazı yerine geçebilir. Ancak her ikisinin sevabını alabilmesi için ikisine de niyet etmesi gerekir.</li>
+    <li>Bir kişi ezan ile ikamet arasında mescide girerse; tahiyyetu'l-mescid, ezan ile ikamet arasında kılınan namaz ve farz namazın ratibesi gibi birden fazla sebep bir araya gelebilir. Bu durumda ratibeyi kılarsa diğer namazlar da onun içinde gerçekleşmiş olur. (Burada niyetin ratibe namazı olması gerekir.)</li>
+    <li>İmam rükûdayken bir kişi cemaate yetişir ve yalnızca tek bir tekbir getirirse, bu tekbir tekbîratu'l-ihrâm yerine geçer. (İntikal tekbirinin de yerine geçip geçmeyeceği konusunda ihtilaf vardır.)</li>
+    <li>Bir kadın hem hayızlı hem de cünüp ise, hayızdan temizlendikten sonra tek bir gusül alması her ikisi için de yeterlidir.</li>
+    <li>Bir kişi cünüp olur ve gusleder, fakat ayrıca abdest almaz. Râcih görüşe göre gusül abdesti de kapsadığı için namaz kılabilir. Bu meselede bazı tafsilatlar ve ihtilaflar vardır.</li>
+    <li>Bir erkek Ramazan'da aynı gün içerisinde eşiyle iki defa cima ederse, bu iki cima için tek bir kefaret vermesi yeterlidir.</li>
+    <li>Cünüp olan bir kişi su bulamaz ve teyemmüm yaparsa, bu teyemmüm hem küçük hem de büyük hades için yeterli olur. İki ayrı teyemmüm yapmasına gerek yoktur.</li>
+    <li>Bir kişi bir adamı öldürür, ardından da hırsızlık yaparsa, râcih görüşe göre öldürülme cezası uygulanacağı için ayrıca el kesme cezası uygulanmaz. Bu konuda İbn Mes'ûd radıyallahu anh'tan bir eser rivayet edilmiştir.</li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">4</span>Bu kaidenin delili nedir?</h3>
+
+  <p>Âişe radıyallahu anhâ başlangıçta umre için ihrama girmişti. Mekke'ye varmadan önce hayız oldu. Bunun üzerine Resûlullah ﷺ ona haccı umresine eklemesini emretti ve böylece kırân haccı yapmış oldu. Resûlullah ﷺ ona şöyle buyurdu:</p>
+
+  <div class="blok hadis">
+    <span class="soyleyen">Resûlullah ﷺ şöyle buyurdu</span>
+    <p class="ar">«طَوَافُكِ بِالْبَيْتِ وَبَيْنَ الصَّفَا وَالْمَرْوَةِ يَكْفِيكِ لِحَجَّتِكِ وَعُمْرَتِكِ»</p>
+    <p class="tr">"Beyt'i tavaf etmen ve Safâ ile Merve arasında sa'y etmen, hem haccın hem de umren için sana yeterlidir."</p>
+    <p class="kaynak">📚 Ebû Dâvûd, 1897; benzer lafızla Muslim, 1211.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">5</span>Bu kaidenin geçerli olması için şartlar</h3>
+
+  <ol class="sayili">
+    <li>İbadetlerin birbirine dâhil olabilmesi için <strong>aynı cinsten</strong> olmaları gerekir. Mesela her ikisinin de namaz olması gibi.</li>
+    <li>İbadetlerin fiilleri <strong>sayı ve sıfat bakımından</strong> birbiriyle uyumlu olmalıdır. Mesela her ikisinin de iki rekât olması veya her ikisinin de tavaf olması gibi. Cenaze namazı ile tahiyyetu'l-mescid namazı birbirine dâhil olmaz; çünkü fiilleri aynı değildir.</li>
+    <li>İki ibadetin de <strong>bizzat kendisi için maksut</strong> olmaması gerekir. İbadetlerden yalnızca biri bizzat kendisi için maksut ise diğeri onun içine girebilir. Ancak ikisi de bizzat kendisi için maksut ise biri diğerinin yerine geçmez.</li>
+  </ol>
+
+  <div class="ders-isaret"><span>55. Ders</span></div>
+
+  <ol class="sayili" start="4" style="counter-reset:sira 3;">
+    <li>İbn Receb'in zikrettiği ve İbn Useymîn'in de teyit ettiği şartlardan biri, ibadetlerden birinin <strong>kaza olarak yapılmamasıdır</strong>.
+      <p>Mesela bir kimsenin kaza orucu varsa ve Arefe günü oruç tutarsa, kaza orucu ile Arefe orucunu tek bir niyetle birleştiremez (yine de sevabı alması umulur denilebilir). Ancak bu şartın uygulanması konusunda bazı meselelerde tafsilat ve ihtilaf vardır.</p>
+      <p>Tartışmasız olan bir örnek şudur: Bir kimse öğle namazını kılmamışsa, ikindi namazını kılarken aynı namaza hem öğle hem de ikindi niyeti veremez. Çünkü her iki farz namaz da bizzat kendisi için maksuttur ve ayrı ayrı eda edilmesi gerekir.</p>
+    </li>
+    <li>İbadetlerden biri <strong>meşruiyet veya vakit bakımından diğerine tâbi</strong> olmamalıdır.
+      <p>Mesela Ramazan orucunun kazası ile Şevval'in altı gün orucunu tek bir oruç olarak birleştirmek bu kaidenin doğrudan kapsamına girmez. Çünkü Şevval orucu, Ramazan orucunun tamamlanmasından sonra gelen ayrı bir ibadettir.</p>
+      <p>Aynı şekilde sabah namazının farzını kılarken aynı namazla sabahın ratibe sünnetine de niyet edilemez. Çünkü sünnet namazı farza tâbi olan ayrı bir ibadettir.</p>
+      <p>Yine öğle namazının farzına niyet ederek aynı namazı öğleden sonraki ratibe sünnetin yerine geçirmek mümkün değildir.</p>
+    </li>
+    <li>İbadetlerin <strong>vakitlerinin aynı</strong> olması gerekir. Farklı vakitlere ait iki ibadet birbirinin içine girmez.
+      <p>Mesela öğle namazını kılarken aynı zamanda ikindi namazına niyet edilemez. Aynı şekilde sabah ratibesi ile akşam ratibesinin niyetleri birleştirilemez.</p>
+    </li>
+  </ol>
+
+  <p>İbn Receb rahimehullah bu şartların önemli bir kısmını tek bir kaidede şöyle toplamıştır:</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">İbn Receb rahimehullah (v. 795)</span>
+    <p class="ar">«إِذَا اجْتَمَعَتْ عِبَادَتَانِ مِنْ جِنْسٍ فِي وَقْتٍ وَاحِدٍ، لَيْسَتْ إِحْدَاهُمَا مَفْعُولَةً عَلَى جِهَةِ الْقَضَاءِ، وَلَا عَلَى طَرِيقِ التَّبَعِيَّةِ لِلْأُخْرَى فِي الْوَقْتِ، تَدَاخَلَتْ أَفْعَالُهُمَا، وَاكْتُفِيَ فِيهِمَا بِفِعْلٍ وَاحِدٍ»</p>
+    <p class="tr">"Aynı cinsten iki ibadet aynı vakitte bir araya gelir, bunlardan biri kaza olarak yapılmıyor ve vakit bakımından diğerine tâbi bulunmuyorsa, bu iki ibadetin fiilleri birbirine dâhil olur ve ikisi için tek bir fiille yetinilir."</p>
+    <p class="kaynak">📚 İbn Receb, el-Kavâid, 18. kaide.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">6</span>Şartlar oluşmadığı için ibadetlerin birbirine girmediği örnekler</h3>
+
+  <ol class="sayili">
+    <li>Öğle namazının dört rekâtlık ratibesinde, ilk iki rekâtı kılınca sonraki iki rekât düşer mi? Hayır. Burada tedâhül mümkün değildir; çünkü her ikisi de maksûd li-zâtihîdir.</li>
+    <li>Öğle namazını kılınca ikindi namazı düşer mi? Hayır. Çünkü öğle ve ikindi namazlarının her ikisi de maksûd li-zâtihî olan ayrı farz namazlardır.</li>
+    <li>Kurban Bayramı'nda kurban kesen kişi aynı kurbanı akîka yerine de sayabilir mi? Bu konuda ihtilaf vardır. Bazı âlimler, her ikisi de maksûd li-zâtihî olduğu için bunun caiz olmadığını söylemişlerdir.</li>
+    <li>Kişi istihâre namazı kılınca aynı vakitteki ratibe namazı da düşer mi? Hayır. Çünkü her iki namaz da maksûd li-zâtihîdir.</li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">7</span>İbadetlerden biri maksûd li-zâtihî, diğeri maksûd li-zâtihî değilse</h3>
+
+  <p>Bu durumda şartlar oluşursa iki ibadet birbirine dâhil olabilir. Çünkü ibadetlerden biri bizzat kendisi için maksuttur; diğerinde ise başka bir maksat vardır.</p>
+
+  <ol class="sayili">
+    <li>Bir kişinin kaza orucu vardır ve Arefe günü oruç tutar. Kaza orucu bizzat maksuttur. Arefe orucunda ise o günü oruçlu geçirmek maksattır. Bu sebeple tek oruçla hem kazanın yerine gelmesi hem de Arefe gününün faziletinin elde edilmesi konusunda âlimler arasında ihtilaf vardır.</li>
+    <li>Tavâf-ı ifâda ile tavâf-ı vedâ. Tavâf-ı vedâ bizzat kendisi için maksut değildir. Maksat, kişinin Mekke'den ayrılmadan önceki son işinin Beyt'i tavaf etmek olmasıdır. Bu sebeple kişi tavâf-ı ifâdayı Mekke'den ayrılmadan hemen önce yaparsa tavâf-ı vedâ da yerine gelmiş olur.</li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">8</span>Birbirine dâhil olan ibadetlerin sevabını almak için niyet</h3>
+
+  <p>Birbirine dâhil olan ibadetlerin her birinin sevabını almak istiyorsak, bunlara niyet etmemiz gerekir. Yani bir ibadetin sevabını elde etmek için o ibadetin sevabını almaya niyet etmek gerekir.</p>
+
+  <p><strong>Örnek 1:</strong> Bir kişi ezandan sonra mescide giriyor. Kılacağı namazda asıl niyeti ratibe namazı olur. Bununla birlikte tahiyyetu'l-mescid ve ezan ile ikamet arasında kılınan namazın sevabını da almaya niyet ederse, o namazların sevabını da almış olur.</p>
+
+  <p>Bazı âlimler her biri için ayrı ayrı niyet edilmesi gerektiğini söylemişlerdir. Ancak daha güzel olan görüşe göre kişi ratibe namazına niyet eder ve diğer ibadetlerin sevabını da Allah'tan umar.</p>
+
+  <p><strong>Örnek 2:</strong> Ramazan orucundan kazası olan kişi Arefe günü oruç tutarsa, kazayı tutmaya niyet etmesi gerekir. Aynı şekilde Arefe orucunun sevabını almaya da niyet edebilir.</p>
+
+
+  <h3 class="altbolum"><span class="no">9</span>Tedâhulu'l-ibâdât konusunda iki husus vardır</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Sevapların kazanılması</span></h4>
+  <div class="kisim-govde">
+    <p>Birbirine dâhil olan ibadetlerin her ikisinin de sevabını elde etme meselesidir. Bunun için kişinin bu ibadetlerin sevabını kastetmesi gerekir.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Sukûtu't-taleb <span class="lafz-ar" dir="rtl">سُقُوطُ الطَّلَبِ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Mükellefin tek bir ibadeti yapmasıyla, diğer ibadetin ayrıca kendisinden talep edilmesinin düşmesidir. Yani ikinci ibadeti ayrıca yapmasına gerek kalmaz.</p>
+    <p><strong>Örnek 1:</strong> Cuma sabahı cenabet guslü yapan kişiden artık cuma guslü düşer.</p>
+    <p><strong>Örnek 2:</strong> Tavafı bitiren kişinin iki rekât namaz kılması gerekir. Fakat o arada farz namazın vakti girer ve farz namazı kılar. Bu durumda tavaftan sonra kılınan iki rekât namaz ondan düşer.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">10</span>İnsanlar arasındaki haklarda tedâhül olmaz</h3>
+
+  <p>İnsanların hakları birbirinden ayrıdır ve her hak sahibine hakkının ayrı ayrı verilmesi gerekir. Bu sebeple kul haklarında tedâhül olmaz.</p>
+
+  <ol class="sayili">
+    <li>Bir kişinin başka bir kişiye iki diyet ödemesi gerekiyorsa, bir diyet ödemesi diğer diyet borcunu düşürmez. Bu kişinin ayrı ayrı diyet ödemesi gerekir.</li>
+    <li>Bir kişinin iki ayrı kişiye borcu varsa, birine olan borcunu ödemesi diğerine olan borcunu düşürmez. Her iki borcu da ayrı ayrı ödemesi gerekir.</li>
+  </ol>
+
+</section>
+
+<footer>
+  <div class="marka">İlim Dersleri</div>
+  <div>Manzûmetu'l-Kavâidi'l-Fıkhiyye</div>
+</footer>
+
+</div>
+</body>
+</html>
