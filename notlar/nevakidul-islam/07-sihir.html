@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nevâkıdu'l-İslâm — Yedinci Nâkıd: Sihir</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#123a5f;
+    --navy-soft:#1d5183;
+    --ink:#20262e;
+    --ink-soft:#4a5462;
+    --paper:#fbfaf7;
+    --card:#ffffff;
+    --rule:#e2ddd3;
+
+    --green:#1e6b46;
+    --green-bg:#eef7f1;
+    --green-edge:#a8d3bb;
+
+    --amber:#8a5a12;
+    --amber-bg:#fdf5e6;
+    --amber-edge:#e2c184;
+
+    --blue:#1a4f80;
+    --blue-bg:#eef4fa;
+    --blue-edge:#a9c6e2;
+
+    --bordo:#75194c;
+    --bordo-bg:#fbf2f6;
+    --bordo-edge:#e3c3d4;
+
+    --red:#8d2f2f;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Source Serif 4","Cambria","Georgia",serif;
+    font-size:18px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .sayfa{
+    max-width:820px;
+    margin:0 auto;
+    padding:0 26px 90px;
+  }
+
+  /* ---------- KAPAK ---------- */
+  header.kapak{
+    color:var(--bordo);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:56px 0;
+    margin-bottom:60px;
+  }
+  header.kapak .marka{
+    font-size:.95rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:#d54220;
+    font-weight:600;
+    line-height:1.7;
+    max-width:26ch;
+  }
+  header.kapak .marka-cizgi{
+    width:120px;
+    height:1px;
+    background:var(--rule);
+    margin:26px auto 34px;
+  }
+  header.kapak h1{
+    font-size:clamp(3.3rem,9.5vw,5.8rem);
+    line-height:1.1;
+    color:var(--bordo);
+    margin:0;
+    font-weight:700;
+    letter-spacing:-.015em;
+    max-width:15ch;
+  }
+  header.kapak .altbaslik{
+    font-size:1.16rem;
+    color:var(--bordo);
+    font-style:italic;
+    margin:34px 0 0;
+    max-width:38ch;
+    line-height:1.7;
+  }
+  header.kapak .kunye{
+    margin-top:0;
+    padding-top:72px;
+    font-size:.94rem;
+    color:var(--bordo);
+    letter-spacing:.09em;
+  }
+  header.kapak .kunye .cizgi{
+    width:56px;
+    height:2px;
+    background:var(--bordo);
+    margin:0 auto 18px;
+  }
+  .besmele{
+    font-family:"Scheherazade New",serif;
+    font-size:2.5rem;
+    color:var(--bordo);
+    direction:rtl;
+    margin:0 0 46px;
+  }
+
+  /* ---------- NÂKID ---------- */
+  section.nakid{margin-bottom:70px;}
+
+  .nakid-baslik{
+    background:var(--navy);
+    color:#fff;
+    border-radius:4px;
+    padding:22px 28px;
+    margin-bottom:34px;
+  }
+  .nakid-baslik .etiket{
+    display:block;
+    font-size:.74rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    opacity:.72;
+    margin-bottom:8px;
+  }
+  .nakid-baslik h2{
+    margin:0;
+    font-size:1.42rem;
+    line-height:1.45;
+    font-weight:600;
+  }
+
+  /* ---------- METİN (müellifin sözü) ---------- */
+  .metin{
+    background:var(--bordo-bg);
+    border:1px solid var(--bordo-edge);
+    border-top:5px solid var(--bordo);
+    border-radius:4px;
+    padding:28px 32px 26px;
+    margin:0 0 20px;
+  }
+  .metin .metin-etiket{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px 12px;
+    font-size:.78rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--bordo);
+    margin-bottom:18px;
+  }
+  .metin .metin-etiket .rozet{
+    background:var(--bordo);
+    color:#fff;
+    padding:3px 11px;
+    border-radius:3px;
+    letter-spacing:.2em;
+  }
+  .metin .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:2rem;
+    line-height:2.1;
+    direction:rtl;
+    text-align:right;
+    color:var(--bordo);
+    margin:0 0 18px;
+  }
+  .metin .tr{
+    margin:0;
+    padding-top:16px;
+    border-top:1px dotted var(--bordo-edge);
+    font-size:1.06rem;
+  }
+
+  /* ---------- ŞERH AYRACI ---------- */
+  .serh-ayrac{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin:54px 0 10px;
+    color:var(--navy);
+  }
+  .serh-ayrac::before,.serh-ayrac::after{
+    content:"";
+    flex:1;
+    height:2px;
+    background:var(--navy-soft);
+    opacity:.35;
+  }
+  .serh-ayrac span{
+    font-size:1.05rem;
+    font-weight:700;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+  }
+
+  h3.altbolum{
+    font-size:1.55rem;
+    line-height:1.4;
+    color:var(--navy);
+    margin:60px 0 20px;
+    padding-bottom:12px;
+    border-bottom:3px solid var(--rule);
+    font-weight:700;
+  }
+  h3.altbolum .no{
+    display:inline-block;
+    min-width:38px;
+    height:38px;
+    line-height:38px;
+    text-align:center;
+    background:var(--navy-soft);
+    color:#fff;
+    border-radius:50%;
+    font-size:1rem;
+    margin-right:13px;
+    vertical-align:3px;
+  }
+
+  p{margin:0 0 17px;}
+
+  h4.kisim{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:1.2rem;
+    color:var(--navy-soft);
+    margin:34px 0 12px;
+    font-weight:700;
+  }
+  h4.kisim .no{
+    flex:0 0 auto;
+    width:28px;
+    height:28px;
+    line-height:25px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    background:var(--card);
+    font-size:.82rem;
+  }
+  .kisim-govde{
+    border-left:2px solid var(--rule);
+    margin-left:13px;
+    padding-left:27px;
+  }
+
+  .delil{
+    display:grid;
+    grid-template-columns:34px 1fr;
+    gap:0 18px;
+    margin:30px 0;
+    padding-bottom:8px;
+    border-bottom:1px dotted var(--rule);
+  }
+  .delil:last-of-type{border-bottom:none;}
+  .delil > .no{
+    width:34px;
+    height:34px;
+    line-height:34px;
+    text-align:center;
+    border-radius:50%;
+    background:var(--navy);
+    color:#fff;
+    font-size:.88rem;
+    font-weight:700;
+    margin-top:2px;
+  }
+  .delil > .govde > .blok:first-child{margin-top:0;}
+  .delil-etiket{
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--navy);
+    margin:6px 0 12px;
+  }
+  .delil > .govde > .delil-etiket + .blok{margin-top:0;}
+
+  .ikaz{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-left:5px solid var(--red);
+    border-radius:4px;
+    padding:20px 26px 6px;
+    margin:28px 0;
+  }
+  .ikaz .ikaz-etiket{
+    display:block;
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--red);
+    margin-bottom:10px;
+  }
+  .ikaz ol.sayili{margin:10px 0 14px;}
+  ol.sayili li p.alt-tanim{margin:10px 0 0;padding-left:14px;border-left:2px solid var(--rule);}
+  ol.sayili li .blok{margin:16px 0 8px;}
+  ul.madde li .blok{margin:14px 0 8px;}
+  ol.sayili > li ul.madde{margin:12px 0 4px;}
+  h4.kisim .baslik-alt{font-weight:400;color:var(--ink);}
+  h4.kisim .lafz-ar{font-family:"Scheherazade New",serif;font-weight:700;font-size:1.3em;line-height:1;color:var(--bordo);margin-left:8px;white-space:nowrap;}
+  .ar-ic{font-family:"Scheherazade New",serif;font-size:1.25em;line-height:1;}
+
+  /* ---------- VURGU ---------- */
+  .vurgu{
+    font-size:1.24rem;
+    line-height:1.7;
+    color:var(--navy);
+    font-weight:600;
+    border-left:4px solid var(--navy-soft);
+    padding:6px 0 6px 20px;
+    margin:30px 0;
+  }
+  .vurgu-buyuk{
+    font-size:1.42rem;
+    line-height:1.6;
+    text-align:center;
+    color:var(--navy);
+    font-weight:700;
+    margin:38px 0;
+    padding:26px 22px;
+    background:var(--card);
+    border-top:2px solid var(--navy-soft);
+    border-bottom:2px solid var(--navy-soft);
+  }
+  strong{color:var(--navy);font-weight:700;}
+  .sav{font-family:"Scheherazade New",serif;font-size:1.2em;line-height:1;font-weight:400;}
+
+  /* ---------- ALINTI BLOKLARI ---------- */
+  .blok{
+    border-radius:4px;
+    padding:22px 26px;
+    margin:26px 0;
+    border-left-width:5px;
+    border-left-style:solid;
+  }
+  .blok .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:1.75rem;
+    line-height:2.05;
+    direction:rtl;
+    text-align:right;
+    margin-bottom:14px;
+  }
+  .blok .tr{margin:0 0 12px;}
+  .blok .kaynak{
+    font-size:.9rem;
+    color:var(--ink-soft);
+    font-style:italic;
+    margin:0;
+    padding-top:10px;
+    border-top:1px dotted currentColor;
+  }
+  .blok .soyleyen{
+    display:block;
+    font-size:.79rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:600;
+    margin-bottom:13px;
+  }
+
+  .ayet{background:var(--green-bg);border-left-color:var(--green-edge);}
+  .ayet .ar,.ayet .soyleyen{color:var(--green);}
+
+  .alim{background:var(--amber-bg);border-left-color:var(--amber-edge);}
+  .alim .ar,.alim .soyleyen{color:var(--amber);}
+
+  .hadis{background:var(--blue-bg);border-left-color:var(--blue-edge);}
+  .hadis .ar,.hadis .soyleyen{color:var(--blue);}
+
+  /* ---------- LİSTELER ---------- */
+  ul.madde{
+    list-style:none;
+    padding:0;
+    margin:20px 0;
+  }
+  ul.madde li{
+    position:relative;
+    padding:7px 0 7px 26px;
+  }
+  ul.madde li::before{
+    content:"◆";
+    position:absolute;
+    left:2px;
+    color:var(--navy-soft);
+    font-size:.68rem;
+    top:12px;
+  }
+
+  ol.sayili{
+    list-style:none;
+    counter-reset:sira;
+    padding:0;
+    margin:22px 0;
+  }
+  ol.sayili > li{
+    counter-increment:sira;
+    position:relative;
+    padding:10px 0 10px 46px;
+    border-bottom:1px dotted var(--rule);
+  }
+  ol.sayili > li:last-child{border-bottom:none;}
+  ol.sayili > li::before{
+    content:counter(sira);
+    position:absolute;
+    left:0;
+    top:13px;
+    width:30px;
+    height:30px;
+    line-height:27px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    color:var(--navy-soft);
+    background:var(--card);
+    font-size:.84rem;
+    font-weight:700;
+  }
+
+  /* ---------- ÖZET ---------- */
+  .ozet{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-top:4px solid var(--navy);
+    border-radius:4px;
+    padding:26px 30px;
+    margin-top:34px;
+  }
+  .ozet h4{
+    margin:0 0 16px;
+    color:var(--navy);
+    font-size:1.06rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+  .ozet ul{margin:0;padding-left:22px;}
+  .ozet li{margin-bottom:11px;}
+  .ozet li:last-child{margin-bottom:0;}
+
+  .ayirac{
+    text-align:center;
+    color:var(--rule);
+    letter-spacing:.5em;
+    margin:38px 0;
+    font-size:.8rem;
+  }
+
+  footer{
+    margin-top:70px;
+    padding-top:26px;
+    border-top:3px double var(--rule);
+    text-align:center;
+    color:#d54220;
+    font-size:.9rem;
+  }
+  footer .marka{
+    font-size:1rem;
+    color:#d54220;
+    font-weight:600;
+    letter-spacing:.1em;
+    margin-bottom:6px;
+  }
+
+  @media (max-width:620px){
+    body{font-size:16.5px;}
+    .sayfa{padding:0 16px 60px;}
+    header.kapak h1{font-size:2.8rem;}
+    .besmele{font-size:2rem;}
+    .nakid-baslik h2{font-size:1.16rem;}
+    h3.altbolum{font-size:1.3rem;margin:48px 0 16px;}
+    h3.altbolum .no{min-width:32px;height:32px;line-height:32px;font-size:.9rem;}
+    .metin{padding:22px 18px 20px;}
+    .metin .ar{font-size:1.65rem;line-height:2;}
+    .blok{padding:18px 18px;}
+    .ikaz{padding:18px 18px 4px;}
+    .kisim-govde{margin-left:0;padding-left:14px;}
+    .delil{grid-template-columns:28px 1fr;gap:0 10px;}
+    .delil > .no{width:28px;height:28px;line-height:28px;font-size:.8rem;}
+    .blok .ar{font-size:1.5rem;line-height:1.95;}
+    .vurgu-buyuk{font-size:1.18rem;padding:20px 16px;}
+    .vurgu{font-size:1.1rem;}
+  }
+
+  @media print{
+    @page{margin:18mm 16mm;}
+    body{background:#fff;font-size:11.5pt;}
+    .sayfa{max-width:none;padding:0;}
+    section.nakid{page-break-before:always;}
+    section.nakid:first-of-type{page-break-before:auto;}
+    .ayirac{display:none;}
+    header.kapak{
+      min-height:238mm;
+      page-break-after:always;
+      margin-bottom:0;
+    }
+    header.kapak h1{font-size:54pt;}
+    .besmele{font-size:26pt;}
+    section.nakid{page-break-inside:auto;}
+    .nakid-baslik{page-break-after:avoid;background:var(--navy) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .metin,.blok,.ozet,.vurgu-buyuk{page-break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    h3.altbolum,.serh-ayrac{page-break-after:avoid;}
+  }
+</style>
+</head>
+<body>
+<div class="sayfa">
+
+<header class="kapak">
+  <div class="besmele">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+  <div class="marka">İlim Dersleri</div>
+  <div class="marka-cizgi"></div>
+  <h1>Nevâkıdu'l-İslâm</h1>
+  <p class="altbaslik">İslâm'ı iptal eden hususlar</p>
+  <div class="kunye">
+    <div class="cizgi"></div>
+    Yedinci Nâkıd
+  </div>
+</header>
+
+
+<!-- ================= YEDİNCİ NÂKID ================= -->
+<section class="nakid">
+  <div class="nakid-baslik">
+    <span class="etiket">Yedinci Nâkıd</span>
+    <h2>Sihir</h2>
+  </div>
+
+  <!-- ---------- METİN ---------- -->
+  <div class="metin">
+    <div class="metin-etiket"><span class="rozet">Metin</span>Müellif rahimehullah dedi ki</div>
+    <p class="ar">«السَّابِعُ: السِّحْرُ، وَمِنْهُ الصَّرْفُ وَالْعَطْفُ، فَمَنْ فَعَلَهُ أَوْ رَضِيَ بِهِ كَفَرَ، وَالدَّلِيلُ قَوْلُهُ تَعَالَى: ﴿وَمَا يُعَلِّمَانِ مِنْ أَحَدٍ حَتَّىٰ يَقُولَا إِنَّمَا نَحْنُ فِتْنَةٌ فَلَا تَكْفُرْ﴾ [البقرة: ١٠٢]»</p>
+    <p class="tr">Yedincisi: Sihirdir. Sarf ve Atf denilen şeyler de sihirdendir. Her kim sihir yapar veya ona rıza gösterirse kâfir olur. Bunun delili Allah Teâlâ'nın şu buyruğudur: "O iki melek, 'Biz ancak imtihanız, sakın küfre girme' demedikçe kimseye (sihir) öğretmezdi." (Bakara, 102)</p>
+  </div>
+
+  <!-- ---------- ŞERH ---------- -->
+  <div class="serh-ayrac"><span>Şerh</span></div>
+
+
+  <h3 class="altbolum"><span class="no">1</span>Sihrin tanımı</h3>
+
+  <h4 class="kisim"><span class="no">1</span>Sözlükte manası</h4>
+  <div class="kisim-govde">
+    <p>İbn Useymîn, sihrin sözlük anlamını şöyle açıklamıştır:</p>
+
+    <div class="blok alim">
+      <span class="soyleyen">İbn Useymîn rahimehullah (v. 1421)</span>
+      <p class="ar">«السِّحْرُ لُغَةً: مَا خَفِيَ وَلَطُفَ سَبَبُهُ، وَمِنْهُ سُمِّيَ السَّحَرُ لِآخِرِ اللَّيْلِ؛ لِأَنَّ الْأَفْعَالَ الَّتِي تَقَعُ فِيهِ تَكُونُ خَفِيَّةً، وَكَذَلِكَ سُمِّيَ السَّحُورُ لِمَا يُؤْكَلُ فِي آخِرِ اللَّيْلِ؛ لِأَنَّهُ يَكُونُ خَفِيًّا، فَكُلُّ شَيْءٍ خَفِيَ سَبَبُهُ يُسَمَّى سِحْرًا»</p>
+      <p class="tr">"Sihir, sözlükte sebebi gizli ve ince olan şey demektir. Gecenin son kısmına da bu sebeple 'seher' denilmiştir; çünkü bu vakitte yapılan işler gizli olur. Aynı şekilde, gecenin sonunda yenilen yemeğe de gizli bir vakitte yenildiği için 'sahur' adı verilmiştir. Dolayısıyla sebebi gizli olan her şey, sözlük anlamı bakımından 'sihir' olarak adlandırılır."</p>
+      <p class="kaynak">📚 el-Kavlu'l-Mufîd, 1/489.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span>Şer'an manası</h4>
+  <div class="kisim-govde">
+    <p>Şer'î anlamda sihir, tek bir tanımla sınırlandırılamaz. Nitekim İmam Şinkîtî şöyle demiştir:</p>
+
+    <div class="blok alim">
+      <span class="soyleyen">İmam Şinkîtî rahimehullah (v. 1393)</span>
+      <p class="ar">«اعْلَمْ أَنَّ السِّحْرَ فِي الِاصْطِلَاحِ لَا يُمْكِنُ حَدُّهُ بِحَدٍّ جَامِعٍ مَانِعٍ؛ لِكَثْرَةِ الْأَنْوَاعِ الْمُخْتَلِفَةِ الدَّاخِلَةِ تَحْتَهُ، وَلَا يَتَحَقَّقُ قَدْرٌ مُشْتَرَكٌ بَيْنَهَا يَكُونُ جَامِعًا لَهَا مَانِعًا لِغَيْرِهَا. وَمِنْ هُنَا اخْتَلَفَتْ عِبَارَاتُ الْعُلَمَاءِ فِي حَدِّهِ اخْتِلَافًا مُتَبَايِنًا»</p>
+      <p class="tr">"Bil ki sihrin terim anlamını, bütün türlerini kapsayan ve sihir olmayan şeyleri dışarıda bırakan tek bir tanımla ifade etmek mümkün değildir. Çünkü sihir kapsamına giren, birbirinden farklı pek çok tür vardır. Bu türler arasında, hepsini kapsayacak ve bunların dışındakileri dışarıda bırakacak ortak bir özellik bulunmamaktadır. Bu sebeple âlimlerin sihir hakkında yaptıkları tanımlar birbirinden oldukça farklı olmuştur."</p>
+      <p class="kaynak">📚 Edvâu'l-Beyân, 4/41.</p>
+    </div>
+
+    <p>Şeytanlardan yardım alınarak yapılan sihrin tanımını ise İbn Kudâme şu şekilde vermiştir:</p>
+
+    <div class="blok alim">
+      <span class="soyleyen">İbn Kudâme rahimehullah (v. 620)</span>
+      <p class="ar">«السِّحْرُ: عَزَائِمُ وَرُقًى وَعُقَدٌ تُؤَثِّرُ فِي الْأَبْدَانِ وَالْقُلُوبِ، فَيُمْرِضُ وَيَقْتُلُ وَيُفَرِّقُ بَيْنَ الْمَرْءِ وَزَوْجِهِ»</p>
+      <p class="tr">"Sihir; bedenlere ve kalplere tesir ederek hastalığa, ölüme ve kişi ile eşinin arasının ayrılmasına sebep olan azîmetler (büyü sözleri), sihir amacıyla yapılan okumalar (rukyeler) ve düğümlerdir."</p>
+      <p class="kaynak">📚 el-Kâfî, 4/64.</p>
+    </div>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">2</span>Sihir, bizden önceki bütün ümmetlerde de vardı</h3>
+
+  <p>Sihir, bizden önceki ümmetlerde de bilinen bir olguydu. Nitekim Allah Teâlâ, Kur'ân-ı Kerîm'de şöyle buyurmaktadır:</p>
+
+  <div class="blok ayet">
+    <span class="soyleyen">Zâriyât Sûresi, 52. âyet</span>
+    <p class="ar">﴿كَذَٰلِكَ مَا أَتَى الَّذِينَ مِنْ قَبْلِهِمْ مِنْ رَسُولٍ إِلَّا قَالُوا سَاحِرٌ أَوْ مَجْنُونٌ﴾</p>
+    <p class="tr">"İşte böyle! Onlardan öncekilere de hiçbir peygamber gelmemiştir ki, onun hakkında: 'Bu bir sâhir (yani sihirbaz) veya delidir' dememiş olsunlar."</p>
+    <p class="kaynak">📚 Zâriyât, 52.</p>
+  </div>
+
+  <p>Eğer sihir önceki ümmetlerde bilinmeyen bir şey olsaydı, peygamberlerin sihirbazlıkla itham edilmesinin bir anlamı olmazdı. Bu da sihrin, Nûh aleyhisselâm'dan itibaren önceki ümmetlerde bilinen ve var olan bir olgu olduğunu göstermektedir. Nitekim İbn Teymiyye şöyle demiştir:</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">İbn Teymiyye rahimehullah (v. 728)</span>
+    <p class="ar">«بِخِلَافِ اسْمِ السَّاحِرِ؛ فَإِنَّهُ اسْمٌ مَعْرُوفٌ فِي جَمِيعِ الْأُمَمِ»</p>
+    <p class="tr">"Sâhir ismi, bütün ümmetlerde bilinen bir isimdir."</p>
+    <p class="kaynak">📚 Kitâbu'n-Nubuvvât, 2/1049.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">3</span>Günümüzde sihir yapan kişiler</h3>
+
+  <p>Bu ümmet içerisinde sihirle en çok uğraşanlar arasında Râfızîler ve bazı tarikat mensupları yer almaktadır.</p>
+
+  <p>Kâfir toplumlarda da sihir bilinmekte ve sihre başvurulmaktadır. Hatta bazı devlet kurumlarının dahi sihir ve benzeri okült uygulamalara başvurduğu bilinmektedir.</p>
+
+  <p>Geçmişte, kâfir toplumlar da dâhil olmak üzere pek çok toplum, sihrin tehlikesinin farkında olduğu için sâhirleri cezalandırmış, hatta öldürmüştür. Buna karşılık bazı toplumlarda, özellikle Afrika'daki bazı kabilelerde, sihirle uğraşan kişiler lider konumuna yükselebilmekte veya toplum içerisinde nüfuz sahibi olabilmektedir.</p>
+
+
+  <h3 class="altbolum"><span class="no">4</span>Yedinci Nâkıd, sihirle ilgili olmakla birlikte yalnızca sihirle sınırlı değildir</h3>
+
+  <p>Bu Nâkıd her ne kadar sihirle ilgili olsa da gaybı bildiğini iddia etmek, burçlarla ve astrolojiyle uğraşmak, fal bakmak gibi fiiller de bu Nâkıd'ın kapsamına girer. Bu fiilleri işleyen kimse küfür işlemiş olur.</p>
+
+  <p>Buna örnek olarak şu uygulamalar verilebilir:</p>
+
+  <ul class="madde">
+    <li>Gelecekten haber vermek amacıyla kahve falına, el falına veya tarot kartlarına bakmak</li>
+    <li>Medyumluk yaparak kayıp eşyaların yerini gaybî yollarla bildiğini iddia etmek</li>
+    <li>Yıldızların konumlarından hareketle insanların başına gelecek olayları haber vermek</li>
+    <li>İsim ve rakamlardan kader okumaya çalışmak</li>
+    <li>Yıldıznameyle uğraşmak ve benzeri uygulamalara başvurmak</li>
+  </ul>
+
+
+  <h3 class="altbolum"><span class="no">5</span>Sihrin küfür olma sebebi nedir?</h3>
+
+  <p>Sihir üç yönden küfür sayılır:</p>
+
+  <ol class="sayili">
+    <li>Sâhirler ve kâhinler, şeytanlardan yardım talep ederler. Şeytanlar ise onlara ancak şirk işlemeleri karşılığında yardım ederler. Örneğin, yardım karşılığında kendilerine kurban kesilmesini isterler. Bu ise kişiyi dinden çıkaran büyük şirktir.</li>
+    <li>Sâhirler, zararı giderebildiklerini ve fayda sağlayabildiklerini iddia ederler. Hâlbuki zararı gidermek ve fayda vermek yalnızca Allah'a mahsustur. Dolayısıyla bu iddiada bulunmak küfürdür.</li>
+    <li>Sâhirler ve kâhinler, gaybdan haber verdiklerini iddia ederler. Oysa gaybı yalnızca Allah bilir. Dolayısıyla bu iddiada bulunmak küfürdür.</li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">6</span>Sihir neden İslâm'ı iptal eden bir husustur?</h3>
+
+  <ol class="sayili">
+    <li>Sihirde Allah'tan başkasına dua etmek, şeytanları çağırmak ve onlara yakarmak vardır. Bu ise büyük şirktir.</li>
+    <li>Sihirde şeytanların ve sâhirlerin hükümlerine göre hükmetmek vardır. Bu da Allah'ın indirdiği hükümler dışında başka hükümlerle hükmetmektir.</li>
+    <li>Sihir yapan kişi, Resûlullah <span class="sav">ﷺ</span>'in şeriatına uymak zorunda olmadığına veya onun şeriatının dışına çıkabileceğine inanır.</li>
+    <li>Sihirde Allah'ın şeriatına, Resûlullah <span class="sav">ﷺ</span>'in sünnetine ve salih müminlere karşı buğz ve düşmanlık vardır.</li>
+    <li>Sihirde dinle alay etme ve dini aşağılama vardır. Sâhirin Kur'ân'ı ayaklarının altına alması veya İslâm'ı aşağılayan benzeri davranışlarda bulunması buna örnektir.</li>
+    <li>Sihirde Allah'ın dininden yüz çevirme ve ona karşı gelme vardır.</li>
+    <li>Sihirde kâfirlere dostluk ve bağlılık gösterme vardır. Bu ise velâ ve berâ akidesini ortadan kaldırır.</li>
+  </ol>
+
+  <p class="vurgu">Dolayısıyla sihir konusunu incelediğimizde, müellifin zikrettiği İslâm'ı iptal eden on hususun hemen hemen tamamının sihirde bir araya geldiğini görürüz.</p>
+
+
+  <h3 class="altbolum"><span class="no">7</span>Sâhirler neden tâğut olarak nitelendirilir?</h3>
+
+  <div class="blok hadis">
+    <span class="soyleyen">Câbir bin Abdullah radıyallahu anh şöyle demiştir</span>
+    <p class="ar">«كَانَتِ الطَّوَاغِيتُ الَّتِي يَتَحَاكَمُونَ إِلَيْهَا ... وَفِي كُلِّ حَيٍّ وَاحِدٌ، كُهَّانٌ يَنْزِلُ عَلَيْهِمُ الشَّيْطَانُ»</p>
+    <p class="tr">"Hüküm için başvurdukları tâğutlar, her kabilede bir tane bulunan ve üzerlerine şeytanın indiği kâhinlerdi."</p>
+    <p class="kaynak">📚 Buhârî, 4583 numaralı hadisten önce ta'lîk olarak zikredilmiştir.</p>
+  </div>
+
+  <ol class="sayili">
+    <li>Sâhirler, insanları Allah'tan başkasına ibadet etmeye, kendilerine veya şeytanlara itaat etmeye ve şeytanlara tapmaya çağırırlar. Böylece insanları Allah'tan başkasına yönelmeye davet ederler.</li>
+    <li>Sâhirler, gaybı bildiklerini iddia ederler. Oysa gaybın bilgisi Allah'a mahsustur. Aynı şekilde, zararı giderebildiklerini ve fayda sağlayabildiklerini de ileri sürerler. Hâlbuki bunlar yalnızca Allah'a ait yetkilerdir.</li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">8</span>Sihrin kısımları</h3>
+
+  <p>Sihrin pek çok çeşidi olmakla birlikte, genel olarak iki temel kısmı vardır. Bu iki kısmın da sihir olarak adlandırılması hususunda ihtilaf yoktur.</p>
+
+  <h4 class="kisim"><span class="no">1</span>Şeytanların yardımıyla yapılan sihir</h4>
+  <div class="kisim-govde">
+    <p>Bir kişiyi etkilemek amacıyla şeytanların yardımıyla yapılan tılsımlar, muskalar ve düğümler bu kısma girer. Bu tür sihir, ittifakla küfür ve şirktir.</p>
+
+    <p>Allah Teâlâ, Bakara sûresinde bu tür sihre işaret ederek şöyle buyurmuştur:</p>
+
+    <div class="blok ayet">
+      <span class="soyleyen">Bakara Sûresi, 102. âyet</span>
+      <p class="ar">﴿وَاتَّبَعُوا مَا تَتْلُو الشَّيَاطِينُ عَلَىٰ مُلْكِ سُلَيْمَانَ ۖ وَمَا كَفَرَ سُلَيْمَانُ وَلَٰكِنَّ الشَّيَاطِينَ كَفَرُوا يُعَلِّمُونَ النَّاسَ السِّحْرَ﴾</p>
+      <p class="tr">"Onlar, Süleyman'ın hükümranlığı döneminde şeytanların anlattıklarına uydular. Süleyman küfre girmedi; fakat şeytanlar, insanlara sihir öğreterek küfre girdiler."</p>
+      <p class="kaynak">📚 Bakara, 102.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span>Bazı ilaç ve bitkiler kullanılarak yapılan sihir</h4>
+  <div class="kisim-govde">
+    <p>Bir kişinin aklını bozmak, ölümüne sebep olmak veya ona benzeri zararlar vermek amacıyla bazı ilaç ve bitkilerin kullanılması bu kısma girer.</p>
+
+    <p>Bu tür uygulamaların sihir olduğu hususunda da ihtilaf yoktur. Bunları yapan kişi sâhir olarak nitelendirilir. Ancak bu kişinin kâfir olup olmadığı konusunda âlimler arasında ihtilaf vardır. Bu konuyu ileride ayrıntılı olarak ele alacağız.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">9</span>Resûlullah <span class="sav">ﷺ</span>'in döneminde görülen sihir ve kehanet uygulamaları</h3>
+
+  <ol class="sayili">
+    <li><strong>Tencîm:</strong> Yıldızların konum ve hareketlerinden yola çıkarak yeryüzünde meydana gelen veya gelecekte meydana gelecek olaylar hakkında haber vermektir. Bu uygulama genellikle cin ve şeytanlarla irtibat kurularak yapılırdı. Bununla uğraşan kişiler “kâhin” olarak nitelendirilirdi.</li>
+    <li><strong>Sihir:</strong> Cin ve şeytanlarla irtibat kurularak yapılan büyü uygulamalarıdır. Bu uygulamalarla uğraşan kişilere “sâhir” denirdi.</li>
+    <li><strong>Arrâflık:</strong> Kayıp veya çalınmış eşyaların yerini bildiğini iddia etme işidir. Bu iddiada bulunan ve kayıp eşyaların yerini öğrenmek için kendisine başvurulan kişiye “arrâf” denirdi.</li>
+    <li><strong>Remil ve tark:</strong> Kuma çizgiler çizerek veya çakıl taşlarını yere atıp bunların oluşturduğu şekilleri yorumlayarak gaybdan haber verme iddiasına dayanan uygulamalardır. Remille uğraşan kişiye “remmâl” denir.</li>
+  </ol>
+
+  <p>Bu uygulamaların tamamı Resûlullah <span class="sav">ﷺ</span>'in döneminde mevcuttu. Günümüzde ise sihir ve kehanet uygulamaları daha da çeşitlenmiştir.</p>
+
+
+  <h3 class="altbolum"><span class="no">10</span>Sihir hakiki midir, yoksa hayalden mi ibarettir?</h3>
+
+  <p>Sihrin gerçekten bir etkisi var mıdır, yoksa yalnızca insanı vesveseye düşüren veya gözünü yanıltan bir uygulamadan mı ibarettir?</p>
+
+  <p>Ehl-i sünnet ve'l-cemaat, sihri bu açıdan iki kısma ayırır:</p>
+
+  <h4 class="kisim"><span class="no">1</span>Hakiki sihir</h4>
+  <div class="kisim-govde">
+    <p>İnsanın bedenine, aklına veya görme ve duyma kabiliyetine gerçekten zarar veren ve etkisi açıkça görülen sihirdir. Kişi ile eşinin arasını ayırmak amacıyla yapılan sihir buna örnektir.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span>Tahyîl sihri</h4>
+  <div class="kisim-govde">
+    <p>Göz boyamaya ve bir şeyi olduğundan farklı göstermeye dayanan sihirdir. Firavun'un sâhirlerinin, iplerini ve değneklerini hareket ediyormuş gibi göstermeleri buna örnektir. Allah Teâlâ şöyle buyurmuştur:</p>
+
+    <div class="blok ayet">
+      <span class="soyleyen">Tâhâ Sûresi, 66. âyet</span>
+      <p class="ar">﴿قَالَ بَلْ أَلْقُوا ۖ فَإِذَا حِبَالُهُمْ وَعِصِيُّهُمْ يُخَيَّلُ إِلَيْهِ مِنْ سِحْرِهِمْ أَنَّهَا تَسْعَىٰ﴾</p>
+      <p class="tr">"Mûsâ, 'Hayır, siz atın.' dedi. Bir de ne görsün! Yaptıkları sihir sebebiyle ipleri ve değnekleri ona hareket ediyormuş gibi görünüyordu."</p>
+      <p class="kaynak">📚 Tâhâ, 66.</p>
+    </div>
+  </div>
+
+  <p>İkinci kısmın varlığını Mu'tezile dâhil bütün taraflar kabul eder. Ancak Mu'tezile gibi bazı fırkalar, birinci kısmı inkâr eder. Onlara göre sihir, yalnızca göz boyamadan ibarettir; gerçek bir etkisi yoktur. Râcih görüş ise hakiki sihrin de var olduğudur. Buna dair bazı deliller şunlardır:</p>
+
+  <div class="delil">
+    <span class="no">1</span>
+    <div class="govde">
+      <p>Allah Teâlâ şöyle buyurmuştur:</p>
+      <div class="blok ayet">
+        <span class="soyleyen">Bakara Sûresi, 102. âyet</span>
+        <p class="ar">﴿وَلَٰكِنَّ الشَّيَاطِينَ كَفَرُوا يُعَلِّمُونَ النَّاسَ السِّحْرَ﴾</p>
+        <p class="tr">"Fakat şeytanlar, insanlara sihir öğreterek küfre girdiler."</p>
+        <p class="kaynak">📚 Bakara, 102.</p>
+      </div>
+      <p>Karâfî rahimehullah el-Furûk'ta bu âyeti delil getirerek şöyle demiştir:</p>
+      <div class="blok alim">
+        <span class="soyleyen">Karâfî rahimehullah (v. 684)</span>
+        <p class="ar">«أَمَّا الْكِتَابُ فَقَوْلُهُ تَعَالَى: ﴿يُعَلِّمُونَ النَّاسَ السِّحْرَ﴾، وَمَا لَا حَقِيقَةَ لَهُ لَا يُعَلَّمُ»</p>
+        <p class="tr">"Kur'ân'dan delil ise Allah Teâlâ'nın şu buyruğudur: 'İnsanlara sihir öğretiyorlardı.' Hakikati olmayan bir şey ise öğretilemez."</p>
+        <p class="kaynak">📚 el-Furûk, 4/150.</p>
+      </div>
+      <p>Dolayısıyla burada öğretilen sihrin bir hakikati vardır.</p>
+    </div>
+  </div>
+
+  <div class="delil">
+    <span class="no">2</span>
+    <div class="govde">
+      <p>Allah Teâlâ şöyle buyurmuştur:</p>
+      <div class="blok ayet">
+        <span class="soyleyen">Bakara Sûresi, 102. âyet</span>
+        <p class="ar">﴿فَيَتَعَلَّمُونَ مِنْهُمَا مَا يُفَرِّقُونَ بِهِ بَيْنَ الْمَرْءِ وَزَوْجِهِ﴾</p>
+        <p class="tr">"Onlardan, kişi ile eşinin arasını ayıracak şeyler öğreniyorlardı."</p>
+        <p class="kaynak">📚 Bakara, 102.</p>
+      </div>
+      <p>Öğrenilen sihir, eşlerin arasının ayrılmasına sebep oluyorsa bu, onun gerçek bir etkisinin bulunduğunu gösterir.</p>
+    </div>
+  </div>
+
+  <div class="delil">
+    <span class="no">3</span>
+    <div class="govde">
+      <p>Allah Teâlâ şöyle buyurmuştur:</p>
+      <div class="blok ayet">
+        <span class="soyleyen">Felak Sûresi, 4. âyet</span>
+        <p class="ar">﴿وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ﴾</p>
+        <p class="tr">"Düğümlere üfleyenlerin şerrinden…"</p>
+        <p class="kaynak">📚 Felak, 4.</p>
+      </div>
+      <p>Allah Teâlâ bu âyette, düğümlere üfleyenlerin şerrinden kendisine sığınmamızı emretmiştir. İbn Kudâme bu âyeti şöyle açıklar:</p>
+      <div class="blok alim">
+        <span class="soyleyen">İbn Kudâme rahimehullah (v. 620)</span>
+        <p class="ar">«يَعْنِي: السَّوَاحِرَ اللَّاتِي يَعْقِدْنَ فِي سِحْرِهِنَّ، وَيَنْفُثْنَ فِي عُقَدِهِنَّ، وَلَوْلَا أَنَّ لِلسِّحْرِ حَقِيقَةً لَمْ يَأْمُرْ بِالِاسْتِعَاذَةِ مِنْهُ»</p>
+        <p class="tr">"Yani sihir yaparken düğüm atan ve bu düğümlere üfleyen sâhire kadınlar kastedilmektedir. Sihrin bir hakikati olmasaydı Allah, ondan kendisine sığınılmasını emretmezdi."</p>
+        <p class="kaynak">📚 el-Kâfî, 4/64.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="delil">
+    <span class="no">4</span>
+    <div class="govde">
+      <p>Bu konuda icmâ vardır. Bu icmâyı Karâfî el-Furûk'ta, Vezîr İbn Hubeyre de el-İfsâh'ta nakletmiştir.</p>
+      <div class="blok alim">
+        <span class="soyleyen">Karâfî rahimehullah (v. 684)</span>
+        <p class="ar">«وَكَانَ السِّحْرُ وَخَبَرُهُ مَعْلُومًا لِلصَّحَابَةِ رِضْوَانُ اللَّهِ عَلَيْهِمْ أَجْمَعِينَ، وَكَانُوا مُجْمِعِينَ عَلَيْهِ قَبْلَ ظُهُورِ الْقَدَرِيَّةِ»</p>
+        <p class="tr">"Sihir ve onunla ilgili haberler sahâbe radıyallahu anhum tarafından biliniyordu. Kaderiyye ortaya çıkmadan önce onlar bu konuda icmâ etmişlerdi."</p>
+        <p class="kaynak">📚 el-Furûk, 4/150.</p>
+      </div>
+      <div class="blok alim">
+        <span class="soyleyen">Vezîr İbn Hubeyre rahimehullah (v. 560)</span>
+        <p class="ar">«أَجْمَعُوا عَلَى أَنَّ السِّحْرَ لَهُ حَقِيقَةٌ إِلَّا أَبَا حَنِيفَةَ، فَإِنَّهُ قَالَ: لَا حَقِيقَةَ لَهُ عِنْدَهُ»</p>
+        <p class="tr">"Sihrin bir hakikati olduğu hususunda icmâ etmişlerdir. Ancak Ebû Hanîfe bundan müstesnadır; o, sihrin bir hakikati olmadığını söylemiştir."</p>
+        <p class="kaynak">📚 el-İfsâh (el-İşrâf alâ Mezâhibi'l-Eşrâf), İbn Kesîr'in nakliyle: Tefsîru İbn Kesîr, 1/371.</p>
+      </div>
+      <p>İbn Kuteybe ise sihir konusunda Mu'tezile'ye cevap olarak şöyle demiştir:</p>
+      <div class="blok alim">
+        <span class="soyleyen">İbn Kuteybe rahimehullah (v. 276)</span>
+        <p class="ar">«وَهَذَا شَيْءٌ لَمْ نُؤْمِنْ بِهِ مِنْ جِهَةِ الْقِيَاسِ، وَلَا مِنْ جِهَةِ حُجَّةِ الْعَقْلِ، وَإِنَّمَا آمَنَّا بِهِ مِنْ جِهَةِ الْكُتُبِ وَأَخْبَارِ الْأَنْبِيَاءِ صَلَّى اللَّهُ عَلَيْهِمْ وَسَلَّمَ، وَتَوَاطُؤِ الْأُمَمِ فِي كُلِّ زَمَانٍ عَلَيْهِ، خَلَا هَذِهِ الْعِصَابَةَ الَّتِي لَا تُؤْمِنُ إِلَّا بِمَا أَوْجَبَهُ النَّظَرُ، وَدَلَّ عَلَيْهِ الْقِيَاسُ فِيمَا شَاهَدُوا وَرَأَوْا»</p>
+        <p class="tr">"Biz buna ne kıyas yoluyla ne de akıl delili yoluyla iman ettik. Biz ona ancak ilâhî kitaplar, peygamberlerden (aleyhimusselâm) gelen haberler ve her dönemde bütün ümmetlerin bu konudaki ittifakı sebebiyle iman ettik. Yalnızca nazarın gerektirdiğine ve gördükleri, şahit oldukları şeylerde kıyasın gösterdiğine iman eden şu topluluk bunun dışındadır."</p>
+        <p class="kaynak">📚 Te'vîlu Muhtelifi'l-Hadîs, s. 270.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">11</span>Sâhirin hükmü nedir?</h3>
+
+  <p>Bu konunun ayrıntılı olarak ele alınması gerekir. Çünkü hüküm, duruma göre değişir. Konunun daha iyi anlaşılması için farklı durumları ve her birinin hükmünü ayrı ayrı zikredeceğiz.</p>
+
+  <ol class="sayili">
+    <li>Sihrin mübah olduğuna inanan kişi, kendisi sihir yapmasa bile <strong>kâfir olur</strong>. Çünkü Allah'ın haram kıldığı sihri helâl kabul ederek küfür içeren bir inancı benimsemiş olur.</li>
+    <li>Küfür içeren bir inancı benimseyen kişi <strong>kâfir olur</strong>. Yıldızların bu âlemde kendi başlarına zarar veya fayda verebildiğine inanmak buna örnektir.</li>
+    <li>Küfür teşkil eden fiilleri işleyen kişi <strong>kâfir olur</strong>. Mushafı tuvalete atmak veya cinler için kurban kesmek buna örnektir.</li>
+    <li>Yalnızca Allah'ın yapmaya kadir olduğu bir şeyi cinlerden isteyen kişi <strong>kâfir olur</strong>. Örneğin, cinlerden ölmüş birini diriltmelerini istemek buna girer. Çünkü ölüleri diriltmek yalnızca Allah'ın kudretindedir.</li>
+    <li>İnsanlara zarar vermeksizin, örneğin eşleri bir araya getirmek amacıyla bazı ilaç ve bitkileri kullanan veya cinlerden şirk içermeyen bir yardım talebinde bulunan kişi (örneğin bir cinden su isteyen kimse) râcih görüşe göre <strong>kâfir değil, fâsıktır</strong>. Yönetici, uygun görürse bu kişiye ta'zîr kapsamında ölüm cezası verebilir.</li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">12</span>Sihrin küfür olduğuna dair deliller nelerdir?</h3>
+
+  <div class="delil">
+    <span class="no">1</span>
+    <div class="govde">
+      <p class="delil-etiket">Birinci delil</p>
+      <div class="blok ayet">
+        <span class="soyleyen">Bakara Sûresi, 102. âyet</span>
+        <p class="ar">﴿وَمَا كَفَرَ سُلَيْمَانُ وَلَٰكِنَّ الشَّيَاطِينَ كَفَرُوا﴾</p>
+        <p class="tr">"Süleyman küfre girmedi; fakat şeytanlar küfre girdiler."</p>
+        <p class="kaynak">📚 Bakara, 102.</p>
+      </div>
+      <p>İbn Kesîr şöyle aktarır:</p>
+      <div class="blok alim">
+        <span class="soyleyen">İbn Kesîr rahimehullah (v. 774)</span>
+        <p class="ar">«وَقَدِ اسْتَدَلَّ بَعْضُهُمْ بِهَذِهِ الْآيَةِ عَلَى تَكْفِيرِ مَنْ تَعَلَّمَ السِّحْرَ»</p>
+        <p class="tr">"Bazı âlimler, bu âyeti sihir öğrenen kişinin kâfir olduğuna delil olarak göstermişlerdir."</p>
+        <p class="kaynak">📚 Tefsîru İbn Kesîr, 1/363.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="delil">
+    <span class="no">2</span>
+    <div class="govde">
+      <p class="delil-etiket">İkinci delil</p>
+      <div class="blok ayet">
+        <span class="soyleyen">Bakara Sûresi, 102. âyet</span>
+        <p class="ar">﴿وَلَقَدْ عَلِمُوا لَمَنِ اشْتَرَاهُ مَا لَهُ فِي الْآخِرَةِ مِنْ خَلَاقٍ﴾</p>
+        <p class="tr">"Onlar, sihri satın alan kimsenin âhirette hiçbir nasibinin olmayacağını kesin olarak biliyorlardı."</p>
+        <p class="kaynak">📚 Bakara, 102.</p>
+      </div>
+      <p>Hâfız el-Hakemî, Meâricu'l-Kabûl'de bu âyet hakkında şöyle der:</p>
+      <div class="blok alim">
+        <span class="soyleyen">Hâfız el-Hakemî rahimehullah (v. 1377)</span>
+        <p class="ar">«يَعْنِي: مِنْ حَظٍّ وَلَا نَصِيبٍ، وَهَذَا الْوَعِيدُ لَمْ يُطْلَقْ إِلَّا فِيمَا هُوَ كُفْرٌ لَا بَقَاءَ لِلْإِيمَانِ مَعَهُ»</p>
+        <p class="tr">"Yani hiçbir payı ve nasibi yoktur. Bu tehdit, ancak imanın kendisiyle bir arada bulunamayacağı küfür hakkında kullanılmıştır."</p>
+        <p class="kaynak">📚 Meâricu'l-Kabûl, 2/554.</p>
+      </div>
+      <p>Şinkîtî de Edvâu'l-Beyân'da şöyle der:</p>
+      <div class="blok alim">
+        <span class="soyleyen">İmam Şinkîtî rahimehullah (v. 1393)</span>
+        <p class="ar">«أَيْ: مِنْ نَصِيبٍ، وَنَفْيُ النَّصِيبِ فِي الْآخِرَةِ بِالْكُلِّيَّةِ لَا يَكُونُ إِلَّا لِلْكَافِرِ، عِيَاذًا بِاللَّهِ تَعَالَى»</p>
+        <p class="tr">"Yani hiçbir nasibi yoktur. Âhiretteki nasibin bütünüyle nefyedilmesi, ancak kâfir için söz konusu olur. Bundan Allah Teâlâ'ya sığınırız."</p>
+        <p class="kaynak">📚 Edvâu'l-Beyân, 4/39.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="delil">
+    <span class="no">3</span>
+    <div class="govde">
+      <p class="delil-etiket">Üçüncü delil</p>
+      <div class="blok ayet">
+        <span class="soyleyen">Tâhâ Sûresi, 69. âyet</span>
+        <p class="ar">﴿إِنَّمَا صَنَعُوا كَيْدُ سَاحِرٍ ۖ وَلَا يُفْلِحُ السَّاحِرُ حَيْثُ أَتَىٰ﴾</p>
+        <p class="tr">"Onların yaptıkları ancak bir sâhirin hilesidir. Sâhir, nereye giderse gitsin, kurtuluşa eremez."</p>
+        <p class="kaynak">📚 Tâhâ, 69.</p>
+      </div>
+      <p>Şinkîtî, "lâ yuflihu" ifadesinde fiilin nefiy bağlamında gelmesinin umum ifade ettiğini belirterek şöyle der:</p>
+      <div class="blok alim">
+        <span class="soyleyen">İmam Şinkîtî rahimehullah (v. 1393)</span>
+        <p class="ar">«يَعُمُّ نَفْيُ جَمِيعِ أَنْوَاعِ الْفَلَاحِ عَنِ السَّاحِرِ، وَأَكَّدَ ذَلِكَ بِالتَّعْمِيمِ فِي الْأَمْكِنَةِ بِقَوْلِهِ: ﴿حَيْثُ أَتَىٰ﴾، وَذَلِكَ دَلِيلٌ عَلَى كُفْرِهِ؛ لِأَنَّ الْفَلَاحَ لَا يُنْفَى بِالْكُلِّيَّةِ نَفْيًا عَامًّا إِلَّا عَمَّنْ لَا خَيْرَ فِيهِ، وَهُوَ الْكَافِرُ»</p>
+        <p class="tr">"Bu ifade, sâhirin her türlü felâhtan (kurtuluş ve başarıdan) mahrum olduğunu bildirir. Allah Teâlâ, 'Nereye giderse gitsin' buyruğuyla bütün mekânları kapsayarak bu anlamı pekiştirmiştir. Bu da onun küfrüne delildir. Çünkü felâh, ancak kendisinde hiçbir hayır bulunmayan kimseden, yani kâfirden bütünüyle nefyedilir."</p>
+        <p class="kaynak">📚 Edvâu'l-Beyân, 4/39.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="delil">
+    <span class="no">4</span>
+    <div class="govde">
+      <p class="delil-etiket">Dördüncü delil</p>
+      <p>Sahâbîlerin sâhirlerin öldürülmesini emretmeleri de bu konuda delil olarak zikredilmiştir.</p>
+      <div class="blok hadis">
+        <span class="soyleyen">Becâle bin Abde anlatıyor</span>
+        <p class="ar">«كُنْتُ كَاتِبًا لِجَزْءِ بْنِ مُعَاوِيَةَ عَمِّ الْأَحْنَفِ بْنِ قَيْسٍ، إِذْ جَاءَنَا كِتَابُ عُمَرَ قَبْلَ مَوْتِهِ بِسَنَةٍ: اقْتُلُوا كُلَّ سَاحِرٍ ... فَقَتَلْنَا فِي يَوْمٍ ثَلَاثَةَ سَوَاحِرَ»</p>
+        <p class="tr">"Ahnef bin Kays'ın amcası Cez' bin Muâviye'nin kâtibiydim. Ömer radıyallahu anh'ın vefatından bir yıl önce yazdığı mektup bize ulaştı: 'Her sâhiri öldürün…' Bunun üzerine bir günde üç sâhire kadını öldürdük."</p>
+        <p class="kaynak">📚 Ebû Dâvûd, 3043.</p>
+      </div>
+      <p>Bu delillendirmeye göre şeriatta ölüm cezasını gerektiren fiiller genel olarak küfürle ilişkilidir.</p>
+      <p>Hadiste ölüm cezası kapsamında zikredilen üç kişi şunlardır:</p>
+      <ul class="madde">
+        <li>Zina eden kişi.</li>
+        <li>Bir kimseyi haksız yere öldüren kişi.</li>
+        <li>Dininden dönen kişi.</li>
+      </ul>
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+        <p class="ar">«لَا يَحِلُّ دَمُ امْرِئٍ مُسْلِمٍ يَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَنِّي رَسُولُ اللَّهِ، إِلَّا بِإِحْدَى ثَلَاثٍ: النَّفْسُ بِالنَّفْسِ، وَالثَّيِّبُ الزَّانِي، وَالْمُفَارِقُ لِدِينِهِ التَّارِكُ لِلْجَمَاعَةِ»</p>
+        <p class="tr">"Allah'tan başka ilah olmadığına ve benim Allah'ın Resûlü olduğuma şahitlik eden Müslüman bir kişinin kanı ancak şu üç şeyden biriyle helal olur: cana karşılık can, evli olduğu hâlde zina eden ve cemaati terk ederek dininden ayrılan."</p>
+        <p class="kaynak">📚 Buhârî, 6878; Muslim, 1676.</p>
+      </div>
+      <p>Bu delillendirmeye göre sâhir, üçüncü kısım olan "dininden dönen kişi" kapsamında değerlendirilir.</p>
+    </div>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">13</span>Sâhirler bir varlığı başka bir varlığa dönüştürebilir mi?</h3>
+
+  <p>Bir insanı hayvana veya bir demir parçasını altına dönüştürmek buna örnek olarak verilebilir.</p>
+
+  <p>İbn Teymiyye, İbn Useymîn ve Begavî bu konuyu ele almış ve sâhirlerin bir varlığın hakikatini değiştirerek onu başka bir varlığa dönüştüremeyeceğini belirtmişlerdir. Çünkü bu, yalnızca Allah'ın kudretindedir.</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">İbn Useymîn rahimehullah (v. 1421)</span>
+    <p class="ar">«لِلسِّحْرِ حَقِيقَةٌ وَلَا شَكَّ، وَهُوَ مُؤَثِّرٌ حَقِيقَةً، لَكِنْ كَوْنُهُ يَقْلِبُ الشَّيْءَ، أَوْ يُحَرِّكُ السَّاكِنَ، أَوْ يُسَكِّنُ الْمُتَحَرِّكَ، هَذَا خَيَالٌ وَلَيْسَ حَقِيقَةً»</p>
+    <p class="tr">"Sihrin bir hakikati olduğunda şüphe yoktur ve gerçekten tesir eder. Ancak bir şeyi başka bir şeye dönüştürmesi, hareketsiz olanı hareket ettirmesi veya hareketli olanı durdurması, gerçekte meydana gelen bir durum değil, yalnızca bir yanılsamadır."</p>
+    <p class="kaynak">📚 Mecmû'u Fetâvâ ve Resâili İbn Useymîn, 2/175.</p>
+  </div>
+
+  <p>Nitekim Firavun'un sâhirleri, Mûsâ aleyhisselâm asasını yere atınca iman edip secdeye kapanmışlardır. İbn Teymiyye bunun sebebini şöyle açıklar:</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">İbn Teymiyye rahimehullah (v. 728)</span>
+    <p class="ar">«فَلَمَّا أَتَتْ، وَابْتَلَعَتْهَا الْعَصَا الَّتِي صَارَتْ حَيَّةً، عَلِمَ السَّحَرَةُ أَنَّ هَذَا لَيْسَ مِنْ جِنْسِ مَقْدُورِهِمْ، فَآمَنُوا إِيمَانًا جَازِمًا»</p>
+    <p class="tr">"Yılana dönüşen asa gelip onları yutunca sâhirler, bunun kendi güçlerinin yetebileceği türden bir şey olmadığını anladılar ve kesin bir imanla iman ettiler."</p>
+    <p class="kaynak">📚 Kitâbu'n-Nubuvvât, 1/170.</p>
+  </div>
+
+  <p>Begavî de bu konuda şöyle der:</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">Begavî rahimehullah (v. 516)</span>
+    <p class="ar">«وَقِيلَ: إِنَّهُ يُؤَثِّرُ فِي قَلْبِ الْأَعْيَانِ، فَيَجْعَلُ الْآدَمِيَّ عَلَى صُورَةِ الْحِمَارِ، وَيَجْعَلُ الْحِمَارَ عَلَى صُورَةِ الْكَلْبِ، وَالْأَصَحُّ أَنَّ ذَلِكَ تَخْيِيلٌ»</p>
+    <p class="tr">"Sihrin, varlıkların hakikatini değiştirerek insanı eşek, eşeği de köpek suretine dönüştürebildiği söylenmiştir. Ancak daha doğru olan görüş, bunun yalnızca bir göz yanıltması olduğudur."</p>
+    <p class="kaynak">📚 Tefsîru'l-Begavî, 1/148.</p>
+  </div>
+
+  <div class="ikaz">
+    <span class="ikaz-etiket">⚠️ İkaz 1</span>
+    <p>Bir insanın kendi kudretiyle bir varlığı gerçekten başka bir varlığa dönüştürebileceğine inanmak — örneğin bir insanı hayvana dönüştürebileceğini kabul etmek — küfürdür. Çünkü bu inanç, Allah'tan başka bir yaratıcının varlığını kabul etmek anlamına gelir.</p>
+  </div>
+
+  <div class="ikaz">
+    <span class="ikaz-etiket">⚠️ İkaz 2</span>
+    <p>Allah'ın bazı kullarına böyle bir kudret verdiğine inanmak ise iki durumda ele alınır:</p>
+    <ol class="sayili">
+      <li><strong>Peygamberlerin mucizeleri hakkında bildirilenlere inanmak:</strong> Îsâ aleyhisselâm'ın mucizeleri gibi, vahiy yoluyla bildirilen mucizelere iman etmek vaciptir.</li>
+      <li><strong>Bazı tarikatçıların yaptığı gibi, hakkında şer'î bir delil bulunmayan kişilere böyle bir kudret verildiğine inanmak:</strong> Bir kimsenin, şeyhine Allah tarafından böyle bir kudret verildiğini delilsiz olarak kabul etmesi buna örnektir. Bu inanç, aşırılık olup şirke vesile olur. Kişi, buna eşlik eden ve şeyhi hakkında aşırılık içeren diğer inançları sebebiyle de küfre düşer.</li>
+    </ol>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">14</span>Sihrin çeşitleri nelerdir?</h3>
+
+  <ol class="sayili">
+    <li><strong>Sarf ve atf:</strong> Müellif, bu iki sihir türünü örnek olarak zikretmiştir. Bunlar yaygın olarak görülen sihir türlerindendir.
+      <p class="alt-tanim"><strong>Sarf:</strong> Bir kişiyi başka bir kişiden soğutmak ve uzaklaştırmak amacıyla yapılan sihirdir. Eşler arasında olabileceği gibi başka kişiler arasında da olabilir. Bir kişiyi belirli bir mekândan soğutmak ve uzaklaştırmak amacıyla da yapılabilir.</p>
+      <p class="alt-tanim"><strong>Atf:</strong> Sarfın tam tersidir. İki kişiyi birbirine yakınlaştırmak, aralarında sevgi ve bağlılık oluşturmak amacıyla yapılan sihirdir.</p>
+    </li>
+    <li><strong>Fal ve gaybdan haber verme uygulamaları:</strong> El çizgilerini okuyarak veya kahve falına bakarak gaybdan haber vermek; yıldızların insanlar üzerinde etkili olduğuna inanarak onların konumlarından hareketle kişilerin geleceği hakkında iddialarda bulunmak bu kapsamdadır.</li>
+    <li><strong>Kurşun dökmek:</strong> Nazarı, sihri veya korkuyu gidermek amacıyla yapılan bir uygulamadır.</li>
+    <li>Sirklerde ve gösterilerde yapılan ilüzyon ve göz boyama gösterileri de sihirden sayılır.</li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">15</span>Sâhire gitmenin hükmü nedir?</h3>
+
+  <p>Sâhire gitmenin hükmü, kişinin niyetine, ne sorduğuna ve verilen haberi tasdik edip etmediğine göre değişir. Bu durumlar şöyle açıklanabilir:</p>
+
+  <ol class="sayili">
+    <li><strong>Kişi, gelecekte meydana gelecek olaylar gibi mutlak gayba dair hususları sâhire sorar ve verdiği haberleri tasdik ederse:</strong> Büyük küfür işlemiş olur. Çünkü Allah'ın rubûbiyetine has olan bir özelliği başkasına nispet etmiş olur.</li>
+    <li><strong>Kişi, kayıp eşyaların yeri gibi nisbî gayba dair hususları sâhire sorar ve bunları cin veya şeytanlardan haber almaksızın bildiğine inanarak onu tasdik ederse:</strong> Büyük küfür işlemiş olur.</li>
+    <li><strong>Kişi, nisbî gayba dair hususları sâhire sorar ve şeytanların ona haber verdiğini bilerek söylediklerini tasdik ederse:</strong> Küçük küfür işlemiş olur. Bunun iki sonucu vardır:
+      <p class="alt-tanim">Muhammed <span class="sav">ﷺ</span>'e indirileni inkâr etmiş sayılır. Burada kastedilen küçük küfürdür.</p>
+      <p class="alt-tanim">Kırk gün boyunca kıldığı namazların sevabından mahrum kalır.</p>
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+        <p class="ar">«مَنْ أَتَى كَاهِنًا أَوْ عَرَّافًا فَصَدَّقَهُ بِمَا يَقُولُ، فَقَدْ كَفَرَ بِمَا أُنْزِلَ عَلَى مُحَمَّدٍ <span class="sav">ﷺ</span>»</p>
+        <p class="tr">"Kim bir kâhine veya arrâfa gider de onun söylediğini tasdik ederse, Muhammed <span class="sav">ﷺ</span>'e indirileni inkâr etmiş olur."</p>
+        <p class="kaynak">📚 Ahmed, 9536; Beyhakî, es-Sunenu'l-Kubrâ, 8/233.</p>
+      </div>
+    </li>
+    <li><strong>Kişi, sâhire soru sorar fakat verdiği haberleri tasdik etmezse:</strong> Kırk gün boyunca kıldığı namazların sevabından mahrum kalır. Çünkü Resûlullah <span class="sav">ﷺ</span> bu cezayı soru sormaya bağlamıştır.
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+        <p class="ar">«مَنْ أَتَى عَرَّافًا فَسَأَلَهُ عَنْ شَيْءٍ، لَمْ تُقْبَلْ لَهُ صَلَاةٌ أَرْبَعِينَ لَيْلَةً»</p>
+        <p class="tr">"Kim bir arrâfa gidip ona bir şey sorarsa, kırk gece namazı kabul olunmaz."</p>
+        <p class="kaynak">📚 Muslim, 2230.</p>
+      </div>
+    </li>
+    <li><strong>Kişi, soru sormadan ve söylenenleri tasdik etmeden, yalnızca merak ettiği için sâhire giderse:</strong> Haram işlemiş olur. Televizyon veya internet üzerinden bu kişileri merak amacıyla izlemek de bu kapsamda değerlendirilebilir.</li>
+    <li><strong>Kişi, sâhiri sınamak, yalanını ortaya çıkarmak ve söylediklerini reddetmek amacıyla giderse:</strong> Bu amaçla gitmesi caizdir. Bunu, gerekli bilgiye sahip âlimler ve ilim talebeleri yapar. Nitekim sahâbîler İbn Sayyâd'ın Deccâl olabileceğini düşünüyorlardı. Resûlullah <span class="sav">ﷺ</span> de onu sınamak için yanına gitmiş ve iddialarını reddetmiştir.
+    </li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">16</span>Sâhirin cezası nedir?</h3>
+
+  <p>Öncelikle iki hususu birbirinden ayırmak gerekir: Sâhirin kâfir olup olmadığı meselesi ile kendisine uygulanacak ceza aynı mesele değildir. Çünkü bazı âlimlere göre sâhire ölüm cezası verilmesi, onun büyük küfre düşmüş olmasına bağlı değildir.</p>
+
+  <h4 class="kisim"><span class="no">1</span>Birinci görüş: Büyük küfre düşmüş olsun veya olmasın, sâhire ölüm cezası uygulanır.</h4>
+  <div class="kisim-govde">
+    <p>Bu görüşü benimseyenler arasında İmam Mâlik, Ebû Hanîfe ve kendisinden nakledilen meşhur rivayete göre İmam Ahmed bulunmaktadır. Sahâbeden Ömer, Hafsa ve Cündüb el-Hayr'ın uygulamaları da bu görüşün delilleri arasında zikredilmiştir.</p>
+
+    <p>Süleyman bin Abdullah, bu konuda sahâbenin icmâı bulunduğunu belirtmiş; İbn Teymiyye ise âlimlerin çoğunluğunun bu görüşte olduğunu ifade etmiştir.</p>
+
+    <div class="blok alim">
+      <span class="soyleyen">Süleyman bin Abdullah rahimehullah (v. 1233)</span>
+      <p class="ar">«وَالْأَوَّلُ أَوْلَى لِلْحَدِيثِ، وَلِأَثَرِ عُمَرَ الَّذِي ذَكَرَهُ الْمُصَنِّفُ، وَعَمِلَ بِهِ النَّاسُ فِي خِلَافَتِهِ مِنْ غَيْرِ نَكِيرٍ، فَكَانَ إِجْمَاعًا»</p>
+      <p class="tr">"Birinci görüş daha evlâdır. Çünkü hadis ve müellifin zikrettiği Ömer'in eseri bunu gösterir. İnsanlar onun hilafeti döneminde hiçbir itiraz olmaksızın bununla amel etmişlerdir; böylece bu bir icmâ olmuştur."</p>
+      <p class="kaynak">📚 Teysîru'l-Azîzi'l-Hamîd, s. 333.</p>
+    </div>
+
+    <div class="blok alim">
+      <span class="soyleyen">İbn Teymiyye rahimehullah (v. 728)</span>
+      <p class="ar">«وَكَذَلِكَ قَدْ قِيلَ فِي قَتْلِ السَّاحِرِ؛ فَإِنَّ أَكْثَرَ الْعُلَمَاءِ عَلَى أَنَّهُ يُقْتَلُ»</p>
+      <p class="tr">"Sâhirin öldürülmesi hakkında da (bunun irtidat sebebiyle değil, yeryüzündeki fesat sebebiyle olduğu) söylenmiştir. Nitekim âlimlerin çoğu, onun öldürüleceği görüşündedir."</p>
+      <p class="kaynak">📚 Mecmû'u'l-Fetâvâ, 28/346.</p>
+    </div>
+
+    <p>Bu görüşün delilleri şunlardır:</p>
+
+    <ul class="madde">
+      <li><strong>Sahâbîlerin uygulamaları:</strong> Sahâbeden bazıları, sâhirlere ölüm cezası uygulamıştır.
+        <div class="blok hadis">
+          <span class="soyleyen">Hafsa radıyallahu anhâ hakkında</span>
+          <p class="ar">«أَنَّ حَفْصَةَ زَوْجَ النَّبِيِّ <span class="sav">ﷺ</span> قَتَلَتْ جَارِيَةً لَهَا سَحَرَتْهَا، وَقَدْ كَانَتْ دَبَّرَتْهَا، فَأَمَرَتْ بِهَا فَقُتِلَتْ»</p>
+          <p class="tr">"Nebî <span class="sav">ﷺ</span>'in hanımı Hafsa, kendisine sihir yapan cariyesini öldürttü. Onu (ölümünden sonra hür olmak üzere) müdebbere yapmıştı. Emretti ve cariye öldürüldü."</p>
+          <p class="kaynak">📚 Mâlik, el-Muvatta.</p>
+        </div>
+        <div class="blok hadis">
+          <span class="soyleyen">Ebû Osmân en-Nehdî anlatıyor</span>
+          <p class="ar">«كَانَ عِنْدَ الْوَلِيدِ رَجُلٌ يَلْعَبُ، فَذَبَحَ إِنْسَانًا وَأَبَانَ رَأْسَهُ، فَجَاءَ جُنْدَبٌ الْأَزْدِيُّ فَقَتَلَهُ»</p>
+          <p class="tr">"Velîd'in yanında (sihirle) oyun gösteren bir adam vardı. Bir insanı boğazlayıp başını gövdesinden ayırdı. Bunun üzerine Cündüb el-Ezdî gelip onu öldürdü."</p>
+          <p class="kaynak">📚 Buhârî, et-Târîhu'l-Kebîr (Edvâu'l-Beyân, 4/53).</p>
+        </div>
+      </li>
+      <li><strong>Fesadın önlenmesi:</strong> İbn Useymîn bu konuda şöyle der:
+        <div class="blok alim">
+          <span class="soyleyen">İbn Useymîn rahimehullah (v. 1421)</span>
+          <p class="ar">«وَالْقَوْلُ بِقَتْلِهِمْ مُوَافِقٌ لِلْقَوَاعِدِ الشَّرْعِيَّةِ؛ لِأَنَّهُمْ يَسْعَوْنَ فِي الْأَرْضِ فَسَادًا، وَفَسَادُهُمْ مِنْ أَعْظَمِ الْفَسَادِ... وَإِذَا قُتِلُوا سَلِمَ النَّاسُ مِنْ شَرِّهِمْ، وَارْتَدَعَ النَّاسُ عَنْ تَعَاطِي السِّحْرِ»</p>
+          <p class="tr">"Onların öldürülmesi görüşü şer'î kaidelere uygundur. Çünkü onlar yeryüzünde fesat çıkarmaya çalışırlar ve onların fesadı, fesadın en büyüklerindendir… Öldürüldüklerinde insanlar onların şerrinden kurtulur ve insanlar sihirle uğraşmaktan caydırılmış olur."</p>
+          <p class="kaynak">📚 el-Kavlu'l-Mufîd, 1/510.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span>İkinci görüş: Büyük küfre düşmeyen sâhire ölüm cezası uygulanmaz.</h4>
+  <div class="kisim-govde">
+    <p>Bu görüşü benimseyenler arasında Şinkîtî de bulunmaktadır. Şinkîtî bu konuda şöyle der:</p>
+
+    <div class="blok alim">
+      <span class="soyleyen">İmam Şinkîtî rahimehullah (v. 1393)</span>
+      <p class="ar">«وَالْأَظْهَرُ عِنْدِي أَنَّ السَّاحِرَ الَّذِي لَمْ يَبْلُغْ بِهِ سِحْرُهُ الْكُفْرَ وَلَمْ يَقْتُلْ بِهِ إِنْسَانًا أَنَّهُ لَا يُقْتَلُ؛ لِدَلَالَةِ النُّصُوصِ الْقَطْعِيَّةِ وَالْإِجْمَاعِ عَلَى عِصْمَةِ دِمَاءِ الْمُسْلِمِينَ عَامَّةً إِلَّا بِدَلِيلٍ وَاضِحٍ... وَالتَّجَرُّؤُ عَلَى دَمِ مُسْلِمٍ مِنْ غَيْرِ دَلِيلٍ صَحِيحٍ مِنْ كِتَابٍ أَوْ سُنَّةٍ مَرْفُوعَةٍ غَيْرُ ظَاهِرٍ عِنْدِي... مَعَ أَنَّ الْقَوْلَ بِقَتْلِهِ مُطْلَقًا قَوِيٌّ جِدًّا لِفِعْلِ الصَّحَابَةِ لَهُ مِنْ غَيْرِ نَكِيرٍ»</p>
+      <p class="tr">"Bana göre daha açık olan şudur: Sihri kendisini küfre ulaştırmayan ve sihriyle bir insanı öldürmemiş olan sâhir öldürülmez. Çünkü kesin nasslar ve icmâ, açık bir delil olmadıkça Müslümanların kanlarının dokunulmaz olduğunu gösterir… Kitaptan veya merfû bir sünnetten sahih bir delil olmaksızın bir Müslümanın kanına cüret etmek bana göre doğru görünmemektedir… Bununla birlikte, sahâbe hiçbir itiraz olmaksızın bununla amel ettiği için, sâhirin mutlak olarak öldürüleceği görüşü de çok güçlüdür."</p>
+      <p class="kaynak">📚 Edvâu'l-Beyân, 4/55.</p>
+    </div>
+
+    <p>İkinci görüş kapsamında zikredilen istisnalar:</p>
+    <ul class="madde">
+      <li>Sâhir, yaptığı sihirle bir kişinin ölümüne sebep olursa kendisine kısas uygulanır.</li>
+      <li>Bir kadınla zina etmek amacıyla sihir yapması gibi ağır fiillerde de ölüm cezasının uygulanacağı ve bu konuda ihtilaf bulunmadığı ifade edilmiştir.</li>
+    </ul>
+  </div>
+
+  <div class="ozet">
+    <h4>Râcih görüş ve sonuç</h4>
+    <ul class="madde">
+      <li><strong>Büyük küfür içeren bir sihir yapmışsa:</strong> İttifakla ölüm cezası uygulanır.</li>
+      <li><strong>Yaptığı sihirle bir kişiyi öldürmüşse:</strong> Kısas uygulanır.</li>
+      <li><strong>Zina gibi ağır fiiller işlemişse:</strong> Ölüm cezası uygulanır.</li>
+      <li><strong>Büyük küfür içermeyen bir sihir yapmışsa:</strong> Âlimler arasında ihtilaf vardır. Bu durumda karar veliyyu'l-emre aittir; uygun görürse ölüm cezası verebilir.</li>
+    </ul>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">17</span>Sâhirin tövbesi kabul edilir mi?</h3>
+
+  <p>Burada ele alınan mesele şudur: Bir sâhir yakalanıp hâkimin huzuruna getirildiğinde kendisinden tövbe etmesi istenir mi? Tövbe etmesi, dünyada kendisine uygulanacak cezayı düşürür mü?</p>
+
+  <p>Kişinin Allah ile arasındaki tövbesi ise ayrı bir konudur. Bunun kabulü Allah'a aittir.</p>
+
+  <p>Sâhir, yakalanmadan önce sihirden tamamen tövbe etmişse ve yaptığı sihirle ölüm gibi bir zarara sebep olmamışsa kendisine ceza uygulanmaz.</p>
+
+  <h4 class="kisim"><span class="no">1</span>Birinci görüş: Tövbe etmesi istenmeden ölüm cezası uygulanır.</h4>
+  <div class="kisim-govde">
+    <p>Hanefî, Mâlikî ve Hanbelî mezheplerindeki meşhur görüş bu yöndedir. el-Lecnetu'd-Dâime, İbn Useymîn ve Fevzân da bu görüşü benimsemiştir.</p>
+
+    <div class="blok alim">
+      <span class="soyleyen">İbn Useymîn rahimehullah (v. 1421)</span>
+      <p class="ar">«فَكَانَ وَاجِبًا عَلَى وَلِيِّ الْأَمْرِ قَتْلُهُمْ بِدُونِ اسْتِتَابَةٍ، مَا دَامَ أَنَّهُ لِدَفْعِ ضَرَرِهِمْ وَفَظَاعَةِ أَمْرِهِمْ؛ فَإِنَّ الْحَدَّ لَا يُسْتَتَابُ صَاحِبُهُ، مَتَى قُبِضَ عَلَيْهِ وَجَبَ أَنْ يُنَفَّذَ فِيهِ الْحَدُّ»</p>
+      <p class="tr">"Veliyyu'l-emrin onları tövbeye çağırmaksızın öldürmesi gerekir; zira bu, onların zararını ve işlerinin çirkinliğini gidermek içindir. Çünkü had cezası uygulanacak kişiden tövbe istenmez; yakalandığı anda ona haddin uygulanması gerekir."</p>
+      <p class="kaynak">📚 Mecmû'u Fetâvâ ve Resâili İbn Useymîn, 9/509.</p>
+    </div>
+
+    <div class="blok alim">
+      <span class="soyleyen">Şeyh Sâlih el-Fevzân</span>
+      <p class="ar">«فِي هَذِهِ الْآثَارِ دَلِيلٌ عَلَى أَنَّهُ يُقْتَلُ وَلَا يُسْتَتَابُ؛ لِأَنَّهُ لَمْ يُذْكَرْ فِي هَذِهِ الْآثَارِ أَنَّ الصَّحَابَةَ اسْتَتَابُوهُ... لِأَنَّهُ قَدْ يُظْهِرُ التَّوْبَةَ وَهُوَ غَيْرُ صَادِقٍ، بَلْ مِنْ أَجْلِ أَنْ يَتَّقِيَ الْقَتْلَ»</p>
+      <p class="tr">"Bu eserlerde, sâhirin tövbeye çağrılmadan öldürüleceğine delil vardır. Çünkü bu eserlerde sahâbenin onu tövbeye çağırdığı zikredilmemiştir… Zira o, samimi olmadığı hâlde, sırf öldürülmekten kurtulmak için tövbe ettiğini gösterebilir."</p>
+      <p class="kaynak">📚 İ'ânetu'l-Mustefîd, 1/355.</p>
+    </div>
+
+    <p>Bu görüşün gerekçeleri şunlardır:</p>
+    <ul class="madde">
+      <li>Sâhir, gerçekte tövbe etmediği hâlde cezadan kurtulmak için tövbe ettiğini söyleyebilir. Ayrıca sihrin yol açtığı fesat büyüktür.</li>
+      <li>Sahâbîler, sâhirlerden tövbe etmelerini istemeden onlara ölüm cezası uygulamışlardır.</li>
+      <li>Bu görüşe göre sâhir, bu meselede müşrikle kıyaslanmaz; çünkü onun yol açtığı fesat daha büyüktür.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span>İkinci görüş: Önce tövbe etmesi istenir.</h4>
+  <div class="kisim-govde">
+    <p>İmam Şâfiî'nin görüşü bu yöndedir. Mâlikî ve Hanbelî mezheplerinde de bu görüş nakledilmiştir.</p>
+    <p>Bu görüşün gerekçesi şudur: Kâfirin tövbe etmesi kendisine uygulanacak ölüm cezasını kaldırıyorsa sâhirin tövbesi de aynı şekilde cezayı kaldırır.</p>
+  </div>
+
+  <div class="ikaz">
+    <span class="ikaz-etiket">⚠️ Tenbih</span>
+    <p>Şeyh Abdurrahman Muhyiddin'in açıklamasına göre sâhirin tövbesinin kabul edilmesi mümkün olabilir. Tövbesinde samimi olup olmadığının anlaşılması için uzun süre gözetim altında tutulur. Bu süreçte hâlinin ve davranışlarının değişip değişmediğine bakılır. Tövbesinde samimi olduğu anlaşılırsa serbest bırakılır.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">18</span>Ruh çağırmanın hakikati ve hükmü nedir?</h3>
+
+  <p>Toplanıp bir ölünün ruhunu çağırdıklarını söylüyorlar. Bunların hepsi yalandır. Ölülerin ruhlarını çağırmak mümkün değildir. Bu sırada meydana gelen ses ve hareketler cinlerden gelir. Cinler, çağrılan ölünün şekline girerek insanları kandırır.</p>
+
+  <p>Ruh çağırmak için hipnoz yapılan kişiyi konuşturup "Ölünün ruhu konuşuyor." demeleri de yalandır. Burada konuşan, ölünün ruhu değil, kişinin bedenine giren cindir.</p>
+
+  <p>Tılsımlarla veya cinlerin sevdiği özel sözlerle onları çağırmak sihirdir. Cinler de bunu bir menfaat karşılığında yapar.</p>
+
+
+  <h3 class="altbolum"><span class="no">19</span>Cinlerden yardım istemenin hükmü nedir?</h3>
+
+  <ol class="sayili">
+    <li><strong>Küfür içeren bir yardım istemek veya yalnızca Allah'ın yapabileceği bir işi cinlerden istemek:</strong> Büyük şirktir. Çünkü bu, Allah'tan başkasına ibadet yöneltmektir.</li>
+    <li><strong>Haram bir iş için yardım istemek:</strong> Mesela bir kişinin malını çalmak için cinlerden yardım istemek haramdır ve büyük günahlardandır.</li>
+    <li><strong>Mübah bir iş için yardım istemek:</strong> Mesela bir kişinin bedeninden cin çıkarmak veya bir kötülüğü engellemek için cinlerden yardım istemek de haramdır. Bunun sebepleri şunlardır:
+      <ul class="madde">
+        <li>Cinlerden yardım istemek, onların böbürlenmesine ve kendilerini üstün görmesine sebep olur. Böylece onların azgınlığı artar.</li>
+        <li>Allah, Kur'ân'da cinlerle insanların birbirlerinden bu şekilde faydalanmasını yermiştir.
+          <div class="blok ayet">
+            <span class="soyleyen">En'âm Sûresi, 128. âyet</span>
+            <p class="ar">﴿وَقَالَ أَوْلِيَاؤُهُمْ مِنَ الْإِنْسِ رَبَّنَا اسْتَمْتَعَ بَعْضُنَا بِبَعْضٍ﴾</p>
+            <p class="tr">"İnsanlardan onların dostları: 'Rabbimiz! Birbirimizden faydalandık' dediler."</p>
+            <p class="kaynak">📚 En'âm, 128.</p>
+          </div>
+        </li>
+        <li>Resûlullah <span class="sav">ﷺ</span>, mübah işler için cinlerden yardım istememiştir. İsteseydi bunu yapabilirdi.</li>
+        <li>Sahâbeden de böyle bir uygulama gelmemiştir. Onlar cinlerden yardım istememişlerdir.</li>
+        <li>Cinler, insanların her istediğini karşılıksız yapmazlar. Genellikle bir menfaat karşılığında yardım ederler. İbn Teymiyye şöyle demiştir:
+          <div class="blok alim">
+            <span class="soyleyen">İbn Teymiyye rahimehullah (v. 728)</span>
+            <p class="ar">«فَالْجِنُّ وَالْإِنْسُ قَدِ اسْتَمْتَعَ بَعْضُهُمْ بِبَعْضٍ، فَاسْتَخْدَمَ هَؤُلَاءِ هَؤُلَاءِ، وَهَؤُلَاءِ هَؤُلَاءِ فِي أُمُورٍ كَثِيرَةٍ، كُلٌّ مِنْهُمْ فَعَلَ لِلْآخَرِ مَا هُوَ غَرَضُهُ، لِيُعِينَهُ عَلَى غَرَضِهِ»</p>
+            <p class="tr">"Cinler ve insanlar birbirlerinden faydalanmışlardır; bazıları diğerlerini birçok işte kullanmış, ötekiler de onları kendi işlerinde kullanmıştır. Her biri, kendi amacına ulaşmak için diğerine istediği şeyi yaptırmıştır."</p>
+            <p class="kaynak">📚 Kitâbu'n-Nubuvvât, 2/830-831.</p>
+          </div>
+        </li>
+        <li>Cinlerin hâllerini bilemeyiz. Bize verdikleri bilgilerin doğru olup olmadığını da bilemeyiz. Onlar bizim için meçhuldür. Hâli bilinmeyen kişinin şahitliği kabul edilmez.</li>
+        <li>Onlar hazır değildir. Hâlbuki yardım istemenin şartlarından biri, yardım istenen kişinin hazır bulunmasıdır.</li>
+        <li>Şeytanlar bizim düşmanımızdır. Bu konuda farklı bir hüküm verebilmek için delil gerekir.</li>
+        <li>Âlimler de fetvalarında bunu caiz görmemişlerdir.</li>
+      </ul>
+    </li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">20</span>Sihre maruz kalan kişinin şifa bulmak için başvuracağı yollar</h3>
+
+  <ol class="sayili">
+    <li>Sihrin yapıldığı malzemenin yerini biliyorsa onu yakmak gibi bir yolla imha etmesi gerekir.</li>
+    <li>Yerini bilmiyorsa şer'î rukye yapması gerekir. Sünnette okunması bildirilen âyet ve duaları okumalı, seleften nakledilen tedavi yöntemlerini uygulamalıdır.</li>
+    <li>Allah'a tam olarak tevekkül etmeli, O'na çokça dua etmeli ve şifayı O'ndan beklemelidir.</li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">21</span>Sihirden korunmak için başvurulacak yollar</h3>
+
+  <p>İbn Kayyim, Bedâiu'l-Fevâid'de on sebep zikretmiştir. Biz bunlardan yedisini seçerek kısaca açıklayacağız.</p>
+
+  <ol class="sayili">
+    <li><strong>Allah'a sığınmak:</strong> Sihrin ve sâhirlerin şerrinden Allah'a sığınmak gerekir. Bunun için Felak ve Nâs sûreleri, Resûlullah <span class="sav">ﷺ</span>'den gelen dualar ve sabah akşam zikirleri okunur. Bunlara devam eden kişi, kendisine sağlam bir zırh edinmiş ve Allah'ın himayesine sığınmış olur.</li>
+    <li><strong>Takvâ sahibi olmak:</strong> Allah'ın emirlerine uymak ve yasaklarından kaçınmak gerekir. Allah, kendisine karşı takvâ sahibi olan kulunu korur. Şeytanın Ömer'i görünce kaçması da onun takvâsı ve Allah'ın emirlerine bağlılığıyla açıklanır.
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span>, Ömer radıyallahu anh'a şöyle buyurdu</span>
+        <p class="ar">«وَالَّذِي نَفْسِي بِيَدِهِ مَا لَقِيَكَ الشَّيْطَانُ سَالِكًا فَجًّا قَطُّ إِلَّا سَلَكَ فَجًّا غَيْرَ فَجِّكَ»</p>
+        <p class="tr">"Nefsim elinde olana yemin olsun ki şeytan, bir yolda yürürken seninle karşılaştığında mutlaka senin yolundan başka bir yola sapar."</p>
+        <p class="kaynak">📚 Buhârî, 3683; Muslim, 2396.</p>
+      </div>
+      Allah Teâlâ şöyle buyurmuştur:
+      <div class="blok ayet">
+        <span class="soyleyen">Âl-i İmrân Sûresi, 120. âyet</span>
+        <p class="ar">﴿وَإِنْ تَصْبِرُوا وَتَتَّقُوا لَا يَضُرُّكُمْ كَيْدُهُمْ شَيْئًا﴾</p>
+        <p class="tr">"Eğer sabreder ve takvâ sahibi olursanız onların tuzakları size hiçbir zarar vermez."</p>
+        <p class="kaynak">📚 Âl-i İmrân, 120.</p>
+      </div>
+    </li>
+    <li><strong>Allah'a tevekkül etmek:</strong> İnsanların kötülüklerine karşı Allah'a güvenmek ve O'na dayanmak gerekir. Allah, kendisine tevekkül eden kuluna yeter. Kişi Allah'a gerçekten tevekkül ederse Allah ona bir çıkış yolu açar, onu korur ve ona yardım eder.</li>
+    <li><strong>Allah'a yönelmek ve ihlaslı olmak:</strong> Sözlerimizde ve işlerimizde Allah'ın rızasını gözetmeli, O'nun sevdiği şeylere yönelmeliyiz. Kalbimizi sürekli bize kötülük yapan kişilerle meşgul etmek yerine Allah'a yöneltmeliyiz.</li>
+    <li><strong>İstiğfar ve tövbe etmek:</strong> Günahlar, düşmanların kişiye zarar vermesine sebep olabilir. Bu yüzden kişi kendi hatalarına bakmalı, günahlarından tövbe etmeli ve Allah'tan çokça bağışlanma dilemelidir.</li>
+    <li><strong>Sadaka vermek ve insanlara iyilik etmek:</strong> Kişi, gücü yettiğince sadaka vermeli ve insanlara iyilik etmelidir. Bunlar belaların uzaklaştırılmasına vesile olur. Bir musibetle karşılaşsa bile Allah'ın yardımı ve lütfu onunla olur.</li>
+    <li><strong>Tevhidi korumak:</strong> Hiçbir şeyin Allah'ın izni olmadan zarar veya fayda veremeyeceğini bilmek gerekir. Kişi kalbini Allah'a bağlamalı, O'na güvenmeli ve korunmayı O'ndan beklemelidir. İbn Kayyim'in açıkladığı gibi, kulun imanı ne kadar güçlü olursa Allah'ın onu koruması da o kadar güçlü olur. Bazı selefler dediler ki:
+      <div class="blok alim">
+        <span class="soyleyen">Bazı selefler</span>
+        <p class="ar">«مَنْ خَافَ اللَّهَ خَافَهُ كُلُّ شَيْءٍ، وَمَنْ لَمْ يَخَفِ اللَّهَ أَخَافَهُ مِنْ كُلِّ شَيْءٍ»</p>
+        <p class="tr">"Allah'tan korkan kimseden her şey korkar. Allah'tan korkmayan kimseyi ise Allah her şeyden korkutur."</p>
+        <p class="kaynak">📚 İbn Kayyim, Bedâiu'l-Fevâid, 2/245.</p>
+      </div>
+    </li>
+  </ol>
+
+  <h3 class="altbolum"><span class="no">22</span>Şeyhin sözünün ayrıntılı açıklaması</h3>
+
+  <div class="metin">
+    <div class="metin-etiket"><span class="rozet">Metin</span>Müellif rahimehullah dedi ki</div>
+    <p class="ar">«السَّابِعُ: السِّحْرُ، وَمِنْهُ الصَّرْفُ وَالْعَطْفُ، فَمَنْ فَعَلَهُ أَوْ رَضِيَ بِهِ كَفَرَ، وَالدَّلِيلُ قَوْلُهُ تَعَالَى: ﴿وَمَا يُعَلِّمَانِ مِنْ أَحَدٍ حَتَّىٰ يَقُولَا إِنَّمَا نَحْنُ فِتْنَةٌ فَلَا تَكْفُرْ﴾ [البقرة: ١٠٢]»</p>
+    <p class="tr">Yedincisi: Sihirdir. Sarf ve Atf denilen şeyler de sihirdendir. Her kim sihir yapar veya ona rıza gösterirse kâfir olur. Bunun delili Allah Teâlâ'nın şu buyruğudur: "O iki melek, 'Biz ancak imtihanız, sakın küfre girme' demedikçe kimseye (sihir) öğretmezdi." (Bakara, 102)</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">1</span><span>"Ve minhu es-sarf ve'l-atf" <span class="lafz-ar" dir="rtl">وَمِنْهُ الصَّرْفُ وَالْعَطْفُ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Buradaki "min" (<span class="ar-ic" dir="rtl">مِنْ</span>), teb'îz ifade eder; yani bir şeyin bir kısmını belirtir. Buna göre sarf ve atf, sihrin çeşitlerinden bazılarıdır.</p>
+    <p><strong>Sarf (<span class="ar-ic" dir="rtl">الصَّرْفُ</span>):</strong> Bir kişiyi başka bir kişiden veya bir mekândan soğutmak ve uzaklaştırmaktır. Sevginin yerine düşmanlık koymaktır.</p>
+    <p><strong>Atf (<span class="ar-ic" dir="rtl">الْعَطْفُ</span>):</strong> Bir kişinin başka bir kişiye aşırı sevgi ve bağlılık duymasını sağlamaktır.</p>
+    <p><strong>Şeyh neden sarf ve atf örneklerini vermiştir?</strong> Çünkü bu sihir türleri yaygındır ve insanlar bunların tehlikesini hafife almaktadır.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>"Ev radıye bihi" <span class="lafz-ar" dir="rtl">أَوْ رَضِيَ بِهِ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Şeyh Fevzân'ın açıklamasına göre kişi, sihir öğrenmese veya yapmasa bile sihre razı olur ve onu reddetmezse kâfir olur. Çünkü mümin, küfre razı olamaz.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>"Bunun delili Allah Teâlâ'nın şu buyruğudur" <span class="lafz-ar" dir="rtl">وَالدَّلِيلُ قَوْلُهُ تَعَالَى</span></span></h4>
+  <div class="kisim-govde">
+    <div class="blok ayet">
+      <span class="soyleyen">Bakara Sûresi, 102. âyet</span>
+      <p class="ar">﴿وَمَا يُعَلِّمَانِ مِنْ أَحَدٍ حَتَّىٰ يَقُولَا إِنَّمَا نَحْنُ فِتْنَةٌ فَلَا تَكْفُرْ﴾</p>
+      <p class="tr">"O ikisi, 'Biz ancak bir imtihan vesilesiyiz; sakın küfre girme!' demedikçe hiç kimseye sihir öğretmezlerdi."</p>
+      <p class="kaynak">📚 Bakara, 102.</p>
+    </div>
+    <p>Şeyh, bu âyeti hem sihrin küfür olduğuna hem de sâhirin kâfir olduğuna delil olarak göstermektedir.</p>
+    <p>Âyetin önceki ve sonraki kısımlarında da buna dair deliller vardır. Ancak şeyh, öğrencilerin konuyu kolayca anlaması için yalnızca ilgili kısmı zikretmiştir.</p>
+    <p>Hâfız el-Hakemî ise Meâricu'l-Kabûl'de bu âyeti açıklarken sihrin küfür olduğuna ve sâhirin kâfir olduğuna dair yediden fazla delil zikretmiştir.</p>
+  </div>
+
+</section>
+
+<footer>
+  <div class="marka">İlim Dersleri</div>
+  <div>Nevâkıdu'l-İslâm</div>
+</footer>
+
+</div>
+</body>
+</html>

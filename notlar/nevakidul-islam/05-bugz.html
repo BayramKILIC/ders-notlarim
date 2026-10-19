@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nevâkıdu'l-İslâm — Beşinci Nâkıd</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#123a5f;
+    --navy-soft:#1d5183;
+    --ink:#20262e;
+    --ink-soft:#4a5462;
+    --paper:#fbfaf7;
+    --card:#ffffff;
+    --rule:#e2ddd3;
+
+    --green:#1e6b46;
+    --green-bg:#eef7f1;
+    --green-edge:#a8d3bb;
+
+    --amber:#8a5a12;
+    --amber-bg:#fdf5e6;
+    --amber-edge:#e2c184;
+
+    --blue:#1a4f80;
+    --blue-bg:#eef4fa;
+    --blue-edge:#a9c6e2;
+
+    --bordo:#75194c;
+    --bordo-bg:#fbf2f6;
+    --bordo-edge:#e3c3d4;
+
+    --red:#8d2f2f;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Source Serif 4","Cambria","Georgia",serif;
+    font-size:18px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .sayfa{
+    max-width:820px;
+    margin:0 auto;
+    padding:0 26px 90px;
+  }
+
+  /* ---------- KAPAK ---------- */
+  header.kapak{
+    color:var(--bordo);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:56px 0;
+    margin-bottom:60px;
+  }
+  header.kapak .marka{
+    font-size:.95rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:#d54220;
+    font-weight:600;
+    line-height:1.7;
+    max-width:26ch;
+  }
+  header.kapak .marka-cizgi{
+    width:120px;
+    height:1px;
+    background:var(--rule);
+    margin:26px auto 34px;
+  }
+  header.kapak h1{
+    font-size:clamp(3.3rem,9.5vw,5.8rem);
+    line-height:1.1;
+    color:var(--bordo);
+    margin:0;
+    font-weight:700;
+    letter-spacing:-.015em;
+    max-width:15ch;
+  }
+  header.kapak .altbaslik{
+    font-size:1.16rem;
+    color:var(--bordo);
+    font-style:italic;
+    margin:34px 0 0;
+    max-width:38ch;
+    line-height:1.7;
+  }
+  header.kapak .kunye{
+    margin-top:0;
+    padding-top:72px;
+    font-size:.94rem;
+    color:var(--bordo);
+    letter-spacing:.09em;
+  }
+  header.kapak .kunye .cizgi{
+    width:56px;
+    height:2px;
+    background:var(--bordo);
+    margin:0 auto 18px;
+  }
+  .besmele{
+    font-family:"Scheherazade New",serif;
+    font-size:2.5rem;
+    color:var(--bordo);
+    direction:rtl;
+    margin:0 0 46px;
+  }
+
+  /* ---------- NÂKID ---------- */
+  section.nakid{margin-bottom:70px;}
+
+  .nakid-baslik{
+    background:var(--navy);
+    color:#fff;
+    border-radius:4px;
+    padding:22px 28px;
+    margin-bottom:34px;
+  }
+  .nakid-baslik .etiket{
+    display:block;
+    font-size:.74rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    opacity:.72;
+    margin-bottom:8px;
+  }
+  .nakid-baslik h2{
+    margin:0;
+    font-size:1.42rem;
+    line-height:1.45;
+    font-weight:600;
+  }
+
+  /* ---------- METİN (müellifin sözü) ---------- */
+  .metin{
+    background:var(--bordo-bg);
+    border:1px solid var(--bordo-edge);
+    border-top:5px solid var(--bordo);
+    border-radius:4px;
+    padding:28px 32px 26px;
+    margin:0 0 20px;
+  }
+  .metin .metin-etiket{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px 12px;
+    font-size:.78rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--bordo);
+    margin-bottom:18px;
+  }
+  .metin .metin-etiket .rozet{
+    background:var(--bordo);
+    color:#fff;
+    padding:3px 11px;
+    border-radius:3px;
+    letter-spacing:.2em;
+  }
+  .metin .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:2rem;
+    line-height:2.1;
+    direction:rtl;
+    text-align:right;
+    color:var(--bordo);
+    margin:0 0 18px;
+  }
+  .metin .tr{
+    margin:0;
+    padding-top:16px;
+    border-top:1px dotted var(--bordo-edge);
+    font-size:1.06rem;
+  }
+
+  /* ---------- ŞERH AYRACI ---------- */
+  .serh-ayrac{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin:54px 0 10px;
+    color:var(--navy);
+  }
+  .serh-ayrac::before,.serh-ayrac::after{
+    content:"";
+    flex:1;
+    height:2px;
+    background:var(--navy-soft);
+    opacity:.35;
+  }
+  .serh-ayrac span{
+    font-size:1.05rem;
+    font-weight:700;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+  }
+
+  h3.altbolum{
+    font-size:1.55rem;
+    line-height:1.4;
+    color:var(--navy);
+    margin:60px 0 20px;
+    padding-bottom:12px;
+    border-bottom:3px solid var(--rule);
+    font-weight:700;
+  }
+  h3.altbolum .no{
+    display:inline-block;
+    min-width:38px;
+    height:38px;
+    line-height:38px;
+    text-align:center;
+    background:var(--navy-soft);
+    color:#fff;
+    border-radius:50%;
+    font-size:1rem;
+    margin-right:13px;
+    vertical-align:3px;
+  }
+
+  p{margin:0 0 17px;}
+
+  h4.kisim{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:1.2rem;
+    color:var(--navy-soft);
+    margin:34px 0 12px;
+    font-weight:700;
+  }
+  h4.kisim .no{
+    flex:0 0 auto;
+    width:28px;
+    height:28px;
+    line-height:25px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    background:var(--card);
+    font-size:.82rem;
+  }
+  .kisim-govde{
+    border-left:2px solid var(--rule);
+    margin-left:13px;
+    padding-left:27px;
+  }
+
+  .delil{
+    display:grid;
+    grid-template-columns:34px 1fr;
+    gap:0 18px;
+    margin:30px 0;
+    padding-bottom:8px;
+    border-bottom:1px dotted var(--rule);
+  }
+  .delil:last-of-type{border-bottom:none;}
+  .delil > .no{
+    width:34px;
+    height:34px;
+    line-height:34px;
+    text-align:center;
+    border-radius:50%;
+    background:var(--navy);
+    color:#fff;
+    font-size:.88rem;
+    font-weight:700;
+    margin-top:2px;
+  }
+  .delil > .govde > .blok:first-child{margin-top:0;}
+  .delil-etiket{
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--navy);
+    margin:6px 0 12px;
+  }
+  .delil > .govde > .delil-etiket + .blok{margin-top:0;}
+
+  .ikaz{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-left:5px solid var(--red);
+    border-radius:4px;
+    padding:20px 26px 6px;
+    margin:28px 0;
+  }
+  .ikaz .ikaz-etiket{
+    display:block;
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--red);
+    margin-bottom:10px;
+  }
+  .ikaz ol.sayili{margin:10px 0 14px;}
+  ol.sayili li p.alt-tanim{margin:10px 0 0;padding-left:14px;border-left:2px solid var(--rule);}
+  ol.sayili li .blok{margin:16px 0 8px;}
+  ul.madde li .blok{margin:14px 0 8px;}
+  ol.sayili > li ul.madde{margin:12px 0 4px;}
+  h4.kisim .baslik-alt{font-weight:400;color:var(--ink);}
+  h4.kisim .lafz-ar{font-family:"Scheherazade New",serif;font-weight:700;font-size:1.3em;line-height:1;color:var(--bordo);margin-left:8px;white-space:nowrap;}
+  .ar-ic{font-family:"Scheherazade New",serif;font-size:1.25em;line-height:1;unicode-bidi:isolate;display:inline-block;white-space:nowrap;}
+  .lafz{margin:22px 0;text-align:center;}
+  .lafz .ar-buyuk{display:block;font-family:"Scheherazade New",serif;font-size:1.7rem;line-height:1.9;color:var(--bordo);}
+  .lafz .lafz-tr{display:block;margin-top:2px;color:var(--ink-soft);}
+  .notkutu{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--navy-soft);border-radius:3px;padding:22px 24px 6px;margin:32px 0;}
+  .notkutu .not-etiket{display:block;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--navy-soft);margin-bottom:12px;}
+
+  /* ---------- VURGU ---------- */
+  .vurgu{
+    font-size:1.24rem;
+    line-height:1.7;
+    color:var(--navy);
+    font-weight:600;
+    border-left:4px solid var(--navy-soft);
+    padding:6px 0 6px 20px;
+    margin:30px 0;
+  }
+  .vurgu-buyuk{
+    font-size:1.42rem;
+    line-height:1.6;
+    text-align:center;
+    color:var(--navy);
+    font-weight:700;
+    margin:38px 0;
+    padding:26px 22px;
+    background:var(--card);
+    border-top:2px solid var(--navy-soft);
+    border-bottom:2px solid var(--navy-soft);
+  }
+  strong{color:var(--navy);font-weight:700;}
+  .sav{font-family:"Scheherazade New",serif;font-size:1.2em;line-height:1;font-weight:400;}
+
+  /* ---------- ALINTI BLOKLARI ---------- */
+  .blok{
+    border-radius:4px;
+    padding:22px 26px;
+    margin:26px 0;
+    border-left-width:5px;
+    border-left-style:solid;
+  }
+  .blok .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:1.75rem;
+    line-height:2.05;
+    direction:rtl;
+    text-align:right;
+    margin-bottom:14px;
+  }
+  .blok .tr{margin:0 0 12px;}
+  .blok .kaynak{
+    font-size:.9rem;
+    color:var(--ink-soft);
+    font-style:italic;
+    margin:0;
+    padding-top:10px;
+    border-top:1px dotted currentColor;
+  }
+  .blok .soyleyen{
+    display:block;
+    font-size:.79rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:600;
+    margin-bottom:13px;
+  }
+
+  .ayet{background:var(--green-bg);border-left-color:var(--green-edge);}
+  .ayet .ar,.ayet .soyleyen{color:var(--green);}
+
+  .alim{background:var(--amber-bg);border-left-color:var(--amber-edge);}
+  .alim .ar,.alim .soyleyen{color:var(--amber);}
+
+  .hadis{background:var(--blue-bg);border-left-color:var(--blue-edge);}
+  .hadis .ar,.hadis .soyleyen{color:var(--blue);}
+
+  /* ---------- LİSTELER ---------- */
+  ul.madde{
+    list-style:none;
+    padding:0;
+    margin:20px 0;
+  }
+  ul.madde li{
+    position:relative;
+    padding:7px 0 7px 26px;
+  }
+  ul.madde li::before{
+    content:"◆";
+    position:absolute;
+    left:2px;
+    color:var(--navy-soft);
+    font-size:.68rem;
+    top:12px;
+  }
+
+  ol.sayili{
+    list-style:none;
+    counter-reset:sira;
+    padding:0;
+    margin:22px 0;
+  }
+  ol.sayili > li{
+    counter-increment:sira;
+    position:relative;
+    padding:10px 0 10px 46px;
+    border-bottom:1px dotted var(--rule);
+  }
+  ol.sayili > li:last-child{border-bottom:none;}
+  ol.sayili > li::before{
+    content:counter(sira);
+    position:absolute;
+    left:0;
+    top:13px;
+    width:30px;
+    height:30px;
+    line-height:27px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    color:var(--navy-soft);
+    background:var(--card);
+    font-size:.84rem;
+    font-weight:700;
+  }
+
+  /* ---------- ÖZET ---------- */
+  .ozet{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-top:4px solid var(--navy);
+    border-radius:4px;
+    padding:26px 30px;
+    margin-top:34px;
+    margin-bottom:34px;
+  }
+  .ozet h4{
+    margin:0 0 16px;
+    color:var(--navy);
+    font-size:1.06rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+  .ozet ul{margin:0;padding-left:22px;}
+  .ozet li{margin-bottom:11px;}
+  .ozet li:last-child{margin-bottom:0;}
+
+  .ayirac{
+    text-align:center;
+    color:var(--rule);
+    letter-spacing:.5em;
+    margin:38px 0;
+    font-size:.8rem;
+  }
+
+  footer{
+    margin-top:70px;
+    padding-top:26px;
+    border-top:3px double var(--rule);
+    text-align:center;
+    color:#d54220;
+    font-size:.9rem;
+  }
+  footer .marka{
+    font-size:1rem;
+    color:#d54220;
+    font-weight:600;
+    letter-spacing:.1em;
+    margin-bottom:6px;
+  }
+
+  @media (max-width:620px){
+    body{font-size:16.5px;}
+    .sayfa{padding:0 16px 60px;}
+    header.kapak h1{font-size:2.8rem;}
+    .besmele{font-size:2rem;}
+    .nakid-baslik h2{font-size:1.16rem;}
+    h3.altbolum{font-size:1.3rem;margin:48px 0 16px;}
+    h3.altbolum .no{min-width:32px;height:32px;line-height:32px;font-size:.9rem;}
+    .metin{padding:22px 18px 20px;}
+    .metin .ar{font-size:1.65rem;line-height:2;}
+    .blok{padding:18px 18px;}
+    .ikaz{padding:18px 18px 4px;}
+    .kisim-govde{margin-left:0;padding-left:14px;}
+    .delil{grid-template-columns:28px 1fr;gap:0 10px;}
+    .delil > .no{width:28px;height:28px;line-height:28px;font-size:.8rem;}
+    .blok .ar{font-size:1.5rem;line-height:1.95;}
+    .vurgu-buyuk{font-size:1.18rem;padding:20px 16px;}
+    .vurgu{font-size:1.1rem;}
+  }
+
+  @media print{
+    @page{margin:18mm 16mm;}
+    body{background:#fff;font-size:11.5pt;}
+    .sayfa{max-width:none;padding:0;}
+    section.nakid{page-break-before:always;}
+    section.nakid:first-of-type{page-break-before:auto;}
+    .ayirac{display:none;}
+    header.kapak{
+      min-height:238mm;
+      page-break-after:always;
+      margin-bottom:0;
+    }
+    header.kapak h1{font-size:54pt;}
+    .besmele{font-size:26pt;}
+    section.nakid{page-break-inside:auto;}
+    .nakid-baslik{page-break-after:avoid;background:var(--navy) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .metin,.blok,.ozet,.vurgu-buyuk{page-break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    h3.altbolum,.serh-ayrac{page-break-after:avoid;}
+  }
+</style>
+</head>
+<body>
+<div class="sayfa">
+
+<header class="kapak">
+  <div class="besmele">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+  <div class="marka">İlim Dersleri</div>
+  <div class="marka-cizgi"></div>
+  <h1>Nevâkıdu'l-İslâm</h1>
+  <p class="altbaslik">İslâm'ı iptal eden hususlar</p>
+  <div class="kunye">
+    <div class="cizgi"></div>
+    Beşinci Nâkıd
+  </div>
+</header>
+
+
+<!-- ================= BEŞİNCİ NÂKID ================= -->
+<section class="nakid">
+  <div class="nakid-baslik">
+    <span class="etiket">Beşinci Nâkıd</span>
+    <h2>Resûlullah'ın <span class="sav">ﷺ</span> getirdiği bir şeye buğzetmek</h2>
+  </div>
+
+  <!-- ---------- METİN ---------- -->
+  <div class="metin">
+    <div class="metin-etiket"><span class="rozet">Metin</span>Müellif rahimehullah dedi ki</div>
+    <p class="ar">«الْخَامِسُ: مَنْ أَبْغَضَ شَيْئًا مِمَّا جَاءَ بِهِ الرَّسُولُ ﷺ وَلَوْ عَمِلَ بِهِ كَفَرَ إِجْمَاعًا، لِقَوْلِهِ تَعَالَى: ﴿ذَٰلِكَ بِأَنَّهُمْ كَرِهُوا مَا أَنْزَلَ اللَّهُ فَأَحْبَطَ أَعْمَالَهُمْ﴾ [محمد: ٩]»</p>
+    <p class="tr">Beşincisi: Kim, Resûlullah'ın <span class="sav">ﷺ</span> getirdiği şeylerden bir şeye buğzederse, onunla amel etse dahi icmâ ile kâfir olur. Bunun delili Allah Teâlâ'nın şu buyruğudur: "Bu, onların Allah'ın indirdiğini kerih görmeleri sebebiyledir. Bu yüzden Allah da onların amellerini boşa çıkarmıştır." (Muhammed, 9)</p>
+  </div>
+
+  <!-- ---------- ŞERH ---------- -->
+  <div class="serh-ayrac"><span>Şerh</span></div>
+
+
+
+
+  <h3 class="altbolum"><span class="no">1</span>Neden şeriattan herhangi bir şeye buğzetmek, İslâm'ı iptal eden bir husustur?</h3>
+
+  <ol class="sayili">
+    <li>Çünkü buğzeden kişi Allah'a teslim olmamıştır ve O'na boyun eğmemiştir <span class="ar-ic" dir="rtl" style="white-space:normal">(الِاسْتِسْلَامُ لِلَّهِ وَالِانْقِيَادُ لِلَّهِ)</span>.</li>
+    <li>Buğzetmek, ibadetin asıllarına terstir. Zira ibadetin asılları zillet <span class="ar-ic" dir="rtl">(الذُّلُّ)</span>, hudû' <span class="ar-ic" dir="rtl">(الْخُضُوعُ)</span> ve muhabbettir. Buğzetmek ise bunların tam tersidir. Bir kişinin İslâm'a girmesi için İslâm'ı sevmesi ve ona boyun eğmesi gerekir. O hâlde İslâm'a buğzederse bunun tam tersini yapmış olur.</li>
+    <li>Allah'a iman etmek tasdik, kabul ve rıza gerektirir. Buğzetmek ise bunlara terstir: buğzeden kişi ne tasdik eder, ne kabul eder, ne de razı olur.</li>
+    <li>Buğzetmek, "Muhammedun Resûlullah" şehadetine terstir. Çünkü bu şehadet, Resûlullah'ın <span class="sav">ﷺ</span> getirdiğini tasdik etmeyi, ona itaat etmeyi ve ona tâbi olmayı içerir. Buğzetmek ise bütün bunlara ters düşer.</li>
+    <li>Buğzetmek, "Lâ ilâhe illallah" sözüne terstir. Çünkü buğzeden kişi Allah'ı tazim etmez, tâğutu inkâr etmez ve velâ ile berânın gereğini yerine getirmez.</li>
+  </ol>
+
+  <div class="notkutu">
+    <span class="not-etiket">Tenbih</span>
+    <p>Müslümana vacip olan, şeriatın tamamını kabul etmesi, ondan razı olması ve onun bütün zamanlarda ve bütün mekânlarda eksiksiz ve kâmil olduğuna iman etmesidir. Aklını, hevâsını ve âdetlerini şeriatın önüne geçirmemelidir.</p>
+    <p>Nitekim Allah Teâlâ şöyle buyurmuştur:</p>
+    <div class="blok ayet">
+      <span class="soyleyen">Ahzâb Sûresi, 36. âyet</span>
+      <p class="ar">﴿وَمَا كَانَ لِمُؤْمِنٍ وَلَا مُؤْمِنَةٍ إِذَا قَضَى اللَّهُ وَرَسُولُهُ أَمْرًا أَنْ يَكُونَ لَهُمُ الْخِيَرَةُ مِنْ أَمْرِهِمْ وَمَنْ يَعْصِ اللَّهَ وَرَسُولَهُ فَقَدْ ضَلَّ ضَلَالًا مُبِينًا﴾</p>
+      <p class="tr">"Allah ve Resûlü bir iş hakkında hüküm verdiği zaman, mümin bir erkek ve mümin bir kadın için o işte kendi tercih hakları yoktur. Kim Allah'a ve Resûlü'ne isyan ederse, muhakkak apaçık bir sapıklığa düşmüş olur."</p>
+      <p class="kaynak">📚 Ahzâb, 36.</p>
+    </div>
+    <p>Müslüman kişi şöyle demelidir:</p>
+    <div class="lafz">
+      <span class="ar-buyuk" dir="rtl">رَضِيتُ بِاللَّهِ رَبًّا، وَبِالْإِسْلَامِ دِينًا، وَبِمُحَمَّدٍ رَسُولًا</span>
+      <span class="lafz-tr">"Allah'tan Rab, İslâm'dan din ve Muhammed'den <span class="sav">ﷺ</span> resûl olarak razı oldum."</span>
+    </div>
+    <p>Ve şöyle demelidir:</p>
+    <div class="lafz">
+      <span class="ar-buyuk" dir="rtl">سَمِعْنَا وَأَطَعْنَا</span>
+      <span class="lafz-tr">"İşittik ve itaat ettik."</span>
+    </div>
+  </div>
+
+
+
+  <h3 class="altbolum"><span class="no">2</span>Dine buğzetmenin "Lâ ilâhe illallah"ın şartları ile alakası nedir?</h3>
+
+  <ol class="sayili">
+    <li><strong>Mutâbakat yoluyla alakası</strong>
+      <p class="alt-tanim"><em>Yani buğz, bu şartın doğrudan tam tersidir.</em></p>
+      <ul class="madde">
+        <li><strong>Muhabbet:</strong> Buğz, muhabbetin tam tersidir. "Lâ ilâhe illallah"ın şartlarından biri muhabbettir. Şeriata buğzetmek, bu şartı doğrudan ortadan kaldırır. Allah ile beraber başkasını Allah'a denk bir sevgiyle seven kişi dinden çıkıyorsa, Allah'a veya O'nun şeriatına buğzeden kişi için ne demeli?</li>
+      </ul>
+    </li>
+
+    <li><strong>Tazammun yoluyla alakası</strong>
+      <p class="alt-tanim"><em>Yani buğzetmek, bu şartların yokluğunu kendi içinde barındırır.</em></p>
+      <ul class="madde">
+        <li><strong>Kabul ve inkiyâd:</strong> Bir kişi Allah'ın indirdiği bir şeye buğzediyorsa, bu buğz onun kalben onu kabul etmediğini ve ona boyun eğmediğini gösterir. Bu yüzden buğz, kabul ve inkiyâdın yokluğunu içerir.</li>
+      </ul>
+    </li>
+
+    <li><strong>Telâzum yoluyla alakası</strong>
+      <p class="alt-tanim"><em>Yani buğz varsa, bunun zorunlu sonucu olarak bu şartların da bulunmaması gerekir.</em></p>
+      <ul class="madde">
+        <li><strong>Yakîn:</strong> Şeriata buğzetmek, kişide yakînin bulunmadığını gerektirir. Yakîni olan kişi dine buğzetmez. Fakat kendisinde şek ve şüphe bulunan kişi dine buğzedebilir.</li>
+        <li><strong>Sıdk:</strong> Şeriata buğzetmek, kişinin iman iddiasında sadık olmadığını gerektirir. Sıdk sahibi olan kişi dine buğzetmez. Fakat nifak alameti bulunan yalancı kişi dine buğzedebilir.</li>
+        <li><strong>İhlâs:</strong> Şeriata buğzetmek, kişide ihlâsın bulunmadığını gerektirir. Muhlis olan kişi dine buğzetmez. Kişi dine buğzediyorsa, bu onun muhlis olmadığını gösterir.</li>
+      </ul>
+    </li>
+  </ol>
+
+
+
+  <h3 class="altbolum"><span class="no">3</span>Allah'ın şeriatına buğzetmek, velâ (sevgi, dostluk ve destek) ve berâya (buğz, uzaklaşma ve düşmanlık) aykırıdır</h3>
+
+  <p>Bunun sebebi:</p>
+
+  <p>Velâ sevgi üzerine, berâ ise buğz ve düşmanlık üzerine kuruludur. Velâ ve berâ akidesine sahip olan muvahhid, Allah'ın sevdiğini sever, Allah'ın sevmediğini ise sevmez. Allah'ın dinine buğzeden kişi ise bunun tam tersini yapmış olur.</p>
+
+
+
+  <h3 class="altbolum"><span class="no">4</span>Allah'ın dinine buğzetmek, itikadî nifakın çeşitlerinden biridir</h3>
+
+  <p>Allah'ın hükümlerine kalbinde buğzeden kişi, bunları uygulasa bile kâfirdir ve onda itikadî nifak sıfatı vardır.</p>
+
+  <p>Muhammed bin Abdilvehhâb rahimehullah şöyle demiştir:</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">Muhammed bin Abdilvehhâb rahimehullah (v. 1206)</span>
+    <p class="ar">«وَأَمَّا الِاعْتِقَادِيُّ فَهُوَ سِتَّةُ أَنْوَاعٍ: تَكْذِيبُ الرَّسُولِ ﷺ، أَوْ تَكْذِيبُ بَعْضِ مَا جَاءَ بِهِ الرَّسُولُ، أَوْ بُغْضُ الرَّسُولِ، أَوْ بُغْضُ مَا جَاءَ بِهِ الرَّسُولُ، أَوِ الْمَسَرَّةُ بِانْخِفَاضِ دِينِ الرَّسُولِ، أَوِ الْكَرَاهِيَةُ لِانْتِصَارِ دِينِ الرَّسُولِ، فَهَذِهِ الْأَنْوَاعُ السِّتَّةُ صَاحِبُهَا مِنْ أَهْلِ الدَّرْكِ الْأَسْفَلِ مِنَ النَّارِ»</p>
+    <p class="tr">"İtikadî nifak altı kısımdır:</p>
+    <p class="tr"><strong>1.</strong> Resûl'ü yalanlamak.</p>
+    <p class="tr"><strong>2.</strong> Resûl'ün getirdiklerinden bazısını yalanlamak.</p>
+    <p class="tr"><strong>3.</strong> Resûl'e buğzetmek.</p>
+    <p class="tr"><strong>4.</strong> Resûl'ün getirdiklerinden bazısına buğzetmek.</p>
+    <p class="tr"><strong>5.</strong> Resûl'ün dininin zayıflamasına sevinmek.</p>
+    <p class="tr"><strong>6.</strong> Resûl'ün dininin galip gelmesinden hoşlanmamak.</p>
+    <p class="tr">İşte bu altı kısmın sahibi, ateşin en alt tabakasında bulunanlardandır."</p>
+    <p class="kaynak">📚 Muhammed bin Abdilvehhâb, er-Risâletu'l-Mufîde, s. 46 (Mecmûatu't-Tevhîd içinde; bazı neşirlerde s. 464-465).</p>
+  </div>
+
+
+
+  <h3 class="altbolum"><span class="no">5</span>Bu nâkıdın tehlikesi çok büyüktür</h3>
+
+  <p>Şeyh Fevzân hafızahullah şöyle demiştir:</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">Şeyh Sâlih el-Fevzân hafızahullah</span>
+    <p class="ar">«وَهَذَا النَّاقِضُ خَطَرُهُ شَدِيدٌ، وَهُوَ خَفِيٌّ فِي الضَّمَائِرِ وَالنُّفُوسِ، فَعَلَى الْمُسْلِمِ أَنْ يَتَفَقَّدَ نَفْسَهُ مَعَ هَذَا النَّاقِضِ لِئَلَّا يَكُونَ فِيهِ شَيْءٌ مِنْهُ، أَوْ يُبْغِضَ شَيْئًا مِمَّا جَاءَ عَنِ الرَّسُولِ ﷺ، إِمَّا لِمُخَالَفَتِهِ لِشَهْوَةِ نَفْسِهِ، أَوْ مُخَالَفَةِ مَذْهَبِهِ، أَوْ مُخَالَفَةِ حِزْبِهِ، أَوْ إِمَامِهِ، فَهَذَا عَلَى خَطَرٍ عَظِيمٍ»</p>
+    <p class="tr">"Bu nâkıdın tehlikesi çok büyüktür. Çünkü bu (yani dine buğzetmek), kalplerde ve nefislerde gizli olabilir. Bu yüzden Müslüman, kendisinde bu nâkıddan herhangi bir şey bulunmaması için nefsini kontrol etmelidir. Resûlullah'ın <span class="sav">ﷺ</span> getirdiği şeylerden herhangi birine, nefsinin arzusuna aykırı olduğu için, mezhebine aykırı olduğu için, grubuna aykırı olduğu için veya imamına aykırı olduğu için buğzederse, bu kişi çok büyük bir tehlike üzerindedir."</p>
+    <p class="kaynak">📚 Sâlih el-Fevzân, Durûs fî Şerhi Nevâkıdi'l-İslâm, s. 121.</p>
+  </div>
+
+
+
+  <h3 class="altbolum"><span class="no">6</span>Dine buğzetmenin küfür olduğuna dair deliller nelerdir?</h3>
+
+  <div class="delil">
+    <span class="no">1</span>
+    <div class="govde">
+      <p class="delil-etiket">Birinci delil</p>
+      <div class="blok ayet">
+        <span class="soyleyen">Muhammed Sûresi, 9. âyet</span>
+        <p class="ar">﴿ذَٰلِكَ بِأَنَّهُمْ كَرِهُوا مَا أَنْزَلَ اللَّهُ فَأَحْبَطَ أَعْمَالَهُمْ﴾</p>
+        <p class="tr">"Bunun sebebi, onların Allah'ın indirdiğinden hoşlanmamalarıdır. Bundan dolayı Allah, amellerini boşa çıkarmıştır."</p>
+        <p class="kaynak">📚 Muhammed, 9.</p>
+      </div>
+      <p>Şeyh Abdurrahman es-Sa'dî rahimehullah tefsirinde şöyle demiştir:</p>
+      <div class="blok alim">
+        <span class="soyleyen">Abdurrahman es-Sa'dî rahimehullah (v. 1376)</span>
+        <p class="ar">«ذَلِكَ الْإِضْلَالُ وَالتَّعْسُ لِلَّذِينَ كَفَرُوا، بِسَبَبِ أَنَّهُمْ ﴿كَرِهُوا مَا أَنْزَلَ اللَّهُ﴾ مِنَ الْقُرْآنِ الَّذِي أَنْزَلَهُ اللَّهُ صَلَاحًا لِلْعِبَادِ وَفَلَاحًا لَهُمْ، فَلَمْ يَقْبَلُوهُ، بَلْ أَبْغَضُوهُ وَكَرِهُوهُ، ﴿فَأَحْبَطَ أَعْمَالَهُمْ﴾»</p>
+        <p class="tr">"Bu sapıklık ve helak, onların Allah'ın kulların iyiliği ve kurtuluşu için indirdiği Kur'ân'dan hoşlanmamaları sebebiyledir. Onu kabul etmediler, bilakis ona buğzettiler ve onu kerih gördüler. Bunun üzerine Allah onların amellerini boşa çıkardı."</p>
+        <p class="kaynak">📚 Teysîru'l-Kerîmi'r-Rahmân fî Tefsîri Kelâmi'l-Mennân, Muhammed sûresi 9. âyetin tefsiri.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="delil">
+    <span class="no">2</span>
+    <div class="govde">
+      <p class="delil-etiket">İkinci delil</p>
+      <div class="blok ayet">
+        <span class="soyleyen">Mu'minûn Sûresi, 70. âyet</span>
+        <p class="ar">﴿أَمْ يَقُولُونَ بِهِ جِنَّةٌ بَلْ جَاءَهُمْ بِالْحَقِّ وَأَكْثَرُهُمْ لِلْحَقِّ كَارِهُونَ﴾</p>
+        <p class="tr">"Yoksa onda bir delilik olduğunu mu söylüyorlar? Hayır, o kendilerine hakkı getirdi. Fakat onların çoğu haktan hoşlanmıyorlar."</p>
+        <p class="kaynak">📚 Mu'minûn, 70.</p>
+      </div>
+      <p>Sıddîk Hasan Han rahimehullah bu âyetin tefsirinde şöyle demiştir:</p>
+      <div class="blok alim">
+        <span class="soyleyen">Sıddîk Hasan Han rahimehullah (v. 1307)</span>
+        <p class="ar">«لِمَا جُبِلُوا عَلَيْهِ مِنَ التَّعَصُّبِ وَالِانْحِرَافِ عَنِ الصَّوَابِ وَالْبُعْدِ عَنِ الْحَقِّ، فَلِذَلِكَ كَرِهُوا هَذَا الْحَقَّ الْوَاضِحَ الظَّاهِرَ»</p>
+        <p class="tr">"Onlarda bulunan taassup, doğrudan sapma ve haktan uzaklaşma sebebiyle bu açık ve apaçık haktan hoşlanmadılar."</p>
+        <p class="kaynak">📚 Fethu'l-Beyân fî Makâsıdi'l-Kur'ân, 9/137 (Mu'minûn sûresi 70. âyetin tefsiri).</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <h3 class="altbolum"><span class="no">7</span>Âlimlerin icmâsı ile dine buğzetmek, İslâm'ı iptal eden hususlardandır</h3>
+
+  <p>İcmâyı ve bu manayı nakleden âlimlerden bazıları:</p>
+
+  <ol class="sayili">
+
+    <li>Merdâvî rahimehullah, <em>el-İnsâf</em> adlı eserinde İbn Teymiyye'nin şu sözünü nakletmiştir:
+      <div class="blok alim">
+        <span class="soyleyen">Merdâvî rahimehullah (v. 885)</span>
+        <p class="ar">«قَوْلُهُ: أَوْ سَبَّ اللَّهَ تَعَالَى، أَوْ رَسُولَهُ ﷺ: كَفَرَ. قَالَ الشَّيْخُ تَقِيُّ الدِّينِ رَحِمَهُ اللَّهُ: وَكَذَا لَوْ كَانَ مُبْغِضًا لِرَسُولِهِ ﷺ أَوْ لِمَا جَاءَ بِهِ اتِّفَاقًا»</p>
+        <p class="tr">"(Musannifin) 'Yahut Allah Teâlâ'ya veya Resûlü'ne <span class="sav">ﷺ</span> söverse kâfir olur' sözü: Şeyh Takıyyuddîn rahimehullah dedi ki: Aynı şekilde, Resûlü'ne <span class="sav">ﷺ</span> yahut onun getirdiği şeye buğzeden kişi de ittifakla (kâfir olur)."</p>
+        <p class="kaynak">📚 Merdâvî, el-İnsâf fî Ma'rifeti'r-Râcih mine'l-Hilâf, Bâbu Hukmi'l-Murtedd, 10/326.</p>
+      </div>
+    </li>
+
+    <li>İbn Teymiyye rahimehullah, <em>es-Sârimu'l-Meslûl</em> adlı eserinde, hakkı bildiği hâlde ona buğzeden kişiyi anlatırken şöyle demiştir:
+      <div class="blok alim">
+        <span class="soyleyen">İbn Teymiyye rahimehullah (v. 728)</span>
+        <p class="ar">«وَيَقُولُ: أَنَا لَا أُقِرُّ بِذَلِكَ وَلَا أَلْتَزِمُهُ وَأُبْغِضُ هَذَا الْحَقَّ وَأَنْفِرُ عَنْهُ، فَهَذَا نَوْعٌ غَيْرُ النَّوْعِ الْأَوَّلِ، وَتَكْفِيرُ هَذَا مَعْلُومٌ بِالِاضْطِرَارِ مِنْ دِينِ الْإِسْلَامِ، وَالْقُرْآنُ مَمْلُوءٌ مِنْ تَكْفِيرِ مِثْلِ هَذَا النَّوْعِ، بَلْ عُقُوبَتُهُ أَشَدُّ»</p>
+        <p class="tr">"Ve şöyle der: 'Ben bunu kabul etmiyorum, bunu üzerime almıyorum; bu hakka buğzediyorum ve ondan nefret ediyorum.' İşte bu, birinci nevîden başka bir nevîdir. Bu kişinin tekfir edilmesi, İslâm dininden zarurî olarak bilinen bir husustur. Kur'ân, bu nevîden olan kimselerin tekfiri ile doludur; bilakis bunun cezası daha da şiddetlidir."</p>
+        <p class="kaynak">📚 İbn Teymiyye, es-Sârimu'l-Meslûl alâ Şâtimi'r-Resûl, s. 522.</p>
+      </div>
+    </li>
+
+    <li>İbn Batta el-Ukberî rahimehullah şöyle demiştir:
+      <div class="blok alim">
+        <span class="soyleyen">İbn Batta el-Ukberî rahimehullah (v. 387)</span>
+        <p class="ar">«وَكَذَلِكَ وُجُوبُ الْإِيمَانِ وَالتَّصْدِيقِ بِجَمِيعِ مَا جَاءَتْ بِهِ الرُّسُلُ مِنْ عِنْدِ اللَّهِ، وَبِجَمِيعِ مَا قَالَ اللَّهُ عَزَّ وَجَلَّ، فَهُوَ حَقٌّ لَازِمٌ، فَلَوْ أَنَّ رَجُلًا آمَنَ بِجَمِيعِ مَا جَاءَتْ بِهِ الرُّسُلُ إِلَّا شَيْئًا وَاحِدًا، كَانَ بِرَدِّ ذَلِكَ الشَّيْءِ كَافِرًا عِنْدَ جَمِيعِ الْعُلَمَاءِ»</p>
+        <p class="tr">"Aynı şekilde, resûllerin Allah katından getirdiği her şeye ve Allah Azze ve Celle'nin söylediği her şeye iman etmek ve onu tasdik etmek de vaciptir; bu, terk edilmesi mümkün olmayan bir haktır. Şayet bir adam, resûllerin getirdiği her şeye iman etse de sadece bir tek şeye iman etmese, o bir şeyi reddetmesi sebebiyle bütün âlimlerin nazarında kâfir olur."</p>
+        <p class="kaynak">📚 İbn Batta el-Ukberî, eş-Şerh ve'l-İbâne alâ Usûli's-Sunne ve'd-Diyâne (el-İbânetu's-Suğrâ), s. 211.</p>
+      </div>
+    </li>
+
+    <li>Muhammed bin Abdilvehhâb rahimehullah, kendisine muhalefet eden kişiye cevap verirken, <em>el-İknâ'</em> müellifinin irtidat bâbında zikrettiği hususları sıralamış ve şöyle demiştir:
+      <div class="blok alim">
+        <span class="soyleyen">Muhammed bin Abdilvehhâb rahimehullah (v. 1206)</span>
+        <p class="ar">«الثَّانِي: أَنَّهُ ذَكَرَ فِي أَوَّلِهِ أَنَّ الْمُبْغِضَ لِمَا جَاءَ بِهِ الرَّسُولُ ﷺ كَافِرٌ بِالْإِجْمَاعِ، وَلَوْ عَمِلَ بِهِ»</p>
+        <p class="tr">"İkincisi: O (yani <em>el-İknâ'</em> müellifi), (bâbın) başında, Resûlullah'ın <span class="sav">ﷺ</span> getirdiği şeye buğzeden kişinin, onunla amel etse dahi, icmâ ile kâfir olduğunu zikretmiştir."</p>
+        <p class="kaynak">📚 Muhammed bin Abdilvehhâb, er-Resâilu'ş-Şahsiyye (Muellefâtu'ş-Şeyh, 6. cilt), s. 230.</p>
+      </div>
+    </li>
+
+  </ol>
+
+  <div class="notkutu">
+    <span class="not-etiket">Fâide</span>
+    <p>Fâide olarak Suyûtî rahimehullahın şu sözünü ilave edebiliriz:</p>
+    <div class="blok alim">
+      <span class="soyleyen">Celâleddîn es-Suyûtî rahimehullah (v. 911)</span>
+      <p class="ar">«فَاعْلَمُوا رَحِمَكُمُ اللَّهُ أَنَّ مَنْ أَنْكَرَ كَوْنَ حَدِيثِ النَّبِيِّ ﷺ قَوْلًا كَانَ أَوْ فِعْلًا بِشَرْطِهِ الْمَعْرُوفِ فِي الْأُصُولِ حُجَّةً، كَفَرَ وَخَرَجَ عَنْ دَائِرَةِ الْإِسْلَامِ، وَحُشِرَ مَعَ الْيَهُودِ وَالنَّصَارَى أَوْ مَعَ مَنْ شَاءَ اللَّهُ مِنْ فِرَقِ الْكَفَرَةِ»</p>
+      <p class="tr">"Allah size rahmet etsin, bilin ki: Nebî'nin <span class="sav">ﷺ</span> hadîsinin, söz olsun fiil olsun, usûlde bilinen şartıyla hüccet olduğunu inkâr eden kimse kâfir olur, İslâm dairesinden çıkar ve yahudiler ile hristiyanlarla yahut Allah'ın dilediği kâfir fırkalarla birlikte haşrolunur."</p>
+      <p class="kaynak">📚 Celâleddîn es-Suyûtî, Miftâhu'l-Cenne fi'l-İhticâci bi's-Sunne, s. 5.</p>
+    </div>
+  </div>
+
+
+
+  <h3 class="altbolum"><span class="no">8</span>Resûlullah'ın <span class="sav">ﷺ</span> sözleri ve emrettiği işler dindir</h3>
+
+  <p>Resûlullah'ın <span class="sav">ﷺ</span> sözleri ve emrettiği işler dindir. Çünkü onun sünneti Allah'tan gelen vahiydir.</p>
+
+  <p>İmam Şinkîtî rahimehullah <em>Edvâu'l-Beyân</em>'da şöyle demiştir:</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">Muhammed el-Emîn eş-Şinkîtî rahimehullah (v. 1393)</span>
+    <p class="ar">«﴿إِنْ هُوَ إِلَّا وَحْيٌ يُوحَى﴾ مَعْنَاهُ أَنَّ النَّبِيَّ ﷺ لَا يُبَلِّغُ عَنِ اللَّهِ إِلَّا شَيْئًا أَوْحَى اللَّهُ إِلَيْهِ أَنْ يُبَلِّغَهُ، فَمَنْ يَقُولُ: إِنَّهُ شِعْرٌ أَوْ سِحْرٌ أَوْ كِهَانَةٌ أَوْ أَسَاطِيرُ الْأَوَّلِينَ، هُوَ أَكْذَبُ خَلْقِ اللَّهِ وَأَكْفَرُهُمْ»</p>
+    <p class="tr">"'O, kendisine vahyedilen bir vahiyden başka bir şey değildir.' (Necm, 4) âyetinin manası şudur: Nebî <span class="sav">ﷺ</span> Allah'tan, yalnızca Allah'ın kendisine vahyedip tebliğ etmesini istediği şeyi tebliğ eder. Kim 'Bu şiirdir, sihirdir, kâhin sözüdür veya öncekilerin masallarıdır.' derse, o Allah'ın yarattıkları içinde en yalancı ve en kâfir olan kimsedir."</p>
+    <p class="kaynak">📚 Edvâu'l-Beyân fî Îdâhi'l-Kur'ân bi'l-Kur'ân, 7/465 (Necm sûresi 4. âyetin tefsiri).</p>
+  </div>
+
+  <p>Allah Teâlâ şöyle buyurmuştur:</p>
+
+  <div class="blok ayet">
+    <span class="soyleyen">Nisâ Sûresi, 113. âyet</span>
+    <p class="ar">﴿وَأَنْزَلَ اللَّهُ عَلَيْكَ الْكِتَابَ وَالْحِكْمَةَ وَعَلَّمَكَ مَا لَمْ تَكُنْ تَعْلَمُ وَكَانَ فَضْلُ اللَّهِ عَلَيْكَ عَظِيمًا﴾</p>
+    <p class="tr">"Allah sana Kitab'ı ve hikmeti indirdi ve sana bilmediğini öğretti. Allah'ın senin üzerindeki lütfu gerçekten çok büyüktür."</p>
+    <p class="kaynak">📚 Nisâ, 113.</p>
+  </div>
+
+  <p>Tefsir âlimleri burada geçen "hikmet" kelimesinin sünnet olduğunu söylemişlerdir. Katâde rahimehullah şöyle demiştir:</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">Katâde rahimehullah (v. 118)</span>
+    <p class="ar">«الْحِكْمَةُ السُّنَّةُ»</p>
+    <p class="tr">"Hikmet sünnettir."</p>
+    <p class="kaynak">📚 İbn Cerîr et-Taberî, Câmiu'l-Beyân, 5/417 (Âl-i İmrân sûresi 48. âyetin tefsiri).</p>
+  </div>
+
+  <p class="vurgu-buyuk">Bu yüzden Resûlullah'ın <span class="sav">ﷺ</span> getirdiği herhangi bir şeye buğzeden, vahye buğzetmiş olur ve kâfir olur.</p>
+
+
+
+  <h3 class="altbolum"><span class="no">9</span>Allah'ın dinine buğzedenler üç kısma ayrılır</h3>
+
+  <ol class="sayili">
+    <li><strong>Aslî kâfirler:</strong> Onların dine buğzetmeleri apaçıktır.</li>
+    <li><strong>İtikadî münafıklar:</strong> Şeriatın bazı hususlarına gizli olarak buğzederler.</li>
+    <li><strong>Mürted:</strong> İslâm'a girmiş, sonra İslâm'dan gelen bir şeye buğzetmiş kişidir. Eğer bunu gizli tutarsa ikinci kısımdaki kişilerden olur.</li>
+  </ol>
+
+  <div class="ozet">
+    <h4>Müminin hâli</h4>
+    <p>Mümin kişi ise Allah'ın ve Resûlü'nün <span class="sav">ﷺ</span> getirdiği bütün hususları sever. Allah Teâlâ şöyle buyurmuştur:</p>
+    <div class="blok ayet">
+      <span class="soyleyen">Nûr Sûresi, 51. âyet</span>
+      <p class="ar">﴿إِنَّمَا كَانَ قَوْلَ الْمُؤْمِنِينَ إِذَا دُعُوا إِلَى اللَّهِ وَرَسُولِهِ لِيَحْكُمَ بَيْنَهُمْ أَنْ يَقُولُوا سَمِعْنَا وَأَطَعْنَا وَأُولَئِكَ هُمُ الْمُفْلِحُونَ﴾</p>
+      <p class="tr">"Müminler, aralarında hüküm vermesi için Allah'a ve Resûlü'ne çağrıldıkları zaman onların sözü ancak: 'İşittik ve itaat ettik.' demeleridir. İşte kurtuluşa erenler onlardır."</p>
+      <p class="kaynak">📚 Nûr, 51.</p>
+    </div>
+  </div>
+
+
+
+  <h3 class="altbolum"><span class="no">10</span>Dine buğzetmenin iki şekli vardır</h3>
+
+  <ol class="sayili">
+    <li><strong>Zâhir olarak buğzetmek:</strong> Kişi buğzettiğini dışarıya vurur ve bunu diliyle söyler. Mesela: "Bu zamanda şeriat olmaz." diyen kişi gibi. Bu küfürdür.</li>
+    <li><strong>Bâtın olarak buğzetmek:</strong> Kişi kalbinde buğzeder. Bu, itikadî nifaktır <span class="ar-ic" dir="rtl">(النِّفَاقُ الِاعْتِقَادِيُّ)</span>. Bu kişi buğzettiğini gizli tutarsa dünyada İslâm hükmünü alır, fakat âhirette ateşin en alt tabakasında bulunanlardan olur.</li>
+  </ol>
+
+
+
+  <h3 class="altbolum"><span class="no">11</span>Buğz iki kısma ayrılır</h3>
+
+  <ol class="sayili">
+    <li><strong>Meşru ve övülmüş (mahmûd) olan buğz:</strong> Allah'ın buğzettiği şeylere buğzetmektir. Şeytana, kâfirlere, şirke, günahlara ve Allah'tan alıkoyan bütün işlere buğzetmek gibi. Bu, insanın fıtratında bulunan bir şeydir.</li>
+    <li><strong>Yasaklanmış (menhî) ve yerilmiş (mezmûm) olan buğz:</strong> Allah'a, Resûlullah'a <span class="sav">ﷺ</span> ve şeriatına buğzetmek gibi. Allah'ın kazâ ve kaderine buğzetmek de böyledir. Allah'ın sâlih kullarına buğzetmek ve onlara eziyet etmek de böyledir. Bu tür buğz yasaklanmış ve yerilmiştir.</li>
+  </ol>
+
+
+
+  <h3 class="altbolum"><span class="no">12</span>Buğzetmenin çeşitleri</h3>
+
+  <ol class="sayili">
+    <li><strong>Kalp ile buğzetmek:</strong> Buğzun asıl yeri ve kaynağı kalptir. Dine buğzeden kişi, kalbinde dini sevmeyen kişidir. Namazı sevmemek veya faizin haram olmasını sevmemek buna örnektir.</li>
+    <li><strong>Dil ile buğzetmek:</strong> Kişinin kalbindeki buğzu diliyle ortaya çıkarmasıdır. Dine sövmek, dini küçümsemek veya "Ben bunu sevmiyorum." diyerek buğzunu ifade etmek buna örnektir.</li>
+    <li><strong>Azalar ile buğzetmek:</strong> Kişinin buğzunu fiilleriyle ortaya koymasıdır. Müslümanlara eziyet etmek, onların işlerine engel olmak veya âlimleri hapse atmak buna örnektir.</li>
+  </ol>
+
+
+
+  <h3 class="altbolum"><span class="no">13</span>Dinen buğzedilmesi gereken şeylerin dereceleri nelerdir?</h3>
+
+  <ol class="sayili">
+    <li><strong>Vacip olan ve imandan sayılan buğz:</strong> Bu bulunmadığı takdirde din kökünden yok olur. Allah'tan başka ibadet edilen ilahlara, şirke ve küfre buğzetmek buna örnektir. Bunlara buğzetmek imandandır. Nitekim Allah Teâlâ şöyle buyurmuştur:
+      <div class="blok ayet">
+        <span class="soyleyen">Mümtehine Sûresi, 4. âyet</span>
+        <p class="ar">﴿قَدْ كَانَتْ لَكُمْ أُسْوَةٌ حَسَنَةٌ فِي إِبْرَاهِيمَ وَالَّذِينَ مَعَهُ إِذْ قَالُوا لِقَوْمِهِمْ إِنَّا بُرَآءُ مِنْكُمْ وَمِمَّا تَعْبُدُونَ مِنْ دُونِ اللَّهِ كَفَرْنَا بِكُمْ وَبَدَا بَيْنَنَا وَبَيْنَكُمُ الْعَدَاوَةُ وَالْبَغْضَاءُ أَبَدًا حَتَّى تُؤْمِنُوا بِاللَّهِ وَحْدَهُ﴾</p>
+        <p class="tr">"İbrahim'de ve onunla beraber bulunanlarda sizin için güzel bir örnek vardır. Onlar kavimlerine şöyle demişlerdi: 'Biz sizden de Allah'tan başka taptıklarınızdan da uzağız. Sizi inkâr ediyoruz. Sizinle bizim aramızda, yalnız Allah'a iman edinceye kadar ebedî bir düşmanlık ve buğz ortaya çıkmıştır.'"</p>
+        <p class="kaynak">📚 Mümtehine, 4.</p>
+      </div>
+    </li>
+
+    <li><strong>Terk edildiğinde günah olan, fakat büyük küfür derecesine ulaştırmayan buğz:</strong> Müzik ve alkol gibi masiyetlere buğzetmemek buna örnektir. Kişinin müziğe buğzetmemesi ve onu dinlemesi günah işlemesine sebep olur, fakat onu dinden çıkarmaz.</li>
+  </ol>
+
+
+
+  <h3 class="altbolum"><span class="no">14</span>Buğzetmenin nâkıd sayılması için gereken şartlar</h3>
+
+  <ol class="sayili">
+    <li>Buğzedilen hususun <strong>Kur'ân ve Sünnet'te sabit olması</strong> gerekir. Örf ve âdete göre hüküm verilmez. Mesela bir kişi toplumunda bulunan bir örfe buğzederse ve bu husus Kur'ân ve Sünnet'te sabit değilse, sırf bu örfe buğzettiği için dinden çıkmaz.</li>
+
+    <li>Buğzettiği hususun <strong>ihtilafsız bir konu olması</strong> gerekir. Çünkü ihtilaf varsa, kişi başka âlimlerin görüşünü benimsemiş olabilir. Mesela âlimler bir şeyin helal veya haram olması konusunda ihtilaf etmişlerse, onu haram gören âlimlerin görüşünü benimseyen bir kişinin o şeyi sevmemesi, şeriata buğzetmek sayılmaz.</li>
+
+    <li>Buğzeden kişinin, <strong>o hususun Allah'ın şeriatından olduğunu bile bile</strong> ona buğzetmesi gerekir. Çünkü kişi bir hükmün şeriattan olduğunu bilmiyor olabilir veya o hükmün delili kendisine ulaşmamış olabilir. Böyle bir durumda, bilmediği bir hususa karşı duyduğu hoşnutsuzluk, Allah'ın şeriatına buğzetmek hükmünü almaz.</li>
+  </ol>
+
+
+
+  <h3 class="altbolum"><span class="no">15</span>Tabiî buğz ile dinden çıkaran buğz arasında fark vardır</h3>
+
+  <p>Tabiî buğz, kişinin bir şey nefsine ağır geldiği için ondan hoşlanmamasıdır. Bu, şeriatı sevmediği için değil, nefsinden kaynaklanan bir hoşnutsuzluktur. Dinden çıkaran buğz ise o hükmün kendisine ve Allah'ın şeriatına karşı duyulan hoşnutsuzluktur.</p>
+
+  <p>Mesela:</p>
+
+  <ul class="madde">
+    <li>Bir kadın için kocasının başka bir kadınla evlenmesi</li>
+    <li>Cihadın nefse ağır gelmesi, çünkü onda yorulmak, sefere çıkmak ve ölmek vardır</li>
+    <li>Sabah namazının ağır gelmesi, çünkü kişi uykuyu sever ve dinlenme ihtiyacı duyar</li>
+  </ul>
+
+  <p>Bunlar çoğu zaman nefse ağır geldiği için böyledir. Bu hoşnutsuzluk, bunların şeriatta bulunmasından kaynaklanan bir hoşnutsuzluk değildir. Bu hoşnutsuzluğun sebebi iman zayıflığıdır. Sâlih kimselere bunlar daha hafif gelir. Bu yüzden Resûlullah <span class="sav">ﷺ</span> şöyle dua etmiştir:</p>
+
+  <div class="blok hadis">
+    <span class="soyleyen">Resûlullah'ın <span class="sav">ﷺ</span> duası</span>
+    <p class="ar">«اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا، وَزَكِّهَا أَنْتَ خَيْرُ مَنْ زَكَّاهَا، أَنْتَ وَلِيُّهَا وَمَوْلَاهَا»</p>
+    <p class="tr">"Allah'ım! Nefsime takvâsını ver, onu temizle. Onu en güzel temizleyen sensin. Sen onun velisi ve mevlâsısın."</p>
+    <p class="kaynak">📚 Muslim, 2722 (Zeyd bin Erkam radıyallahu anh'tan).</p>
+  </div>
+
+  <div class="notkutu">
+    <span class="not-etiket">Tenbih</span>
+    <p>Âyetlerde bu fark açıkça görülmektedir:</p>
+
+    <div class="blok ayet">
+      <span class="soyleyen">Bakara Sûresi, 216. âyet</span>
+      <p class="ar">﴿كُتِبَ عَلَيْكُمُ الْقِتَالُ وَهُوَ كُرْهٌ لَكُمْ وَعَسَى أَنْ تَكْرَهُوا شَيْئًا وَهُوَ خَيْرٌ لَكُمْ وَعَسَى أَنْ تُحِبُّوا شَيْئًا وَهُوَ شَرٌّ لَكُمْ وَاللَّهُ يَعْلَمُ وَأَنْتُمْ لَا تَعْلَمُونَ﴾</p>
+      <p class="tr">"Savaş (kıtal) size farz kılındı, oysa o size hoş gelmez. Olur ki hoşlanmadığınız bir şey sizin için hayırlıdır. Olur ki sevdiğiniz bir şey de sizin için şerlidir. Allah bilir, siz bilmezsiniz."</p>
+      <p class="kaynak">📚 Bakara, 216.</p>
+    </div>
+    <p><em>Buradaki kerih görme, tabiî olan kerih görmedir. Kişi cihadı sever ve onun Allah'ın şeriatından olduğunu kabul eder, fakat cihad nefsine ağır gelir.</em></p>
+
+    <div class="blok ayet">
+      <span class="soyleyen">Tevbe Sûresi, 81. âyet</span>
+      <p class="ar">﴿فَرِحَ الْمُخَلَّفُونَ بِمَقْعَدِهِمْ خِلَافَ رَسُولِ اللَّهِ وَكَرِهُوا أَنْ يُجَاهِدُوا بِأَمْوَالِهِمْ وَأَنْفُسِهِمْ فِي سَبِيلِ اللَّهِ وَقَالُوا لَا تَنْفِرُوا فِي الْحَرِّ قُلْ نَارُ جَهَنَّمَ أَشَدُّ حَرًّا لَوْ كَانُوا يَفْقَهُونَ﴾</p>
+      <p class="tr">"Allah'ın Resûlü'nden geri kalanlar, oturmalarına sevindiler. Mallarıyla ve canlarıyla Allah yolunda cihad etmeyi kerih gördüler ve: 'Sıcakta sefere çıkmayın!' dediler. De ki: 'Cehennem ateşi daha sıcaktır!' Keşke anlasalardı."</p>
+      <p class="kaynak">📚 Tevbe, 81.</p>
+    </div>
+    <p><em>Buradaki kerih görme ise dinden çıkaran münafıkların kerih görmesidir. Onlar cihadın kendisine kalplerinde buğzettiler.</em></p>
+  </div>
+
+
+
+  <h3 class="altbolum"><span class="no">16</span>Buğz, bütün terklerin aslını; sevgi ise bütün fiillerin aslını oluşturur</h3>
+
+  <p>İbn Teymiyye rahimehullah şöyle demiştir:</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">İbn Teymiyye rahimehullah (v. 728)</span>
+    <p class="ar">«وَأَصْلُ كُلِّ فِعْلٍ وَحَرَكَةٍ فِي الْعَالَمِ مِنَ الْحُبِّ وَالْإِرَادَةِ، فَهُوَ أَصْلُ كُلِّ فِعْلٍ وَمَبْدَؤُهُ، كَمَا أَنَّ الْبُغْضَ وَالْكَرَاهَةَ مَانِعٌ وَصَادٌّ لِكُلِّ مَا انْعَقَدَ بِسَبَبِهِ وَمَادَّتِهِ، فَهُوَ أَصْلُ كُلِّ تَرْكٍ»</p>
+    <p class="tr">"Dünyadaki her fiil ve hareketin aslı sevgi ve iradedir. Sevgi, her fiilin aslı ve başlangıcıdır. Aynı şekilde buğz ve kerih görme de kişiyi bir şeyi yapmaktan alıkoyan ve engelleyen şeydir. Bu sebeple buğz, her terkin aslıdır."</p>
+    <p class="kaynak">📚 İbn Teymiyye, Kâide fi'l-Mahabbe, s. 7.</p>
+  </div>
+
+  <p><strong>Bu önemli bir kuraldır:</strong> Buğzeden kişi, buğzettiği şeyleri terk eder. Seven kişi ise harekete geçer: ilim öğrenir, hakkı öğrenmek için uğraşır ve vacipleri yerine getirmeye koşar. Namazı seven kişi onu kılar. Namaza buğzeden kişi ise onu terk eder.</p>
+
+
+
+  <h3 class="altbolum"><span class="no">17</span>Buğzun meydana getirdiği fiiller ve sonuçlar</h3>
+
+  <ol class="sayili">
+    <li>Buğzeden kişi düşmanlık eder ve savaşır. Bu, buğzun meydana getirdiği en büyük fiildir.</li>
+    <li>Buğzeden kişi, buğzettiği kişiye söver.</li>
+    <li>Buğzeden kişi eziyet eder.</li>
+    <li>Buğzeden kişi öfkelenir.</li>
+    <li>Buğzeden kişi devamlı engel olmaya çalışır.</li>
+    <li>Buğzeden kişi ihtiram etmez ve saygı duymaz.</li>
+    <li>Buğzeden kişi razı olmaz, kabul etmez ve boyun eğmez.</li>
+    <li>Buğzeden kişi inkâr eder, yüz çevirir ve yalanlar.</li>
+  </ol>
+
+
+
+  <h3 class="altbolum"><span class="no">18</span>Bu nâkıda düşen bazı fırkalar</h3>
+
+  <ol class="sayili">
+    <li><strong>Râfızîler:</strong> Sahâbelere ve Ehl-i Sünnet'e buğzederler.</li>
+    <li><strong>Tarikatçılar:</strong> Tevhid ehline buğzederler.</li>
+    <li><strong>Münafıklar:</strong> Allah'ın dinine buğzederler.</li>
+    <li><strong>Batıya özenenler:</strong> Bu durum çoğu zaman medya kuruluşlarında görülür.</li>
+    <li><strong>Müşrikler:</strong> Allah'ın kelâmına buğzederler.</li>
+    <li><strong>Laikler:</strong> Şeriata buğzederler ve şeriatın hayatın işlerine dâhil olmasını istemezler.</li>
+    <li><strong>Akılcı mübtedi'ler (Kur'ancılar):</strong> Sünnete ve hadislere buğzederler.</li>
+    <li><strong>Komünistler:</strong> Dine buğzederler.</li>
+  </ol>
+
+
+
+  <h3 class="altbolum"><span class="no">19</span>Buğzetme nâkıdının meydana gelme sebepleri nelerdir?</h3>
+
+  <ol class="sayili">
+    <li><strong>Allah'ın dininde cahil kalmak.</strong> İnsan bilmediği şeye buğzeder ve ona düşmanlık gösterir.</li>
+    <li><strong>Kibir.</strong> Kibir, hakkı kabul etmemeye ve ona buğzetmeye sebep olur.</li>
+    <li><strong>Haset.</strong> Yahudilerde olduğu gibi. Haset, aslında güzel olan şeylere buğzetmeye sebep olur.</li>
+    <li><strong>Dünyalık menfaatleri kaybetme korkusu.</strong> Kişi makamını kaybetme korkusuyla dinin bazı hususlarına buğzeder veya buğzetmesi gereken şeylere karşı sessiz kalır. Çünkü konuşursa makamını kaybedeceğinden korkar.</li>
+    <li><strong>Şehvetlere ve hevâya tâbi olmak.</strong> Kişi zina gibi kötü fiilleri işlemek ister, din ise onu bunlardan engeller. Bu da dine karşı buğza sebep olur.</li>
+  </ol>
+
+
+
+  <h3 class="altbolum"><span class="no">20</span>Bu nâkıd konusunda tekfircilerin ve Mürcie'nin hatalı anlayışları</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Tekfircilerin anlayışı</span></h4>
+
+  <p>Onlar şöyle derler: Bir kişi günah işlerse, bu onun kalbinde dine karşı buğz bulunduğunu gösterir. Dine buğzettiği için de kâfir olur. Yani tekfîr bi'l-lâzım yaparlar.</p>
+
+  <p>Bu anlayış doğru değildir. Çünkü Resûlullah <span class="sav">ﷺ</span> içki içen bir adamı tekfir etmemiş, onun hakkında şöyle buyurmuştur:</p>
+
+  <div class="blok hadis">
+    <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> şöyle buyurmuştur</span>
+    <p class="ar">«لَا تَلْعَنُوهُ، فَوَاللَّهِ مَا عَلِمْتُ إِنَّهُ يُحِبُّ اللَّهَ وَرَسُولَهُ»</p>
+    <p class="tr">"Ona lânet etmeyin! Vallahi, onun Allah'ı ve Resûlünü sevdiğini biliyorum."</p>
+    <p class="kaynak">📚 Buhârî, 6780 (Bâbu mâ yukrahu min la'ni şâribi'l-hamri ve ennehu leyse bi-hâricin mine'l-mille).</p>
+  </div>
+
+  <p class="vurgu">Günahlar, kalpte cüz'î bir buğza delalet eder. Fakat bu, dinden çıkaran buğz değildir.</p>
+
+  <h4 class="kisim"><span class="no">2</span><span>Mürcie'nin anlayışı</span></h4>
+
+  <p>Onlar şöyle derler: Kalpteki buğz ancak yalanlama ile olur. Bu yüzden kişi buğzettiği için değil, yalanladığı için dinden çıkar. Mürcie'ye göre asıl küfür, tekzib (yalanlama) küfrüdür. Bu sebeple onlara göre zâhirde ortaya çıkan buğz, mesela Resûlullah'a <span class="sav">ﷺ</span> sövmek, kalpte yalanlama bulunmadığı sürece tek başına kişiyi dinden çıkarmaz.</p>
+
+  <p><em>Anlaşılması için bir örnek: Onlara göre bir peygamberi öldüren kişi, eğer kalbinde ona karşı tasdik ve sevgi varsa, sırf bu fiili sebebiyle dinden çıkmaz.</em></p>
+
+  <p>Bu anlayış doğru değildir. Çünkü onlar bâtın ile zâhir arasındaki irtibatı ortadan kaldırırlar. Resûlullah <span class="sav">ﷺ</span> şöyle buyurmuştur:</p>
+
+  <div class="blok hadis">
+    <span class="soyleyen">Nu'mân bin Beşîr radıyallahu anh'tan</span>
+    <p class="ar">«أَلَا وَإِنَّ فِي الْجَسَدِ مُضْغَةً، إِذَا صَلَحَتْ صَلَحَ الْجَسَدُ كُلُّهُ، وَإِذَا فَسَدَتْ فَسَدَ الْجَسَدُ كُلُّهُ، أَلَا وَهِيَ الْقَلْبُ»</p>
+    <p class="tr">"Dikkat edin! Bedende bir et parçası vardır. O sâlih olursa bütün beden sâlih olur, o bozulursa bütün beden bozulur. Dikkat edin, o kalptir."</p>
+    <p class="kaynak">📚 Buhârî, 52; Muslim, 1599.</p>
+  </div>
+
+  <p class="vurgu">Kalp, amellerle bağlantılıdır. Kişinin zâhirde buğzunu ortaya koyması, kalbinde de buğz bulunduğuna delalet eder.</p>
+
+
+
+  <h3 class="altbolum"><span class="no">21</span>Bu zamanlarda buğzetme nâkıdı insanlar arasında çoğalmıştır</h3>
+
+  <p>Müellifin zamanında da bu nâkıd vardı. Necd âlimlerinden Süleyman bin Sehmân rahimehullah gibi âlimler, bu tür sapmalara karşı reddiyeler yazmışlardır. Süleyman bin Sehmân'ın reddiye eserlerinden biri <em>ed-Diyâu'ş-Şârik fî Reddi Şubuhâti'l-Mâziki'l-Mârik</em> adlı eseridir.</p>
+
+  <ol class="sayili">
+    <li>Dine buğzeden kişinin dine karşı itirazları artar. Dinî hükümlere sürekli itiraz eden kişinin bu tavrı, dine buğzettiğine işaret eder. Örnek olarak:
+      <ul class="madde">
+        <li>"Neden Âişe radıyallahu anhâ küçük yaşta evlendi?"</li>
+        <li>"Neden miras paylaşımı kadın ve erkek arasında farklıdır?"</li>
+        <li>"Neden yirminci yüzyılda cihad vardır?"</li>
+      </ul>
+    </li>
+
+    <li>Aynı şekilde dine buğzeden kişinin hakkı kabul etmediğini görürüz. Bunun sebebini Resûlullah <span class="sav">ﷺ</span> Huzeyfe radıyallahu anh hadisinde açıklamıştır:
+      <div class="blok hadis">
+        <span class="soyleyen">Huzeyfe bin el-Yemân radıyallahu anh'tan</span>
+        <p class="ar">«تُعْرَضُ الْفِتَنُ عَلَى الْقُلُوبِ كَالْحَصِيرِ عُودًا عُودًا، فَأَيُّ قَلْبٍ أُشْرِبَهَا نُكِتَ فِيهِ نُكْتَةٌ سَوْدَاءُ، وَأَيُّ قَلْبٍ أَنْكَرَهَا نُكِتَ فِيهِ نُكْتَةٌ بَيْضَاءُ، حَتَّى تَصِيرَ عَلَى قَلْبَيْنِ: عَلَى أَبْيَضَ مِثْلِ الصَّفَا فَلَا تَضُرُّهُ فِتْنَةٌ مَا دَامَتِ السَّمَاوَاتُ وَالْأَرْضُ، وَالْآخَرُ أَسْوَدُ مُرْبَادًّا كَالْكُوزِ مُجَخِّيًا، لَا يَعْرِفُ مَعْرُوفًا وَلَا يُنْكِرُ مُنْكَرًا إِلَّا مَا أُشْرِبَ مِنْ هَوَاهُ»</p>
+        <p class="tr">"Kalplere fitneler, hasır çubukları gibi birer birer sunulur. Hangi kalp onları kabul ederse, onda siyah bir nokta meydana gelir. Hangi kalp de onları reddederse, onda beyaz bir nokta meydana gelir. Nihayet kalpler iki hâle gelir: Biri cilalı taş gibi bembeyazdır, gökler ve yer durduğu müddetçe hiçbir fitne ona zarar vermez. Diğeri ise baş aşağı çevrilmiş bir kap gibi simsiyah olur. Marufu tanımaz, münkeri reddetmez, ancak hevâsının kendisine benimsettiğini kabul eder."</p>
+        <p class="kaynak">📚 Muslim, 144 (Kitâbu'l-Îmân).</p>
+      </div>
+    </li>
+  </ol>
+
+  <p>Kalp üç çeşittir:</p>
+
+  <ul class="madde">
+    <li><strong>Selim olan kalp:</strong> Takvâ sahibi müminin kalbi.</li>
+    <li><strong>Ölü olan kalp:</strong> Münafığın kalbi.</li>
+    <li><strong>Hasta olan kalp:</strong> Günahkâr Müslümanın kalbi.</li>
+  </ul>
+
+
+
+  <h3 class="altbolum"><span class="no">22</span>Şeyhin sözünün ayrıntılı açıklaması</h3>
+
+  <div class="metin">
+    <div class="metin-etiket"><span class="rozet">Metin</span>Müellif rahimehullah dedi ki</div>
+    <p class="ar">«الْخَامِسُ: مَنْ أَبْغَضَ شَيْئًا مِمَّا جَاءَ بِهِ الرَّسُولُ ﷺ وَلَوْ عَمِلَ بِهِ كَفَرَ إِجْمَاعًا، لِقَوْلِهِ تَعَالَى: ﴿ذَٰلِكَ بِأَنَّهُمْ كَرِهُوا مَا أَنْزَلَ اللَّهُ فَأَحْبَطَ أَعْمَالَهُمْ﴾ [محمد: ٩]»</p>
+    <p class="tr">Beşincisi: Kim, Resûlullah'ın <span class="sav">ﷺ</span> getirdiği şeylerden bir şeye buğzederse, onunla amel etse dahi icmâ ile kâfir olur. Bunun delili Allah Teâlâ'nın şu buyruğudur: "Bunun sebebi, onların Allah'ın indirdiğinden hoşlanmamalarıdır. Bundan dolayı Allah, amellerini boşa çıkarmıştır." (Muhammed, 9)</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">1</span><span>"Men" <span class="lafz-ar" dir="rtl">مَنْ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Bu kelime umum ifade eder. Yani mükellef olan kadın veya erkek, insan veya cin, herkesi kapsar.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>"Ebğada" <span class="lafz-ar" dir="rtl">أَبْغَضَ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Buğzetmenin asıl yeri kalptir.</li>
+      <li>Buğz, dile ve organlara da yansır. Bunlar buğzun amelî tezahürleridir.</li>
+      <li>Buradaki buğzdan maksat, kerih görmektir. Yani muhabbetin, rızanın ve kabulün zıddıdır.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>"Şey'en" <span class="lafz-ar" dir="rtl">شَيْئًا</span></span></h4>
+  <div class="kisim-govde">
+    <p>Bu kelime nekra bir isimdir. Şart siyakında, yani burada <span class="ar-ic" dir="rtl">"مَنْ"</span> edatından sonra geldiği için umum ifade eder. Yani şeriatta bulunan hangi şey olursa olsun, tek bir şeye bile buğzederse bu nâkıda düşmüş olur.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">4</span><span>"Mimmâ câe bihi" <span class="lafz-ar" dir="rtl">مِمَّا جَاءَ بِهِ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Buradaki <span class="ar-ic" dir="rtl">"مَا"</span> ism-i mevsûldür ve umum ifade eder. Yani Resûlullah'ın <span class="sav">ﷺ</span> getirdiği bütün şeyleri kapsar. Bunlardan herhangi birine buğzeden kişi dinden çıkar.</p>
+    <p>Resûlullah'ın <span class="sav">ﷺ</span> getirdiği şeyler iki çeşittir:</p>
+    <ol class="sayili">
+      <li><strong>Akâid:</strong> Gaybî hususlara, kabir azabına, kıyamet alâmetlerine iman etmek gibi. Bunlara buğzeden kişi dinden çıkar.</li>
+      <li><strong>Ahkâmu'l-ameliyye:</strong> Vacipler, sünnetler, rükünler gibi amelî hükümler. Başörtüsüne, sakala, namaza, cihada ve buna benzer şer'î hususlardan herhangi birine buğzeden kişi dinden çıkar.</li>
+    </ol>
+  </div>
+
+  <h4 class="kisim"><span class="no">5</span><span>"Ve lev amile bihi" <span class="lafz-ar" dir="rtl">وَلَوْ عَمِلَ بِهِ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Onunla amel etse bile kâfir olur. Mesela bir kişi hacca gider fakat hacca buğzeder veya cemaatle namaz kılar fakat cemaatle namaza buğzeder. Onunla amel etmesi kendisine hiçbir fayda sağlamaz ve onu ateşten kurtarmaz. Çünkü bu kişi itikadî nifak küfrüne düşmüş olur.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">6</span><span>"Li-kavlihi teâlâ" <span class="lafz-ar" dir="rtl">لِقَوْلِهِ تَعَالَى</span></span></h4>
+  <div class="kisim-govde">
+    <div class="blok ayet">
+      <span class="soyleyen">Muhammed Sûresi, 9. âyet</span>
+      <p class="ar">﴿ذَٰلِكَ بِأَنَّهُمْ كَرِهُوا مَا أَنْزَلَ اللَّهُ فَأَحْبَطَ أَعْمَالَهُمْ﴾</p>
+      <p class="tr">"Bu, onların Allah'ın indirdiğini kerih görmeleri sebebiyledir. Bu yüzden Allah onların amellerini boşa çıkarmıştır."</p>
+      <p class="kaynak">📚 Muhammed, 9.</p>
+    </div>
+    <p>Bazı nüshalarda bu âyet delil olarak bulunmamaktadır.</p>
+  </div>
+
+</section>
+
+<footer>
+  <div class="marka">İlim Dersleri</div>
+  <div>Nevâkıdu'l-İslâm</div>
+</footer>
+
+</div>
+</body>
+</html>
