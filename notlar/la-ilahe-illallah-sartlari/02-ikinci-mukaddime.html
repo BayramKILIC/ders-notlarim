@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lâ ilâhe illallah'ın Şartları — İkinci Mukaddime</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#123a5f;
+    --navy-soft:#1d5183;
+    --ink:#20262e;
+    --ink-soft:#4a5462;
+    --paper:#fbfaf7;
+    --card:#ffffff;
+    --rule:#e2ddd3;
+
+    --green:#1e6b46;
+    --green-bg:#eef7f1;
+    --green-edge:#a8d3bb;
+
+    --amber:#8a5a12;
+    --amber-bg:#fdf5e6;
+    --amber-edge:#e2c184;
+
+    --blue:#1a4f80;
+    --blue-bg:#eef4fa;
+    --blue-edge:#a9c6e2;
+
+    --bordo:#75194c;
+    --bordo-bg:#fbf2f6;
+    --bordo-edge:#e3c3d4;
+
+    --red:#8d2f2f;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Source Serif 4","Cambria","Georgia",serif;
+    font-size:18px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .sayfa{
+    max-width:820px;
+    margin:0 auto;
+    padding:0 26px 90px;
+  }
+
+  /* ---------- KAPAK ---------- */
+  header.kapak{
+    color:var(--bordo);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:56px 0;
+    margin-bottom:60px;
+  }
+  header.kapak .marka{
+    font-size:.95rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:#d54220;
+    font-weight:600;
+    line-height:1.7;
+    max-width:26ch;
+  }
+  header.kapak .marka-cizgi{
+    width:120px;
+    height:1px;
+    background:var(--rule);
+    margin:26px auto 34px;
+  }
+  header.kapak h1{
+    font-size:clamp(3.3rem,9.5vw,5.8rem);
+    line-height:1.1;
+    color:var(--bordo);
+    margin:0;
+    font-weight:700;
+    letter-spacing:-.015em;
+    max-width:15ch;
+  }
+  header.kapak .altbaslik{
+    font-size:1.16rem;
+    color:var(--bordo);
+    font-style:italic;
+    margin:34px 0 0;
+    max-width:38ch;
+    line-height:1.7;
+  }
+  header.kapak .kunye{
+    margin-top:0;
+    padding-top:72px;
+    font-size:.94rem;
+    color:var(--bordo);
+    letter-spacing:.09em;
+  }
+  header.kapak .kunye .cizgi{
+    width:56px;
+    height:2px;
+    background:var(--bordo);
+    margin:0 auto 18px;
+  }
+  .besmele{
+    font-family:"Scheherazade New",serif;
+    font-size:2.5rem;
+    color:var(--bordo);
+    direction:rtl;
+    margin:0 0 46px;
+  }
+
+  /* ---------- NÂKID ---------- */
+  section.nakid{margin-bottom:70px;}
+
+  .nakid-baslik{
+    background:var(--navy);
+    color:#fff;
+    border-radius:4px;
+    padding:22px 28px;
+    margin-bottom:34px;
+  }
+  .nakid-baslik .etiket{
+    display:block;
+    font-size:.74rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    opacity:.72;
+    margin-bottom:8px;
+  }
+  .nakid-baslik h2{
+    margin:0;
+    font-size:1.42rem;
+    line-height:1.45;
+    font-weight:600;
+  }
+
+  /* ---------- METİN (müellifin sözü) ---------- */
+  .metin{
+    background:var(--bordo-bg);
+    border:1px solid var(--bordo-edge);
+    border-top:5px solid var(--bordo);
+    border-radius:4px;
+    padding:28px 32px 26px;
+    margin:0 0 20px;
+  }
+  .metin .metin-etiket{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px 12px;
+    font-size:.78rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--bordo);
+    margin-bottom:18px;
+  }
+  .metin .metin-etiket .rozet{
+    background:var(--bordo);
+    color:#fff;
+    padding:3px 11px;
+    border-radius:3px;
+    letter-spacing:.2em;
+  }
+  .metin .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:2rem;
+    line-height:2.1;
+    direction:rtl;
+    text-align:right;
+    color:var(--bordo);
+    margin:0 0 18px;
+  }
+  .metin .tr{
+    margin:0;
+    padding-top:16px;
+    border-top:1px dotted var(--bordo-edge);
+    font-size:1.06rem;
+  }
+
+  /* ---------- ŞERH AYRACI ---------- */
+  .serh-ayrac{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin:54px 0 10px;
+    color:var(--navy);
+  }
+  .serh-ayrac::before,.serh-ayrac::after{
+    content:"";
+    flex:1;
+    height:2px;
+    background:var(--navy-soft);
+    opacity:.35;
+  }
+  .serh-ayrac span{
+    font-size:1.05rem;
+    font-weight:700;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+  }
+
+  h3.altbolum{
+    font-size:1.55rem;
+    line-height:1.4;
+    color:var(--navy);
+    margin:60px 0 20px;
+    padding-bottom:12px;
+    border-bottom:3px solid var(--rule);
+    font-weight:700;
+  }
+  h3.altbolum .no{
+    display:inline-block;
+    min-width:38px;
+    height:38px;
+    line-height:38px;
+    text-align:center;
+    background:var(--navy-soft);
+    color:#fff;
+    border-radius:50%;
+    font-size:1rem;
+    margin-right:13px;
+    vertical-align:3px;
+  }
+
+  p{margin:0 0 17px;}
+
+  h4.kisim{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:1.2rem;
+    color:var(--navy-soft);
+    margin:34px 0 12px;
+    font-weight:700;
+  }
+  h4.kisim .no{
+    flex:0 0 auto;
+    width:28px;
+    height:28px;
+    line-height:25px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    background:var(--card);
+    font-size:.82rem;
+  }
+  .kisim-govde{
+    border-left:2px solid var(--rule);
+    margin-left:13px;
+    padding-left:27px;
+  }
+
+  .delil{
+    display:grid;
+    grid-template-columns:34px 1fr;
+    gap:0 18px;
+    margin:30px 0;
+    padding-bottom:8px;
+    border-bottom:1px dotted var(--rule);
+  }
+  .delil:last-of-type{border-bottom:none;}
+  .delil > .no{
+    width:34px;
+    height:34px;
+    line-height:34px;
+    text-align:center;
+    border-radius:50%;
+    background:var(--navy);
+    color:#fff;
+    font-size:.88rem;
+    font-weight:700;
+    margin-top:2px;
+  }
+  .delil > .govde > .blok:first-child{margin-top:0;}
+  .delil-etiket{
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--navy);
+    margin:6px 0 12px;
+  }
+  .delil > .govde > .delil-etiket + .blok{margin-top:0;}
+
+  .ikaz{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-left:5px solid var(--red);
+    border-radius:4px;
+    padding:20px 26px 6px;
+    margin:28px 0;
+  }
+  .ikaz .ikaz-etiket{
+    display:block;
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--red);
+    margin-bottom:10px;
+  }
+  .ikaz ol.sayili{margin:10px 0 14px;}
+  ol.sayili li p.alt-tanim{margin:10px 0 0;padding-left:14px;border-left:2px solid var(--rule);}
+  ol.sayili li .blok{margin:16px 0 8px;}
+  ul.madde li .blok{margin:14px 0 8px;}
+  ol.sayili > li ul.madde{margin:12px 0 4px;}
+  h4.kisim .baslik-alt{font-weight:400;color:var(--ink);}
+  h4.kisim .lafz-ar{font-family:"Scheherazade New",serif;font-weight:700;font-size:1.08em;line-height:1;color:var(--bordo);margin-left:8px;white-space:nowrap;}
+  .ar-ic{font-family:"Scheherazade New",serif;font-size:1.25em;line-height:1;unicode-bidi:isolate;display:inline-block;white-space:nowrap;}
+  .lafz{margin:22px 0;text-align:center;}
+  .lafz .ar-buyuk{display:block;font-family:"Scheherazade New",serif;font-size:1.7rem;line-height:1.9;color:var(--bordo);}
+  .lafz .lafz-tr{display:block;margin-top:2px;color:var(--ink-soft);}
+  .notkutu{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--navy-soft);border-radius:3px;padding:22px 24px 6px;margin:32px 0;}
+  .notkutu .not-etiket{display:block;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--navy-soft);margin-bottom:12px;}
+  ul.ikili{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:9px 30px;list-style:none;margin:26px 0;padding:0;}
+  ul.ikili li{position:relative;padding-left:18px;line-height:1.7;}
+  ul.ikili li::before{content:"";position:absolute;left:0;top:11px;width:6px;height:6px;background:var(--navy-soft);transform:rotate(45deg);}
+
+  /* ---------- VURGU ---------- */
+  .vurgu{
+    font-size:1.24rem;
+    line-height:1.7;
+    color:var(--navy);
+    font-weight:600;
+    border-left:4px solid var(--navy-soft);
+    padding:6px 0 6px 20px;
+    margin:30px 0;
+  }
+  .vurgu-buyuk{
+    font-size:1.42rem;
+    line-height:1.6;
+    text-align:center;
+    color:var(--navy);
+    font-weight:700;
+    margin:38px 0;
+    padding:26px 22px;
+    background:var(--card);
+    border-top:2px solid var(--navy-soft);
+    border-bottom:2px solid var(--navy-soft);
+  }
+  strong{color:var(--navy);font-weight:700;}
+  .sav{font-family:"Scheherazade New",serif;font-size:1.2em;line-height:1;font-weight:400;}
+
+  /* ---------- ALINTI BLOKLARI ---------- */
+  .blok{
+    border-radius:4px;
+    padding:22px 26px;
+    margin:26px 0;
+    border-left-width:5px;
+    border-left-style:solid;
+  }
+  .blok .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:1.75rem;
+    line-height:2.05;
+    direction:rtl;
+    text-align:right;
+    margin-bottom:14px;
+  }
+  .blok .tr{margin:0 0 12px;}
+  .blok .kaynak{
+    font-size:.9rem;
+    color:var(--ink-soft);
+    font-style:italic;
+    margin:0;
+    padding-top:10px;
+    border-top:1px dotted currentColor;
+  }
+  .blok .soyleyen{
+    display:block;
+    font-size:.79rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:600;
+    margin-bottom:13px;
+  }
+
+  .ayet{background:var(--green-bg);border-left-color:var(--green-edge);}
+  .ayet .ar,.ayet .soyleyen{color:var(--green);}
+
+  .alim{background:var(--amber-bg);border-left-color:var(--amber-edge);}
+  .alim .ar,.alim .soyleyen{color:var(--amber);}
+
+  .hadis{background:var(--blue-bg);border-left-color:var(--blue-edge);}
+  .hadis .ar,.hadis .soyleyen{color:var(--blue);}
+
+  /* ---------- LİSTELER ---------- */
+  ul.madde{
+    list-style:none;
+    padding:0;
+    margin:20px 0;
+  }
+  ul.madde li{
+    position:relative;
+    padding:7px 0 7px 26px;
+  }
+  ul.madde li::before{
+    content:"◆";
+    position:absolute;
+    left:2px;
+    color:var(--navy-soft);
+    font-size:.68rem;
+    top:12px;
+  }
+
+  ol.sayili{
+    list-style:none;
+    counter-reset:sira;
+    padding:0;
+    margin:22px 0;
+  }
+  ol.sayili > li{
+    counter-increment:sira;
+    position:relative;
+    padding:10px 0 10px 46px;
+    border-bottom:1px dotted var(--rule);
+  }
+  ol.sayili > li:last-child{border-bottom:none;}
+  ol.sayili > li::before{
+    content:counter(sira);
+    position:absolute;
+    left:0;
+    top:13px;
+    width:30px;
+    height:30px;
+    line-height:27px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    color:var(--navy-soft);
+    background:var(--card);
+    font-size:.84rem;
+    font-weight:700;
+  }
+
+  /* ---------- ÖZET ---------- */
+  .ozet{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-top:4px solid var(--navy);
+    border-radius:4px;
+    padding:26px 30px;
+    margin-top:34px;
+  }
+  .ozet h4{
+    margin:0 0 16px;
+    color:var(--navy);
+    font-size:1.06rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+  .ozet ul{margin:0;padding-left:22px;}
+  .ozet li{margin-bottom:11px;}
+  .ozet li:last-child{margin-bottom:0;}
+
+  .ayirac{
+    text-align:center;
+    color:var(--rule);
+    letter-spacing:.5em;
+    margin:38px 0;
+    font-size:.8rem;
+  }
+
+  footer{
+    margin-top:70px;
+    padding-top:26px;
+    border-top:3px double var(--rule);
+    text-align:center;
+    color:#d54220;
+    font-size:.9rem;
+  }
+  footer .marka{
+    font-size:1rem;
+    color:#d54220;
+    font-weight:600;
+    letter-spacing:.1em;
+    margin-bottom:6px;
+  }
+
+  @media (max-width:620px){
+    body{font-size:16.5px;}
+    .sayfa{padding:0 16px 60px;}
+    header.kapak h1{font-size:2.8rem;}
+    .besmele{font-size:2rem;}
+    .nakid-baslik h2{font-size:1.16rem;}
+    h3.altbolum{font-size:1.3rem;margin:48px 0 16px;}
+    h3.altbolum .no{min-width:32px;height:32px;line-height:32px;font-size:.9rem;}
+    .metin{padding:22px 18px 20px;}
+    .metin .ar{font-size:1.65rem;line-height:2;}
+    .blok{padding:18px 18px;}
+    .ikaz{padding:18px 18px 4px;}
+    .kisim-govde{margin-left:0;padding-left:14px;}
+    .delil{grid-template-columns:28px 1fr;gap:0 10px;}
+    .delil > .no{width:28px;height:28px;line-height:28px;font-size:.8rem;}
+    .blok .ar{font-size:1.5rem;line-height:1.95;}
+    .vurgu-buyuk{font-size:1.18rem;padding:20px 16px;}
+    .vurgu{font-size:1.1rem;}
+  }
+
+  @media print{
+    @page{margin:18mm 16mm;}
+    body{background:#fff;font-size:11.5pt;}
+    .sayfa{max-width:none;padding:0;}
+    section.nakid{page-break-before:always;}
+    section.nakid:first-of-type{page-break-before:auto;}
+    .ayirac{display:none;}
+    header.kapak{
+      min-height:238mm;
+      page-break-after:always;
+      margin-bottom:0;
+    }
+    header.kapak h1{font-size:54pt;}
+    .besmele{font-size:26pt;}
+    section.nakid{page-break-inside:auto;}
+    .nakid-baslik{page-break-after:avoid;background:var(--navy) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .metin,.blok,.ozet,.vurgu-buyuk{page-break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    h3.altbolum,.serh-ayrac{page-break-after:avoid;}
+  }
+</style>
+<style>.sayfa > section.nakid:first-of-type{margin-top:32px;}</style>
+</head>
+<body>
+<div class="sayfa">
+
+<!-- ================= İKİNCİ MUKADDİME ================= -->
+<section class="nakid">
+  <div class="nakid-baslik">
+    <span class="etiket">İkinci Mukaddime</span>
+    <h2>Tevhid ile ilgili meseleler</h2>
+  </div>
+
+  <p class="vurgu">Lâ ilâhe illallah'ı anlamak için tevhidi anlamak gerekir!</p>
+
+
+  <h3 class="altbolum"><span class="no">1</span>Arap dilinde tevhidin manası nedir?</h3>
+
+  <p>Arap dilinde, İbn Fâris gibi klasik lügat âlimlerinin eserlerinde tevhid; <strong>ifrâd</strong> (<span class="ar-ic" dir="rtl">الْإِفْرَادُ</span> &mdash; tek kılmak), <strong>temyîz</strong> (<span class="ar-ic" dir="rtl">التَّمْيِيزُ</span> &mdash; ayırt etmek) ve <strong>ihtisâs</strong> (<span class="ar-ic" dir="rtl">الِاخْتِصَاصُ</span> &mdash; bir şeye has kılmak) manalarına gelir.</p>
+
+  <p><strong>Tevhidin zıttı:</strong> Bir şeyi tek olmaktan çıkarıp çoğaltmak, ikilemek veya ona ortak katmaktır.</p>
+
+
+  <h3 class="altbolum"><span class="no">2</span>Şeriatta tevhidin manası nedir?</h3>
+
+  <p>İbn Useymîn'in dediği gibi:</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">İbn Useymîn rahimehullah (v. 1421)</span>
+    <p class="ar">«هُوَ إِفْرَادُ اللَّهِ بِالرُّبُوبِيَّةِ وَالْأُلُوهِيَّةِ وَالْأَسْمَاءِ وَالصِّفَاتِ»</p>
+    <p class="tr">"Tevhid, Allah'ı rubûbiyetinde, ulûhiyetinde, isim ve sıfatlarında birlemektir."</p>
+  </div>
+
+  <p>Veya şöyle de denilebilir:</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">Tevhidin bir diğer tarifi</span>
+    <p class="ar">«اعْتِقَادُ أَنَّ اللَّهَ وَاحِدٌ لَا شَرِيكَ لَهُ فِي رُبُوبِيَّتِهِ وَأُلُوهِيَّتِهِ وَأَسْمَائِهِ وَصِفَاتِهِ»</p>
+    <p class="tr">"Allah'ın rubûbiyetinde, ulûhiyetinde, isim ve sıfatlarında bir ve ortağı olmadığına inanmaktır."</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">3</span>Tevhidin benzer anlamlı kelimeleri nelerdir?</h3>
+
+  <ul class="madde">
+    <li>Şehâdeteyn (<span class="ar-ic" dir="rtl">الشَّهَادَتَانِ</span>)</li>
+    <li>Îmân billâh (<span class="ar-ic" dir="rtl">الْإِيمَانُ بِاللَّهِ</span>)</li>
+    <li>el-İbâde (<span class="ar-ic" dir="rtl">الْعِبَادَةُ</span>)</li>
+    <li>el-İslâm (<span class="ar-ic" dir="rtl">الْإِسْلَامُ</span>)</li>
+  </ul>
+
+  <p>Bu kelimeler, tevhid kelimesiyle eş anlamlı veya yakın anlamlı olarak kullanılabilir.</p>
+
+
+  <h3 class="altbolum"><span class="no">4</span>Tevhidin Lâ ilâhe illallah ile alakası nedir?</h3>
+
+  <ol class="sayili">
+    <li>Şehâdet, aslında tevhidin dil ile ikrar ve ifade edilmesidir. Kişi tevhid dairesine şehâdet ile girer. Bu sebeple tevhid ile şehâdet arasında çok güçlü bir bağ vardır.</li>
+    <li>"Lâ ilâhe illallah" şehâdeti, ulûhiyet tevhidinin ta kendisidir.</li>
+    <li>Şehâdet, tevhidin diğer kısımlarını da içinde barındırır ve onları gerekli kılar. Yani "Lâ ilâhe illallah" denildiğinde sadece ulûhiyet tevhidi değil, rubûbiyet ile isim ve sıfat tevhidi de dolaylı olarak kabul edilmiş olur.</li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">5</span>"Tevhid" kelimesi, Selef âlimleri tarafından sonradan ortaya çıkarılmış bir ifade değildir</h3>
+
+  <p>Bilakis Resûlullah <span class="sav">ﷺ</span> bizzat "et-Tevhid" (<span class="ar-ic" dir="rtl">التَّوْحِيدُ</span>) kelimesini kullanmıştır.</p>
+
+  <p>Amr bin el-Âs radıyallahu anh, babası hakkında Resûlullah <span class="sav">ﷺ</span>'e soru sorduğunda, Resûlullah <span class="sav">ﷺ</span> şöyle buyurdu:</p>
+
+  <div class="blok hadis">
+    <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+    <p class="ar">«أَمَّا أَبُوكَ، فَلَوْ كَانَ أَقَرَّ بِالتَّوْحِيدِ، فَصُمْتَ وَتَصَدَّقْتَ عَنْهُ، نَفَعَهُ ذَلِكَ»</p>
+    <p class="tr">"Baban eğer tevhidi ikrar etmiş olsaydı, onun adına oruç tutsaydın ve sadaka verseydin, bu ona fayda verirdi."</p>
+    <p class="kaynak">📚 Ahmed bin Hanbel, el-Musned, 6704.</p>
+  </div>
+
+  <p>Aynı şekilde Câbir bin Abdullah radıyallahu anh, Resûlullah <span class="sav">ﷺ</span>'in haccını anlatırken şöyle dedi:</p>
+
+  <div class="blok hadis">
+    <span class="soyleyen">Câbir bin Abdullah radıyallahu anh şöyle demiştir</span>
+    <p class="ar">«فَأَهَلَّ بِالتَّوْحِيدِ: لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ، لَا شَرِيكَ لَكَ»</p>
+    <p class="tr">"Resûlullah <span class="sav">ﷺ</span> tevhid ile telbiye getirdi: 'Lebbeyk Allahumme lebbeyk. Lebbeyke lâ şerîke leke lebbeyk. İnne'l-hamde ve'n-ni'mete leke ve'l-mulk, lâ şerîke lek.'"</p>
+    <p class="kaynak">📚 Muslim, 1218.</p>
+  </div>
+
+  <p>Bu hadisler, "tevhid" lafzının Selef âlimleri tarafından sonradan ortaya çıkarılmış bir tabir olmadığını, bilakis Resûlullah <span class="sav">ﷺ</span> döneminde kullanılan şer'î bir lafız olduğunu göstermektedir.</p>
+
+
+  <h3 class="altbolum"><span class="no">6</span>Tevhid, aslı ve kemali itibarıyla üç mertebede ele alınabilir</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Aslu't-Tevhîd <span class="lafz-ar" dir="rtl">أَصْلُ التَّوْحِيدِ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Bir kimsenin Müslüman olması, cennete girmesi ve tevhid dairesine girmesi için tevhidin aslının onda bulunması zorunludur.</p>
+    <p>Bu, Allah'ı ibadette birlemek ve büyük şirkten sakınmakla gerçekleşir. Kul, ibadetlerin tamamını yalnızca Allah'a tahsis eder ve Allah'a hiçbir şeyi ortak koşmaz.</p>
+    <p>Buna karşılık, bir kimse Allah'tan başkasına dua eder, Allah'tan başkası için kurban keser veya Allah ile kendisi arasında aracılar edinirse, tevhidin aslını gerçekleştirmiş olmaz.</p>
+    <p>Tevhidin aslı, kişinin İslâm dairesinde bulunmasının temelidir. Bunun bulunmaması, tevhidin aslının ortadan kalkması demektir.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Kemâlu't-Tevhîdi'l-Vâcib <span class="lafz-ar" dir="rtl">كَمَالُ التَّوْحِيدِ الْوَاجِبُ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Tevhidin aslı bulunduktan sonra kulun, tevhidini tahkik etmek için Allah'ın kendisine farz kıldığı şeyleri yerine getirmesi ve haram kıldığı şeylerden sakınması gerekir.</p>
+    <p>Yani farzları yerine getirir, haramlardan ve günahlardan kaçınır. Riya gibi küçük şirk kapsamına giren hususlardan ve tevhidin vacip kemalini eksilten bid'at ve masiyetlerden sakınır.</p>
+    <p>Bunlardan birine düşmek, büyük şirke ulaşmadığı müddetçe tevhidin aslını ortadan kaldırmaz; fakat tevhidin vacip olan kemalini eksiltir.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Kemâlu't-Tevhîdi'l-Mustehab <span class="lafz-ar" dir="rtl">كَمَالُ التَّوْحِيدِ الْمُسْتَحَبُّ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Bundan sonraki mertebe, tevhidin müstehap olan kemalidir. Kul, farzları yerine getirip haramlardan sakınmakla yetinmez; buna ilave olarak sünnet ve müstehap amelleri çoğaltır, mekruhlardan ve kendisini Allah'tan uzaklaştırabilecek gereksiz şeylerden mümkün olduğunca sakınır.</p>
+    <p>Aynı şekilde, kalbinin Allah'a olan bağlılığını, tevekkülünü, ihlâsını, korkusunu, ümidini ve Allah'a yönelişini kuvvetlendirir.</p>
+    <p>Kulun kalbinin Allah'a bağlılığı ve yalnızca O'na dayanması ne kadar kuvvetli ve tam olursa, tevhidin müstehap olan kemalinden de o ölçüde nasip sahibi olur.</p>
+  </div>
+
+  <p>Şeyh Sâlih Âlu'ş-Şeyh ise tevhidin tahkikini iki derecede ele alır: vacip olan derece ve müstehap olan derece. Yani yukarıda zikredilen birinci ve ikinci mertebeyi (tevhidin aslı ile vacip olan kemalini) tek bir derecede birleştirmiştir.</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">Şeyh Sâlih Âlu'ş-Şeyh hafızahullah</span>
+    <p class="ar">«فَيَكُونُ تَحْقِيقُ التَّوْحِيدِ عَلَى هَذَا عَلَى دَرَجَتَيْنِ: دَرَجَةٌ وَاجِبَةٌ وَدَرَجَةٌ مُسْتَحَبَّةٌ، وَعَلَيْهَا يَكُونُ الَّذِينَ حَقَّقُوا التَّوْحِيدَ عَلَى دَرَجَتَيْنِ أَيْضًا، فَالدَّرَجَةُ الْوَاجِبَةُ: أَنْ يَتْرُكَ مَا يَجِبُ تَرْكُهُ مِنَ الْأَشْيَاءِ الثَّلَاثَةِ الَّتِي ذُكِرَتْ، فَيَتْرُكُ الشِّرْكَ خَفِيَّهُ وَجَلِيَّهُ، صَغِيرَهُ وَكَبِيرَهُ، وَيَتْرُكُ الْبِدَعَ، وَيَتْرُكُ الْمَعَاصِيَ، هَذِهِ دَرَجَةٌ وَاجِبَةٌ. وَالدَّرَجَةُ الْمُسْتَحَبَّةُ فِي تَحْقِيقِ التَّوْحِيدِ &mdash; وَهِيَ الَّتِي يَتَفَاضَلُ فِيهَا النَّاسُ مِنَ الْمُحَقِّقِينَ لِلتَّوْحِيدِ أَعْظَمَ تَفَاضُلٍ &mdash; هِيَ أَلَّا يَكُونَ فِي الْقَلْبِ شَيْءٌ مِنَ التَّوَجُّهِ أَوِ الْقَصْدِ لِغَيْرِ اللَّهِ جَلَّ وَعَلَا، يَعْنِي: أَنْ يَكُونَ الْقَلْبُ مُتَوَجِّهًا إِلَى اللَّهِ بِكُلِّيَّتِهِ، لَيْسَ فِيهِ الْتِفَاتٌ إِلَى غَيْرِ اللَّهِ، فَيَكُونُ نُطْقُهُ لِلَّهِ، وَفِعْلُهُ وَعَمَلُهُ لِلَّهِ، بَلْ وَحَرَكَةُ قَلْبِهِ لِلَّهِ جَلَّ جَلَالُهُ، وَقَدْ عَبَّرَ عَنْهَا بَعْضُ أَهْلِ الْعِلْمِ &mdash; أَعْنِي هَذِهِ الدَّرَجَةَ الْمُسْتَحَبَّةَ &mdash; بِقَوْلِهِ: أَنْ يَتْرُكَ مَا لَا بَأْسَ بِهِ حَذَرًا مِمَّا بِهِ بَأْسٌ، يَعْنِي: فِي مَجَالِ أَعْمَالِ الْقُلُوبِ، وَأَعْمَالِ اللِّسَانِ، وَأَعْمَالِ الْجَوَارِحِ»</p>
+    <p class="tr">"Buna göre tevhidin tahkiki iki derecedir: vacip olan derece ve müstehap olan derece. Tevhidi tahkik edenler de aynı şekilde iki derece üzeredir.</p>
+    <p class="tr">Vacip olan derece şudur: Daha önce zikredilen üç husustan terk edilmesi vacip olanları terk etmektir. Buna göre kişi şirkin gizlisini ve açığını, küçüğünü ve büyüğünü terk eder; bid'atları terk eder ve masiyetleri terk eder. İşte bu, vacip olan derecedir.</p>
+    <p class="tr">Tevhidin tahkikinde müstehap olan derece ise, tevhidi tahkik eden insanların kendi aralarında en çok farklılaştıkları derecedir. Bu derece, kalpte Allah'tan başkasına yönelik herhangi bir yöneliş veya kastın bulunmamasıdır. Yani kalbin bütünüyle Allah'a yönelmiş olması ve onda Allah'tan başkasına herhangi bir iltifatın bulunmamasıdır.</p>
+    <p class="tr">Böylece kişinin konuşması Allah için, fiili ve ameli Allah için, hatta kalbinin hareketleri de Allah için olur.</p>
+    <p class="tr">Bazı ilim ehli bu müstehap dereceyi şöyle ifade etmiştir: 'Sakıncalı olana düşme korkusuyla, sakıncası olmayan şeyi de terk etmek.' Yani bu, kalbin amellerinde, dilin amellerinde ve azaların amellerinde geçerlidir."</p>
+    <p class="kaynak">📚 et-Temhîd li-Şerhi Kitâbi't-Tevhîd, s. 33.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">7</span>Kemâlu't-Tevhîdi'l-Mustehab nasıl eksilir?</h3>
+
+  <p>Kemâlu't-Tevhîdi'l-Mustehab'a işaret eden en önemli hadislerden biri, yetmiş bin kişinin hesapsız ve azapsız olarak cennete girmesi hadisidir.</p>
+
+  <p>İbn Abbâs radıyallahu anhumâ'dan rivayet edildiğine göre Resûlullah <span class="sav">ﷺ</span> şöyle buyurdu:</p>
+
+  <div class="blok hadis">
+    <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+    <p class="ar">«يَدْخُلُ الْجَنَّةَ مِنْ أُمَّتِي سَبْعُونَ أَلْفًا بِغَيْرِ حِسَابٍ»</p>
+    <p class="tr">"Ümmetimden yetmiş bin kişi hesapsız olarak cennete girecektir."</p>
+    <p class="kaynak">📚 Buhârî, 6472; Muslim, 220.</p>
+  </div>
+
+  <p>Onların vasıflarını da şöyle açıklamıştır:</p>
+
+  <div class="blok hadis">
+    <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+    <p class="ar">«هُمُ الَّذِينَ لَا يَسْتَرْقُونَ، وَلَا يَتَطَيَّرُونَ، وَعَلَى رَبِّهِمْ يَتَوَكَّلُونَ»</p>
+    <p class="tr">"Onlar başkalarından rukye talep etmeyen, uğursuzluğa inanmayan ve Rablerine tevekkül eden kimselerdir."</p>
+    <p class="kaynak">📚 Buhârî, 6472; Muslim, 220.</p>
+  </div>
+
+  <p>Bazı rivayetlerde <span class="ar-ic" dir="rtl">«وَلَا يَكْتَوُونَ»</span>, yani "dağlama yoluyla tedavi olmazlar" ifadesi de geçmektedir.</p>
+
+  <p>Bu hadis, tevhidin tahkiki ve Allah'a tevekkülün kemali konusunda zikredilen en önemli delillerden biridir. Nitekim Kitâbu't-Tevhîd'de bu hadis, "Tevhidi tahkik eden kimsenin hesapsız olarak cennete girmesi" başlığı altında zikredilmiştir.</p>
+
+  <h4 class="kisim">Kemâlu't-Tevhîdi'l-Mustehab nasıl eksilir?</h4>
+
+  <ol class="sayili">
+    <li><strong>Mubahlarla gereğinden fazla meşgul olmak.</strong> Aslen helal ve mubah olan şeylerle aşırı derecede meşgul olmak, kulun daha faziletli amellerden geri kalmasına sebep olabilir. Sürekli gezmek, gereğinden fazla yemek, fazla uyumak ve benzeri şeyler buna örnek verilebilir.</li>
+    <li><strong>Sünnet ve müstehap amelleri terk etmek.</strong> Kul farzlarını yerine getirse bile, sünnet ve nafile amelleri terk ettikçe tevhidin müstehap olan kemalinden elde edeceği derece azalır.</li>
+    <li><strong>Allah'a iman ve yakînin zayıf olması.</strong> Kulun Allah'a olan imanı, güveni, tevekkülü ve yakîni ne kadar kuvvetli olursa, kalbinin Allah'a bağlılığı da o kadar kuvvetli olur. Yakînin zayıflaması ise bu kemali eksiltir.</li>
+    <li><strong>Allah'ın isim ve sıfatları üzerinde tedebbürün az olması.</strong> Kul Allah'ın isimlerini ve sıfatlarını öğrendikçe ve onların manaları üzerinde düşündükçe Allah'a olan marifeti, sevgisi, korkusu, ümidi ve tevekkülü artar. Bunlar üzerinde az düşünmek ise kalbin Allah'a olan bağlılığının kemalini azaltır.</li>
+    <li><strong>Nefis muhasebesinin az olması ve kalp amellerine yeterince dikkat edilmemesi.</strong> Kul; ihlâsını, tevekkülünü, Allah sevgisini, korkusunu, ümidini ve niyetini sürekli kontrol etmelidir. Kalp amelleri konusunda nefis muhasebesinin zayıf olması, tevhidin müstehap olan kemalinin eksilmesine sebep olur.</li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">8</span>Tevhidin erkânları</h3>
+
+  <p>Tevhidin erkânları, "Lâ ilâhe illallah" kelimesinin erkânlarıyla aynıdır. Bunlar iki tanedir:</p>
+
+  <h4 class="kisim"><span class="no">1</span><span>Nefiy <span class="lafz-ar" dir="rtl">النَّفْيُ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Allah'tan başka ibadet edilen bütün bâtıl ilahları reddetmektir. Bu, küfr bi't-tâğût <span class="ar-ic" dir="rtl">(الْكُفْرُ بِالطَّاغُوتِ)</span> ile gerçekleşir.</p>
+    <div class="lafz">
+      <span class="ar-buyuk" dir="rtl">لَا إِلٰهَ</span>
+      <span class="lafz-tr">"Hiçbir ilah yoktur…"</span>
+    </div>
+    <p>Yani Allah'tan başka ibadeti hak eden hiçbir varlık yoktur.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>İsbât <span class="lafz-ar" dir="rtl">الْإِثْبَاتُ</span></span></h4>
+  <div class="kisim-govde">
+    <p>İbadetin yalnızca Allah'a has olduğunu kabul ve ikrar etmektir.</p>
+    <div class="lafz">
+      <span class="ar-buyuk" dir="rtl">إِلَّا اللَّهُ</span>
+      <span class="lafz-tr">"…Allah'tan başka."</span>
+    </div>
+    <p>Yani tevhîdu'l-ulûhiyyeyi yalnızca Allah'a tahsis etmektir:</p>
+    <div class="lafz">
+      <span class="ar-buyuk" dir="rtl">تَوْحِيدُ الْأُلُوهِيَّةِ لِلَّهِ وَحْدَهُ لَا شَرِيكَ لَهُ</span>
+      <span class="lafz-tr">"Ulûhiyet tevhidi yalnızca Allah'a aittir; O'nun hiçbir ortağı yoktur."</span>
+    </div>
+  </div>
+
+  <p class="vurgu">Dolayısıyla tevhid iki temel rükün üzerine kuruludur: nefiy ve isbât <span class="ar-ic" dir="rtl">(النَّفْيُ وَالْإِثْبَاتُ)</span>.</p>
+
+  <p>Birincisi, Allah'tan başka ibadet edilen bütün bâtıl ilahları reddetmek; ikincisi ise ibadeti yalnızca Allah'a tahsis etmektir.</p>
+
+
+  <h3 class="altbolum"><span class="no">9</span>Tevhide zarar veren veya onu ortadan kaldıran ameller</h3>
+
+  <p>Tevhide zarar veren veya onu ortadan kaldıran ameller üç kısma ayrılır:</p>
+
+  <h4 class="kisim"><span class="no">1</span><span>Büyük şirk ve büyük küfür <span class="lafz-ar" dir="rtl">الشِّرْكُ الْأَكْبَرُ وَالْكُفْرُ الْأَكْبَرُ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Büyük şirk ve büyük küfür, tevhidin aslını <span class="ar-ic" dir="rtl">(أَصْلُ التَّوْحِيدِ)</span> ortadan kaldırır. Yani bunlar tevhidin yalnızca kemalini eksiltmez, bilakis tevhidin aslını bozar.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Küçük şirk, bid'atlar ve masiyetler <span class="lafz-ar" dir="rtl">الشِّرْكُ الْأَصْغَرُ وَالْبِدَعُ وَالْمَعَاصِي</span></span></h4>
+  <div class="kisim-govde">
+    <p>Küçük şirk, bid'atlar ve masiyetler tevhidin aslını ortadan kaldırmaz; fakat tevhidin vacip olan kemalini <span class="ar-ic" dir="rtl">(كَمَالُ التَّوْحِيدِ الْوَاجِبُ)</span> eksiltir.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Mekruhlar <span class="lafz-ar" dir="rtl">الْمَكْرُوهَاتُ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Mekruhlara düşmek, tevhidin müstehap olan kemalini <span class="ar-ic" dir="rtl">(كَمَالُ التَّوْحِيدِ الْمُسْتَحَبُّ)</span> eksiltir.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">10</span>Bütün bid'atlar tevhidi kökünden iptal eder mi?</h3>
+
+  <p>Hayır. Bid'atların çeşitleri vardır.</p>
+
+  <h4 class="kisim"><span class="no">1</span><span>Şirk olan bid'at <span class="lafz-ar" dir="rtl">الْبِدْعَةُ الشِّرْكِيَّةُ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Bu tür bid'atlar tevhidi kökünden ortadan kaldırır. Ölülere dua etmek ve onlardan yardım dilemek buna örnektir.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Şirk ve küfür olmayan bid'at <span class="lafz-ar" dir="rtl">الْبِدْعَةُ غَيْرُ الشِّرْكِيَّةِ وَالْكُفْرِيَّةِ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Bu tür bid'atlar tevhidin vacip olan kemalini eksiltir, fakat tevhidi kökünden ortadan kaldırmaz. Mevlid ve Miraç kutlamaları ile mezarlar üzerine kubbeler yapmak buna örnektir.</p>
+    <p>Bazı bid'atlar da tevhidin müstehap olan kemalini eksiltir. Mesela şer'î olan bir zikri, delil olmaksızın özel bir mekâna veya özel bir zamana tahsis etmek buna örnektir. Böyle bir tahsis bid'at olur ve tevhidin müstehap olan kemalini eksiltir.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">11</span>Tevhidi tahkik etmek için üç şeyi yerine getirmemiz gerekir</h3>
+
+  <p>İbn Useymîn rahimehullah, el-Kavlu'l-Mufîd alâ Kitâbi't-Tevhîd adlı eserinde şöyle der:</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">İbn Useymîn rahimehullah (v. 1421)</span>
+    <p class="tr">"Tevhidi tahkik etmek, onu şirkten arındırmaktır. Bu da ancak üç şeyle gerçekleşir:</p>
+    <p class="tr"><strong>Birincisi: İlim.</strong> Bir şeyi bilmeden önce onu tahkik etmen mümkün değildir. Allah Teâlâ şöyle buyurmuştur: {Bil ki Allah'tan başka ibadete layık hiçbir ilah yoktur.} (Muhammed, 19)</p>
+    <p class="tr"><strong>İkincisi: İtikad.</strong> Bir şeyi bilir fakat ona inanmaz ve kibirlenirsen, tevhidi tahkik etmiş olmazsın. Allah Teâlâ kâfirler hakkında şöyle buyurmuştur: {Bütün ilahları tek bir ilah mı yaptı? Gerçekten bu çok şaşılacak bir şeydir.} (Sâd, 5) Onlar, ulûhiyette Allah'ın tek olduğuna inanmadılar.</p>
+    <p class="tr"><strong>Üçüncüsü: İnkıyad.</strong> Bilir ve inanır, fakat boyun eğmezsen tevhidi tahkik etmiş olmazsın. Allah Teâlâ şöyle buyurmuştur: {Onlara "Lâ ilâhe illallah" denildiğinde kibirlenirlerdi. Ve "Biz ilahlarımızı deli bir şair için mi terk edeceğiz?" derlerdi.} (Sâffât, 35-36)</p>
+    <p class="tr">Bu üç şey gerçekleştiğinde kişi tevhidi tahkik etmiş olur."</p>
+    <p class="kaynak">📚 el-Kavlu'l-Mufîd, 1/91.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">12</span>Tevhidin çeşit bakımından kısımları</h3>
+
+  <p>Çoğu âlim tevhidi üç kısma ayırır:</p>
+
+  <h4 class="kisim"><span class="no">1</span><span>Ulûhiyet tevhidi <span class="lafz-ar" dir="rtl">تَوْحِيدُ الْأُلُوهِيَّةِ</span></span></h4>
+  <div class="kisim-govde">
+    <p>İbâdet tevhidi de denilir. Yani Allah'ı ibadette birlemek ve O'na hiçbir şeyi ortak koşmamaktır. Bu, kulların fiilleriyle bağlantılıdır.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Rubûbiyet tevhidi <span class="lafz-ar" dir="rtl">تَوْحِيدُ الرُّبُوبِيَّةِ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Allah'ın yaratmada, mülkte, tedbirde ve bütün fiillerinde tek olduğuna iman etmektir. Bu, Allah'ın fiilleriyle bağlantılıdır.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Esmâ ve sıfât tevhidi <span class="lafz-ar" dir="rtl">تَوْحِيدُ الْأَسْمَاءِ وَالصِّفَاتِ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Allah'ın ve Resûlü'nün <span class="sav">ﷺ</span> Allah hakkında ispat ettiği isim ve sıfatları tahrifsiz, ta'tîlsiz, tekyifsiz ve temsilsiz olarak ispat etmektir.</p>
+  </div>
+
+  <div class="notkutu">
+    <span class="not-etiket">Not</span>
+    <ul class="madde">
+      <li>Bazı âlimler ikinci ve üçüncü kısmı birlikte <strong>et-Tevhîdu'l-İlmî el-Haberî</strong> <span class="ar-ic" dir="rtl">(التَّوْحِيدُ الْعِلْمِيُّ الْخَبَرِيُّ)</span> olarak isimlendirirler. Çünkü bunlar Allah hakkında bilip iman ettiğimiz ve ispat ettiğimiz hususlardır.</li>
+      <li>Bazı âlimler dördüncü bir çeşit olarak <strong>Mutâba'a tevhidi</strong> <span class="ar-ic" dir="rtl">(تَوْحِيدُ الْمُتَابَعَةِ)</span>, yani tâbi olma tevhidini zikretmişlerdir. Ancak râcih olan görüşe göre bu, ayrı bir kısım olmayıp Ulûhiyet tevhidi kapsamına girer.</li>
+      <li>Bazı kişiler ise <strong>Hâkimiyet tevhidi</strong> <span class="ar-ic" dir="rtl">(تَوْحِيدُ الْحَاكِمِيَّةِ)</span>, yani hâkimiyet tevhidini bağımsız bir kısım olarak zikrederler. Ancak bu doğru değildir. Çünkü hâkimiyet meselesi zaten tevhidin üç kısmının kapsamına girer:
+        <ul class="madde">
+          <li>Ulûhiyet tevhidi kapsamına girer, çünkü biz Allah'ın hükmüne tâbi olur ve O'nun hükmüyle hükmederiz.</li>
+          <li>Rubûbiyet tevhidi kapsamına girer, çünkü hüküm koyma ve hükmetme Allah'a aittir.</li>
+          <li>Esmâ ve sıfât tevhidi kapsamına girer, çünkü Allah'ın el-Hâkim <span class="ar-ic" dir="rtl">(الْحَاكِمُ)</span> ismi vardır.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">13</span>Tevhidin üç kısmı Kur'ân'ın bir âyetinde zikredilmiştir</h3>
+
+  <p>Allah Teâlâ şöyle buyurur:</p>
+
+  <div class="blok ayet">
+    <span class="soyleyen">Meryem Sûresi, 65. âyet</span>
+    <p class="ar">﴿رَبُّ السَّمَاوَاتِ وَالْأَرْضِ وَمَا بَيْنَهُمَا فَاعْبُدْهُ وَاصْطَبِرْ لِعِبَادَتِهِ هَلْ تَعْلَمُ لَهُ سَمِيًّا﴾</p>
+    <p class="tr">"Göklerin, yerin ve ikisi arasındakilerin Rabbidir. O hâlde yalnızca O'na ibadet et ve O'na ibadette sabırlı ol. O'nun bir benzerini biliyor musun?"</p>
+    <p class="kaynak">📚 Meryem, 65.</p>
+  </div>
+
+  <p>Bu âyette tevhidin üç kısmı bulunmaktadır:</p>
+
+  <ol class="sayili">
+    <li><strong>Rubûbiyet tevhidi</strong>
+      <div class="lafz">
+        <span class="ar-buyuk" dir="rtl">رَبُّ السَّمَاوَاتِ وَالْأَرْضِ وَمَا بَيْنَهُمَا</span>
+        <span class="lafz-tr">"Göklerin, yerin ve ikisi arasındakilerin Rabbidir."</span>
+      </div>
+    </li>
+    <li><strong>Ulûhiyet tevhidi</strong>
+      <div class="lafz">
+        <span class="ar-buyuk" dir="rtl">فَاعْبُدْهُ وَاصْطَبِرْ لِعِبَادَتِهِ</span>
+        <span class="lafz-tr">"O hâlde yalnızca O'na ibadet et ve O'na ibadette sabırlı ol."</span>
+      </div>
+    </li>
+    <li><strong>Esmâ ve sıfât tevhidi</strong>
+      <div class="lafz">
+        <span class="ar-buyuk" dir="rtl">هَلْ تَعْلَمُ لَهُ سَمِيًّا</span>
+        <span class="lafz-tr">"O'nun bir benzerini biliyor musun?"</span>
+      </div>
+    </li>
+  </ol>
+
+  <p>İmam Kurtubî tefsirinde buna işaret etmiştir. (Tefsîru'l-Kurtubî, 11/130)</p>
+
+  <p>Bu âyetin dışında Fâtiha sûresinde de tevhidin üç kısmı bulunmaktadır.</p>
+
+
+  <h3 class="altbolum"><span class="no">14</span>Rubûbiyet tevhidi ile ulûhiyet tevhidi arasındaki farklar</h3>
+
+  <ol class="sayili">
+    <li>Rubûbiyet tevhidi Allah'ın fiilleriyle alakalıdır: yaratmak, rızık vermek ve kâinatı düzenlemek gibi. Ulûhiyet tevhidi ise kulların fiilleriyle alakalıdır: namaz kılmak, Allah'tan korkmak ve Allah'a tevekkül etmek gibi.</li>
+    <li>Ulûhiyet tevhidi, rubûbiyet tevhidini içerir. Rubûbiyet tevhidi ise ulûhiyet tevhidini gerektirir. Yani Allah'a tek olarak ibadet eden kişi, O'nun tek Rab, yaratıcı, rızık verici ve kâinatı idare eden olduğuna da iman eder. Allah'ın tek yaratıcı ve rızık verici olduğuna iman eden kimsenin ise ibadetlerini yalnızca O'na tahsis etmesi gerekir.</li>
+    <li>Rubûbiyet tevhidi itikad ve inanç ile bağlantılıdır. Ulûhiyet tevhidi ise buna ilave olarak amel ile bağlantılıdır.</li>
+    <li>Rubûbiyet tevhidinde marifet, yani bilme ve ispat vardır. Ulûhiyet tevhidinde ise irade, talep ve kast vardır. Bu yüzden ulûhiyet tevhidi bazen <strong>irade ve talep tevhidi</strong> <span class="ar-ic" dir="rtl">(تَوْحِيدُ الْإِرَادَةِ وَالطَّلَبِ)</span> olarak da isimlendirilir.</li>
+    <li>Rubûbiyet tevhidi; yaratma, rızık verme ve kâinatı idare etme gibi kevnî-kaderî işlerle bağlantılıdır. Ulûhiyet tevhidi ise şer'î-emrî işlerle, yani Allah'ın emirlerine kulluk ve itaat etmekle bağlantılıdır.</li>
+    <li>Rubûbiyet, <strong>Rab</strong> <span class="ar-ic" dir="rtl">(الرَّبُّ)</span> kelimesinden türemiştir. Rab; sahip, efendi, terbiye eden ve idare eden manalarına gelir. Ulûhiyet ise <strong>ilâh</strong> <span class="ar-ic" dir="rtl">(الْإِلَٰهُ)</span> kelimesinden türemiştir. İlâh, kendisine ibadet edilen ma'bûd demektir.</li>
+    <li>Mekkeli müşrikler genel olarak rubûbiyet tevhidini ikrar ediyorlardı, fakat ulûhiyet tevhidini kabul etmiyorlardı. Bu sebeple yalnızca rubûbiyeti ikrar etmeleri onları İslâm'a sokmadı.</li>
+    <li>Ulûhiyet tevhidi ile rubûbiyet tevhidi arasında şu ilişki vardır: iki kelime aynı yerde birlikte zikredilirse, her birinin kendine mahsus bir manası olur. Ayrı ayrı zikredildiklerinde ise birinin manası diğerini de kapsayabilir.
+      <p>Örnek olarak Allah Teâlâ şöyle buyurur:</p>
+      <div class="blok ayet">
+        <span class="soyleyen">Nâs Sûresi, 1-3. âyetler</span>
+        <p class="ar">﴿قُلْ أَعُوذُ بِرَبِّ النَّاسِ مَلِكِ النَّاسِ إِلَٰهِ النَّاسِ﴾</p>
+        <p class="tr">"De ki: İnsanların Rabbine, insanların Melikine, insanların İlâhına sığınırım."</p>
+        <p class="kaynak">📚 Nâs, 1-3.</p>
+      </div>
+      <p>Burada "Rab" ve "İlâh" kelimeleri birlikte zikredildiği için manaları birbirinden ayrıdır.</p>
+      <p>Allah Teâlâ başka bir âyette şöyle buyurur:</p>
+      <div class="blok ayet">
+        <span class="soyleyen">Tevbe Sûresi, 31. âyet</span>
+        <p class="ar">﴿اتَّخَذُوا أَحْبَارَهُمْ وَرُهْبَانَهُمْ أَرْبَابًا مِنْ دُونِ اللَّهِ﴾</p>
+        <p class="tr">"Onlar, Allah'ı bırakıp âlimlerini ve rahiplerini rabler edindiler."</p>
+        <p class="kaynak">📚 Tevbe, 31.</p>
+      </div>
+      <p>Burada "erbâb" kelimesi yalnızca rubûbiyet manasını değil, ibadet ve itaatte onları Allah'a ortak koşmaları sebebiyle ulûhiyet manasını da içermektedir.</p>
+    </li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">15</span>Rubûbiyetin lügavî tarifi</h3>
+
+  <p>Büyük lügat âlimlerinden İmam el-Ezherî, Tehzîbu'l-Luğa adlı eserinde İbnu'l-Enbârî'den şöyle nakleder:</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">İbnu'l-Enbârî rahimehullah (v. 328)</span>
+    <p class="ar">«الرَّبُّ يَنْقَسِمُ عَلَى ثَلَاثَةِ أَقْسَامٍ: يَكُونُ الرَّبُّ الْمَالِكَ، وَيَكُونُ الرَّبُّ السَّيِّدَ الْمُطَاعَ، قَالَ اللَّهُ تَعَالَى: ﴿فَيَسْقِي رَبَّهُ خَمْرًا﴾ أَيْ سَيِّدَهُ، وَيَكُونُ الرَّبُّ الْمُصْلِحَ، رَبَّ الشَّيْءَ إِذَا أَصْلَحَهُ»</p>
+    <p class="tr">"Rab kelimesi üç kısma ayrılır:</p>
+    <p class="tr"><strong>1. el-Mâlik</strong> <span class="ar-ic" dir="rtl">(الْمَالِكُ)</span>: Malik ve sahip olan.</p>
+    <p class="tr"><strong>2. es-Seyyidu'l-Mutâ'</strong> <span class="ar-ic" dir="rtl">(السَّيِّدُ الْمُطَاعُ)</span>: Kendisine itaat edilen efendi. Allah Teâlâ, {Efendisine şarap sunacak} (Yûsuf, 41) buyurmuştur. Buradaki 'Rab', 'efendi' manasındadır.</p>
+    <p class="tr"><strong>3. el-Muslih</strong> <span class="ar-ic" dir="rtl">(الْمُصْلِحُ)</span>: Islah eden, düzelten ve düzene koyan. 'Bir şeyi rabbe etti' denildiğinde, 'onu ıslah etti' manasına gelir."</p>
+    <p class="kaynak">📚 Tehzîbu'l-Luğa, "rab" maddesi.</p>
+  </div>
+
+  <p>Dolayısıyla "Rab" kelimesinin lügatte üç temel manası vardır: mâlik, kendisine itaat edilen seyyid ve muslih.</p>
+
+  <p>Bunun delilleri de naslarda görülür:</p>
+
+  <ol class="sayili">
+    <li><strong>el-Mâlik</strong> <span class="ar-ic" dir="rtl">(الْمَالِكُ)</span>, sahip olan: Resûlullah <span class="sav">ﷺ</span> kaybolmuş deve hakkında şöyle buyurmuştur:
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+        <p class="ar">«حَتَّى يَلْقَاهَا رَبُّهَا»</p>
+        <p class="tr">"Sonunda sahibi onu buluncaya kadar."</p>
+        <p class="kaynak">📚 Buhârî, 2295; Muslim, 1722.</p>
+      </div>
+      <p>Buradaki "rabbuhâ" kelimesi, devenin sahibi ve mâliki manasındadır.</p>
+    </li>
+    <li><strong>es-Seyyidu'l-Mutâ'</strong> <span class="ar-ic" dir="rtl">(السَّيِّدُ الْمُطَاعُ)</span>, kendisine itaat edilen efendi: Yûsuf aleyhisselâm, hapisten çıkacak olan kişiye şöyle dedi:
+      <div class="blok ayet">
+        <span class="soyleyen">Yûsuf Sûresi, 42. âyet</span>
+        <p class="ar">﴿اذْكُرْنِي عِنْدَ رَبِّكَ﴾</p>
+        <p class="tr">"Beni efendinin yanında an."</p>
+        <p class="kaynak">📚 Yûsuf, 42.</p>
+      </div>
+      <p>Buradaki "rabbike" kelimesi, onun efendisi ve hükümdarı manasındadır.</p>
+    </li>
+    <li><strong>el-Muslih</strong> <span class="ar-ic" dir="rtl">(الْمُصْلِحُ)</span>, ıslah eden ve terbiye eden: Allah Teâlâ anne ve baba hakkında şöyle buyurur:
+      <div class="blok ayet">
+        <span class="soyleyen">İsrâ Sûresi, 24. âyet</span>
+        <p class="ar">﴿وَقُلْ رَبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا﴾</p>
+        <p class="tr">"De ki: Rabbim! Küçüklüğümde beni terbiye ettikleri gibi sen de onlara merhamet et."</p>
+        <p class="kaynak">📚 İsrâ, 24.</p>
+      </div>
+      <p>Buradaki "rabbeyânî", terbiye etmek, yetiştirmek ve ıslah etmek manasına gelir.</p>
+    </li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">16</span>Rubûbiyet tevhidinin çeşitleri</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Umumî rubûbiyet <span class="lafz-ar" dir="rtl">الرُّبُوبِيَّةُ الْعَامَّةُ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Allah'ın bütün mahlûkatını, kâfir veya Müslüman ayrımı olmaksızın, yaratması, rızıklandırması, idare etmesi ve onları yaratılış gayelerine uygun şekilde terbiye etmesidir.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Müminlere özel rubûbiyet <span class="lafz-ar" dir="rtl">الرُّبُوبِيَّةُ الْخَاصَّةُ بِالْمُؤْمِنِينَ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Allah'ın müminlere hidayet vermesi, onları itaate muvaffak kılması ve salih amelleri yerine getirmeleri konusunda onlara yardım etmesidir.</p>
+    <p>Buna şu hadis örnek verilebilir. Resûlullah <span class="sav">ﷺ</span>, Muâz bin Cebel radıyallahu anh'a her namazın ardından şu duayı okumayı tavsiye etmiştir:</p>
+    <div class="blok hadis">
+      <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+      <p class="ar">«اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ، وَشُكْرِكَ، وَحُسْنِ عِبَادَتِكَ»</p>
+      <p class="tr">"Allah'ım! Seni zikretmem, Sana şükretmem ve Sana güzel bir şekilde ibadet etmem konusunda bana yardım et."</p>
+      <p class="kaynak">📚 Ebû Dâvûd, 1522.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Seçkin kullara özel rubûbiyet <span class="lafz-ar" dir="rtl">رُبُوبِيَّةُ خَاصَّةِ الْخَاصَّةِ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Bu, nebîler ve resûller için olan özel rubûbiyettir. Allah'ın onları sevmesi, seçmesi, onlara vahyetmesi, risâlet görevlerinde onlara yardım etmesi ve görevlerini tamamlayıncaya kadar onları koruması buna dahildir.</p>
+    <p>Allah Teâlâ nebîler hakkında şöyle buyurur:</p>
+    <div class="blok ayet">
+      <span class="soyleyen">En'âm Sûresi, 86-87. âyetler</span>
+      <p class="ar">﴿وَكُلًّا فَضَّلْنَا عَلَى الْعَالَمِينَ وَمِنْ آبَائِهِمْ وَذُرِّيَّاتِهِمْ وَإِخْوَانِهِمْ وَاجْتَبَيْنَاهُمْ وَهَدَيْنَاهُمْ إِلَىٰ صِرَاطٍ مُسْتَقِيمٍ﴾</p>
+      <p class="tr">"Onların her birini âlemlere üstün kıldık. Babalarından, soylarından ve kardeşlerinden de bazılarını seçtik ve onları dosdoğru yola ilettik."</p>
+      <p class="kaynak">📚 En'âm, 86-87.</p>
+    </div>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">17</span>Rubûbiyet tevhidinin lâzımları nelerdir?</h3>
+
+  <ol class="sayili">
+    <li>Ulûhiyet tevhidini gerektirir. Rubûbiyeti ikrar eden kişinin mutlaka Allah'a tek olarak ibadet etmesi gerekir.</li>
+    <li>Allah'ın sevmediklerine düşman olmak ve Allah'ın sevdiklerini dost edinmek gerekir.</li>
+    <li>Yalnızca Allah'ın indirdiğiyle hükmetmek gerekir.</li>
+    <li>Kaza ve kadere iman etmek, Allah'ın takdirine karşı sabırlı olmak ve razı olmak gerekir.</li>
+    <li>Allah'a itaat etmek, O'nu sevmek, O'nu tazim ve iclâl etmek ve günahları terk etmek gerekir.</li>
+    <li>Allah'ın Resûlü'ne <span class="sav">ﷺ</span> tâbi olmak ve ona boyun eğmek gerekir.</li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">18</span>Mekkeli müşrikler rubûbiyet tevhidini genel olarak kabul ediyorlardı</h3>
+
+  <p>Mekkeli müşrikler genel olarak rubûbiyet tevhidini ikrar ediyorlardı. Ancak buna rağmen rubûbiyet konusunda bazı bozuk inançları da vardı.</p>
+
+  <p>Buna bazı örnekler:</p>
+
+  <ol class="sayili">
+    <li>Öldükten sonra dirilmeyi inkâr ediyorlardı.</li>
+    <li>İlahlarının fayda ve zarar verebildiğine itikat ediyorlardı.</li>
+    <li>Allah'ın hükmüyle hükmetmiyorlardı.</li>
+    <li>Allah'ın helal ve haram kıldığı hükümlere uymuyorlardı.</li>
+    <li>Rubûbiyet tevhidinin gerektirdiği ulûhiyet tevhidini yerine getirmiyorlardı. Yani Allah'ın Rab olduğunu ikrar etmelerine rağmen ibadeti yalnızca O'na tahsis etmiyorlardı.</li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">19</span>Ulûhiyet tevhidine neden ibâdet tevhidi de denilir?</h3>
+
+  <p>Bu tevhid, Allah'a nispet edildiğinde <strong>ulûhiyet tevhidi</strong> <span class="ar-ic" dir="rtl">(تَوْحِيدُ الْأُلُوهِيَّةِ)</span> olarak isimlendirilir. Çünkü Allah, kulların kendisine teabbud ve teelluh ettiği, yani ibadet ettiği ve kullukta yöneldiği tek ilâhtır.</p>
+
+  <p>Aynı tevhid, kulun fiiline nispet edildiğinde ise <strong>ibâdet tevhidi</strong> <span class="ar-ic" dir="rtl">(تَوْحِيدُ الْعِبَادَةِ)</span> olarak isimlendirilir. Çünkü kul, bütün ibadetlerini yalnızca Allah'a tahsis eder ve ibadette O'na hiçbir şeyi ortak koşmaz.</p>
+
+  <p>Dolayısıyla ulûhiyet tevhidi ile ibâdet tevhidi aynı tevhidi ifade eder. Birincisi Allah'a, ikincisi ise kulun ibadet fiiline nispet edilerek isimlendirilmiştir.</p>
+
+
+  <h3 class="altbolum"><span class="no">20</span>Ulûhiyet tevhidine örnek ibadetler</h3>
+
+  <p>Ulûhiyet tevhidi, kulların ibadetlerini yalnızca Allah'a tahsis etmeleridir. Buna dair örnekler çoktur:</p>
+
+  <ul class="ikili">
+    <li><strong>Havf</strong> <span class="ar-ic" dir="rtl">(الْخَوْفُ)</span>: Korku</li>
+    <li><strong>Hudû'</strong> <span class="ar-ic" dir="rtl">(الْخُضُوعُ)</span>: Boyun eğmek ve alçalmak</li>
+    <li><strong>Tuma'nînet</strong> <span class="ar-ic" dir="rtl">(الطُّمَأْنِينَةُ)</span>: Kalbin huzur ve sükûnet bulması</li>
+    <li><strong>İstikāmet lillâh</strong> <span class="ar-ic" dir="rtl">(الِاسْتِقَامَةُ لِلَّهِ)</span>: Allah için dosdoğru olmak</li>
+    <li><strong>Meth</strong> <span class="ar-ic" dir="rtl">(الْمَدْحُ)</span>: Övmek</li>
+    <li><strong>Hamd</strong> <span class="ar-ic" dir="rtl">(الْحَمْدُ)</span>: Hamdetmek</li>
+    <li><strong>Senâ</strong> <span class="ar-ic" dir="rtl">(الثَّنَاءُ)</span>: Övgüde bulunmak</li>
+    <li><strong>Haşyet</strong> <span class="ar-ic" dir="rtl">(الْخَشْيَةُ)</span>: Allah'tan derin bir saygı ve korku ile korkmak</li>
+    <li><strong>Şükür</strong> <span class="ar-ic" dir="rtl">(الشُّكْرُ)</span>: Şükretmek</li>
+    <li><strong>İstiğfar</strong> <span class="ar-ic" dir="rtl">(الِاسْتِغْفَارُ)</span>: Bağışlanma dilemek</li>
+    <li><strong>Kıyâm</strong> <span class="ar-ic" dir="rtl">(الْقِيَامُ)</span>: Namazda ayakta durmak</li>
+    <li><strong>Secde</strong> <span class="ar-ic" dir="rtl">(السُّجُودُ)</span>: Secde etmek</li>
+    <li><strong>İnkıyad</strong> <span class="ar-ic" dir="rtl">(الِانْقِيَادُ)</span>: Allah'a boyun eğmek ve teslim olmak</li>
+    <li><strong>Nezir</strong> <span class="ar-ic" dir="rtl">(النَّذْرُ)</span>: Adakta bulunmak</li>
+    <li><strong>Sıyâm</strong> <span class="ar-ic" dir="rtl">(الصِّيَامُ)</span>: Oruç tutmak</li>
+    <li><strong>İstiâne</strong> <span class="ar-ic" dir="rtl">(الِاسْتِعَانَةُ)</span>: Yardım istemek</li>
+    <li><strong>Duâ</strong> <span class="ar-ic" dir="rtl">(الدُّعَاءُ)</span>: Dua etmek</li>
+    <li><strong>İstiâze</strong> <span class="ar-ic" dir="rtl">(الِاسْتِعَاذَةُ)</span>: Sığınmak</li>
+    <li><strong>Sadaka</strong> <span class="ar-ic" dir="rtl">(الصَّدَقَةُ)</span>: Sadaka vermek</li>
+    <li><strong>Tahâkum</strong> <span class="ar-ic" dir="rtl">(التَّحَاكُمُ)</span>: Hüküm için başvurmak</li>
+    <li><strong>Sabır</strong> <span class="ar-ic" dir="rtl">(الصَّبْرُ)</span>: Sabretmek</li>
+    <li><strong>Yakîn</strong> <span class="ar-ic" dir="rtl">(الْيَقِينُ)</span>: Kesin iman ve şüpheden uzak inanç</li>
+    <li><strong>Tevbe</strong> <span class="ar-ic" dir="rtl">(التَّوْبَةُ)</span>: Allah'a tevbe etmek</li>
+  </ul>
+
+  <p>Bunların hepsi ulûhiyet tevhidine dahildir.</p>
+
+  <p>Ulûhiyet tevhidi yalnızca namaz, dua veya kurban gibi belirli ibadetlerle sınırlı değildir. Bilakis kulun hayatının bütün alanlarını kapsar. Kul, zâhirî ve bâtınî bütün ibadetlerini yalnızca Allah'a tahsis eder.</p>
+
+
+  <h3 class="altbolum"><span class="no">21</span>Ulûhiyet tevhidine iman etmenin lâzımları</h3>
+
+  <ol class="sayili">
+    <li>Allah'ı bütün açık ve gizli ibadetlerde birlemek.</li>
+    <li>Dini yalnızca Allah'a has kılmak <span class="ar-ic" dir="rtl">(إِخْلَاصُ الدِّينِ لِلَّهِ)</span>. Yani ibadette bid'at ve riya olmamalıdır.</li>
+    <li>Bütün tâğutları inkâr etmek, şirkten ve şirk ehlinden berî olmak.</li>
+    <li>Allah Teâlâ'ya karşı sevginin, zilletin ve hudû'un <span class="ar-ic" dir="rtl">(الْخُضُوعُ)</span> kemalini gerçekleştirmek.
+      <p class="alt-tanim">Hudû', boyun eğmek ve teslim olmak demektir. Kul, Allah'ı en üstün sevgiyle sevmelidir. Bu sevgi sadece kalpte kalmamalı, kulun bedenini Allah'a itaate ve salih amellere sevk etmelidir.</p>
+    </li>
+    <li>Allah'ın emirlerini yerine getirmek ve yasaklarından kaçınmak. Kul bunları yaptığı ve Allah'a tamamen teslim olduğu takdirde gerçek kulluğu yerine getirmiş olur. Bunu yapmazsa kulluğunda eksikliği bulunan ve nasihat edilmesi gereken zayıf bir kul olur.</li>
+    <li>Resûlullah'a <span class="sav">ﷺ</span> ibadetlerde tâbi olmak ve onun yasakladığı şeylerden kaçınmak. Kişi kendi düşüncesine göre Allah'a ibadet edemez. Başarıyı istiyorsa Resûlullah'ın <span class="sav">ﷺ</span> ve sahâbenin takip ettiği yoldan gitmesi gerekir.</li>
+    <li>Müminleri Allah için sevmek, onlara destek olmak ve onlarla dostluk bağı kurmak.</li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">22</span>Eski âlimlerden kimler tevhidin üç kısmına işaret etmiştir?</h3>
+
+  <ol class="sayili">
+    <li><strong>Ebû Hanîfe</strong> (H. 150): <em>el-Fıkhu'l-Ebsat</em> <span class="ar-ic" dir="rtl">(الْفِقْهُ الْأَبْسَطُ)</span> adlı eserinde tevhidin bu üç kısmına işaret etmiştir.
+      <div class="blok alim">
+        <span class="soyleyen">Ebû Hanîfe rahimehullah</span>
+        <p class="ar">وَاللَّهُ تَعَالَى يُدْعَى مِنْ أَعْلَى لَا مِنْ أَسْفَلَ، لِأَنَّ الْأَسْفَلَ لَيْسَ مِنْ وَصْفِ الرُّبُوبِيَّةِ وَالْأُلُوهِيَّةِ فِي شَيْءٍ</p>
+        <p class="tr">"Allah Teâlâ yukarıdan çağrılır, aşağıdan değil. Çünkü aşağıda olmak, rubûbiyet ve ulûhiyet vasıflarından hiçbiriyle bağdaşmaz."</p>
+        <p class="kaynak">📚 Ebû Hanîfe, el-Fıkhu'l-Ebsat, s. 51. (eş-Şerhu'l-Muyesser neşrinde s. 135; bu neşirde <span class="ar-ic" dir="rtl">"لِأَنَّ الْأَسْفَلَ"</span> ziyadesi yer almaz.)</p>
+      </div>
+      <ul class="madde">
+        <li>"Yukarıdan çağrılır" sözü Allah'ın uluvv sıfatını ispat eder: <strong>esmâ ve sıfât tevhidi</strong>.</li>
+        <li>"Rubûbiyet vasfı" sözü: <strong>rubûbiyet tevhidi</strong>.</li>
+        <li>"Ulûhiyet vasfı" sözü: <strong>ulûhiyet tevhidi</strong>.</li>
+      </ul>
+    </li>
+    <li><strong>İbn Cerîr et-Taberî</strong> (H. 310): <span class="ar-ic" dir="rtl">﴿فَاعْلَمْ أَنَّهُ لَا إِلَٰهَ إِلَّا اللَّهُ﴾</span> âyetinin tefsirinde tevhidin bu kısımlarına işaret etmiştir.
+      <div class="blok alim">
+        <span class="soyleyen">İbn Cerîr et-Taberî rahimehullah</span>
+        <p class="ar">فَاعْلَمْ يَا مُحَمَّدُ أَنَّهُ لَا مَعْبُودَ تَنْبَغِي أَوْ تَصْلُحُ لَهُ الْأُلُوهَةُ، وَيَجُوزُ لَكَ وَلِلْخَلْقِ عِبَادَتُهُ، إِلَّا اللَّهُ الَّذِي هُوَ خَالِقُ الْخَلْقِ، وَمَالِكُ كُلِّ شَيْءٍ، يَدِينُ لَهُ بِالرُّبُوبِيَّةِ كُلُّ مَا دُونَهُ</p>
+        <p class="tr">"Ey Muhammed! Bil ki, ulûhiyetin kendisine yaraştığı ve senin de bütün mahlûkatın da ibadet etmesinin caiz olduğu hiçbir mabud yoktur; ancak mahlûkatı yaratan, her şeyin mâliki olan ve kendisinden başka her şeyin rubûbiyetini ikrar ederek boyun eğdiği Allah müstesna."</p>
+        <p class="kaynak">📚 Taberî, Câmiu'l-Beyân, 21/208 (Muhammed sûresi 19. âyetin tefsiri).</p>
+      </div>
+    </li>
+    <li><strong>Ebû Ca'fer et-Tahâvî</strong> (H. 321): Akîde metninde Allah'ın rubûbiyeti, ulûhiyeti ve isim ve sıfatlarıyla ilgili ifadeler kullanarak bu üç kısma işaret etmiştir.
+      <div class="blok alim">
+        <span class="soyleyen">Ebû Ca'fer et-Tahâvî rahimehullah</span>
+        <p class="ar">نَقُولُ فِي تَوْحِيدِ اللَّهِ مُعْتَقِدِينَ بِتَوْفِيقِ اللَّهِ: إِنَّ اللَّهَ وَاحِدٌ لَا شَرِيكَ لَهُ، وَلَا شَيْءَ مِثْلُهُ، وَلَا شَيْءَ يُعْجِزُهُ، وَلَا إِلَٰهَ غَيْرُهُ</p>
+        <p class="tr">"Allah'ın tevhidi hakkında, Allah'ın tevfîkine inanarak şöyle deriz: Allah birdir, O'nun ortağı yoktur; hiçbir şey O'nun benzeri değildir; hiçbir şey O'nu âciz bırakamaz; O'ndan başka ilâh da yoktur."</p>
+        <p class="kaynak">📚 Tahâvî, el-Akîdetu't-Tahâviyye, s. 31; İbn Ebi'l-İzz, Şerhu'l-Akîdeti't-Tahâviyye, 1/21.</p>
+      </div>
+      <ul class="madde">
+        <li>"Hiçbir şey O'nun benzeri değildir": <strong>esmâ ve sıfât tevhidi</strong>.</li>
+        <li>"Hiçbir şey O'nu âciz bırakamaz": <strong>rubûbiyet tevhidi</strong>.</li>
+        <li>"O'ndan başka ilâh yoktur": <strong>ulûhiyet tevhidi</strong>.</li>
+      </ul>
+    </li>
+    <li><strong>Ebû Mansûr el-Ezherî</strong> (H. 370): <em>Tehzîbu'l-Luğa</em> <span class="ar-ic" dir="rtl">(تَهْذِيبُ اللُّغَةِ)</span> adlı eserinde tevhidin bu kısımlarına işaret etmiştir.</li>
+    <li><strong>İbn Batta el-Ukberî</strong> (H. 387): <em>el-İbânetu'l-Kubrâ</em> <span class="ar-ic" dir="rtl">(الْإِبَانَةُ الْكُبْرَى)</span> adlı eserinde tevhidin bu kısımlarına işaret etmiştir.
+      <div class="blok alim">
+        <span class="soyleyen">İbn Batta el-Ukberî rahimehullah</span>
+        <p class="ar">وَذَلِكَ أَنَّ أَصْلَ الْإِيمَانِ بِاللَّهِ الَّذِي يَجِبُ عَلَى الْخَلْقِ اعْتِقَادُهُ فِي إِثْبَاتِ الْإِيمَانِ بِهِ ثَلَاثَةُ أَشْيَاءَ: أَحَدُهَا: أَنْ يَعْتَقِدَ الْعَبْدُ رَبَّانِيَّتَهُ، لِيَكُونَ بِذَلِكَ مُبَايِنًا لِمَذْهَبِ أَهْلِ التَّعْطِيلِ الَّذِينَ لَا يُثْبِتُونَ صَانِعًا. وَالثَّانِي: أَنْ يَعْتَقِدَ وَحْدَانِيَّتَهُ، لِيَكُونَ مُبَايِنًا بِذَلِكَ مَذَاهِبَ أَهْلِ الشِّرْكِ الَّذِينَ أَقَرُّوا بِالصَّانِعِ وَأَشْرَكُوا مَعَهُ فِي الْعِبَادَةِ غَيْرَهُ. وَالثَّالِثُ: أَنْ يَعْتَقِدَهُ مَوْصُوفًا بِالصِّفَاتِ الَّتِي لَا يَجُوزُ إِلَّا أَنْ يَكُونَ مَوْصُوفًا بِهَا مِنَ الْعِلْمِ وَالْقُدْرَةِ وَالْحِكْمَةِ وَسَائِرِ مَا وَصَفَ بِهِ نَفْسَهُ فِي كِتَابِهِ</p>
+        <p class="tr">"Şüphesiz ki kulların, Allah'a imanı ispat etme hususunda inanmaları vacip olan, Allah'a imanın aslı üç şeydir:</p>
+        <p class="tr"><strong>Birincisi:</strong> Kulun, O'nun Rab olduğuna inanmasıdır. Böylece bir yaratıcı kabul etmeyen ta'tîl ehlinin mezhebinden ayrılmış olur.</p>
+        <p class="tr"><strong>İkincisi:</strong> O'nun vahdâniyetine inanmasıdır. Böylece yaratıcıyı ikrar ettikleri hâlde ibadette O'na başkasını ortak koşan şirk ehlinin mezheplerinden ayrılmış olur.</p>
+        <p class="tr"><strong>Üçüncüsü:</strong> O'nu; ilim, kudret, hikmet ve kitabında kendisini nitelediği diğer bütün sıfatlarla (ki bunlarla nitelenmesinden başkası caiz değildir) muttasıf kabul etmesidir."</p>
+        <p class="kaynak">📚 İbn Batta, el-İbânetu'l-Kubrâ, 6/172-173 (bazı neşirlerde 2/172-173). Matbu nüshada <span class="ar-ic" dir="rtl">"آنِيَّتَهُ"</span> şeklinde olan kelime, yazma nüshada <span class="ar-ic" dir="rtl">"رَبَّانِيَّتَهُ"</span> şeklindedir ve doğru olan budur.</p>
+      </div>
+    </li>
+    <li><strong>İbn Mendeh</strong> (H. 395): <em>Kitâbu't-Tevhîd</em> <span class="ar-ic" dir="rtl">(كِتَابُ التَّوْحِيدِ)</span> adlı eserinde tevhidin bu kısımlarına işaret etmiştir. Kitabını, tevhidin üç kısmına göre düzenlemiş ve her kısım için müstakil bâblar açmıştır:
+      <div class="blok alim">
+        <span class="soyleyen">İbn Mendeh, Kitâbu't-Tevhîd — bâb başlıklarından örnekler</span>
+        <p class="ar">ذِكْرُ مَا وَصَفَ اللَّهُ عَزَّ وَجَلَّ بِهِ نَفْسَهُ وَدَلَّ عَلَى وَحْدَانِيَّتِهِ، وَأَنَّهُ أَحَدٌ صَمَدٌ لَمْ يَلِدْ وَلَمْ يُولَدْ وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ</p>
+        <p class="tr"><strong>Rubûbiyet tevhidi:</strong> "Allah azze ve celle'nin kendisini nitelediği ve vahdâniyetine delâlet eden şeylerin; O'nun Ahad ve Samed olduğunun, doğurmadığının, doğurulmadığının ve hiçbir dengi bulunmadığının zikri."</p>
+        <p class="ar">ذِكْرُ مَعْرِفَةِ اسْمِ اللَّهِ الْأَكْبَرِ الَّذِي تَسَمَّى بِهِ وَشَرَفِهِ عَلَى الْأَذْكَارِ كُلِّهَا</p>
+        <p class="tr"><strong>Ulûhiyet tevhidi:</strong> "Allah'ın kendisiyle isimlendiği en büyük isminin ve onun bütün zikirlere olan üstünlüğünün bilinmesinin zikri." — Bu bâbın altında Lâ ilâhe illallah ile ilgili hadisleri toplamıştır.</p>
+        <p class="ar">ذِكْرُ مَعْرِفَةِ صِفَاتِ اللَّهِ عَزَّ وَجَلَّ الَّتِي وَصَفَ بِهَا نَفْسَهُ وَأَنْزَلَ بِهَا كِتَابَهُ وَأَخْبَرَ بِهَا الرَّسُولُ ﷺ عَلَى سَبِيلِ الْوَصْفِ لِرَبِّهِ</p>
+        <p class="tr"><strong>Esmâ ve sıfât tevhidi:</strong> "Allah azze ve celle'nin, kendisini nitelediği, kitabını kendisiyle indirdiği ve Resûlün ﷺ Rabbini vasfetmek üzere haber verdiği sıfatlarının bilinmesinin zikri."</p>
+        <p class="kaynak">📚 İbn Mendeh, Kitâbu't-Tevhîd (thk. Alî b. Nâsır el-Fakîhî), rubûbiyet bâbları 1/61-116; ulûhiyet bâbları 2/14-46; esmâ ve sıfât bâbları 3/7 vd.</p>
+      </div>
+    </li>
+  </ol>
+
+  <p>Bu âlimler açıkça "Tevhid üç kısımdır" dememiş olsalar da, eserlerindeki açıklamalardan tevhidin rubûbiyet, ulûhiyet ve isim-sıfat yönlerini birbirinden ayırdıkları anlaşılmaktadır.</p>
+
+
+  <h3 class="altbolum"><span class="no">23</span>İbadetlerin kabul olması için şartlar nelerdir?</h3>
+
+  <ol class="sayili">
+    <li><strong>İhlâs ve tevhid:</strong> İbadetin yalnızca Allah için yapılması ve O'na hiçbir şeyin ortak koşulmaması. Allah Teâlâ şöyle buyurur:
+      <div class="blok ayet">
+        <span class="soyleyen">Beyyine Sûresi, 5. âyet</span>
+        <p class="ar">﴿وَمَا أُمِرُوا إِلَّا لِيَعْبُدُوا اللَّهَ مُخْلِصِينَ لَهُ الدِّينَ﴾</p>
+        <p class="tr">"Onlara ancak dini yalnızca Allah'a has kılarak O'na ibadet etmeleri emredildi."</p>
+        <p class="kaynak">📚 Beyyine, 5.</p>
+      </div>
+    </li>
+    <li><strong>el-Mutâba'a</strong> <span class="ar-ic" dir="rtl">(الْمُتَابَعَةُ)</span><strong>:</strong> İbadetin Resûlullah'ın <span class="sav">ﷺ</span> sünnetine uygun şekilde yapılması. Allah Teâlâ şöyle buyurur:
+      <div class="blok ayet">
+        <span class="soyleyen">Haşr Sûresi, 7. âyet</span>
+        <p class="ar">﴿وَمَا آتَاكُمُ الرَّسُولُ فَخُذُوهُ وَمَا نَهَاكُمْ عَنْهُ فَانْتَهُوا﴾</p>
+        <p class="tr">"Resûl size ne verdiyse onu alın, sizi neden yasakladıysa ondan kaçının."</p>
+        <p class="kaynak">📚 Haşr, 7.</p>
+      </div>
+    </li>
+  </ol>
+
+  <p>Hangi ibadet olursa olsun, kabul olması için bu iki şartın bir arada bulunması gerekir. Bunlardan biri eksik olursa amel kabul edilmez.</p>
+
+  <p>Bu iki şartın bir âyette toplandığı delil şudur:</p>
+
+  <div class="blok ayet">
+    <span class="soyleyen">Kehf Sûresi, 110. âyet</span>
+    <p class="ar">﴿فَمَنْ كَانَ يَرْجُو لِقَاءَ رَبِّهِ فَلْيَعْمَلْ عَمَلًا صَالِحًا وَلَا يُشْرِكْ بِعِبَادَةِ رَبِّهِ أَحَدًا﴾</p>
+    <p class="tr">"Kim Rabbine kavuşmayı umuyorsa salih amel işlesin ve Rabbine ibadette hiç kimseyi ortak koşmasın."</p>
+    <p class="kaynak">📚 Kehf, 110.</p>
+  </div>
+
+  <p>Buradaki <strong>"salih amel işlesin"</strong> sözü mutâba'aya, <strong>"Rabbine ibadette hiç kimseyi ortak koşmasın"</strong> sözü ise ihlâsa delalet eder.</p>
+
+
+  <h3 class="altbolum"><span class="no">24</span>Bizler neden tevhidi ders olarak alıyoruz?</h3>
+
+  <ol class="sayili">
+    <li>Çünkü Allah bizi bunun için yarattı. Yaratılış gayemiz, yalnızca Allah'a ibadet etmek ve O'na hiçbir şeyi ortak koşmamaktır. Allah Teâlâ şöyle buyurur:
+      <div class="blok ayet">
+        <span class="soyleyen">Zâriyât Sûresi, 56. âyet</span>
+        <p class="ar">﴿وَمَا خَلَقْتُ الْجِنَّ وَالْإِنْسَ إِلَّا لِيَعْبُدُونِ﴾</p>
+        <p class="tr">"Ben cinleri ve insanları ancak bana ibadet etsinler diye yarattım."</p>
+        <p class="kaynak">📚 Zâriyât, 56.</p>
+      </div>
+    </li>
+    <li>Tevhid olmadan hiçbir amel kabul olmaz. Allah Teâlâ şöyle buyurur:
+      <div class="blok ayet">
+        <span class="soyleyen">Zümer Sûresi, 65. âyet</span>
+        <p class="ar">﴿لَئِنْ أَشْرَكْتَ لَيَحْبَطَنَّ عَمَلُكَ وَلَتَكُونَنَّ مِنَ الْخَاسِرِينَ﴾</p>
+        <p class="tr">"Eğer şirk koşarsan, amelin mutlaka boşa gider ve mutlaka hüsrana uğrayanlardan olursun."</p>
+        <p class="kaynak">📚 Zümer, 65.</p>
+      </div>
+    </li>
+    <li>Cennete ancak tevhid ehli olan kişi girer.
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+        <p class="ar">«مَنْ مَاتَ لَا يُشْرِكُ بِاللَّهِ شَيْئًا دَخَلَ الْجَنَّةَ، وَمَنْ مَاتَ يُشْرِكُ بِاللَّهِ شَيْئًا دَخَلَ النَّارَ»</p>
+        <p class="tr">"Kim Allah'a hiçbir şeyi ortak koşmadan ölürse cennete girer; kim de Allah'a bir şeyi ortak koşarak ölürse cehenneme girer."</p>
+        <p class="kaynak">📚 Muslim, 93 (Câbir radıyallahu anh).</p>
+      </div>
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+        <p class="ar">«لَا يَدْخُلُ الْجَنَّةَ إِلَّا نَفْسٌ مُسْلِمَةٌ»</p>
+        <p class="tr">"Cennete ancak müslüman bir nefis girer."</p>
+        <p class="kaynak">📚 Buhârî, 3062; Muslim, 111. (Bazı rivayetlerde <span class="ar-ic" dir="rtl">«نَفْسٌ مُؤْمِنَةٌ»</span> lafzıyla gelmiştir; Sahîhayn'daki lafız <span class="ar-ic" dir="rtl">«مُسْلِمَةٌ»</span>dir.)</p>
+      </div>
+    </li>
+    <li>Çünkü tevhid; hidayet, güven ve huzur yoludur. Allah Teâlâ şöyle buyurur:
+      <div class="blok ayet">
+        <span class="soyleyen">En'âm Sûresi, 82. âyet</span>
+        <p class="ar">﴿الَّذِينَ آمَنُوا وَلَمْ يَلْبِسُوا إِيمَانَهُمْ بِظُلْمٍ أُولَٰئِكَ لَهُمُ الْأَمْنُ وَهُمْ مُهْتَدُونَ﴾</p>
+        <p class="tr">"İman eden ve imanlarına zulüm karıştırmayanlar var ya, güven onlarındır ve onlar hidayete erenlerdir."</p>
+        <p class="kaynak">📚 En'âm, 82.</p>
+      </div>
+    </li>
+    <li>Tevhid, Allah'a ibadetin temelidir. Allah'a tevhid üzere ibadet edilmezse, ibadete şirk karışır. Allah'tan başkasına dua etmek ve Allah'tan başkasından gaybî yardım istemek buna örnektir.</li>
+    <li>Çünkü tevhid, bütün resûllerin davetinin temelidir. Peygamberler ümmetlerini ilk olarak tevhide çağırmıştır. Allah Teâlâ şöyle buyurur:
+      <div class="blok ayet">
+        <span class="soyleyen">Nahl Sûresi, 36. âyet</span>
+        <p class="ar">﴿وَلَقَدْ بَعَثْنَا فِي كُلِّ أُمَّةٍ رَسُولًا أَنِ اعْبُدُوا اللَّهَ وَاجْتَنِبُوا الطَّاغُوتَ﴾</p>
+        <p class="tr">"Andolsun, her ümmete: 'Allah'a ibadet edin ve tâğuttan kaçının' diye bir resûl gönderdik."</p>
+        <p class="kaynak">📚 Nahl, 36.</p>
+      </div>
+    </li>
+    <li>Tevhid, Allah'ın bize emrettiği en büyük şeydir. Şirk ise Allah'ın yasakladığı en büyük şeydir.</li>
+    <li>Tevhidi öğrenmek ve gerçekleştirmek, bizi şirkten ve şirke götüren yollardan korur.</li>
+    <li>Tevhid, Allah'ın kulları üzerindeki hakkıdır. Resûlullah <span class="sav">ﷺ</span> Muâz bin Cebel radıyallahu anh'a şöyle buyurmuştur:
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+        <p class="ar">«حَقُّ اللَّهِ عَلَى الْعِبَادِ أَنْ يَعْبُدُوهُ وَلَا يُشْرِكُوا بِهِ شَيْئًا»</p>
+        <p class="tr">"Allah'ın kulları üzerindeki hakkı, O'na ibadet etmeleri ve O'na hiçbir şeyi ortak koşmamalarıdır."</p>
+        <p class="kaynak">📚 Buhârî, 2856; Muslim, 30.</p>
+      </div>
+    </li>
+    <li>Tevhid, günahların bağışlanmasına sebeptir. Hadis-i kudsîde Allah Teâlâ şöyle buyurur:
+      <div class="blok hadis">
+        <span class="soyleyen">Hadîs-i Kudsî</span>
+        <p class="ar">«يَا ابْنَ آدَمَ إِنَّكَ لَوْ أَتَيْتَنِي بِقُرَابِ الْأَرْضِ خَطَايَا، ثُمَّ لَقِيتَنِي لَا تُشْرِكُ بِي شَيْئًا، لَأَتَيْتُكَ بِقُرَابِهَا مَغْفِرَةً»</p>
+        <p class="tr">"Ey Âdemoğlu! Eğer bana yeryüzünü dolduracak kadar günahla gelsen, sonra bana hiçbir şeyi ortak koşmadan kavuşsan, ben de sana yeryüzünü dolduracak kadar mağfiretle gelirim."</p>
+        <p class="kaynak">📚 Tirmizî, 3540 (Enes radıyallahu anh); Tirmizî "hasen garîb" demiştir.</p>
+      </div>
+    </li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">25</span>Tevhidin faziletleri</h3>
+
+  <ol class="sayili">
+    <li><strong>Tevhid hayattır.</strong> Tevhid, kul için olmazsa olmazdır. Tevhidsiz kalp manen ölüdür. Allah Teâlâ şöyle buyurur:
+      <div class="blok ayet">
+        <span class="soyleyen">En'âm Sûresi, 122. âyet</span>
+        <p class="ar">﴿أَوَمَنْ كَانَ مَيْتًا فَأَحْيَيْنَاهُ وَجَعَلْنَا لَهُ نُورًا يَمْشِي بِهِ فِي النَّاسِ كَمَنْ مَثَلُهُ فِي الظُّلُمَاتِ لَيْسَ بِخَارِجٍ مِنْهَا﴾</p>
+        <p class="tr">"Ölü iken kendisini dirilttiğimiz ve insanlar arasında yürümesi için kendisine bir nur verdiğimiz kimse, karanlıklar içinde kalıp onlardan çıkamayan kimse gibi midir?"</p>
+        <p class="kaynak">📚 En'âm, 122.</p>
+      </div>
+      <p>İmam Taberî bu âyetin tefsirinde şöyle demiştir:</p>
+      <div class="blok alim">
+        <span class="soyleyen">İbn Cerîr et-Taberî rahimehullah</span>
+        <p class="ar">﴿مَنْ كَانَ مَيْتًا﴾ يَقُولُ: مَنْ كَانَ كَافِرًا، فَجَعَلَهُ جَلَّ ثَنَاؤُهُ لِانْصِرَافِهِ عَنْ طَاعَتِهِ، وَجَهْلِهِ بِتَوْحِيدِهِ وَشَرَائِعِ دِينِهِ، وَتَرْكِهِ الْأَخْذَ بِنَصِيبِهِ مِنَ الْعَمَلِ لِلَّهِ بِمَا يُؤَدِّيهِ إِلَى نَجَاتِهِ، بِمَنْزِلَةِ الْمَيِّتِ الَّذِي لَا يَنْفَعُ نَفْسَهُ بِنَافِعَةٍ وَلَا يَدْفَعُ عَنْهَا مِنْ مَكْرُوهِ نَازِلَةٍ. ﴿فَأَحْيَيْنَاهُ﴾ يَقُولُ: فَهَدَيْنَاهُ لِلْإِسْلَامِ فَأَنْعَشْنَاهُ، فَصَارَ يَعْرِفُ مَضَارَّ نَفْسِهِ وَمَنَافِعَهَا، فَجَعَلَ إِبْصَارَهُ الْحَقَّ بَعْدَ عَمَاهُ عَنْهُ، وَمَعْرِفَتَهُ بِوَحْدَانِيَّتِهِ وَشَرَائِعِ دِينِهِ بَعْدَ جَهْلِهِ بِذَلِكَ، حَيَاةً وَضِيَاءً يَسْتَضِيءُ بِهِ</p>
+        <p class="tr">"«Ölü olan kimse» yani kâfir olan kimse. Allah celle senâuhu; ona itaatten yüz çevirmesi, O'nun tevhidini ve dininin hükümlerini bilmemesi ve kurtuluşuna götürecek amelden nasibini almayı terk etmesi sebebiyle onu, kendisine hiçbir fayda sağlayamayan ve başına gelecek hiçbir kötülüğü kendinden savamayan ölü mesabesinde kılmıştır. «Onu dirilttik» yani: Onu İslâm'a hidayet ettik ve böylece onu canlandırdık; artık nefsinin zararlarını ve faydalarını bilir hâle geldi. Böylece Allah; kulun, körlüğünden sonra hakkı görmesini ve cehaletinden sonra O'nun vahdâniyetini ve dininin hükümlerini bilmesini, bir hayat ve kendisiyle aydınlandığı bir ışık kılmıştır."</p>
+        <p class="kaynak">📚 Taberî, Câmiu'l-Beyân, 9/532-533.</p>
+      </div>
+      <p>Birçok Selef âlimi de küfrü ölüm, imanı ise hayat olarak isimlendirmiştir. Allah Teâlâ şöyle buyurur:</p>
+      <div class="blok ayet">
+        <span class="soyleyen">Enfâl Sûresi, 24. âyet</span>
+        <p class="ar">﴿يَا أَيُّهَا الَّذِينَ آمَنُوا اسْتَجِيبُوا لِلَّهِ وَلِلرَّسُولِ إِذَا دَعَاكُمْ لِمَا يُحْيِيكُمْ﴾</p>
+        <p class="tr">"Ey iman edenler! Size hayat verecek şeylere çağırdığı zaman Allah'a ve Resûl'e icabet edin."</p>
+        <p class="kaynak">📚 Enfâl, 24.</p>
+      </div>
+      <div class="blok alim">
+        <span class="soyleyen">Süddî rahimehullah</span>
+        <p class="ar">أَمَّا ﴿يُحْيِيكُمْ﴾ فَهُوَ الْإِسْلَامُ، أَحْيَاهُمْ بَعْدَ مَوْتِهِمْ، بَعْدَ كُفْرِهِمْ</p>
+        <p class="tr">"«Size hayat verecek şey»e gelince, o İslâm'dır. Allah onları ölümlerinden sonra, yani küfürlerinden sonra diriltmiştir."</p>
+        <p class="kaynak">📚 Taberî, Câmiu'l-Beyân, 11/104.</p>
+      </div>
+    </li>
+
+    <li><strong>Tevhid, bir kulun hem kendi nefsine hem de başkasına verebileceği en büyük nimet ve en büyük hediyedir.</strong> Çünkü kul tevhid ile hidayete erer, ateşten kurtulur ve cennete girer. Bundan dolayı Resûlullah <span class="sav">ﷺ</span> Ali radıyallahu anh'a şöyle buyurmuştur:
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+        <p class="ar">«فَوَاللَّهِ لَأَنْ يَهْدِيَ اللَّهُ بِكَ رَجُلًا وَاحِدًا خَيْرٌ لَكَ مِنْ أَنْ يَكُونَ لَكَ حُمْرُ النَّعَمِ»</p>
+        <p class="tr">"Allah'a yemin olsun ki, Allah'ın senin vesilenle bir kişiye hidayet vermesi, senin için kızıl develere sahip olmaktan daha hayırlıdır."</p>
+        <p class="kaynak">📚 Buhârî, 3009; Muslim, 2406.</p>
+      </div>
+    </li>
+
+    <li><strong>Tevhid, günahların silinmesine sebeptir.</strong> Hâlis tevhid, Allah'ın mağfiretinin en büyük sebeplerindendir. İbnu'l-Kayyim rahimehullah <em>İğâsetu'l-Lehfân</em> adlı eserinde şöyle demiştir:
+      <div class="blok alim">
+        <span class="soyleyen">İbnu'l-Kayyim rahimehullah</span>
+        <p class="ar">وَيُعْفَى لِأَهْلِ التَّوْحِيدِ الْمَحْضِ الَّذِي لَمْ يَشُوبُوهُ بِالشِّرْكِ مَا لَا يُعْفَى لِمَنْ لَيْسَ كَذَلِكَ. فَلَوْ لَقِيَ الْمُوَحِّدُ الَّذِي لَمْ يُشْرِكْ بِاللَّهِ شَيْئًا الْبَتَّةَ رَبَّهُ بِقُرَابِ الْأَرْضِ خَطَايَا أَتَاهُ بِقُرَابِهَا مَغْفِرَةً</p>
+        <p class="tr">"Hâlis tevhidlerini şirk ile karıştırmayan tevhid ehli için, başkaları için affedilmeyen şeyler affedilir. Zira Allah'a asla hiçbir şeyi ortak koşmamış olan bir muvahhid, Rabbine yeryüzü dolusu günahla kavuşsa, Allah da ona yeryüzü dolusu mağfiretle gelir."</p>
+        <p class="kaynak">📚 İbnu'l-Kayyim, İğâsetu'l-Lehfân, 1/106 (Fikî neşrinde 1/63).</p>
+      </div>
+    </li>
+
+    <li><strong>Tevhid ehlinin gönlü tuma'nînet ve huzur sebebiyle ferahtır.</strong> Kalbi Allah'a bağlı olduğu için ümitsizliğe kapılmaz ve sıkıntılar karşısında daha sağlam durur. Kulun tevhidi ne kadar güçlü olursa, gönlü de o kadar genişler ve huzur bulur. İbnu'l-Kayyim rahimehullah <em>Zâdu'l-Meâd</em> adlı eserinde şöyle demiştir:
+      <div class="blok alim">
+        <span class="soyleyen">İbnu'l-Kayyim rahimehullah</span>
+        <p class="ar">فَأَعْظَمُ أَسْبَابِ شَرْحِ الصَّدْرِ: التَّوْحِيدُ، وَعَلَى حَسَبِ كَمَالِهِ وَقُوَّتِهِ وَزِيَادَتِهِ يَكُونُ انْشِرَاحُ صَدْرِ صَاحِبِهِ... فَالْهُدَى وَالتَّوْحِيدُ مِنْ أَعْظَمِ أَسْبَابِ شَرْحِ الصَّدْرِ، وَالشِّرْكُ وَالضَّلَالُ مِنْ أَعْظَمِ أَسْبَابِ ضِيقِ الصَّدْرِ وَانْحِرَاجِهِ</p>
+        <p class="tr">"Göğsün genişlemesinin en büyük sebebi tevhiddir; tevhidi ne kadar kâmil, güçlü ve fazla olursa, kişinin göğsü de o kadar genişler... Hidayet ve tevhid, göğsün genişlemesinin en büyük sebeplerindendir; şirk ve dalalet ise göğsün daralmasının ve sıkışmasının en büyük sebeplerindendir."</p>
+        <p class="kaynak">📚 İbnu'l-Kayyim, Zâdu'l-Meâd, 2/28 (Risâle neşrinde 2/23).</p>
+      </div>
+    </li>
+
+    <li><strong>Tevhid ehli, Resûlullah'ın <span class="sav">ﷺ</span> şefaatine nail olacaktır.</strong> Ebû Hureyre radıyallahu anh'tan rivayet edildiğine göre Resûlullah <span class="sav">ﷺ</span> şöyle buyurmuştur:
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+        <p class="ar">«أَسْعَدُ النَّاسِ بِشَفَاعَتِي يَوْمَ الْقِيَامَةِ مَنْ قَالَ: لَا إِلَهَ إِلَّا اللَّهُ، خَالِصًا مِنْ قَلْبِهِ أَوْ نَفْسِهِ»</p>
+        <p class="tr">"Kıyamet günü benim şefaatime en çok nail olacak kişi, 'Lâ ilâhe illallah' sözünü kalbinden ihlâsla söyleyen kimsedir."</p>
+        <p class="kaynak">📚 Buhârî, 99.</p>
+      </div>
+    </li>
+
+    <li><strong>Tevhid, dünyadaki sıkıntılardan kurtuluş sebeplerindendir.</strong> Resûlullah <span class="sav">ﷺ</span> şöyle buyurmuştur:
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+        <p class="ar">«دَعْوَةُ ذِي النُّونِ إِذْ دَعَا وَهُوَ فِي بَطْنِ الْحُوتِ: لَا إِلَهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ، فَإِنَّهُ لَمْ يَدْعُ بِهَا رَجُلٌ مُسْلِمٌ فِي شَيْءٍ قَطُّ إِلَّا اسْتَجَابَ اللَّهُ لَهُ»</p>
+        <p class="tr">"Zünnûn'un, balığın karnındayken yaptığı dua şuydu: 'Senden başka hak ilâh yoktur. Seni tenzih ederim. Şüphesiz ben zalimlerden oldum.' Bir Müslüman herhangi bir şey hakkında bu dua ile dua ederse, Allah ona mutlaka icabet eder."</p>
+        <p class="kaynak">📚 Tirmizî, 3505 (Sa'd bin Ebî Vakkâs radıyallahu anh).</p>
+      </div>
+      <p>Dertlerin giderilmesine sebep olan bu dua tevhidi içerir. Aynı şekilde İbn Abbâs radıyallahu anhumâ'dan rivayet edildiğine göre Resûlullah <span class="sav">ﷺ</span> sıkıntı anında şöyle dua ederdi:</p>
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> sıkıntı anında şöyle dua ederdi</span>
+        <p class="ar">«لَا إِلَهَ إِلَّا اللَّهُ الْعَظِيمُ الْحَلِيمُ، لَا إِلَهَ إِلَّا اللَّهُ رَبُّ الْعَرْشِ الْعَظِيمِ، لَا إِلَهَ إِلَّا اللَّهُ رَبُّ السَّمَاوَاتِ وَرَبُّ الْأَرْضِ وَرَبُّ الْعَرْشِ الْكَرِيمِ»</p>
+        <p class="tr">"Azîm ve Halîm olan Allah'tan başka hak ilâh yoktur. Yüce Arş'ın Rabbi olan Allah'tan başka hak ilâh yoktur. Göklerin Rabbi, yerin Rabbi ve kerîm Arş'ın Rabbi olan Allah'tan başka hak ilâh yoktur."</p>
+        <p class="kaynak">📚 Buhârî, 6345-6346; Muslim, 2730.</p>
+      </div>
+    </li>
+  
+    <li><strong>Tevhid, imanı kuvvetlendirir.</strong> Kişinin tevhidi ne kadar kuvvetli olursa, imanı da o kadar kuvvetlenir. İbn Teymiyye rahimehullah şöyle demiştir:
+      <div class="blok alim">
+        <span class="soyleyen">İbn Teymiyye rahimehullah</span>
+        <p class="ar">وَكُلَّمَا قَوِيَ التَّوْحِيدُ فِي قَلْبِ الْعَبْدِ قَوِيَ إِيمَانُهُ وَطُمَأْنِينَتُهُ وَتَوَكُّلُهُ وَيَقِينُهُ</p>
+        <p class="tr">"Tevhid kulun kalbinde ne kadar kuvvetlenirse, onun imanı, tuma'nîneti, tevekkülü ve yakîni de o kadar kuvvetlenir."</p>
+        <p class="kaynak">📚 İbn Teymiyye, Mecmû'u'l-Fetâvâ, 28/35.</p>
+      </div>
+      <p>İbn Ebi'l-İzz rahimehullah şöyle demiştir:</p>
+      <div class="blok alim">
+        <span class="soyleyen">İbn Ebi'l-İzz rahimehullah</span>
+        <p class="ar">وَحَاجَةُ الْعِبَادِ إِلَيْهِ فَوْقَ كُلِّ حَاجَةٍ، وَضَرُورَتُهُمْ إِلَيْهِ فَوْقَ كُلِّ ضَرُورَةٍ؛ لِأَنَّهُ لَا حَيَاةَ لِلْقُلُوبِ، وَلَا نَعِيمَ وَلَا طُمَأْنِينَةَ، إِلَّا بِأَنْ تَعْرِفَ رَبَّهَا وَمَعْبُودَهَا وَفَاطِرَهَا بِأَسْمَائِهِ وَصِفَاتِهِ وَأَفْعَالِهِ</p>
+        <p class="tr">"Kulların buna olan ihtiyacı her ihtiyaçtan daha büyüktür; buna olan zaruretleri her zaruretin üzerindedir. Çünkü kalplerin hayatı, nimeti ve huzuru; ancak Rabbini, mabudunu ve yaratıcısını isimleri, sıfatları ve fiilleriyle tanımasıyla olur."</p>
+        <p class="kaynak">📚 İbn Ebi'l-İzz, Şerhu'l-Akîdeti't-Tahâviyye, 1/6 (Ahmed Şâkir ta'lîkli neşirde s. 17).</p>
+      </div>
+    </li>
+
+    <li><strong>Tevhid, dünya ve ahirette kurtuluş ve selametin sebeplerindendir.</strong> Tevhid ehli, Allah'ın izniyle dünya ve ahirette emniyet ve hidayete nail olur. Ahirette kurtuluşun ve selametin en büyük sebeplerinden biri tevhiddir. Allah Teâlâ şöyle buyurur:
+      <div class="blok ayet">
+        <span class="soyleyen">En'âm Sûresi, 82. âyet</span>
+        <p class="ar">﴿الَّذِينَ آمَنُوا وَلَمْ يَلْبِسُوا إِيمَانَهُمْ بِظُلْمٍ أُولَٰئِكَ لَهُمُ الْأَمْنُ وَهُمْ مُهْتَدُونَ﴾</p>
+        <p class="tr">"İman eden ve imanlarına zulüm karıştırmayanlar var ya, güven onlarındır ve onlar hidayete erenlerdir."</p>
+        <p class="kaynak">📚 En'âm, 82.</p>
+      </div>
+    </li>
+
+    <li><strong>Tevhid, münkerlerden uzak durmayı ve taatleri yerine getirmeyi kolaylaştırır.</strong> Tevhid ehline Allah'a itaat etmek kolaylaşır. Aynı şekilde günahlardan ve münkerlerden uzak durmak da onun için daha kolay hâle gelir. Abdurrahman es-Sa'dî rahimehullah şöyle demiştir:
+      <div class="blok alim">
+        <span class="soyleyen">Abdurrahman es-Sa'dî rahimehullah</span>
+        <p class="ar">وَمِنْ فَضَائِلِهِ: أَنَّهُ يُسَهِّلُ عَلَى الْعَبْدِ فِعْلَ الْخَيْرِ وَتَرْكَ الْمُنْكَرَاتِ وَيُسَلِّيهِ عَنِ الْمُصِيبَاتِ، فَالْمُخْلِصُ لِلَّهِ فِي إِيمَانِهِ وَتَوْحِيدِهِ تَخِفُّ عَلَيْهِ الطَّاعَاتُ لِمَا يَرْجُو مِنْ ثَوَابِ رَبِّهِ وَرِضْوَانِهِ، وَيَهُونُ عَلَيْهِ تَرْكُ مَا تَهْوَاهُ النَّفْسُ مِنَ الْمَعَاصِي، لِمَا يَخْشَى مِنْ سَخَطِهِ وَعِقَابِهِ</p>
+        <p class="tr">"Tevhidin faziletlerinden biri de kula hayır işlemeyi ve münkerleri terk etmeyi kolaylaştırması ve musibetler karşısında onu teselli etmesidir. İmanında ve tevhidinde Allah'a ihlâslı olan kişiye, Rabbinin sevabını ve rızasını umduğu için taatler hafif gelir; Allah'ın gazabından ve azabından korktuğu için de nefsinin arzuladığı günahları terk etmek ona kolay gelir."</p>
+        <p class="kaynak">📚 Abdurrahman es-Sa'dî, el-Kavlu's-Sedîd fî Makâsıdi't-Tevhîd (Şerhu Kitâbi't-Tevhîd), s. 24.</p>
+      </div>
+    </li>
+
+    <li><strong>Tevhid, sıkıntı ve acıların hafiflemesine sebep olur.</strong> Resûlullah <span class="sav">ﷺ</span> şöyle buyurmuştur:
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+        <p class="ar">«عَجَبًا لِأَمْرِ الْمُؤْمِنِ، إِنَّ أَمْرَهُ كُلَّهُ لَهُ خَيْرٌ، وَلَيْسَ ذَاكَ لِأَحَدٍ إِلَّا لِلْمُؤْمِنِ: إِنْ أَصَابَتْهُ سَرَّاءُ شَكَرَ فَكَانَ خَيْرًا لَهُ، وَإِنْ أَصَابَتْهُ ضَرَّاءُ صَبَرَ فَكَانَ خَيْرًا لَهُ»</p>
+        <p class="tr">"Müminin hâline şaşılır! Onun her işi kendisi için hayırdır. Bu, müminden başkası için söz konusu değildir: Ona bir nimet ulaşırsa şükreder ve bu onun için hayır olur; ona bir sıkıntı ulaşırsa sabreder ve bu da onun için hayır olur."</p>
+        <p class="kaynak">📚 Muslim, 2999 (Suheyb radıyallahu anh).</p>
+      </div>
+    </li>
+
+    <li><strong>Tevhid, insanı kullara kulluk etmekten, onlardan korkmaktan ve onlara kalben bağlanmaktan kurtarıp yalnızca Allah'ın kulu hâline getirir.</strong> Bunun güzel örneklerinden biri, Rib'î bin Âmir radıyallahu anh ile Rüstem arasında geçen konuşmadır. Rüstem, Sa'd bin Ebî Vakkâs radıyallahu anh'tan kendisiyle konuşacak bir adam göndermesini istedi; Sa'd da Rib'î bin Âmir'i gönderdi. Rüstem ona "Buraya neden geldiniz?" diye sordu. Rib'î bin Âmir radıyallahu anh şöyle cevap verdi:
+      <div class="blok alim">
+        <span class="soyleyen">Rib'î bin Âmir radıyallahu anh</span>
+        <p class="ar">اللَّهُ ابْتَعَثَنَا، وَاللَّهُ جَاءَ بِنَا لِنُخْرِجَ مَنْ شَاءَ مِنْ عِبَادَةِ الْعِبَادِ إِلَى عِبَادَةِ اللَّهِ، وَمِنْ ضِيقِ الدُّنْيَا إِلَى سِعَتِهَا، وَمِنْ جَوْرِ الْأَدْيَانِ إِلَى عَدْلِ الْإِسْلَامِ</p>
+        <p class="tr">"Allah bizi gönderdi ve Allah bizi, dilediği kimseleri kullara kulluk etmekten Allah'a kulluk etmeye, dünyanın darlığından onun genişliğine ve dinlerin zulmünden İslâm'ın adaletine çıkarmak için getirdi."</p>
+        <p class="kaynak">📚 Taberî, Târîhu'r-Rusul ve'l-Mulûk, 3/520.</p>
+      </div>
+      <div class="notkutu">
+        <span class="not-etiket">Tenbih</span>
+        <p>Bu sözü söyleyen Sa'd bin Ebî Vakkâs değil, onun Rüstem'e gönderdiği Rib'î bin Âmir'dir. Rivayetin kaynağı da Taberânî değil, Taberî'nin <em>Târîh</em>'idir.</p>
+      </div>
+      <p>İbn Teymiyye rahimehullah şöyle demiştir:</p>
+      <div class="blok alim">
+        <span class="soyleyen">İbn Teymiyye rahimehullah</span>
+        <p class="ar">وَلَيْسَ لِلْقُلُوبِ سُرُورٌ وَلَا لَذَّةٌ تَامَّةٌ إِلَّا فِي مَحَبَّةِ اللَّهِ وَالتَّقَرُّبِ إِلَيْهِ بِمَا يُحِبُّهُ، وَلَا تُمْكِنُ مَحَبَّتُهُ إِلَّا بِالْإِعْرَاضِ عَنْ كُلِّ مَحْبُوبٍ سِوَاهُ، وَهَذَا حَقِيقَةُ لَا إِلَٰهَ إِلَّا اللَّهُ</p>
+        <p class="tr">"Kalpler için tam bir sevinç ve tam bir lezzet, ancak Allah'ı sevmek ve O'nun sevdiği şeylerle O'na yaklaşmakla olur. Allah sevgisi de, O'nun dışındaki bütün sevgililerden yüz çevirmeden gerçekleşmez. İşte bu, 'Lâ ilâhe illallah'ın hakikatidir."</p>
+        <p class="kaynak">📚 İbn Teymiyye, Mecmû'u'l-Fetâvâ, 28/32.</p>
+      </div>
+    </li>
+
+    <li><strong>Tevhid, şeytanı kovar ve onu def eder.</strong> Bunun delili, Ebû Hureyre radıyallahu anh'tan rivayet edildiğine göre Resûlullah'ın <span class="sav">ﷺ</span> şu buyruğudur:
+      <div class="blok hadis">
+        <span class="soyleyen">Ebû Hureyre radıyallahu anh'tan</span>
+        <p class="ar">«مَنْ قَالَ: لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، فِي يَوْمٍ مِائَةَ مَرَّةٍ، كَانَتْ لَهُ عَدْلَ عَشْرِ رِقَابٍ، وَكُتِبَتْ لَهُ مِائَةُ حَسَنَةٍ، وَمُحِيَتْ عَنْهُ مِائَةُ سَيِّئَةٍ، وَكَانَتْ لَهُ حِرْزًا مِنَ الشَّيْطَانِ يَوْمَهُ ذَلِكَ حَتَّى يُمْسِيَ»</p>
+        <p class="tr">"Kim bir günde yüz defa: 'Allah'tan başka hak ilah yoktur. O tektir, ortağı yoktur. Mülk O'nundur, hamd O'nadır ve O her şeye kadirdir.' derse:"</p>
+        <ol class="sayili">
+          <li>On köle azat etmiş gibi sevap kazanır.</li>
+          <li>Ona yüz sevap yazılır.</li>
+          <li>Ondan yüz günah silinir.</li>
+          <li>O gün akşama kadar şeytandan korunur.</li>
+        </ol>
+        <p class="kaynak">📚 Buhârî, 3293 (Bâbu sıfati İblîs ve cunûdihi) ve 6403; Muslim, 2691.</p>
+      </div>
+      <p>İbn Teymiyye rahimehullah şöyle demiştir:</p>
+      <div class="blok alim">
+        <span class="soyleyen">İbn Teymiyye rahimehullah</span>
+        <p class="ar">فَحَيْثُ قَوِيَ الْإِيمَانُ وَالتَّوْحِيدُ وَنُورُ الْفُرْقَانِ وَالْإِيمَانِ، وَظَهَرَتْ آثَارُ النُّبُوَّةِ وَالرِّسَالَةِ، ضَعُفَتْ هَذِهِ الْأَحْوَالُ الشَّيْطَانِيَّةُ، وَحَيْثُ ظَهَرَ الْكُفْرُ وَالْفُسُوقُ وَالْعِصْيَانُ، قَوِيَتْ هَذِهِ الْأَحْوَالُ الشَّيْطَانِيَّةُ</p>
+        <p class="tr">"İman ve tevhid kuvvetlendiği, Furkân'ın ve imanın nuru ortaya çıktığı ve nübüvvet ile risâletin eserleri görüldüğü yerde, şeytanî hâller zayıflar. Küfür, fısk ve isyan ortaya çıktığı yerde ise bu şeytanî hâller kuvvetlenir."</p>
+        <p class="kaynak">📚 İbn Teymiyye, Mecmû'u'l-Fetâvâ, 1/363.</p>
+      </div>
+      <p>Yani tevhid ve iman ne kadar kuvvetlenirse, şeytanın kul üzerindeki etkisi de o kadar zayıflar. Şeytanın beslendiği şeyler şunlardır: şirkler, bid'atler, hurafeler ve kötü işler. Şeytan bunlardan güç alır, fakat tevhide karşı zayıflar ve kaçar.</p>
+    </li>
+
+    <li><strong>Tevhid, kullardan gelen ezalara karşı sabırlı olmayı sağlar.</strong> Tevhid, kulun kalbini Allah'a bağlar. Kalbi Allah sevgisi, ihlâs, tevekkül ve rıza ile dolan kişi, insanların verdiği eziyetlerle fazla meşgul olmaz ve onlara karşı sabretmesi kolaylaşır. İbn Kayyim rahimehullah <em>Medâricu's-Sâlikîn</em>'de, insanlardan gelen eziyet karşısında kulun durabileceği mertebeleri sayarken, en yüksek mertebe olarak "tevhid mertebesi"ni <span class="ar-ic" dir="rtl">(مَشْهَدُ التَّوْحِيدِ)</span> zikretmiş ve şöyle demiştir:
+      <div class="blok alim">
+        <span class="soyleyen">İbn Kayyim el-Cevziyye rahimehullah</span>
+        <p class="ar">فَإِذَا امْتَلَأَ قَلْبُهُ بِمَحَبَّةِ اللَّهِ تَعَالَى، وَالْإِخْلَاصِ لَهُ وَمُعَامَلَتِهِ، وَإِيثَارِ مَرْضَاتِهِ، وَالتَّقَرُّبِ إِلَيْهِ، وَقَرَّتْ عَيْنُهُ بِاللَّهِ، وَابْتَهَجَ قَلْبُهُ بِحُبِّهِ وَالْأُنْسِ بِهِ، وَاطْمَأَنَّ إِلَيْهِ، وَسَكَنَ إِلَيْهِ، وَاشْتَاقَ إِلَى لِقَائِهِ، وَاتَّخَذَهُ وَلِيًّا دُونَ مَا سِوَاهُ، بِحَيْثُ فَوَّضَ إِلَيْهِ أُمُورَهُ كُلَّهَا، وَرَضِيَ بِهِ وَبِأَقْضِيَتِهِ، وَفَنِيَ بِحُبِّهِ وَخَوْفِهِ وَرَجَائِهِ وَذِكْرِهِ وَالتَّوَكُّلِ عَلَيْهِ عَنْ كُلِّ مَا سِوَاهُ، فَإِنَّهُ لَا يَبْقَى فِي قَلْبِهِ مُتَّسَعٌ لِشُهُودِ أَذَى النَّاسِ لَهُ أَلْبَتَّةَ</p>
+        <p class="tr">"Kalbi Allah Teâlâ'nın sevgisiyle, O'na ihlâsla, O'nunla muamele etmekle, O'nun rızasını tercih etmekle ve O'na yaklaşmakla dolduğu zaman; gözü Allah ile aydınlanır, kalbi O'nun sevgisi ve O'nunla ünsiyet sebebiyle sevinç bulur, O'na güvenir, O'na yönelir ve O'na kavuşmayı arzular. O'ndan başkasını değil, yalnızca O'nu velî edinir; öyle ki bütün işlerini O'na havale eder, O'ndan ve O'nun hükümlerinden razı olur. Allah'ın sevgisi, korkusu, ümidi, zikri ve O'na tevekkülü sebebiyle Allah'tan başka her şeyden fâni olur. Böyle olunca kalbinde, insanların kendisine verdiği eziyetlerle meşgul olacak hiçbir yer kalmaz."</p>
+        <p class="kaynak">📚 İbn Kayyim el-Cevziyye, Medâricu's-Sâlikîn, 3/59.</p>
+      </div>
+      <p>Sahâbeler birçok eziyete maruz kaldılar. Fakat onların güçlü tevhidi, bu eziyetlere karşı sabretmelerini sağladı. İmam Ahmed ve İbn Teymiyye gibi âlimler de birçok imtihana maruz kaldılar ve hapsedildiler. Buna rağmen sabreden kimselerden oldular.</p>
+    </li>
+
+    <li><strong>Tevhid, emniyet ve hidayete sebep olur.</strong> Tevhid ehli, Allah'ın izniyle dünya ve ahirette emniyete ve hidayete nail olur. İbn Kayyim rahimehullah şöyle demiştir:
+      <div class="blok alim">
+        <span class="soyleyen">İbn Kayyim el-Cevziyye rahimehullah</span>
+        <p class="ar">فَالتَّوْحِيدُ حِصْنُ اللَّهِ الْأَعْظَمُ الَّذِي مَنْ دَخَلَهُ كَانَ مِنَ الْآمِنِينَ</p>
+        <p class="tr">"Tevhid, Allah'ın en büyük kalesidir. Kim bu kaleye girerse emniyette olanlardan olur."</p>
+        <p class="kaynak">📚 İbn Kayyim el-Cevziyye, Bedâiu'l-Fevâid, 2/245 ('Atâ'âtu'l-İlm neşrinde 2/776).</p>
+      </div>
+      <p>Allah Teâlâ şöyle buyurur:</p>
+      <div class="blok ayet">
+        <span class="soyleyen">En'âm Sûresi, 82. âyet</span>
+        <p class="ar">﴿الَّذِينَ آمَنُوا وَلَمْ يَلْبِسُوا إِيمَانَهُمْ بِظُلْمٍ أُولَٰئِكَ لَهُمُ الْأَمْنُ وَهُمْ مُهْتَدُونَ﴾</p>
+        <p class="tr">"İman eden ve imanlarına zulüm karıştırmayanlar var ya, emniyet onlarındır ve onlar hidayete erenlerdir."</p>
+        <p class="kaynak">📚 En'âm, 82.</p>
+      </div>
+    </li>
+
+    <li><strong>Tevhid, cennetin anahtarıdır.</strong> Anahtarsız kapı açılmadığı gibi, tevhid olmadan da cennetin kapısı açılmaz. İbn Kayyim rahimehullah şöyle demiştir:
+      <div class="blok alim">
+        <span class="soyleyen">İbn Kayyim el-Cevziyye rahimehullah</span>
+        <p class="ar">فَلَا يَدْخُلُ الْجَنَّةَ نَفْسٌ مُشْرِكَةٌ، وَإِنَّمَا يَدْخُلُهَا أَهْلُ التَّوْحِيدِ، فَإِنَّ التَّوْحِيدَ هُوَ مِفْتَاحُ بَابِهَا، فَمَنْ لَمْ يَكُنْ مَعَهُ مِفْتَاحٌ لَمْ يُفْتَحْ لَهُ بَابُهَا</p>
+        <p class="tr">"Cennete müşrik bir nefis giremez. Cennete ancak tevhid ehli girer. Çünkü tevhid, cennetin kapısının anahtarıdır. Kimin yanında bu anahtar yoksa cennetin kapısı ona açılmaz."</p>
+        <p class="kaynak">📚 İbn Kayyim el-Cevziyye.</p>
+      </div>
+      <p>İbn Kayyim daha sonra bu anahtarın dişlerinin de namaz, oruç, zekât, hac ve diğer salih ameller olduğunu zikreder.</p>
+    </li>
+
+    <li><strong>Tevhid, kalpten mahlûklara karşı olan korkuyu çıkarır.</strong> Kulun tevhidi ne kadar kuvvetli olursa, mahlûklardan olan korkusu da o kadar azalır. İbn Kayyim rahimehullah şöyle demiştir:
+      <div class="blok alim">
+        <span class="soyleyen">İbn Kayyim el-Cevziyye rahimehullah</span>
+        <p class="ar">فَإِذَا جَرَّدَ الْعَبْدُ التَّوْحِيدَ فَقَدْ خَرَجَ مِنْ قَلْبِهِ خَوْفُ مَا سِوَاهُ، وَكَانَ عَدُوُّهُ أَهْوَنَ عَلَيْهِ مِنْ أَنْ يَخَافَهُ مَعَ اللَّهِ تَعَالَى، بَلْ يُفْرِدُ اللَّهَ بِالْمَخَافَةِ، وَقَدْ أَمَّنَهُ مِنْهُ، وَخَرَجَ عَنْ قَلْبِهِ اهْتِمَامُهُ بِهِ وَاشْتِغَالُهُ بِهِ وَفِكْرُهُ فِيهِ، وَتَجَرَّدَ لِلَّهِ مَحَبَّةً وَخَشْيَةً وَإِنَابَةً وَتَوَكُّلًا … وَاللَّهُ يَتَوَلَّى حِفْظَهُ وَالدَّفْعَ عَنْهُ</p>
+        <p class="tr">"Kul tevhidi halis kıldığı zaman, Allah'tan başkasına karşı olan korku kalbinden çıkar. Düşmanı, Allah ile beraber kendisinden korkulamayacak kadar onun gözünde küçülür; bilakis korkuyu yalnızca Allah'a has kılar ve Allah onu düşmanından emin kılar. Düşmanıyla ilgilenmek, onunla meşgul olmak ve onu düşünmek kalbinden çıkar; muhabbet, haşyet, inâbe ve tevekkül ile yalnızca Allah'a yönelir. Allah da onu korumayı ve ondan kötülüğü def etmeyi üzerine alır."</p>
+        <p class="kaynak">📚 İbn Kayyim el-Cevziyye, Bedâiu'l-Fevâid, 2/245 ('Atâ'âtu'l-İlm neşrinde 2/775).</p>
+      </div>
+    </li>
+  </ol>
+
+
+
+  <h3 class="altbolum"><span class="no">26</span>Tevhid karşısında üzerimize düşen vacipler nelerdir?</h3>
+
+  <ol class="sayili">
+    <li><strong>İlim.</strong> En öncelikli vacip, tevhidi öğrenmektir. Allah Teâlâ şöyle buyurur:
+      <div class="blok ayet">
+        <span class="soyleyen">Muhammed Sûresi, 19. âyet</span>
+        <p class="ar">﴿فَاعْلَمْ أَنَّهُ لَا إِلَٰهَ إِلَّا اللَّهُ﴾</p>
+        <p class="tr">"Bil ki Allah'tan başka hak ilah yoktur."</p>
+        <p class="kaynak">📚 Muhammed, 19.</p>
+      </div>
+    </li>
+
+    <li><strong>Sevgi.</strong> Allah'ı ve Resûlünü <span class="sav">ﷺ</span> sevmek, Allah'ın emirlerini ve sevdiği şeyleri sevmek. Allah'ın en büyük emri tevhiddir.</li>
+
+    <li><strong>Azim ve amel.</strong> Kalbimizde tevhid üzere amel etmeye kesin bir şekilde azmetmek ve bunu gerçekleştirmek için mücadele etmek.</li>
+
+    <li><strong>Ameli hâlisen ve savâben yapmak.</strong> Ameli ihlasla yalnızca Allah için yapmak ve Resûlullah'ın <span class="sav">ﷺ</span> sünnetine uygun şekilde yerine getirmek.</li>
+
+    <li><strong>Tevhidi bozan şeylerden sakınmak ve sakındırmak.</strong> Tevhidi iptal eden söz ve amellerden sakınmak ve başkalarını da bunlardan sakındırmak.</li>
+
+    <li><strong>Tevhid üzere sabit kalmak.</strong> Tevhidi öğrendikten ve onunla amel ettikten sonra ölünceye kadar onun üzerinde sabit kalmak ve dinde sabit olmak için Allah'a dua etmek. Allah Teâlâ şöyle buyurur:
+      <div class="blok ayet">
+        <span class="soyleyen">Âl-i İmrân Sûresi, 102. âyet</span>
+        <p class="ar">﴿وَلَا تَمُوتُنَّ إِلَّا وَأَنْتُمْ مُسْلِمُونَ﴾</p>
+        <p class="tr">"Ancak Müslümanlar olarak ölün."</p>
+        <p class="kaynak">📚 Âl-i İmrân, 102.</p>
+      </div>
+      <p>İbn Cerîr et-Taberî rahimehullah, aynı lafzın geçtiği Bakara sûresi 132. âyetin tefsirinde şöyle demiştir:</p>
+      <div class="blok alim">
+        <span class="soyleyen">İbn Cerîr et-Taberî rahimehullah</span>
+        <p class="ar">فَلَا تُفَارِقُنَّ هَذَا الدِّينَ (وَهُوَ الْإِسْلَامُ) أَيَّامَ حَيَاتِكُمْ</p>
+        <p class="tr">"Hayatınız boyunca bu dinden, yani İslâm'dan ayrılmayın."</p>
+        <p class="kaynak">📚 Taberî, Câmiu'l-Beyân, 2/585 (Bakara sûresi 132. âyetin tefsiri).</p>
+      </div>
+      <p>Yani kişi tevhidi sadece öğrenmekle yetinmez. Onunla amel eder ve ölünceye kadar onun üzerinde sabit kalır.</p>
+    </li>
+  </ol>
+
+
+
+  <h3 class="altbolum"><span class="no">27</span>Kalpte tevhidi nasıl sabit tutarız?</h3>
+
+  <ol class="sayili">
+    <li>Allah'ın sevabını umarak (recâ ile) O'nun emirlerini yerine getirmek.</li>
+
+    <li>Allah'ın azabından korkarak (havf ile) günahları terk etmek.
+      <p class="alt-tanim"><em>Talq bin Habîb rahimehullaha takvâ sorulduğunda, bu iki hususu bir arada şöyle zikretmiştir:</em></p>
+      <div class="blok alim">
+        <span class="soyleyen">Talq bin Habîb rahimehullah</span>
+        <p class="ar">التَّقْوَى أَنْ تَعْمَلَ بِطَاعَةِ اللَّهِ عَلَى نُورٍ مِنَ اللَّهِ تَرْجُو ثَوَابَ اللَّهِ، وَأَنْ تَتْرُكَ مَعْصِيَةَ اللَّهِ عَلَى نُورٍ مِنَ اللَّهِ تَخَافُ عِقَابَ اللَّهِ</p>
+        <p class="tr">"Takvâ, Allah'tan bir nur üzere (yani ilim ile) Allah'a itaat ederek amel etmen ve Allah'ın sevabını ummandır. Yine Allah'tan bir nur üzere Allah'a isyanı terk etmen ve Allah'ın azabından korkmandır."</p>
+        <p class="kaynak">📚 İbn Teymiyye, Mecmû'u'l-Fetâvâ, 20/132; Ebû Nuaym, Hilyetu'l-Evliyâ, 3/64.</p>
+      </div>
+      <p>Mümin kişi günahlarını küçümsemez, aksine onları büyük görür. İbn Mes'ûd radıyallahu anh şöyle demiştir:</p>
+      <div class="blok alim">
+        <span class="soyleyen">Abdullah bin Mes'ûd radıyallahu anh</span>
+        <p class="ar">إِنَّ الْمُؤْمِنَ يَرَى ذُنُوبَهُ كَأَنَّهُ قَاعِدٌ تَحْتَ جَبَلٍ يَخَافُ أَنْ يَقَعَ عَلَيْهِ، وَإِنَّ الْفَاجِرَ يَرَى ذُنُوبَهُ كَذُبَابٍ مَرَّ عَلَى أَنْفِهِ، فَقَالَ بِهِ هَكَذَا</p>
+        <p class="tr">"Şüphesiz mümin, günahlarını sanki altında oturduğu ve üzerine düşmesinden korktuğu bir dağ gibi görür. Fâcir ise günahlarını burnunun üzerinden geçen bir sinek gibi görür ve eliyle onu böylece uzaklaştırır."</p>
+        <p class="kaynak">📚 Buhârî, 6308 (Kitâbu'd-Daavât, Bâbu't-Tevbe).</p>
+      </div>
+    </li>
+
+    <li>Allah'ın isim ve sıfatlarını öğrenmek. Göklerin ve yerin yaratılışı hakkında tefekkür etmek. Allah'ın yaratması, kudreti ve rubûbiyyeti üzerinde düşünmek tevhidi kalpte kuvvetlendirir.</li>
+
+    <li>Kur'ân'ı tedebbür ederek okumak. Kur'ân'ı anlayarak, manaları üzerinde düşünerek ve onunla amel ederek okumak tevhidi kalpte kökleştirir. Hasan el-Basrî rahimehullah şöyle demiştir:
+      <div class="blok alim">
+        <span class="soyleyen">Hasan el-Basrî rahimehullah</span>
+        <p class="ar">وَمَا تَدَبُّرُ آيَاتِهِ إِلَّا اتِّبَاعُهُ بِعِلْمِهِ، وَاللَّهِ مَا هُوَ بِحِفْظِ حُرُوفِهِ وَإِضَاعَةِ حُدُودِهِ</p>
+        <p class="tr">"Âyetlerini tedebbür etmek, ancak onu bilerek ona tâbi olmakla olur. Vallahi bu, onun harflerini ezberleyip hükümlerini ve sınırlarını zayi etmek değildir."</p>
+        <p class="kaynak">📚 Abdurrezzâk, el-Musannef, 3/363; ayrıca İbnu'l-Mubârek, ez-Zuhd ve Firyâbî, Fadâilu'l-Kur'ân, s. 246.</p>
+      </div>
+    </li>
+
+    <li>Farzlardan sonra nâfile ibadetlerle meşgul olmak ve Allah'ı her hâlde devamlı olarak zikretmek. Çünkü nâfileler kulu Allah'a yaklaştırır ve kalpteki imanı ve tevhidi kuvvetlendirir. Muâz bin Cebel radıyallahu anh şöyle demiştir:
+      <div class="blok alim">
+        <span class="soyleyen">Muâz bin Cebel radıyallahu anh</span>
+        <p class="ar">مَا عَمِلَ آدَمِيٌّ عَمَلًا أَنْجَى لَهُ مِنْ عَذَابِ اللَّهِ مِنْ ذِكْرِ اللَّهِ</p>
+        <p class="tr">"Âdemoğlu, Allah'ın zikrinden daha çok kendisini Allah'ın azabından kurtaracak bir amel işlememiştir."</p>
+        <p class="kaynak">📚 Mâlik, Muvatta; Tirmizî ve İbn Mâce; Beyhakî, ed-Daavâtu'l-Kebîr, 1/81.</p>
+      </div>
+    </li>
+
+    <li>Allah'ın sevdiği şeyleri, kendi nefsinin sevdiği şeylere tercih etmek. Kulun arzusu ile Allah'ın emri karşı karşıya geldiğinde, Allah'ın sevdiğini öne almak. Hasan el-Basrî rahimehullah şöyle demiştir:
+      <div class="blok alim">
+        <span class="soyleyen">Hasan el-Basrî rahimehullah</span>
+        <p class="ar">اِعْلَمْ أَنَّكَ لَنْ تُحِبَّ اللَّهَ حَتَّى تُحِبَّ طَاعَتَهُ</p>
+        <p class="tr">"Bil ki, Allah'a itaati sevmedikçe Allah'ı sevmiş olamazsın."</p>
+        <p class="kaynak">📚 Hasan el-Basrî rahimehullah.</p>
+      </div>
+      <p>Kişi sevdiği şeyler arasında tercih yapmak zorunda kaldığında, bunlardan hangisini Allah'ın sevdiğini düşünmesi gerekir.</p>
+    </li>
+
+    <li>Açık ve gizli bütün nimetlerin Allah'tan geldiğini bilmek. Bu nimetleri hatırlamak ve Allah'a şükretmek. Bu, kulun kalbinde Allah'a olan sevgiyi ve tevhidi kuvvetlendirir.</li>
+
+    <li>Nefse dayanmamak. Allah'ın bize eksiklerimizi göstermesi, amel yapıp sonra kendimizi beğenmemizden daha hayırlıdır. Mutarrif bin Abdullah rahimehullah şöyle demiştir:
+      <div class="blok alim">
+        <span class="soyleyen">Mutarrif bin Abdullah bin eş-Şihhîr rahimehullah</span>
+        <p class="ar">لَأَنْ أَبِيتَ نَائِمًا وَأُصْبِحَ نَادِمًا أَحَبُّ إِلَيَّ مِنْ أَنْ أَبِيتَ قَائِمًا وَأُصْبِحَ مُعْجَبًا</p>
+        <p class="tr">"Geceyi uyuyarak geçirip sabah pişman olarak kalkmam, geceyi ibadetle geçirip sabah kendimi beğenmiş olarak kalkmamdan bana daha sevimlidir."</p>
+        <p class="kaynak">📚 Ebû Nuaym, Hilyetu'l-Evliyâ, 2/200.</p>
+      </div>
+      <p>Yani kul ibadetine güvenmez ve kendini büyük görmez. Her zaman Allah'ın fazlına ve yardımına muhtaç olduğunu bilir.</p>
+    </li>
+
+    <li>Hayırlı ve sâlih kişilerle oturup kalkmak ve onların nasihatlerinden istifade etmek. Bu kişilerin bazı eksiklikleri olsa da bunlara karşı sabırlı olmak gerekir. Sâlih kişilerle beraber olan kimse, istese de istemese de onlardan güzel istifadeler elde eder.
+      <div class="blok ayet">
+        <span class="soyleyen">Allah Teâlâ şöyle buyurmuştur</span>
+        <p class="ar">﴿وَاصْبِرْ نَفْسَكَ مَعَ الَّذِينَ يَدْعُونَ رَبَّهُمْ بِالْغَدَاةِ وَالْعَشِيِّ يُرِيدُونَ وَجْهَهُ﴾</p>
+        <p class="tr">"Rablerinin rızasını isteyerek sabah akşam O'na dua edenlerle beraber olmaya sabret."</p>
+        <p class="kaynak">📚 Kehf, 28.</p>
+      </div>
+      <div class="blok ayet">
+        <span class="soyleyen">Allah Teâlâ şöyle buyurmuştur</span>
+        <p class="ar">﴿يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَكُونُوا مَعَ الصَّادِقِينَ﴾</p>
+        <p class="tr">"Ey iman edenler! Allah'tan korkun ve sâdıklarla beraber olun."</p>
+        <p class="kaynak">📚 Tevbe, 119.</p>
+      </div>
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+        <p class="ar">الْمَرْءُ عَلَى دِينِ خَلِيلِهِ، فَلْيَنْظُرْ أَحَدُكُمْ مَنْ يُخَالِلُ</p>
+        <p class="tr">"Kişi dostunun dini üzeredir. Öyleyse sizden biri kiminle dostluk ettiğine dikkat etsin."</p>
+        <p class="kaynak">📚 Ebû Dâvûd, 4833; Tirmizî, 2378 (hasen).</p>
+      </div>
+      <div class="blok alim">
+        <span class="soyleyen">Abdullah bin Mes'ûd radıyallahu anh</span>
+        <p class="ar">اعْتَبِرُوا النَّاسَ بِأَخْدَانِهِمْ، فَإِنَّ الرَّجُلَ لَا يُخَادِنُ إِلَّا مَنْ يُعْجِبُهُ نَحْوُهُ</p>
+        <p class="tr">"İnsanları dostlarına göre değerlendirin. Çünkü kişi ancak hâlini ve yolunu beğendiği kimseyle dostluk eder."</p>
+        <p class="kaynak">📚 İbn Batta, el-İbânetu'l-Kubrâ, 2/477.</p>
+      </div>
+    </li>
+
+    <li>Kişiyi Allah'tan uzaklaştıran ve Allah ile kalbi arasına giren bütün meşguliyetlerden uzak durmak.
+      <div class="blok ayet">
+        <span class="soyleyen">Allah Teâlâ şöyle buyurmuştur</span>
+        <p class="ar">﴿يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تُلْهِكُمْ أَمْوَالُكُمْ وَلَا أَوْلَادُكُمْ عَنْ ذِكْرِ اللَّهِ وَمَنْ يَفْعَلْ ذَلِكَ فَأُولَئِكَ هُمُ الْخَاسِرُونَ﴾</p>
+        <p class="tr">"Ey iman edenler! Mallarınız ve çocuklarınız sizi Allah'ı zikretmekten alıkoymasın. Kim bunu yaparsa, işte onlar hüsrana uğrayanların ta kendileridir."</p>
+        <p class="kaynak">📚 Münâfikûn, 9.</p>
+      </div>
+      <p>Ne olursa olsun, ticaret olabilir, çocuk olabilir veya başka bir şey olabilir; bunların kişiyi Allah'tan uzaklaştırmaması gerekir. Kişi bu dünyanın kısa ve kalıcı olmadığını bilmeli ve gerçek hedefini unutmamalıdır.</p>
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+        <p class="ar">تَعِسَ عَبْدُ الدِّينَارِ، وَالدِّرْهَمِ، وَالْقَطِيفَةِ، وَالْخَمِيصَةِ، إِنْ أُعْطِيَ رَضِيَ، وَإِنْ لَمْ يُعْطَ لَمْ يَرْضَ</p>
+        <p class="tr">"Dinarın, dirhemin, kadifenin ve güzel elbisenin kulu helâk olsun. Kendisine verilirse razı olur, verilmezse razı olmaz."</p>
+        <p class="kaynak">📚 Buhârî, 2886.</p>
+      </div>
+      <p>Bu hadiste Resûlullah <span class="sav">ﷺ</span>, kalbi dünya şehvetlerine bağlanan, hırsı ve hedefi dünya olan kişilerden bahsetmektedir. Bu yüzden kişi dünyadaki gerçek hedefini unutmamalıdır.</p>
+    </li>
+
+    <li>Söz, yemek, bakış ve insanlarla fazla beraber olma gibi fazlalıkları terk etmek. Kişi kendisini bunlardan koruduğunda kalbini korur. Buna örnek olarak Ramazan ayında iftarda çok yiyen ve az yiyen kişilerin teravih namazındaki hâllerine bakılabilir.
+      <div class="blok alim">
+        <span class="soyleyen">İbn Kayyim rahimehullah</span>
+        <p class="ar">إِمْسَاكُ فُضُولِ النَّظَرِ وَالْكَلَامِ وَالطَّعَامِ وَمُخَالَطَةِ النَّاسِ، فَإِنَّ الشَّيْطَانَ إِنَّمَا يَتَسَلَّطُ عَلَى ابْنِ آدَمَ وَيَنَالُ مِنْهُ غَرَضَهُ مِنْ هَذِهِ الْأَبْوَابِ الْأَرْبَعَةِ</p>
+        <p class="tr">"Fazla bakmaktan, fazla konuşmaktan, fazla yemekten ve insanlarla gereğinden fazla beraber olmaktan sakınmak gerekir. Çünkü şeytan, Âdemoğluna ancak bu dört kapıdan musallat olur ve maksadına bu kapılardan ulaşır."</p>
+        <p class="kaynak">📚 İbn Kayyim, Bedâiu'l-Fevâid, 2/816-817.</p>
+      </div>
+    </li>
+
+    <li>Kendi nefsi için sevdiğini kardeşi için de sevmek.
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+        <p class="ar">فَمَنْ أَحَبَّ أَنْ يُزَحْزَحَ عَنِ النَّارِ وَيُدْخَلَ الْجَنَّةَ، فَلْتَأْتِهِ مَنِيَّتُهُ وَهُوَ يُؤْمِنُ بِاللَّهِ وَالْيَوْمِ الْآخِرِ، وَلْيَأْتِ إِلَى النَّاسِ الَّذِي يُحِبُّ أَنْ يُؤْتَى إِلَيْهِ</p>
+        <p class="tr">"Kim ateşten uzaklaştırılmayı ve cennete girdirilmeyi istiyorsa, ölümü Allah'a ve âhiret gününe iman etmiş hâlde gelsin. İnsanlara da kendisine nasıl davranılmasını istiyorsa öyle davransın."</p>
+        <p class="kaynak">📚 Muslim, 1844.</p>
+      </div>
+      <div class="blok alim">
+        <span class="soyleyen">İbn Receb rahimehullah</span>
+        <p class="ar">وَحَدِيثُ أَنَسٍ الَّذِي نَتَكَلَّمُ الْآنَ فِيهِ يَدُلُّ عَلَى أَنَّ الْمُؤْمِنَ يَسُرُّهُ مَا يَسُرُّ أَخَاهُ الْمُؤْمِنَ، وَيُرِيدُ لِأَخِيهِ الْمُؤْمِنِ مَا يُرِيدُهُ لِنَفْسِهِ مِنَ الْخَيْرِ، وَهَذَا كُلُّهُ إِنَّمَا يَأْتِي مِنْ كَمَالِ سَلَامَةِ الصَّدْرِ مِنَ الْغِلِّ وَالْغِشِّ وَالْحَسَدِ</p>
+        <p class="tr">"Üzerinde konuştuğumuz Enes hadîsi şuna delalet etmektedir: mümini, mümin kardeşini sevindiren şey sevindirir. Mümin kardeşi için, kendisi için istediği hayrı ister. Bütün bunlar ancak kalbin kin, hile ve hasetten tamamen selâmette olmasından kaynaklanır."</p>
+        <p class="kaynak">📚 İbn Receb, Câmiu'l-Ulûm ve'l-Hikem, 13. hadîs, s. 286.</p>
+      </div>
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+        <p class="ar">إِذَا رَأَى أَحَدُكُمْ مِنْ أَخِيهِ مَا يُعْجِبُهُ، فَلْيَدْعُ لَهُ بِالْبَرَكَةِ</p>
+        <p class="tr">"Biriniz kardeşinde hoşuna giden bir şey gördüğü zaman, onun için bereket duasında bulunsun."</p>
+        <p class="kaynak">📚 İbn Mâce, 3509 (sahîh).</p>
+      </div>
+    </li>
+
+    <li>Kalbin müminlere karşı haset, kibir, gurur ve kendini beğenme gibi kötü duygulardan selâmette olması. Kalbin temiz olması gerekir; tıpkı bir çocuğun kalbi gibi kin ve nefret taşımamalıdır. Bu, iman ve cennet ehlinin sıfatlarındandır.
+      <div class="blok ayet">
+        <span class="soyleyen">Allah Teâlâ şöyle buyurmuştur</span>
+        <p class="ar">﴿وَلَا تَجْعَلْ فِي قُلُوبِنَا غِلًّا لِلَّذِينَ آمَنُوا رَبَّنَا إِنَّكَ رَءُوفٌ رَحِيمٌ﴾</p>
+        <p class="tr">"Rabbimiz! Kalplerimizde iman edenlere karşı hiçbir kin bırakma. Rabbimiz! Şüphesiz sen çok şefkatli ve çok merhametlisin."</p>
+        <p class="kaynak">📚 Haşr, 10.</p>
+      </div>
+    </li>
+
+    <li>Nimet anında şükretmek, imtihan ve musibet anında sabretmek ve Allah'ın takdir ettiği şeylere razı olmak.
+      <div class="blok ayet">
+        <span class="soyleyen">Allah Teâlâ şöyle buyurmuştur</span>
+        <p class="ar">﴿مَا أَصَابَ مِنْ مُصِيبَةٍ إِلَّا بِإِذْنِ اللَّهِ وَمَنْ يُؤْمِنْ بِاللَّهِ يَهْدِ قَلْبَهُ﴾</p>
+        <p class="tr">"Allah'ın izni olmadan hiçbir musibet meydana gelmez. Kim Allah'a iman ederse, Allah onun kalbini hidayete erdirir."</p>
+        <p class="kaynak">📚 Teğâbun, 11.</p>
+      </div>
+      <p>Alkame rahimehullah bu âyetin tefsirinde şöyle demiştir:</p>
+      <div class="blok alim">
+        <span class="soyleyen">Alkame rahimehullah</span>
+        <p class="ar">هُوَ الرَّجُلُ تُصِيبُهُ الْمُصِيبَةُ فَيَعْلَمُ أَنَّهَا مِنْ عِنْدِ اللَّهِ فَيَرْضَى وَيُسَلِّمُ</p>
+        <p class="tr">"Bu, kendisine bir musibet isabet eden, onun Allah katından olduğunu bilen, ardından razı olan ve teslimiyet gösteren kimsedir."</p>
+        <p class="kaynak">📚 Beyhakî, es-Sunenu'l-Kubrâ, 4/110; İbn Teymiyye, Mecmû'u'l-Fetâvâ, 2/109.</p>
+      </div>
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+        <p class="ar">عَجَبًا لِأَمْرِ الْمُؤْمِنِ، إِنَّ أَمْرَهُ كُلَّهُ لَهُ خَيْرٌ، وَلَيْسَ ذَلِكَ لِأَحَدٍ إِلَّا لِلْمُؤْمِنِ، إِنْ أَصَابَتْهُ سَرَّاءُ شَكَرَ فَكَانَ خَيْرًا لَهُ، وَإِنْ أَصَابَتْهُ ضَرَّاءُ صَبَرَ فَكَانَ خَيْرًا لَهُ</p>
+        <p class="tr">"Müminin işi ne şaşırtıcıdır! Onun bütün işi kendisi için hayırdır. Bu, müminden başkası için değildir. Kendisine bir nimet gelirse şükreder, bu onun için hayır olur. Kendisine bir sıkıntı gelirse sabreder, bu da onun için hayır olur."</p>
+        <p class="kaynak">📚 Muslim, 2999.</p>
+      </div>
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+        <p class="ar">إِنَّ الرَّجُلَ لَيَكُونُ لَهُ عِنْدَ اللَّهِ الْمَنْزِلَةُ، فَمَا يَبْلُغُهَا بِعَمَلٍ، فَمَا يَزَالُ اللَّهُ يَبْتَلِيهِ بِمَا يَكْرَهُ حَتَّى يُبَلِّغَهُ إِيَّاهَا</p>
+        <p class="tr">"Şüphesiz bir kulun Allah katında bir derecesi olur. Ameliyle o dereceye ulaşamaz. Bunun üzerine Allah, onu hoşlanmadığı şeylerle imtihan etmeye devam eder ve sonunda onu o dereceye ulaştırır."</p>
+        <p class="kaynak">📚 İbn Hibbân, 2908; Hâkim, el-Mustedrek.</p>
+      </div>
+      <p>Başka bir rivayette Resûlullah <span class="sav">ﷺ</span> şöyle buyurmuştur:</p>
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+        <p class="ar">إِنَّ الْعَبْدَ إِذَا سَبَقَتْ لَهُ مِنَ اللَّهِ مَنْزِلَةٌ لَمْ يَبْلُغْهَا بِعَمَلِهِ، ابْتَلَاهُ اللَّهُ فِي جَسَدِهِ أَوْ فِي مَالِهِ أَوْ فِي وَلَدِهِ، ثُمَّ صَبَّرَهُ عَلَى ذَلِكَ، حَتَّى يُبَلِّغَهُ الْمَنْزِلَةَ الَّتِي سَبَقَتْ لَهُ مِنَ اللَّهِ تَعَالَى</p>
+        <p class="tr">"Şüphesiz kul için Allah katında önceden takdir edilmiş bir derece bulunur da ameliyle o dereceye ulaşamazsa, Allah onu bedeninde, malında veya çocuğunda bir musibetle imtihan eder. Sonra ona bu musibete karşı sabır verir ve böylece onu Allah Teâlâ'nın kendisi için önceden takdir ettiği dereceye ulaştırır."</p>
+        <p class="kaynak">📚 Ebû Dâvûd, 3090 (sahîh); Ahmed, el-Musned, 22338; Beyhakî, es-Sunenu'l-Kubrâ, 3/524.</p>
+      </div>
+    </li>
+
+    <li>Günah işlendiğinde Allah'a dönmek, tevbe etmek ve O'na yönelmek.
+      <div class="blok ayet">
+        <span class="soyleyen">Allah Teâlâ şöyle buyurmuştur</span>
+        <p class="ar">﴿وَالَّذِينَ إِذَا فَعَلُوا فَاحِشَةً أَوْ ظَلَمُوا أَنْفُسَهُمْ ذَكَرُوا اللَّهَ فَاسْتَغْفَرُوا لِذُنُوبِهِمْ وَمَنْ يَغْفِرُ الذُّنُوبَ إِلَّا اللَّهُ﴾</p>
+        <p class="tr">"Onlar bir kötülük yaptıkları veya nefislerine zulmettikleri zaman Allah'ı hatırlar ve günahları için bağışlanma dilerler. Günahları Allah'tan başka kim bağışlayabilir?"</p>
+        <p class="kaynak">📚 Âl-i İmrân, 135.</p>
+      </div>
+      <p>Allah Teâlâ'nın şu sözü üzerinde düşün:</p>
+      <div class="vurgu"><span class="ar-ic" dir="rtl">(وَمَنْ يَغْفِرُ الذُّنُوبَ إِلَّا اللَّهُ)</span> "Günahları Allah'tan başka kim bağışlayabilir?"</div>
+      <p>Bunda, kişi günah işlediği zaman kalbinin yalnızca Allah'a bağlanması vardır. Bu da tevhidi tahkik etmenin bir parçasıdır.</p>
+
+      <p>İbn Kayyim rahimehullah şöyle demiştir:</p>
+      <div class="blok alim">
+        <span class="soyleyen">İbn Kayyim rahimehullah</span>
+        <p class="ar">وَهَذَا مَعْنَى قَوْلِ بَعْضِ السَّلَفِ: إِنَّ الْعَبْدَ لَيَعْمَلُ الذَّنْبَ يَدْخُلُ بِهِ الْجَنَّةَ، وَيَعْمَلُ الْحَسَنَةَ يَدْخُلُ بِهَا النَّارَ. قَالُوا: كَيْفَ؟ قَالَ: يَعْمَلُ الذَّنْبَ فَلَا يَزَالُ نُصْبَ عَيْنَيْهِ، خَائِفًا مِنْهُ مُشْفِقًا وَجِلًا بَاكِيًا نَادِمًا، مُسْتَحْيِيًا مِنْ رَبِّهِ تَعَالَى، نَاكِسَ الرَّأْسِ بَيْنَ يَدَيْهِ، مُنْكَسِرَ الْقَلْبِ لَهُ؛ فَيَكُونُ ذَلِكَ الذَّنْبُ سَبَبَ سَعَادَةِ الْعَبْدِ وَفَلَاحِهِ… وَيَفْعَلُ الْحَسَنَةَ فَلَا يَزَالُ يَمُنُّ بِهَا عَلَى رَبِّهِ، وَيَتَكَبَّرُ بِهَا، وَيَرَى نَفْسَهُ، وَيُعْجَبُ بِهَا، وَيَسْتَطِيلُ بِهَا، وَيَقُولُ: فَعَلْتُ وَفَعَلْتُ؛ فَيُورِثُهُ ذَلِكَ مِنَ الْعُجْبِ وَالْكِبْرِ وَالْفَخْرِ وَالِاسْتِطَالَةِ مَا يَكُونُ سَبَبَ هَلَاكِهِ</p>
+        <p class="tr">"Bu, selefin bazılarının şu sözünün manasıdır: 'Kul öyle bir günah işler ki onun sebebiyle cennete girer; öyle bir iyilik yapar ki onun sebebiyle cehenneme girer.' Onlara: 'Bu nasıl olur?' denildi. Dedi ki: Kul bir günah işler ve o günah sürekli gözünün önünde durur; ondan korkar, endişe duyar, ürperir, ağlar, pişman olur, Rabbinden haya eder, O'nun huzurunda başı önde ve kalbi kırık olur. Böylece o günah, kulun saadetinin ve kurtuluşunun sebebi olur… Bir iyilik yapar da onu sürekli Rabbine karşı başa kakar, onunla kibirlenir, kendini bir şey görür, onunla kendini beğenir, onunla böbürlenir ve 'şunu yaptım, bunu yaptım' der. Bu ona öyle bir ucub, kibir, övünme ve büyüklenme kazandırır ki helâkinin sebebi olur."</p>
+        <p class="kaynak">📚 İbn Kayyim, el-Vâbilu's-Sayyib mine'l-Kelimi't-Tayyib, s. 9-10.</p>
+      </div>
+
+      <p>Aynı manayı <em>Medâricu's-Sâlikîn</em> adlı eserinde de şöyle açıklamıştır:</p>
+      <div class="blok alim">
+        <span class="soyleyen">İbn Kayyim rahimehullah</span>
+        <p class="ar">وَلَعَلَّ كَسْرَتَهُ بِذَنْبِهِ، وَمَا أَحْدَثَ لَهُ مِنَ الذِّلَّةِ وَالْخُضُوعِ، وَالْإِزْرَاءِ عَلَى نَفْسِهِ، وَالتَّخَلُّصِ مِنْ مَرَضِ الدَّعْوَى وَالْكِبْرِ وَالْعُجْبِ، وَوُقُوفِهِ بَيْنَ يَدَيِ اللَّهِ نَاكِسَ الرَّأْسِ خَاشِعَ الطَّرْفِ مُنْكَسِرَ الْقَلْبِ، أَنْفَعُ لَهُ وَخَيْرٌ لَهُ مِنْ صَوْلَةِ طَاعَتِكَ وَتَكَثُّرِكَ بِهَا… فَذَنْبٌ تَذِلُّ بِهِ لَدَيْهِ أَحَبُّ إِلَيْهِ مِنْ طَاعَةٍ تُدِلُّ بِهَا عَلَيْهِ، وَأَنِينُ الْمُذْنِبِينَ أَحَبُّ إِلَيْهِ مِنْ زَجَلِ الْمُسَبِّحِينَ الْمُدِلِّينَ</p>
+        <p class="tr">"Belki de kulun günahıyla kırılması, bunun kendisinde meydana getirdiği zillet, boyun eğme, nefsini küçük görme, iddia hastalığından, kibirden ve kendini beğenmekten kurtulma, Allah'ın huzurunda başı önde, gözü yere eğik ve kalbi kırık durması, senin itaatinin verdiği gurur ve onunla çoğalma hissinden daha faydalı ve daha hayırlıdır… Kendisiyle Allah'ın önünde zelil olduğun bir günah, Allah'a karşı kendini büyük gördüğün bir itaatten O'na daha sevimlidir. Günahkârların iniltisi, kendini beğenen tesbih edicilerin gürültüsünden Allah'a daha sevimlidir."</p>
+        <p class="kaynak">📚 İbn Kayyim, Medâricu's-Sâlikîn, 1/272.</p>
+      </div>
+
+      <div class="ozet">
+        <p>Demek ki tevbeden sonra günahın geride bıraktığı faydalı neticelerden biri, kulda zillet, kalp kırıklığı, boyun eğme ve Allah'a muhtaçlık meydana getirmesidir. Bu manalar ise kulluğun ve tevhidin özündendir.</p>
+      </div>
+    </li>
+
+    <li>Sâlih amelleri çoğaltmak.
+      <p>Sâlih amelleri çoğaltmak, tevhidin kalpte kökleşmesinin sebeplerindendir. Çünkü itaat imanı artırır. İman arttıkça kalbin ihlâs, muhabbet, havf, recâ, tevekkül ve inâbe gibi amelleri de artar. Bunlar tevhidin en büyük şubelerindendir.</p>
+      <p>Aynı şekilde bir iyilik başka bir iyiliğe götürür. Böylece kalbin imanı ve istikameti artar.</p>
+      <p>Bu yüzden Muâz bin Cebel radıyallahu anh şöyle demiştir:</p>
+      <div class="blok alim">
+        <span class="soyleyen">Muâz bin Cebel radıyallahu anh</span>
+        <p class="ar">اجْلِسْ بِنَا نُؤْمِنْ سَاعَةً</p>
+        <p class="tr">"Gel, bir süre oturalım ve imanımızı artıralım."</p>
+        <p class="kaynak">📚 Buhârî, Kitâbu'l-Îmân (ta'lîkan); Lâlekâî, Şerhu Usûli İ'tikâdi Ehli's-Sunne, 5/1014.</p>
+      </div>
+      <p>"Bir süre iman edelim" sözüyle kastedilen şudur: Allah'ı zikretmek ve imanı kuvvetlendirip artıran şeylerle meşgul olmak için oturalım.</p>
+      <p>Selefin de bu konuda birçok sözü vardır. Umeyr bin Habîb el-Hatmî radıyallahu anh şöyle demiştir:</p>
+      <div class="blok alim">
+        <span class="soyleyen">Umeyr bin Habîb el-Hatmî radıyallahu anh</span>
+        <p class="ar">الْإِيمَانُ يَزِيدُ وَيَنْقُصُ، فَقِيلَ لَهُ: وَمَا زِيَادَتُهُ وَنُقْصَانُهُ؟ قَالَ: إِذَا ذَكَرْنَا رَبَّنَا وَخَشِينَاهُ فَذَلِكَ زِيَادَتُهُ، وَإِذَا غَفَلْنَا وَنَسِينَا وَضَيَّعْنَا فَذَلِكَ نُقْصَانُهُ</p>
+        <p class="tr">"İman artar ve eksilir." Kendisine: "İmanın artması ve eksilmesi nasıl olur?" denildi. Şöyle cevap verdi: "Rabbimizi zikrettiğimiz ve O'ndan korktuğumuz zaman bu, imanın artmasıdır. Gaflete düştüğümüz, unuttuğumuz ve ihmalkâr davrandığımız zaman ise bu, imanın eksilmesidir."</p>
+        <p class="kaynak">📚 Beyhakî, Şuabu'l-Îmân, 1/154; İbn Teymiyye, Mecmû'u'l-Fetâvâ, 7/235.</p>
+      </div>
+    </li>
+
+    <li>Resûlullah'ın <span class="sav">ﷺ</span> sünnetine külliyen tâbi olmak ve ona sımsıkı sarılmak.
+      <p>Sünnet her şeyden önce gelir. Âlimlerin sözleri bile, Resûlullah'ın <span class="sav">ﷺ</span> sözünün önüne geçirilmez.</p>
+      <div class="blok alim">
+        <span class="soyleyen">İmam el-Evzâî rahimehullah</span>
+        <p class="ar">لَا يَسْتَقِيمُ الْإِيمَانُ إِلَّا بِالْقَوْلِ، وَلَا يَسْتَقِيمُ الْإِيمَانُ وَالْقَوْلُ إِلَّا بِالْعَمَلِ، وَلَا يَسْتَقِيمُ الْإِيمَانُ وَالْقَوْلُ وَالْعَمَلُ إِلَّا بِنِيَّةٍ مُوَافِقَةٍ لِلسُّنَّةِ</p>
+        <p class="tr">"İman ancak söz ile düzgün olur. İman ve söz ancak amel ile düzgün olur. İman, söz ve amel ise ancak sünnete uygun bir niyet ile düzgün olur."</p>
+        <p class="kaynak">📚 Lâlekâî, Şerhu Usûli İ'tikâdi Ehli's-Sunne; İbn Batta, el-İbânetu'l-Kubrâ, 2/807; İbn Teymiyye, Mecmû'u'l-Fetâvâ, 7/296.</p>
+      </div>
+    </li>
+
+    <li>Tevhidi tazim etmek ve ona gereken önemi vermek.
+      <p>İnsan tevhidi ne kadar ön planda tutar, onu hayatının önceliği hâline getirir ve bütün söz ve amellerini tevhid üzere bina ederse, tevhid de kalbinde o kadar sağlam bir şekilde yerleşir.</p>
+      <div class="blok alim">
+        <span class="soyleyen">Mucîb b. Mûsâ el-Isbahânî rahimehullah</span>
+        <p class="ar">كُنْتُ عَدِيلَ سُفْيَانَ الثَّوْرِيِّ إِلَى مَكَّةَ، فَكَانَ يُكْثِرُ الْبُكَاءَ، فَقُلْتُ لَهُ: يَا أَبَا عَبْدِ اللَّهِ، بُكَاؤُكَ هَذَا خَوْفًا مِنَ الذُّنُوبِ؟ قَالَ: فَأَخَذَ عُودًا مِنَ الْمَحْمَلِ فَرَمَى بِهِ وَقَالَ: لَذُنُوبِي أَهْوَنُ عَلَيَّ مِنْ هَذَا، وَلَكِنِّي أَخَافُ أَنْ أُسْلَبَ التَّوْحِيدَ</p>
+        <p class="tr">"Süfyân es-Sevrî ile birlikte Mekke'ye yolculuk yapıyordum. Yol boyunca çok ağlıyordu. Ona: 'Ey Ebû Abdullah! Bu kadar ağlaman günahlarından korktuğun için mi?' diye sordum. Bunun üzerine mahmilden bir çubuk alıp yere attı ve şöyle dedi: 'Günahlarım benim nazarımda bundan daha hafiftir. Fakat ben, tevhidin benden alınmasından korkuyorum.'"</p>
+        <p class="kaynak">📚 Ebû Nuaym, Ahbâru Isbahân, 2/295; Zehebî, Târîhu'l-İslâm, 14/381.</p>
+      </div>
+      <p>Selef tevhide büyük önem verir, onun kıymetini bilir ve tevhidlerinin kendilerinden alınmasından korkarlardı. Bu sebeple tevhidi tahkik etmeye ve onun gereklerini yerine getirmeye büyük özen gösterirlerdi.</p>
+      <div class="blok alim">
+        <span class="soyleyen">İbn Receb rahimehullah</span>
+        <p class="ar">إِخْوَانِي! اجْتَهِدُوا الْيَوْمَ فِي تَحْقِيقِ التَّوْحِيدِ، فَإِنَّهُ لَا يُوصِلُ إِلَى اللَّهِ سِوَاهُ، وَاحْرِصُوا عَلَى الْقِيَامِ بِحُقُوقِهِ، فَإِنَّهُ لَا يُنْجِي مِنْ عَذَابِ اللَّهِ إِلَّا إِيَّاهُ</p>
+        <p class="tr">"Kardeşlerim! Bugün tevhidi tahkik etmek için gayret gösterin. Çünkü Allah'a ulaştıran ondan başkası değildir. Tevhidin haklarını yerine getirmeye özen gösterin. Çünkü Allah'ın azabından tevhid dışında hiçbir şey kurtarmaz."</p>
+        <p class="kaynak">📚 İbn Receb, Kelimetu'l-İhlâs ve Tahkîku Ma'nâhâ, s. 71.</p>
+      </div>
+    </li>
+  </ol>
+
+</section>
+
+<footer>
+  <div class="marka">İlim Dersleri</div>
+  <div>Lâ ilâhe illallah'ın Şartları</div>
+</footer>
+
+</div>
+</body>
+</html>

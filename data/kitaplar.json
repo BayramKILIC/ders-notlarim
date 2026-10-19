@@ -54,11 +54,12 @@
       "renk": "#2F5E47",
       "bolumler": [
         {
-          "id": "1",
-          "no": 1,
-          "baslik": "Lâ ilâhe illallah'ın Şartları",
-          "alt": "Mukaddimeler · Tevhid ile ilgili meseleler",
-          "dosya": "01-sartlar.html"
+          "id": "2",
+          "etiket": "2",
+          "kisa": "İkinci Mukaddime",
+          "baslik": "Tevhid ile ilgili meseleler",
+          "alt": "İkinci Mukaddime",
+          "dosya": "02-ikinci-mukaddime.html"
         }
       ]
     },
