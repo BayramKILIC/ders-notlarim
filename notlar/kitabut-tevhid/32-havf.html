@@ -1,0 +1,1973 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kitâbu't-Tevhîd — Bâbu kavlillâhi teâlâ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#123a5f;
+    --navy-soft:#1d5183;
+    --ink:#20262e;
+    --ink-soft:#4a5462;
+    --paper:#fbfaf7;
+    --card:#ffffff;
+    --rule:#e2ddd3;
+
+    --green:#1e6b46;
+    --green-bg:#eef7f1;
+    --green-edge:#a8d3bb;
+
+    --amber:#8a5a12;
+    --amber-bg:#fdf5e6;
+    --amber-edge:#e2c184;
+
+    --blue:#1a4f80;
+    --blue-bg:#eef4fa;
+    --blue-edge:#a9c6e2;
+
+    --bordo:#75194c;
+    --bordo-bg:#fbf2f6;
+    --bordo-edge:#e3c3d4;
+
+    --red:#8d2f2f;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Source Serif 4","Cambria","Georgia",serif;
+    font-size:18px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .sayfa{
+    max-width:820px;
+    margin:0 auto;
+    padding:0 26px 90px;
+  }
+
+  /* ---------- KAPAK ---------- */
+  header.kapak{
+    color:var(--bordo);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:56px 0;
+    margin-bottom:60px;
+  }
+  header.kapak .marka{
+    font-size:.95rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:#d54220;
+    font-weight:600;
+    line-height:1.7;
+    max-width:26ch;
+  }
+  header.kapak .marka-cizgi{
+    width:120px;
+    height:1px;
+    background:var(--rule);
+    margin:26px auto 34px;
+  }
+  header.kapak h1{
+    font-size:clamp(3.3rem,9.5vw,5.8rem);
+    line-height:1.1;
+    color:var(--bordo);
+    margin:0;
+    font-weight:700;
+    letter-spacing:-.015em;
+    max-width:15ch;
+  }
+  header.kapak .altbaslik{
+    font-size:1.16rem;
+    color:var(--bordo);
+    font-style:italic;
+    margin:34px 0 0;
+    max-width:38ch;
+    line-height:1.7;
+  }
+  header.kapak .kunye{
+    margin-top:0;
+    padding-top:72px;
+    font-size:.94rem;
+    color:var(--bordo);
+    letter-spacing:.09em;
+  }
+  header.kapak .kapak-ayet{
+    max-width:540px;
+    margin:0 auto 10px;
+    font-size:1.04rem;
+    line-height:1.75;
+    letter-spacing:0;
+    font-style:italic;
+    color:var(--bordo);
+  }
+  header.kapak .kapak-ayet-kaynak{
+    margin:0;
+    font-size:.86rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  header.kapak .kunye .cizgi{
+    width:56px;
+    height:2px;
+    background:var(--bordo);
+    margin:0 auto 18px;
+  }
+  .besmele{
+    font-family:"Scheherazade New",serif;
+    font-size:2.5rem;
+    color:var(--bordo);
+    direction:rtl;
+    margin:0 0 46px;
+  }
+
+  /* ---------- NÂKID ---------- */
+  section.nakid{margin-bottom:70px;}
+
+  .nakid-baslik{
+    background:var(--navy);
+    color:#fff;
+    border-radius:4px;
+    padding:22px 28px;
+    margin-bottom:34px;
+  }
+  .nakid-baslik .etiket{
+    display:block;
+    font-size:.74rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    opacity:.72;
+    margin-bottom:8px;
+  }
+  .nakid-baslik h2{
+    margin:0;
+    font-size:1.42rem;
+    line-height:1.45;
+    font-weight:600;
+  }
+
+  /* ---------- METİN (müellifin sözü) ---------- */
+  .metin{
+    background:var(--bordo-bg);
+    border:1px solid var(--bordo-edge);
+    border-top:5px solid var(--bordo);
+    border-radius:4px;
+    padding:28px 32px 26px;
+    margin:0 0 20px;
+  }
+  .metin .metin-etiket{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px 12px;
+    font-size:.78rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--bordo);
+    margin-bottom:18px;
+  }
+  .metin .metin-etiket .rozet{
+    background:var(--bordo);
+    color:#fff;
+    padding:3px 11px;
+    border-radius:3px;
+    letter-spacing:.2em;
+  }
+  .metin .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:2rem;
+    line-height:2.1;
+    direction:rtl;
+    text-align:right;
+    color:var(--bordo);
+    margin:0 0 18px;
+  }
+  .metin .tr{
+    margin:0;
+    padding-top:16px;
+    border-top:1px dotted var(--bordo-edge);
+    font-size:1.06rem;
+  }
+
+  /* ---------- ŞERH AYRACI ---------- */
+  .serh-ayrac{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin:54px 0 10px;
+    color:var(--navy);
+  }
+  .serh-ayrac::before,.serh-ayrac::after{
+    content:"";
+    flex:1;
+    height:2px;
+    background:var(--navy-soft);
+    opacity:.35;
+  }
+  .serh-ayrac span{
+    font-size:1.05rem;
+    font-weight:700;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+  }
+
+  h3.altbolum{
+    font-size:1.55rem;
+    line-height:1.4;
+    color:var(--navy);
+    margin:60px 0 20px;
+    padding-bottom:12px;
+    border-bottom:3px solid var(--rule);
+    font-weight:700;
+  }
+  h3.altbolum .no{
+    display:inline-block;
+    min-width:38px;
+    height:38px;
+    line-height:38px;
+    text-align:center;
+    background:var(--navy-soft);
+    color:#fff;
+    border-radius:50%;
+    font-size:1rem;
+    margin-right:13px;
+    vertical-align:3px;
+  }
+
+  p{margin:0 0 17px;}
+
+  h4.kisim{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:1.2rem;
+    color:var(--navy-soft);
+    margin:34px 0 12px;
+    font-weight:700;
+  }
+  h4.kisim .no{
+    flex:0 0 auto;
+    width:28px;
+    height:28px;
+    line-height:25px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    background:var(--card);
+    font-size:.82rem;
+  }
+  .kisim-govde{
+    border-left:2px solid var(--rule);
+    margin-left:13px;
+    padding-left:27px;
+  }
+
+  .delil{
+    display:grid;
+    grid-template-columns:34px 1fr;
+    gap:0 18px;
+    margin:30px 0;
+    padding-bottom:8px;
+    border-bottom:1px dotted var(--rule);
+  }
+  .delil:last-of-type{border-bottom:none;}
+  .delil > .no{
+    width:34px;
+    height:34px;
+    line-height:34px;
+    text-align:center;
+    border-radius:50%;
+    background:var(--navy);
+    color:#fff;
+    font-size:.88rem;
+    font-weight:700;
+    margin-top:2px;
+  }
+  .delil > .govde > .blok:first-child{margin-top:0;}
+  .delil-etiket{
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--navy);
+    margin:6px 0 12px;
+  }
+  .delil > .govde > .delil-etiket + .blok{margin-top:0;}
+
+  .ikaz{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-left:5px solid var(--red);
+    border-radius:4px;
+    padding:20px 26px 6px;
+    margin:28px 0;
+  }
+  .ikaz .ikaz-etiket{
+    display:block;
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--red);
+    margin-bottom:10px;
+  }
+  .ikaz ol.sayili{margin:10px 0 14px;}
+  ol.sayili li p.alt-tanim{margin:10px 0 0;padding-left:14px;border-left:2px solid var(--rule);}
+  ol.sayili > li > p{margin:12px 0 0;}
+  ol.sayili li .blok{margin:16px 0 8px;}
+  ul.madde li .blok{margin:14px 0 8px;}
+  ol.sayili > li ul.madde{margin:12px 0 4px;}
+  h4.kisim .baslik-alt{font-weight:400;color:var(--ink);}
+  h4.kisim .lafz-ar{font-family:"Scheherazade New",serif;font-weight:700;font-size:1.08em;line-height:1;color:var(--bordo);margin-left:8px;white-space:nowrap;}
+  .ar-ic{font-family:"Scheherazade New",serif;font-size:1.25em;line-height:1;unicode-bidi:isolate;display:inline-block;white-space:nowrap;}
+  .lafz{margin:22px 0;text-align:center;}
+  .lafz .ar-buyuk{display:block;font-family:"Scheherazade New",serif;font-size:1.7rem;line-height:1.9;color:var(--bordo);}
+  .lafz .lafz-tr{display:block;margin-top:2px;color:var(--ink-soft);}
+  .bolum-baslik{
+    margin:60px 0 28px;
+    padding:15px 18px;
+    text-align:center;
+    font-size:1.3rem;
+    font-weight:700;
+    line-height:1.4;
+    color:var(--navy);
+    background:var(--card);
+    border-top:2px solid var(--navy-soft);
+    border-bottom:2px solid var(--navy-soft);
+  }
+  .notkutu{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--navy-soft);border-radius:3px;padding:22px 24px 6px;margin:32px 0;}
+  .notkutu .not-etiket{display:block;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--navy-soft);margin-bottom:12px;}
+  ul.ikili{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:9px 30px;list-style:none;margin:26px 0;padding:0;}
+  ul.ikili li{position:relative;padding-left:18px;line-height:1.7;}
+  ul.ikili li::before{content:"";position:absolute;left:0;top:11px;width:6px;height:6px;background:var(--navy-soft);transform:rotate(45deg);}
+
+  /* ---------- VURGU ---------- */
+  .vurgu{
+    font-size:1.24rem;
+    line-height:1.7;
+    color:var(--navy);
+    font-weight:600;
+    border-left:4px solid var(--navy-soft);
+    padding:6px 0 6px 20px;
+    margin:30px 0;
+  }
+  .vurgu-buyuk{
+    font-size:1.42rem;
+    line-height:1.6;
+    text-align:center;
+    color:var(--navy);
+    font-weight:700;
+    margin:38px 0;
+    padding:26px 22px;
+    background:var(--card);
+    border-top:2px solid var(--navy-soft);
+    border-bottom:2px solid var(--navy-soft);
+  }
+  strong{color:var(--navy);font-weight:700;}
+  .sav{font-family:"Scheherazade New",serif;font-size:1.2em;line-height:1;font-weight:400;}
+
+  /* ---------- ALINTI BLOKLARI ---------- */
+  .blok{
+    border-radius:4px;
+    padding:22px 26px;
+    margin:26px 0;
+    border-left-width:5px;
+    border-left-style:solid;
+  }
+  .blok .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:1.75rem;
+    line-height:2.05;
+    direction:rtl;
+    text-align:right;
+    margin-bottom:14px;
+  }
+  .blok .tr{margin:0 0 12px;}
+  .blok .kaynak{
+    font-size:.9rem;
+    color:var(--ink-soft);
+    font-style:italic;
+    margin:0;
+    padding-top:10px;
+    border-top:1px dotted currentColor;
+  }
+  .blok .soyleyen{
+    display:block;
+    font-size:.79rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:600;
+    margin-bottom:13px;
+  }
+
+  .ayet{background:var(--green-bg);border-left-color:var(--green-edge);}
+  .ayet .ar,.ayet .soyleyen{color:var(--green);}
+
+  .alim{background:var(--amber-bg);border-left-color:var(--amber-edge);}
+  .alim .ar,.alim .soyleyen{color:var(--amber);}
+
+  .hadis{background:var(--blue-bg);border-left-color:var(--blue-edge);}
+  .hadis .ar,.hadis .soyleyen{color:var(--blue);}
+
+  /* ---------- LİSTELER ---------- */
+  ul.madde{
+    list-style:none;
+    padding:0;
+    margin:20px 0;
+  }
+  ul.madde li{
+    position:relative;
+    padding:7px 0 7px 26px;
+  }
+  ul.madde li::before{
+    content:"◆";
+    position:absolute;
+    left:2px;
+    color:var(--navy-soft);
+    font-size:.68rem;
+    top:12px;
+  }
+
+  ul.madde.yildiz{margin:22px 0;}
+  ul.madde.yildiz > li{padding:10px 0 10px 28px;}
+  ul.madde.yildiz > li::before{
+    content:"✦";
+    left:0;
+    color:var(--amber);
+    font-size:.85rem;
+    top:9px;
+  }
+  ul.madde.yildiz > li + li{border-top:1px solid var(--rule);}
+  ul.madde.yildiz > li .notkutu{margin:14px 0 4px;}
+
+  ol.sayili{
+    list-style:none;
+    counter-reset:sira;
+    padding:0;
+    margin:22px 0;
+  }
+  ol.sayili > li{
+    counter-increment:sira;
+    position:relative;
+    padding:10px 0 10px 46px;
+    border-bottom:1px dotted var(--rule);
+  }
+  ol.sayili > li:last-child{border-bottom:none;}
+  ol.sayili > li::before{
+    content:counter(sira);
+    position:absolute;
+    left:0;
+    top:13px;
+    width:30px;
+    height:30px;
+    line-height:27px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    color:var(--navy-soft);
+    background:var(--card);
+    font-size:.84rem;
+    font-weight:700;
+  }
+
+  /* ---------- ÖZET ---------- */
+  .ozet{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-top:4px solid var(--navy);
+    border-radius:4px;
+    padding:26px 30px;
+    margin-top:34px;
+  }
+  .ozet h4{
+    margin:0 0 16px;
+    color:var(--navy);
+    font-size:1.06rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+  .ozet ul{margin:0;padding-left:22px;}
+  .ozet li{margin-bottom:11px;}
+  .ozet li:last-child{margin-bottom:0;}
+
+  .ayirac{
+    text-align:center;
+    color:var(--rule);
+    letter-spacing:.5em;
+    margin:38px 0;
+    font-size:.8rem;
+  }
+
+  footer{
+    margin-top:70px;
+    padding-top:26px;
+    border-top:3px double var(--rule);
+    text-align:center;
+    color:#d54220;
+    font-size:.9rem;
+  }
+  footer .marka{
+    font-size:1rem;
+    color:#d54220;
+    font-weight:600;
+    letter-spacing:.1em;
+    margin-bottom:6px;
+  }
+
+  @media (max-width:620px){
+    body{font-size:16.5px;}
+    .sayfa{padding:0 16px 60px;}
+    header.kapak h1{font-size:2.8rem;}
+    .besmele{font-size:2rem;}
+    .nakid-baslik h2{font-size:1.16rem;}
+    h3.altbolum{font-size:1.3rem;margin:48px 0 16px;}
+    h3.altbolum .no{min-width:32px;height:32px;line-height:32px;font-size:.9rem;}
+    .metin{padding:22px 18px 20px;}
+    .metin .ar{font-size:1.65rem;line-height:2;}
+    .blok{padding:18px 18px;}
+    .ikaz{padding:18px 18px 4px;}
+    .kisim-govde{margin-left:0;padding-left:14px;}
+    .delil{grid-template-columns:28px 1fr;gap:0 10px;}
+    .delil > .no{width:28px;height:28px;line-height:28px;font-size:.8rem;}
+    .blok .ar{font-size:1.5rem;line-height:1.95;}
+    .vurgu-buyuk{font-size:1.18rem;padding:20px 16px;}
+    .vurgu{font-size:1.1rem;}
+  }
+
+  @media print{
+    @page{margin:18mm 16mm;}
+    body{background:#fff;font-size:11.5pt;}
+    .sayfa{max-width:none;padding:0;}
+    section.nakid{page-break-before:always;}
+    section.nakid:first-of-type{page-break-before:auto;}
+    .ayirac{display:none;}
+    header.kapak{
+      min-height:238mm;
+      page-break-after:always;
+      margin-bottom:0;
+    }
+    header.kapak h1{font-size:54pt;}
+    .besmele{font-size:26pt;}
+    section.nakid{page-break-inside:auto;}
+    .nakid-baslik{page-break-after:avoid;background:var(--navy) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .metin,.blok,.ozet,.vurgu-buyuk{page-break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    h3.altbolum,.serh-ayrac{page-break-after:avoid;}
+  }
+</style>
+<style>.sayfa > section.nakid:first-of-type{margin-top:32px;}</style>
+</head>
+<body>
+<div class="sayfa">
+
+<!-- ================= BÂB ================= -->
+<section class="nakid">
+  <div class="nakid-baslik">
+    <span class="etiket">Kitâbu't-Tevhîd</span>
+    <h2>Bâbu kavlillâhi teâlâ</h2>
+  </div>
+
+  <!-- ---------- METİN ---------- -->
+  <div class="metin">
+    <div class="metin-etiket"><span class="rozet">Bâb</span>Müellif rahimehullah dedi ki</div>
+    <p class="ar">«بَابُ قَوْلِ اللَّهِ تَعَالَى: ﴿إِنَّمَا ذَٰلِكُمُ الشَّيْطَانُ يُخَوِّفُ أَوْلِيَاءَهُ فَلَا تَخَافُوهُمْ وَخَافُونِ إِنْ كُنْتُمْ مُؤْمِنِينَ﴾ [آل عمران: ١٧٥]»</p>
+    <p class="tr">Yüce Allah'ın şu buyruğu: "İşte o şeytan, ancak kendi dostlarıyla sizi korkutur. Eğer müminler iseniz onlardan korkmayın, benden korkun." (Âl-i İmrân, 175)</p>
+  </div>
+
+  <!-- ---------- ŞERH ---------- -->
+  <div class="serh-ayrac"><span>Şerh</span></div>
+
+  <div class="bolum-baslik">Bâb için önsöz</div>
+
+
+  <h3 class="altbolum"><span class="no">1</span>Bu bâbın Kitâbu't-Tevhîd ile alakası</h3>
+
+  <ol class="sayili">
+    <li>Abdurrahman es-Sa'dî'nin söylediği gibi, korku <span class="ar-ic" dir="rtl">(الْخَوْفُ)</span> bir ibadettir ve vacip olarak yalnızca Allah'a yöneltilmesi gerekir.
+      <p>İbadet olan korku, mahlûklara yöneltilemez. Çünkü tevhid ancak bu ibadetin Allah'a tahsis edilmesiyle tamamlanır.</p>
+      <p>Eğer korku ibadetinin aslı tamamen ortadan kalkarsa, tevhidin aslı da ortadan kalkar. Eğer korku ibadetinin kemali eksilirse, tevhidin kemali de zedelenir.</p>
+    </li>
+    <li>Kim Allah'tan başkasından ta'zîm, tezellül ve hudû' ile korkarsa, Allah'a şirk koşmuş olur. Bu da tevhide zıttır.</li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">2</span>Bu bâbın önceki bâbla, yani muhabbet bâbıyla münasebeti nedir?</h3>
+
+  <ol class="sayili">
+    <li>Muhabbetin sahih ve faydalı olması için, korku ibadetiyle birlikte bulunması gerekir. Eğer muhabbet tek başına olursa, kişiye fayda vermek yerine zarar verebilir.
+      <p>Bu yüzden bazı Selef âlimleri şöyle demişlerdir:</p>
+      <div class="blok alim">
+        <span class="soyleyen">Selef âlimlerinden biri şöyle demiştir</span>
+        <p class="ar">«مَنْ عَبَدَ اللَّهَ بِالْحُبِّ وَحْدَهُ فَهُوَ زِنْدِيقٌ، وَمَنْ عَبَدَهُ بِالْخَوْفِ وَحْدَهُ فَهُوَ حَرُورِيٌّ، وَمَنْ عَبَدَهُ بِالرَّجَاءِ وَحْدَهُ فَهُوَ مُرْجِئٌ، وَمَنْ عَبَدَهُ بِالْحُبِّ وَالْخَوْفِ وَالرَّجَاءِ فَهُوَ مُؤْمِنٌ مُوَحِّدٌ»</p>
+        <p class="tr">"Kim Allah'a yalnızca muhabbet ile ibadet ederse zındıktır. Kim O'na yalnızca korku ile ibadet ederse Harûrîdir. Kim O'na yalnızca recâ ile ibadet ederse Mürciîdir. Kim Allah'a muhabbet, korku ve recâ ile ibadet ederse mümin ve muvahhiddir."</p>
+        <p class="kaynak">📚 İbn Teymiyye, Mecmû'u'l-Fetâvâ, 15/21.</p>
+      </div>
+      <p>Allah'a olan muhabbet hakiki olmaz, ta ki korku ibadetini de içinde barındırana kadar. Allah'ı seven kişi, O'nun rızasını kaybetmekten, cennetten mahrum kalmaktan ve imanın lezzetini kaybetmekten korkar.</p>
+    </li>
+    <li>Çünkü muhabbetten sonra ibadetin temel rükünlerinden biri de korkudur. Birinci rükün muhabbet, ikinci rükün korku, üçüncü rükün ise recâdır.</li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">3</span>Korku <span class="ar-ic" dir="rtl">(الْخَوْفُ)</span> ibadetinden maksat nedir?</h3>
+
+  <p>Râgıb el-İsfahânî, el-Mufredât fî Garîbi'l-Kur'ân adlı eserinde şöyle der:</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">Râgıb el-İsfahânî rahimehullah (v. 502)</span>
+    <p class="ar">«وَالْخَوْفُ مِنَ اللَّهِ لَا يُرَادُ بِهِ مَا يَخْطُرُ بِالْبَالِ مِنَ الرُّعْبِ، كَاسْتِشْعَارِ الْخَوْفِ مِنَ الْأَسَدِ، بَلْ إِنَّمَا يُرَادُ بِهِ الْكَفُّ عَنِ الْمَعَاصِي وَاخْتِيَارُ الطَّاعَاتِ، وَلِذَلِكَ قِيلَ: لَا يُعَدُّ خَائِفًا مَنْ لَمْ يَكُنْ لِلذُّنُوبِ تَارِكًا»</p>
+    <p class="tr">"Allah'tan korkmaktan maksat, aslandan korkulduğu gibi insanın zihnine gelen ürperti ve dehşet değildir. Bilakis bundan maksat, masiyetlerden uzak durmak ve taatleri tercih etmektir. Bu sebeple şöyle denilmiştir: Günahları terk etmeyen kimse, gerçekten korkan biri sayılmaz."</p>
+    <p class="kaynak">📚 el-Mufredât fî Garîbi'l-Kur'ân, "havf" maddesi, s. 303.</p>
+  </div>
+
+  <p>Yani korku ibadetinden maksat, sadece kalpte bir korku hissetmek değildir. Bu korkunun kişiyi günahlardan uzaklaştırması ve taatlere yöneltmesi gerekir.</p>
+
+  <p>Bu sebeple bir kişi günahları terk ediyor ve Allah'a itaat ediyorsa ona <strong>hâif</strong> <span class="ar-ic" dir="rtl">(خَائِفٌ)</span>, yani Allah'tan korkan kimse denilir.</p>
+
+
+  <div class="bolum-baslik">Âl-i İmrân, 175</div>
+
+  <div class="blok ayet">
+    <span class="soyleyen">Âl-i İmrân Sûresi, 175. âyet</span>
+    <p class="ar">﴿إِنَّمَا ذَٰلِكُمُ الشَّيْطَانُ يُخَوِّفُ أَوْلِيَاءَهُ فَلَا تَخَافُوهُمْ وَخَافُونِ إِنْ كُنْتُمْ مُؤْمِنِينَ﴾</p>
+    <p class="tr">"İşte o şeytan, ancak kendi dostlarıyla sizi korkutur. Eğer müminler iseniz onlardan korkmayın, benden korkun."</p>
+    <p class="kaynak">📚 Âl-i İmrân, 175.</p>
+  </div>
+
+  <h3 class="altbolum"><span class="no">1</span>Bu âyetin genel manası</h3>
+
+  <p>Allah bizlere, şeytanın müminleri Allah'ın emirlerini yerine getirmemeleri ve yasaklarından sakınmamaları için kendi velileri ve taraftarlarıyla korkuttuğunu haber veriyor.</p>
+
+  <p>Allah ise müminleri şeytanın velilerinden korkmaktan yasaklamış ve yalnızca kendisinden korkmalarını emretmiştir. Ayrıca Allah'tan korkmanın imanın gereklerinden olduğunu bildirmiştir.</p>
+
+  <div class="notkutu">
+    <span class="not-etiket">Not</span>
+    <p>Kişinin imanı ne kadar güçlü olursa, şeytanın velilerinden o kadar az korkar. İmanı ne kadar zayıf olursa, onlardan korkusu da o kadar artar.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">2</span>Bu âyetin Kitâbu't-Tevhîd ile münasebeti</h3>
+
+  <p>Bu âyette, korku ibadetinin yalnızca Allah'a tahsis edilmesinin vacip olduğu belirtilmektedir. Korku bir ibadettir. İbadet olan korku Allah'tan başkasına yöneltilirse, kişi Allah'a şirk koşmuş olur.</p>
+
+
+  <h3 class="altbolum"><span class="no">3</span>Bu âyetin bu bâbla alakası</h3>
+
+  <p>Korku ibadetinin yalnızca Allah'a has kılınmasının vacip olduğunu göstermesidir.</p>
+
+
+  <h3 class="altbolum"><span class="no">4</span>Âyetin detaylı manası</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>İnnemâ <span class="lafz-ar" dir="rtl">إِنَّمَا</span></span></h4>
+  <div class="kisim-govde">
+    <p>Hasr edatıdır. Yani burada korkutma işi şeytana nispet edilmiştir. Şeytan ve onun yardımcıları, müminleri Allah'ın düşmanlarıyla korkuturlar.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Zâlikum <span class="lafz-ar" dir="rtl">ذَٰلِكُمُ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Zeccâc rahimehullah şöyle demiştir:</p>
+    <div class="blok alim">
+      <span class="soyleyen">Zeccâc rahimehullah (v. 311)</span>
+      <p class="ar">«مَعْنَاهُ: ذَلِكَ التَّخْوِيفُ كَانَ فِعْلَ الشَّيْطَانِ، سَوَّلَهُ لِلْمُخَوَّفِينَ»</p>
+      <p class="tr">"Manası şudur: Bu korkutma şeytanın fiiliydi. Şeytan, korkutulan kimselere bunu süslü gösterdi."</p>
+      <p class="kaynak">📚 Zeccâc, Meâni'l-Kur'ân, 1/490; el-Vâhidî, et-Tefsîru'l-Basît, 6/185.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>eş-Şeytân <span class="lafz-ar" dir="rtl">الشَّيْطَانُ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Buradaki şeytan lafzı genel manada anlaşılır. Cin ve insan şeytanlarını kapsar.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">4</span><span>Yuhavvifu evliyâehû <span class="lafz-ar" dir="rtl">يُخَوِّفُ أَوْلِيَاءَهُ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Bu ifade hakkında iki tefsir vardır:</p>
+
+    <p><strong>Birinci tefsir:</strong> Şeytan sizi kendi velileriyle korkutur. Yani Allah'ın düşmanları olan kâfirleri müminlerin gözünde güçlü ve korkutucu gösterir.</p>
+
+    <div class="blok alim">
+      <span class="soyleyen">Ferrâ rahimehullah (v. 207)</span>
+      <p class="ar">«يُخَوِّفُكُمْ بِأَوْلِيَائِهِ»</p>
+      <p class="tr">"Sizi kendi velileriyle korkutur."</p>
+      <p class="kaynak">📚 Ferrâ, Meâni'l-Kur'ân, 1/248.</p>
+    </div>
+
+    <div class="blok alim">
+      <span class="soyleyen">Zeccâc rahimehullah (v. 311)</span>
+      <p class="ar">«يُخَوِّفُكُمْ مِنْ أَوْلِيَائِهِ»</p>
+      <p class="tr">"Sizi kendi velilerinden korkutur."</p>
+      <p class="kaynak">📚 Zeccâc, Meâni'l-Kur'ân, 1/490.</p>
+    </div>
+
+    <p>Bu, İbn Abbâs, Saîd bin Cubeyr, İkrime, Katâde, İbn Cerîr ve diğer birçok müfessirin tercih ettiği tefsirdir. İbn Cerîr de âyeti, şeytanın müminleri Ebû Süfyân ve onunla beraber bulunan müşriklerle korkutması şeklinde açıklamıştır.</p>
+
+    <p><strong>İkinci tefsir:</strong> Şeytan kendi velileri olan münafıkları korkutuyor. Hasan el-Basrî, Suddî ve bazı müfessirler bu görüştedir.</p>
+
+    <p>İbn Teymiyye dedi ki: İki tefsir de mana bakımından doğrudur. Fakat birinci tefsir daha güçlüdür.</p>
+
+    <p>Birinci tefsiri güçlendiren dört sebep vardır:</p>
+
+    <ol class="sayili">
+      <li>Bu âyet Uhud savaşından sonra, Hamrâu'l-Esed olayında inmiştir. Müşriklerin tekrar Medine'ye dönecekleri haberi yayıldı. Bununla Müslümanları müşriklerle korkutmak istediler. Bu da "Şeytan sizi kendi velileriyle korkutuyor" manasını destekler.</li>
+      <li>Âyetin devamında Allah şöyle buyuruyor:
+        <div class="lafz">
+          <span class="ar-buyuk" dir="rtl">فَلَا تَخَافُوهُمْ</span>
+          <span class="lafz-tr">"Onlardan korkmayın."</span>
+        </div>
+        <p>Buradaki "hum" <span class="ar-ic" dir="rtl">(هُمْ)</span> zamiri şeytanın velilerine döner. Yani şeytan sizi kendi velileriyle korkutuyor, Allah da "Onlardan korkmayın" buyuruyor.</p>
+      </li>
+      <li>Ubey bin Ka'b'ın kıraatinde şöyle gelmiştir:
+        <div class="lafz">
+          <span class="ar-buyuk" dir="rtl">يُخَوِّفُكُمْ بِأَوْلِيَائِهِ</span>
+          <span class="lafz-tr">"Sizi kendi velileriyle korkutur."</span>
+        </div>
+        <p>Bu kıraat, birinci tefsirin manasını açıkça gösteriyor.</p>
+      </li>
+      <li>Bu kullanım Arap diline uygundur. İbnu'l-Enbârî Arapların şöyle dediğini zikreder:
+        <div class="lafz">
+          <span class="ar-buyuk" dir="rtl">أَعْطَيْتُ الْأَمْوَالَ</span>
+          <span class="lafz-tr">"Malları verdim."</span>
+        </div>
+        <p>Yani:</p>
+        <div class="lafz">
+          <span class="ar-buyuk" dir="rtl">أَعْطَيْتُ الْقَوْمَ الْأَمْوَالَ</span>
+          <span class="lafz-tr">"İnsanlara malları verdim."</span>
+        </div>
+        <p>Burada mef'ullerden biri hazfedilmiştir. Aynı şekilde <span class="ar-ic" dir="rtl">(يُخَوِّفُ أَوْلِيَاءَهُ)</span> ifadesinin manası <span class="ar-ic" dir="rtl">(يُخَوِّفُكُمْ أَوْلِيَاءَهُ)</span>, yani "Sizi kendi velileriyle korkutur" demektir.</p>
+      </li>
+    </ol>
+  </div>
+
+  <h4 class="kisim"><span class="no">5</span><span>Felâ tehâfûhum <span class="lafz-ar" dir="rtl">فَلَا تَخَافُوهُمْ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Yani siz şeytanın ordularından ve velilerinden korkmayın.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">6</span><span>Ve hâfûni <span class="lafz-ar" dir="rtl">وَخَافُونِ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Yani korku konusunda yalnızca benden korkun. Benim emrime muhalefet etmekten sakının.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">7</span><span>İn kuntum mu'minîn <span class="lafz-ar" dir="rtl">إِنْ كُنْتُمْ مُؤْمِنِينَ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Burada Allah korkuyu iman ile bağlantılı kılıyor. İbadet olan korku Allah'tan başkasına verilirse, kişinin imanı ya tamamen gider ya da imanın vacip kemali eksilir. Bu, korkunun türüne ve derecesine göre değişir.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">5</span>Bu âyet ile ilgili meseleler</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Birinci mesele</span></h4>
+  <div class="kisim-govde">
+    <p>Havf <span class="ar-ic" dir="rtl">(الْخَوْفُ)</span>, İmam Ahmed'in de belirttiği gibi kalp amellerinden olan bir ibadettir.</p>
+
+    <p><strong>Övülmüş korkunun <span class="ar-ic" dir="rtl">(الْخَوْفُ الْمَحْمُودُ)</span> kuralı:</strong> Korku, kişiyi Allah'ın haram kıldığı şeylerden uzaklaştırıyorsa, bu övülmüş bir korkudur.</p>
+
+    <div class="blok alim">
+      <span class="soyleyen">İbn Teymiyye rahimehullah (v. 728)</span>
+      <p class="ar">«الْخَوْفُ الْمَحْمُودُ مَا حَجَزَكَ عَنْ مَحَارِمِ اللَّهِ»</p>
+      <p class="tr">"Övülmüş korku, seni Allah'ın haramlarından alıkoyan korkudur."</p>
+      <p class="kaynak">📚 İbnu'l-Kayyim, Medâricu's-Sâlikîn, 1/511.</p>
+    </div>
+
+    <p>İbnu'l-Kayyim bunu Medâricu's-Sâlikîn'de İbn Teymiyye'den nakletmiştir.</p>
+
+    <div class="blok alim">
+      <span class="soyleyen">İbn Receb rahimehullah (v. 795)</span>
+      <p class="ar">«وَلَا نُنْكِرُ أَنَّ خَشْيَةَ اللَّهِ وَهَيْبَتَهُ وَعَظَمَتَهُ فِي الصُّدُورِ وَإِجْلَالَهُ مَقْصُودٌ أَيْضًا، وَلَكِنَّ الْقَدْرَ النَّافِعَ مِنْ ذَلِكَ مَا كَانَ عَوْنًا عَلَى التَّقَرُّبِ إِلَى اللَّهِ بِفِعْلِ مَا يُحِبُّهُ وَتَرْكِ مَا يَكْرَهُ»</p>
+      <p class="tr">"Allah'tan haşyet etmek, O'ndan heybet duymak, O'nun azametini kalpte taşımak ve O'na tazim etmek de maksuttur. Fakat bunun faydalı olan miktarı, Allah'ın sevdiğini yaparak ve sevmediğini terk ederek O'na yaklaşmaya yardımcı olanıdır."</p>
+      <p class="kaynak">📚 et-Tahvîf mine'n-Nâr, s. 112.</p>
+    </div>
+
+    <p>Yani faydalı ve övülmüş korku, kişiyi farzları yapmaya ve haramlardan uzak durmaya götüren korkudur.</p>
+
+    <p><strong>Özet olarak:</strong> Şeriatta övülmüş olan korku ibadeti iki şeyi içerir:</p>
+
+    <ol class="sayili">
+      <li>Bu korkunun yanında recâ ve muhabbet bulunması gerekir. Bunlar olmazsa kişi Allah'ın rahmetinden ümitsizliğe, yani kunûta <span class="ar-ic" dir="rtl">(الْقُنُوطُ)</span> düşebilir.</li>
+      <li>Bu korkunun kişiyi vacipleri yapmaya ve haramları terk etmeye sevk etmesi gerekir. Eğer bunu sağlamıyorsa, bu korku övülmüş korku değildir.</li>
+    </ol>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>İkinci mesele</span></h4>
+  <div class="kisim-govde">
+    <p>Korku ibadetinden maksat, insanın doğru yoldan çıkmaması ve günahlara düşmemesidir. Bu yüzden havf, muhabbete tâbi olan bir rükündür.</p>
+
+    <p>Çünkü muhabbet devamlıdır. Fakat korku ibadeti âhirette, cennete girildikten sonra bulunmayacaktır. Allah Teâlâ cennet ehli hakkında korkunun ve hüznün olmayacağını haber vermiştir.</p>
+  </div>
+
+
+  <h4 class="kisim"><span class="no">3</span><span>Üçüncü mesele</span></h4>
+  <div class="kisim-govde">
+    <p><strong>Korku ibadeti iki kısımdır:</strong></p>
+
+    <ol class="sayili">
+      <li><strong>Allah'tan korkmak.</strong> Bu, ibadet olan korkudur ve yalnızca Allah'a yöneltilir.</li>
+      <li><strong>Allah'tan başkasından korkmak.</strong> Bu da dört çeşittir:
+        <ul class="madde">
+          <li><strong>Şirk-i ekber olan korku:</strong> Buna havfu's-sırr <span class="ar-ic" dir="rtl">(خَوْفُ السِّرِّ)</span> denilir. Mekkeli müşriklerin putlarından, onların gizli şekilde kendilerine zarar verebileceğine inanarak korkmaları gibi.</li>
+          <li><strong>Haram olan korku:</strong> Bir mahlûktan korkmanın kişiyi bir vacibi terk etmeye veya bir harama düşmeye sevk etmesidir. Mesela kişinin patronundan korktuğu için sakalını kesmesi gibi.</li>
+          <li><strong>Tabiî korku:</strong> Bu mubahtır. Kişinin aslandan, yırtıcı bir hayvandan veya evine giren hırsızdan korkması gibi.</li>
+          <li><strong>Mekruh olan korku:</strong> Sebepsiz veya sebebi çok zayıf olan korkudur. Mesela kişinin kendi gölgesinden korkması gibi. Müslümanın korkaklıktan, yani cubn <span class="ar-ic" dir="rtl">(الْجُبْنُ)</span> sıfatından Allah'a sığınması gerekir.</li>
+        </ul>
+      </li>
+    </ol>
+
+    <div class="notkutu">
+      <span class="not-etiket">Tenbih 1</span>
+      <p>Haram olan korkuda ikrah bulunursa, kişi özürlü sayılır.</p>
+    </div>
+
+    <div class="notkutu">
+      <span class="not-etiket">Tenbih 2</span>
+      <p>Tabiî korkunun sebebi ortadan kalktıktan sonra korku devam ederse, bu korku mekruh olan korkuya dönüşebilir. Mesela bir hırsız eve girmiş ve kişi ondan korkmuştur. Hırsız gittikten ve tehlike tamamen ortadan kalktıktan sonra kişinin hiçbir sebep olmadan sürekli aynı korkuyu yaşamaya devam etmesi gibi.</p>
+    </div>
+  </div>
+
+
+  <h4 class="kisim"><span class="no">4</span><span>Dördüncü mesele</span></h4>
+  <div class="kisim-govde">
+    <p><strong>Allah'tan korkmak iki kısımdır:</strong></p>
+
+    <p><strong>1. Vacip olan korku.</strong> Bu, havfu'l-ubûdiyye ve'z-zull <span class="ar-ic" dir="rtl">(خَوْفُ الْعُبُودِيَّةِ وَالذُّلِّ)</span>, yani kulluk ve zillet korkusudur. Bütün Müslümanlar üzerine farzdır.</p>
+
+    <div class="blok alim">
+      <span class="soyleyen">Kadı İyâd rahimehullah (v. 544)</span>
+      <p class="ar">«إِنَّهَا مِنْ مَقَامَاتِ الْإِيمَانِ وَأَرْكَانِ الْإِسْلَامِ»</p>
+      <p class="tr">"Bu, imanın makamlarından ve İslâm'ın rükünlerindendir."</p>
+    </div>
+
+    <div class="blok alim">
+      <span class="soyleyen">İbnu'l-Kayyim rahimehullah (v. 751)</span>
+      <p class="ar">«الْخَوْفُ مِنْ أَجَلِّ مَنَازِلِ الطَّرِيقِ وَأَنْفَعِهَا لِلْقَلْبِ، وَهِيَ فَرْضٌ عَلَى كُلِّ أَحَدٍ»</p>
+      <p class="tr">"Korku, yolun en yüce makamlarından ve kalbe en faydalı olanlardan biridir. Herkes üzerine farzdır."</p>
+      <p class="kaynak">📚 Medâricu's-Sâlikîn, 1/507.</p>
+    </div>
+
+    <p><strong>2. Müstehap olan korku.</strong> Kişinin Allah'tan korktuğu için mekruhları terk etmesi ve müstehapları yapmasıdır.</p>
+
+    <div class="blok alim">
+      <span class="soyleyen">İbn Receb rahimehullah (v. 795)</span>
+      <p class="ar">«فَإِنْ زَادَ عَلَى ذَلِكَ بِحَيْثُ صَارَ بَاعِثًا لِلنُّفُوسِ عَلَى التَّشْمِيرِ فِي نَوَافِلِ الطَّاعَاتِ، وَالِانْكِفَافِ عَنْ دَقَائِقِ الْمَكْرُوهَاتِ، وَالتَّبَسُّطِ فِي فُضُولِ الْمُبَاحَاتِ، كَانَ ذَلِكَ فَضْلًا مَحْمُودًا»</p>
+      <p class="tr">"Eğer korku bundan daha fazla olur ve kişiyi nafile ibadetlere yönelmeye, ince mekruhlardan sakınmaya ve ihtiyaç fazlası mubahları terk etmeye sevk ederse, bu övülmüş bir fazilet olur."</p>
+      <p class="kaynak">📚 et-Tahvîf mine'n-Nâr, s. 112.</p>
+    </div>
+  </div>
+
+
+  <h4 class="kisim"><span class="no">5</span><span>Beşinci mesele</span></h4>
+  <div class="kisim-govde">
+    <p><strong>Müslümanda Allah korkusunu oluşturan sebepler.</strong> Müslüman kişide Allah korkusunun oluşmasına sebep olan üç şey vardır. İbnu'l-Kayyim rahimehullah Tarîku'l-Hicreteyn'de şöyle der:</p>
+
+    <div class="blok alim">
+      <span class="soyleyen">İbnu'l-Kayyim rahimehullah (v. 751)</span>
+      <p class="ar">«وَهُوَ يَنْشَأُ مِنْ ثَلَاثَةِ أُمُورٍ: أَحَدُهَا: مَعْرِفَتُهُ بِالْجِنَايَةِ وَقُبْحِهَا. وَالثَّانِي: تَصْدِيقُ الْوَعِيدِ، وَأَنَّ اللَّهَ رَتَّبَ عَلَى الْمَعْصِيَةِ عُقُوبَتَهَا. وَالثَّالِثُ: أَنَّهُ لَا يَعْلَمُ لَعَلَّهُ يُمْنَعُ مِنَ التَّوْبَةِ، وَيُحَالُ بَيْنَهُ وَبَيْنَهَا إِذَا ارْتَكَبَ الذَّنْبَ»</p>
+      <p class="tr">"Korku üç şeyden meydana gelir:</p>
+      <p class="tr"><strong>1.</strong> Kişinin işlediği günahı ve onun çirkinliğini bilmesi.</p>
+      <p class="tr"><strong>2.</strong> Allah'ın vaîdini tasdik etmesi ve Allah'ın masiyete karşılık bir ceza belirlediğini bilmesi.</p>
+      <p class="tr"><strong>3.</strong> Günah işledikten sonra kendisine tevbenin nasip edilmeyebileceğini ve tevbe ile arasına engel konulabileceğini bilmesi."</p>
+      <p class="kaynak">📚 Tarîku'l-Hicreteyn ve Bâbu's-Sa'âdeteyn, s. 283.</p>
+    </div>
+
+    <p>İbnu'l-Kayyim devamında şöyle der:</p>
+
+    <div class="blok alim">
+      <span class="soyleyen">İbnu'l-Kayyim rahimehullah (v. 751)</span>
+      <p class="ar">«وَبِالْجُمْلَةِ فَمَنِ اسْتَقَرَّ فِي قَلْبِهِ ذِكْرُ الدَّارِ الْآخِرَةِ وَجَزَائِهَا، وَذِكْرُ الْمَعْصِيَةِ وَالتَّوَعُّدِ عَلَيْهَا، وَعَدَمُ الْوُثُوقِ بِإِتْيَانِهِ بِالتَّوْبَةِ النَّصُوحِ، هَاجَ فِي قَلْبِهِ مِنَ الْخَوْفِ مَا لَا يَمْلِكُهُ وَلَا يُفَارِقُهُ حَتَّى يَنْجُوَ»</p>
+      <p class="tr">"Kimin kalbinde şu üç şey yerleşirse: âhiret yurdunu ve oradaki karşılığı hatırlamak; günahı ve günah sebebiyle bildirilen tehdidi hatırlamak; nasuh bir tevbe yapabileceğinden emin olmamak — bu kişinin kalbinde öyle bir korku meydana gelir ki, kişi bundan kendisini alıkoyamaz ve kurtuluşa erinceye kadar bu korku ondan ayrılmaz."</p>
+      <p class="kaynak">📚 Tarîku'l-Hicreteyn ve Bâbu's-Sa'âdeteyn, s. 283.</p>
+    </div>
+
+    <p>İbnu'l-Kayyim'in zikrettiği bu üç sebebe ek olarak, korku ibadetini güçlendiren en önemli sebeplerden bazıları şunlardır:</p>
+
+    <ol class="sayili" style="counter-reset:sira 3">
+      <li><strong>İlim.</strong> Allah'ı, O'nun isim ve sıfatlarını ve tevhidi bilmek, kulun Allah'a karşı korkusunu artırır. Kişinin Allah hakkındaki ilmi ne kadar artarsa, O'na karşı haşyeti de o kadar artar. Allah Teâlâ şöyle buyurur:
+        <div class="blok ayet">
+          <span class="soyleyen">Fâtır Sûresi, 28. âyet</span>
+          <p class="ar">﴿إِنَّمَا يَخْشَى اللَّهَ مِنْ عِبَادِهِ الْعُلَمَاءُ﴾</p>
+          <p class="tr">"Allah'tan kulları içinde ancak âlimler hakkıyla korkar."</p>
+          <p class="kaynak">📚 Fâtır, 28.</p>
+        </div>
+      </li>
+      <li><strong>Allah'ın huzuruna çıkacağını düşünmek.</strong> Kulun bir gün Allah'ın huzurunda duracağını, yaptıklarından hesaba çekileceğini ve bütün amellerinin kendisine gösterileceğini sürekli hatırlaması, kalbindeki korkuyu güçlendirir.
+        <p>Kişi Allah'ın huzuruna çıkacağını ne kadar çok hatırlarsa, günahlardan sakınması ve itaate yönelmesi de o kadar artar.</p>
+      </li>
+      <li><strong>Allah'tan korkan kimselerle beraber olmak.</strong> Allah'tan korkan, âhireti hatırlayan ve salih amellere önem veren kişilerle oturup kalkmak da kulun kalbindeki korkuyu artırır.
+        <p>Çünkü insan beraber olduğu kimselerden etkilenir. Allah'tan korkan kimselerin hâlini görmek, onların nasihatlerini dinlemek ve âhireti hatırlatan meclislerde bulunmak kalbi diri tutar ve Allah korkusunu kuvvetlendirir.</p>
+      </li>
+    </ol>
+  </div>
+
+
+  <h4 class="kisim"><span class="no">6</span><span>Altıncı mesele</span></h4>
+  <div class="kisim-govde">
+    <p><strong>Allah'tan başkasından korkmamak için alınması gereken sebepler.</strong> Kulun mahlûklardan korkmaması ve korkusunu yalnızca Allah'a yöneltmesi için bazı sebeplere sarılması gerekir:</p>
+
+    <ol class="sayili">
+      <li><strong>Allah'a teslim olmak.</strong> Kişi kendisini tamamen Allah'a teslim eder, Allah'ın kaderi içerisinde yaşadığını ve Allah neyi dilerse onun gerçekleşeceğini bilirse mahlûklardan olan korkusu azalır.
+        <p>Kul şunu bilmelidir: kendisine fayda veya zarar verecek olan şey ancak Allah'ın takdiriyle gerçekleşir. Bu şuur kalbe yerleştiğinde kişi mahlûkların gücünü büyütmez ve onlardan aşırı şekilde korkmaz.</p>
+      </li>
+      <li><strong>Allah'ı çokça zikretmek.</strong> Kulun diliyle sürekli Allah'ı zikretmesi kalbine huzur, rahatlık ve emniyet verir.
+        <p>Allah'ın zikri kalbi kuvvetlendirir, korkuyu azaltır ve kulun Allah'a olan güvenini artırır. Allah Teâlâ şöyle buyurur:</p>
+        <div class="blok ayet">
+          <span class="soyleyen">Ra'd Sûresi, 28. âyet</span>
+          <p class="ar">﴿أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ﴾</p>
+          <p class="tr">"Dikkat edin! Kalpler ancak Allah'ın zikriyle huzur bulur."</p>
+          <p class="kaynak">📚 Ra'd, 28.</p>
+        </div>
+      </li>
+      <li><strong>Allah'ı kalpte tazim etmek.</strong> Kulun kalbi Allah'ın azameti, kudreti ve büyüklüğü ile dolarsa mahlûkların kuvveti onun gözünde küçülür.
+        <p>Allah'ın büyüklüğünü kalbinde ne kadar çok tazim ederse, insanların kuvveti, tehdidi ve baskısı da onun kalbinde o kadar küçülür. Kalpte Allah'ın azameti büyüdükçe mahlûklardan olan korku azalır.</p>
+      </li>
+    </ol>
+  </div>
+
+
+  <h4 class="kisim"><span class="no">7</span><span>Yedinci mesele</span></h4>
+  <div class="kisim-govde">
+    <p><strong>Korku ibadetine sahip olan kişi şu faziletlere ulaşır:</strong></p>
+
+    <ol class="sayili">
+      <li><strong>Hâif olan kişi ilmin hakikatine ulaşmış olur.</strong> Allah Teâlâ şöyle buyurur:
+        <div class="blok ayet">
+          <span class="soyleyen">Fâtır Sûresi, 28. âyet</span>
+          <p class="ar">﴿إِنَّمَا يَخْشَى اللَّهَ مِنْ عِبَادِهِ الْعُلَمَاءُ﴾</p>
+          <p class="tr">"Allah'tan kulları içinde ancak âlimler hakkıyla korkar."</p>
+          <p class="kaynak">📚 Fâtır, 28.</p>
+        </div>
+        <p>Cahil olan kişi Allah'tan hakkıyla korkmaz.</p>
+        <div class="blok hadis">
+          <span class="soyleyen">İbn Mes'ûd radıyallahu anh şöyle demiştir</span>
+          <p class="ar">«كَفَى بِخَشْيَةِ اللَّهِ عِلْمًا، وَكَفَى بِالِاغْتِرَارِ بِاللَّهِ جَهْلًا»</p>
+          <p class="tr">"Allah'tan korkmak ilim olarak yeter. Allah hakkında aldanmak da cehalet olarak yeter."</p>
+          <p class="kaynak">📚 Beyhakî, Şu'abu'l-Îmân, 1/472; İbn Teymiyye, Mecmû'u'l-Fetâvâ, 7/23.</p>
+        </div>
+      </li>
+      <li><strong>Havf ibadeti, Allah'ın affına nail olmaya sebep olan en büyük sebeplerdendir.</strong></li>
+      <li><strong>Havf ibadeti, dünyada ve âhirette bütün hayırların aslı ve temelidir.</strong> Çünkü havf ibadetiyle haramlardan kaçılır ve itaatler yerine getirilir.</li>
+      <li><strong>Allah, hâif olan kişiye dünyada ve âhirette yardım vadetmiştir.</strong> Allah Teâlâ şöyle buyurur:
+        <div class="blok ayet">
+          <span class="soyleyen">İbrâhîm Sûresi, 14. âyet</span>
+          <p class="ar">﴿وَلَنُسْكِنَنَّكُمُ الْأَرْضَ مِنْ بَعْدِهِمْ ذَٰلِكَ لِمَنْ خَافَ مَقَامِي وَخَافَ وَعِيدِ﴾</p>
+          <p class="tr">"Onlardan sonra sizi mutlaka o yere yerleştireceğiz. Bu, makamımdan ve tehdidimden korkan kimseler içindir."</p>
+          <p class="kaynak">📚 İbrâhîm, 14.</p>
+        </div>
+      </li>
+      <li><strong>Havf ibadeti cennete girmeye sebeptir.</strong> Allah Teâlâ şöyle buyurur:
+        <div class="blok ayet">
+          <span class="soyleyen">Rahmân Sûresi, 46. âyet</span>
+          <p class="ar">﴿وَلِمَنْ خَافَ مَقَامَ رَبِّهِ جَنَّتَانِ﴾</p>
+          <p class="tr">"Rabbinin makamından korkan kimse için iki cennet vardır."</p>
+          <p class="kaynak">📚 Rahmân, 46.</p>
+        </div>
+      </li>
+      <li><strong>Havf ibadeti, kıyamet gününde emniyete ulaşmaya sebeptir.</strong></li>
+    </ol>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">6</span>Bu âyetten çıkarılan faydalar</h3>
+
+  <ol class="sayili">
+    <li>İbadet olan korkuyu mahlûka yöneltmeyi terk etmek vaciptir.</li>
+    <li>Korku ibadeti yalnızca Allah'a verilir. Çünkü korku bir ibadettir.</li>
+    <li>Allah'tan korkmak, imanın alametlerinden biridir.</li>
+    <li>Şeytanın oyunlarına ve korkutmalarına karşı dikkatli olmak gerekir.</li>
+    <li>İman ne kadar kuvvetli olursa, şeytanın ordularından korku o kadar azalır. İbn Teymiyye rahimehullah şöyle demiştir:
+      <div class="blok alim">
+        <span class="soyleyen">İbn Teymiyye rahimehullah (v. 728)</span>
+        <p class="ar">«فَإِنْ كَمُلَ خَوْفُ الْعَبْدِ مِنْ رَبِّهِ لَمْ يَخَفْ شَيْئًا سِوَاهُ، قَالَ اللَّهُ تَعَالَى: ﴿الَّذِينَ يُبَلِّغُونَ رِسَالَاتِ اللَّهِ وَيَخْشَوْنَهُ وَلَا يَخْشَوْنَ أَحَدًا إِلَّا اللَّهَ﴾، وَإِذَا نَقَصَ خَوْفُهُ خَافَ مِنَ الْمَخْلُوقِ، وَعَلَى قَدْرِ نَقْصِ الْخَوْفِ وَزِيَادَتِهِ يَكُونُ الْخَوْفُ»</p>
+        <p class="tr">"Kulun Rabbinden korkusu kemale ererse, O'ndan başkasından korkmaz. Allah Teâlâ şöyle buyurur: 'Onlar Allah'ın risaletlerini tebliğ eder, O'ndan korkarlar ve Allah'tan başka hiç kimseden korkmazlar.' Kulun Allah'tan korkusu eksilirse, mahlûktan korkmaya başlar. Allah korkusunun eksilmesi ve artmasına göre mahlûktan korkması da değişir."</p>
+        <p class="kaynak">📚 İbn Teymiyye, Mecmû'u'l-Fetâvâ, 1/94. (Âyet: Ahzâb, 39.)</p>
+      </div>
+    </li>
+    <li>İnsanların çoğu küfrün ve kâfirlerin kuvvetine bakarak aldanır ve ümitsizliğe düşer. Bu âyet bundan sakındırır. Tevhide tutunan kişi, mahlûklardan değil Allah'tan korkar.</li>
+  </ol>
+
+
+  <div class="bolum-baslik">Tevbe, 18</div>
+
+  <div class="blok ayet">
+    <span class="soyleyen">Tevbe Sûresi, 18. âyet</span>
+    <p class="ar">﴿إِنَّمَا يَعْمُرُ مَسَاجِدَ اللَّهِ مَنْ آمَنَ بِاللَّهِ وَالْيَوْمِ الْآخِرِ وَأَقَامَ الصَّلَاةَ وَآتَى الزَّكَاةَ وَلَمْ يَخْشَ إِلَّا اللَّهَ فَعَسَىٰ أُولَٰئِكَ أَنْ يَكُونُوا مِنَ الْمُهْتَدِينَ﴾</p>
+    <p class="tr">"Allah'ın mescitlerini ancak Allah'a ve âhiret gününe iman eden, namazı dosdoğru kılan, zekâtı veren ve Allah'tan başkasından korkmayan kimseler imar eder. İşte onların hidayete erenlerden olmaları umulur."</p>
+    <p class="kaynak">📚 Tevbe, 18.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">1</span>Bu âyetin genel manası</h3>
+
+  <p>Müşrikler gerçek manada Allah'a ibadet edilen yerleri imar edemezler. Allah'ın mescitlerini gerçek manada imar eden kimseler şu sıfatları taşırlar:</p>
+
+  <ol class="sayili">
+    <li>Allah'a iman ederler.</li>
+    <li>Âhiret gününe iman ederler.</li>
+    <li>Namazı dosdoğru kılarlar.</li>
+    <li>Zekâtı verirler.</li>
+    <li>Allah'tan başkasından haşyet etmezler.</li>
+  </ol>
+
+  <p>Bu sıfatları taşıyan kimseleri Allah hidayete erenlerden kılar.</p>
+
+
+  <h3 class="altbolum"><span class="no">2</span>Bu âyetin Kitâbu't-Tevhîd ile münasebeti</h3>
+
+  <p>Haşyet bir ibadettir. Yalnızca Allah'a verilmesi gerekir. İbadet olan haşyet Allah'tan başkasına yöneltilirse şirk olur.</p>
+
+
+  <h3 class="altbolum"><span class="no">3</span>Bu âyetin bu bâbla alakası</h3>
+
+  <p>Haşyet konusunda ihlâslı olmak vaciptir. Yani vacip olan haşyet yalnızca Allah'a yöneltilir. Bu da müminlerin sıfatlarındandır.</p>
+
+
+  <h3 class="altbolum"><span class="no">4</span>Âyetin detaylı manası</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>İnnemâ ya'muru mesâcidallâh <span class="lafz-ar" dir="rtl">إِنَّمَا يَعْمُرُ مَسَاجِدَ اللَّهِ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Yani Allah'ın mescitlerini ibadetlerle imar ederler.</li>
+      <li><strong>İnnemâ</strong> <span class="ar-ic" dir="rtl">(إِنَّمَا)</span> hasr edatıdır. Yani Allah'ın mescitlerini gerçek manada ancak âyette zikredilen sıfatlara sahip kişiler imar eder.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Men âmene billâh <span class="lafz-ar" dir="rtl">مَنْ آمَنَ بِاللَّهِ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Allah'ın indirdiğine iman eder ve onunla amel eder.</li>
+      <li>İman üç şeyden oluşur: kalp ile itikad, dil ile söz ve organlarla amel.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Ve'l-yevmi'l-âhir <span class="lafz-ar" dir="rtl">وَالْيَوْمِ الْآخِرِ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Allah, birçok âyette kendisine iman ile âhiret gününe imanı birlikte zikreder.</li>
+      <li>Bunun sebebi: Âhiret gününe iman eden kişi o günden korkar, salih amel yapar ve günahlardan kaçınır.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">4</span><span>Ve ekâme's-salâte <span class="lafz-ar" dir="rtl">وَأَقَامَ الصَّلَاةَ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Namazı ikame etmek iki çeşittir:
+        <ol class="sayili">
+          <li><strong>Vacip ikame:</strong> Namazın şartlarını, rükünlerini ve vaciplerini yerine getirmek.</li>
+          <li><strong>Mustehap ikame:</strong> Namazın sünnetlerini yapmak ve mekruhlarından kaçınmak.</li>
+        </ol>
+      </li>
+      <li>Namazı tam olarak ikame etmek, vacip olan ikamenin yanında mustehap olan ikameyi de içerir.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">5</span><span>Ve âte'z-zekâte <span class="lafz-ar" dir="rtl">وَآتَى الزَّكَاةَ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Yani üzerine vacip olan zekâtı verir.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">6</span><span>Ve lem yahşe illallâh <span class="lafz-ar" dir="rtl">وَلَمْ يَخْشَ إِلَّا اللَّهَ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Yani Allah'tan iclâl ve ta'zîm ile korkar.</li>
+      <li>Mescitleri gerçek manada imar edenlerin sıfatlarından biri Allah'tan haşyet etmeleridir.</li>
+      <li>Burada nefiyden <span class="ar-ic" dir="rtl">(وَلَمْ يَخْشَ)</span> sonra <strong>illallâh</strong> <span class="ar-ic" dir="rtl">(إِلَّا اللَّهَ)</span> gelmiştir. Bu bir hasrdır. Yani ibadet olan haşyet yalnızca Allah'a tahsis edilir.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">7</span><span>Fe asâ <span class="lafz-ar" dir="rtl">فَعَسَىٰ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li><strong>Asâ</strong> <span class="ar-ic" dir="rtl">(عَسَى)</span> Allah hakkında kullanıldığı zaman tahakkuk ifade eder. Yani Allah'ın haber verdiği şey gerçekleşir.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">8</span><span>Ulâike <span class="lafz-ar" dir="rtl">أُولَٰئِكَ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Bu işaret ismi, daha önce zikredilen sıfatları taşıyan kişilere döner. Yani Allah'a ve âhiret gününe iman eden, namazı ikame eden, zekâtı veren ve yalnızca Allah'tan haşyet eden kimselere döner.</li>
+      <li>Allah bu sıfatları taşıyan kimseleri hidayete erenlerden kılar.</li>
+    </ul>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">5</span>Meseleler</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Birinci mesele <span class="baslik-alt">— Mescitleri imar etmek iki manaya gelir</span></span></h4>
+  <div class="kisim-govde">
+    <p>Mescitleri imar etmek iki manaya gelir:</p>
+
+    <ol class="sayili">
+      <li><strong>Maddî olan imar:</strong> Mescitleri bina etmek, tamir etmek, temizlemek, bakımını yapmak ve ihtiyaçlarını gidermektir.</li>
+      <li><strong>Manevî olan imar:</strong> Mescitlerde namaz kılmak, zikir yapmak, Kur'ân okumak, ilim öğrenmek ve öğretmek gibi ibadetlerle mescitleri canlı tutmaktır.</li>
+    </ol>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>İkinci mesele <span class="baslik-alt">— Havf (Korku) <span class="lafz-ar" dir="rtl">الْخَوْفُ</span> ile haşyet <span class="lafz-ar" dir="rtl">الْخَشْيَةُ</span> arasındaki fark nedir?</span></span></h4>
+  <div class="kisim-govde">
+    <ol class="sayili">
+      <li><strong>Birinci fark:</strong> Haşyet, ilim ile birlikte olan korkudur. Yani kişi korktuğu şeyi tanır ve bilir. Korku ise ilimsiz de olabilir.</li>
+      <li><strong>İkinci fark:</strong> Haşyet, korkulan şeyin azameti ve büyüklüğünden dolayı meydana gelir. Korku ise bazen kişinin zayıflığından veya korkaklığından dolayı olabilir.</li>
+      <li><strong>Üçüncü fark:</strong> Havf, korkulan şeyin vereceği eziyetten veya onun kötü akıbetinden dolayı meydana gelir. Haşyet ise ceza verenin azameti ve büyüklüğünden dolayı meydana gelir.</li>
+    </ol>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">6</span>Bu âyetten çıkarılan faydalar</h3>
+
+  <ol class="sayili">
+    <li>Mescitleri maddî ve manevî olarak imar etmek, imanın alametlerindendir. Âyette kastedilen özellikle manevî imardır.</li>
+    <li>Beş vakit namazı kılmanın vacip olduğu anlaşılır.</li>
+    <li>Zekât vermenin vacip olduğu anlaşılır.</li>
+    <li>Allah'tan haşyet ile korkmanın vacip olduğu anlaşılır.</li>
+    <li>Haşyet, amelle kendini gösterir ve kişiyi salih amel yapmaya sevk eder.</li>
+    <li>Şirk koşan kişinin ameli kabul olmaz. Bu yüzden müşriklerin mescitleri imar etmeleri gerçek bir imar sayılmaz.</li>
+    <li>Mescitlerde oturmak, zikir yapmak ve ilim halkaları kurmak mescitlerin manevî imarındandır. Bu yüzden mescitlerin ibadet ve ilim için açık tutulması gerekir.</li>
+    <li>Kul, mahlûklardan korktuğu için vacipleri terk etmez ve haramlara girmez.</li>
+  </ol>
+
+
+  <div class="bolum-baslik">Ankebût, 10</div>
+
+  <div class="blok ayet">
+    <span class="soyleyen">Ankebût Sûresi, 10. âyet</span>
+    <p class="ar">﴿وَمِنَ النَّاسِ مَنْ يَقُولُ آمَنَّا بِاللَّهِ فَإِذَا أُوذِيَ فِي اللَّهِ جَعَلَ فِتْنَةَ النَّاسِ كَعَذَابِ اللَّهِ وَلَئِنْ جَاءَ نَصْرٌ مِنْ رَبِّكَ لَيَقُولُنَّ إِنَّا كُنَّا مَعَكُمْ أَوَلَيْسَ اللَّهُ بِأَعْلَمَ بِمَا فِي صُدُورِ الْعَالَمِينَ﴾</p>
+    <p class="tr">"İnsanlardan öylesi vardır ki: 'Allah'a iman ettik' der. Fakat Allah yolunda eziyete uğradığı zaman, insanların eziyetini Allah'ın azabı gibi görür. Rabbinden bir yardım geldiğinde ise mutlaka: 'Biz de sizinle beraberdik' derler. Allah, âlemlerin sinelerinde olanı en iyi bilen değil midir?"</p>
+    <p class="kaynak">📚 Ankebût, 10.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">1</span>Âyetin genel manası</h3>
+
+  <p>Dilleriyle iman ettiklerini söyleyen münafıklar, Allah yolunda bir eziyet gördükleri zaman hemen nifaklarını ortaya çıkarırlar. Aynı şekilde, müminler galip geldiğinde ve Allah onlara yardım ettiğinde, münafıklar mallarını ve canlarını korumak için hemen: "Biz de sizinle beraberdik." derler.</p>
+
+  <p>Fakat Allah, onların kalplerinde gizlediklerini bildiğini ve bundan dolayı âhirette onları cezalandıracağını bildiriyor.</p>
+
+
+  <h3 class="altbolum"><span class="no">2</span>Bu âyetin Kitâbu't-Tevhîd ile münasebeti</h3>
+
+  <p>Havf bir ibadettir. İbadet olan korku Allah'tan başkasına yöneltilemez. İbadet olan korkuyu kullara yöneltmek şirktir. Bu da tevhide aykırıdır.</p>
+
+
+  <h3 class="altbolum"><span class="no">3</span>Âyetin bu bâbla alakası</h3>
+
+  <p>İbadet olan korkuyu Allah'tan başkasına yöneltmek haramdır ve şirktir.</p>
+
+
+  <h3 class="altbolum"><span class="no">4</span>Âyetin detaylı manası</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Ve mine'n-nâsi <span class="lafz-ar" dir="rtl">وَمِنَ النَّاسِ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Yani insanlardan bazıları.</li>
+      <li>İnsanlar iman konusunda imtihan edilirler. Bazıları "Âmennâ billâh: Allah'a iman ettik" derler; fakat imanları sebebiyle eziyet görünce insanların eziyetini Allah'ın azabı gibi görürler ve imtihanda sabit kalamazlar. İbnu'l-Kayyim rahimehullah bu âyeti şöyle açıklar:
+        <div class="blok alim">
+          <span class="soyleyen">İbnu'l-Kayyim rahimehullah (v. 751)</span>
+          <p class="ar">«ثُمَّ أَخْبَرَ عَنْ حَالِ الدَّاخِلِ فِي الْإِيمَانِ بِلَا بَصِيرَةٍ، وَأَنَّهُ إِذَا أُوذِيَ فِي اللَّهِ جَعَلَ فِتْنَةَ النَّاسِ لَهُ — وَهِيَ أَذَاهُمْ لَهُ وَنَيْلُهُمْ إِيَّاهُ بِالْمَكْرُوهِ وَالْأَلَمِ — كَعَذَابِ اللَّهِ الَّذِي فَرَّ مِنْهُ الْمُؤْمِنُونَ بِالْإِيمَانِ»</p>
+          <p class="tr">"Sonra Allah, basiretsiz olarak imana giren kimsenin hâlini haber verdi: Bu kişi Allah yolunda eziyet gördüğünde, insanların kendisine olan fitnesini — ki bu, onların ona eziyet etmeleri ve hoşa gitmeyen şeylerle ve acıyla onu incitmeleridir — müminlerin imanla kendisinden kaçtıkları Allah'ın azabı gibi saymıştır."</p>
+          <p class="kaynak">📚 İbnu'l-Kayyim, Zâdu'l-Meâd, 3/21-22 (Risâle neşrinde 3/16-17).</p>
+        </div>
+      </li>
+      <li>Bu kişiler sadece harama mı düşerler, yoksa dinden mi çıkarlar? Her ikisi de olabilir. Bazıları insanların korkusundan dolayı bir vacibi terk eder veya bir harama düşer. Bazıları ise bundan daha ileri giderek dinden çıkar.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Ve le'in câe nasrun min rabbike <span class="lafz-ar" dir="rtl">وَلَئِنْ جَاءَ نَصْرٌ مِنْ رَبِّكَ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Yani Rabbinden müminlere bir yardım ve zafer gelirse.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Le-yekûlunne innâ kunnâ me'akum <span class="lafz-ar" dir="rtl">لَيَقُولُنَّ إِنَّا كُنَّا مَعَكُمْ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Yani münafıklar hemen: "Biz de sizinle beraberdik." derler.</li>
+      <li>Müminler sıkıntıdayken onlardan uzak dururlar. Fakat müminlere zafer geldiğinde kendilerini onlardan gösterirler.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">4</span><span>E ve leysallâhu bi-a'leme bimâ fî sudûri'l-âlemîn <span class="lafz-ar" dir="rtl">أَوَلَيْسَ اللَّهُ بِأَعْلَمَ بِمَا فِي صُدُورِ الْعَالَمِينَ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Yani Allah, onların kalplerinde gizledikleri nifakı en iyi bilendir.</li>
+      <li><strong>Âlemîn</strong> <span class="ar-ic" dir="rtl">(الْعَالَمِينَ)</span> kelimesi, Allah dışındaki yaratılmışları ifade eder. Burada özellikle insanların kalplerinde ve sinelerinde gizledikleri şeylerin Allah tarafından bilindiği kastedilir.</li>
+    </ul>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">5</span>Bu âyetten çıkarılan faydalar</h3>
+
+  <ol class="sayili">
+    <li>Dinde eziyetlere karşı sabırlı olmak imanın alametlerindendir. Mümin, dinde eziyet görünce sabreder; münafık sabretmez.</li>
+    <li>Dinde müdâhene, yani yağcılık olmaz.</li>
+    <li>Korku ve bela zamanında Müslümanları terk etmek, bolluk zamanında ise Müslümanlarla birlikte olmak münafıkların alametlerindendir.</li>
+    <li>Münafıkların kötü ahlakları.</li>
+    <li>Allah kullarını imtihan eder; kimin sadık, kimin yalancı olduğunu ortaya çıkarır.</li>
+    <li>Münafıkların akıllarının zayıflığı. İbnu'l-Kayyim rahimehullah şöyle demiştir:
+      <div class="blok alim">
+        <span class="soyleyen">İbnu'l-Kayyim rahimehullah (v. 751)</span>
+        <p class="ar">«وَهَذَا لِضَعْفِ بَصِيرَتِهِ فَرَّ مِنْ أَلَمِ عَذَابِ أَعْدَاءِ الرُّسُلِ إِلَى مُوَافَقَتِهِمْ وَمُتَابَعَتِهِمْ، فَفَرَّ مِنْ أَلَمِ عَذَابِهِمْ إِلَى أَلَمِ عَذَابِ اللَّهِ... وَفَرَّ مِنْ أَلَمِ سَاعَةٍ إِلَى أَلَمِ الْأَبَدِ»</p>
+        <p class="tr">"Bu, onun basiretinin zayıflığındandır: Resûllerin düşmanlarının azabının acısından kaçıp onlara uymaya ve onları takip etmeye sığındı; böylece onların azabının acısından kaçarken Allah'ın azabının acısına düştü... Bir saatlik acıdan kaçarken ebedî acıya düştü."</p>
+        <p class="kaynak">📚 İbnu'l-Kayyim, Zâdu'l-Meâd, 3/22 (Risâle neşrinde 3/17).</p>
+      </div>
+    </li>
+    <li>Onlar en küçük sarsılmada hemen dinlerini bırakıyorlar.</li>
+    <li>"Ben iman ettim", "Ben Selefîyim" demek kolaydır; fakat bunu gerçekten amelle göstermek zordur. Bu yüzden söz yeterli değildir: sağlam bir itikad ve amel gerekir.</li>
+  </ol>
+
+
+
+  <div class="bolum-baslik">Ebû Saîd el-Hudrî hadîsi</div>
+
+  <div class="blok hadis">
+    <span class="soyleyen">Ebû Saîd el-Hudrî radıyallahu anh'tan merfû olarak</span>
+    <p class="ar">«إِنَّ مِنْ ضَعْفِ الْيَقِينِ أَنْ تُرْضِيَ النَّاسَ بِسَخَطِ اللَّهِ، وَأَنْ تَحْمَدَهُمْ عَلَى رِزْقِ اللَّهِ، وَأَنْ تَذُمَّهُمْ عَلَى مَا لَمْ يُؤْتِكَ اللَّهُ، إِنَّ رِزْقَ اللَّهِ لَا يَجُرُّهُ حِرْصُ حَرِيصٍ، وَلَا يَرُدُّهُ كَرَاهِيَةُ كَارِهٍ»</p>
+    <p class="tr">"Şüphesiz yakînin zayıflığındandır ki, Allah'ı gazaplandıracak şekilde insanları razı etmeye çalışırsın, Allah'ın verdiği rızıktan dolayı insanları översin ve Allah'ın sana vermediği şeylerden dolayı onları kötülersin. Şüphesiz Allah'ın rızkını ne hırslı bir kimsenin hırsı çekip getirebilir ne de hoşlanmayan bir kimsenin hoşnutsuzluğu geri çevirebilir."</p>
+    <p class="kaynak">📚 Beyhakî, Şuabu'l-Îmân, 1/383, no. 203.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">1</span>Hadisin genel manası</h3>
+
+  <p>Bu hadis, Müslümanın nimetler ve belalar karşısında nasıl bir tutum içinde olması gerektiğini gösterir. Müslüman Allah'a güvenir ve O'na tevekkül eder. Yaptığı sebeplere değil, Allah'a dayanır. Rızkın ve takdirin Allah'ın elinde olduğunu bilir.</p>
+
+
+  <h3 class="altbolum"><span class="no">2</span>Hadisin Kitâbu't-Tevhîd ile münasebeti</h3>
+
+  <p>Havf, yani korku bir ibadettir. Kim ibadet olan korkuyu Allah'tan başkasına yöneltirse şirk koşmuş olur.</p>
+
+
+  <h3 class="altbolum"><span class="no">3</span>Hadisin bâbla münasebeti</h3>
+
+  <p>İnsanların sebeplere değil, Allah'a dayanması gerekir. Faydayı verenin ve zararı def edenin Allah olduğunu bilmek gerekir. İnsanlardan korkup Allah'ın öfkesini çekecek işler yapmamak gerekir.</p>
+
+  <p>Bu hadiste korku lafzı açıkça geçmez, fakat manasında iki yönden korku vardır:</p>
+
+  <ol class="sayili">
+    <li>O kişide Allah korkusu zayıf olduğu için yakîni de zayıftır. Yakîn iki sebepten dolayı zayıflar: Allah'tan başkasına recâ bağlamak ve Allah'tan başkasından korkmak.</li>
+    <li>Kişi, Allah'ın öfkesini göze alarak insanların rızasını arıyorsa, bunu insanlardan korktuğu için yapar. Yani insanların öfkesinden korkarak Allah'ın öfkesini üzerine çeker.</li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">4</span>Hadisin sıhhati</h3>
+
+  <p>Bu hadis sened olarak zayıftır. Fakat Şeyh Fevzân hafızahullahın belirttiği gibi, müellifin zayıf hadisleri zikretmesinin sebebi, bu hadislerin mana bakımından doğru olması ve kendilerini destekleyen başka delillerin bulunmasıdır. Şeyh Fevzân bu hadis hakkında şöyle demiştir:</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">Şeyh Sâlih el-Fevzân hafızahullah</span>
+    <p class="ar">«وَحَدِيثُ أَبِي سَعِيدٍ رَوَاهُ أَبُو نُعَيْمٍ فِي "الْحِلْيَةِ"، وَرَوَاهُ الْبَيْهَقِيُّ، وَهُوَ حَدِيثٌ ضَعِيفٌ، وَلَكِنَّ الشَّيْخَ رَحِمَهُ اللَّهُ مِنْ قَاعِدَتِهِ أَنْ لَا يَذْكُرَ الْحَدِيثَ الضَّعِيفَ إِلَّا إِذَا كَانَ لَهُ مَا يُؤَيِّدُهُ، وَهَذَا الْحَدِيثُ تُؤَيِّدُهُ الْآيَةُ الَّتِي قَبْلَهُ»</p>
+    <p class="tr">"Ebû Saîd hadisini Ebû Nuaym <em>el-Hilye</em>'de ve Beyhakî rivayet etmiştir; bu zayıf bir hadistir. Fakat Şeyh'in rahimehullah kaidesi, kendisini destekleyen bir delil bulunmadıkça zayıf hadisi zikretmemektir. Bu hadisi de kendisinden önce gelen âyet desteklemektedir."</p>
+    <p class="kaynak">📚 Sâlih el-Fevzân, İ'ânetu'l-Mustefîd bi-Şerhi Kitâbi't-Tevhîd, 2/58.</p>
+  </div>
+
+  <p>Burada Şeyh Fevzân'ın işaret ettiği âyet, bâbın başında geçen Ankebût sûresinin 10. âyetidir: <span class="ar-ic" dir="rtl" style="white-space:normal">﴿فَإِذَا أُوذِيَ فِي اللَّهِ جَعَلَ فِتْنَةَ النَّاسِ كَعَذَابِ اللَّهِ﴾</span></p>
+
+  <p>Müellif belki de bu hadisi zayıf görmüyor olabilir. Fakat her hâlükârda bu hadislerin manaları Kitap ve Sünnet'e uygundur.</p>
+
+
+  <h3 class="altbolum"><span class="no">5</span>Bu hadisi tahric eden âlimler</h3>
+
+  <p>Ebû Nuaym <em>Hilyetu'l-Evliyâ</em>'da, Beyhakî <em>Şuabu'l-Îmân</em>'da rivayet etmiştir. Taberânî de İbn Mes'ûd radıyallahu anh tarikiyle <em>el-Mu'cemu'l-Kebîr</em>'de rivayet etmiştir.</p>
+
+  <p>Hadis sened bakımından zayıftır. Bunun sebeplerinden bazıları şunlardır:</p>
+
+  <ol class="sayili">
+    <li><strong>Muhammed bin Mervân es-Suddî:</strong> Metrûktur. Ebû Hâtim ve Nesâî bunu söylemişlerdir.</li>
+    <li><strong>Atıyye el-Avfî:</strong> Zayıftır.</li>
+    <li><strong>Ali bin Muhammed bin Mervân:</strong> Meçhûlu'l-hâldir.</li>
+  </ol>
+
+  <p>Bu hadis Enes bin Mâlik radıyallahu anh ve İbn Mes'ûd radıyallahu anh'tan da merfû olarak rivayet edilmiştir. Fakat bu rivayetler de zayıftır. Enes rivayeti hakkında Zehebî mevzû hükmünü vermiştir.</p>
+
+  <p>İbn Mes'ûd radıyallahu anh'tan bu söz eser olarak gelmiştir ve senedi sahihtir.</p>
+
+
+  <h3 class="altbolum"><span class="no">6</span>Hadisin detaylı manası</h3>
+
+  <p><em>Yukarıda geçtiği üzere, bu söze İbn Mes'ûd radıyallahu anh'ın eseri demek daha doğru olur.</em></p>
+
+  <h4 class="kisim"><span class="no">1</span><span>"İnne min da'fi'l-yakîn" <span class="lafz-ar" dir="rtl">إِنَّ مِنْ ضَعْفِ الْيَقِينِ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Kureyş dilinde <strong>du'f</strong> <span class="ar-ic" dir="rtl">(الضُّعْف)</span>, Benî Temîm dilinde <strong>da'f</strong> <span class="ar-ic" dir="rtl">(الضَّعْف)</span> denilir. İkisi de kullanılan masdarlardır ve kuvvetin zıttıdır.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>"el-Yakîn" <span class="lafz-ar" dir="rtl">الْيَقِينُ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Yakînden maksat, imanın kemalidir.</li>
+      <li>İtikadın şek ve şüphe içermemesidir.</li>
+    </ul>
+    <p>İbn Mes'ûd radıyallahu anh şöyle demiştir:</p>
+    <div class="blok alim">
+      <span class="soyleyen">Abdullah bin Mes'ûd radıyallahu anh</span>
+      <p class="ar">الصَّبْرُ نِصْفُ الْإِيمَانِ، وَالْيَقِينُ الْإِيمَانُ كُلُّهُ</p>
+      <p class="tr">"Sabır imanın yarısıdır. Yakîn ise imanın tamamıdır."</p>
+      <p class="kaynak">📚 Beyhakî, Şuabu'l-Îmân, 1/151. Buhârî de bu sözün ikinci kısmını Kitâbu'l-Îmân'da ta'lîk olarak zikretmiştir.</p>
+    </div>
+    <ul class="madde">
+      <li>İmanı kuvvetli olanın yakîni de kuvvetli olur. Zıttı da geçerlidir.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>"En turdiye'n-nâse bi-sahatillâh" <span class="lafz-ar" dir="rtl">أَنْ تُرْضِيَ النَّاسَ بِسَخَطِ اللَّهِ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>İnsanların rızasını Allah'ın rızasına tercih etmendir.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">4</span><span>"Ve en tahmedehum alâ rizkillâh" <span class="lafz-ar" dir="rtl">وَأَنْ تَحْمَدَهُمْ عَلَى رِزْقِ اللَّهِ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Yani Allah'ı unutup rızkın başkasından geldiğine inanmak ve sebebe dayanmaktır.</li>
+    </ul>
+    <p>Bu yüzden Resûlullah <span class="sav">ﷺ</span> şöyle buyurmuştur:</p>
+    <div class="blok hadis">
+      <span class="soyleyen">Muâviye radıyallahu anh'tan</span>
+      <p class="ar">«إِنَّمَا أَنَا قَاسِمٌ وَاللَّهُ يُعْطِي»</p>
+      <p class="tr">"Ben ancak taksim edenim, veren Allah'tır."</p>
+      <p class="kaynak">📚 Buhârî, 71 (Kitâbu'l-İlm); Muslim, 1037.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">5</span><span>"Ve en tezummehum alâ mâ lem yu'tikellâh" <span class="lafz-ar" dir="rtl">وَأَنْ تَذُمَّهُمْ عَلَى مَا لَمْ يُؤْتِكَ اللَّهُ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Yani insanlar bir şey vermediği zaman onları kötülersin. Aslında Allah'ın kaderinde bu şekildeydi, fakat kişi bunu unutur ve insanları kötüler. Hâlbuki o rızkı Allah takdir etmemiştir.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">6</span><span>"İnne rizkallâhi lâ yecurruhu hırsu harîs" <span class="lafz-ar" dir="rtl">إِنَّ رِزْقَ اللَّهِ لَا يَجُرُّهُ حِرْصُ حَرِيصٍ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Sebeplere karşı ne kadar hırslı olursan ol, Allah onu sana takdir etmediyse onu elde edemezsin. Hadis bunu unutmamamız gerektiğini bildirir.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">7</span><span>"Ve lâ yerudduhu kerâhiyetu kârih" <span class="lafz-ar" dir="rtl">وَلَا يَرُدُّهُ كَرَاهِيَةُ كَارِهٍ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Yani insanların hepsi toplansa ve sana engel olmak istese, Allah bir nimeti sana takdir ettiyse onu senden engelleyemezler.</li>
+    </ul>
+    <p>Resûlullah <span class="sav">ﷺ</span> şöyle buyurmuştur:</p>
+    <div class="blok hadis">
+      <span class="soyleyen">İbn Abbâs radıyallahu anhumâ'dan</span>
+      <p class="ar">«وَاعْلَمْ أَنَّ الْأُمَّةَ لَوِ اجْتَمَعَتْ عَلَى أَنْ يَنْفَعُوكَ بِشَيْءٍ، لَمْ يَنْفَعُوكَ إِلَّا بِشَيْءٍ قَدْ كَتَبَهُ اللَّهُ لَكَ، وَلَوِ اجْتَمَعُوا عَلَى أَنْ يَضُرُّوكَ بِشَيْءٍ، لَمْ يَضُرُّوكَ إِلَّا بِشَيْءٍ قَدْ كَتَبَهُ اللَّهُ عَلَيْكَ»</p>
+      <p class="tr">"Bil ki ümmetin tamamı sana bir fayda vermek için toplansa, Allah'ın senin için yazdığından başka bir fayda veremezler. Sana zarar vermek için toplansalar, Allah'ın senin üzerine yazdığından başka bir zarar veremezler."</p>
+      <p class="kaynak">📚 Tirmizî, 2516 (hasen sahîh).</p>
+    </div>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">7</span>Meseleler</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Birinci mesele <span class="baslik-alt">&mdash; Bu eserden, insanlar sadece sebep olduğu için onlara şükretmememiz gerektiği mi anlaşılır?</span></span></h4>
+  <div class="kisim-govde">
+    <p>Hayır. Başka bir hadiste Resûlullah <span class="sav">ﷺ</span> şöyle buyurmuştur:</p>
+    <div class="blok hadis">
+      <span class="soyleyen">Ebû Hureyre radıyallahu anh'tan</span>
+      <p class="ar">«لَا يَشْكُرُ اللَّهَ مَنْ لَا يَشْكُرُ النَّاسَ»</p>
+      <p class="tr">"İnsanlara teşekkür etmeyen, Allah'a şükretmez."</p>
+      <p class="kaynak">📚 Ebû Dâvûd, 4811; Tirmizî, 1954 (hasen sahîh); Ahmed, el-Musned, 2/388.</p>
+    </div>
+    <p>İki hadisi şu şekilde toplayabiliriz: bu eserde "İnsanlara teşekkür etmeyin ve onlara ihsanda bulunmayın." denilmemektedir. Denilmek istenen şudur: <strong>asıl nimeti ve rızkı verenin Allah olduğunu ve insanların sadece sebep olduklarını unutmayın.</strong></p>
+
+    <p>İnsanlara şükretmek, sadece onlara "teşekkür ederim" demek değildir. İnsanlara şükretmenin farklı yolları vardır:</p>
+
+    <ol class="sayili">
+      <li>Onlar için dua ederek.</li>
+      <li>Onlara güzel söz söyleyerek. "Cezâkallâhu hayran" <span class="ar-ic" dir="rtl">(جَزَاكَ اللَّهُ خَيْرًا)</span> demek gibi.</li>
+      <li>Verilen nimeti inkâr etmeyerek, bilakis o kişinin buna sebep olduğunu itiraf ederek.</li>
+    </ol>
+  </div>
+
+
+  <h4 class="kisim"><span class="no">2</span><span>İkinci mesele <span class="baslik-alt">&mdash; Bir kişinin yakîn derecesine ulaşması için ne olması gerekir?</span></span></h4>
+  <div class="kisim-govde">
+    <p>İbn Teymiyye rahimehullah'a "Yakîn nedir ve nasıl elde edilir?" diye sorulduğunda şöyle cevap vermiştir:</p>
+    <div class="blok alim">
+      <span class="soyleyen">İbn Teymiyye rahimehullah (v. 728)</span>
+      <p class="ar">«وَأَمَّا "الْيَقِينُ" فَهُوَ طُمَأْنِينَةُ الْقَلْبِ، وَاسْتِقْرَارُ الْعِلْمِ فِيهِ … ثُمَّ الْيَقِينُ يَنْتَظِمُ مِنْهُ أَمْرَانِ: عِلْمُ الْقَلْبِ، وَعَمَلُ الْقَلْبِ»</p>
+      <p class="tr">"Yakîn ise kalbin itminana ermesi ve ilmin kalpte yerleşmesidir… Sonra yakîn iki şeyden meydana gelir: kalbin ilmi ve kalbin ameli."</p>
+      <p class="kaynak">📚 İbn Teymiyye, Mecmû'u'l-Fetâvâ, 3/329.</p>
+    </div>
+
+    <p>İbn Kayyim rahimehullah da Cuneyd rahimehullah'tan şu tarifi nakletmiştir:</p>
+    <div class="blok alim">
+      <span class="soyleyen">Cuneyd rahimehullah (v. 297)</span>
+      <p class="ar">«الْيَقِينُ هُوَ اسْتِقْرَارُ الْعِلْمِ الَّذِي لَا يَنْقَلِبُ وَلَا يُحَوَّلُ وَلَا يَتَغَيَّرُ فِي الْقَلْبِ»</p>
+      <p class="tr">"Yakîn, kalpte dönmeyen, başka bir hâle çevrilmeyen ve değişmeyen ilmin yerleşmesidir."</p>
+      <p class="kaynak">📚 İbn Kayyim, Medâricu's-Sâlikîn, Menzilet'ul-Yakîn, 3/173.</p>
+    </div>
+
+    <p>İbn Teymiyye rahimehullah, yakîn lafzının içine amelin de girdiğini başka bir yerde daha açık bir şekilde beyân etmiştir:</p>
+    <div class="blok alim">
+      <span class="soyleyen">İbn Teymiyye rahimehullah (v. 728)</span>
+      <p class="ar">«فَإِنَّ الْيَقِينَ أَيْضًا يُرَادُ بِهِ الْعِلْمُ الْمُسْتَقِرُّ فِي الْقَلْبِ وَيُرَادُ بِهِ الْعَمَلُ بِهَذَا الْعِلْمِ. فَلَا يُطْلَقُ "الْمُوقِنُ" إِلَّا عَلَى مَنْ اسْتَقَرَّ فِي قَلْبِهِ الْعِلْمُ وَالْعَمَلُ»</p>
+      <p class="tr">"Şüphesiz yakîn ile hem kalpte yerleşmiş olan ilim kastedilir hem de bu ilmin gereğiyle amel etmek kastedilir. Bu sebeple 'mûkin' (yakîn sahibi) ismi, ancak kalbinde ilim ve amel yerleşmiş olan kişi hakkında kullanılır."</p>
+      <p class="kaynak">📚 İbn Teymiyye, Mecmû'u'l-Fetâvâ, 16/337.</p>
+    </div>
+
+    <p>Âlimler, bir kişide yakînin bulunması için iki şeyin gerektiğini söylemişlerdir:</p>
+    <ol class="sayili">
+      <li>İlim.</li>
+      <li>O ilmin gereğiyle amel etmek.</li>
+    </ol>
+
+    <div class="ozet">
+      <p>Bu ikisi bir arada bulunduğu zaman kişide yakîn bulunur.</p>
+    </div>
+  </div>
+
+
+  <h4 class="kisim"><span class="no">3</span><span>Üçüncü mesele <span class="baslik-alt">&mdash; O zaman hayra karşı hırslı olmayalım mı?</span></span></h4>
+  <div class="kisim-govde">
+    <p>Çünkü eserde şöyle denilmektedir: "Allah'ın rızkını ne hırslı bir kimsenin hırsı çekip getirebilir ne de hoşlanmayan bir kimsenin hoşnutsuzluğu geri çevirebilir." <span class="ar-ic" dir="rtl" style="white-space:normal">(إِنَّ رِزْقَ اللَّهِ لَا يَجُرُّهُ حِرْصُ حَرِيصٍ، وَلَا يَرُدُّهُ كَرَاهِيَةُ كَارِهٍ)</span></p>
+
+    <p><strong>Cevap:</strong> Bu sözde, hayra karşı hırslı olmamak kastedilmemektedir. Bilakis insanın kendisine fayda veren şeylere karşı hırslı olması gerekir. Yerilmiş olan hırs, kişinin hırsına dayanması ve istediği şeyi bu hırs sayesinde elde edeceğini zannetmesidir.</p>
+
+    <div class="blok alim">
+      <span class="soyleyen">Şeyh Sâlih el-Fevzân hafizahullah</span>
+      <p class="ar">«وَلَيْسَ مَعْنَى ذَلِكَ أَنَّ الْإِنْسَانَ لَا يَحْرِصُ عَلَى طَلَبِ الْخَيْرِ، قَالَ ﷺ: "احْرِصْ عَلَى مَا يَنْفَعُكَ، وَاسْتَعِنْ بِاللَّهِ"، فَجَمَعَ بَيْنَ الْأَمْرَيْنِ: الْحِرْصِ وَالِاسْتِعَانَةِ. فَالْحِرْصُ لَيْسَ مَذْمُومًا، وَإِنَّمَا الْمَذْمُومُ: الِاعْتِمَادُ عَلَى الْحِرْصِ وَاعْتِقَادُ أَنَّهُ يَحْصُلُ بِهِ الْمَطْلُوبُ»</p>
+      <p class="tr">"Bunun manası, insanın hayrı elde etmeye karşı hırslı olmaması değildir. Resûlullah <span class="sav">ﷺ</span> 'Sana fayda veren şeye karşı hırslı ol ve Allah'tan yardım iste.' buyurmuştur. Böylece iki şeyi bir araya getirmiştir: hırslı olmak ve Allah'tan yardım istemek. Hırsın kendisi kötü değildir. Kötü olan, hırsa dayanmak ve istenilen şeyin bu hırs sayesinde elde edileceğine inanmaktır."</p>
+      <p class="kaynak">📚 Fevzân, İ'ânetu'l-Mustefîd bi Şerhi Kitâbi't-Tevhîd, 2/58.</p>
+    </div>
+
+    <div class="ozet">
+      <p>Demek ki sebeplere sarılmak ve hayra karşı hırslı olmak emredilmiştir. Yerilen şey, sebebe ve hırsa güvenip kalbi Allah'tan koparmaktır.</p>
+    </div>
+  </div>
+
+
+  <h4 class="kisim"><span class="no">4</span><span>Dördüncü mesele <span class="baslik-alt">&mdash; Da'fu'l-yakîn (yakînin zayıflığı) nasıl olur, alametleri nelerdir?</span></span></h4>
+  <div class="kisim-govde">
+    <ol class="sayili">
+      <li>Allah'ı öfkelendirse bile insanların rızasını hedeflemek.</li>
+      <li>Allah vermediği zaman insanları kınamak ve Allah'ın takdirine teslim olmamak.</li>
+      <li>Sebeplere dayanmak ve gerçek vereni, yani Allah'ı, unutmak.</li>
+      <li>Kendisine bir şey verilmediği zaman öfkelenmek ve Allah'ın verdiği nimetleri unutmak.</li>
+      <li>Belâ geldiği zaman Allah hakkında kötü zan beslemek.</li>
+      <li>İnsanlar görsün diye amel etmek, yani riya sahibi olmak.</li>
+      <li>Nimeti kendi zekâsı ve becerisi sayesinde elde ettiğini zannetmek ve nimetleri Allah'ın verdiğini unutmak.</li>
+      <li>İstediği iş geciktiği zaman öfkelenmek ve strese girmek. Bunun Allah'ın takdiri olduğunu unutmak.</li>
+    </ol>
+  </div>
+
+
+  <h4 class="kisim"><span class="no">5</span><span>Beşinci mesele <span class="baslik-alt">&mdash; Yakîn üç kısımdır</span></span></h4>
+  <div class="kisim-govde">
+    <ol class="sayili">
+      <li><strong>İlme'l-yakîn</strong> <span class="ar-ic" dir="rtl">(عِلْمُ الْيَقِينِ)</span>
+        <p class="alt-tanim">Kur'ân'da ve sünnette cennetin haber verilmesi.</p>
+      </li>
+      <li><strong>Ayne'l-yakîn</strong> <span class="ar-ic" dir="rtl">(عَيْنُ الْيَقِينِ)</span>
+        <p class="alt-tanim">Cenneti gözünle görmen.</p>
+      </li>
+      <li><strong>Hakka'l-yakîn</strong> <span class="ar-ic" dir="rtl">(حَقُّ الْيَقِينِ)</span>
+        <p class="alt-tanim">Cennete girmen.</p>
+      </li>
+    </ol>
+
+    <div class="notkutu"><span class="not-etiket">Fâide</span>
+      <p>Bu üç mertebenin üçü de Kur'ân'da geçmektedir:</p>
+      <ul class="madde">
+        <li><span class="ar-ic" dir="rtl">(كَلَّا لَوْ تَعْلَمُونَ عِلْمَ الْيَقِينِ)</span> "Hayır! Kesin bir bilgi ile bilseydiniz…" (Tekâsur, 5)</li>
+        <li><span class="ar-ic" dir="rtl">(ثُمَّ لَتَرَوُنَّهَا عَيْنَ الْيَقِينِ)</span> "Sonra onu gözünüzle kesin olarak göreceksiniz." (Tekâsur, 7)</li>
+        <li><span class="ar-ic" dir="rtl">(إِنَّ هَذَا لَهُوَ حَقُّ الْيَقِينِ)</span> "Şüphesiz bu, kesin gerçeğin ta kendisidir." (Vâkıa, 95)</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">8</span>Bu eserden çıkarılan faydalar</h3>
+
+  <ol class="sayili">
+    <li>İman artar ve azalır; zayıflar ve güçlenir.</li>
+    <li>Ameller imandandır. Çünkü kişi insanlar için amel ettiğinde yakîni ve imanı zayıflar.</li>
+    <li>Sahat / suht <span class="ar-ic" dir="rtl">(السَّخَط)</span> Allah'ın sıfatlarındandır. Manası: öfke ve gazap.</li>
+    <li>Gerçek vereni unutup insanlara şükretmek haramdır.</li>
+    <li>İnsanlar vermediği zaman onları kınamak caiz değildir.</li>
+    <li>Hayır ve şer Allah tarafından takdir edilmiştir.</li>
+    <li>Kazâ ve kaderin ispatı vardır.</li>
+    <li>Sebeplere sarılırken kalbi Allah'a bağlamak vaciptir.</li>
+    <li>Allah'ın rızasını mahlûkların rızasına takdim etmek gerekir.</li>
+  </ol>
+
+
+  <div class="bolum-baslik">Âişe radıyallahu anhâ hadîsi</div>
+
+  <p>Âişe radıyallahu anhâ'dan rivayet edildiğine göre Resûlullah <span class="sav">ﷺ</span> şöyle buyurmuştur:</p>
+
+  <div class="blok hadis">
+    <span class="soyleyen">Âişe radıyallahu anhâ'dan</span>
+    <p class="ar">«مَنِ الْتَمَسَ رِضَا اللَّهِ بِسَخَطِ النَّاسِ، رَضِيَ اللَّهُ عَنْهُ، وَأَرْضَى عَنْهُ النَّاسَ، وَمَنِ الْتَمَسَ رِضَا النَّاسِ بِسَخَطِ اللَّهِ، سَخِطَ اللَّهُ عَلَيْهِ، وَأَسْخَطَ عَلَيْهِ النَّاسَ»</p>
+    <p class="tr">"Kim insanların öfkesine rağmen Allah'ın rızasını ararsa, Allah ondan razı olur ve insanları da ondan razı eder. Kim de Allah'ın öfkesine rağmen insanların rızasını ararsa, Allah ona gazap eder ve insanları da ona karşı gazaplandırır."</p>
+    <p class="kaynak">📚 İbn Hibbân, es-Sahîh, 276; Elbânî, es-Silsiletu's-Sahîha, 2311.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">1</span>Hadisin genel manası</h3>
+
+  <p>Kişi Allah'ın rızasını kazanmak için Allah'ın emirlerini yerine getirip haramlardan kaçınır ve bunları yaparken insanların öfkesine aldırmazsa, hem Allah'ın rızasını hem de insanların rızasını kazanır.</p>
+
+  <p>Aynı şekilde kim insanların rızasını Allah'ın rızasının önüne geçirirse, Allah ona öfkelenir ve insanları da ona karşı öfkeli kılar.</p>
+
+
+  <h3 class="altbolum"><span class="no">2</span>Hadisin Kitâbu't-Tevhîd ile münasebeti</h3>
+
+  <p>Havf <span class="ar-ic" dir="rtl">(الْخَوْفُ)</span> ibadetlerden bir ibadettir. Allah'tan başkasına ibadet olarak verilmez. Kim bu korkuyu Allah'tan başkasına verirse şirk koşmuş olur.</p>
+
+  <p>"Bu hadiste korku ibadeti nerede geçmektedir?" sorusunun cevabı şudur: kişi ya Allah'tan korkar ve O'nun rızasını insanların öfkesine tercih eder, ya da insanlardan korkar ve onların rızasını Allah'ın rızasının önüne geçirir.</p>
+
+
+  <h3 class="altbolum"><span class="no">3</span>Hadisin bâbla münasebeti</h3>
+
+  <div class="ozet">
+    <p>Allah korkusunu bütün korkuların önüne geçirmek vaciptir. Allah'tan başkasına korku ibadetini vermek ise haramdır.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">4</span>Hadisin detaylı manası</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>"Men iltemese" <span class="lafz-ar" dir="rtl">مَنِ الْتَمَسَ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Yani kim talep eder, arar ve elde etmeye çalışırsa.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>"Rıdallâhi bi-sahati'n-nâs" <span class="lafz-ar" dir="rtl">رِضَا اللَّهِ بِسَخَطِ النَّاسِ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>"Sahatu'n-nâs" <span class="ar-ic" dir="rtl">(سَخَطُ النَّاسِ)</span> yani insanların öfkesi. Burada bütün insanlar değil, bazı insanlar kastedilmiştir.</li>
+      <li>Kişi Allah'ın rızasını öncelikli kılar. İnsanlar kendisine öfkelense ve onu kınasa bile Allah'ın rızasını arar.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>"Radiyallâhu anhu ve erdâ anhu'n-nâs" <span class="lafz-ar" dir="rtl">رَضِيَ اللَّهُ عَنْهُ وَأَرْضَى عَنْهُ النَّاسَ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Yani Allah ondan razı olur ve insanları da ondan razı eder.</li>
+      <li>Bu kişi hakka ve sünnete tutunur; insanlar onu kınasa bile bundan vazgeçmez.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">4</span><span>"Ve men iltemese" <span class="lafz-ar" dir="rtl">وَمَنِ الْتَمَسَ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Yani kim bunun tam tersini yaparsa.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">5</span><span>"Rıda'n-nâsi bi-sahatillâh" <span class="lafz-ar" dir="rtl">رِضَا النَّاسِ بِسَخَطِ اللَّهِ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Allah'ın öfkesine sebep olacak şekilde insanların rızasını arar. Ya vacipleri terk ederek ya da harama düşerek insanların rızasını arıyor.</li>
+      <li>Hakikatte bu kişiler, sen onlar gibi olmadığın ve dinde taviz vermediğin sürece senden razı olmazlar.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">6</span><span>"Sahitallâhu aleyhi ve eshata aleyhi'n-nâs" <span class="lafz-ar" dir="rtl">سَخِطَ اللَّهُ عَلَيْهِ وَأَسْخَطَ عَلَيْهِ النَّاسَ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Kalpler, Rahmân'ın parmaklarından iki parmak arasındadır. O, onları dilediği gibi çevirir.</li>
+    </ul>
+    <div class="blok hadis">
+      <span class="soyleyen">Abdullah b. Amr radıyallahu anhumâ'dan</span>
+      <p class="ar">«إِنَّ قُلُوبَ بَنِي آدَمَ كُلَّهَا بَيْنَ إِصْبَعَيْنِ مِنْ أَصَابِعِ الرَّحْمَنِ كَقَلْبٍ وَاحِدٍ، يُصَرِّفُهُ حَيْثُ يَشَاءُ»</p>
+      <p class="tr">"Âdemoğullarının kalplerinin tamamı, tek bir kalp gibi, Rahmân'ın parmaklarından iki parmak arasındadır. Onu dilediği gibi çevirir."</p>
+      <p class="kaynak">📚 Muslim, 2654.</p>
+    </div>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">5</span>Hadisi tahric eden âlimler</h3>
+
+  <p>Hadisi şu âlimler rivayet etmişlerdir:</p>
+
+  <ul class="madde">
+    <li>İbn Hibbân, <em>es-Sahîh</em> adlı eserinde.</li>
+    <li>Tirmizî, <em>es-Sunen</em> adlı eserinde.</li>
+    <li>İmam Ahmed, <em>el-Musned</em> adlı eserinde.</li>
+  </ul>
+
+
+  <h3 class="altbolum"><span class="no">6</span>Hadisin sıhhati</h3>
+
+  <p>Hadisin merfû mu yoksa mevkûf mu olduğu konusunda ihtilaf vardır.</p>
+
+  <p>Ebû Hâtim, Ebû Zur'a, Beyhakî, Dârekutnî ve Ebû Ca'fer el-Ukaylî gibi bazı hadis âlimleri ile <em>Kitâbu't-Tevhîd</em>'i tahkik eden birçok âlim, bunun Resûlullah'ın <span class="sav">ﷺ</span> sözü değil, Âişe radıyallahu anhâ'nın sözü olduğunu söylemişlerdir.</p>
+
+  <p>Şeyh Elbânî rahimehullah ise hadisi Resûlullah'tan <span class="sav">ﷺ</span> merfû olarak sahih kabul etmiştir. Fakat eski hadis âlimlerinin çoğu, bunun Âişe radıyallahu anhâ'nın sözü olduğunu söylemişlerdir.</p>
+
+  <div class="ozet">
+    <p>Doğru olan: bu sözün Âişe radıyallahu anhâ'nın sözü, yani mevkûf olmasıdır.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">7</span>Bu hadis hakkında gelen kıssa ve sıhhati nedir?</h3>
+
+  <p>Şeyh Elbânî rahimehullah bu rivayeti sahih kabul etmiştir. Fakat râcih olan, senedinde hâli bilinmeyen bir râvi bulunduğu için bu kıssanın zayıf olmasıdır.</p>
+
+  <p>Kıssa şöyledir: Muâviye radıyallahu anh, Âişe radıyallahu anhâ'dan kendisine nasihat etmesini istedi ve ona şöyle yazdı:</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">Muâviye radıyallahu anh</span>
+    <p class="ar">اكْتُبِي إِلَيَّ كِتَابًا تُوصِينِي فِيهِ، وَلَا تُكْثِرِي عَلَيَّ</p>
+    <p class="tr">"Bana nasihat edeceğin bir mektup yaz, fakat onu çok uzatma."</p>
+  </div>
+
+  <p>Bunun üzerine Âişe radıyallahu anhâ ona şöyle yazdı:</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">Âişe radıyallahu anhâ</span>
+    <p class="ar">سَلَامٌ عَلَيْكَ، أَمَّا بَعْدُ: مَنِ الْتَمَسَ رِضَا اللَّهِ بِسَخَطِ النَّاسِ كَفَاهُ اللَّهُ مَؤُونَةَ النَّاسِ، وَمَنِ الْتَمَسَ رِضَا النَّاسِ بِسَخَطِ اللَّهِ وَكَلَهُ اللَّهُ إِلَى النَّاسِ، وَالسَّلَامُ عَلَيْكَ</p>
+    <p class="tr">"Selâm sana. Bundan sonra: kim insanların öfkesine rağmen Allah'ın rızasını ararsa, Allah ona insanların vereceği sıkıntılara karşı yeter. Kim de Allah'ın öfkesine rağmen insanların rızasını ararsa, Allah onu insanlara bırakır. Selâm sana."</p>
+    <p class="kaynak">📚 Tirmizî, 2414.</p>
+  </div>
+
+  <div class="ikaz"><strong>Tenbih:</strong> Tirmizî bu kıssayı "Medine halkından bir adam" <span class="ar-ic" dir="rtl">(رَجُلٌ مِنْ أَهْلِ الْمَدِينَةِ)</span> ifadesiyle rivayet etmiştir. İsmi zikredilmeyen bu râvi sebebiyle sened zayıftır.</div>
+
+
+  <h3 class="altbolum"><span class="no">8</span>Âişe radıyallahu anhâ'nın sözü mana olarak doğru mu?</h3>
+
+  <p>Bu söz mana olarak doğrudur. Bu manayı teyit eden başka hadisler de vardır.</p>
+
+  <div class="blok hadis">
+    <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+    <p class="ar">«تَعِسَ عَبْدُ الدِّينَارِ، وَعَبْدُ الدِّرْهَمِ، وَعَبْدُ الْخَمِيصَةِ، إِنْ أُعْطِيَ رَضِيَ، وَإِنْ لَمْ يُعْطَ سَخِطَ»</p>
+    <p class="tr">"Dinarın kulu helâk olsun, dirhemin kulu helâk olsun, güzel elbisenin kulu helâk olsun. Kendisine verilirse razı olur, verilmezse öfkelenir."</p>
+    <p class="kaynak">📚 Buhârî, 2887.</p>
+  </div>
+
+  <div class="ozet">
+    <p>Bu ve benzeri hadislerin manaları, Âişe radıyallahu anhâ'nın sözünün manasına delalet etmektedir.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">9</span>Meseleler</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Birinci mesele <span class="baslik-alt">&mdash; Bu hadisten bir kaide çıkarılmıştır</span></span></h4>
+  <div class="kisim-govde">
+    <div class="lafz">
+      <p class="ar-buyuk" dir="rtl">الْمُعَاقَبَةُ بِنَقِيضِ الْقَصْدِ</p>
+      <p class="lafz-tr">el-Mu'âkabetu bi-nakîdi'l-kasd: "Kişinin kastının zıddıyla cezalandırılması."</p>
+    </div>
+
+    <p>Bu kaide, Şeyh Abdurrahman es-Sa'dî rahimehullah'ın <em>Manzûmetu'l-Kavâidi'l-Fıkhiyye</em> adlı eserinde geçen şu beyitte zikrettiği mana ile de ilgilidir:</p>
+
+    <div class="blok alim">
+      <span class="soyleyen">Abdurrahman es-Sa'dî rahimehullah</span>
+      <p class="ar">مُعَاجِلُ الْمَحْظُورِ قَبْلَ آنِهْ ... قَدْ بَاءَ بِالْخُسْرَانِ مَعْ حِرْمَانِهْ</p>
+      <p class="tr">"Yasak olan bir şeyi vakti gelmeden elde etmek için acele eden kimse, mahrumiyetle birlikte hüsrana uğrar."</p>
+      <p class="kaynak">📚 Sa'dî, Manzûmetu'l-Kavâidi'l-Fıkhiyye, 29. beyit.</p>
+    </div>
+
+    <p>Yani kişi bir şeyi meşru olmayan bir yolla vaktinden önce elde etmek isterse, kastettiği şeyin zıddıyla cezalandırılabilir ve ondan mahrum bırakılabilir.</p>
+
+    <p>Bu hadiste kişi, Allah'ı öfkelendirerek insanların rızasını elde etmek ister. Fakat bunun sonucunda Allah ona öfkelenir ve insanları da ona karşı öfkeli kılar. Böylece kişi, elde etmek istediği şeyin tam tersiyle cezalandırılmış ve kullara terk edilmiş olur.</p>
+
+    <div class="notkutu"><span class="not-etiket">Ek Söz</span>
+      <p>Temîme takan kişi de böyledir. Kendisini koruması ve zararı defetmesi için temîmeye bağlanır. Fakat Resûlullah <span class="sav">ﷺ</span> şöyle buyurmuştur:</p>
+      <div class="blok hadis">
+        <span class="soyleyen">Abdullah b. Ukeym radıyallahu anh'tan</span>
+        <p class="ar">«مَنْ تَعَلَّقَ شَيْئًا وُكِلَ إِلَيْهِ»</p>
+        <p class="tr">"Kim bir şeye bağlanırsa, ona havale edilir."</p>
+        <p class="kaynak">📚 Tirmizî, 2072; Ahmed, el-Musned, 18781.</p>
+      </div>
+      <p>Yani kişi korunmak için Allah'tan başka bir şeye bağlanırsa, kastettiği şeyin zıddıyla cezalandırılır ve bağlandığı o şeye bırakılır.</p>
+    </div>
+  </div>
+
+
+  <h4 class="kisim"><span class="no">2</span><span>İkinci mesele <span class="baslik-alt">&mdash; Allah'ın öfkesi, mutlaka dünya işlerinde bir ceza olacağı anlamına gelmez</span></span></h4>
+  <div class="kisim-govde">
+    <p>İnsanların rızasını Allah'ın rızasının önüne geçirmek, Allah'ın öfkesini getirir. Allah'ın öfkesi de cezayı gerektirir. Bu ceza hem dünyevî işlerde hem de dinî işlerde olabilir; mutlaka dünya işlerinde olacak diye bir şey yoktur.</p>
+
+    <div class="notkutu"><span class="not-etiket">Örnek</span>
+      <p>Kişinin kalbinden iman eksilebilir veya kişi nifakla cezalandırılabilir.</p>
+    </div>
+
+    <div class="blok ayet">
+      <span class="soyleyen">Allah Teâlâ şöyle buyurmuştur</span>
+      <p class="ar">﴿فَأَعْقَبَهُمْ نِفَاقًا فِي قُلُوبِهِمْ إِلَى يَوْمِ يَلْقَوْنَهُ بِمَا أَخْلَفُوا اللَّهَ مَا وَعَدُوهُ وَبِمَا كَانُوا يَكْذِبُونَ﴾</p>
+      <p class="tr">"Allah'a verdikleri sözden dönmeleri ve yalan söylemeleri sebebiyle, Allah da kendisine kavuşacakları güne kadar kalplerine nifak yerleştirdi."</p>
+      <p class="kaynak">📚 Tevbe, 77.</p>
+    </div>
+
+    <div class="blok ayet">
+      <span class="soyleyen">Allah Teâlâ şöyle buyurmuştur</span>
+      <p class="ar">﴿فَلَمَّا زَاغُوا أَزَاغَ اللَّهُ قُلُوبَهُمْ وَاللَّهُ لَا يَهْدِي الْقَوْمَ الْفَاسِقِينَ﴾</p>
+      <p class="tr">"Onlar haktan sapınca Allah da onların kalplerini saptırdı. Allah fâsıklar topluluğunu hidayete erdirmez."</p>
+      <p class="kaynak">📚 Saff, 5.</p>
+    </div>
+
+    <p>Bu âyette, önce kendileri haktan saptıkları için Allah'ın da onların kalplerini saptırdığı bildirilmektedir.</p>
+
+    <div class="notkutu"><span class="not-etiket">Örnek</span>
+      <p>Bir kişi haram olan şeylere bakmaya başlayınca, Allah ceza olarak onu cemaat namazından uzaklaştırabilir. Bu da Allah'ın dinî işlerdeki cezasıdır. Belki bu kişinin dünyalık işlerinde hiçbir cezası olmaz, fakat dinî işlerinde cezası olur.</p>
+    </div>
+    <p>Bu yüzden seleften bazıları şöyle demiştir:</p>
+
+    <div class="blok alim">
+      <span class="soyleyen">Selef âlimlerinden</span>
+      <p class="ar">مِنْ ثَوَابِ الْحَسَنَةِ الْحَسَنَةُ بَعْدَهَا، وَمِنْ عُقُوبَةِ السَّيِّئَةِ السَّيِّئَةُ بَعْدَهَا</p>
+      <p class="tr">"Bir iyiliğin sevaplarından biri, ardından başka bir iyiliğin gelmesidir. Bir günahın cezalarından biri de ardından başka bir günahın gelmesidir."</p>
+    </div>
+  </div>
+
+
+  <h4 class="kisim"><span class="no">3</span><span>Üçüncü mesele <span class="baslik-alt">&mdash; Havf ve recâdan hangisi daha ağır basmalıdır?</span></span></h4>
+  <div class="kisim-govde">
+    <p>Asıl olan, havf <span class="ar-ic" dir="rtl">(الْخَوْفُ)</span> ile recânın <span class="ar-ic" dir="rtl">(الرَّجَاءُ)</span> dengede olmasıdır. Hasan el-Basrî, İmam Ahmed ve İbn Teymiyye rahimehumullah bunu söylemişlerdir. Bunlardan biri diğerine tamamen galip gelirse kişi helâk olur.</p>
+
+    <p>Bazı durumlarda ise biri diğerinden daha ağır basabilir:</p>
+
+    <ul class="madde">
+      <li>Kişi günah işlediğinde havf daha ağır basar.</li>
+      <li>Kişi ölüm döşeğinde olduğunda ise recâ daha ağır basar.</li>
+    </ul>
+
+    <p>O hâlde bu sorunun cevabı hâlden hâle ve kişiden kişiye değişebilir. Fakat asıl olan, ikisinin de dengede olmasıdır.</p>
+
+    <div class="ozet">
+      <p>Özellikle bu zamanda, insanların çoğunun amel etmediği ve Allah'a itaatten uzaklaştığı bir dönemde, bu kişilerde korkunun daha ağır basması gerekir ki amel etsinler ve Allah'a itaat etsinler.</p>
+    </div>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">10</span>Bu hadisten çıkarılan faydalar</h3>
+
+  <ol class="sayili">
+    <li>Allah'ın rıza sıfatının ispatı.</li>
+    <li>Dine tutunmak Allah'ın rızasını getirir. Kim dine sımsıkı tutunursa Allah ondan razı olur.</li>
+    <li>İnsanlara yağcılık yapmak için vacipleri terk etmek veya haramlara düşmek Allah'ın öfkesini getirir.</li>
+    <li>Allah'ın suht <span class="ar-ic" dir="rtl">(السَّخَطُ)</span>, yani öfke sıfatının ispatı.</li>
+    <li>Kalpleri çeviren ve döndüren Allah'tır.</li>
+    <li>Havf ibadetinin vacip olması.</li>
+    <li>Kim Allah'ın rızasını kulların rızasından öne geçirirse, onun âkıbeti güzel olur.</li>
+    <li>Kim Allah'ın rızasını kazanmak için uğraşırsa, Allah insanların kalplerine o kişi için sevgi ve rıza koyar.</li>
+    <li>Bu hadisten, Müslümanın insanları özellikle öfkelendirecek işler yapması gerektiği anlaşılmaz. Müslümanın insanlara karşı güzel ahlâklı olması gerekir. Burada kastedilen, kişi Allah'ın rızasını ararken insanlar buna öfkelenirse, onların öfkesini Allah'ın rızasının önüne geçirmemesidir.</li>
+    <li>Muvahhid kulun kalbi Allah'a bağlıdır. Allah dilerse verir, dilerse vermez. Gerçek veren O'dur.</li>
+    <li>Allah'ı kızdırmayacak işlerde insanların rızasını almakta ve onlara güzel davranmakta bir problem yoktur. Resûlullah <span class="sav">ﷺ</span> da bunu yapmıştır.
+      <p>Âişe radıyallahu anhâ şöyle rivayet etmiştir: Bir adam Resûlullah'ın <span class="sav">ﷺ</span> yanına girmek için izin istedi. Resûlullah <span class="sav">ﷺ</span> onun hakkında <span class="ar-ic" dir="rtl">(بِئْسَ أَخُو الْعَشِيرَةِ)</span> "Bu, kavminin ne kötü bir ferdidir." buyurdu. Fakat adam içeri girdiğinde Resûlullah <span class="sav">ﷺ</span> onunla yumuşak konuştu ve ona güzel davrandı. Âişe radıyallahu anhâ bunun sebebini sorunca Resûlullah <span class="sav">ﷺ</span> şöyle buyurdu:</p>
+      <div class="blok hadis">
+        <span class="soyleyen">Âişe radıyallahu anhâ'dan</span>
+        <p class="ar">«إِنَّ شَرَّ النَّاسِ مَنْزِلَةً عِنْدَ اللَّهِ يَوْمَ الْقِيَامَةِ مَنْ تَرَكَهُ النَّاسُ اتِّقَاءَ شَرِّهِ»</p>
+        <p class="tr">"Kıyamet günü Allah katında insanların makam bakımından en kötüsü, insanların kötülüğünden korunmak için terk ettiği kimsedir."</p>
+        <p class="kaynak">📚 Buhârî, 6032; Muslim, 2591.</p>
+      </div>
+      <p>Bu, müdârâdır <span class="ar-ic" dir="rtl">(الْمُدَارَاةُ)</span>. Yani harama düşmeden ve dinden taviz vermeden insanlara yumuşak davranmaktır.</p>
+    </li>
+    <li>Bu anlayış çok önemlidir. İbn Teymiyye rahimehullah şöyle demiştir:
+      <div class="blok alim">
+        <span class="soyleyen">İbn Teymiyye rahimehullah</span>
+        <p class="ar">وَهَذَا مِنْ أَعْظَمِ الْفِقْهِ فِي الدِّينِ… فَإِنَّ مَنْ أَرْضَى اللَّهَ بِسَخَطِهِمْ كَانَ قَدِ اتَّقَاهُ، وَكَانَ عَبْدَهُ الصَّالِحَ، وَاللَّهُ يَتَوَلَّى الصَّالِحِينَ وَهُوَ كَافٍ عَبْدَهُ… وَمَنْ أَرْضَى النَّاسَ بِسَخَطِ اللَّهِ لَمْ يُغْنُوا عَنْهُ مِنَ اللَّهِ شَيْئًا</p>
+        <p class="tr">"Bu, dindeki en büyük anlayışlardan biridir… Çünkü kim insanların öfkesine rağmen Allah'ı razı ederse, Allah'tan sakınmış ve O'nun sâlih kulu olmuş olur. Allah sâlih kullarını korur ve kuluna yeter… Kim de Allah'ın öfkesine rağmen insanları razı ederse, insanlar ona Allah'a karşı hiçbir fayda sağlayamazlar."</p>
+        <p class="kaynak">📚 İbn Teymiyye, Mecmû'u'l-Fetâvâ, 1/52.</p>
+      </div>
+      <p>İmam Şâfiî rahimehullah da şöyle demiştir:</p>
+      <div class="blok alim">
+        <span class="soyleyen">İmam Şâfiî rahimehullah</span>
+        <p class="ar">يَا رَبِيعُ، رِضَا النَّاسِ غَايَةٌ لَا تُدْرَكُ، فَعَلَيْكَ بِمَا يُصْلِحُكَ فَالْزَمْهُ، فَإِنَّهُ لَا سَبِيلَ إِلَى رِضَاهُمْ</p>
+        <p class="tr">"Ey Rebî'! İnsanların rızası ulaşılamayacak bir gayedir. O hâlde sana fayda verecek ve seni düzeltecek şeye sarıl. Çünkü insanların hepsini razı etmenin bir yolu yoktur."</p>
+        <p class="kaynak">📚 Ebû Nuaym, Hilyetu'l-Evliyâ, 9/123.</p>
+      </div>
+    </li>
+  </ol>
+
+
+  <div class="bolum-baslik"><span class="ar-ic" dir="rtl">فِيهِ مَسَائِلُ</span><br>Bâb sonundaki meseleler</div>
+
+
+  <h3 class="altbolum"><span class="no">1</span>Âl-i İmrân âyetinin tefsiri <span class="ar-ic" dir="rtl">(تَفْسِيرُ آيَةِ آلِ عِمْرَانَ)</span></h3>
+
+  <ul class="madde yildiz">
+    <li>Yani şu âyetin tefsiri:
+      <div class="blok ayet">
+        <span class="soyleyen">Allah Teâlâ şöyle buyurmuştur</span>
+        <p class="ar">﴿إِنَّمَا ذَٰلِكُمُ الشَّيْطَانُ يُخَوِّفُ أَوْلِيَاءَهُ فَلَا تَخَافُوهُمْ وَخَافُونِ إِنْ كُنْتُمْ مُؤْمِنِينَ﴾</p>
+        <p class="tr">"İşte o şeytan, ancak kendi dostlarını korkutur. Siz onlardan korkmayın, benden korkun; eğer müminler iseniz."</p>
+        <p class="kaynak">📚 Âl-i İmrân, 175.</p>
+      </div>
+    </li>
+    <li><strong>Tefsiri:</strong> Şeytan, müminleri kendi velileriyle korkutmaktadır. Kulun ise yalnızca Allah'tan korkması gerekir.</li>
+    <li>
+      <div class="notkutu"><span class="not-etiket">Fâide</span>
+        <p>Teysîru'l-Azîzi'l-Hamîd'de İbn Kayyim rahimehullah'tan şu söz nakledilmiştir:</p>
+        <div class="blok alim">
+          <span class="soyleyen">İbn Kayyim rahimehullah</span>
+          <p class="ar">فَكُلَّمَا قَوِيَ إِيمَانُ الْعَبْدِ زَالَ مِنْ قَلْبِهِ خَوْفُ أَوْلِيَاءِ الشَّيْطَانِ، وَكُلَّمَا ضَعُفَ إِيمَانُ الْعَبْدِ قَوِيَ خَوْفُهُ مِنْهُمْ</p>
+          <p class="tr">"Kulun imanı kuvvetlendikçe, kalbinden şeytanın velilerinden duyduğu korku gider. Kulun imanı zayıfladıkça da onlardan duyduğu korku artar."</p>
+          <p class="kaynak">📚 Suleymân b. Abdillâh Âlu'ş-Şeyh, Teysîru'l-Azîzi'l-Hamîd, s. 419.</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+
+  <h3 class="altbolum"><span class="no">2</span>Tevbe âyetinin tefsiri <span class="ar-ic" dir="rtl">(تَفْسِيرُ آيَةِ بَرَاءَةَ)</span></h3>
+
+  <ul class="madde yildiz">
+    <li>Bu mesele şu âyetten çıkarılmaktadır:
+      <div class="blok ayet">
+        <span class="soyleyen">Allah Teâlâ şöyle buyurmuştur</span>
+        <p class="ar">﴿وَلَمْ يَخْشَ إِلَّا اللَّهَ﴾</p>
+        <p class="tr">"Ve Allah'tan başkasından haşyet etmez."</p>
+        <p class="kaynak">📚 Tevbe, 18.</p>
+      </div>
+    </li>
+    <li>Allah Teâlâ, mescitleri imar eden müminleri haşyeti yalnızca kendisine tahsis etmeleri sebebiyle övmektedir. Bu da haşyetin bir ibadet olduğunu göstermektedir.</li>
+  </ul>
+
+
+  <h3 class="altbolum"><span class="no">3</span>Ankebût âyetinin tefsiri <span class="ar-ic" dir="rtl">(تَفْسِيرُ آيَةِ الْعَنْكَبُوتِ)</span></h3>
+
+  <ul class="madde yildiz">
+    <li>Bu mesele şu âyetten çıkarılmaktadır:
+      <div class="blok ayet">
+        <span class="soyleyen">Allah Teâlâ şöyle buyurmuştur</span>
+        <p class="ar">﴿وَمِنَ النَّاسِ مَنْ يَقُولُ آمَنَّا بِاللَّهِ فَإِذَا أُوذِيَ فِي اللَّهِ جَعَلَ فِتْنَةَ النَّاسِ كَعَذَابِ اللَّهِ…﴾</p>
+        <p class="tr">"İnsanlardan kimi de vardır ki, 'Allah'a iman ettik' der; fakat Allah uğrunda bir eziyete uğratıldığı zaman, insanların fitnesini Allah'ın azabı gibi sayar…"</p>
+        <p class="kaynak">📚 Ankebût, 10.</p>
+      </div>
+    </li>
+    <li>Allah'a iman eden kişinin mutlaka imtihan edilmesi gerekir. Bu imtihanı bazıları geçer, bazıları geçemez.</li>
+    <li>Bu âyette imtihanı geçemeyenler zikredilmektedir: insanların eziyetinden korkarak Allah'ın dininden kaçan kimseler. Bu korku kişiyi ya küfre ya da İslâm'dan çıkarmayan büyük günahlara düşürür.</li>
+  </ul>
+
+
+  <h3 class="altbolum"><span class="no">4</span>Yakîn zayıflar ve kuvvetlenir <span class="ar-ic" dir="rtl">(أَنَّ الْيَقِينَ يَضْعُفُ وَيَقْوَى)</span></h3>
+
+  <ul class="madde yildiz">
+    <li>Bu mesele doğrudan bâbda geçen şu rivayetten çıkarılmıştır:
+      <div class="blok hadis">
+        <span class="soyleyen">Ebû Saîd el-Hudrî radıyallahu anh'tan merfû olarak</span>
+        <p class="ar">«إِنَّ مِنْ ضَعْفِ الْيَقِينِ…»</p>
+        <p class="tr">"Şüphesiz yakînin zayıflığındandır ki…"</p>
+        <p class="kaynak">📚 Beyhakî, Şuabu'l-Îmân, 1/383, no. 203.</p>
+      </div>
+    </li>
+    <li>Şeyhin istidlâli çok basittir: eğer "zayıf yakîn" varsa (eserin mantûku), demek ki yakîn kuvvetlenebilir de (eserin mefhûmu).</li>
+    <li>Müslümana yakışan, yakînini kuvvetli kılması ve bunun için gerekli sebeplere sarılmasıdır.</li>
+  </ul>
+
+
+  <h3 class="altbolum"><span class="no">5</span>Yakînin zayıflığının alameti ve bunlardan üç tanesi <span class="ar-ic" dir="rtl" style="white-space:normal">(عَلَامَةُ ضَعْفِهِ، وَمِنْ ذَلِكَ هَذِهِ الثَّلَاثُ)</span></h3>
+
+  <ul class="madde yildiz">
+    <li>Buradaki "bu üç şey" ile kastedilen, Ebû Saîd el-Hudrî radıyallahu anh rivayetinde geçen şu üç husustur:
+      <ol class="sayili">
+        <li><span class="ar-ic" dir="rtl">(أَنْ تُرْضِيَ النَّاسَ بِسَخَطِ اللَّهِ)</span>
+          <p class="alt-tanim">Allah'ı kızdırarak insanları razı etmeye çalışmak.</p>
+        </li>
+        <li><span class="ar-ic" dir="rtl">(وَأَنْ تَحْمَدَهُمْ عَلَى رِزْقِ اللَّهِ)</span>
+          <p class="alt-tanim">Allah'ın verdiği rızkı asıl olarak insanlardan bilip onları övmek.</p>
+        </li>
+        <li><span class="ar-ic" dir="rtl">(وَأَنْ تَذُمَّهُمْ عَلَى مَا لَمْ يُؤْتِكَ اللَّهُ)</span>
+          <p class="alt-tanim">Allah'ın sana vermediği bir şeyden dolayı insanları kötülemek.</p>
+        </li>
+      </ol>
+    </li>
+    <li>Öyleyse bu üç iş, yakînin zayıflığının alametlerindendir.</li>
+  </ul>
+
+
+  <h3 class="altbolum"><span class="no">6</span>Korkuyu Allah'a has kılmak farzlardandır <span class="ar-ic" dir="rtl" style="white-space:normal">(أَنَّ إِخْلَاصَ الْخَوْفِ لِلَّهِ مِنَ الْفَرَائِضِ)</span></h3>
+
+  <ul class="madde yildiz">
+    <li>Bunun en açık delili şu âyettir:
+      <div class="blok ayet">
+        <span class="soyleyen">Allah Teâlâ şöyle buyurmuştur</span>
+        <p class="ar">﴿وَخَافُونِ إِنْ كُنْتُمْ مُؤْمِنِينَ﴾</p>
+        <p class="tr">"Benden korkun, eğer müminler iseniz."</p>
+        <p class="kaynak">📚 Âl-i İmrân, 175.</p>
+      </div>
+    </li>
+    <li>Şeyh burada iki noktadan istidlâl etmektedir:
+      <ul class="madde">
+        <li><span class="ar-ic" dir="rtl">(وَخَافُونِ)</span> lafzı bir emirdir; emir ise asıl olarak vücûb ifade eder.</li>
+        <li>Bu emri imanla bağlamıştır: <span class="ar-ic" dir="rtl">(إِنْ كُنْتُمْ مُؤْمِنِينَ)</span>. Şart ortadan kalktığında meşrût da ortadan kalkar.</li>
+      </ul>
+    </li>
+    <li>el-Kavlu'l-Mufîd ise ayrıca Âişe radıyallahu anhâ hadisini delil göstermekte ve Allah'ın rızasına karşı insanların rızasını tercih eden kişiye ceza terettüp etmesini, bu ihlâsın vacip olduğuna delil saymaktadır:
+      <div class="blok alim">
+        <span class="soyleyen">İbn Useymîn rahimehullah</span>
+        <p class="ar">وَوَجْهُهُ تَرْتِيبُ الْعُقُوبَةِ عَلَى مَنْ قَدَّمَ رِضَا النَّاسِ عَلَى رِضَا اللَّهِ تَعَالَى</p>
+        <p class="tr">"Bunun delil oluş yönü, insanların rızasını Allah Teâlâ'nın rızasına tercih eden kimseye cezanın terettüp etmesidir."</p>
+        <p class="kaynak">📚 İbn Useymîn, el-Kavlu'l-Mufîd alâ Kitâbi't-Tevhîd, 2/85.</p>
+      </div>
+    </li>
+  </ul>
+
+
+  <h3 class="altbolum"><span class="no">7</span>Bunu yapan kişinin sevabının zikredilmesi <span class="ar-ic" dir="rtl" style="white-space:normal">(ذِكْرُ ثَوَابِ مَنْ فَعَلَهُ)</span></h3>
+
+  <ul class="madde yildiz">
+    <li>Yani Allah'ın rızasını hedefleyen ve Allah'tan korkan kişinin sevabı:
+      <div class="blok hadis">
+        <span class="soyleyen">Âişe radıyallahu anhâ'dan</span>
+        <p class="ar">«مَنِ الْتَمَسَ رِضَا اللَّهِ بِسَخَطِ النَّاسِ، رَضِيَ اللَّهُ عَنْهُ، وَأَرْضَى عَنْهُ النَّاسَ»</p>
+        <p class="tr">"Kim insanların öfkesi pahasına Allah'ın rızasını ararsa, Allah ondan razı olur ve insanları da ondan razı eder."</p>
+        <p class="kaynak">📚 İbn Hibbân, es-Sahîh, 276; Elbânî, es-Silsiletu's-Sahîha, 2311.</p>
+      </div>
+    </li>
+    <li>Fudayl b. Iyâd rahimehullah şöyle demiştir:
+      <div class="blok alim">
+        <span class="soyleyen">Fudayl b. Iyâd rahimehullah</span>
+        <p class="ar">مَنْ خَافَ اللَّهَ خَافَ مِنْهُ كُلُّ شَيْءٍ، وَمَنْ خَافَ غَيْرَ اللَّهِ خَافَ مِنْ كُلِّ شَيْءٍ</p>
+        <p class="tr">"Kim Allah'tan korkarsa, her şey ondan korkar. Kim Allah'tan başkasından korkarsa, her şeyden korkar."</p>
+        <p class="kaynak">📚 Beyhakî, Şuabu'l-Îmân, 1/541, no. 974.</p>
+      </div>
+      <p>Aynı yerde Fudayl rahimehullah'tan şu söz de nakledilmiştir: <span class="ar-ic" dir="rtl" style="white-space:normal">(مَنْ خَافَ اللَّهَ لَمْ يَضُرَّهُ أَحَدٌ، وَمَنْ خَافَ غَيْرَ اللَّهِ لَمْ يَنْفَعْهُ أَحَدٌ)</span> "Kim Allah'tan korkarsa, kimse ona zarar veremez. Kim Allah'tan başkasından korkarsa, kimse ona fayda veremez."</p>
+    </li>
+  </ul>
+
+
+  <h3 class="altbolum"><span class="no">8</span>Bunu terk eden kişinin cezasının zikredilmesi <span class="ar-ic" dir="rtl" style="white-space:normal">(ذِكْرُ عِقَابِ مَنْ تَرَكَهُ)</span></h3>
+
+  <ul class="madde yildiz">
+    <li>Bu da aynı rivayetin ikinci kısmından çıkarılmaktadır:
+      <div class="blok hadis">
+        <span class="soyleyen">Âişe radıyallahu anhâ'dan</span>
+        <p class="ar">«وَمَنِ الْتَمَسَ رِضَا النَّاسِ بِسَخَطِ اللَّهِ، سَخِطَ اللَّهُ عَلَيْهِ، وَأَسْخَطَ عَلَيْهِ النَّاسَ»</p>
+        <p class="tr">"Kim Allah'ı kızdırarak insanların rızasını ararsa, Allah ona gazap eder ve insanları da ona karşı öfkelendirir."</p>
+        <p class="kaynak">📚 İbn Hibbân, es-Sahîh, 276; Elbânî, es-Silsiletu's-Sahîha, 2311.</p>
+      </div>
+    </li>
+    <li>İbn Useymîn rahimehullah bunu, kişinin maksadının tam tersine ulaşması şeklinde açıklamaktadır:
+      <div class="blok alim">
+        <span class="soyleyen">İbn Useymîn rahimehullah</span>
+        <p class="ar">وَهُوَ أَنْ يَسْخَطَ اللَّهُ عَلَيْهِ وَيَسْخَطَ عَلَيْهِ النَّاسُ، وَلَا يَنَالَ مَقْصُودَهُ</p>
+        <p class="tr">"O da şudur: Allah ona gazap eder, insanlar da ona öfkelenir ve kişi maksadına ulaşamaz."</p>
+        <p class="kaynak">📚 İbn Useymîn, el-Kavlu'l-Mufîd alâ Kitâbi't-Tevhîd, 2/85.</p>
+      </div>
+    </li>
+  </ul>
+
+</section>
+
+<footer>
+  <div class="marka">İlim Dersleri</div>
+  <div>Kitâbu't-Tevhîd</div>
+</footer>
+
+</div>
+</body>
+</html>
