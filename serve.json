@@ -1,0 +1,7 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/kitap/:slug/:bolum", "destination": "/oku.html" },
+    { "source": "/kitap/:slug", "destination": "/kitap.html" }
+  ]
+}

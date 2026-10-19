@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hakkında · Ders Notlarım</title>
+  <meta name="description" content="Ders Notlarım hakkında ve ders kayıtlarının bağlantıları.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Scheherazade+New:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body data-sayfa="hakkinda">
+
+  <header class="ust">
+    <div class="kapsayici">
+      <a class="logo" href="/">
+        <span class="logo-isaret" aria-hidden="true">ع</span>
+        <span class="logo-yazi">Ders Notlarım</span>
+      </a>
+      <nav class="menu" aria-label="Ana menü">
+        <a href="/">Kitaplar</a>
+        <a href="/hakkinda" aria-current="page">Hakkında</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hakkinda">
+
+    <section>
+      <h1>Hakkında</h1>
+      <p class="giris-metni">Bu sitede, takip ettiğim ilmî derslerden tuttuğum kişisel notları paylaşıyorum. Notlar dersin akışını izler; asıl kaynak her zaman dersin kendisi ve kitabın aslıdır.</p>
+      <p>Notlarda geçen âyet, hadis ve âlim sözleri mümkün olduğunca asıl kaynaklarından kontrol edilmiştir. Bir hata fark ederseniz bildirmeniz memnuniyetle karşılanır.</p>
+    </section>
+
+    <section class="kutu">
+      <div class="ust-etiket">Dersler</div>
+      <h2>İlim Dersleri</h2>
+      <p>Buradaki notlar, İlim Dersleri'nde işlenen derslere dayanır. Derslerin kayıtlarına ve yeni duyurulara aşağıdaki bağlantılardan ulaşabilirsiniz.</p>
+      <div class="baglantilar">
+        <a class="hap dolu" href="https://ilimdersleri.com.tr" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg>
+          ilimdersleri.com.tr
+        </a>
+        <!-- TODO : mettre le lien de la chaîne Telegram -->
+        <a class="hap" href="#" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 4L3 11l6 2 2 6 3-4 5 4z"/><path d="M9 13l12-9"/></svg>
+          Telegram kanalı
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Ders kayıtları</h2>
+      <p>Her kitabın notları, aşağıdaki ders kayıtlarına dayanır.</p>
+      <ul class="kayitlar" id="kayitlar"></ul>
+    </section>
+
+  </main>
+
+  <footer class="alt-bilgi">
+    <div class="kapsayici">
+      <div>Ders Notlarım</div>
+      <a href="/">Kitaplar</a>
+    </div>
+  </footer>
+
+  <script src="/assets/app.js"></script>
+</body>
+</html>

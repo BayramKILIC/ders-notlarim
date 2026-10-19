@@ -1,0 +1,90 @@
+{
+  "kitaplar": [
+    {
+      "slug": "kitabut-tevhid",
+      "baslik": "Kitâbu't-Tevhîd",
+      "ar": "كتاب التوحيد",
+      "yazar": "Muhammed b. Abdilvehhâb",
+      "alt": "Bâb bâb şerh",
+      "renk": "#1E3A5F",
+      "bolumler": [
+        {
+          "id": "32",
+          "no": 32,
+          "baslik": "Havf bâbı",
+          "ar": "باب قول الله تعالى: ﴿إِنَّمَا ذَلِكُمُ الشَّيْطَانُ يُخَوِّفُ أَوْلِيَاءَهُ﴾",
+          "alt": "Önsöz · Âl-i İmrân 175 · Tevbe 18 · Ankebût 10",
+          "dosya": "32-havf.html"
+        }
+      ]
+    },
+    {
+      "slug": "nevakidul-islam",
+      "baslik": "Nevâkıdu'l-İslâm",
+      "ar": "نواقض الإسلام",
+      "yazar": "Muhammed b. Abdilvehhâb",
+      "alt": "10 Nâkıd",
+      "renk": "#75194C",
+      "bolumler": [
+        {
+          "id": "5",
+          "no": 5,
+          "baslik": "Resûlullah'ın ﷺ getirdiği bir şeye buğzetmek",
+          "ar": "الخامس: من أبغض شيئا مما جاء به الرسول ﷺ",
+          "dosya": "05-bugz.html"
+        },
+        {
+          "id": "7",
+          "no": 7,
+          "baslik": "Sihir",
+          "ar": "السابع: السحر",
+          "dosya": "07-sihir.html"
+        }
+      ]
+    },
+    {
+      "slug": "la-ilahe-illallah-sartlari",
+      "baslik": "Lâ ilâhe illallah'ın Şartları",
+      "ar": "شروط لا إله إلا الله",
+      "yazar": "Ders notları",
+      "alt": "Mukaddimeler ve meseleler",
+      "renk": "#2F5E47",
+      "bolumler": [
+        {
+          "id": "1",
+          "no": 1,
+          "baslik": "Lâ ilâhe illallah'ın Şartları",
+          "alt": "Mukaddimeler · Tevhid ile ilgili meseleler",
+          "dosya": "01-sartlar.html"
+        }
+      ]
+    },
+    {
+      "slug": "kavaid-fikhiyye",
+      "baslik": "Kavâid-i Fıkhiyye",
+      "ar": "منظومة القواعد الفقهية",
+      "yazar": "Abdurrahman es-Sa'dî",
+      "alt": "Beyit beyit dersler",
+      "renk": "#7A4E0E",
+      "bolumler": []
+    },
+    {
+      "slug": "siyer",
+      "baslik": "Siyer Dersi",
+      "ar": "الأرجوزة الميئية في ذكر حال أشرف البرية",
+      "yazar": "İbn Ebi'l-İzz el-Hanefî",
+      "alt": "el-Urcûzetu'l-Mi'iyye",
+      "renk": "#245A63",
+      "bolumler": []
+    },
+    {
+      "slug": "usul-u-tefsir",
+      "baslik": "Usul-u Tefsir Dersi",
+      "ar": "القواعد الحسان لتفسير القرآن",
+      "yazar": "Abdurrahman es-Sa'dî",
+      "alt": "El-Kavâidu'l-Hisân li-Tefsîri'l-Kur'ân",
+      "renk": "#4B3F6B",
+      "bolumler": []
+    }
+  ]
+}
