@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kavâid-i Fıkhiyye · 11. Beyit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#123a5f;
+    --navy-soft:#1d5183;
+    --ink:#20262e;
+    --ink-soft:#4a5462;
+    --paper:#fbfaf7;
+    --card:#ffffff;
+    --rule:#e2ddd3;
+
+    --green:#1e6b46;
+    --green-bg:#eef7f1;
+    --green-edge:#a8d3bb;
+
+    --amber:#8a5a12;
+    --amber-bg:#fdf5e6;
+    --amber-edge:#e2c184;
+
+    --blue:#1a4f80;
+    --blue-bg:#eef4fa;
+    --blue-edge:#a9c6e2;
+
+    --bordo:#75194c;
+    --bordo-bg:#fbf2f6;
+    --bordo-edge:#e3c3d4;
+
+    --red:#8d2f2f;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Source Serif 4","Cambria","Georgia",serif;
+    font-size:18px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .sayfa{
+    max-width:820px;
+    margin:0 auto;
+    padding:0 26px 90px;
+  }
+
+  /* ---------- KAPAK ---------- */
+  header.kapak{
+    color:var(--bordo);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:56px 0;
+    margin-bottom:60px;
+  }
+  header.kapak .marka{
+    font-size:.95rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:#d54220;
+    font-weight:600;
+    line-height:1.7;
+    max-width:26ch;
+  }
+  header.kapak .marka-cizgi{
+    width:120px;
+    height:1px;
+    background:var(--rule);
+    margin:26px auto 34px;
+  }
+  header.kapak h1{
+    font-size:clamp(3.3rem,9.5vw,5.8rem);
+    line-height:1.1;
+    color:var(--bordo);
+    margin:0;
+    font-weight:700;
+    letter-spacing:-.015em;
+    max-width:15ch;
+  }
+  header.kapak .altbaslik{
+    font-size:1.16rem;
+    color:var(--bordo);
+    font-style:italic;
+    margin:34px 0 0;
+    max-width:38ch;
+    line-height:1.7;
+  }
+  header.kapak .kunye{
+    margin-top:0;
+    padding-top:72px;
+    font-size:.94rem;
+    color:var(--bordo);
+    letter-spacing:.09em;
+  }
+  header.kapak .kapak-ayet{
+    max-width:540px;
+    margin:0 auto 10px;
+    font-size:1.04rem;
+    line-height:1.75;
+    letter-spacing:0;
+    font-style:italic;
+    color:var(--bordo);
+  }
+  header.kapak .kapak-ayet-kaynak{
+    margin:0;
+    font-size:.86rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  header.kapak .kunye .cizgi{
+    width:56px;
+    height:2px;
+    background:var(--bordo);
+    margin:0 auto 18px;
+  }
+  .besmele{
+    font-family:"Scheherazade New",serif;
+    font-size:2.5rem;
+    color:var(--bordo);
+    direction:rtl;
+    margin:0 0 46px;
+  }
+
+  /* ---------- NÂKID ---------- */
+  section.nakid{margin-bottom:70px;}
+
+  .nakid-baslik{
+    background:var(--navy);
+    color:#fff;
+    border-radius:4px;
+    padding:22px 28px;
+    margin-bottom:34px;
+  }
+  .nakid-baslik .etiket{
+    display:block;
+    font-size:.74rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    opacity:.72;
+    margin-bottom:8px;
+  }
+  .nakid-baslik h2{
+    margin:0;
+    font-size:1.42rem;
+    line-height:1.45;
+    font-weight:600;
+  }
+
+  /* ---------- METİN (müellifin sözü) ---------- */
+  .metin{
+    background:var(--bordo-bg);
+    border:1px solid var(--bordo-edge);
+    border-top:5px solid var(--bordo);
+    border-radius:4px;
+    padding:28px 32px 26px;
+    margin:0 0 20px;
+  }
+  .metin .metin-etiket{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px 12px;
+    font-size:.78rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--bordo);
+    margin-bottom:18px;
+  }
+  .metin .metin-etiket .rozet{
+    background:var(--bordo);
+    color:#fff;
+    padding:3px 11px;
+    border-radius:3px;
+    letter-spacing:.2em;
+  }
+  .metin .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:2rem;
+    line-height:2.1;
+    direction:rtl;
+    text-align:right;
+    color:var(--bordo);
+    margin:0 0 18px;
+  }
+  .metin .tr{
+    margin:0;
+    padding-top:16px;
+    border-top:1px dotted var(--bordo-edge);
+    font-size:1.06rem;
+  }
+
+  /* ---------- ŞERH AYRACI ---------- */
+  .serh-ayrac{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin:54px 0 10px;
+    color:var(--navy);
+  }
+  .serh-ayrac::before,.serh-ayrac::after{
+    content:"";
+    flex:1;
+    height:2px;
+    background:var(--navy-soft);
+    opacity:.35;
+  }
+  .serh-ayrac span{
+    font-size:1.05rem;
+    font-weight:700;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+  }
+
+  h3.altbolum{
+    font-size:1.55rem;
+    line-height:1.4;
+    color:var(--navy);
+    margin:60px 0 20px;
+    padding-bottom:12px;
+    border-bottom:3px solid var(--rule);
+    font-weight:700;
+  }
+  h3.altbolum .no{
+    display:inline-block;
+    min-width:38px;
+    height:38px;
+    line-height:38px;
+    text-align:center;
+    background:var(--navy-soft);
+    color:#fff;
+    border-radius:50%;
+    font-size:1rem;
+    margin-right:13px;
+    vertical-align:3px;
+  }
+
+  p{margin:0 0 17px;}
+
+  h4.kisim{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:1.2rem;
+    color:var(--navy-soft);
+    margin:34px 0 12px;
+    font-weight:700;
+  }
+  h4.kisim .no{
+    flex:0 0 auto;
+    width:28px;
+    height:28px;
+    line-height:25px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    background:var(--card);
+    font-size:.82rem;
+  }
+  .kisim-govde{
+    border-left:2px solid var(--rule);
+    margin-left:13px;
+    padding-left:27px;
+  }
+
+  .delil{
+    display:grid;
+    grid-template-columns:34px 1fr;
+    gap:0 18px;
+    margin:30px 0;
+    padding-bottom:8px;
+    border-bottom:1px dotted var(--rule);
+  }
+  .delil:last-of-type{border-bottom:none;}
+  .delil > .no{
+    width:34px;
+    height:34px;
+    line-height:34px;
+    text-align:center;
+    border-radius:50%;
+    background:var(--navy);
+    color:#fff;
+    font-size:.88rem;
+    font-weight:700;
+    margin-top:2px;
+  }
+  .delil > .govde > .blok:first-child{margin-top:0;}
+  .delil-etiket{
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--navy);
+    margin:6px 0 12px;
+  }
+  .delil > .govde > .delil-etiket + .blok{margin-top:0;}
+
+  .ikaz{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-left:5px solid var(--red);
+    border-radius:4px;
+    padding:20px 26px 6px;
+    margin:28px 0;
+  }
+  .ikaz .ikaz-etiket{
+    display:block;
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--red);
+    margin-bottom:10px;
+  }
+  .ikaz ol.sayili{margin:10px 0 14px;}
+  ol.sayili li p.alt-tanim{margin:10px 0 0;padding-left:14px;border-left:2px solid var(--rule);}
+  ol.sayili > li > p{margin:12px 0 0;}
+  ol.sayili li .blok{margin:16px 0 8px;}
+  ul.madde li .blok{margin:14px 0 8px;}
+  ol.sayili > li ul.madde{margin:12px 0 4px;}
+  h4.kisim .baslik-alt{font-weight:400;color:var(--ink);}
+  h4.kisim .lafz-ar{font-family:"Scheherazade New",serif;font-weight:700;font-size:1.08em;line-height:1;color:var(--bordo);margin-left:8px;white-space:nowrap;}
+  .ar-ic{font-family:"Scheherazade New",serif;font-size:1.25em;line-height:1;unicode-bidi:isolate;display:inline-block;white-space:nowrap;}
+  .lafz{margin:22px 0;text-align:center;}
+  .lafz .ar-buyuk{display:block;font-family:"Scheherazade New",serif;font-size:1.7rem;line-height:1.9;color:var(--bordo);}
+  .lafz .lafz-tr{display:block;margin-top:2px;color:var(--ink-soft);}
+  .bolum-baslik{
+    margin:60px 0 28px;
+    padding:15px 18px;
+    text-align:center;
+    font-size:1.3rem;
+    font-weight:700;
+    line-height:1.4;
+    color:var(--navy);
+    background:var(--card);
+    border-top:2px solid var(--navy-soft);
+    border-bottom:2px solid var(--navy-soft);
+  }
+  .notkutu{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--navy-soft);border-radius:3px;padding:22px 24px 6px;margin:32px 0;}
+  .notkutu .not-etiket{display:block;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--navy-soft);margin-bottom:12px;}
+  ul.ikili{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:9px 30px;list-style:none;margin:26px 0;padding:0;}
+  ul.ikili li{position:relative;padding-left:18px;line-height:1.7;}
+  ul.ikili li::before{content:"";position:absolute;left:0;top:11px;width:6px;height:6px;background:var(--navy-soft);transform:rotate(45deg);}
+
+  /* ---------- VURGU ---------- */
+  .vurgu{
+    font-size:1.24rem;
+    line-height:1.7;
+    color:var(--navy);
+    font-weight:600;
+    border-left:4px solid var(--navy-soft);
+    padding:6px 0 6px 20px;
+    margin:30px 0;
+  }
+  .vurgu-buyuk{
+    font-size:1.42rem;
+    line-height:1.6;
+    text-align:center;
+    color:var(--navy);
+    font-weight:700;
+    margin:38px 0;
+    padding:26px 22px;
+    background:var(--card);
+    border-top:2px solid var(--navy-soft);
+    border-bottom:2px solid var(--navy-soft);
+  }
+  strong{color:var(--navy);font-weight:700;}
+  .sav{font-family:"Scheherazade New",serif;font-size:1.2em;line-height:1;font-weight:400;}
+
+  /* ---------- ALINTI BLOKLARI ---------- */
+  .blok{
+    border-radius:4px;
+    padding:22px 26px;
+    margin:26px 0;
+    border-left-width:5px;
+    border-left-style:solid;
+  }
+  .blok .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:1.75rem;
+    line-height:2.05;
+    direction:rtl;
+    text-align:right;
+    margin-bottom:14px;
+  }
+  .blok .tr{margin:0 0 12px;}
+  .blok .kaynak{
+    font-size:.9rem;
+    color:var(--ink-soft);
+    font-style:italic;
+    margin:0;
+    padding-top:10px;
+    border-top:1px dotted currentColor;
+  }
+  .lafz + p.kaynak{
+    font-size:.9rem;
+    color:var(--ink-soft);
+    font-style:italic;
+    text-align:center;
+    margin:-14px 0 30px;
+  }
+  .blok .soyleyen{
+    display:block;
+    font-size:.79rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:600;
+    margin-bottom:13px;
+  }
+
+  .ayet{background:var(--green-bg);border-left-color:var(--green-edge);}
+  .ayet .ar,.ayet .soyleyen{color:var(--green);}
+
+  .alim{background:var(--amber-bg);border-left-color:var(--amber-edge);}
+  .alim .ar,.alim .soyleyen{color:var(--amber);}
+
+  .hadis{background:var(--blue-bg);border-left-color:var(--blue-edge);}
+  .hadis .ar,.hadis .soyleyen{color:var(--blue);}
+
+  /* ---------- LİSTELER ---------- */
+  ul.madde{
+    list-style:none;
+    padding:0;
+    margin:20px 0;
+  }
+  ul.madde li{
+    position:relative;
+    padding:7px 0 7px 26px;
+  }
+  ul.madde li::before{
+    content:"◆";
+    position:absolute;
+    left:2px;
+    color:var(--navy-soft);
+    font-size:.68rem;
+    top:12px;
+  }
+
+  ol.sayili{
+    list-style:none;
+    counter-reset:sira;
+    padding:0;
+    margin:22px 0;
+  }
+  ol.sayili > li{
+    counter-increment:sira;
+    position:relative;
+    padding:10px 0 10px 46px;
+    border-bottom:1px dotted var(--rule);
+  }
+  ol.sayili > li:last-child{border-bottom:none;}
+  ol.sayili > li::before{
+    content:counter(sira);
+    position:absolute;
+    left:0;
+    top:13px;
+    width:30px;
+    height:30px;
+    line-height:27px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    color:var(--navy-soft);
+    background:var(--card);
+    font-size:.84rem;
+    font-weight:700;
+  }
+
+  /* ---------- ÖZET ---------- */
+  .ozet{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-top:4px solid var(--navy);
+    border-radius:4px;
+    padding:26px 30px;
+    margin-top:34px;
+  }
+  .ozet h4{
+    margin:0 0 16px;
+    color:var(--navy);
+    font-size:1.06rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+  .ozet ul{margin:0;padding-left:22px;}
+  .ozet li{margin-bottom:11px;}
+  .ozet li:last-child{margin-bottom:0;}
+
+  .ayirac{
+    text-align:center;
+    color:var(--rule);
+    letter-spacing:.5em;
+    margin:38px 0;
+    font-size:.8rem;
+  }
+
+  footer{
+    margin-top:70px;
+    padding-top:26px;
+    border-top:3px double var(--rule);
+    text-align:center;
+    color:#d54220;
+    font-size:.9rem;
+  }
+  footer .marka{
+    font-size:1rem;
+    color:#d54220;
+    font-weight:600;
+    letter-spacing:.1em;
+    margin-bottom:6px;
+  }
+
+  @media (max-width:620px){
+    body{font-size:16.5px;}
+    .sayfa{padding:0 16px 60px;}
+    header.kapak h1{font-size:2.8rem;}
+    .besmele{font-size:2rem;}
+    .nakid-baslik h2{font-size:1.16rem;}
+    h3.altbolum{font-size:1.3rem;margin:48px 0 16px;}
+    h3.altbolum .no{min-width:32px;height:32px;line-height:32px;font-size:.9rem;}
+    .metin{padding:22px 18px 20px;}
+    .metin .ar{font-size:1.65rem;line-height:2;}
+    .blok{padding:18px 18px;}
+    .ikaz{padding:18px 18px 4px;}
+    .kisim-govde{margin-left:0;padding-left:14px;}
+    .delil{grid-template-columns:28px 1fr;gap:0 10px;}
+    .delil > .no{width:28px;height:28px;line-height:28px;font-size:.8rem;}
+    .blok .ar{font-size:1.5rem;line-height:1.95;}
+    .vurgu-buyuk{font-size:1.18rem;padding:20px 16px;}
+    .vurgu{font-size:1.1rem;}
+  }
+
+  @media print{
+    @page{margin:18mm 16mm;}
+    body{background:#fff;font-size:11.5pt;}
+    .sayfa{max-width:none;padding:0;}
+    section.nakid{page-break-before:always;}
+    section.nakid:first-of-type{page-break-before:auto;}
+    .ayirac{display:none;}
+    header.kapak{
+      min-height:238mm;
+      page-break-after:always;
+      margin-bottom:0;
+    }
+    header.kapak h1{font-size:54pt;}
+    .besmele{font-size:26pt;}
+    section.nakid{page-break-inside:auto;}
+    .nakid-baslik{page-break-after:avoid;background:var(--navy) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .metin,.blok,.ozet,.vurgu-buyuk{page-break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    h3.altbolum,.serh-ayrac{page-break-after:avoid;}
+  }
+
+  /* ---------- KAVÂİD EKLERİ ---------- */
+  header.kapak h1{font-size:clamp(2.6rem,8vw,5rem);max-width:none;}
+  header.kapak .kapak-ar{font-family:"Scheherazade New",serif;font-size:2rem;line-height:1.6;color:var(--bordo);margin:0 0 8px;}
+  .metin .okunus{margin:0 0 14px;font-style:italic;color:var(--ink-soft);font-size:1rem;}
+  .metin .ar{font-size:1.72rem;}
+  .ders-isaret{display:flex;align-items:center;gap:14px;margin:48px 0 26px;color:var(--bordo);}
+  .ders-isaret::before,.ders-isaret::after{content:"";flex:1;height:1px;background:var(--bordo-edge);}
+  .ders-isaret span{font-size:.8rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;padding:3px 12px;border:1px solid var(--bordo-edge);border-radius:3px;background:var(--bordo-bg);}
+  section.nakid > .ders-isaret:first-child{margin-top:0;}
+  @media (max-width:620px){h4.kisim .lafz-ar,.ar-ic{white-space:normal;} header.kapak h1{font-size:2.3rem;} header.kapak .kapak-ar{font-size:1.6rem;}}
+</style>
+<style>.sayfa > section.nakid:first-of-type{margin-top:32px;}</style>
+</head>
+<body>
+<div class="sayfa">
+
+<section class="nakid">
+
+  <div class="nakid-baslik">
+    <span class="etiket">11. Beyit</span>
+    <h2>İşler, niyetlerine göre değerlendirilir</h2>
+  </div>
+
+  <div class="metin">
+    <div class="metin-etiket"><span class="rozet">Beyit 11</span>Şeyh rahimehullah dedi ki</div>
+    <p class="ar">وَالنِّيَّةُ شَرْطٌ لِسَائِرِ الْعَمَلْ . . . بِهَا الصَّلَاحُ وَالْفَسَادُ لِلْعَمَلْ</p>
+    <p class="okunus">Ve'n-niyyetu şartun li-sâiri'l-amel, bihâ's-salâhu ve'l-fesâdu li'l-amel.</p>
+    <p class="tr">"Niyet, bütün ameller için şarttır. Amellerin sahih veya fasit olması niyete bağlıdır."</p>
+  </div>
+
+
+  <div class="serh-ayrac"><span>Şerh</span></div>
+
+  <div class="bolum-baslik">Birinci Bölüm<br>On birinci beyte giriş ve ön bilgiler</div>
+
+
+  <h3 class="altbolum"><span class="no">1</span>Bu beyitle birlikte manzûmenin ana konusuna girilmesi</h3>
+
+  <p>Müellif, bu beyitten itibaren kavâid-i fıkhiyye kaidelerini zikretmeye başlamaktadır. Böylece manzûmenin asıl konusuna girmiş bulunuyoruz.</p>
+
+  <p>On birinci beyitte, birinci fıkhî kaide ele alınmaktadır.</p>
+
+
+  <h3 class="altbolum"><span class="no">2</span>Bu beyitte zikredilen kaidenin beş büyük kaideden biri olması</h3>
+
+  <p>Müellif, bu beyitte fıkıhta beş büyük kaide olarak bilinen kaidelerden birini zikretmektedir. Bu kaide, kitaplarda farklı lafızlarla ifade edilmiştir; ancak hepsinin manası aynıdır:</p>
+
+  <ul class="madde">
+    <li><span class="ar-ic" dir="rtl">(الْأُمُورُ بِمَقَاصِدِهَا)</span> "İşler, niyetlerine göre değerlendirilir." Biz bu lafzı kullanacağız.</li>
+    <li><span class="ar-ic" dir="rtl">(الْأَعْمَالُ بِالنِّيَّاتِ)</span> "Ameller, niyetlerine göre değerlendirilir."</li>
+    <li><span class="ar-ic" dir="rtl">(لَا عَمَلَ إِلَّا بِالنِّيَّاتِ)</span> "Ameller ancak niyetlere göredir."</li>
+  </ul>
+
+
+  <h3 class="altbolum"><span class="no">3</span>el-Umûru bi-makâsidihâ kaidesinin manası ve önemi</h3>
+
+  <div class="lafz">
+    <span class="ar-buyuk" dir="rtl">الْأُمُورُ بِمَقَاصِدِهَا</span>
+    <span class="lafz-tr">el-Umûru bi-makâsidihâ &mdash; "İşler, niyetlerine göre değerlendirilir."</span>
+  </div>
+
+  <p>Kelimelerin manaları:</p>
+
+  <ul class="madde">
+    <li><strong>el-Umûr <span class="ar-ic" dir="rtl">(الْأُمُورُ)</span></strong> Çoğul bir kelimedir. Tekili el-emr <span class="ar-ic" dir="rtl">(الْأَمْرُ)</span> olup durum veya hâl <span class="ar-ic" dir="rtl">(الْحَالُ)</span> manasına gelir.</li>
+    <li><strong>el-Makâsid <span class="ar-ic" dir="rtl">(الْمَقَاصِدُ)</span></strong> Çoğul bir kelimedir. Tekili el-maksad <span class="ar-ic" dir="rtl">(الْمَقْصَدُ)</span> olup bu kaidede niyet manasına gelir.</li>
+  </ul>
+
+  <p><strong>Kaidenin genel manası:</strong> İnsanın yaptığı işler ve ameller, onun niyetine göre değerlendirilir.</p>
+
+  <p>Mecelle'nin şerhinde bu kaide şu şekilde açıklanmıştır:</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">Mecelle şerhinde</span>
+    <p class="ar">الْمَقْصُودُ بِهَذِهِ الْقَاعِدَةِ أَنَّ الْأَحْكَامَ الشَّرْعِيَّةَ فِي أُمُورِ النَّاسِ تَتَكَيَّفُ حَسَبَ قَصْدِهِمْ مِنْ إِجْرَائِهَا</p>
+    <p class="tr">"Bu kaideden maksat, insanların yaptıkları işlerin şer'î hükümlerinin, o işleri yaparken taşıdıkları niyetlere göre değişmesidir."</p>
+  </div>
+
+  <div class="notkutu"><span class="not-etiket">Örnek</span>
+    <p>İki kişi aynı ameli yapabilir. Ancak niyetleri farklı olduğu için yaptıkları amelin şer'î hükmü de farklı olabilir. İleride bu konuyla ilgili daha açıklayıcı örnekler verilecektir.</p>
+  </div>
+
+  <p>Bu kaide, fıkhın en önemli kaidelerinden biridir. Şeyh Abdurrahman es-Sa'dî rahimehullah, manzûmeyi şerh ederken bu kaide hakkında şöyle demiştir:</p>
+
+  <div class="notkutu"><span class="not-etiket">Abdurrahman es-Sa'dî rahimehullah</span>
+    <p>"Bu kaide, en faydalı ve en yüce kaidelerden biridir; ilmin bütün bablarına girer.</p>
+    <p>Bedenle ve malla yapılan amellerin, yani kalbin ve azaların amellerinin düzgün olması ancak niyetle mümkündür. Aynı şekilde bu amellerin bozulması da niyetin bozulmasıyla gerçekleşir.</p>
+    <p>Niyet düzgün olursa sözler ve ameller de düzgün olur; niyet bozulursa sözler ve ameller de bozulur. Nitekim Resûlullah <span class="sav">ﷺ</span> şöyle buyurmuştur:"</p>
+    <div class="blok hadis">
+      <span class="soyleyen">Ömer b. el-Hattâb radıyallahu anh'tan</span>
+      <p class="ar">«إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى»</p>
+      <p class="tr">"Ameller ancak niyetlere göredir. Her kişiye ancak niyet ettiği şey vardır."</p>
+      <p class="kaynak">📚 Buhârî, 1; Muslim, 1907.</p>
+    </div>
+    <p class="kaynak" style="border-top:1px dotted currentColor;padding-top:10px;font-size:.9rem;font-style:italic;color:var(--ink-soft);">📚 Abdurrahman es-Sa'dî, Şerhu Manzûmeti'l-Kavâidi'l-Fıkhiyye, 11. beyit şerhi.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">4</span>Bu beytin genel manası nedir?</h3>
+
+  <p>Mükelleflerin bütün söz ve fiillerinin sonuçları, faydaları ve şer'î hükümleri, bu söz ve fiilleri gerçekleştirirken taşıdıkları niyet ve amaçlara göre değişir.</p>
+
+
+  <div class="bolum-baslik">İkinci Bölüm<br>Birinci kaideyle ilgili meseleler</div>
+
+
+  <h3 class="altbolum"><span class="no">1</span>Bu kaidenin büyük kaidelerden biri olması <span class="ar-ic" dir="rtl">(الْقَاعِدَةُ الْكُبْرَى)</span></h3>
+
+  <p>Bu kaideye büyük kaide <span class="ar-ic" dir="rtl">(الْقَاعِدَةُ الْكُبْرَى)</span> denilmiştir.</p>
+
+  <p>Bir kaidenin bu isimle anılabilmesi için iki şartın bir arada bulunması gerekir:</p>
+
+  <ol class="sayili">
+    <li><strong>Âlimlerin kaide üzerinde ittifak etmeleri:</strong> Âlimlerin bu kaide hakkında görüş birliğine varmış olmaları, yani aralarında ihtilaf bulunmaması gerekir.</li>
+    <li><strong>Kaidenin kapsamlı olması:</strong> Kaidenin geniş bir alanı kapsaması ve bu ana kaidenin altında başka kaidelerin de bulunması gerekir.</li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">2</span>Niyetin sözlükteki ve ıstılahtaki tanımı</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Niyetin sözlükteki manası</span></h4>
+  <div class="kisim-govde">
+    <p>Niyet kelimesi sözlükte şu manalara gelir:</p>
+    <ul class="madde">
+      <li><strong>Bir şeye karar vermek</strong> <span class="ar-ic" dir="rtl">(الْعَزْمُ عَلَى شَيْءٍ)</span></li>
+      <li><strong>Bir şeyi kastetmek</strong> <span class="ar-ic" dir="rtl">(الْقَصْدُ إِلَى شَيْءٍ)</span></li>
+      <li><strong>Bir şeye inanmak</strong> <span class="ar-ic" dir="rtl">(الِاعْتِقَادُ بِشَيْءٍ)</span></li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Niyetin ıstılahtaki manası</span></h4>
+  <div class="kisim-govde">
+    <p>Niyetin ıstılahta genel ve özel olmak üzere iki tanımı vardır.</p>
+
+    <div class="delil">
+      <div class="no">1</div>
+      <div class="govde">
+        <div class="delil-etiket">Birinci tanım &mdash; genel manası</div>
+        <div class="lafz">
+          <span class="ar-buyuk" dir="rtl">انْبِعَاثُ الْقَلْبِ نَحْوَ قَوْلٍ وَعَمَلٍ يَرَاهُ مُوَافِقًا لِغَرَضٍ صَالِحٍ لَهُ مِنْ جَلْبِ مَصْلَحَةٍ أَوْ دَفْعِ مَفْسَدَةٍ عَاجِلَةٍ أَوْ آجِلَةٍ</span>
+          <span class="lafz-tr">"Niyet, kişinin kalbinin, kendisi için uygun gördüğü bir amacı gerçekleştirmek üzere bir söz veya amele yönelmesidir. Bu amaç, yakın veya uzak zamanda bir fayda elde etmek ya da bir zararı önlemek olabilir."</span>
+        </div>
+        <p>Bu tanım geneldir, çünkü yalnızca ibadetleri değil, ibadet dışında yapılan işlerdeki niyetleri de kapsar.</p>
+      </div>
+    </div>
+
+    <div class="delil">
+      <div class="no">2</div>
+      <div class="govde">
+        <div class="delil-etiket">İkinci tanım &mdash; özel manası</div>
+        <div class="lafz">
+          <span class="ar-buyuk" dir="rtl">قَصْدُ الطَّاعَةِ وَالتَّقَرُّبِ إِلَى اللَّهِ سُبْحَانَهُ وَتَعَالَى بِإِيجَادِ الْفِعْلِ أَوِ الِامْتِنَاعِ عَنْهُ</span>
+          <span class="lafz-tr">"Niyet, bir fiili yapmak veya ondan kaçınmak suretiyle Allah'a itaat etmeyi ve O'na yakınlaşmayı kastetmektir."</span>
+        </div>
+        <p>Bu tanım ise özeldir, çünkü şer'î amellerle ilgili niyetleri kapsar.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">3</span>Bu kaidenin delilleri nelerdir?</h3>
+
+  <div class="delil">
+    <div class="no">1</div>
+    <div class="govde">
+      <div class="delil-etiket">Birinci delil &mdash; Ömer b. el-Hattâb radıyallahu anh hadisi</div>
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah ﷺ şöyle buyurdu</span>
+        <p class="ar">«إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى»</p>
+        <p class="tr">"Ameller ancak niyetlere göredir. Her kişiye ancak niyet ettiği şey vardır."</p>
+        <p class="kaynak">📚 Buhârî, 6953; Muslim, 1907.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="delil">
+    <div class="no">2</div>
+    <div class="govde">
+      <div class="delil-etiket">İkinci delil &mdash; Sa'd b. Ebî Vakkâs radıyallahu anh hadisi</div>
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah ﷺ şöyle buyurdu</span>
+        <p class="ar">«وَإِنَّكَ لَنْ تُنْفِقَ نَفَقَةً تَبْتَغِي بِهَا وَجْهَ اللَّهِ إِلَّا أُجِرْتَ فِيهَا، حَتَّى مَا تَجْعَلُ فِي فِي امْرَأَتِكَ»</p>
+        <p class="tr">"Allah'ın rızasını gözeterek yaptığın her harcamadan dolayı sevap alırsın; hatta eşinin ağzına koyduğun lokmadan bile."</p>
+        <p class="kaynak">📚 Buhârî, 56.</p>
+      </div>
+      <p>Bu hadisten, kişinin Allah'ın rızasını kazanma niyetiyle yaptığı işlerden dolayı sevap elde edeceği anlaşılmaktadır.</p>
+    </div>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">4</span>Âlimler niyeti iki yönden ele almışlardır</h3>
+
+  <div class="delil">
+    <div class="no">1</div>
+    <div class="govde">
+      <div class="delil-etiket">Amelin kendisine niyet etmek</div>
+      <p>Kişinin, hangi ameli yerine getireceğini niyet etmesidir.</p>
+      <div class="notkutu"><span class="not-etiket">Örnek</span>
+        <p>Öğle namazını kılacak kişinin, özellikle öğle namazını kılmaya niyet etmesi gerekir.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="delil">
+    <div class="no">2</div>
+    <div class="govde">
+      <div class="delil-etiket">Amelin kimin için yapıldığına niyet etmek</div>
+      <p>Kişinin, yaptığı ameli kimin rızası için gerçekleştirdiğini belirlemesidir. Amel Allah için yapılırsa kabul olur; Allah'tan başkası için yapılırsa kabul olmaz.</p>
+    </div>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">5</span>Niyetin hükmü nedir?</h3>
+
+  <p>Niyet bir ibadettir ve ibadetlerin kabul edilmesinin şartlarından biridir. Bu nedenle âlimler, bir ibadetin kabul edilmesi için niyetin gerekli olduğunu belirtmişlerdir. Burada kastedilen, ihlâs, yani ibadetin yalnızca Allah için yapılmasıdır.</p>
+
+  <div class="delil">
+    <div class="no">1</div>
+    <div class="govde">
+      <div class="delil-etiket">Niyetin dil ile telaffuz edilmesi</div>
+      <p>Niyetin dil ile telaffuz edilmesi gerekmez. İbn Teymiyye ve İbn Kayyim rahimehumallah gibi âlimler, niyeti dil ile telaffuz etmeyi bidat olarak değerlendirmişlerdir. Çünkü Resûlullah <span class="sav">ﷺ</span> bunu ne yapmış ne de emretmiştir.</p>
+    </div>
+  </div>
+
+  <div class="delil">
+    <div class="no">2</div>
+    <div class="govde">
+      <div class="delil-etiket">Hacda niyetin telaffuz edilmesi meselesi</div>
+      <p>Resûlullah'ın <span class="sav">ﷺ</span> hac sırasında <span class="ar-ic" dir="rtl">(لَبَّيْكَ عُمْرَةً)</span> "Lebbeyke umreten" demesi, niyetin dil ile telaffuz edilmesi değildir. Bu ifade telbiyedir ve telbiye, hac ve umre ibadetinin şiarlarındandır.</p>
+    </div>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">6</span>Niyetin vakti ne zamandır?</h3>
+
+  <p>Asıl olan, niyetin ibadetten hemen önce veya ibadetle birlikte yapılmasıdır. Yani niyet, amelden kısa bir süre önce ya da amelin başlangıcında bulunmalıdır.</p>
+
+  <p>Ancak bu konuda bazı istisnalar vardır. Meselâ nafile oruca gün içerisinde niyet edilebilir.</p>
+
+
+  <h3 class="altbolum"><span class="no">7</span>Niyet etmenin gayesi nedir?</h3>
+
+  <p>Niyetin gayesi, amelleri birbirinden ayırt etmektir <span class="ar-ic" dir="rtl">(التَّمْيِيزُ)</span>. Temyiz iki şekilde gerçekleşir.</p>
+
+  <h4 class="kisim"><span class="no">1</span><span>Amelin kendisini ayırt etmek</span></h4>
+  <div class="kisim-govde">
+    <p>Bu da iki kısma ayrılır:</p>
+
+    <div class="delil">
+      <div class="no">1</div>
+      <div class="govde">
+        <div class="delil-etiket">İbadetleri âdetlerden ayırt etmek</div>
+        <div class="notkutu"><span class="not-etiket">Örnek 1</span>
+          <p>İki kişi yemek yememektedir. Ancak birisi oruç tutarken diğeri rejim yapmaktadır. İkisi de aynı fiili gerçekleştirse de aralarındaki farkı belirleyen niyetleridir.</p>
+        </div>
+        <div class="notkutu"><span class="not-etiket">Örnek 2</span>
+          <p>İki kişi denize girmektedir. Birisi abdest alma niyetiyle suya girerken diğeri bu niyeti taşımamaktadır. İkisinin fiili aynı olsa da niyetleri farklıdır.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="delil">
+      <div class="no">2</div>
+      <div class="govde">
+        <div class="delil-etiket">İbadetleri kendi aralarında ayırt etmek</div>
+        <div class="notkutu"><span class="not-etiket">Örnek</span>
+          <p>İki kişi sabah namazı vaktinde ikişer rekât namaz kılmaktadır. Birisi tahiyyetu'l-mescid namazını, diğeri ise sabah namazının sünnetini kılmaktadır. İkisi de aynı şekilde namaz kılsa da kıldıkları namazları birbirinden ayıran niyetleridir.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Amelin kimin için yapıldığını ayırt etmek</span></h4>
+  <div class="kisim-govde">
+    <p>Niyet, yapılan amelin Allah için mi yoksa Allah'tan başkası için mi gerçekleştirildiğini belirler.</p>
+    <div class="notkutu"><span class="not-etiket">Örnek</span>
+      <p>İki kişi namaz kılmaktadır. Birisi Allah'a ihlâsla ibadet ederken diğeri riya amacıyla namaz kılmaktadır. İkisi de aynı ameli gerçekleştirse de amellerini birbirinden ayıran niyetleridir.</p>
+    </div>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">8</span>Niyetin geçerli olması için hangi şartlar gereklidir?</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>İslâm</span></h4>
+  <div class="kisim-govde">
+    <p>Kişinin Müslüman olması gerekir. Kâfirlerin ibadetlerdeki niyetleri geçerli değildir.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Temyiz</span></h4>
+  <div class="kisim-govde">
+    <p>Kişinin mümeyyiz olması, yani ayırt etme kabiliyetine sahip olması gerekir. Mecnunların, sarhoşların ve henüz temyiz çağına ulaşmamış küçük çocukların niyetleri geçerli değildir.</p>
+    <p>Mümeyyiz olmanın ölçüsü hakkında âlimler farklı görüşler belirtmişlerdir:</p>
+    <ul class="madde">
+      <li><strong>Bazı âlimlere göre:</strong> çocuğun yedi yaşına ulaşması gerekir.</li>
+      <li><strong>Diğer bazı âlimlere göre:</strong> çocuk, kendisine söylenenleri anlayabiliyor ve uygun cevaplar verebiliyorsa mümeyyiz sayılır. Bu durum yedi yaşından önce de gerçekleşebilir.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Neye niyet edildiğinin bilinmesi</span></h4>
+  <div class="kisim-govde">
+    <p>Kişinin, niyet ettiği amelin ne olduğunu bilmesi gerekir.</p>
+    <div class="notkutu"><span class="not-etiket">Örnek 1</span>
+      <p>Namaz kılan kişinin, kıldığı namazın farz mı yoksa sünnet mi olduğunu bilmesi gerekir.</p>
+    </div>
+    <div class="notkutu"><span class="not-etiket">Örnek 2</span>
+      <p>Bir kişi "Ben eşimi, Zeyd'in eşini boşadığı gibi boşuyorum." derse, ancak Zeyd'in eşini nasıl boşadığını bilmiyorsa, bu şekilde yaptığı niyet geçerli olmaz.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">4</span><span>Niyeti bozacak bir durumun meydana gelmemesi</span></h4>
+  <div class="kisim-govde">
+    <p>Kişinin, ibadet sırasında niyetini geçersiz kılacak bir durumda bulunmaması gerekir.</p>
+    <div class="notkutu"><span class="not-etiket">Örnek 1</span>
+      <p>Bir kişi ibadet esnasında mürted olursa niyeti geçersiz hâle gelir.</p>
+    </div>
+    <div class="notkutu"><span class="not-etiket">Örnek 2</span>
+      <p>Bir kişi namaz kılarken kalbinden kesin olarak namazdan çıkmaya niyet ederse niyeti bozulur.</p>
+    </div>
+  </div>
+
+  <div class="ikaz">
+    <span class="ikaz-etiket">Birinci tenbih &mdash; Niyetin ibadet boyunca hatırlanması şart değildir</span>
+    <p>Niyetin, ibadetin başından sonuna kadar sürekli hatırlanması şart değildir. Kişinin ibadetin başlangıcında niyet etmiş olması yeterlidir; ibadet boyunca niyetini hatırlaması gerekmez.</p>
+  </div>
+
+  <div class="ikaz">
+    <span class="ikaz-etiket">İkinci tenbih &mdash; İbadet tamamlandıktan sonra niyetin iptal edilmesi</span>
+    <p>Kişi, ibadetini tamamladıktan sonra niyetini iptal etse bile, ibadetin şartlarını ve rükünlerini yerine getirdiği için o ibadet geçerli olmaya devam eder. Ancak böyle yapması, ibadetten elde edeceği sevabı etkileyebilir.</p>
+  </div>
+
+  <div class="ikaz">
+    <span class="ikaz-etiket">Üçüncü tenbih &mdash; Niyet hakkında şüpheye düşmek</span>
+    <p>Kişi, niyet edip etmediği konusunda şüpheye düşerse bu şüpheye itibar edilmez. Aynı şekilde, namaz kılarken hangi namaza niyet ettiği konusunda şüpheye düşerse, bu şüpheye de itibar edilmez.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">9</span>Bütün ibadetler için niyet etmek şart mıdır?</h3>
+
+  <p>Niyetin şart olmadığı bazı istisnai durumlar vardır.</p>
+
+  <h4 class="kisim"><span class="no">1</span><span>Birinci istisna: haramları terk etmek</span></h4>
+  <div class="kisim-govde">
+    <p>Bir kişinin, Allah'ın yasakladığı fiilleri terk etmiş sayılması için niyet etmesi şart değildir. Ancak bu fiilleri Allah'ın rızasını kazanmak amacıyla terk ederse sevap kazanır.</p>
+
+    <div class="notkutu"><span class="not-etiket">Örnek</span>
+      <p>Bir kişi, tabiatı gereği yalan söylemekten ve hırsızlık yapmaktan hoşlanmadığı için bu fiilleri işlememektedir. Bu kişi, herhangi bir niyet taşımadan da söz konusu haramları terk etmiş sayılır ve bunları işlemediği için günah kazanmaz.</p>
+    </div>
+
+    <div class="delil">
+      <div class="no">1</div>
+      <div class="govde">
+        <div class="delil-etiket">Birinci ikaz &mdash; kişi, günahları terk ettiği için sevap kazanabilir mi?</div>
+        <p>Kişi, iki durumda günahları terk ettiği için sevap kazanabilir:</p>
+        <ul class="madde">
+          <li><strong>Nefsiyle mücadele ederek günahı terk etmek:</strong> kişi, kalbinde bir günahı işlemeyi istese de Allah için nefsiyle mücadele ederek o günahı terk ederse, bu mücadelesinden dolayı sevap kazanır.</li>
+          <li><strong>Allah korkusuyla günahı terk etmek:</strong> kişi, kalbinde bir günahı işlemeyi istediği hâlde Allah'tan korktuğu için onu terk ederse, Allah korkusu sebebiyle sevap kazanır.</li>
+        </ul>
+        <p>Bunun delili Ebû Hureyre radıyallahu anh'ın rivayet ettiği hadistir:</p>
+        <div class="blok hadis">
+          <span class="soyleyen">Resûlullah ﷺ, Rabbinden naklen şöyle buyurdu</span>
+          <p class="ar">«إِذَا أَرَادَ عَبْدِي أَنْ يَعْمَلَ سَيِّئَةً فَلَا تَكْتُبُوهَا عَلَيْهِ حَتَّى يَعْمَلَهَا، فَإِنْ عَمِلَهَا فَاكْتُبُوهَا بِمِثْلِهَا، وَإِنْ تَرَكَهَا مِنْ أَجْلِي فَاكْتُبُوهَا لَهُ حَسَنَةً، وَإِذَا أَرَادَ أَنْ يَعْمَلَ حَسَنَةً فَلَمْ يَعْمَلْهَا فَاكْتُبُوهَا لَهُ حَسَنَةً، فَإِنْ عَمِلَهَا فَاكْتُبُوهَا لَهُ بِعَشْرِ أَمْثَالِهَا إِلَى سَبْعِمِائَةٍ»</p>
+          <p class="tr">"Kulum kötü bir iş yapmaya niyet ederse, o işi yapıncaya kadar onu yazmayın. Eğer yaparsa bir günah olarak yazın. Ancak benim için o işi terk ederse ona bir sevap yazın. Kulum iyi bir iş yapmaya niyet eder de onu yapamazsa kendisine bir sevap yazın. Eğer yaparsa ona on katından yedi yüz katına kadar sevap yazın."</p>
+          <p class="kaynak">📚 Buhârî, 7501.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="delil">
+      <div class="no">2</div>
+      <div class="govde">
+        <div class="delil-etiket">İkinci ikaz &mdash; günah işlemeye niyet eden ancak işlemeyen kişinin durumu</div>
+        <ul class="madde">
+          <li><strong>Birinci durum &mdash; günahı aklına gelmediği veya sevmediği için terk etmek:</strong> bir kişi, bir günahı aklına gelmediği veya tabiatı gereği o günahı sevmediği için işlemiyorsa, bu terkinden dolayı kendisine ne günah ne de sevap yazılır.</li>
+          <li><strong>İkinci durum &mdash; günah işlemeye kesin karar verip sebeplerine başvurmak, ancak bir engel sebebiyle işleyememek:</strong> bir kişi, kalbinde günah işlemeye niyet edip kesin karar verir ve bu günahı işlemek için gerekli sebeplere başvurur, ancak bir engel sebebiyle günahı gerçekleştiremezse, işlemiş gibi günah kazanır. Bunun delili Ebû Bekre radıyallahu anh'ın rivayet ettiği hadistir:
+            <div class="blok hadis">
+              <span class="soyleyen">Resûlullah ﷺ şöyle buyurdu</span>
+              <p class="ar">«إِذَا الْتَقَى الْمُسْلِمَانِ بِسَيْفَيْهِمَا فَالْقَاتِلُ وَالْمَقْتُولُ فِي النَّارِ»</p>
+              <p class="tr">"İki Müslüman kılıçlarıyla birbirleriyle karşı karşıya gelirlerse, öldüren de öldürülen de ateştedir."</p>
+            </div>
+            <p>"Ey Allah'ın Resûlü! Öldürenin durumunu anladık. Peki öldürülen neden ateştedir?" diye soruldu. Resûlullah <span class="sav">ﷺ</span> şöyle buyurdu:</p>
+            <div class="blok hadis">
+              <span class="soyleyen">Resûlullah ﷺ şöyle buyurdu</span>
+              <p class="ar">«إِنَّهُ كَانَ حَرِيصًا عَلَى قَتْلِ صَاحِبِهِ»</p>
+              <p class="tr">"Çünkü o da kardeşini öldürmeye istekliydi."</p>
+              <p class="kaynak">📚 Buhârî, 31; Muslim, 2888.</p>
+            </div>
+          </li>
+          <li><strong>Üçüncü durum &mdash; günah işlemeye niyet etmek, ancak daha sonra bu isteğin ortadan kalkması:</strong> bir kişi, kalbinde günah işlemeye niyet eder ancak bu günahı işlemek için herhangi bir sebebe başvurmaz ve zamanla bu isteği ortadan kalkarsa, kendisine ne günah ne de sevap yazılır. Bunun delili, yukarıda geçen Ebû Hureyre radıyallahu anh hadisindeki <span class="ar-ic" dir="rtl" style="white-space:normal">(فَلَا تَكْتُبُوهَا عَلَيْهِ حَتَّى يَعْمَلَهَا)</span> "o işi yapıncaya kadar onu yazmayın" ifadesidir.</li>
+          <li><strong>Dördüncü durum &mdash; günah işlemeye kesin karar vermek, ancak sebeplerine başvurmamak:</strong> bir kişi, kalbinde günah işlemeye kesin olarak niyet eder ve bu niyetinde kararlı olur, ancak günahı işlemek için herhangi bir sebebe başvurmazsa, kötü niyetinden dolayı günah kazanır. Bunun delili Ebû Kebşe el-Enmârî radıyallahu anh'ın rivayet ettiği hadistir:
+            <div class="notkutu"><span class="not-etiket">Ebû Kebşe el-Enmârî radıyallahu anh hadisi</span>
+              <p>"Bu ümmetin durumu dört kişinin durumuna benzer:</p>
+              <p><strong>Birinci kişi:</strong> Allah'ın kendisine mal ve ilim verdiği kimsedir. Bu kişi, ilmiyle amel ederek malını hak olan yerlere harcar.</p>
+              <p><strong>İkinci kişi:</strong> Allah'ın kendisine ilim verdiği ancak mal vermediği kimsedir. Bu kişi, 'Eğer benim de onun gibi malım olsaydı, ben de onun yaptıklarını yapardım.' der. Resûlullah <span class="sav">ﷺ</span>, bu iki kişinin sevap bakımından eşit olduğunu bildirmiştir.</p>
+              <p><strong>Üçüncü kişi:</strong> Allah'ın kendisine mal verdiği ancak ilim vermediği kimsedir. Bu kişi, malını bilinçsizce ve hakkı olmayan yerlere harcar.</p>
+              <p><strong>Dördüncü kişi:</strong> Allah'ın kendisine ne mal ne de ilim verdiği kimsedir. Bu kişi, 'Eğer benim de onun gibi malım olsaydı, ben de onun yaptıklarını yapardım.' der. Resûlullah <span class="sav">ﷺ</span>, bu iki kişinin de günah bakımından eşit olduğunu bildirmiştir."</p>
+              <p class="kaynak" style="border-top:1px dotted currentColor;padding-top:10px;font-size:.9rem;font-style:italic;color:var(--ink-soft);">📚 İbn Mâce, 4228.</p>
+            </div>
+          </li>
+          <li><strong>Beşinci durum &mdash; insanların ayıplamasından korktuğu için günahı terk etmek:</strong> bir kişi, kalbinde günah işlemeye niyet etmiş ve bu konuda kararlı olduğu hâlde, insanların kendisini ayıplamasından korktuğu veya onlara gösteriş yapmak istediği için günahı terk ederse, bu niyetinden dolayı günah kazanır. İbn Receb rahimehullah, böyle bir kişinin bu terkinden dolayı cezalandırılabileceğinin söylendiğini nakletmiştir.
+            <div class="blok alim">
+              <span class="soyleyen">Fudayl b. Iyâd rahimehullah</span>
+              <p class="ar">تَرْكُ الْعَمَلِ لِأَجْلِ النَّاسِ رِيَاءٌ، وَالْعَمَلُ لِأَجْلِهِمْ شِرْكٌ</p>
+              <p class="tr">"İnsanlar için ameli terk etmek riya, insanlar için amel etmek ise şirktir."</p>
+              <p class="kaynak">📚 İbn Receb, Câmi'u'l-Ulûm ve'l-Hikem, 2/321-322.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>İkinci istisna: borçların ödenmesi ve nafakanın verilmesi</span></h4>
+  <div class="kisim-govde">
+    <p>Borçların ödenmesinde ve nafakanın verilmesinde niyet şart değildir. Bir kişi, borcunu öderken özel olarak niyet etmese bile borcunu ödemiş sayılır.</p>
+    <p>İbn Kayyim rahimehullah, niyetin şart olmadığı bu durumu istisna olarak zikretmiştir. İbn Receb rahimehullah ise bu istisnanın âdetlerle ilgili meselelerde geçerli olduğunu belirtmiştir.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">10</span>Şer'î emirler, niyetin şart olup olmaması bakımından iki kısma ayrılır</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Niyet olmadan yerine getirildiğinde de sorumluluğun düştüğü emirler</span></h4>
+  <div class="kisim-govde">
+    <p>Bu tür emirlerde kişi, niyet etmese bile emri yerine getirdiğinde zimmeti ibrâ olur; yani yükümlülükten kurtulur ve o ameli yerine getirme sorumluluğu üzerinden düşer. Bu kısma nafaka vermek, borç ödemek ve alışveriş yapmak gibi ameller girer.</p>
+    <div class="notkutu"><span class="not-etiket">Örnek</span>
+      <p>Bir kişi, özel olarak niyet etmeksizin eşine nafaka verirse zimmeti ibrâ olur ve nafaka verme yükümlülüğünü yerine getirmiş sayılır.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Sorumluluğun düşmesi için niyetin şart olduğu emirler</span></h4>
+  <div class="kisim-govde">
+    <p>Bu tür emirlerde kişinin zimmetinin ibrâ olması için niyet etmesi gerekir. Niyet olmadan amel yerine getirilirse zimmeti ibrâ olmaz; yani kişi o ameli yerine getirme sorumluluğundan kurtulmaz. Bu kısma namaz, hac ve abdest gibi Allah'ı tazim etmek amacıyla yapılan ibadetler girer.</p>
+    <div class="notkutu"><span class="not-etiket">Örnek</span>
+      <p>Bir kişi, öğle namazına niyet etmeden namaz kılarsa zimmeti ibrâ olmaz; yani öğle namazını yerine getirme yükümlülüğü üzerinden düşmez.</p>
+    </div>
+  </div>
+
+  <div class="ozet">
+    <h4>Bu iki kısım arasındaki benzerlik ve farklılık</h4>
+    <ul class="madde">
+      <li><strong>Ecir kazanma bakımından birleşirler:</strong> her iki kısımda da sevap kazanmak için niyet gereklidir.</li>
+      <li><strong>Emri yerine getirme sorumluluğu bakımından ayrılırlar:</strong> birinci kısımda kişi niyet etmese bile emri yerine getirdiğinde sorumluluktan kurtulur; ikinci kısımda ise niyet etmeden emri yerine getirirse sorumluluktan kurtulmaz.</li>
+    </ul>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">11</span>Niyet kaidesinin fıkhın farklı bablarındaki uygulamaları</h3>
+
+  <p>"Ameller niyetlere göre değerlendirilir" kaidesinin uygulama alanı oldukça geniştir. Bu kaide, fıkhın birçok farklı babında kullanılmaktadır. Bazı örnekler şunlardır:</p>
+
+  <ol class="sayili">
+    <li><strong>Namaz babında:</strong> İki rekât namaz kılan bir kişi, farz veya nafile namaz kılıyor olabilir. Hangi namazı kıldığını belirleyen niyetidir.</li>
+    <li><strong>Taharet babında:</strong> Banyo yapan bir kişi, bunu gusül abdesti almak veya yalnızca serinlemek amacıyla yapıyor olabilir. Burada kişinin niyetine bakılır.</li>
+    <li><strong>Hac babında:</strong> Kâbe'nin etrafında dolaşan bir kişi, bunu tavaf yapmak veya kaybettiği bir eşyayı aramak amacıyla yapıyor olabilir. Bu iki fiili birbirinden ayıran niyettir.</li>
+    <li><strong>İçecekler babında:</strong> Kahve içen bir kişi, bunu Allah'a ibadet etmek için güç kazanmak amacıyla veya Allah'a isyan etmek amacıyla yapıyor olabilir. Burada da kişinin niyetine bakılır.</li>
+    <li><strong>Talak babında:</strong> Bir kişi eşine "Sen benim annem gibisin." derse, bu sözle neyi kastettiğine bakılır. Kişi, eşinden ayrılmayı mı yoksa ona annesi gibi saygı duyduğunu mu ifade etmek istemiştir? Burada belirleyici olan niyetidir.</li>
+    <li><strong>Yöneticiye itaat babında:</strong> Bir kişi, yöneticiye Allah'ın emrine uymak amacıyla veya kötü menfaatler elde etmek için itaat ediyor olabilir. Bu iki durumu birbirinden ayıran niyettir.</li>
+  </ol>
+
+  <p>Bu kaideyle ilgili verilebilecek örnekler oldukça fazladır.</p>
+
+  <div class="ikaz">
+    <span class="ikaz-etiket">Tenbih &mdash; Niyet, yapılan amelin şer'î hükmünü etkiler</span>
+    <p><strong>Kardeşiyle üç günden fazla konuşmamak.</strong> Bir kişi, kardeşiyle üç günden fazla konuşmuyorsa bunun hükmü niyetine göre değişebilir:</p>
+    <ul class="madde">
+      <li><strong>Hicr niyetiyle:</strong> kardeşinin işlediği haramları terk etmesini veya hakka dönmesini sağlamak amacıyla meşru bir hicr uyguluyorsa sevap kazanır.</li>
+      <li><strong>Hevasına uyarak:</strong> sadece nefsani sebeplerden dolayı kardeşiyle konuşmuyorsa günah kazanır.</li>
+    </ul>
+    <p><strong>Bir evin zekât hükmü.</strong> Bir kişi, oturmak amacıyla sahip olduğu evi için zekât ödemez. Ancak aynı evi ticaret amacıyla, satıp kâr elde etmek için elinde bulundurursa zekât hükmü değişir ve zekât vermesi gerekir. Böylece niyetin, aynı malın zekât hükmünü etkileyebildiği görülmektedir.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">12</span>Kişi ibadetine başka niyetler eklerse ibadeti geçerli olur mu?</h3>
+
+  <p>Bu konuda farklı durumlar vardır.</p>
+
+  <h4 class="kisim"><span class="no">1</span><span>İbadete mübah bir niyetin eklenmesi</span></h4>
+  <div class="kisim-govde">
+    <p>Kişi, ibadetine mübah olan başka bir niyet eklerse ibadeti geçerli olmaya devam eder.</p>
+    <div class="notkutu"><span class="not-etiket">Örnek</span>
+      <p>Gusül abdesti almak için yıkanan bir kişi, aynı zamanda serinlemeye de niyet edebilir. Bu durumda guslü geçerlidir. Ancak bazı âlimlere göre sevabı azalabilir.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>İbadete haram bir niyetin eklenmesi</span></h4>
+  <div class="kisim-govde">
+    <p>Kişi, ibadetine riya veya şirk içeren bir niyet eklerse bu durum ibadetinin geçerliliğini etkiler.</p>
+    <div class="notkutu"><span class="not-etiket">Örnekler</span>
+      <ul class="madde">
+        <li><strong>Namaz:</strong> bir kişi namazını gösteriş amacıyla kılarsa namazı geçersiz olur.</li>
+        <li><strong>Kurban:</strong> bir kişi, Allah için kurban kesmeye niyet ederken aynı zamanda türbede yatan kişi için de kurban kesmeye niyet ederse yaptığı amel geçersiz olur.</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">13</span>İhlâs ile niyet arasında fark var mıdır?</h3>
+
+  <p>İhlâs ve niyet, birbirinden farklı anlamlar taşıyabilir. Öğle namazını kılan bir kişiyi ele alalım:</p>
+
+  <ul class="ikili">
+    <li><strong>Niyet</strong> &mdash; öğle namazını kılmayı kastetmesidir.</li>
+    <li><strong>İhlâs</strong> &mdash; bu namazı yalnızca Allah için kılmasıdır.</li>
+  </ul>
+
+  <p>Bu örnekte ihlâs, niyete göre daha özel, yani hâs bir anlam taşımaktadır.</p>
+
+
+  <h3 class="altbolum"><span class="no">14</span>Bazı durumlarda hükmün gerçekleşmesi için niyet tek başına yeterli değildir</h3>
+
+  <p>Boşama, adak adama ve bunlara benzer bazı amellerde, kişinin yalnızca niyet etmesi, o fiilin şer'î hükmünün gerçekleşmesi için yeterli değildir.</p>
+
+  <div class="notkutu"><span class="not-etiket">Örnek</span>
+    <p>Bir kişi eşini boşamaya niyet etse bile, bu niyetini boşamayı gerçekleştiren bir ifadeyle ortaya koymadığı sürece yalnızca kalbindeki niyet sebebiyle boşanma gerçekleşmez.</p>
+  </div>
+
+  <p>Dolayısıyla bu tür meselelerde niyet tek başına yeterli değildir.</p>
+
+
+  <h3 class="altbolum"><span class="no">15</span>Ameller, kabul edilip edilmemeleri bakımından dört kısma ayrılır</h3>
+
+  <ol class="sayili">
+    <li>Kitap ve sünnete uygun olan ve ihlâsla yapılan amel
+      <p class="alt-tanim">Kabul olur.</p>
+    </li>
+    <li>Kitap ve sünnete uygun olmayan ancak ihlâsla yapılan amel
+      <p class="alt-tanim">Kabul olmaz.</p>
+    </li>
+    <li>Kitap ve sünnete uygun olan ancak ihlâssız yapılan amel
+      <p class="alt-tanim">Kabul olmaz.</p>
+    </li>
+    <li>Kitap ve sünnete uygun olmayan ve ihlâssız yapılan amel
+      <p class="alt-tanim">Bu amel bâtıldır.</p>
+    </li>
+  </ol>
+
+</section>
+
+</div>
+</body>
+</html>
