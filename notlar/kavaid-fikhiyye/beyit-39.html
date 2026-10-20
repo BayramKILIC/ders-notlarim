@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kavâid-i Fıkhiyye · 39. Beyit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#123a5f;
+    --navy-soft:#1d5183;
+    --ink:#20262e;
+    --ink-soft:#4a5462;
+    --paper:#fbfaf7;
+    --card:#ffffff;
+    --rule:#e2ddd3;
+
+    --green:#1e6b46;
+    --green-bg:#eef7f1;
+    --green-edge:#a8d3bb;
+
+    --amber:#8a5a12;
+    --amber-bg:#fdf5e6;
+    --amber-edge:#e2c184;
+
+    --blue:#1a4f80;
+    --blue-bg:#eef4fa;
+    --blue-edge:#a9c6e2;
+
+    --bordo:#75194c;
+    --bordo-bg:#fbf2f6;
+    --bordo-edge:#e3c3d4;
+
+    --red:#8d2f2f;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Source Serif 4","Cambria","Georgia",serif;
+    font-size:18px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .sayfa{
+    max-width:820px;
+    margin:0 auto;
+    padding:0 26px 90px;
+  }
+
+  /* ---------- KAPAK ---------- */
+  header.kapak{
+    color:var(--bordo);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:56px 0;
+    margin-bottom:60px;
+  }
+  header.kapak .marka{
+    font-size:.95rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:#d54220;
+    font-weight:600;
+    line-height:1.7;
+    max-width:26ch;
+  }
+  header.kapak .marka-cizgi{
+    width:120px;
+    height:1px;
+    background:var(--rule);
+    margin:26px auto 34px;
+  }
+  header.kapak h1{
+    font-size:clamp(3.3rem,9.5vw,5.8rem);
+    line-height:1.1;
+    color:var(--bordo);
+    margin:0;
+    font-weight:700;
+    letter-spacing:-.015em;
+    max-width:15ch;
+  }
+  header.kapak .altbaslik{
+    font-size:1.16rem;
+    color:var(--bordo);
+    font-style:italic;
+    margin:34px 0 0;
+    max-width:38ch;
+    line-height:1.7;
+  }
+  header.kapak .kunye{
+    margin-top:0;
+    padding-top:72px;
+    font-size:.94rem;
+    color:var(--bordo);
+    letter-spacing:.09em;
+  }
+  header.kapak .kapak-ayet{
+    max-width:540px;
+    margin:0 auto 10px;
+    font-size:1.04rem;
+    line-height:1.75;
+    letter-spacing:0;
+    font-style:italic;
+    color:var(--bordo);
+  }
+  header.kapak .kapak-ayet-kaynak{
+    margin:0;
+    font-size:.86rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  header.kapak .kunye .cizgi{
+    width:56px;
+    height:2px;
+    background:var(--bordo);
+    margin:0 auto 18px;
+  }
+  .besmele{
+    font-family:"Scheherazade New",serif;
+    font-size:2.5rem;
+    color:var(--bordo);
+    direction:rtl;
+    margin:0 0 46px;
+  }
+
+  /* ---------- NÂKID ---------- */
+  section.nakid{margin-bottom:70px;}
+
+  .nakid-baslik{
+    background:var(--navy);
+    color:#fff;
+    border-radius:4px;
+    padding:22px 28px;
+    margin-bottom:34px;
+  }
+  .nakid-baslik .etiket{
+    display:block;
+    font-size:.74rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    opacity:.72;
+    margin-bottom:8px;
+  }
+  .nakid-baslik h2{
+    margin:0;
+    font-size:1.42rem;
+    line-height:1.45;
+    font-weight:600;
+  }
+
+  /* ---------- METİN (müellifin sözü) ---------- */
+  .metin{
+    background:var(--bordo-bg);
+    border:1px solid var(--bordo-edge);
+    border-top:5px solid var(--bordo);
+    border-radius:4px;
+    padding:28px 32px 26px;
+    margin:0 0 20px;
+  }
+  .metin .metin-etiket{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px 12px;
+    font-size:.78rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--bordo);
+    margin-bottom:18px;
+  }
+  .metin .metin-etiket .rozet{
+    background:var(--bordo);
+    color:#fff;
+    padding:3px 11px;
+    border-radius:3px;
+    letter-spacing:.2em;
+  }
+  .metin .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:2rem;
+    line-height:2.1;
+    direction:rtl;
+    text-align:right;
+    color:var(--bordo);
+    margin:0 0 18px;
+  }
+  .metin .tr{
+    margin:0;
+    padding-top:16px;
+    border-top:1px dotted var(--bordo-edge);
+    font-size:1.06rem;
+  }
+
+  /* ---------- ŞERH AYRACI ---------- */
+  .serh-ayrac{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin:54px 0 10px;
+    color:var(--navy);
+  }
+  .serh-ayrac::before,.serh-ayrac::after{
+    content:"";
+    flex:1;
+    height:2px;
+    background:var(--navy-soft);
+    opacity:.35;
+  }
+  .serh-ayrac span{
+    font-size:1.05rem;
+    font-weight:700;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+  }
+
+  h3.altbolum{
+    font-size:1.55rem;
+    line-height:1.4;
+    color:var(--navy);
+    margin:60px 0 20px;
+    padding-bottom:12px;
+    border-bottom:3px solid var(--rule);
+    font-weight:700;
+  }
+  h3.altbolum .no{
+    display:inline-block;
+    min-width:38px;
+    height:38px;
+    line-height:38px;
+    text-align:center;
+    background:var(--navy-soft);
+    color:#fff;
+    border-radius:50%;
+    font-size:1rem;
+    margin-right:13px;
+    vertical-align:3px;
+  }
+
+  p{margin:0 0 17px;}
+
+  h4.kisim{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:1.2rem;
+    color:var(--navy-soft);
+    margin:34px 0 12px;
+    font-weight:700;
+  }
+  h4.kisim .no{
+    flex:0 0 auto;
+    width:28px;
+    height:28px;
+    line-height:25px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    background:var(--card);
+    font-size:.82rem;
+  }
+  .kisim-govde{
+    border-left:2px solid var(--rule);
+    margin-left:13px;
+    padding-left:27px;
+  }
+
+  .delil{
+    display:grid;
+    grid-template-columns:34px 1fr;
+    gap:0 18px;
+    margin:30px 0;
+    padding-bottom:8px;
+    border-bottom:1px dotted var(--rule);
+  }
+  .delil:last-of-type{border-bottom:none;}
+  .delil > .no{
+    width:34px;
+    height:34px;
+    line-height:34px;
+    text-align:center;
+    border-radius:50%;
+    background:var(--navy);
+    color:#fff;
+    font-size:.88rem;
+    font-weight:700;
+    margin-top:2px;
+  }
+  .delil > .govde > .blok:first-child{margin-top:0;}
+  .delil-etiket{
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--navy);
+    margin:6px 0 12px;
+  }
+  .delil > .govde > .delil-etiket + .blok{margin-top:0;}
+
+  .ikaz{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-left:5px solid var(--red);
+    border-radius:4px;
+    padding:20px 26px 6px;
+    margin:28px 0;
+  }
+  .ikaz .ikaz-etiket{
+    display:block;
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--red);
+    margin-bottom:10px;
+  }
+  .ikaz ol.sayili{margin:10px 0 14px;}
+  ol.sayili li p.alt-tanim{margin:10px 0 0;padding-left:14px;border-left:2px solid var(--rule);}
+  ol.sayili > li > p{margin:12px 0 0;}
+  ol.sayili li .blok{margin:16px 0 8px;}
+  ul.madde li .blok{margin:14px 0 8px;}
+  ol.sayili > li ul.madde{margin:12px 0 4px;}
+  h4.kisim .baslik-alt{font-weight:400;color:var(--ink);}
+  h4.kisim .lafz-ar{font-family:"Scheherazade New",serif;font-weight:700;font-size:1.08em;line-height:1;color:var(--bordo);margin-left:8px;white-space:nowrap;}
+  .ar-ic{font-family:"Scheherazade New",serif;font-size:1.25em;line-height:1;unicode-bidi:isolate;display:inline-block;white-space:nowrap;}
+  .lafz{margin:22px 0;text-align:center;}
+  .lafz .ar-buyuk{display:block;font-family:"Scheherazade New",serif;font-size:1.7rem;line-height:1.9;color:var(--bordo);}
+  .lafz .lafz-tr{display:block;margin-top:2px;color:var(--ink-soft);}
+  .bolum-baslik{
+    margin:60px 0 28px;
+    padding:15px 18px;
+    text-align:center;
+    font-size:1.3rem;
+    font-weight:700;
+    line-height:1.4;
+    color:var(--navy);
+    background:var(--card);
+    border-top:2px solid var(--navy-soft);
+    border-bottom:2px solid var(--navy-soft);
+  }
+  .notkutu{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--navy-soft);border-radius:3px;padding:22px 24px 6px;margin:32px 0;}
+  .notkutu .not-etiket{display:block;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--navy-soft);margin-bottom:12px;}
+  ul.ikili{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:9px 30px;list-style:none;margin:26px 0;padding:0;}
+  ul.ikili li{position:relative;padding-left:18px;line-height:1.7;}
+  ul.ikili li::before{content:"";position:absolute;left:0;top:11px;width:6px;height:6px;background:var(--navy-soft);transform:rotate(45deg);}
+
+  /* ---------- VURGU ---------- */
+  .vurgu{
+    font-size:1.24rem;
+    line-height:1.7;
+    color:var(--navy);
+    font-weight:600;
+    border-left:4px solid var(--navy-soft);
+    padding:6px 0 6px 20px;
+    margin:30px 0;
+  }
+  .vurgu-buyuk{
+    font-size:1.42rem;
+    line-height:1.6;
+    text-align:center;
+    color:var(--navy);
+    font-weight:700;
+    margin:38px 0;
+    padding:26px 22px;
+    background:var(--card);
+    border-top:2px solid var(--navy-soft);
+    border-bottom:2px solid var(--navy-soft);
+  }
+  strong{color:var(--navy);font-weight:700;}
+  .sav{font-family:"Scheherazade New",serif;font-size:1.2em;line-height:1;font-weight:400;}
+
+  /* ---------- ALINTI BLOKLARI ---------- */
+  .blok{
+    border-radius:4px;
+    padding:22px 26px;
+    margin:26px 0;
+    border-left-width:5px;
+    border-left-style:solid;
+  }
+  .blok .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:1.75rem;
+    line-height:2.05;
+    direction:rtl;
+    text-align:right;
+    margin-bottom:14px;
+  }
+  .blok .tr{margin:0 0 12px;}
+  .blok .kaynak{
+    font-size:.9rem;
+    color:var(--ink-soft);
+    font-style:italic;
+    margin:0;
+    padding-top:10px;
+    border-top:1px dotted currentColor;
+  }
+  .lafz + p.kaynak{
+    font-size:.9rem;
+    color:var(--ink-soft);
+    font-style:italic;
+    text-align:center;
+    margin:-14px 0 30px;
+  }
+  .blok .soyleyen{
+    display:block;
+    font-size:.79rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:600;
+    margin-bottom:13px;
+  }
+
+  .ayet{background:var(--green-bg);border-left-color:var(--green-edge);}
+  .ayet .ar,.ayet .soyleyen{color:var(--green);}
+
+  .alim{background:var(--amber-bg);border-left-color:var(--amber-edge);}
+  .alim .ar,.alim .soyleyen{color:var(--amber);}
+
+  .hadis{background:var(--blue-bg);border-left-color:var(--blue-edge);}
+  .hadis .ar,.hadis .soyleyen{color:var(--blue);}
+
+  /* ---------- LİSTELER ---------- */
+  ul.madde{
+    list-style:none;
+    padding:0;
+    margin:20px 0;
+  }
+  ul.madde li{
+    position:relative;
+    padding:7px 0 7px 26px;
+  }
+  ul.madde li::before{
+    content:"◆";
+    position:absolute;
+    left:2px;
+    color:var(--navy-soft);
+    font-size:.68rem;
+    top:12px;
+  }
+
+  ol.sayili{
+    list-style:none;
+    counter-reset:sira;
+    padding:0;
+    margin:22px 0;
+  }
+  ol.sayili > li{
+    counter-increment:sira;
+    position:relative;
+    padding:10px 0 10px 46px;
+    border-bottom:1px dotted var(--rule);
+  }
+  ol.sayili > li:last-child{border-bottom:none;}
+  ol.sayili > li::before{
+    content:counter(sira);
+    position:absolute;
+    left:0;
+    top:13px;
+    width:30px;
+    height:30px;
+    line-height:27px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    color:var(--navy-soft);
+    background:var(--card);
+    font-size:.84rem;
+    font-weight:700;
+  }
+
+  /* ---------- ÖZET ---------- */
+  .ozet{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-top:4px solid var(--navy);
+    border-radius:4px;
+    padding:26px 30px;
+    margin-top:34px;
+  }
+  .ozet h4{
+    margin:0 0 16px;
+    color:var(--navy);
+    font-size:1.06rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+  .ozet ul{margin:0;padding-left:22px;}
+  .ozet li{margin-bottom:11px;}
+  .ozet li:last-child{margin-bottom:0;}
+
+  .ayirac{
+    text-align:center;
+    color:var(--rule);
+    letter-spacing:.5em;
+    margin:38px 0;
+    font-size:.8rem;
+  }
+
+  footer{
+    margin-top:70px;
+    padding-top:26px;
+    border-top:3px double var(--rule);
+    text-align:center;
+    color:#d54220;
+    font-size:.9rem;
+  }
+  footer .marka{
+    font-size:1rem;
+    color:#d54220;
+    font-weight:600;
+    letter-spacing:.1em;
+    margin-bottom:6px;
+  }
+
+  @media (max-width:620px){
+    body{font-size:16.5px;}
+    .sayfa{padding:0 16px 60px;}
+    header.kapak h1{font-size:2.8rem;}
+    .besmele{font-size:2rem;}
+    .nakid-baslik h2{font-size:1.16rem;}
+    h3.altbolum{font-size:1.3rem;margin:48px 0 16px;}
+    h3.altbolum .no{min-width:32px;height:32px;line-height:32px;font-size:.9rem;}
+    .metin{padding:22px 18px 20px;}
+    .metin .ar{font-size:1.65rem;line-height:2;}
+    .blok{padding:18px 18px;}
+    .ikaz{padding:18px 18px 4px;}
+    .kisim-govde{margin-left:0;padding-left:14px;}
+    .delil{grid-template-columns:28px 1fr;gap:0 10px;}
+    .delil > .no{width:28px;height:28px;line-height:28px;font-size:.8rem;}
+    .blok .ar{font-size:1.5rem;line-height:1.95;}
+    .vurgu-buyuk{font-size:1.18rem;padding:20px 16px;}
+    .vurgu{font-size:1.1rem;}
+  }
+
+  @media print{
+    @page{margin:18mm 16mm;}
+    body{background:#fff;font-size:11.5pt;}
+    .sayfa{max-width:none;padding:0;}
+    section.nakid{page-break-before:always;}
+    section.nakid:first-of-type{page-break-before:auto;}
+    .ayirac{display:none;}
+    header.kapak{
+      min-height:238mm;
+      page-break-after:always;
+      margin-bottom:0;
+    }
+    header.kapak h1{font-size:54pt;}
+    .besmele{font-size:26pt;}
+    section.nakid{page-break-inside:auto;}
+    .nakid-baslik{page-break-after:avoid;background:var(--navy) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .metin,.blok,.ozet,.vurgu-buyuk{page-break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    h3.altbolum,.serh-ayrac{page-break-after:avoid;}
+  }
+
+  /* ---------- KAVÂİD EKLERİ ---------- */
+  header.kapak h1{font-size:clamp(2.6rem,8vw,5rem);max-width:none;}
+  header.kapak .kapak-ar{font-family:"Scheherazade New",serif;font-size:2rem;line-height:1.6;color:var(--bordo);margin:0 0 8px;}
+  .metin .okunus{margin:0 0 14px;font-style:italic;color:var(--ink-soft);font-size:1rem;}
+  .metin .ar{font-size:1.72rem;}
+  .ders-isaret{display:flex;align-items:center;gap:14px;margin:48px 0 26px;color:var(--bordo);}
+  .ders-isaret::before,.ders-isaret::after{content:"";flex:1;height:1px;background:var(--bordo-edge);}
+  .ders-isaret span{font-size:.8rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;padding:3px 12px;border:1px solid var(--bordo-edge);border-radius:3px;background:var(--bordo-bg);}
+  section.nakid > .ders-isaret:first-child{margin-top:0;}
+  @media (max-width:620px){h4.kisim .lafz-ar,.ar-ic{white-space:normal;} header.kapak h1{font-size:2.3rem;} header.kapak .kapak-ar{font-size:1.6rem;}}
+</style>
+<style>.sayfa > section.nakid:first-of-type{margin-top:32px;}</style>
+</head>
+<body>
+<div class="sayfa">
+
+<section class="nakid">
+
+  <div class="nakid-baslik">
+    <span class="etiket">39. Beyit</span>
+    <h2>İzin verilen bir fiilden doğan sonuç tazmin edilmez</h2>
+  </div>
+
+  <div class="metin">
+    <div class="metin-etiket"><span class="rozet">Beyit 39</span>Şeyh rahimehullah dedi ki</div>
+    <p class="ar">وَكُلُّ مَا نَشَأَ عَنِ الْمَأْذُونِ . . . فَذَاكَ أَمْرٌ لَيْسَ بِالْمَضْمُونِ</p>
+    <p class="okunus">Ve kullu mâ neşe'e ani'l-me'zûni, fe-zâke emrun leyse bi'l-madmûni.</p>
+    <p class="tr">"İzin verilen bir fiilden doğan sonuçlar, tazmin yükümlülüğü gerektirmez."</p>
+  </div>
+
+
+  <div class="serh-ayrac"><span>Şerh</span></div>
+
+
+  <h3 class="altbolum"><span class="no">1</span>Bu beytin manası ve bazı nüshalarda bulunmaması</h3>
+
+  <ul class="madde">
+    <li>Bu beyit, manzûmenin bazı nüshalarında bulunmadığı için bazı âlimler onu şerh etmemişlerdir. Ancak diğer bazı nüshalarda bu beyit yer almaktadır. Râcih görüşe göre güvenilir nüshalarda bu beyit bulunmaktadır.</li>
+    <li>Bu beyit, daha önce öğrendiğimiz şu beyitle benzerlik göstermektedir:
+      <div class="lafz">
+        <span class="ar-buyuk" dir="rtl">وَمُتْلِفُ مُؤْذِيهِ لَيْسَ يَضْمَنُ . . . بَعْدَ الدِّفَاعِ بِالَّتِي هِيَ أَحْسَنُ</span>
+        <span class="lafz-tr">"Kendisine zarar veren şeyi, önce en uygun şekilde savunmaya çalıştıktan sonra itlaf eden kişi, bu zararı tazmin etmekle yükümlü değildir."</span>
+      </div>
+    </li>
+  </ul>
+
+  <h4 class="kisim"><span class="no">1</span><span>Bu beytin manası nedir?</span></h4>
+  <div class="kisim-govde">
+    <p>Bir fiilin yapılmasına şeriat veya o işin sahibi tarafından izin verilmişse ve bu fiilin sonucunda bir zarar meydana gelmişse, bu zararı tazmin etmek gerekmez.</p>
+
+    <p>İbn Useymîn rahimehullah bu kaideyi şöyle açıklamıştır:</p>
+
+    <div class="blok alim">
+      <span class="soyleyen">İbn Useymîn rahimehullah</span>
+      <p class="ar">وَهَذَا الضَّابِطُ مَبْنِيٌّ عَلَى قَاعِدَةٍ عِنْدَ أَهْلِ الْعِلْمِ، وَهِيَ: «مَا تَرَتَّبَ عَلَى الْمَأْذُونِ فَلَيْسَ بِمَضْمُونٍ»… وَيُسْتَثْنَى مِنْ هَذَا الضَّابِطِ… أَنَّهَا مُتَرَتِّبَةٌ عَلَى شَيْءٍ غَيْرِ مَأْذُونٍ فِيهِ، فَيَكُونُ عَلَيْهِ الضَّمَانُ</p>
+      <p class="tr">"Bu, âlimler arasında bilinen bir kaidedir: izin verilen bir fiilden doğan sonuç tazmin edilmez… Ancak fiile izin verilmemişse, meydana gelen zararın tazmin edilmesi gerekir."</p>
+      <p class="kaynak">📚 İbn Useymîn, eş-Şerhu'l-Mumti', 14/89.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Bazı âlimler bu kaideyi şu şekillerde ifade etmişlerdir</span></h4>
+  <div class="kisim-govde">
+
+    <div class="lafz">
+      <span class="ar-buyuk" dir="rtl">الْجَوَازُ الشَّرْعِيُّ يُنَافِي الضَّمَانَ</span>
+      <span class="lafz-tr">El-cevâzu'ş-şer'iyyu yunâfi'd-damân &mdash; "Şer'î olarak izin verilmiş bir fiil, tazmin yükümlülüğünü ortadan kaldırır."</span>
+    </div>
+    <p class="kaynak">📚 Mecelletu'l-Ahkâmi'l-Adliyye, madde 91; Ahmed ez-Zerkâ, Şerhu'l-Kavâidi'l-Fıkhiyye, s. 449.</p>
+
+    <div class="lafz">
+      <span class="ar-buyuk" dir="rtl">الرِّضَا بِالشَّيْءِ رِضًا بِمَا يَتَوَلَّدُ مِنْهُ</span>
+      <span class="lafz-tr">Er-ridâ bi'ş-şey'i ridan bimâ yetevelledu minhu &mdash; "Bir şeye razı olmak, ondan doğan sonuçlara da razı olmak demektir."</span>
+    </div>
+    <p class="kaynak">📚 Hısnî, el-Kavâid, 1/30.</p>
+
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">2</span>Şeriatta asıl olan, telef edilen malların tazmin edilmesidir</h3>
+
+  <p>Kasten veya bilmeyerek itlaf edilen, yani telef edilen ve zarar verilerek kullanılamaz hâle getirilen malların asıl olarak tazmin edilmesi gerekir.</p>
+
+  <p>Ancak izin verilmiş bir fiil sonucunda bir mal telef edilmişse, belirli şartlar altında bu zararın tazmin edilmesi gerekmez.</p>
+
+
+  <h3 class="altbolum"><span class="no">3</span>Bu kaidenin delilleri nelerdir?</h3>
+
+  <div class="delil">
+    <div class="no">1</div>
+    <div class="govde">
+      <div class="delil-etiket">Birinci delil &mdash; Enes radıyallahu anh hadisi</div>
+      <p>Resûlullah <span class="sav">ﷺ</span> eşlerinden birinin yanındayken, diğer eşlerinden biri bir tabak içinde yemek gönderdi. Resûlullah'ın yanında bulunduğu eşi, kıskançlık sebebiyle hizmetçinin eline vurdu ve tabak yere düşerek kırıldı. Resûlullah <span class="sav">ﷺ</span> kırılan tabağın parçalarını topladı, yemeği de bir araya getirdi ve şöyle buyurdu:</p>
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah ﷺ şöyle buyurdu</span>
+        <p class="ar">«غَارَتْ أُمُّكُمْ»</p>
+        <p class="tr">"Anneniz kıskandı."</p>
+        <p class="kaynak">📚 Buhârî, 5225.</p>
+      </div>
+      <p>Ardından kırılan tabağın yerine sağlam bir tabak vererek zararı telafi etti.</p>
+      <p>Tabak kasıtlı olarak kırıldığı için tazminat gerekmiştir. Ancak tabağı kullanmasına izin verildiğinden, herhangi bir kusuru olmadan yanlışlıkla kırsaydı tazminat gerekmezdi.</p>
+    </div>
+  </div>
+
+  <div class="delil">
+    <div class="no">2</div>
+    <div class="govde">
+      <div class="delil-etiket">İkinci delil &mdash; Isırma kıssası</div>
+      <p>Bir adam, başka bir adamın elini ısırdı. Isırılan kişi de elini çekince, onu ısıran adamın dişleri kırıldı. Mesele Resûlullah'a <span class="sav">ﷺ</span> götürüldü. Bunun üzerine şöyle buyurdu:</p>
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah ﷺ şöyle buyurdu</span>
+        <p class="ar">«يَعَضُّ أَحَدُكُمْ أَخَاهُ كَمَا يَعَضُّ الْفَحْلُ؟ لَا دِيَةَ لَكَ»</p>
+        <p class="tr">"Sizden biri kardeşini erkek devenin ısırdığı gibi mi ısırıyor? Sana diyet yoktur."</p>
+        <p class="kaynak">📚 Buhârî, 6892; Muslim, 1673.</p>
+      </div>
+      <p>Isırılan kişi, kendisini saldırgandan korumak için elini çektiğinden dolayı tazminat gerekmemiştir. Çünkü bu şekilde kendisini savunmasına şeriat izin vermiştir.</p>
+    </div>
+  </div>
+
+  <div class="delil">
+    <div class="no">3</div>
+    <div class="govde">
+      <div class="delil-etiket">Üçüncü delil &mdash; Ebû Hureyre radıyallahu anh hadisi</div>
+      <div class="blok hadis">
+        <span class="soyleyen">Resûlullah ﷺ şöyle buyurdu</span>
+        <p class="ar">«لَوْ أَنَّ امْرَأً اطَّلَعَ عَلَيْكَ بِغَيْرِ إِذْنٍ فَخَذَفْتَهُ بِحَصَاةٍ فَفَقَأْتَ عَيْنَهُ مَا كَانَ عَلَيْكَ جُنَاحٌ»</p>
+        <p class="tr">"Bir kimse, başka birinin evine izinsiz olarak bakar ve ev sahibi de ona bir taş atarak gözünü çıkarırsa, ev sahibine herhangi bir günah yoktur."</p>
+        <p class="kaynak">📚 Buhârî, 6902; Muslim, 2158.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">4</span>İzin, şeriat veya mal sahibi tarafından verilebilir: örnekler</h3>
+
+  <p>Bu kaidede söz konusu olan izin iki şekilde olabilir:</p>
+
+  <ul class="madde">
+    <li><strong>Şeriatın verdiği izin:</strong> Allah'ın yapılmasına izin verdiği fiiller.</li>
+    <li><strong>Mal sahibinin verdiği izin:</strong> Bir kişinin, başkasına kendi malını kullanması veya koruması için izin vermesi.</li>
+  </ul>
+
+  <h4 class="kisim"><span class="no">1</span><span>Şeriat tarafından izin verilen fiiller</span></h4>
+  <div class="kisim-govde">
+
+    <div class="delil">
+      <div class="no">1</div>
+      <div class="govde">
+        <div class="delil-etiket">Örnek 1 &mdash; Had cezasının uygulanması</div>
+        <p>Bir kişi hırsızlık yapmış ve kadı, elinin kesilmesine hükmetmiştir. Ceza uygulandıktan sonra kişi çok kan kaybederek ölmüştür.</p>
+        <ul class="madde">
+          <li><strong>İzni veren:</strong> Şeriattır. Kadı, şeriatın izin verdiği cezayı uygulamıştır.</li>
+          <li><strong>Hüküm:</strong> Cezanın uygulanmasında ifrat veya tefrit yapılmamışsa, kişinin ölümü sebebiyle diyet gerekmez.</li>
+        </ul>
+        <p>Ancak had veya kısas hükmü olmadan bir kişinin eli kesilirse, bu fiile şeriat tarafından izin verilmediği için tazminat gerekir.</p>
+      </div>
+    </div>
+
+    <div class="delil">
+      <div class="no">2</div>
+      <div class="govde">
+        <div class="delil-etiket">Örnek 2 &mdash; İlimsiz fetva verilmesi</div>
+        <p>Hacda bulunan bir kişi başını kaşırken saçından birkaç tel düşmüştür. Bu kişi, âlim olmadığı hâlde fetva veren birine danışmıştır.</p>
+        <p>O kişi kendisine bir kurban kesmesi gerektiğini söylemiş, bunun üzerine adam kurban kesmiştir. Daha sonra gerçek bir âlime danıştığında ise kurban kesmesinin gerekmediğini öğrenmiştir.</p>
+        <ul class="madde">
+          <li><strong>İzin durumu:</strong> Şeriat, ilmi olmayan bir kimseye fetva verme izni vermemiştir.</li>
+          <li><strong>Hüküm:</strong> Fetva vermeye ehil olmayan kişinin, yanlış fetvası sebebiyle kesilen kurbanın bedelini tazmin etmesi gerekir.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Mal sahibinin veya yetkili kişinin izin verdiği fiiller</span></h4>
+  <div class="kisim-govde">
+
+    <div class="delil">
+      <div class="no">3</div>
+      <div class="govde">
+        <div class="delil-etiket">Örnek 3 &mdash; Kiralanan arabanın zarar görmesi</div>
+        <p>Bir kişi, başka birinden araba kiralamıştır. Arabayı kullanırken herhangi bir ifrat veya tefritte bulunmadığı hâlde araba bozulmuştur.</p>
+        <ul class="madde">
+          <li><strong>İzni veren:</strong> Arabanın sahibidir. Arabayı kiralayarak kullanılmasına izin vermiştir.</li>
+          <li><strong>Hüküm:</strong> İfrat veya tefrit olmadığı için kiracı zararı tazmin etmez.</li>
+        </ul>
+        <p>Ancak kiracı, arabayı sahibinin izin vermediği işlerde kullanır ve araba bu sebeple bozulursa tazminat gerekir. Çünkü verilen iznin dışına çıkmıştır.</p>
+      </div>
+    </div>
+
+    <div class="delil">
+      <div class="no">4</div>
+      <div class="govde">
+        <div class="delil-etiket">Örnek 4 &mdash; Kiralanan evin camlarının kırılması</div>
+        <p>Bir kişi ev kiralamıştır. Kiracı herhangi bir kusurda bulunmadığı hâlde evin camları kendiliğinden kırılmıştır.</p>
+        <ul class="madde">
+          <li><strong>İzni veren:</strong> Evin sahibidir. Evi kiralayarak kullanılmasına izin vermiştir.</li>
+          <li><strong>Hüküm:</strong> Kiracının ifrat veya tefriti yoksa tazminat gerekmez.</li>
+        </ul>
+        <p>Ancak camları kasten kırarsa tazminat gerekir. Çünkü ev sahibinin verdiği izin, camların kasten kırılmasını kapsamaz.</p>
+      </div>
+    </div>
+
+    <div class="delil">
+      <div class="no">5</div>
+      <div class="govde">
+        <div class="delil-etiket">Örnek 5 &mdash; Yetimin malının çalınması</div>
+        <p>Bir kişi, bir yetimin malını korumakla görevlidir. Ancak mal, herhangi bir ifrat veya tefrit olmadan çalınmıştır.</p>
+        <ul class="madde">
+          <li><strong>İzni veren:</strong> Şeriattır. Yetimin malını korumaya yetkili olan kişinin bu malı muhafaza etmesine izin verilmiştir.</li>
+          <li><strong>Hüküm:</strong> Malın korunmasında ifrat veya tefrit yapılmamışsa tazminat gerekmez.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="delil">
+      <div class="no">6</div>
+      <div class="govde">
+        <div class="delil-etiket">Örnek 6 &mdash; Emanetin deprem sebebiyle kaybolması</div>
+        <p>Bir kişiye bir emanet verilmiştir. Ancak deprem meydana gelmiş, ev yıkılmış ve emanet kaybolmuştur.</p>
+        <ul class="madde">
+          <li><strong>İzni veren:</strong> Emanetin sahibidir. Malını koruması için bu kişiye teslim etmiştir.</li>
+          <li><strong>Hüküm:</strong> Emaneti koruyan kişi ifrat veya tefritte bulunmamışsa tazminat gerekmez.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="delil">
+      <div class="no">7</div>
+      <div class="govde">
+        <div class="delil-etiket">Örnek 7 &mdash; Derneğin topladığı zekâtların çalınması</div>
+        <p>Bir dernek, fakirlere dağıtmak amacıyla insanlardan zekât toplamaktadır. Ancak toplanan paralar, herhangi bir ifrat veya tefrit olmadan çalınmıştır.</p>
+        <ul class="madde">
+          <li><strong>İzni veren:</strong> Zekâtlarını derneğe teslim eden kişilerdir. Paraların fakirlere ulaştırılması için izin vermişlerdir.</li>
+          <li><strong>Hüküm:</strong> Dernek, paraların korunmasında ifrat veya tefrit yapmamışsa tazminat gerekmez.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="delil">
+      <div class="no">8</div>
+      <div class="govde">
+        <div class="delil-etiket">Örnek 8 &mdash; Alışveriş için verilen para</div>
+        <p>Bir kadın, başka bir kadına kendisi için bir şey satın alması amacıyla para vermiştir.</p>
+        <ul class="madde">
+          <li><strong>İzni veren:</strong> Paranın sahibi olan kadındır.</li>
+          <li><strong>İznin kapsamı:</strong> Parayı, kendisi adına alışveriş yapması için kullanmasına izin vermiştir.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="delil">
+      <div class="no">9</div>
+      <div class="govde">
+        <div class="delil-etiket">Örnek 9 &mdash; Yolculuk sırasında emanetlerin kaybolması</div>
+        <p>Bir kişi Yemen'den Suudi Arabistan'a gitmek üzere yola çıkmıştır. Yanında, başkalarının kendisine emanet ettiği bazı eşyalar bulunmaktadır.</p>
+        <p>Yolculuk sırasında büyük bir trafik kazası geçirmiş ve emanetlerin bir kısmı kaybolmuştur.</p>
+        <ul class="madde">
+          <li><strong>İzni veren:</strong> Emanetlerin sahipleridir. Eşyalarını taşıması ve koruması için kendisine teslim etmişlerdir.</li>
+          <li><strong>Hüküm:</strong> Yolculuk sırasında ifrat veya tefrit yapmamışsa kaybolan emanetleri tazmin etmesi gerekmez.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <h4 class="kisim"><span>Bu konuyla ilgili önemli bir not</span></h4>
+  <div class="kisim-govde">
+    <p>Ali b. Ebî Tâlib radıyallahu anh'tan, insanların mallarını korumak amacıyla bazı zanaatkârlara tazmin yükümlülüğü getirdiği nakledilmiştir.</p>
+    <p>Bunun sebebi, insanların ifrat ve tefrite düşmelerinin ve kendilerine teslim edilen malları korumakta ihmalkâr davranmalarının önüne geçmektir. Bu uygulamada, kendilerine izin verilmiş olsa bile bazı zanaatkârların zararları tazmin etmelerine hükmedilmiştir.</p>
+    <p>İmam Şâtıbî rahimehullah, <em>el-İ'tisâm</em> adlı eserinde bu meseleye değinmiştir. İmam Ahmed'den de zanaatkârların tazmin yükümlülüğü hakkında görüşler nakledilmiştir.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Zararı ortadan kaldırmak için bir şeyin telef edilmesi</span></h4>
+  <div class="kisim-govde">
+
+    <div class="delil">
+      <div class="no">10</div>
+      <div class="govde">
+        <div class="delil-etiket">Örnek 10 &mdash; Üzerine düşecek camı kırmak</div>
+        <p>Bir kişinin üzerine cam düşmek üzeredir. Kişi, kendisini bu tehlikeden korumak amacıyla camı kırmıştır.</p>
+        <ul class="madde">
+          <li><strong>İzni veren:</strong> Şeriattır. Kişinin kendisini zarardan korumasına izin verilmiştir.</li>
+          <li><strong>Hüküm:</strong> Bu fiil, zararı ortadan kaldırmak amacıyla yapılmıştır.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">5</span>İzin verilen bir fiilin tazminat gerektirmemesi için iki şart</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>İzin veren kişinin, o işe izin verme yetkisine sahip olması</span></h4>
+  <div class="kisim-govde">
+    <p>Bir kişinin verdiği iznin geçerli olabilmesi için, o iş hakkında izin verme yetkisinin bulunması gerekir.</p>
+    <div class="notkutu"><span class="not-etiket">Örnek</span>
+      <p>Bir kişi, başkasına ait olan bir arabayı kullanması için üçüncü bir kişiye izin veremez. Çünkü arabanın sahibi olmadığı ve bu konuda yetkilendirilmediği için böyle bir izin verme yetkisi yoktur.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>İzin verilen kişinin, o işi yapmaya ehil ve yeterli tecrübeye sahip olması</span></h4>
+  <div class="kisim-govde">
+    <p>Bir kişiye bir işi yapması için izin verilmiş olsa bile, o kişinin bu işi yapabilecek bilgi ve tecrübeye sahip olması gerekir.</p>
+    <div class="notkutu"><span class="not-etiket">Örnek</span>
+      <p>Doktor olmayan bir kişiye ameliyat yapması için izin verilmişse, ameliyat sonucunda meydana gelen zararlardan sorumlu olur. Çünkü ameliyat yapmaya ehil olmadığı hâlde bu işe girişerek taaddîde, yani haddi aşmaya düşmüş olur.</p>
+    </div>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">6</span>Şeyh Sa'dî'nin bu kaideyle ilgili zikrettiği iki kaide</h3>
+
+  <p>Şeyh Abdurrahman es-Sa'dî rahimehullah, bu beytin şerhinde konuyla bağlantılı iki kaide daha zikretmiştir.</p>
+
+  <h4 class="kisim"><span class="no">1</span><span>Allah için öfkelenen kişinin mazur görülmesi</span></h4>
+  <div class="kisim-govde">
+    <div class="lafz">
+      <span class="ar-buyuk" dir="rtl">مَنْ غَضِبَ لِلَّهِ مُتَأَوِّلًا مُجْتَهِدًا فَهُوَ مَعْفُوٌّ عَنْهُ</span>
+      <span class="lafz-tr">"Allah için öfkelenen ve bu öfkesi sonucunda içtihat ve tevil ederek sınırı aşan söz veya fiillerde bulunan kişi mazur görülür ve bağışlanır."</span>
+    </div>
+    <p>Bu kaide, izin verilmiş bir fiilden doğan sonuçların sorumluluk gerektirmemesi kaidesine benzemektedir. Allah için öfkelenen bir kişi, hevasına uyarak değil içtihat ederek bazı yanlış söz veya fiillerde bulunursa mazur görülür.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>İtaatten ve günahtan doğan sonuçların hükmü</span></h4>
+  <div class="kisim-govde">
+    <div class="lafz">
+      <span class="ar-buyuk" dir="rtl">الْآثَارُ النَّاشِئَةُ عَنِ الطَّاعَةِ مُثَابٌ عَلَيْهَا، وَالْآثَارُ النَّاشِئَةُ عَنِ الْمَعْصِيَةِ تَبَعٌ لِلْمَعْصِيَةِ</span>
+      <span class="lafz-tr">"İtaatten doğan sonuçlara sevap verilir. Günahtan doğan sonuçlar ise o günaha tâbidir."</span>
+    </div>
+    <p>İbadetlerden kaynaklanan yorgunluk ve meşakkat ile oruç sebebiyle ağızda oluşan hoş olmayan koku gibi, nefse ağır gelen sonuçlar da sevap kazandırır. Buna karşılık, günahlardan doğan sonuçlar da o günahın hükmüne tâbidir.</p>
+  </div>
+
+  <p class="kaynak" style="font-size:.9rem;color:var(--ink-soft);font-style:italic;margin-top:26px;">📚 Abdurrahman es-Sa'dî, Risâle fi'l-Kavâidi'l-Fıkhiyye, 39. beyit şerhi.</p>
+
+</section>
+
+</div>
+</body>
+</html>
