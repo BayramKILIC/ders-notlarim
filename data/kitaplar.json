@@ -177,7 +177,16 @@
       "yazar": "Abdurrahman es-Sa'dî",
       "alt": "El-Kavâidu'l-Hisân li-Tefsîri'l-Kur'ân",
       "renk": "#4B3F6B",
-      "bolumler": []
+      "bolumler": [
+        {
+          "id": "1",
+          "etiket": "1",
+          "kisa": "Birinci Mukaddime",
+          "baslik": "Usûlu't-Tefsîr ilmine ilişkin meseleler",
+          "alt": "Birinci Mukaddime",
+          "dosya": "01-birinci-mukaddime.html"
+        }
+      ]
     }
   ]
 }
