@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siyer Dersi · 47. Beyit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#123a5f;
+    --navy-soft:#1d5183;
+    --ink:#20262e;
+    --ink-soft:#4a5462;
+    --paper:#fbfaf7;
+    --card:#ffffff;
+    --rule:#e2ddd3;
+
+    --green:#1e6b46;
+    --green-bg:#eef7f1;
+    --green-edge:#a8d3bb;
+
+    --amber:#8a5a12;
+    --amber-bg:#fdf5e6;
+    --amber-edge:#e2c184;
+
+    --blue:#1a4f80;
+    --blue-bg:#eef4fa;
+    --blue-edge:#a9c6e2;
+
+    --bordo:#75194c;
+    --bordo-bg:#fbf2f6;
+    --bordo-edge:#e3c3d4;
+
+    --red:#8d2f2f;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Source Serif 4","Cambria","Georgia",serif;
+    font-size:18px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .sayfa{
+    max-width:820px;
+    margin:0 auto;
+    padding:0 26px 90px;
+  }
+
+  /* ---------- KAPAK ---------- */
+  header.kapak{
+    color:var(--bordo);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:56px 0;
+    margin-bottom:60px;
+  }
+  header.kapak .marka{
+    font-size:.95rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:#d54220;
+    font-weight:600;
+    line-height:1.7;
+    max-width:26ch;
+  }
+  header.kapak .marka-cizgi{
+    width:120px;
+    height:1px;
+    background:var(--rule);
+    margin:26px auto 34px;
+  }
+  header.kapak h1{
+    font-size:clamp(3.3rem,9.5vw,5.8rem);
+    line-height:1.1;
+    color:var(--bordo);
+    margin:0;
+    font-weight:700;
+    letter-spacing:-.015em;
+    max-width:15ch;
+  }
+  header.kapak .altbaslik{
+    font-size:1.16rem;
+    color:var(--bordo);
+    font-style:italic;
+    margin:34px 0 0;
+    max-width:38ch;
+    line-height:1.7;
+  }
+  header.kapak .kunye{
+    margin-top:0;
+    padding-top:72px;
+    font-size:.94rem;
+    color:var(--bordo);
+    letter-spacing:.09em;
+  }
+  header.kapak .kapak-ayet{
+    max-width:540px;
+    margin:0 auto 10px;
+    font-size:1.04rem;
+    line-height:1.75;
+    letter-spacing:0;
+    font-style:italic;
+    color:var(--bordo);
+  }
+  header.kapak .kapak-ayet-kaynak{
+    margin:0;
+    font-size:.86rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  header.kapak .kunye .cizgi{
+    width:56px;
+    height:2px;
+    background:var(--bordo);
+    margin:0 auto 18px;
+  }
+  .besmele{
+    font-family:"Scheherazade New",serif;
+    font-size:2.5rem;
+    color:var(--bordo);
+    direction:rtl;
+    margin:0 0 46px;
+  }
+
+  /* ---------- NÂKID ---------- */
+  section.nakid{margin-bottom:70px;}
+
+  .nakid-baslik{
+    background:var(--navy);
+    color:#fff;
+    border-radius:4px;
+    padding:22px 28px;
+    margin-bottom:34px;
+  }
+  .nakid-baslik .etiket{
+    display:block;
+    font-size:.74rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    opacity:.72;
+    margin-bottom:8px;
+  }
+  .nakid-baslik h2{
+    margin:0;
+    font-size:1.42rem;
+    line-height:1.45;
+    font-weight:600;
+  }
+
+  /* ---------- METİN (müellifin sözü) ---------- */
+  .metin{
+    background:var(--bordo-bg);
+    border:1px solid var(--bordo-edge);
+    border-top:5px solid var(--bordo);
+    border-radius:4px;
+    padding:28px 32px 26px;
+    margin:0 0 20px;
+  }
+  .metin .metin-etiket{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px 12px;
+    font-size:.78rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--bordo);
+    margin-bottom:18px;
+  }
+  .metin .metin-etiket .rozet{
+    background:var(--bordo);
+    color:#fff;
+    padding:3px 11px;
+    border-radius:3px;
+    letter-spacing:.2em;
+  }
+  .metin .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:2rem;
+    line-height:2.1;
+    direction:rtl;
+    text-align:right;
+    color:var(--bordo);
+    margin:0 0 18px;
+  }
+  .metin .tr{
+    margin:0;
+    padding-top:16px;
+    border-top:1px dotted var(--bordo-edge);
+    font-size:1.06rem;
+  }
+
+  /* ---------- ŞERH AYRACI ---------- */
+  .serh-ayrac{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin:54px 0 10px;
+    color:var(--navy);
+  }
+  .serh-ayrac::before,.serh-ayrac::after{
+    content:"";
+    flex:1;
+    height:2px;
+    background:var(--navy-soft);
+    opacity:.35;
+  }
+  .serh-ayrac span{
+    font-size:1.05rem;
+    font-weight:700;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+  }
+
+  h3.altbolum{
+    font-size:1.55rem;
+    line-height:1.4;
+    color:var(--navy);
+    margin:60px 0 20px;
+    padding-bottom:12px;
+    border-bottom:3px solid var(--rule);
+    font-weight:700;
+  }
+  h3.altbolum .no{
+    display:inline-block;
+    min-width:38px;
+    height:38px;
+    line-height:38px;
+    text-align:center;
+    background:var(--navy-soft);
+    color:#fff;
+    border-radius:50%;
+    font-size:1rem;
+    margin-right:13px;
+    vertical-align:3px;
+  }
+
+  p{margin:0 0 17px;}
+
+  h4.kisim{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:1.2rem;
+    color:var(--navy-soft);
+    margin:34px 0 12px;
+    font-weight:700;
+  }
+  h4.kisim .no{
+    flex:0 0 auto;
+    width:28px;
+    height:28px;
+    line-height:25px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    background:var(--card);
+    font-size:.82rem;
+  }
+  .kisim-govde{
+    border-left:2px solid var(--rule);
+    margin-left:13px;
+    padding-left:27px;
+  }
+
+  .delil{
+    display:grid;
+    grid-template-columns:34px 1fr;
+    gap:0 18px;
+    margin:30px 0;
+    padding-bottom:8px;
+    border-bottom:1px dotted var(--rule);
+  }
+  .delil:last-of-type{border-bottom:none;}
+  .delil > .no{
+    width:34px;
+    height:34px;
+    line-height:34px;
+    text-align:center;
+    border-radius:50%;
+    background:var(--navy);
+    color:#fff;
+    font-size:.88rem;
+    font-weight:700;
+    margin-top:2px;
+  }
+  .delil > .govde > .blok:first-child{margin-top:0;}
+  .delil-etiket{
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--navy);
+    margin:6px 0 12px;
+  }
+  .delil > .govde > .delil-etiket + .blok{margin-top:0;}
+
+  .ikaz{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-left:5px solid var(--red);
+    border-radius:4px;
+    padding:20px 26px 6px;
+    margin:28px 0;
+  }
+  .ikaz .ikaz-etiket{
+    display:block;
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--red);
+    margin-bottom:10px;
+  }
+  .ikaz ol.sayili{margin:10px 0 14px;}
+  ol.sayili li p.alt-tanim{margin:10px 0 0;padding-left:14px;border-left:2px solid var(--rule);}
+  ol.sayili > li > p{margin:12px 0 0;}
+  ol.sayili li .blok{margin:16px 0 8px;}
+  ul.madde li .blok{margin:14px 0 8px;}
+  ol.sayili > li ul.madde{margin:12px 0 4px;}
+  h4.kisim .baslik-alt{font-weight:400;color:var(--ink);}
+  h4.kisim .lafz-ar{font-family:"Scheherazade New",serif;font-weight:700;font-size:1.08em;line-height:1;color:var(--bordo);margin-left:8px;white-space:nowrap;}
+  .ar-ic{font-family:"Scheherazade New",serif;font-size:1.25em;line-height:1;unicode-bidi:isolate;display:inline-block;white-space:nowrap;}
+  .lafz{margin:22px 0;text-align:center;}
+  .lafz .ar-buyuk{display:block;font-family:"Scheherazade New",serif;font-size:1.7rem;line-height:1.9;color:var(--bordo);}
+  .lafz .lafz-tr{display:block;margin-top:2px;color:var(--ink-soft);}
+  .bolum-baslik{
+    margin:60px 0 28px;
+    padding:15px 18px;
+    text-align:center;
+    font-size:1.3rem;
+    font-weight:700;
+    line-height:1.4;
+    color:var(--navy);
+    background:var(--card);
+    border-top:2px solid var(--navy-soft);
+    border-bottom:2px solid var(--navy-soft);
+  }
+  .notkutu{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--navy-soft);border-radius:3px;padding:22px 24px 6px;margin:32px 0;}
+  .notkutu .not-etiket{display:block;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--navy-soft);margin-bottom:12px;}
+  ul.ikili{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:9px 30px;list-style:none;margin:26px 0;padding:0;}
+  ul.ikili li{position:relative;padding-left:18px;line-height:1.7;}
+  ul.ikili li::before{content:"";position:absolute;left:0;top:11px;width:6px;height:6px;background:var(--navy-soft);transform:rotate(45deg);}
+
+  /* ---------- VURGU ---------- */
+  .vurgu{
+    font-size:1.24rem;
+    line-height:1.7;
+    color:var(--navy);
+    font-weight:600;
+    border-left:4px solid var(--navy-soft);
+    padding:6px 0 6px 20px;
+    margin:30px 0;
+  }
+  .vurgu-buyuk{
+    font-size:1.42rem;
+    line-height:1.6;
+    text-align:center;
+    color:var(--navy);
+    font-weight:700;
+    margin:38px 0;
+    padding:26px 22px;
+    background:var(--card);
+    border-top:2px solid var(--navy-soft);
+    border-bottom:2px solid var(--navy-soft);
+  }
+  strong{color:var(--navy);font-weight:700;}
+  .sav{font-family:"Scheherazade New",serif;font-size:1.2em;line-height:1;font-weight:400;}
+
+  /* ---------- ALINTI BLOKLARI ---------- */
+  .blok{
+    border-radius:4px;
+    padding:22px 26px;
+    margin:26px 0;
+    border-left-width:5px;
+    border-left-style:solid;
+  }
+  .blok .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:1.75rem;
+    line-height:2.05;
+    direction:rtl;
+    text-align:right;
+    margin-bottom:14px;
+  }
+  .blok .tr{margin:0 0 12px;}
+  .blok .kaynak{
+    font-size:.9rem;
+    color:var(--ink-soft);
+    font-style:italic;
+    margin:0;
+    padding-top:10px;
+    border-top:1px dotted currentColor;
+  }
+  .blok .soyleyen{
+    display:block;
+    font-size:.79rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:600;
+    margin-bottom:13px;
+  }
+
+  .ayet{background:var(--green-bg);border-left-color:var(--green-edge);}
+  .ayet .ar,.ayet .soyleyen{color:var(--green);}
+
+  .alim{background:var(--amber-bg);border-left-color:var(--amber-edge);}
+  .alim .ar,.alim .soyleyen{color:var(--amber);}
+
+  .hadis{background:var(--blue-bg);border-left-color:var(--blue-edge);}
+  .hadis .ar,.hadis .soyleyen{color:var(--blue);}
+
+  /* ---------- LİSTELER ---------- */
+  ul.madde{
+    list-style:none;
+    padding:0;
+    margin:20px 0;
+  }
+  ul.madde li{
+    position:relative;
+    padding:7px 0 7px 26px;
+  }
+  ul.madde li::before{
+    content:"◆";
+    position:absolute;
+    left:2px;
+    color:var(--navy-soft);
+    font-size:.68rem;
+    top:12px;
+  }
+
+  ul.madde.yildiz{margin:22px 0;}
+  ul.madde.yildiz > li{padding:10px 0 10px 28px;}
+  ul.madde.yildiz > li::before{
+    content:"✦";
+    left:0;
+    color:var(--amber);
+    font-size:.85rem;
+    top:9px;
+  }
+  ul.madde.yildiz > li + li{border-top:1px solid var(--rule);}
+  ul.madde.yildiz > li .notkutu{margin:14px 0 4px;}
+
+  ol.sayili{
+    list-style:none;
+    counter-reset:sira;
+    padding:0;
+    margin:22px 0;
+  }
+  ol.sayili > li{
+    counter-increment:sira;
+    position:relative;
+    padding:10px 0 10px 46px;
+    border-bottom:1px dotted var(--rule);
+  }
+  ol.sayili > li:last-child{border-bottom:none;}
+  ol.sayili > li::before{
+    content:counter(sira);
+    position:absolute;
+    left:0;
+    top:13px;
+    width:30px;
+    height:30px;
+    line-height:27px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    color:var(--navy-soft);
+    background:var(--card);
+    font-size:.84rem;
+    font-weight:700;
+  }
+
+  /* ---------- ÖZET ---------- */
+  .ozet{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-top:4px solid var(--navy);
+    border-radius:4px;
+    padding:26px 30px;
+    margin-top:34px;
+  }
+  .ozet h4{
+    margin:0 0 16px;
+    color:var(--navy);
+    font-size:1.06rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+  .ozet ul{margin:0;padding-left:22px;}
+  .ozet li{margin-bottom:11px;}
+  .ozet li:last-child{margin-bottom:0;}
+
+  .ayirac{
+    text-align:center;
+    color:var(--rule);
+    letter-spacing:.5em;
+    margin:38px 0;
+    font-size:.8rem;
+  }
+
+  footer{
+    margin-top:70px;
+    padding-top:26px;
+    border-top:3px double var(--rule);
+    text-align:center;
+    color:#d54220;
+    font-size:.9rem;
+  }
+  footer .marka{
+    font-size:1rem;
+    color:#d54220;
+    font-weight:600;
+    letter-spacing:.1em;
+    margin-bottom:6px;
+  }
+
+  @media (max-width:620px){
+    body{font-size:16.5px;}
+    .sayfa{padding:0 16px 60px;}
+    header.kapak h1{font-size:2.8rem;}
+    .besmele{font-size:2rem;}
+    .nakid-baslik h2{font-size:1.16rem;}
+    h3.altbolum{font-size:1.3rem;margin:48px 0 16px;}
+    h3.altbolum .no{min-width:32px;height:32px;line-height:32px;font-size:.9rem;}
+    .metin{padding:22px 18px 20px;}
+    .metin .ar{font-size:1.65rem;line-height:2;}
+    .blok{padding:18px 18px;}
+    .ikaz{padding:18px 18px 4px;}
+    .kisim-govde{margin-left:0;padding-left:14px;}
+    .delil{grid-template-columns:28px 1fr;gap:0 10px;}
+    .delil > .no{width:28px;height:28px;line-height:28px;font-size:.8rem;}
+    .blok .ar{font-size:1.5rem;line-height:1.95;}
+    .vurgu-buyuk{font-size:1.18rem;padding:20px 16px;}
+    .vurgu{font-size:1.1rem;}
+  }
+
+  @media print{
+    @page{margin:18mm 16mm;}
+    body{background:#fff;font-size:11.5pt;}
+    .sayfa{max-width:none;padding:0;}
+    section.nakid{page-break-before:always;}
+    section.nakid:first-of-type{page-break-before:auto;}
+    .ayirac{display:none;}
+    header.kapak{
+      min-height:238mm;
+      page-break-after:always;
+      margin-bottom:0;
+    }
+    header.kapak h1{font-size:54pt;}
+    .besmele{font-size:26pt;}
+    section.nakid{page-break-inside:auto;}
+    .nakid-baslik{page-break-after:avoid;background:var(--navy) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .metin,.blok,.ozet,.vurgu-buyuk{page-break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    h3.altbolum,.serh-ayrac{page-break-after:avoid;}
+  }
+
+  /* ---------- BEYİT EKLERİ ---------- */
+  .metin .okunus{margin:0 0 14px;font-style:italic;color:var(--ink-soft);font-size:1rem;}
+  .metin .ar{font-size:1.72rem;}
+  .blok .kaynak a,.kaynak a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;}
+  .blok .kaynak a:hover,.kaynak a:hover{color:var(--navy-soft);}
+  .lafz + p.kaynak{font-size:.9rem;color:var(--ink-soft);font-style:italic;text-align:center;margin:-14px 0 30px;}
+  ul.ikili li{padding-top:2px;padding-bottom:2px;}
+  @media (max-width:620px){h4.kisim .lafz-ar,.ar-ic{white-space:normal;}}
+</style>
+<style>.sayfa > section.nakid:first-of-type{margin-top:32px;}</style>
+</head>
+<body>
+<div class="sayfa">
+
+<section class="nakid">
+
+  <div class="nakid-baslik">
+    <span class="etiket">47. Beyit</span>
+    <h2>Âişe radıyallahu anhâ ile zifaf ve ezanın meşru kılınması</h2>
+  </div>
+
+  <div class="metin">
+    <div class="metin-etiket"><span class="rozet">Beyit 47</span>Şeyh rahimehullah dedi ki</div>
+    <p class="ar">ثُمَّ بَنَى بِابْنَةِ خَيْرِ صَحْبِهِ . . . وَشُرِعَ الْأَذَانُ فَاقْتَدِ بِهِ</p>
+    <p class="okunus">Summe benâ bi-bneti hayri sahbihî, ve şuri'a'l-ezânu fa'ktedi bihî.</p>
+    <p class="tr">"Sonra en hayırlı arkadaşının kızıyla, yani Âişe radıyallahu anhâ ile zifafa girdi. Ezan da meşru kılındı. Sen de buna uy."</p>
+  </div>
+
+
+  <div class="serh-ayrac"><span>Şerh</span></div>
+
+
+  <h3 class="altbolum"><span class="no">1</span>Bu beyitte kaç hadise vardır?</h3>
+
+  <p>Bu beyitte iki hadise vardır:</p>
+  <ol class="sayili">
+    <li>Resûlullah'ın <span class="sav">ﷺ</span> Âişe radıyallahu anhâ ile zifafa girmesi.</li>
+    <li>Ezanın meşru kılınması.</li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">2</span>Beytin detaylı manası</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Summe benâ <span class="lafz-ar" dir="rtl">ثُمَّ بَنَى</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Yani hicretin birinci yılında Âişe radıyallahu anhâ ile evlendi.</li>
+      <li>Nikâh akdi Mekke'de olmuştu. Zifaf ise Medine'de oldu.</li>
+      <li>Âişe radıyallahu anhâ dokuz yaşındaydı.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Bi-bneti hayri sahbihî <span class="lafz-ar" dir="rtl">بِابْنَةِ خَيْرِ صَحْبِهِ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Yani en hayırlı arkadaşının kızı Âişe. Burada kastedilen Ebû Bekir es-Sıddîk radıyallahu anh'tır.</p>
+    <p>İbn Ömer radıyallahu anhumâ şöyle dedi:</p>
+    <div class="blok hadis">
+      <span class="soyleyen">İbn Ömer radıyallahu anhumâ şöyle demiştir</span>
+      <p class="ar">«كُنَّا نُخَيِّرُ بَيْنَ النَّاسِ فِي زَمَنِ النَّبِيِّ ﷺ، فَنُخَيِّرُ أَبَا بَكْرٍ، ثُمَّ عُمَرَ بْنَ الْخَطَّابِ، ثُمَّ عُثْمَانَ بْنَ عَفَّانَ»</p>
+      <p class="tr">"Biz Nebî <span class="sav">ﷺ</span> zamanında insanlar arasında üstünlük sıralaması yapardık. Ebû Bekir'i, sonra Ömer bin Hattâb'ı, sonra Osman bin Affân'ı üstün tutardık."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/1681/5580" target="_blank" rel="noopener">Buhârî, 3655</a>.</p>
+    </div>
+    <p>Resûlullah <span class="sav">ﷺ</span> de şöyle buyurmuştur:</p>
+    <div class="blok hadis">
+      <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+      <p class="ar">«لَوْ كُنْتُ مُتَّخِذًا مِنْ أُمَّتِي خَلِيلًا لَاتَّخَذْتُ أَبَا بَكْرٍ، وَلَكِنْ أَخِي وَصَاحِبِي»</p>
+      <p class="tr">"Ümmetimden bir halîl edinecek olsaydım, Ebû Bekir'i halîl edinirdim. Fakat o benim kardeşim ve arkadaşımdır."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/1681/5582" target="_blank" rel="noopener">Buhârî, 3656</a>.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Ve şuri'a'l-ezânu <span class="lafz-ar" dir="rtl">وَشُرِعَ الْأَذَانُ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Yani namaz ezanı meşru kılındı.</li>
+      <li>Bundan önce namaz için ezan okunmuyordu. Müslümanlar namaz vaktini gözetiyor ve vakit geldiğinde toplanıyorlardı.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">4</span><span>Fa'ktedi bihî <span class="lafz-ar" dir="rtl">فَاقْتَدِ بِهِ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Bu sözde iki ihtimal vardır:</p>
+    <ol class="sayili">
+      <li>Ezan konusunu al ve ona önem ver.</li>
+      <li>Resûlullah'ın <span class="sav">ﷺ</span> sünnetine uy ve onunla amel et.</li>
+    </ol>
+  </div>
+
+
+  <div class="bolum-baslik">Bu beyit ile ilgili meseleler</div>
+
+
+  <h3 class="altbolum"><span class="no">1</span>Resûlullah'ın <span class="sav">ﷺ</span> Âişe radıyallahu anhâ ile Medine'de evlenmesi</h3>
+
+  <p>Resûlullah <span class="sav">ﷺ</span>, Âişe radıyallahu anhâ ile Mekke'de nikâhlandı. Onunla Medine'de evlendi.</p>
+
+  <p>Bu konuda icmâ vardır. İcmâyı nakledenler:</p>
+  <ul class="ikili">
+    <li>İbn Cerîr</li>
+    <li>İbn Abdilberr</li>
+    <li>İbn Dihye</li>
+    <li>el-Kurtubî</li>
+    <li>el-Irâkî</li>
+    <li>İbn Hacer</li>
+    <li>el-Aynî</li>
+  </ul>
+
+  <p>Bunun delili, Buhârî ve Muslim'de geçen uzun Âişe radıyallahu anhâ hadisidir:</p>
+
+  <div class="blok hadis">
+    <span class="soyleyen">Âişe radıyallahu anhâ şöyle demiştir</span>
+    <p class="ar">«تَزَوَّجَنِي النَّبِيُّ ﷺ وَأَنَا بِنْتُ سِتِّ سِنِينَ، فَقَدِمْنَا الْمَدِينَةَ، فَنَزَلْنَا فِي بَنِي الْحَارِثِ بْنِ خَزْرَجٍ، فَوُعِكْتُ فَتَمَرَّقَ شَعَرِي فَوَفَى جُمَيْمَةً، فَأَتَتْنِي أُمِّي أُمُّ رُومَانَ، وَإِنِّي لَفِي أُرْجُوحَةٍ، وَمَعِي صَوَاحِبُ لِي، فَصَرَخَتْ بِي فَأَتَيْتُهَا، لَا أَدْرِي مَا تُرِيدُ بِي، فَأَخَذَتْ بِيَدِي حَتَّى أَوْقَفَتْنِي عَلَى بَابِ الدَّارِ، وَإِنِّي لَأُنْهَجُ حَتَّى سَكَنَ بَعْضُ نَفَسِي، ثُمَّ أَخَذَتْ شَيْئًا مِنْ مَاءٍ فَمَسَحَتْ بِهِ وَجْهِي وَرَأْسِي، ثُمَّ أَدْخَلَتْنِي الدَّارَ، فَإِذَا نِسْوَةٌ مِنَ الْأَنْصَارِ فِي الْبَيْتِ، فَقُلْنَ: عَلَى الْخَيْرِ وَالْبَرَكَةِ، وَعَلَى خَيْرِ طَائِرٍ، فَأَسْلَمَتْنِي إِلَيْهِنَّ، فَأَصْلَحْنَ مِنْ شَأْنِي، فَلَمْ يَرُعْنِي إِلَّا رَسُولُ اللَّهِ ﷺ ضُحًى، فَأَسْلَمْنَنِي إِلَيْهِ، وَأَنَا يَوْمَئِذٍ بِنْتُ تِسْعِ سِنِينَ»</p>
+    <p class="tr">"Resûlullah <span class="sav">ﷺ</span> benimle altı yaşımdayken nikâhlandı. Daha sonra Medine'ye geldik ve Benî Hâris bin Hazrec'in yanına yerleştik. Hastalandım ve saçlarım döküldü. Sonra saçlarım omuzlarıma kadar tekrar uzadı. Bir gün arkadaşlarımla salıncakta oynarken annem Ummu Rûmân yanıma geldi ve bana seslendi. Yanına gittim, benden ne istediğini bilmiyordum. Elimden tuttu ve beni evin kapısına kadar götürdü. Nefes nefese kalmıştım. Nefesim biraz sakinleşince biraz su alıp yüzümü ve başımı sildi. Sonra beni eve soktu. Evde Ensâr'dan bazı kadınlar vardı. 'Hayır ve bereket üzere, en güzel kısmet üzere olsun' dediler. Annem beni onlara teslim etti, onlar da beni hazırladılar. Kuşluk vakti ansızın Resûlullah <span class="sav">ﷺ</span> geldi. Kadınlar beni ona teslim ettiler. O gün ben dokuz yaşındaydım."</p>
+    <p class="kaynak">📚 <a href="https://shamela.ws/book/1681/5887" target="_blank" rel="noopener">Buhârî, 3894</a>; Muslim, 1422.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">2</span>Hangi ayda evlendi?</h3>
+
+  <p>Resûlullah'ın <span class="sav">ﷺ</span> Âişe radıyallahu anhâ ile Şevval ayında zifafa girdiği sahih hadisle sabittir.</p>
+
+  <p>Âişe radıyallahu anhâ şöyle dedi:</p>
+  <div class="blok hadis">
+    <span class="soyleyen">Âişe radıyallahu anhâ şöyle demiştir</span>
+    <p class="ar">«تَزَوَّجَنِي رَسُولُ اللَّهِ ﷺ فِي شَوَّالٍ، وَبَنَى بِي فِي شَوَّالٍ»</p>
+    <p class="tr">"Resûlullah <span class="sav">ﷺ</span> benimle Şevval ayında nikâhlandı ve benimle Şevval ayında zifafa girdi."</p>
+    <p class="kaynak">📚 <a href="https://shamela.ws/book/1727/3408" target="_blank" rel="noopener">Muslim, 1423</a>.</p>
+  </div>
+
+  <p>Taberî ise şöyle nakleder:</p>
+  <div class="blok alim">
+    <span class="soyleyen">İbn Cerîr et-Taberî rahimehullah (v. 310)</span>
+    <p class="ar">«وَقِيلَ: إِنَّ رَسُولَ اللَّهِ ﷺ بَنَى بِهَا فِي شَوَّالٍ يَوْمَ الْأَرْبِعَاءِ، فِي مَنْزِلِ أَبِي بَكْرٍ بِالسُّنْحِ»</p>
+    <p class="tr">"Resûlullah'ın <span class="sav">ﷺ</span> Âişe ile Şevval ayında, çarşamba günü, Ebû Bekir'in Sunh'taki evinde zifafa girdiği söylenmiştir."</p>
+    <p class="kaynak">📚 <a href="https://shamela.ws/book/9783/1025" target="_blank" rel="noopener">Taberî, Târîhu'r-Rusul ve'l-Mulûk, 2/400</a>.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">3</span>Hangi yılda zifafa girdi?</h3>
+
+  <p>Bu konuda iki görüş vardır:</p>
+
+  <h4 class="kisim"><span class="no">1</span><span>İkinci yılda olduğu görüşü</span></h4>
+  <div class="kisim-govde">
+    <p>Nevevî, Zehebî, Makrîzî, İbnu'l-Mulakkın, el-Irâkî, Kastallânî ve el-Munâvî gibi bazı âlimler, Resûlullah'ın <span class="sav">ﷺ</span> Âişe ile hicretin ikinci yılında, Bedir'den sonra zifafa girdiğini söylemişlerdir. Zehebî bunu açıkça Şevval 2. yıl olarak zikreder.</p>
+    <p>Bu görüşün delillerinden biri, Câbir'den gelen: "Resûlullah <span class="sav">ﷺ</span> Bedir'den döndükten sonra Âişe ile zifafa girdi." rivayetidir. Fakat bu rivayet sened bakımından zayıftır.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Birinci yılda olduğu görüşü</span></h4>
+  <div class="kisim-govde">
+    <p>İbn Ebi'l-İzz, İbn Sa'd, Vâkıdî, İbn Hibbân, Muğaltay, İbnu'l-Kayyim, İbn Kesîr, İbn Cerîr, İbn Hacer ve Zurkânî gibi âlimlere göre hicretin birinci yılında zifafa girdi.</p>
+    <p class="vurgu">Râcih olan görüş budur.</p>
+
+    <p><strong>Birinci delil:</strong> Buhârî'de geçen Âişe radıyallahu anhâ rivayetindeki olayların sıralamasından, zifafın Medine'ye geldikten kısa bir süre sonra olduğu anlaşılıyor. İbn Hacer de açıkça zifafın Şevval ayında, hicretin birinci yılında olduğunu zikreder:</p>
+    <div class="blok alim">
+      <span class="soyleyen">İbn Hacer el-Askalânî rahimehullah (v. 852)</span>
+      <p class="ar">«وَإِذَا ثَبَتَ أَنَّهُ بَنَى بِهَا فِي شَوَّالٍ مِنَ السَّنَةِ الْأُولَى مِنَ الْهِجْرَةِ، قَوَّى قَوْلَ مَنْ قَالَ: إِنَّهُ دَخَلَ بِهَا بَعْدَ الْهِجْرَةِ بِسَبْعَةِ أَشْهُرٍ، وَقَدْ وَهَّاهُ النَّوَوِيُّ فِي تَهْذِيبِهِ، وَلَيْسَ بِوَاهٍ إِذَا عَدَدْنَاهُ مِنْ رَبِيعٍ الْأَوَّلِ»</p>
+      <p class="tr">"Resûlullah'ın <span class="sav">ﷺ</span> onunla hicretin birinci yılının Şevval ayında zifafa girdiği sabit olunca, onunla hicretten yedi ay sonra zifafa girdiğini söyleyenlerin görüşü güçlenir. Nevevî, Tehzîb adlı eserinde bu görüşü zayıf saymıştır. Ancak süreyi Rebîulevvel'den itibaren sayarsak bu görüş zayıf değildir."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/1673/4053" target="_blank" rel="noopener">İbn Hacer, Fethu'l-Bârî, 7/225</a>.</p>
+    </div>
+
+    <p><strong>İkinci delil:</strong> İbn Sa'd'ın et-Tabakât adlı eserinde Âişe radıyallahu anhâ'dan, Resûlullah'ın <span class="sav">ﷺ</span> kendisiyle hicretten sekiz ay sonra zifafa girdiği rivayet edilmiştir. Ama bu rivayet zayıftır.</p>
+    <div class="blok hadis">
+      <span class="soyleyen">Âişe radıyallahu anhâ'dan rivayet edildiğine göre</span>
+      <p class="ar">«وَأَعْرَسَ بِي فِي شَوَّالٍ عَلَى رَأْسِ ثَمَانِيَةِ أَشْهُرٍ مِنَ الْمُهَاجَرِ، وَكُنْتُ يَوْمَ دَخَلَ بِي ابْنَةَ تِسْعِ سِنِينَ»</p>
+      <p class="tr">"Hicretin sekizinci ayının sonunda, Şevval ayında benimle zifafa girdi. Benimle zifafa girdiği gün dokuz yaşındaydım."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/9351/3436" target="_blank" rel="noopener">İbn Sa'd, et-Tabakâtu'l-Kubrâ, 8/58</a> (Vâkıdî tarikiyle).</p>
+    </div>
+    <p>İbn Kesîr de zifafın hicretten yedi veya sekiz ay sonra olduğunu zikreder.</p>
+  </div>
+
+  <div class="notkutu">
+    <span class="not-etiket">Tenbih</span>
+    <p>Resûlullah <span class="sav">ﷺ</span> Rebîulevvel ayında Medine'ye geldi. Âişe radıyallahu anhâ ile zifaf ise Şevval ayında oldu. Rebîulevvel ile Şevval arasında yaklaşık yedi-sekiz ay vardır.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">4</span>Ezan konusu</h3>
+
+  <p>Ezan Medine'de meşru kılındı.</p>
+  <p>Mekke'de ezanın meşru kılındığına dair gelen rivayetler sahih değildir. Bu rivayetler ya zayıf ya da uydurmadır. İbnu'l-Munzir, Zehebî, İbn Receb, İbn Hacer ve Şevkânî bunu açıklamıştır.</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">İbn Hacer el-Askalânî rahimehullah (v. 852)</span>
+    <p class="ar">«وَالْحَقُّ أَنَّهُ لَا يَصِحُّ شَيْءٌ مِنْ هَذِهِ الْأَحَادِيثِ. وَقَدْ جَزَمَ ابْنُ الْمُنْذِرِ بِأَنَّهُ ﷺ كَانَ يُصَلِّي بِغَيْرِ أَذَانٍ مُنْذُ فُرِضَتِ الصَّلَاةُ بِمَكَّةَ إِلَى أَنْ هَاجَرَ إِلَى الْمَدِينَةِ وَإِلَى أَنْ وَقَعَ التَّشَاوُرُ فِي ذَلِكَ»</p>
+    <p class="tr">"Doğrusu şudur ki bu hadislerin hiçbiri sahih değildir. İbnu'l-Munzir de, Resûlullah'ın <span class="sav">ﷺ</span> namaz Mekke'de farz kılındığından Medine'ye hicret edinceye ve bu konuda istişare yapılıncaya kadar ezansız namaz kıldığını kesin olarak söylemiştir."</p>
+    <p class="kaynak">📚 <a href="https://shamela.ws/book/1673/1158" target="_blank" rel="noopener">İbn Hacer, Fethu'l-Bârî, 2/79</a>.</p>
+  </div>
+
+  <p>Buna göre namaz için ezan okunması Medine döneminde başlamıştır.</p>
+  <p>İbn Receb, Buhârî şerhi olan Fethu'l-Bârî'de ezanın Medine'de meşru kılındığını söylemiştir.</p>
+
+
+  <h3 class="altbolum"><span class="no">5</span>Ezan hangi senede meşru kılındı?</h3>
+
+  <p>İlim ehlinin çoğuna göre ezan, hicretin birinci senesinde meşru kılındı. Nevevî, İbn Hacer, Kastallânî ve el-Munâvî gibi âlimler de bu görüşü zikretmişlerdir.</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">İbn Hacer el-Askalânî rahimehullah (v. 852)</span>
+    <p class="ar">«وَاخْتُلِفَ فِي السَّنَةِ الَّتِي فُرِضَ فِيهَا: فَالرَّاجِحُ أَنَّ ذَلِكَ كَانَ فِي السَّنَةِ الْأُولَى، وَقِيلَ: بَلْ كَانَ فِي السَّنَةِ الثَّانِيَةِ»</p>
+    <p class="tr">"Ezanın hangi yılda farz kılındığı konusunda ihtilaf edilmiştir. Râcih olan, birinci yılda olmasıdır. İkinci yılda olduğu da söylenmiştir."</p>
+    <p class="kaynak">📚 <a href="https://shamela.ws/book/1673/1157" target="_blank" rel="noopener">İbn Hacer, Fethu'l-Bârî, 2/78</a>.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">6</span>Ezanın meşru olmasının merhaleleri</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Birinci merhale</span></h4>
+  <div class="kisim-govde">
+    <p>Müslümanlar namaz için hiçbir nida olmadan toplanıyorlardı. Namaz vaktini takip ediyor ve vakit girince mescitte toplanıyorlardı. Buhârî ve Muslim'de İbn Ömer radıyallahu anhumâ'dan bu şekilde rivayet edilmiştir.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>İkinci merhale</span></h4>
+  <div class="kisim-govde">
+    <p>Sahâbeler, insanları namaza nasıl çağıracakları konusunda istişare ettiler. Bazıları Hristiyanların çanı gibi çan çalınmasını, bazıları Yahudilerin borusu gibi boruya üflenmesini teklif etti. Resûlullah <span class="sav">ﷺ</span> bunları kabul etmedi.</p>
+    <p>Ömer radıyallahu anh ise bir adam gönderilmesini teklif etti. İbn Ömer radıyallahu anhumâ bu olayı şöyle anlatır:</p>
+    <div class="blok hadis">
+      <span class="soyleyen">İbn Ömer radıyallahu anhumâ şöyle demiştir</span>
+      <p class="ar">«كَانَ الْمُسْلِمُونَ حِينَ قَدِمُوا الْمَدِينَةَ، يَجْتَمِعُونَ فَيَتَحَيَّنُونَ الصَّلَاةَ، لَيْسَ يُنَادَى لَهَا، فَتَكَلَّمُوا يَوْمًا فِي ذَلِكَ، فَقَالَ بَعْضُهُمُ: اتَّخِذُوا نَاقُوسًا مِثْلَ نَاقُوسِ النَّصَارَى، وَقَالَ بَعْضُهُمْ: بَلْ بُوقًا مِثْلَ قَرْنِ الْيَهُودِ، فَقَالَ عُمَرُ: أَوَلَا تَبْعَثُونَ رَجُلًا يُنَادِي بِالصَّلَاةِ، فَقَالَ رَسُولُ اللَّهِ ﷺ: يَا بِلَالُ، قُمْ فَنَادِ بِالصَّلَاةِ»</p>
+      <p class="tr">"Müslümanlar Medine'ye geldiklerinde toplanır ve namaz vaktini gözetirlerdi. Namaz için nida edilmezdi. Bir gün bu konuda konuştular. Bazıları: 'Hristiyanların çanı gibi bir çan edinin' dedi. Bazıları da: 'Hayır, Yahudilerin borusu gibi bir boru edinin' dedi. Ömer: 'Namaza çağıracak bir adam gönderseniz olmaz mı?' dedi. Bunun üzerine Resûlullah <span class="sav">ﷺ</span>: 'Ey Bilâl! Kalk ve namaza çağır' buyurdu."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/1681/999" target="_blank" rel="noopener">Buhârî, 604</a>; Muslim, 377.</p>
+    </div>
+    <p>Bu ilk nida, meşhur ezanın lafızları değildi. Bazı rivayetlerde Bilâl'in şöyle nida ettiği zikredilmiştir:</p>
+    <div class="lafz">
+      <span class="ar-buyuk" dir="rtl">الصَّلَاةُ جَامِعَةٌ</span>
+      <span class="lafz-tr">"Namaz toplayıcıdır, namaza gelin."</span>
+    </div>
+    <p class="kaynak">📚 İbn Sa'd, et-Tabakât, Saîd bin el-Museyyeb'in mürsellerinden (<a href="https://shamela.ws/book/1673/1161" target="_blank" rel="noopener">Fethu'l-Bârî, 2/82</a>).</p>
+    <p>Fakat bu rivayet mürseldir.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Üçüncü merhale</span></h4>
+  <div class="kisim-govde">
+    <p>Abdullah bin Zeyd radıyallahu anh rüyasında ezanın lafızlarını gördü. Sabah Resûlullah'a <span class="sav">ﷺ</span> gelip rüyasını anlattı.</p>
+    <div class="blok hadis">
+      <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+      <p class="ar">«إِنَّهَا لَرُؤْيَا حَقٌّ إِنْ شَاءَ اللَّهُ، فَقُمْ مَعَ بِلَالٍ فَأَلْقِ عَلَيْهِ مَا رَأَيْتَ، فَلْيُؤَذِّنْ بِهِ، فَإِنَّهُ أَنْدَى صَوْتًا مِنْكَ»</p>
+      <p class="tr">"İnşallah bu hak bir rüyadır. Bilâl ile kalk, gördüğünü ona öğret. O da bunlarla ezan okusun. Çünkü onun sesi seninkinden daha gürdür."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/1726/673" target="_blank" rel="noopener">Ebû Dâvûd, 499</a>; Tirmizî, 189.</p>
+    </div>
+    <p>Böylece bildiğimiz ezan başladı.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">4</span><span>Dördüncü merhale</span></h4>
+  <div class="kisim-govde">
+    <p>Bilâl radıyallahu anh ezan okuyunca Ömer bin Hattâb radıyallahu anh bunu işitti. Resûlullah'ın <span class="sav">ﷺ</span> yanına geldi ve şöyle dedi:</p>
+    <div class="blok hadis">
+      <span class="soyleyen">Ömer radıyallahu anh ve Resûlullah <span class="sav">ﷺ</span></span>
+      <p class="ar">«وَالَّذِي بَعَثَكَ بِالْحَقِّ يَا رَسُولَ اللَّهِ، لَقَدْ رَأَيْتُ مِثْلَ مَا رَأَى، فَقَالَ رَسُولُ اللَّهِ ﷺ: فَلِلَّهِ الْحَمْدُ»</p>
+      <p class="tr">"Seni hak ile gönderene yemin olsun ki ey Allah'ın Resûlü, ben de onun gördüğünün aynısını gördüm." Bunun üzerine Resûlullah <span class="sav">ﷺ</span>: "Allah'a hamd olsun" dedi.</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/1726/673" target="_blank" rel="noopener">Ebû Dâvûd, 499</a>; Tirmizî, 189.</p>
+    </div>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">7</span>Resûlullah'ın <span class="sav">ﷺ</span> müezzinleri</h3>
+
+  <p>İbnu'l-Kayyim rahimehullah, Zâdu'l-Meâd adlı eserinde Resûlullah'ın <span class="sav">ﷺ</span> dört müezzinini zikretmiştir:</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">İbnu'l-Kayyim rahimehullah (v. 751)</span>
+    <p class="ar">«وَكَانُوا أَرْبَعَةً: اثْنَانِ بِالْمَدِينَةِ: بِلَالُ بْنُ رَبَاحٍ، وَهُوَ أَوَّلُ مَنْ أَذَّنَ لِرَسُولِ اللَّهِ ﷺ، وَعَمْرُو بْنُ أُمِّ مَكْتُومٍ الْقُرَشِيُّ الْعَامِرِيُّ الْأَعْمَى، وَبِقُبَاءٍ: سَعْدُ الْقَرَظِ مَوْلَى عَمَّارِ بْنِ يَاسِرٍ، وَبِمَكَّةَ: أَبُو مَحْذُورَةَ، وَاسْمُهُ أَوْسُ بْنُ مُغِيرَةَ الْجُمَحِيُّ»</p>
+    <p class="tr">"Onlar dört kişiydi. İkisi Medine'deydi: Resûlullah <span class="sav">ﷺ</span> için ilk ezan okuyan Bilâl bin Rebâh ve âmâ olan Amr bin Ummi Mektûm el-Kureşî el-Âmirî. Kubâ'da Ammâr bin Yâsir'in mevlâsı Sa'du'l-Karaz, Mekke'de ise ismi Evs bin Muğîre el-Cumahî olan Ebû Mahzûre vardı."</p>
+    <p class="kaynak">📚 <a href="https://shamela.ws/book/21713/86" target="_blank" rel="noopener">İbnu'l-Kayyim, Zâdu'l-Meâd, 1/120</a>.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">1</span><span>Medine'de</span></h4>
+  <div class="kisim-govde">
+    <ol class="sayili">
+      <li>Bilâl bin Rebâh (<span class="ar-ic" dir="rtl">بِلَالُ بْنُ رَبَاحٍ</span>). Resûlullah'ın <span class="sav">ﷺ</span> ilk müezzinidir.</li>
+      <li>Amr (Abdullah) bin Ummi Mektûm (<span class="ar-ic" dir="rtl">عَمْرُو بْنُ أُمِّ مَكْتُومٍ</span>). Âmâ olan sahâbîdir ve Medine'de ezan okurdu.</li>
+    </ol>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Kubâ'da</span></h4>
+  <div class="kisim-govde">
+    <ol class="sayili" start="3" style="counter-reset:sira 2">
+      <li>Sa'du'l-Karaz (<span class="ar-ic" dir="rtl">سَعْدُ الْقَرَظِ</span>). Ammâr bin Yâsir'in mevlâsıydı ve Kubâ'da müezzinlik yapardı.</li>
+    </ol>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Mekke'de</span></h4>
+  <div class="kisim-govde">
+    <ol class="sayili" start="4" style="counter-reset:sira 3">
+      <li>Ebû Mahzûre el-Cumahî (<span class="ar-ic" dir="rtl">أَبُو مَحْذُورَةَ</span>). İbnu'l-Kayyim onun ismini Evs bin Muğîre el-Cumahî (<span class="ar-ic" dir="rtl">أَوْسُ بْنُ مُغِيرَةَ الْجُمَحِيُّ</span>) olarak zikreder. Mekke'de müezzinlik yapardı.</li>
+    </ol>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">8</span>Hicretin birinci yılında vefat eden, doğan ve İslâm'a giren bazı sahâbeler</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Vefat edenler</span></h4>
+  <div class="kisim-govde">
+    <ol class="sayili">
+      <li><strong>Es'ad bin Zurâre el-Hazrecî</strong> radıyallahu anh (<span class="ar-ic" dir="rtl">أَسْعَدُ بْنُ زُرَارَةَ الْخَزْرَجِيُّ</span>). Hicretin birinci yılında Medine'de vefat etti. İki beyatta da bulunmuştu.</li>
+      <li><strong>Berâ bin Ma'rûr el-Hazrecî</strong> radıyallahu anh (<span class="ar-ic" dir="rtl">الْبَرَاءُ بْنُ مَعْرُورٍ الْخَزْرَجِيُّ</span>). On iki nakîbden biriydi.</li>
+      <li><strong>Kulsûm bin Hidm el-Evsî</strong> radıyallahu anh (<span class="ar-ic" dir="rtl">كُلْثُومُ بْنُ الْهِدْمِ</span>). Resûlullah'ın <span class="sav">ﷺ</span> Medine'ye hicretinden kısa bir süre sonra vefat etti. Resûlullah <span class="sav">ﷺ</span> Kubâ'da onun evinde kalmıştı.</li>
+    </ol>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Doğanlar</span></h4>
+  <div class="kisim-govde">
+    <ol class="sayili">
+      <li><strong>Abdullah bin Zubeyr</strong> radıyallahu anhumâ (<span class="ar-ic" dir="rtl">عَبْدُ اللَّهِ بْنُ الزُّبَيْرِ</span>). Hicretin birinci yılında doğdu. Medine'de Muhâcirlerden doğan ilk çocuk olarak zikredilir.</li>
+    </ol>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>İslâm'a girenler</span></h4>
+  <div class="kisim-govde">
+    <ol class="sayili">
+      <li><strong>Abdullah bin Selâm</strong> radıyallahu anh (<span class="ar-ic" dir="rtl">عَبْدُ اللَّهِ بْنُ سَلَامٍ</span>). Yahudi âlimlerinden biriydi.</li>
+    </ol>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">9</span>Hicretin birinci yılında gazve oldu mu?</h3>
+
+  <p>Hicretin birinci yılında gazve olmadı, fakat bazı seriyyelerin gönderildiği söylenmiştir. Resûlullah <span class="sav">ﷺ</span> bu seriyyeleri özellikle Kureyş'in ticaret kervanlarını gözetlemek ve yollarını takip etmek için gönderdi. İlk gazve ise hicretin ikinci yılında gerçekleşen Ebvâ Gazvesidir.</p>
+
+  <div class="delil">
+    <div class="no">1</div>
+    <div class="govde">
+      <div class="delil-etiket">Hamza bin Abdilmuttalib Seriyyesi &mdash; Sîfu'l-Bahr <span class="ar-ic" dir="rtl">سِيفُ الْبَحْرِ</span></div>
+      <p>Ramazan ayında gerçekleşti. Resûlullah <span class="sav">ﷺ</span> Hamza bin Abdilmuttalib radıyallahu anh'ı 30 Muhâcirle Kureyş'in Şam'dan gelen ticaret kervanını karşılamak üzere gönderdi.</p>
+    </div>
+  </div>
+
+  <div class="delil">
+    <div class="no">2</div>
+    <div class="govde">
+      <div class="delil-etiket">Ubeyde bin Hâris Seriyyesi &mdash; Râbiğ <span class="ar-ic" dir="rtl">رَابِغ</span></div>
+      <p>Şevval ayında gerçekleştiği söylenmiştir. Ubeyde bin Hâris radıyallahu anh komutasında Muhâcirlerden oluşan bir birlik Râbiğ tarafına gönderildi. Burada Müslümanlarla müşrikler arasında ok atışları oldu. Sa'd bin Ebî Vakkâs radıyallahu anh bir ok attı ve bunun Allah yolunda atılan ilk ok olduğu zikredilmiştir.</p>
+    </div>
+  </div>
+
+  <div class="delil">
+    <div class="no">3</div>
+    <div class="govde">
+      <div class="delil-etiket">Sa'd bin Ebî Vakkâs Seriyyesi &mdash; Harrâr <span class="ar-ic" dir="rtl">الْخَرَّار</span></div>
+      <p>Zilkâde ayında gerçekleşti. Resûlullah <span class="sav">ﷺ</span> Sa'd bin Ebî Vakkâs radıyallahu anh'ı yaklaşık 20 kişiyle, Kureyş'in ticaret kervanını karşılamak üzere Harrâr denilen yere gönderdi. Ancak kervan onlardan önce geçmişti ve ona yetişemediler.</p>
+    </div>
+  </div>
+
+  <div class="ozet">
+    <h4>Özet</h4>
+    <p style="margin:0">Hicretin birinci yılında meşhur sıralamaya göre üç seriyye zikredilir: <strong>Sîfu'l-Bahr → Râbiğ → Harrâr</strong>.</p>
+  </div>
+
+</section>
+
+</div>
+</body>
+</html>

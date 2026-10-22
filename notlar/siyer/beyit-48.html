@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siyer Dersi · 48. Beyit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#123a5f;
+    --navy-soft:#1d5183;
+    --ink:#20262e;
+    --ink-soft:#4a5462;
+    --paper:#fbfaf7;
+    --card:#ffffff;
+    --rule:#e2ddd3;
+
+    --green:#1e6b46;
+    --green-bg:#eef7f1;
+    --green-edge:#a8d3bb;
+
+    --amber:#8a5a12;
+    --amber-bg:#fdf5e6;
+    --amber-edge:#e2c184;
+
+    --blue:#1a4f80;
+    --blue-bg:#eef4fa;
+    --blue-edge:#a9c6e2;
+
+    --bordo:#75194c;
+    --bordo-bg:#fbf2f6;
+    --bordo-edge:#e3c3d4;
+
+    --red:#8d2f2f;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Source Serif 4","Cambria","Georgia",serif;
+    font-size:18px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .sayfa{
+    max-width:820px;
+    margin:0 auto;
+    padding:0 26px 90px;
+  }
+
+  /* ---------- KAPAK ---------- */
+  header.kapak{
+    color:var(--bordo);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:56px 0;
+    margin-bottom:60px;
+  }
+  header.kapak .marka{
+    font-size:.95rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:#d54220;
+    font-weight:600;
+    line-height:1.7;
+    max-width:26ch;
+  }
+  header.kapak .marka-cizgi{
+    width:120px;
+    height:1px;
+    background:var(--rule);
+    margin:26px auto 34px;
+  }
+  header.kapak h1{
+    font-size:clamp(3.3rem,9.5vw,5.8rem);
+    line-height:1.1;
+    color:var(--bordo);
+    margin:0;
+    font-weight:700;
+    letter-spacing:-.015em;
+    max-width:15ch;
+  }
+  header.kapak .altbaslik{
+    font-size:1.16rem;
+    color:var(--bordo);
+    font-style:italic;
+    margin:34px 0 0;
+    max-width:38ch;
+    line-height:1.7;
+  }
+  header.kapak .kunye{
+    margin-top:0;
+    padding-top:72px;
+    font-size:.94rem;
+    color:var(--bordo);
+    letter-spacing:.09em;
+  }
+  header.kapak .kapak-ayet{
+    max-width:540px;
+    margin:0 auto 10px;
+    font-size:1.04rem;
+    line-height:1.75;
+    letter-spacing:0;
+    font-style:italic;
+    color:var(--bordo);
+  }
+  header.kapak .kapak-ayet-kaynak{
+    margin:0;
+    font-size:.86rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  header.kapak .kunye .cizgi{
+    width:56px;
+    height:2px;
+    background:var(--bordo);
+    margin:0 auto 18px;
+  }
+  .besmele{
+    font-family:"Scheherazade New",serif;
+    font-size:2.5rem;
+    color:var(--bordo);
+    direction:rtl;
+    margin:0 0 46px;
+  }
+
+  /* ---------- NÂKID ---------- */
+  section.nakid{margin-bottom:70px;}
+
+  .nakid-baslik{
+    background:var(--navy);
+    color:#fff;
+    border-radius:4px;
+    padding:22px 28px;
+    margin-bottom:34px;
+  }
+  .nakid-baslik .etiket{
+    display:block;
+    font-size:.74rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    opacity:.72;
+    margin-bottom:8px;
+  }
+  .nakid-baslik h2{
+    margin:0;
+    font-size:1.42rem;
+    line-height:1.45;
+    font-weight:600;
+  }
+
+  /* ---------- METİN (müellifin sözü) ---------- */
+  .metin{
+    background:var(--bordo-bg);
+    border:1px solid var(--bordo-edge);
+    border-top:5px solid var(--bordo);
+    border-radius:4px;
+    padding:28px 32px 26px;
+    margin:0 0 20px;
+  }
+  .metin .metin-etiket{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px 12px;
+    font-size:.78rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--bordo);
+    margin-bottom:18px;
+  }
+  .metin .metin-etiket .rozet{
+    background:var(--bordo);
+    color:#fff;
+    padding:3px 11px;
+    border-radius:3px;
+    letter-spacing:.2em;
+  }
+  .metin .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:2rem;
+    line-height:2.1;
+    direction:rtl;
+    text-align:right;
+    color:var(--bordo);
+    margin:0 0 18px;
+  }
+  .metin .tr{
+    margin:0;
+    padding-top:16px;
+    border-top:1px dotted var(--bordo-edge);
+    font-size:1.06rem;
+  }
+
+  /* ---------- ŞERH AYRACI ---------- */
+  .serh-ayrac{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin:54px 0 10px;
+    color:var(--navy);
+  }
+  .serh-ayrac::before,.serh-ayrac::after{
+    content:"";
+    flex:1;
+    height:2px;
+    background:var(--navy-soft);
+    opacity:.35;
+  }
+  .serh-ayrac span{
+    font-size:1.05rem;
+    font-weight:700;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+  }
+
+  h3.altbolum{
+    font-size:1.55rem;
+    line-height:1.4;
+    color:var(--navy);
+    margin:60px 0 20px;
+    padding-bottom:12px;
+    border-bottom:3px solid var(--rule);
+    font-weight:700;
+  }
+  h3.altbolum .no{
+    display:inline-block;
+    min-width:38px;
+    height:38px;
+    line-height:38px;
+    text-align:center;
+    background:var(--navy-soft);
+    color:#fff;
+    border-radius:50%;
+    font-size:1rem;
+    margin-right:13px;
+    vertical-align:3px;
+  }
+
+  p{margin:0 0 17px;}
+
+  h4.kisim{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:1.2rem;
+    color:var(--navy-soft);
+    margin:34px 0 12px;
+    font-weight:700;
+  }
+  h4.kisim .no{
+    flex:0 0 auto;
+    width:28px;
+    height:28px;
+    line-height:25px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    background:var(--card);
+    font-size:.82rem;
+  }
+  .kisim-govde{
+    border-left:2px solid var(--rule);
+    margin-left:13px;
+    padding-left:27px;
+  }
+
+  .delil{
+    display:grid;
+    grid-template-columns:34px 1fr;
+    gap:0 18px;
+    margin:30px 0;
+    padding-bottom:8px;
+    border-bottom:1px dotted var(--rule);
+  }
+  .delil:last-of-type{border-bottom:none;}
+  .delil > .no{
+    width:34px;
+    height:34px;
+    line-height:34px;
+    text-align:center;
+    border-radius:50%;
+    background:var(--navy);
+    color:#fff;
+    font-size:.88rem;
+    font-weight:700;
+    margin-top:2px;
+  }
+  .delil > .govde > .blok:first-child{margin-top:0;}
+  .delil-etiket{
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--navy);
+    margin:6px 0 12px;
+  }
+  .delil > .govde > .delil-etiket + .blok{margin-top:0;}
+
+  .ikaz{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-left:5px solid var(--red);
+    border-radius:4px;
+    padding:20px 26px 6px;
+    margin:28px 0;
+  }
+  .ikaz .ikaz-etiket{
+    display:block;
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--red);
+    margin-bottom:10px;
+  }
+  .ikaz ol.sayili{margin:10px 0 14px;}
+  ol.sayili li p.alt-tanim{margin:10px 0 0;padding-left:14px;border-left:2px solid var(--rule);}
+  ol.sayili > li > p{margin:12px 0 0;}
+  ol.sayili li .blok{margin:16px 0 8px;}
+  ul.madde li .blok{margin:14px 0 8px;}
+  ol.sayili > li ul.madde{margin:12px 0 4px;}
+  h4.kisim .baslik-alt{font-weight:400;color:var(--ink);}
+  h4.kisim .lafz-ar{font-family:"Scheherazade New",serif;font-weight:700;font-size:1.08em;line-height:1;color:var(--bordo);margin-left:8px;white-space:nowrap;}
+  .ar-ic{font-family:"Scheherazade New",serif;font-size:1.25em;line-height:1;unicode-bidi:isolate;display:inline-block;white-space:nowrap;}
+  .lafz{margin:22px 0;text-align:center;}
+  .lafz .ar-buyuk{display:block;font-family:"Scheherazade New",serif;font-size:1.7rem;line-height:1.9;color:var(--bordo);}
+  .lafz .lafz-tr{display:block;margin-top:2px;color:var(--ink-soft);}
+  .bolum-baslik{
+    margin:60px 0 28px;
+    padding:15px 18px;
+    text-align:center;
+    font-size:1.3rem;
+    font-weight:700;
+    line-height:1.4;
+    color:var(--navy);
+    background:var(--card);
+    border-top:2px solid var(--navy-soft);
+    border-bottom:2px solid var(--navy-soft);
+  }
+  .notkutu{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--navy-soft);border-radius:3px;padding:22px 24px 6px;margin:32px 0;}
+  .notkutu .not-etiket{display:block;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--navy-soft);margin-bottom:12px;}
+  ul.ikili{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:9px 30px;list-style:none;margin:26px 0;padding:0;}
+  ul.ikili li{position:relative;padding-left:18px;line-height:1.7;}
+  ul.ikili li::before{content:"";position:absolute;left:0;top:11px;width:6px;height:6px;background:var(--navy-soft);transform:rotate(45deg);}
+
+  /* ---------- VURGU ---------- */
+  .vurgu{
+    font-size:1.24rem;
+    line-height:1.7;
+    color:var(--navy);
+    font-weight:600;
+    border-left:4px solid var(--navy-soft);
+    padding:6px 0 6px 20px;
+    margin:30px 0;
+  }
+  .vurgu-buyuk{
+    font-size:1.42rem;
+    line-height:1.6;
+    text-align:center;
+    color:var(--navy);
+    font-weight:700;
+    margin:38px 0;
+    padding:26px 22px;
+    background:var(--card);
+    border-top:2px solid var(--navy-soft);
+    border-bottom:2px solid var(--navy-soft);
+  }
+  strong{color:var(--navy);font-weight:700;}
+  .sav{font-family:"Scheherazade New",serif;font-size:1.2em;line-height:1;font-weight:400;}
+
+  /* ---------- ALINTI BLOKLARI ---------- */
+  .blok{
+    border-radius:4px;
+    padding:22px 26px;
+    margin:26px 0;
+    border-left-width:5px;
+    border-left-style:solid;
+  }
+  .blok .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:1.75rem;
+    line-height:2.05;
+    direction:rtl;
+    text-align:right;
+    margin-bottom:14px;
+  }
+  .blok .tr{margin:0 0 12px;}
+  .blok .kaynak{
+    font-size:.9rem;
+    color:var(--ink-soft);
+    font-style:italic;
+    margin:0;
+    padding-top:10px;
+    border-top:1px dotted currentColor;
+  }
+  .blok .soyleyen{
+    display:block;
+    font-size:.79rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:600;
+    margin-bottom:13px;
+  }
+
+  .ayet{background:var(--green-bg);border-left-color:var(--green-edge);}
+  .ayet .ar,.ayet .soyleyen{color:var(--green);}
+
+  .alim{background:var(--amber-bg);border-left-color:var(--amber-edge);}
+  .alim .ar,.alim .soyleyen{color:var(--amber);}
+
+  .hadis{background:var(--blue-bg);border-left-color:var(--blue-edge);}
+  .hadis .ar,.hadis .soyleyen{color:var(--blue);}
+
+  /* ---------- LİSTELER ---------- */
+  ul.madde{
+    list-style:none;
+    padding:0;
+    margin:20px 0;
+  }
+  ul.madde li{
+    position:relative;
+    padding:7px 0 7px 26px;
+  }
+  ul.madde li::before{
+    content:"◆";
+    position:absolute;
+    left:2px;
+    color:var(--navy-soft);
+    font-size:.68rem;
+    top:12px;
+  }
+
+  ul.madde.yildiz{margin:22px 0;}
+  ul.madde.yildiz > li{padding:10px 0 10px 28px;}
+  ul.madde.yildiz > li::before{
+    content:"✦";
+    left:0;
+    color:var(--amber);
+    font-size:.85rem;
+    top:9px;
+  }
+  ul.madde.yildiz > li + li{border-top:1px solid var(--rule);}
+  ul.madde.yildiz > li .notkutu{margin:14px 0 4px;}
+
+  ol.sayili{
+    list-style:none;
+    counter-reset:sira;
+    padding:0;
+    margin:22px 0;
+  }
+  ol.sayili > li{
+    counter-increment:sira;
+    position:relative;
+    padding:10px 0 10px 46px;
+    border-bottom:1px dotted var(--rule);
+  }
+  ol.sayili > li:last-child{border-bottom:none;}
+  ol.sayili > li::before{
+    content:counter(sira);
+    position:absolute;
+    left:0;
+    top:13px;
+    width:30px;
+    height:30px;
+    line-height:27px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    color:var(--navy-soft);
+    background:var(--card);
+    font-size:.84rem;
+    font-weight:700;
+  }
+
+  /* ---------- ÖZET ---------- */
+  .ozet{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-top:4px solid var(--navy);
+    border-radius:4px;
+    padding:26px 30px;
+    margin-top:34px;
+  }
+  .ozet h4{
+    margin:0 0 16px;
+    color:var(--navy);
+    font-size:1.06rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+  .ozet ul{margin:0;padding-left:22px;}
+  .ozet li{margin-bottom:11px;}
+  .ozet li:last-child{margin-bottom:0;}
+
+  .ayirac{
+    text-align:center;
+    color:var(--rule);
+    letter-spacing:.5em;
+    margin:38px 0;
+    font-size:.8rem;
+  }
+
+  footer{
+    margin-top:70px;
+    padding-top:26px;
+    border-top:3px double var(--rule);
+    text-align:center;
+    color:#d54220;
+    font-size:.9rem;
+  }
+  footer .marka{
+    font-size:1rem;
+    color:#d54220;
+    font-weight:600;
+    letter-spacing:.1em;
+    margin-bottom:6px;
+  }
+
+  @media (max-width:620px){
+    body{font-size:16.5px;}
+    .sayfa{padding:0 16px 60px;}
+    header.kapak h1{font-size:2.8rem;}
+    .besmele{font-size:2rem;}
+    .nakid-baslik h2{font-size:1.16rem;}
+    h3.altbolum{font-size:1.3rem;margin:48px 0 16px;}
+    h3.altbolum .no{min-width:32px;height:32px;line-height:32px;font-size:.9rem;}
+    .metin{padding:22px 18px 20px;}
+    .metin .ar{font-size:1.65rem;line-height:2;}
+    .blok{padding:18px 18px;}
+    .ikaz{padding:18px 18px 4px;}
+    .kisim-govde{margin-left:0;padding-left:14px;}
+    .delil{grid-template-columns:28px 1fr;gap:0 10px;}
+    .delil > .no{width:28px;height:28px;line-height:28px;font-size:.8rem;}
+    .blok .ar{font-size:1.5rem;line-height:1.95;}
+    .vurgu-buyuk{font-size:1.18rem;padding:20px 16px;}
+    .vurgu{font-size:1.1rem;}
+  }
+
+  @media print{
+    @page{margin:18mm 16mm;}
+    body{background:#fff;font-size:11.5pt;}
+    .sayfa{max-width:none;padding:0;}
+    section.nakid{page-break-before:always;}
+    section.nakid:first-of-type{page-break-before:auto;}
+    .ayirac{display:none;}
+    header.kapak{
+      min-height:238mm;
+      page-break-after:always;
+      margin-bottom:0;
+    }
+    header.kapak h1{font-size:54pt;}
+    .besmele{font-size:26pt;}
+    section.nakid{page-break-inside:auto;}
+    .nakid-baslik{page-break-after:avoid;background:var(--navy) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .metin,.blok,.ozet,.vurgu-buyuk{page-break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    h3.altbolum,.serh-ayrac{page-break-after:avoid;}
+  }
+
+  /* ---------- BEYİT EKLERİ ---------- */
+  .metin .okunus{margin:0 0 14px;font-style:italic;color:var(--ink-soft);font-size:1rem;}
+  .metin .ar{font-size:1.72rem;}
+  .blok .kaynak a,.kaynak a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;}
+  .blok .kaynak a:hover,.kaynak a:hover{color:var(--navy-soft);}
+  .lafz + p.kaynak{font-size:.9rem;color:var(--ink-soft);font-style:italic;text-align:center;margin:-14px 0 30px;}
+  ul.ikili li{padding-top:2px;padding-bottom:2px;}
+  @media (max-width:620px){h4.kisim .lafz-ar,.ar-ic{white-space:normal;}}
+  .sayfa p a,.sayfa li a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;}
+  .sayfa p a:hover,.sayfa li a:hover{color:var(--navy-soft);}
+  /* TANIM KUTUSU */
+  .tanim{margin:30px 0;padding:20px 28px 22px;background:var(--card);border:1px solid var(--rule);border-top:4px solid var(--navy-soft);border-radius:4px;text-align:center;}
+  .tanim .tanim-etiket{display:block;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--navy-soft);margin-bottom:10px;}
+  .tanim .ar{font-family:"Scheherazade New",serif;font-size:1.7rem;line-height:2;direction:rtl;color:var(--bordo);margin:0 0 14px;}
+  .tanim .tr{margin:0;padding-top:14px;border-top:1px dotted var(--rule);font-size:1.12rem;line-height:1.7;font-weight:600;color:var(--navy);}
+  @media (max-width:620px){.tanim{padding:18px 16px;}.tanim .ar{font-size:1.45rem;line-height:1.95;}.tanim .tr{font-size:1.02rem;}}
+  @media print{.tanim{page-break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact;}}
+</style>
+<style>.sayfa > section.nakid:first-of-type{margin-top:32px;}</style>
+</head>
+<body>
+<div class="sayfa">
+
+<section class="nakid">
+
+  <div class="nakid-baslik">
+    <span class="etiket">48. Beyit</span>
+    <h2>Ebvâ Gazvesi ve ikinci yılın gazveleri</h2>
+  </div>
+
+  <div class="metin">
+    <div class="metin-etiket"><span class="rozet">Beyit 48</span>Şeyh rahimehullah dedi ki</div>
+    <p class="ar">وَغَزْوَةُ الْأَبْوَاءِ بَعْدُ فِي صَفَرْ . . . هَذَا وَفِي الثَّانِيَةِ الْغَزْوُ اشْتَهَرْ</p>
+    <p class="okunus">Ve gazvetu'l-Ebvâi ba'du fî Safer, hâzâ ve fi's-sâniyeti'l-gazvu'şteher.</p>
+    <p class="tr">"Bundan sonra Safer ayında Ebvâ Gazvesi oldu. İkinci hicrî yılda ise gazveler çoğaldı."</p>
+  </div>
+
+
+  <div class="serh-ayrac"><span>Şerh</span></div>
+
+
+  <h3 class="altbolum"><span class="no">1</span>Bu beyitte kaç hadise vardır?</h3>
+
+  <p>Bu beyitte iki hadise vardır:</p>
+  <ol class="sayili">
+    <li>Ebvâ Gazvesi.</li>
+    <li>Hicretin ikinci yılında gazvelerin çoğalması.</li>
+  </ol>
+  <p>Bu beyitle birlikte hicretin ikinci yılına girilmiş oldu. Bu yılda zikredilen ilk hadise Ebvâ Gazvesidir.</p>
+
+
+  <h3 class="altbolum"><span class="no">2</span>Beytin detaylı manası</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Ve gazvetu'l-Ebvâi <span class="lafz-ar" dir="rtl">وَغَزْوَةُ الْأَبْوَاءِ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Yani Resûlullah'ın <span class="sav">ﷺ</span> bizzat kendisinin çıktığı Ebvâ Gazvesi.</li>
+      <li>Ebvâ, aynı zamanda Resûlullah'ın <span class="sav">ﷺ</span> annesi Âmine'nin vefat ettiği yerdir.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Ba'du <span class="lafz-ar" dir="rtl">بَعْدُ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Yani "bundan sonra", yani hicretin birinci yılındaki olaylardan sonra, hicretin ikinci yılında.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Fî Safer <span class="lafz-ar" dir="rtl">فِي صَفَرْ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Yani Safer ayında. Safer, hicrî yılın ikinci ayıdır.</li>
+      <li>Ebvâ Gazvesi hicretin ikinci yılının başlarında, Safer ayında gerçekleşti.</li>
+    </ul>
+    <p>İbn Hacer, İbn İshâk'ın Meğâzî'sinden şunu nakleder:</p>
+    <div class="blok alim">
+      <span class="soyleyen">İbn İshâk rahimehullah (v. 151)</span>
+      <p class="ar">«غَزْوَةُ وَدَّانَ ... وَهِيَ أَوَّلُ غَزَوَاتِ النَّبِيِّ ﷺ، خَرَجَ مِنَ الْمَدِينَةِ فِي صَفَرٍ عَلَى رَأْسِ اثْنَيْ عَشَرَ شَهْرًا مِنْ مَقْدَمِهِ الْمَدِينَةَ يُرِيدُ قُرَيْشًا»</p>
+      <p class="tr">"Veddân Gazvesi... Bu, Nebî'nin <span class="sav">ﷺ</span> ilk gazvesidir. Medine'ye gelişinin on ikinci ayının sonunda, Safer ayında Kureyş'i hedefleyerek Medine'den çıktı."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/1673/4107" target="_blank" rel="noopener">İbn Hacer, Fethu'l-Bârî, 7/279</a>.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">4</span><span>Hâzâ <span class="lafz-ar" dir="rtl">هَذَا</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Bu bir ism-i işarettir. Burada belirli bir şeye işaret etmiyor olabilir.</li>
+      <li>Müellif bunu vezin ve kafiye için getirmiş olabilir.</li>
+      <li>Arapçada bazen iki konuyu birbirinden ayırmak için de kullanılır. Fakat burada müellif bunu ayırmak maksadıyla söylememiştir.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">5</span><span>Ve fi's-sâniyeti <span class="lafz-ar" dir="rtl">وَفِي الثَّانِيَةِ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Yani hicretin ikinci yılında. Bu yılda gazveler başladı ve çoğaldı.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">6</span><span>el-Gazvu'şteher <span class="lafz-ar" dir="rtl">الْغَزْوُ اشْتَهَرْ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Yani ikinci yılda gazveler çoğaldı ve ardı ardına gelmeye başladı.</li>
+      <li>İlk yılda İslâm toplumunun temelleri atıldı ve kardeşlik bağları kuruldu.</li>
+      <li>Resûlullah <span class="sav">ﷺ</span> önce Ensâr ile Muhâcirleri kaynaştırdı, ondan sonra da gazvelere başladı.</li>
+    </ul>
+  </div>
+
+
+  <div class="bolum-baslik">Bu beyit ile ilgili meseleler</div>
+
+
+  <h3 class="altbolum"><span class="no">1</span>Bu gazvelerden önce atılan adımlar</h3>
+
+  <ol class="sayili">
+    <li>Müslümanlar Mekke'de 13 sene boyunca zulme maruz kaldılar ve malları gasp edildi.</li>
+    <li>Resûlullah <span class="sav">ﷺ</span> müminlere hicret izni verdi. Bunun üzerine Habeşistan'a hicret ettiler.</li>
+    <li>Daha sonra müminlere Medine'ye hicret etmeleri için izin verildi. Resûlullah <span class="sav">ﷺ</span> da Medine'ye hicret etti.</li>
+    <li>Medine'de selamet ve emniyet sağlandı, mescid bina edildi ve Müslümanlar arasında kardeşlik kuruldu.</li>
+    <li>Bunlardan sonra gazveler ve seriyyeler başladı. Çünkü bu konuda âyetler indi. Hatta o dönemde bütün Hicaz bölgesindeki Arap kabileleri bu gazveleri konuşmaya başladılar. Bu da Kureyş'i oldukça korkuttu.</li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">2</span>Kelimelerin manaları</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Gazve <span class="lafz-ar" dir="rtl">غَزْوَة</span></span></h4>
+  <div class="kisim-govde">
+    <p><strong>Lugaten:</strong> Kastetmek ve talep etmek manasına gelir.</p>
+    <div class="blok alim">
+      <span class="soyleyen">İbn Fâris rahimehullah (v. 395)</span>
+      <p class="ar">«الْغَيْنُ وَالزَّاءُ وَالْحَرْفُ الْمُعْتَلُّ أَصْلَانِ صَحِيحَانِ، أَحَدُهُمَا طَلَبُ شَيْءٍ، وَالْآخَرُ فِي بَابِ اللِّقَاحِ. فَالْأَوَّلُ الْغَزْوُ»</p>
+      <p class="tr">"Ğayn, zâ ve illetli harf (غزو) iki sahih asıldır. Bunlardan biri bir şeyi talep etmektir, diğeri ise (develerin) gebe kalması konusundadır. Birincisi gazvdir."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/21710/1963" target="_blank" rel="noopener">İbn Fâris, Mu'cemu Mekâyîsi'l-Luga, 4/423</a>.</p>
+    </div>
+    <div class="blok alim">
+      <span class="soyleyen">İbn Hacer el-Askalânî rahimehullah (v. 852)</span>
+      <p class="ar">«وَأَصْلُ الْغَزْوِ الْقَصْدُ، وَمَغْزَى الْكَلَامِ مَقْصِدُهُ»</p>
+      <p class="tr">"Gazv kelimesinin aslı kastetmektir. Sözün meğzâsı, onun maksadıdır."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/1673/4107" target="_blank" rel="noopener">İbn Hacer, Fethu'l-Bârî, 7/279</a>.</p>
+    </div>
+    <p><strong>Istılahen:</strong></p>
+    <div class="tanim">
+      <span class="tanim-etiket">Tanım</span>
+      <p class="ar">«الْغَزْوَةُ: مَا خَرَجَ فِيهِ النَّبِيُّ ﷺ بِنَفْسِهِ، سَوَاءٌ وَقَعَ فِيهِ قِتَالٌ أَمْ لَا»</p>
+      <p class="tr">Gazve, Resûlullah'ın <span class="sav">ﷺ</span> bizzat katıldığı sefere denir. Savaş meydana gelsin veya gelmesin buna gazve denilir.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Seriyye <span class="lafz-ar" dir="rtl">سَرِيَّة</span></span></h4>
+  <div class="kisim-govde">
+    <p><strong>Lugaten:</strong> <span class="ar-ic" dir="rtl">قِطْعَةٌ مِنَ الْجَيْشِ</span>, yani ordunun bir bölümü demektir.</p>
+    <p><strong>Istılahen:</strong></p>
+    <div class="tanim">
+      <span class="tanim-etiket">Tanım</span>
+      <p class="ar">«السَّرِيَّةُ: مَا بَعَثَهُ النَّبِيُّ ﷺ مِنَ الْجَيْشِ لِأَمْرٍ مُهِمٍّ، وَلَمْ يَخْرُجْ فِيهِ بِنَفْسِهِ»</p>
+      <p class="tr">Seriyye, Resûlullah'ın <span class="sav">ﷺ</span> önemli bir iş için gönderdiği askerî birlik veya gruba denir. Resûlullah <span class="sav">ﷺ</span> bu birlikle beraber bulunmaz.</p>
+    </div>
+    <p>Ezherî, bu ismin verilme sebebini şöyle açıklar:</p>
+    <div class="blok alim">
+      <span class="soyleyen">el-Ezherî rahimehullah (v. 370)</span>
+      <p class="ar">«وَأَمَّا السَّرِيَّةُ مِنْ سَرَايَا الْجُيُوشِ: فَإِنَّهَا فَعِيلَةٌ بِمَعْنَى فَاعِلَةٍ، سُمِّيَتْ سَرِيَّةً لِأَنَّهَا تَسْرِي لَيْلًا فِي خُفْيَةٍ لِئَلَّا يَنْذَرَ بِهِمُ الْعَدُوُّ، فَيَحْذَرُوا أَوْ يَمْتَنِعُوا»</p>
+      <p class="tr">"Ordu seriyyelerinden olan seriyyeye gelince, o fâile manasında fe'île vezninde bir kelimedir. Seriyye diye isimlendirilmiştir, çünkü düşman onlardan haberdar olup tedbir almasın veya kendini korumasın diye gece gizlice yürür."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/7031/3669" target="_blank" rel="noopener">el-Ezherî, Tehzîbu'l-Luga, 13/39</a>.</p>
+    </div>
+    <p>Seriyye (<span class="ar-ic" dir="rtl">سَرِيَّة</span>) kelimesi ile gece yürümek manasındaki isrâ (<span class="ar-ic" dir="rtl">الْإِسْرَاء</span>) arasında mana bakımından bağlantı vardır.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Ma'reke <span class="lafz-ar" dir="rtl">مَعْرَكَة</span></span></h4>
+  <div class="kisim-govde">
+    <p><strong>Lugaten:</strong> Çarpışma ve birbirine girme manasına gelir.</p>
+    <p><strong>Istılahen:</strong></p>
+    <div class="tanim">
+      <span class="tanim-etiket">Tanım</span>
+      <p class="ar">«الْمَعْرَكَةُ: الْتِقَاءُ الْجَيْشَيْنِ وَاقْتِتَالُهُمَا»</p>
+      <p class="tr">Ma'reke, iki ordunun karşı karşıya gelip birbirleriyle çarpışması ve savaşmasıdır.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">4</span><span>el-Ba's <span class="lafz-ar" dir="rtl">الْبَعْثُ</span></span></h4>
+  <div class="kisim-govde">
+    <p><strong>Lugaten:</strong> Göndermek manasına gelir.</p>
+    <p><strong>Istılahen:</strong></p>
+    <div class="tanim">
+      <span class="tanim-etiket">Tanım</span>
+      <p class="ar">«الْبَعْثُ: مَا بَعَثَهُ النَّبِيُّ ﷺ لِقِتَالٍ أَوِ اسْتِطْلَاعٍ أَوْ تَعْلِيمٍ، وَلَمْ يَخْرُجْ فِيهِ بِنَفْسِهِ»</p>
+      <p class="tr">Ba's, Resûlullah'ın <span class="sav">ﷺ</span> savaş için veya bilgi almak için veya ilim öğretmek için gönderdiği askerî birlik veya gruba denir. Resûlullah <span class="sav">ﷺ</span> bu birliğin içinde bulunmaz.</p>
+    </div>
+    <p><strong>Seriyye ile farkı nedir?</strong></p>
+    <p>Ba's daha geneldir. Seriyye genelde savaş için gönderilir. Ba's ise dini öğretmek (Bi'ru Maûne gibi), zekâtı toplamak veya başka sebepler için de olabilir.</p>
+    <div class="tanim">
+      <span class="tanim-etiket">Kâide</span>
+      <p class="ar">«كُلُّ سَرِيَّةٍ بَعْثٌ، وَلَيْسَ كُلُّ بَعْثٍ سَرِيَّةً»</p>
+      <p class="tr">Her seriyye ba'stır, ama her ba's seriyye değildir.</p>
+    </div>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">3</span>Gazve ile seriyye arasındaki fark</h3>
+
+  <p>Bazı âlimler gazve ile seriyyeyi birbirinden ayırmamıştır. Bazı âlimler ise aralarında şu farkları zikretmiştir:</p>
+  <ol class="sayili">
+    <li>Gazvelerde Resûlullah <span class="sav">ﷺ</span> bizzat bulunur. Seriyyelerde ise Resûlullah <span class="sav">ﷺ</span> bulunmaz.</li>
+    <li>Gazveler genellikle adet olarak daha büyük çaplı olur.</li>
+    <li>Seriyyelerde ordu çoğunlukla gece yola çıkar ve geceleri ilerler.</li>
+    <li>Gazvelerde asıl amaç savaştır. Seriyyelerde ise başka amaçlar da olabilir: gözetleme yapmak, yolları emniyete almak, düşmanı takip etmek gibi.</li>
+  </ol>
+
+  <div class="notkutu">
+    <span class="not-etiket">Tenbih</span>
+    <p>Bazı seriyyelere gazve ismi verilmiştir. Racî' ve Mûte Gazvesi buna örnektir. Bunun sebepleri:</p>
+    <ol class="sayili">
+      <li>Lügat bakımından gazve, kastetmek manasına gelir. Racî' bölgesine gönderildiği için bu isim verilmiştir.</li>
+      <li>Bazı seriyyeler önemli olduğu veya sahâbelerin öldürüldüğü hadiseler olduğu için gazve ismini almıştır.</li>
+      <li>Bazı seriyyeler sahâbelerin sayısı çok olduğu için gazve ismini almıştır. Mûte gibi; ordu yaklaşık 3000 kişiydi.</li>
+      <li>Bu savaşların büyüklüğü ve azameti sebebiyle gazve ismi verilmiştir.</li>
+      <li>Bazı seriyyeler vahiy ile Resûlullah'a <span class="sav">ﷺ</span> bildirildiği için, sanki kendisi de o savaşa katılmış gibi gazve ismini almıştır.</li>
+      <li>Bazı âlimlere göre gazve ve seriyye aslında aynı manada kullanılabilir.</li>
+    </ol>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">4</span>Ba's ile seriyye arasındaki fark</h3>
+
+  <ol class="sayili">
+    <li>Seriyye, ordunun çoğunlukla gece yolculuğa çıkmasıdır. Ba's ise gece olmak zorunda değildir. Gönderilen birlik gündüz de yol alabilir.</li>
+    <li>Bazı âlimlere göre ba's, seriyyenin bir parçasıdır. Seriyye komutanı kendi birliğinden daha küçük bir grubu başka bir görev için gönderirse buna ba's denilir. Yani ba's, seriyyenin içinden gönderilen bir birliktir.</li>
+    <li>Ba's, öğretim ve davet gibi amaçlarla gönderilen birlik için; seriyye ise savaş için gönderilen birlik için kullanılır.</li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">5</span>Resûlullah <span class="sav">ﷺ</span> kaç tane gazve yaptı?</h3>
+
+  <p>Bu konuda âlimler arasında ihtilaf vardır. Bunun sebepleri şunlardır:</p>
+  <ol class="sayili">
+    <li>Birbirine yakın olan bazı gazvelerin tek gazve veya ayrı gazveler olarak sayılması. Mesela bazı âlimlerin Huneyn ve Tâif Gazvelerini birbirine yakın oldukları için tek gazve saymaları gibi.</li>
+    <li>Gazve, seriyye ve ba's arasındaki farktan dolayı. Bazı âlimler seriyyelerden bazılarını gazveler arasında saymış, bazıları ise saymamıştır. Mûte Gazvesi buna örnektir.</li>
+    <li>Gelen sahih rivayetlerde farklı rakamların bulunması. Bazı rivayetlerde Resûlullah'ın <span class="sav">ﷺ</span> 19 gazve yaptığı (Zeyd bin Erkam), bazı rivayetlerde ise farklı sayılar zikredilmiştir. Bunun sebebi, birinci ve ikinci maddede zikredilen sebepler veya bazı râvilerin bütün gazveleri idrak etmemiş yahut bazılarını tek gazve olarak saymış olmalarıdır.</li>
+  </ol>
+
+  <p><strong>Gazvelerin sayısı hakkında gelen görüşler:</strong></p>
+
+  <h4 class="kisim"><span class="no">1</span><span>Birinci mezheb: 19 gazve</span></h4>
+  <div class="kisim-govde">
+    <div class="blok hadis">
+      <span class="soyleyen">Zeyd bin Erkam radıyallahu anh'a soruldu</span>
+      <p class="ar">«كَمْ غَزَا النَّبِيُّ ﷺ مِنْ غَزْوَةٍ؟ قَالَ: تِسْعَ عَشْرَةَ»</p>
+      <p class="tr">"Nebî <span class="sav">ﷺ</span> kaç gazve yaptı?" diye soruldu. O da: "On dokuz" dedi.</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/1681/5949" target="_blank" rel="noopener">Buhârî, 3949</a>; <a href="https://shamela.ws/book/1727/4633" target="_blank" rel="noopener">Muslim, 1254</a>.</p>
+    </div>
+    <p>Bureyde radıyallahu anh da Resûlullah'ın <span class="sav">ﷺ</span> 19 gazve yaptığını rivayet etmiştir:</p>
+    <div class="blok hadis">
+      <span class="soyleyen">Bureyde radıyallahu anh şöyle demiştir</span>
+      <p class="ar">«غَزَا رَسُولُ اللَّهِ ﷺ تِسْعَ عَشْرَةَ غَزْوَةً، قَاتَلَ فِي ثَمَانٍ مِنْهُنَّ»</p>
+      <p class="tr">"Resûlullah <span class="sav">ﷺ</span> on dokuz gazve yaptı. Bunların sekizinde savaştı."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/1727/4636" target="_blank" rel="noopener">Muslim, 1814</a>.</p>
+    </div>
+    <p>Bureyde'nin kendisi ise Resûlullah <span class="sav">ﷺ</span> ile birlikte 16 gazveye katılmıştır (<a href="https://shamela.ws/book/1727/4637" target="_blank" rel="noopener">Muslim, 1814</a>).</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>İkinci mezheb: 21 gazve</span></h4>
+  <div class="kisim-govde">
+    <p>Câbir bin Abdullah radıyallahu anhumâ'dan Resûlullah'ın <span class="sav">ﷺ</span> 21 gazve yaptığı rivayet edilmiştir (Ebû Ya'lâ). İbn Hacer bu rivayetin isnadının sahih olduğunu söylemiş ve Zeyd bin Erkam'ın 19 demesi ile Câbir'in 21 demesi arasındaki farkı şöyle açıklamıştır:</p>
+    <div class="blok alim">
+      <span class="soyleyen">İbn Hacer el-Askalânî rahimehullah (v. 852)</span>
+      <p class="ar">«لَكِنْ رَوَى أَبُو يَعْلَى مِنْ طَرِيقِ أَبِي الزُّبَيْرِ، عَنْ جَابِرٍ أَنَّ عَدَدَ الْغَزَوَاتِ إِحْدَى وَعِشْرُونَ، وَإِسْنَادُهُ صَحِيحٌ وَأَصْلُهُ فِي مُسْلِمٍ، فَعَلَى هَذَا فَفَاتَ زَيْدَ بْنَ أَرْقَمَ ذِكْرُ ثِنْتَيْنِ مِنْهَا، وَلَعَلَّهُمَا الْأَبْوَاءُ وَبَوَاطُ، وَكَأَنَّ ذَلِكَ خَفِيَ عَلَيْهِ لِصِغَرِهِ»</p>
+      <p class="tr">"Ancak Ebû Ya'lâ, Ebu'z-Zubeyr tarikiyle Câbir'den gazvelerin sayısının yirmi bir olduğunu rivayet etmiştir. İsnadı sahihtir ve aslı Muslim'dedir. Buna göre Zeyd bin Erkam bunlardan ikisini zikretmemiştir. Bunlar muhtemelen Ebvâ ve Buvât'tır. Sanki küçük yaşta olduğu için bu ona gizli kalmıştır."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/1673/4108" target="_blank" rel="noopener">İbn Hacer, Fethu'l-Bârî, 7/280</a>.</p>
+    </div>
+    <div class="blok alim">
+      <span class="soyleyen">İbn Hacer el-Askalânî rahimehullah (v. 852)</span>
+      <p class="ar">«أَوْ عَدَّ الْغَزْوَتَيْنِ وَاحِدَةً، فَقَدْ قَالَ مُوسَى بْنُ عُقْبَةَ: قَاتَلَ رَسُولُ اللَّهِ ﷺ بِنَفْسِهِ فِي ثَمَانٍ: بَدْرٍ ثُمَّ أُحُدٍ ثُمَّ الْأَحْزَابِ ثُمَّ الْمُصْطَلِقِ ثُمَّ خَيْبَرَ ثُمَّ مَكَّةَ ثُمَّ حُنَيْنٍ ثُمَّ الطَّائِفِ. وَأَهْمَلَ غَزْوَةَ قُرَيْظَةَ؛ لِأَنَّهُ ضَمَّهَا إِلَى الْأَحْزَابِ لِكَوْنِهَا كَانَتْ فِي أَثَرِهَا ... وَكَذَا وَقَعَ لِغَيْرِهِ عَدُّ الطَّائِفِ وَحُنَيْنٍ وَاحِدَةً لِتَقَارُبِهِمَا، فَيَجْتَمِعُ عَلَى هَذَا قَوْلُ زَيْدِ بْنِ أَرْقَمَ وَقَوْلُ جَابِرٍ»</p>
+      <p class="tr">"Yahut (Zeyd) iki gazveyi tek gazve saymıştır. Nitekim Mûsâ bin Ukbe şöyle demiştir: 'Resûlullah <span class="sav">ﷺ</span> bizzat sekiz gazvede savaştı: Bedir, sonra Uhud, sonra Ahzâb, sonra Mustalik, sonra Hayber, sonra Mekke, sonra Huneyn, sonra Tâif.' Kurayza Gazvesi'ni zikretmedi, çünkü onun hemen ardından olduğu için onu Ahzâb'a dahil etti... Başkaları da birbirine yakın oldukları için Tâif ve Huneyn'i tek gazve saymıştır. Buna göre Zeyd bin Erkam'ın sözü ile Câbir'in sözü bir araya getirilmiş olur."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/1673/4109" target="_blank" rel="noopener">İbn Hacer, Fethu'l-Bârî, 7/281</a>.</p>
+    </div>
+    <p>Buna göre İbn Hacer, Zeyd'in 19 demesini şu ihtimallerle açıklamıştır:</p>
+    <ul class="madde">
+      <li>Küçük yaşta olduğu için bazı gazvelerin ona ulaşmamış olması,</li>
+      <li>veya eksik olan iki gazveyi bilmiyor olması,</li>
+      <li>veya birbirine yakın iki gazveyi tek gazve sayması. Mesela Benû Kurayza ile Ahzâb'ı, veya Huneyn ile Tâif'i tek gazve saymak gibi.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Üçüncü mezheb: 24 gazve</span></h4>
+  <div class="kisim-govde">
+    <p>Saîd bin el-Museyyeb rahimehullah'tan 24 gazve rivayet edilmiştir. Zuhrî rahimehullah şöyle demiştir:</p>
+    <div class="blok alim">
+      <span class="soyleyen">Zuhrî rahimehullah (v. 124)</span>
+      <p class="ar">«سَمِعْتُ سَعِيدَ بْنَ الْمُسَيَّبِ يَقُولُ: غَزَا رَسُولُ اللَّهِ ﷺ ثَمَانِيَ عَشْرَةَ غَزْوَةً، وَسَمِعْتُهُ مَرَّةً أُخْرَى يَقُولُ: أَرْبَعًا وَعِشْرِينَ، فَلَا أَدْرِي أَكَانَ ذَلِكَ وَهَمًا أَوْ شَيْئًا سَمِعَهُ بَعْدَ ذَلِكَ»</p>
+      <p class="tr">"Saîd bin el-Museyyeb'in, 'Resûlullah <span class="sav">ﷺ</span> on sekiz gazve yaptı' dediğini işittim. Başka bir defa da onun 'yirmi dört' dediğini işittim. Bunun bir vehim mi olduğunu, yoksa daha sonra işittiği bir şey mi olduğunu bilmiyorum."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/12403/1813" target="_blank" rel="noopener">Ya'kûb bin Sufyân el-Fesevî, el-Ma'rife ve't-Târîh, 3/262</a> (Abdurrazzâk tarikiyle); Abdurrazzâk, el-Musannef, 9659.</p>
+    </div>
+    <p class="vurgu">Sahabe sözü mevcut olduğu için tâbiîn olan Saîd bin el-Museyyeb'in sözü alınmaz.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">4</span><span>Dördüncü mezheb: 26 gazve</span></h4>
+  <div class="kisim-govde">
+    <p>Muhammed bin İshâk rahimehullah'tan bu sayı nakledilmiştir. İmam Beyhakî bunu Delâilu'n-Nubuvve'de zikretmiştir:</p>
+    <div class="blok alim">
+      <span class="soyleyen">İbn İshâk rahimehullah (v. 151)</span>
+      <p class="ar">«كَانَ آخِرُ غَزْوَةٍ غَزَاهَا رَسُولُ اللهِ ﷺ حَتَّى قَبَضَهُ اللهُ ﷿ تَبُوكَ، وَكَانَ جَمِيعُ مَا غَزَا بِنَفْسِهِ سِتًّا وَعِشْرِينَ غَزْوَةً»</p>
+      <p class="tr">"Resûlullah'ın <span class="sav">ﷺ</span>, Allah azze ve celle onun ruhunu kabzedinceye kadar yaptığı son gazve Tebûk'tür. Bizzat yaptığı gazvelerin hepsi yirmi altı gazvedir."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/7478/2435" target="_blank" rel="noopener">Beyhakî, Delâilu'n-Nubuvve, 5/465</a>.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">5</span><span>Beşinci mezheb: 27 gazve</span></h4>
+  <div class="kisim-govde">
+    <p>el-Vâkıdî ve İbn Sa'd rahimehumallah, Resûlullah'ın <span class="sav">ﷺ</span> bizzat katıldığı gazvelerin sayısını 27 olarak zikretmişlerdir:</p>
+    <div class="blok alim">
+      <span class="soyleyen">İbn Sa'd rahimehullah (v. 230)</span>
+      <p class="ar">«كَانَ عَدَدُ مَغَازِي رَسُولِ اللَّهِ ﷺ الَّتِي غَزَا بِنَفْسِهِ سَبْعًا وَعِشْرِينَ غَزْوَةً، وَكَانَتْ سَرَايَاهُ الَّتِي بَعَثَ بِهَا سَبْعًا وَأَرْبَعِينَ سَرِيَّةً»</p>
+      <p class="tr">"Resûlullah'ın <span class="sav">ﷺ</span> bizzat yaptığı gazvelerin sayısı yirmi yedidir. Gönderdiği seriyyeler ise kırk yedi seriyyedir."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/9351/502" target="_blank" rel="noopener">İbn Sa'd, et-Tabakâtu'l-Kubrâ, 2/5-6</a>.</p>
+    </div>
+    <p>İbn Hacer, İbn Sa'd'ın sayıyı genişlettiğini söyler ve neden fazla olduğunu açıklar:</p>
+    <div class="blok alim">
+      <span class="soyleyen">İbn Hacer el-Askalânî rahimehullah (v. 852)</span>
+      <p class="ar">«وَقَدْ تَوَسَّعَ ابْنُ سَعْدٍ فَبَلَغَ عِدَّةُ الْمَغَازِي الَّتِي خَرَجَ فِيهَا رَسُولُ اللَّهِ ﷺ بِنَفْسِهِ سَبْعًا وَعِشْرِينَ، وَتَبِعَ فِي ذَلِكَ الْوَاقِدِيَّ، وَهُوَ مُطَابِقٌ لِمَا عَدَّهُ ابْنُ إِسْحَاقَ إِلَّا أَنَّهُ لَمْ يُفْرِدْ وَادِي الْقُرَى مِنْ خَيْبَرَ»</p>
+      <p class="tr">"İbn Sa'd (sayımda) genişlik göstermiş ve Resûlullah'ın <span class="sav">ﷺ</span> bizzat çıktığı gazvelerin sayısını yirmi yediye ulaştırmıştır. Bunda Vâkıdî'ye uymuştur. Bu, İbn İshâk'ın saydığına uygundur. Ancak İbn İshâk, Vâdi'l-Kurâ'yı Hayber'den ayrı saymamıştır."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/1673/4109" target="_blank" rel="noopener">İbn Hacer, Fethu'l-Bârî, 7/281</a>.</p>
+    </div>
+  </div>
+
+  <p>İbnu'l-Kayyim de bu konudaki görüşleri şöyle özetler:</p>
+  <div class="blok alim">
+    <span class="soyleyen">İbnu'l-Kayyim rahimehullah (v. 751)</span>
+    <p class="ar">«غَزَوَاتُهُ كُلُّهَا وَبُعُوثُهُ وَسَرَايَاهُ كَانَتْ بَعْدَ الْهِجْرَةِ فِي مُدَّةِ عَشْرِ سِنِينَ، فَالْغَزَوَاتُ سَبْعٌ وَعِشْرُونَ، وَقِيلَ: خَمْسٌ وَعِشْرُونَ، وَقِيلَ: تِسْعٌ وَعِشْرُونَ، وَقِيلَ غَيْرُ ذَلِكَ»</p>
+    <p class="tr">"Onun bütün gazveleri, ba'sları ve seriyyeleri hicretten sonra, on yıllık bir süre içinde oldu. Gazveler yirmi yedidir. Yirmi beş olduğu da, yirmi dokuz olduğu da, bundan başka sayılar da söylenmiştir."</p>
+    <p class="kaynak">📚 <a href="https://shamela.ws/book/21713/91" target="_blank" rel="noopener">İbnu'l-Kayyim, Zâdu'l-Meâd, 1/125</a>.</p>
+  </div>
+
+  <div class="ozet">
+    <h4>Özet</h4>
+    <ul>
+      <li>En az 19 gazve.</li>
+      <li>En fazla 29 gazve (İbnu'l-Kayyim bunu "<span class="ar-ic" dir="rtl">وَقِيلَ: تِسْعٌ وَعِشْرُونَ</span>" diye nakleder).</li>
+      <li>Birinci ve ikinci görüş doğrudur. Aslında ikisinin de kastı aynıdır, ama sayım metodu farklıdır.</li>
+    </ul>
+  </div>
+
+  <div class="notkutu">
+    <span class="not-etiket">İkaz</span>
+    <p>Bu ihtilaflar, bu gazvelerin var olup olmamasından kaynaklanmıyor. İhtilaf, sayma metodundan ve neyin gazve olup olmadığından kaynaklanıyor.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">6</span>Resûlullah <span class="sav">ﷺ</span> bu gazvelerin hangilerinde bizzat savaştı?</h3>
+
+  <p>Bu konuda da ihtilaf vardır. Fakat en meşhur iki görüş şunlardır:</p>
+
+  <h4 class="kisim"><span class="no">1</span><span>Dokuz gazvede savaş oldu</span></h4>
+  <div class="kisim-govde">
+    <p>Bedir, Uhud, Hendek (Ahzâb), Benû Kurayza, Benû Mustalik, Hayber, Mekke'nin Fethi, Huneyn ve Tâif. Bu, İbn İshâk'ın görüşüdür. Bu görüşü İbn Sa'd, Nevevî ve İbn Teymiyye (Mecmû') rahimehumullah zikretmiştir.</p>
+    <div class="blok alim">
+      <span class="soyleyen">İbn Sa'd rahimehullah (v. 230)</span>
+      <p class="ar">«وَكَانَ مَا قَاتَلَ فِيهِ مِنَ الْمَغَازِي تِسْعَ غَزَوَاتٍ: بَدْرُ الْقِتَالِ، وَأُحُدٌ، وَالْمُرَيْسِيعُ، وَالْخَنْدَقُ، وَقُرَيْظَةُ، وَخَيْبَرُ، وَفَتْحُ مَكَّةَ، وَحُنَيْنٌ، وَالطَّائِفُ»</p>
+      <p class="tr">"Savaştığı gazveler dokuz gazvedir: Bedru'l-Kıtâl, Uhud, Mureysî' (Benû Mustalik), Hendek, Kurayza, Hayber, Mekke'nin Fethi, Huneyn ve Tâif."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/9351/503" target="_blank" rel="noopener">İbn Sa'd, et-Tabakâtu'l-Kubrâ, 2/6</a>.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Sekiz gazvede savaş oldu</span></h4>
+  <div class="kisim-govde">
+    <p>Bu görüşün delili, yukarıda geçen Bureyde radıyallahu anh hadisidir: "Resûlullah <span class="sav">ﷺ</span> on dokuz gazve yaptı. Bunların sekizinde savaştı." (<a href="https://shamela.ws/book/1727/4636" target="_blank" rel="noopener">Muslim, 1814</a>).</p>
+    <p>İbn Hacer rahimehullah, Mûsâ bin Ukbe'nin sekiz saymasını, Benû Kurayza Gazvesi'ni Ahzâb Gazvesi'nin içinde saymasıyla açıklamıştır (<a href="https://shamela.ws/book/1673/4109" target="_blank" rel="noopener">Fethu'l-Bârî, 7/281</a>). Bureyde'nin sekiz demesi de bu şekilde anlaşılabilir.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">7</span>Kur'ân'da büyük gazvelerden bahsedilmiş midir?</h3>
+
+  <p>İbnu'l-Kayyim rahimehullah, Zâdu'l-Meâd adlı eserinde yedi büyük gazve zikretmiş ve Kur'ân'da bu gazveler hakkında âyetler nazil olduğunu belirtmiştir:</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">İbnu'l-Kayyim rahimehullah (v. 751)</span>
+    <p class="ar">«وَالْغَزَوَاتُ الْكِبَارُ الْأُمَّهَاتُ سَبْعٌ: بَدْرٌ، وَأُحُدٌ، وَالْخَنْدَقُ، وَخَيْبَرُ، وَالْفَتْحُ، وَحُنَيْنٌ، وَتَبُوكُ. وَفِي شَأْنِ هَذِهِ الْغَزَوَاتِ نَزَلَ الْقُرْآنُ، فَسُورَةُ الْأَنْفَالِ سُورَةُ بَدْرٍ، وَفِي أُحُدٍ آخِرُ سُورَةِ آلِ عِمْرَانَ مِنْ قَوْلِهِ: ﴿وَإِذْ غَدَوْتَ مِنْ أَهْلِكَ تُبَوِّئُ الْمُؤْمِنِينَ مَقَاعِدَ لِلْقِتَالِ﴾ إِلَى قُبَيْلِ آخِرِهَا بِيَسِيرٍ، وَفِي قِصَّةِ الْخَنْدَقِ، وَقُرَيْظَةَ، وَخَيْبَرَ صَدْرُ سُورَةِ الْأَحْزَابِ، وَسُورَةُ الْحَشْرِ فِي بَنِي النَّضِيرِ، وَفِي قِصَّةِ الْحُدَيْبِيَةِ وَخَيْبَرَ سُورَةُ الْفَتْحِ، وَأُشِيرَ فِيهَا إِلَى الْفَتْحِ، وَذُكِرَ الْفَتْحُ صَرِيحًا فِي سُورَةِ النَّصْرِ»</p>
+    <p class="tr">"Büyük ve ana gazveler yedidir: Bedir, Uhud, Hendek, Hayber, Fetih, Huneyn ve Tebûk. Kur'ân bu gazveler hakkında nazil oldu. Enfâl Sûresi, Bedir sûresidir. Uhud hakkında, Âl-i İmrân Sûresi'nin 'Hani sen, müminleri savaş için mevzilerine yerleştirmek üzere sabah erkenden ailenin yanından çıkmıştın' âyetinden sonuna yakın bir yere kadar olan son kısmı nazil oldu. Hendek, Kurayza ve Hayber kıssası hakkında Ahzâb Sûresi'nin başı, Benû Nadîr hakkında Haşr Sûresi, Hudeybiye ve Hayber kıssası hakkında Fetih Sûresi nazil oldu. Fetih Sûresi'nde Mekke'nin fethine işaret edildi, Nasr Sûresi'nde ise fetih açıkça zikredildi."</p>
+    <p class="kaynak">📚 <a href="https://shamela.ws/book/21713/91" target="_blank" rel="noopener">İbnu'l-Kayyim, Zâdu'l-Meâd, 1/125</a>.</p>
+  </div>
+
+  <p>Bu yedi büyük gazve şunlardır:</p>
+  <ol class="sayili">
+    <li><strong>Bedir Gazvesi:</strong> Enfâl Sûresi'nde zikredilmiştir.</li>
+    <li><strong>Uhud Gazvesi:</strong> Âl-i İmrân Sûresi'nin 121. âyetinden itibaren zikredilmiştir.</li>
+    <li><strong>Hendek Gazvesi:</strong> Ahzâb Sûresi'nde zikredilmiştir.</li>
+    <li><strong>Hayber Gazvesi:</strong> Fetih Sûresi'nde zikredilmiştir. Bu sûrede Hudeybiye Antlaşması'ndan da bahsedilmiştir.</li>
+    <li><strong>Mekke'nin Fethi:</strong> Nasr Sûresi'nde zikredilmiştir.</li>
+    <li><strong>Huneyn Gazvesi:</strong> Tevbe Sûresi'nde zikredilmiştir.</li>
+    <li><strong>Tebûk Gazvesi:</strong> Tevbe Sûresi'nde zikredilmiştir. Müfessirlerin ittifakıyla bu sûredeki bazı âyetler Tebûk Gazvesi hakkında nazil olmuştur.</li>
+  </ol>
+
+  <div class="notkutu">
+    <span class="not-etiket">İkaz</span>
+    <p>Bunlar yedi büyük gazvedir. Ancak bu, Kur'ân'da başka gazvelere işaret edilmediği anlamına gelmez. Kur'ân'da diğer bazı gazvelerden de bahsedilmiştir. Mesela Benû Nadîr Gazvesi, Haşr Sûresi'nde zikredilmiştir.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">8</span>Resûlullah <span class="sav">ﷺ</span> hangi gazvede yaralanmıştır?</h3>
+
+  <p>Resûlullah <span class="sav">ﷺ</span> yalnızca Uhud Gazvesi'nde yaralanmıştır. İbnu'l-Kayyim şöyle der:</p>
+  <div class="lafz">
+    <span class="ar-buyuk" dir="rtl">وَجُرِحَ مِنْهَا ﷺ فِي غَزْوَةٍ وَاحِدَةٍ وَهِيَ أُحُدٌ</span>
+    <span class="lafz-tr">"Bu gazvelerden yalnızca birinde yaralandı. O da Uhud'dur."</span>
+  </div>
+  <p class="kaynak">📚 <a href="https://shamela.ws/book/21713/91" target="_blank" rel="noopener">İbnu'l-Kayyim, Zâdu'l-Meâd, 1/125</a>.</p>
+  <p>Bu hususta Sehl bin Sa'd radıyallahu anh'tan hadis rivayet edilmiştir:</p>
+  <div class="blok hadis">
+    <span class="soyleyen">Sehl bin Sa'd radıyallahu anh'a Resûlullah'ın <span class="sav">ﷺ</span> Uhud günü aldığı yara soruldu</span>
+    <p class="ar">«جُرِحَ وَجْهُ رَسُولِ اللَّهِ ﷺ، وَكُسِرَتْ رَبَاعِيَتُهُ، وَهُشِمَتِ الْبَيْضَةُ عَلَى رَأْسِهِ»</p>
+    <p class="tr">"Resûlullah'ın <span class="sav">ﷺ</span> yüzü yaralandı, rebâiye dişi kırıldı ve başındaki miğfer parçalandı."</p>
+    <p class="kaynak">📚 <a href="https://shamela.ws/book/1727/4583" target="_blank" rel="noopener">Muslim, 1790</a>; <a href="https://shamela.ws/book/1681/6093" target="_blank" rel="noopener">Buhârî, 4075</a>.</p>
+  </div>
+
+  <p>İbn Hacer rahimehullah, Fethu'l-Bârî adlı eserinde farklı rivayetlerde zikredilen yaralanmaları bir araya getirmiştir:</p>
+  <div class="blok alim">
+    <span class="soyleyen">İbn Hacer el-Askalânî rahimehullah (v. 852)</span>
+    <p class="ar">«وَمَجْمُوعُ مَا ذُكِرَ فِي الْأَخْبَارِ أَنَّهُ شُجَّ وَجْهُهُ، وَكُسِرَتْ رَبَاعِيَتُهُ، وَجُرِحَتْ وَجْنَتُهُ وَشَفَتُهُ السُّفْلَى مِنْ بَاطِنِهَا، وَوَهَى مَنْكِبُهُ مِنْ ضَرْبَةِ ابْنِ قَمِئَةَ، وَجُحِشَتْ رُكْبَتُهُ»</p>
+    <p class="tr">"Haberlerde zikredilenlerin toplamı şudur: Yüzü yarıldı, rebâiye dişi kırıldı, yanağı ve alt dudağının iç kısmı yaralandı, İbn Kamie'nin darbesiyle omzu zedelendi ve dizi sıyrıldı."</p>
+    <p class="kaynak">📚 <a href="https://shamela.ws/book/1673/4200" target="_blank" rel="noopener">İbn Hacer, Fethu'l-Bârî, 7/372</a>.</p>
+  </div>
+
+  <p>Buna göre Uhud Gazvesi'nde Resûlullah <span class="sav">ﷺ</span> şu yaraları almıştır:</p>
+  <ol class="sayili">
+    <li><strong>Yüzü:</strong> Yüzü yarılmıştır.</li>
+    <li><strong>Dişi:</strong> Rebâiye dişlerinden biri kırılmıştır.</li>
+    <li><strong>Yanağı:</strong> Yanağı yaralanmıştır.</li>
+    <li><strong>Alt dudağı:</strong> Alt dudağının iç kısmı yaralanmıştır.</li>
+    <li><strong>Omzu:</strong> İbn Kamie'nin darbesi sebebiyle omzu zedelenmiştir.</li>
+    <li><strong>Dizi:</strong> Dizinde sıyrık meydana gelmiştir.</li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">9</span>Seriyyelerin sayısı</h3>
+
+  <p>Âlimler, seriyyelerin sayısı konusunda ihtilaf etmişlerdir. Hatta bu konudaki ihtilaf, gazvelerin sayısı hakkındaki ihtilaftan daha fazladır. Bu ihtilafın sebeplerinden bazıları şunlardır:</p>
+  <ol class="sayili">
+    <li>Seriyyeler hakkında gelen bazı rivayetlerin senetlerinin sabit olmaması.</li>
+    <li>Bazı âlimlerin birden fazla olayı tek bir seriyye olarak sayarken, diğerlerinin bunları ayrı ayrı sayması.</li>
+    <li>Seriyye ve gazve olarak isimlendirilen bazı olayların tasnifinde farklılık bulunması.</li>
+  </ol>
+
+  <p>Seriyyelerin sayısı hakkında zikredilen görüşler şunlardır:</p>
+  <ul class="madde">
+    <li><strong>Birinci görüş:</strong> 47 seriyye olduğunu söyleyenler. İbn Sa'd, et-Tabakât adlı eserinde bu sayıyı zikretmiştir (yukarıda geçti).</li>
+    <li><strong>İkinci görüş:</strong> Yaklaşık 70 seriyye olduğunu söyleyenler. İbn Hacer rahimehullah bu görüşü zikretmiştir.</li>
+    <li><strong>Üçüncü görüş:</strong> 73 seriyye olduğunu söyleyenler. Mes'ûdî, et-Tenbîh ve'l-İşrâf adlı eserinde bu sayıda seriyye ve askerî birlik zikretmiştir.</li>
+    <li><strong>Dördüncü görüş:</strong> Gazve ve seriyyelerin toplamının yaklaşık 100 olduğunu söyleyenler. Muğultay bu sayıyı zikretmiştir. Ancak bu sayı yalnızca seriyyeleri değil, gazveleri de kapsamaktadır. İbn Hacer rahimehullah, Muğultay'ın bu görüşünü nakletmiş ve doğru bulmuştur.</li>
+  </ul>
+
+  <div class="blok alim">
+    <span class="soyleyen">İbn Hacer el-Askalânî rahimehullah (v. 852)</span>
+    <p class="ar">«وَأَمَّا السَّرَايَا فَتَقْرُبُ مِنْ سَبْعِينَ، وَقَدِ اسْتَوْعَبَهَا مُحَمَّدُ بْنُ سَعْدٍ فِي الطَّبَقَاتِ. وَقَرَأْتُ بِخَطِّ مُغْلَطَاي أَنَّ مَجْمُوعَ الْغَزَوَاتِ وَالسَّرَايَا مِائَةٌ، وَهُوَ كَمَا قَالَ»</p>
+    <p class="tr">"Seriyyeler ise yetmişe yakındır. Muhammed bin Sa'd, et-Tabakât'ta bunların hepsini toplamıştır. Muğultay'ın el yazısıyla, gazvelerin ve seriyyelerin toplamının yüz olduğunu okudum. Durum onun dediği gibidir."</p>
+    <p class="kaynak">📚 <a href="https://shamela.ws/book/1673/4501" target="_blank" rel="noopener">İbn Hacer, Fethu'l-Bârî, 8/154</a>.</p>
+  </div>
+
+  <p>İbn Hacer, başka bir yerde de âlimlerin saydığı rakamları şöyle sıralar:</p>
+  <div class="blok alim">
+    <span class="soyleyen">İbn Hacer el-Askalânî rahimehullah (v. 852)</span>
+    <p class="ar">«وَأَمَّا الْبُعُوثُ وَالسَّرَايَا فَعَدَّ ابْنُ إِسْحَاقَ سِتًّا وَثَلَاثِينَ، وَعَدَّ الْوَاقِدِيُّ ثَمَانِيًا وَأَرْبَعِينَ، وَحَكَى ابْنُ الْجَوْزِيِّ فِي التَّلْقِيحِ سِتًّا وَخَمْسِينَ، وَعَدَّ الْمَسْعُودِيُّ سِتِّينَ، وَبَلَغَهَا شَيْخُنَا فِي نَظْمِ السِّيرَةِ زِيَادَةً عَلَى السَّبْعِينَ، وَوَقَعَ عِنْدَ الْحَاكِمِ فِي الْإِكْلِيلِ أَنَّهَا تَزِيدُ عَلَى مِائَةٍ، فَلَعَلَّهُ أَرَادَ ضَمَّ الْمَغَازِي إِلَيْهَا»</p>
+    <p class="tr">"Ba'slar ve seriyyelere gelince, İbn İshâk otuz altı, Vâkıdî kırk sekiz saymıştır. İbnu'l-Cevzî et-Telkîh'te elli altı olduğunu nakletmiş, Mes'ûdî altmış saymıştır. Hocamız (el-Irâkî), Nazmu's-Sîre'de bunları yetmişin üzerine çıkarmıştır. Hâkim'in el-İklîl'inde ise yüzü geçtiği zikredilmiştir. Muhtemelen gazveleri de bunlara katmayı kastetmiştir."</p>
+    <p class="kaynak">📚 <a href="https://shamela.ws/book/1673/4109" target="_blank" rel="noopener">İbn Hacer, Fethu'l-Bârî, 7/281</a>.</p>
+  </div>
+
+  <div class="ozet">
+    <h4>Sonuç</h4>
+    <p style="margin:0">Dersimizde zikredilen sayımlara göre seriyyelerin sayısı 36 ile 73 arasında değişmektedir. Gazvelerle birlikte sayıldığında ise toplamın 100'e ulaştığı belirtilmiştir.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">10</span>Resûlullah'ın <span class="sav">ﷺ</span> ilk gazvesi hangisidir?</h3>
+
+  <p>Resûlullah'ın <span class="sav">ﷺ</span> ilk gazvesinin hangisi olduğu konusunda âlimler arasında ihtilaf vardır.</p>
+
+  <h4 class="kisim"><span class="no">1</span><span>Birinci görüş: Ebvâ Gazvesi</span></h4>
+  <div class="kisim-govde">
+    <p>Âlimlerin çoğunluğuna göre Resûlullah'ın <span class="sav">ﷺ</span> ilk gazvesi Ebvâ Gazvesi'dir. Bu gazve, Veddân Gazvesi olarak da bilinmektedir. Ebvâ ile Veddân birbirine yakın iki yerdir; aralarında altı veya sekiz mil vardır (<a href="https://shamela.ws/book/1673/4107" target="_blank" rel="noopener">Fethu'l-Bârî, 7/279</a>).</p>
+    <div class="blok hadis">
+      <span class="soyleyen">Amr bin Avf el-Muzenî radıyallahu anh şöyle demiştir</span>
+      <p class="ar">«أَوَّلُ غَزَاةٍ غَزَوْنَاهَا مَعَ النَّبِيِّ ﷺ الْأَبْوَاءُ»</p>
+      <p class="tr">"Nebî <span class="sav">ﷺ</span> ile birlikte yaptığımız ilk gazve Ebvâ idi."</p>
+      <p class="kaynak">📚 Taberânî, el-Mu'cemu'l-Kebîr; <a href="https://shamela.ws/book/1673/4107" target="_blank" rel="noopener">İbn Hacer, Fethu'l-Bârî, 7/279</a>.</p>
+    </div>
+    <p>Ancak bu rivayetin senedi zayıftır. Çünkü senedinde zayıf kabul edilen Kesîr bin Abdullah bulunmaktadır. İbn Hacer onun hakkında şöyle der:</p>
+    <div class="lafz">
+      <span class="ar-buyuk" dir="rtl">وَكَثِيرٌ ضَعِيفٌ عِنْدَ الْأَكْثَرِ، لَكِنَّ الْبُخَارِيَّ مَشَاهُ وَتَبِعَهُ التِّرْمِذِيُّ</span>
+      <span class="lafz-tr">"Kesîr, âlimlerin çoğuna göre zayıftır. Fakat Buhârî onu kabul edilebilir saymış, Tirmizî de ona uymuştur."</span>
+    </div>
+    <p class="kaynak">📚 <a href="https://shamela.ws/book/1673/4108" target="_blank" rel="noopener">İbn Hacer, Fethu'l-Bârî, 7/280</a>.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>İkinci görüş: Uşeyre Gazvesi</span></h4>
+  <div class="kisim-govde">
+    <p>Bu görüş, Zeyd bin Erkam radıyallahu anh'tan rivayet edilmiştir. Ebû İshâk es-Sebîî şöyle rivayet etmiştir:</p>
+    <div class="blok hadis">
+      <span class="soyleyen">Ebû İshâk es-Sebîî rahimehullah şöyle demiştir</span>
+      <p class="ar">«كُنْتُ إِلَى جَنْبِ زَيْدِ بْنِ أَرْقَمَ، فَقِيلَ لَهُ: كَمْ غَزَا النَّبِيُّ ﷺ مِنْ غَزْوَةٍ؟ قَالَ: تِسْعَ عَشْرَةَ، قِيلَ: كَمْ غَزَوْتَ أَنْتَ مَعَهُ؟ قَالَ: سَبْعَ عَشْرَةَ، قُلْتُ: فَأَيُّهُمْ كَانَتْ أَوَّلَ؟ قَالَ: الْعُسَيْرَةُ أَوِ الْعُشَيْرُ» فَذَكَرْتُ لِقَتَادَةَ فَقَالَ: الْعُشَيْرُ.</p>
+      <p class="tr">"Zeyd bin Erkam'ın yanında bulunuyordum. Kendisine, 'Nebî <span class="sav">ﷺ</span> kaç gazve yaptı?' diye soruldu. O, 'On dokuz' dedi. 'Sen onunla birlikte kaç gazveye katıldın?' diye soruldu. 'On yedi' dedi. Ben de 'Bunlardan ilki hangisiydi?' diye sordum. 'Useyre veya Uşeyr' dedi." Bunu Katâde'ye zikrettim. O da "Uşeyr" dedi.</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/1681/5949" target="_blank" rel="noopener">Buhârî, 3949</a>; <a href="https://shamela.ws/book/1727/4633" target="_blank" rel="noopener">Muslim, 1254</a>.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Üçüncü görüş: Usfân Gazvesi</span></h4>
+  <div class="kisim-govde">
+    <p>Bu görüş, Câbir bin Abdullah radıyallahu anhumâ'dan gelen bir rivayete dayanmaktadır. Rivayette Resûlullah'ın <span class="sav">ﷺ</span> ilk olarak Usfân'a gazve düzenlediği ifade edilmiştir:</p>
+    <div class="blok hadis">
+      <span class="soyleyen">Vehb rahimehullah şöyle demiştir</span>
+      <p class="ar">«أَخْبَرَنِي جَابِرُ بْنُ عَبْدِ اللَّهِ أَنَّهُ سَمِعَ رَسُولَ اللَّهِ ﷺ يَقُولُ أَوَّلَ مَا غَزَا عُسْفَانَ ثُمَّ رَجَعَ: آيِبُونَ تَائِبُونَ عَابِدُونَ لِرَبِّنَا حَامِدُونَ»</p>
+      <p class="tr">"Câbir bin Abdullah bana haber verdi ki, Resûlullah <span class="sav">ﷺ</span> ilk olarak Usfân'a gazve yapıp döndüğünde onun şöyle dediğini işitmiş: 'Dönenleriz, tevbe edenleriz, ibadet edenleriz, Rabbimize hamd edenleriz.'"</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/9351/577" target="_blank" rel="noopener">İbn Sa'd, et-Tabakâtu'l-Kubrâ, 2/80</a> (Benû Lihyân Gazvesi bölümü); İbn Ebî Âsım, el-Evâil, 189.</p>
+    </div>
+    <p>Ancak bu rivayetin senedi hakkında ihtilaf ve değerlendirme gerektiren hususlar bulunmaktadır. Ayrıca Usfân'a yapılan sefer, Hendek Gazvesi'nden sonra gerçekleşmiştir. Bu sebeple Resûlullah'ın <span class="sav">ﷺ</span> ilk gazvesi olması tarihî sıralamayla bağdaşmamaktadır.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">4</span><span>Tercih edilen görüş</span></h4>
+  <div class="kisim-govde">
+    <p class="vurgu">Râcih olan birinci görüştür. Yani Resûlullah'ın <span class="sav">ﷺ</span> ilk gazvesi Ebvâ Gazvesi'dir.</p>
+    <p>Bunun sebepleri şunlardır:</p>
+
+    <p><strong>Birinci sebep:</strong> Muhakkik âlimlerin çoğunluğu bu görüşü tercih etmiştir. Siyer ve megâzî âlimlerinin zikrettiği tarihî sıralamaya göre ilk gazve Ebvâ, ardından Buvât, sonra da Zu'l-Uşeyre Gazvesi'dir. Mûsâ bin Ukbe de şöyle demiştir:</p>
+    <div class="lafz">
+      <span class="ar-buyuk" dir="rtl">أَوَّلُ غَزْوَةٍ غَزَاهَا النَّبِيُّ ﷺ يَعْنِي بِنَفْسِهِ الْأَبْوَاءُ</span>
+      <span class="lafz-tr">"Nebî'nin <span class="sav">ﷺ</span> yaptığı, yani bizzat yaptığı ilk gazve Ebvâ'dır."</span>
+    </div>
+    <p class="kaynak">📚 <a href="https://shamela.ws/book/1673/4107" target="_blank" rel="noopener">İbn Hacer, Fethu'l-Bârî, 7/279</a>.</p>
+
+    <p><strong>İkinci sebep:</strong> Zeyd bin Erkam radıyallahu anh'ın ilk gazvenin Zu'l-Uşeyre olduğunu söylemesine iki şekilde cevap verilmiştir:</p>
+    <ul class="madde">
+      <li><strong>Birinci cevap:</strong> Zeyd bin Erkam'a, kendisinin katıldığı ilk gazvenin sorulduğu söylenmiştir. Ancak bu açıklama, hadisin lafzıyla doğrudan uyuşmadığı için kesin bir cevap değildir.</li>
+      <li><strong>İkinci cevap:</strong> İbn Hacer rahimehullah'a göre Zeyd bin Erkam, ya yaşının küçük olması sebebiyle Ebvâ ve Buvât gazvelerini bilmiyordu ya da bunları sayımına dahil etmemişti. İbn Hacer, Zeyd bin Erkam'ın zikrettiği on dokuz gazvenin dışında iki gazvenin daha bulunduğunu ve bunların muhtemelen Ebvâ ile Buvât olduğunu belirtmiştir (<a href="https://shamela.ws/book/1673/4108" target="_blank" rel="noopener">Fethu'l-Bârî, 7/280-281</a>; metni 5. meselede geçti).</li>
+    </ul>
+
+    <p><strong>Üçüncü sebep:</strong> Buhârî, Zeyd bin Erkam hadisini zikrettiği babda İbn İshâk'ın şu açıklamasına yer vermiştir:</p>
+    <div class="blok alim">
+      <span class="soyleyen">İbn İshâk rahimehullah (v. 151)</span>
+      <p class="ar">«أَوَّلُ مَا غَزَا النَّبِيُّ ﷺ الْأَبْوَاءَ، ثُمَّ بُوَاطَ، ثُمَّ الْعُشَيْرَةَ»</p>
+      <p class="tr">"Nebî'nin <span class="sav">ﷺ</span> ilk gazvesi Ebvâ, ardından Buvât, sonra da Uşeyre Gazvesi'dir."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/1681/5948" target="_blank" rel="noopener">Buhârî, Kitâbu'l-Meğâzî, Uşeyre Gazvesi babı (5/71)</a>.</p>
+    </div>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">11</span>Resûlullah <span class="sav">ﷺ</span> hangi gazvelerde meleklerin yardımını almıştır?</h3>
+
+  <p>Resûlullah'a <span class="sav">ﷺ</span> dört gazvede meleklerin yardım ettiği sahih delillerle sabittir.</p>
+
+  <h4 class="kisim"><span class="no">1</span><span>Bedir Gazvesi</span></h4>
+  <div class="kisim-govde">
+    <p>Meleklerin Bedir Gazvesi'ne katıldığı ve müşriklere karşı bizzat savaştığı sabittir.</p>
+    <div class="blok ayet">
+      <span class="soyleyen">Enfâl Sûresi, 9. âyet</span>
+      <p class="ar">﴿إِذْ تَسْتَغِيثُونَ رَبَّكُمْ فَاسْتَجَابَ لَكُمْ أَنِّي مُمِدُّكُمْ بِأَلْفٍ مِنَ الْمَلَائِكَةِ مُرْدِفِينَ﴾</p>
+      <p class="tr">"Hani siz Rabbinizden yardım diliyordunuz, O da: 'Ben size birbiri ardınca gelen bin melekle yardım edeceğim' diye duanızı kabul etmişti."</p>
+      <p class="kaynak">📚 Enfâl, 9.</p>
+    </div>
+    <p>İbn Abbâs radıyallahu anhumâ'dan gelen bir rivayette, Bedir günü bir meleğin müşriklerden birine vurduğu zikredilmiştir:</p>
+    <div class="blok hadis">
+      <span class="soyleyen">İbn Abbâs radıyallahu anhumâ şöyle demiştir</span>
+      <p class="ar">«بَيْنَمَا رَجُلٌ مِنَ الْمُسْلِمِينَ يَوْمَئِذٍ يَشْتَدُّ فِي أَثَرِ رَجُلٍ مِنَ الْمُشْرِكِينَ أَمَامَهُ، إِذْ سَمِعَ ضَرْبَةً بِالسَّوْطِ فَوْقَهُ، وَصَوْتَ الْفَارِسِ يَقُولُ: أَقْدِمْ حَيْزُومُ، فَنَظَرَ إِلَى الْمُشْرِكِ أَمَامَهُ فَخَرَّ مُسْتَلْقِيًا، فَنَظَرَ إِلَيْهِ فَإِذَا هُوَ قَدْ خُطِمَ أَنْفُهُ، وَشُقَّ وَجْهُهُ كَضَرْبَةِ السَّوْطِ، فَاخْضَرَّ ذَلِكَ أَجْمَعُ، فَجَاءَ الْأَنْصَارِيُّ فَحَدَّثَ بِذَلِكَ رَسُولَ اللَّهِ ﷺ، فَقَالَ: صَدَقْتَ، ذَلِكَ مِنْ مَدَدِ السَّمَاءِ الثَّالِثَةِ»</p>
+      <p class="tr">"O gün Müslümanlardan bir adam, önündeki bir müşrikin peşinden koşarken, birden üstünde bir kamçı darbesinin sesini ve bir süvarinin 'İleri, Hayzûm!' diyen sesini işitti. Önündeki müşrike baktı, sırtüstü yere yıkılmıştı. Ona dikkatlice baktı, burnunda iz kalmış ve yüzü kamçı darbesi gibi yarılmıştı. Bunların hepsi morarmıştı. O Ensârî gelip bunu Resûlullah'a <span class="sav">ﷺ</span> anlattı. Resûlullah <span class="sav">ﷺ</span>: 'Doğru söyledin. Bu, üçüncü semanın yardımındandır' buyurdu."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/1727/4528" target="_blank" rel="noopener">Muslim, 1763</a>.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Uhud Gazvesi</span></h4>
+  <div class="kisim-govde">
+    <p>Uhud Gazvesi'nde Cebrâîl ve Mîkâîl aleyhimesselâm, Resûlullah'ın <span class="sav">ﷺ</span> sağında ve solunda bulunarak onun yanında savaşmışlardır. Muslim bu hadisi "Cebrâîl ve Mîkâîl'in Uhud günü Nebî <span class="sav">ﷺ</span> adına savaşması" babında zikretmiştir.</p>
+    <div class="blok hadis">
+      <span class="soyleyen">Sa'd bin Ebî Vakkâs radıyallahu anh şöyle demiştir</span>
+      <p class="ar">«لَقَدْ رَأَيْتُ يَوْمَ أُحُدٍ، عَنْ يَمِينِ رَسُولِ اللَّهِ ﷺ وَعَنْ يَسَارِهِ، رَجُلَيْنِ عَلَيْهِمَا ثِيَابٌ بِيضٌ، يُقَاتِلَانِ عَنْهُ كَأَشَدِّ الْقِتَالِ، مَا رَأَيْتُهُمَا قَبْلُ وَلَا بَعْدُ»</p>
+      <p class="tr">"Uhud günü Resûlullah'ın <span class="sav">ﷺ</span> sağında ve solunda üzerlerinde beyaz elbiseler bulunan iki adam gördüm. Onu savunmak için en şiddetli şekilde savaşıyorlardı. Onları ne daha önce ne de daha sonra gördüm."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/1727/5939" target="_blank" rel="noopener">Muslim, 2306</a>.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Huneyn Gazvesi</span></h4>
+  <div class="kisim-govde">
+    <p>Huneyn Gazvesi'nde Allah Teâlâ, müminlere yardım etmek üzere melekler indirmiştir:</p>
+    <div class="blok ayet">
+      <span class="soyleyen">Tevbe Sûresi, 26. âyet</span>
+      <p class="ar">﴿ثُمَّ أَنْزَلَ اللَّهُ سَكِينَتَهُ عَلَى رَسُولِهِ وَعَلَى الْمُؤْمِنِينَ وَأَنْزَلَ جُنُودًا لَمْ تَرَوْهَا وَعَذَّبَ الَّذِينَ كَفَرُوا وَذَلِكَ جَزَاءُ الْكَافِرِينَ﴾</p>
+      <p class="tr">"Sonra Allah, Resûlü'nün ve müminlerin üzerine sekînetini indirdi, sizin görmediğiniz ordular indirdi ve kâfirleri azaba uğrattı. İşte bu, kâfirlerin cezasıdır."</p>
+      <p class="kaynak">📚 Tevbe, 26.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">4</span><span>Hendek Gazvesi</span></h4>
+  <div class="kisim-govde">
+    <p>Hendek Gazvesi'nde de Allah Teâlâ, müşriklere karşı müminlerin göremediği ordular göndermiştir. Müfessirler bu orduların melekler olduğunu açıklamışlardır.</p>
+    <div class="blok ayet">
+      <span class="soyleyen">Ahzâb Sûresi, 9. âyet</span>
+      <p class="ar">﴿يَا أَيُّهَا الَّذِينَ آمَنُوا اذْكُرُوا نِعْمَةَ اللَّهِ عَلَيْكُمْ إِذْ جَاءَتْكُمْ جُنُودٌ فَأَرْسَلْنَا عَلَيْهِمْ رِيحًا وَجُنُودًا لَمْ تَرَوْهَا وَكَانَ اللَّهُ بِمَا تَعْمَلُونَ بَصِيرًا﴾</p>
+      <p class="tr">"Ey iman edenler! Allah'ın üzerinizdeki nimetini hatırlayın. Hani size ordular gelmişti de biz onların üzerine bir rüzgâr ve sizin görmediğiniz ordular göndermiştik. Allah yaptıklarınızı hakkıyla görendir."</p>
+      <p class="kaynak">📚 Ahzâb, 9.</p>
+    </div>
+  </div>
+
+  <div class="notkutu">
+    <span class="not-etiket">Tenbih</span>
+    <p>Meleklerin bizzat savaşa katıldıkları, Bedir ve Uhud gazvelerinde sahih hadislerle sabittir.</p>
+    <p>Huneyn ve Hendek gazvelerinde ise meleklerin gönderildiği sabit olmakla birlikte, onların müşriklere karşı doğrudan silahlı mücadeleye katıldıklarını açıkça ortaya koyan sahih bir delil bulunmamaktadır.</p>
+    <p>Dolayısıyla meleklerin savaşa yardım etmeleri ile bizzat savaşmaları arasında ayrım yapılmalıdır.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">12</span>Resûlullah <span class="sav">ﷺ</span> hangi gazvede mancınık kullanmıştır?</h3>
+
+  <p>Resûlullah <span class="sav">ﷺ</span>, Tâif Gazvesi'nde mancınık kullanarak düşmanla savaşmıştır. Siyer kaynaklarında Resûlullah'ın <span class="sav">ﷺ</span> mancınıkla düşmana saldırdığı gazve olarak Tâif Gazvesi zikredilmiştir.</p>
+  <div class="blok alim">
+    <span class="soyleyen">İbnu'l-Kayyim rahimehullah (v. 751)</span>
+    <p class="ar">«وَقَاتَلَ بِالْمَنْجَنِيقِ مِنْهَا فِي غَزْوَةٍ وَاحِدَةٍ، وَهِيَ الطَّائِفُ»</p>
+    <p class="tr">"Bu gazvelerden yalnızca birinde mancınıkla savaştı. O da Tâif'tir."</p>
+    <p class="kaynak">📚 <a href="https://shamela.ws/book/21713/91" target="_blank" rel="noopener">İbnu'l-Kayyim, Zâdu'l-Meâd, 1/125</a>.</p>
+  </div>
+  <div class="blok alim">
+    <span class="soyleyen">İbn Hişâm rahimehullah (v. 213)</span>
+    <p class="ar">«وَرَمَاهُمْ رَسُولُ اللَّهِ ﷺ بِالْمَنْجَنِيقِ. حَدَّثَنِي مَنْ أَثِقُ بِهِ، أَنَّ رَسُولَ اللَّهِ ﷺ أَوَّلُ مَنْ رَمَى فِي الْإِسْلَامِ بِالْمَنْجَنِيقِ، رَمَى أَهْلَ الطَّائِفِ»</p>
+    <p class="tr">"Resûlullah <span class="sav">ﷺ</span> onlara mancınıkla atış yaptı. Güvendiğim birisi bana şunu anlattı: İslâm'da mancınıkla ilk atış yapan Resûlullah'tır <span class="sav">ﷺ</span>. Tâif ehline atış yaptı."</p>
+    <p class="kaynak">📚 <a href="https://shamela.ws/book/23833/1220" target="_blank" rel="noopener">İbn Hişâm, es-Sîretu'n-Nebeviyye, 2/483</a>; İbn Kesîr, el-Bidâye ve'n-Nihâye, Tâif Gazvesi bölümü.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">13</span>Resûlullah <span class="sav">ﷺ</span> hangi gazvede debbâbe kullanmıştır?</h3>
+
+  <p>Resûlullah'ın <span class="sav">ﷺ</span> debbâbe kullandığı tek gazve olarak Tâif Gazvesi zikredilmiştir.</p>
+
+  <h4 class="kisim"><span class="no">1</span><span>Debbâbe nedir? <span class="lafz-ar" dir="rtl">الدَّبَّابَة</span></span></h4>
+  <div class="kisim-govde">
+    <p>Debbâbe, savaşlarda kalelerin surlarına yaklaşmak ve surları delmek için kullanılan, genellikle ahşaptan yapılan ve üzeri deriyle kaplanan korunaklı bir savaş aracıdır.</p>
+    <p>Askerler bu aracın içine girerek düşmanın oklarından korunur ve surlara kadar ilerleyip surları delmeye çalışırlardı.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Tâif Gazvesi'nde kullanılması</span></h4>
+  <div class="kisim-govde">
+    <div class="blok alim">
+      <span class="soyleyen">İbn İshâk rahimehullah (v. 151)</span>
+      <p class="ar">«حَتَّى إِذَا كَانَ يَوْمُ الشَّدْخَةِ عِنْدَ جِدَارِ الطَّائِفِ، دَخَلَ نَفَرٌ مِنْ أَصْحَابِ رَسُولِ اللَّهِ ﷺ تَحْتَ دَبَّابَةٍ، ثُمَّ زَحَفُوا بِهَا إِلَى جِدَارِ الطَّائِفِ لِيَخْرِقُوهُ، فَأَرْسَلَتْ عَلَيْهِمْ ثَقِيفٌ سِكَكَ الْحَدِيدِ مُحْمَاةً بِالنَّارِ، فَخَرَجُوا مِنْ تَحْتِهَا، فَرَمَتْهُمْ ثَقِيفٌ بِالنَّبْلِ، فَقَتَلُوا مِنْهُمْ رِجَالًا»</p>
+      <p class="tr">"Nihayet Tâif surunun yanındaki Şedha günü geldiğinde, Resûlullah'ın <span class="sav">ﷺ</span> ashâbından bir grup bir debbâbenin altına girdi. Sonra onu delmek için onunla Tâif suruna doğru ilerlediler. Sakîf de üzerlerine ateşte kızdırılmış demir parçaları attı. Bunun üzerine onun altından çıktılar. Sakîf onlara ok attı ve onlardan bazı adamları öldürdü."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/23833/1220" target="_blank" rel="noopener">İbn Hişâm, es-Sîretu'n-Nebeviyye, 2/483</a>; İbnu'l-Kayyim, Zâdu'l-Meâd, Tâif Gazvesi bölümü.</p>
+    </div>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">14</span>Resûlullah <span class="sav">ﷺ</span> hangi gazvede siperlenmiştir?</h3>
+
+  <p>Resûlullah <span class="sav">ﷺ</span>, yalnızca Hendek Gazvesi'nde hendek kazarak düşmana karşı savunma yapmıştır.</p>
+  <p>Siperlenmek (<span class="ar-ic" dir="rtl">التَّحَصُّن</span>), düşmanın saldırılarından korunmak amacıyla savunma mevzileri oluşturmak ve bu mevzilerin arkasına geçerek korunmak demektir.</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">İbnu'l-Kayyim rahimehullah (v. 751)</span>
+    <p class="ar">«وَتَحَصَّنَ فِي الْخَنْدَقِ فِي وَاحِدَةٍ، وَهِيَ الْأَحْزَابُ، أَشَارَ بِهِ عَلَيْهِ سَلْمَانُ الْفَارِسِيُّ رَضِيَ اللَّهُ عَنْهُ»</p>
+    <p class="tr">"Bu gazvelerden yalnızca birinde hendekle siperlendi. O da Ahzâb'dır. Bunu ona Selmân el-Fârisî radıyallahu anh tavsiye etmişti."</p>
+    <p class="kaynak">📚 <a href="https://shamela.ws/book/21713/91" target="_blank" rel="noopener">İbnu'l-Kayyim, Zâdu'l-Meâd, 1/125</a>.</p>
+  </div>
+
+  <ul class="madde">
+    <li>Hendek Gazvesi'nde Resûlullah <span class="sav">ﷺ</span>, sahâbîleriyle istişare etmiş ve Selmân el-Fârisî radıyallahu anh'ın teklifi üzerine Medine'nin düşman saldırısına açık olan tarafına hendek kazılmasına karar vermiştir.</li>
+    <li>Böylece düşman ordusunun Medine'ye girmesi engellenmeye çalışılmıştır.</li>
+  </ul>
+
+
+  <h3 class="altbolum"><span class="no">15</span>Resûlullah'ın <span class="sav">ﷺ</span> son gazvesi hangisidir?</h3>
+
+  <p>Resûlullah'ın <span class="sav">ﷺ</span> bizzat katıldığı son gazve Tebûk Gazvesi'dir. İbn Sa'd şöyle der:</p>
+  <div class="lafz">
+    <span class="ar-buyuk" dir="rtl">وَكَانَتْ آخِرَ غَزْوَةٍ غَزَاهَا</span>
+    <span class="lafz-tr">"Bu, onun yaptığı son gazveydi."</span>
+  </div>
+  <p class="kaynak">📚 <a href="https://shamela.ws/book/9351/664" target="_blank" rel="noopener">İbn Sa'd, et-Tabakâtu'l-Kubrâ, 2/167</a>. İbn İshâk'ın sözü için bkz. 5. mesele (Beyhakî, Delâilu'n-Nubuvve, 5/465).</p>
+
+  <ul class="madde">
+    <li>Bu gazve, hicretin 9. yılında, Receb ayında gerçekleşmiştir.</li>
+    <li>Rumlara karşı idi, ama savaş olmadı. Çünkü orada Rum ordusu yoktu.</li>
+  </ul>
+
+  <div class="blok alim">
+    <span class="soyleyen">İbn Sa'd rahimehullah (v. 230)</span>
+    <p class="ar">«ثُمَّ غَزْوَةُ رَسُولِ اللَّهِ ﷺ تَبُوكَ فِي رَجَبٍ سَنَةَ تِسْعٍ مِنْ مُهَاجَرِهِ. قَالُوا: بَلَغَ رَسُولَ اللَّهِ ﷺ أَنَّ الرُّومَ قَدْ جَمَعَتْ جُمُوعًا كَثِيرَةً بِالشَّامِ ... وَمَضَى لِوَجْهِهِ يَسِيرُ بِأَصْحَابِهِ حَتَّى قَدِمَ تَبُوكَ فِي ثَلَاثِينَ أَلْفًا مِنَ النَّاسِ ... فَأَقَامَ بِهَا عِشْرِينَ لَيْلَةً يُصَلِّي بِهَا رَكْعَتَيْنِ ... وَهِرَقْلُ يَوْمَئِذٍ بِحِمْصَ ... ثُمَّ انْصَرَفَ رَسُولُ اللَّهِ ﷺ مِنْ تَبُوكَ وَلَمْ يَلْقَ كَيْدًا»</p>
+    <p class="tr">"Sonra Resûlullah'ın <span class="sav">ﷺ</span>, hicretinin dokuzuncu yılında, Receb ayında yaptığı Tebûk Gazvesi geldi. (Siyer âlimleri) dediler ki: Resûlullah'a <span class="sav">ﷺ</span>, Rumların Şam'da çok büyük ordular topladığı haberi ulaştı... Ashâbıyla birlikte yola koyuldu ve otuz bin kişiyle Tebûk'e vardı... Orada yirmi gece kaldı ve namazları iki rekât kıldı... Herakleios o gün Hıms'taydı... Sonra Resûlullah <span class="sav">ﷺ</span> Tebûk'ten hiçbir çatışmaya girmeden geri döndü."</p>
+    <p class="kaynak">📚 <a href="https://shamela.ws/book/9351/662" target="_blank" rel="noopener">İbn Sa'd, et-Tabakâtu'l-Kubrâ, 2/165-167</a>.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">1</span><span>Ceyşu'l-Usra <span class="lafz-ar" dir="rtl">جَيْشُ الْعُسْرَةِ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Tebûk Gazvesi, zorluk, sıcaklık ve açlık yüzünden Ceyşu'l-Usra (zorluk ordusu) olarak bilinir. Buhârî de babı şöyle isimlendirmiştir:</p>
+    <div class="lafz">
+      <span class="ar-buyuk" dir="rtl">بَابُ غَزْوَةِ تَبُوكَ وَهِيَ غَزْوَةُ الْعُسْرَةِ</span>
+      <span class="lafz-tr">"Tebûk Gazvesi babı. O, Usra (zorluk) gazvesidir."</span>
+    </div>
+    <p class="kaynak">📚 <a href="https://shamela.ws/book/1681/6452" target="_blank" rel="noopener">Buhârî, Kitâbu'l-Meğâzî, 6/2</a>.</p>
+
+    <p>Bu isim, Allah Teâlâ'nın şu âyetinden alınmıştır:</p>
+    <div class="blok ayet">
+      <span class="soyleyen">Tevbe Sûresi, 117. âyet</span>
+      <p class="ar">﴿لَقَدْ تَابَ اللَّهُ عَلَى النَّبِيِّ وَالْمُهَاجِرِينَ وَالْأَنْصَارِ الَّذِينَ اتَّبَعُوهُ فِي سَاعَةِ الْعُسْرَةِ﴾</p>
+      <p class="tr">"Andolsun Allah, Nebî'nin ve zorluk anında ona uyan Muhâcirlerin ve Ensâr'ın tevbesini kabul etti."</p>
+      <p class="kaynak">📚 Tevbe, 117.</p>
+    </div>
+
+    <p>Bu zorluğun ne olduğu şöyle açıklanmıştır:</p>
+    <div class="blok alim">
+      <span class="soyleyen">Abdullah bin Muhammed bin Akîl rahimehullah</span>
+      <p class="ar">«خَرَجُوا فِي غَزْوَةِ تَبُوكَ الرَّجُلَانِ وَالثَّلَاثَةُ عَلَى بَعِيرٍ، وَخَرَجُوا فِي حَرٍّ شَدِيدٍ، فَأَصَابَهُمْ يَوْمًا عَطَشٌ شَدِيدٌ حَتَّى جَعَلُوا يَنْحَرُونَ إِبِلَهُمْ فَيَعْصِرُونَ أَكْرَاشَهَا وَيَشْرَبُونَ مَاءَهَا، فَكَانَ ذَلِكَ عُسْرَةً مِنَ الْمَاءِ، وَعُسْرَةً مِنَ الظَّهْرِ، وَعُسْرَةً مِنَ النَّفَقَةِ»</p>
+      <p class="tr">"Tebûk Gazvesi'ne bir deveye iki veya üç kişi binerek çıktılar. Şiddetli bir sıcakta yola çıktılar. Bir gün onları şiddetli bir susuzluk yakaladı. Öyle ki develerini kesip işkembelerini sıkmaya ve suyunu içmeye başladılar. Bu, su bakımından bir zorluk, binek bakımından bir zorluk ve azık bakımından bir zorluktu."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/9351/664" target="_blank" rel="noopener">İbn Sa'd, et-Tabakâtu'l-Kubrâ, 2/167</a>.</p>
+    </div>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">16</span>Gazvelerin en önemli hedefleri</h3>
+
+  <p>Resûlullah'ın <span class="sav">ﷺ</span> gerçekleştirdiği gazvelerin en önemli hedefleri şunlardır:</p>
+
+  <h4 class="kisim"><span class="no">1</span><span>İnsanların yalnızca Allah'a ibadet etmelerini sağlamak ve şirki ortadan kaldırmak</span></h4>
+  <div class="kisim-govde">
+    <p>Allah Teâlâ şöyle buyurmuştur:</p>
+    <div class="blok ayet">
+      <span class="soyleyen">Enfâl Sûresi, 39. âyet</span>
+      <p class="ar">﴿وَقَاتِلُوهُمْ حَتَّى لَا تَكُونَ فِتْنَةٌ وَيَكُونَ الدِّينُ كُلُّهُ لِلَّهِ﴾</p>
+      <p class="tr">"Fitne ortadan kalkıncaya ve din bütünüyle Allah'ın oluncaya kadar onlarla savaşın."</p>
+      <p class="kaynak">📚 Enfâl, 39.</p>
+    </div>
+    <p>İbn Cerîr et-Taberî rahimehullah bu âyetin tefsirinde şöyle demiştir:</p>
+    <div class="blok alim">
+      <span class="soyleyen">İbn Cerîr et-Taberî rahimehullah (v. 310)</span>
+      <p class="ar">«فَقَاتِلُوهُمْ حَتَّى لَا يَكُونَ شِرْكٌ، وَلَا يُعْبَدَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، فَيَرْتَفِعَ الْبَلَاءُ عَنْ عِبَادِ اللَّهِ مِنَ الْأَرْضِ وَهُوَ الْفِتْنَةُ، ﴿وَيَكُونَ الدِّينُ كُلُّهُ لِلَّهِ﴾ يَقُولُ: وَحَتَّى تَكُونَ الطَّاعَةُ وَالْعِبَادَةُ كُلُّهَا لِلَّهِ خَالِصَةً دُونَ غَيْرِهِ»</p>
+      <p class="tr">"Şirk ortadan kalkıncaya ve hiçbir ortağı olmayan yalnızca Allah'a ibadet edilinceye kadar onlarla savaşın. Böylece yeryüzünde Allah'ın kulları üzerindeki bela, yani fitne kalkar. 'Ve din bütünüyle Allah'ın olsun' sözüyle de şunu kastediyor: Ve itaat ve ibadetin tamamı, başkasına değil, yalnızca Allah'a halis oluncaya kadar."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/7798/7553" target="_blank" rel="noopener">İbn Cerîr et-Taberî, Câmi'u'l-Beyân, 11/178</a> (Enfâl, 39).</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Gücün hakkın tarafında olmasını sağlamak</span></h4>
+  <div class="kisim-govde">
+    <p>Gücün hakkın tarafında olması önemlidir. Aksi hâlde insanlar dine dil uzatabilir ve ona karşı daha rahat düşmanlık gösterebilirler.</p>
+    <p>Resûlullah <span class="sav">ﷺ</span> şöyle buyurmuştur:</p>
+    <div class="blok hadis">
+      <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+      <p class="ar">«أُمِرْتُ أَنْ أُقَاتِلَ النَّاسَ حَتَّى يَشْهَدُوا أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَنَّ مُحَمَّدًا رَسُولُ اللَّهِ، وَيُقِيمُوا الصَّلَاةَ، وَيُؤْتُوا الزَّكَاةَ، فَإِذَا فَعَلُوا ذَلِكَ عَصَمُوا مِنِّي دِمَاءَهُمْ وَأَمْوَالَهُمْ إِلَّا بِحَقِّ الْإِسْلَامِ، وَحِسَابُهُمْ عَلَى اللَّهِ»</p>
+      <p class="tr">"İnsanlarla, Allah'tan başka ibadete layık hiçbir ilah olmadığına ve Muhammed'in Allah'ın Resûlü olduğuna şehadet edinceye, namazı kılıncaya ve zekâtı verinceye kadar savaşmakla emrolundum. Bunları yaptıklarında, İslâm'ın hakkı dışında kanlarını ve mallarını benden korumuş olurlar. Hesapları ise Allah'a aittir."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/1681/51" target="_blank" rel="noopener">Buhârî, 25</a>; <a href="https://shamela.ws/book/1727/96" target="_blank" rel="noopener">Muslim, 22</a>.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>İslâm davetinin başka ülkelere ve topluluklara ulaştırılması</span></h4>
+  <div class="kisim-govde">
+    <p>Gazvelerin hedeflerinden biri de İslâm davetinin yayılması ve insanların hakka davet edilmesidir. Resûlullah <span class="sav">ﷺ</span>, Hayber Gazvesi'nde Ali bin Ebî Tâlib radıyallahu anh'a şöyle buyurmuştur:</p>
+    <div class="blok hadis">
+      <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+      <p class="ar">«انْفُذْ عَلَى رِسْلِكَ حَتَّى تَنْزِلَ بِسَاحَتِهِمْ، ثُمَّ ادْعُهُمْ إِلَى الْإِسْلَامِ، وَأَخْبِرْهُمْ بِمَا يَجِبُ عَلَيْهِمْ مِنْ حَقِّ اللَّهِ فِيهِ، فَوَاللَّهِ لَأَنْ يَهْدِيَ اللَّهُ بِكَ رَجُلًا وَاحِدًا خَيْرٌ لَكَ مِنْ أَنْ يَكُونَ لَكَ حُمْرُ النَّعَمِ»</p>
+      <p class="tr">"Acele etmeden ilerle ve onların bulunduğu yere var. Sonra onları İslâm'a davet et ve İslâm'da Allah'ın kendileri üzerindeki haklarını onlara bildir. Allah'a yemin olsun ki Allah'ın senin vesilenle bir kişiye hidayet vermesi, senin için kırmızı develere sahip olmaktan daha hayırlıdır."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/1727/6157" target="_blank" rel="noopener">Muslim, 2406</a>; <a href="https://shamela.ws/book/1681/4768" target="_blank" rel="noopener">Buhârî, 3009</a>.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">4</span><span>İslâm devletini düşmanların şerrinden korumak</span></h4>
+  <div class="kisim-govde">
+    <p>Gazvelerin hedeflerinden biri de İslâm devletini ve Müslümanları kâfirlerin saldırılarından, tehditlerinden ve şerlerinden korumaktır.</p>
+    <p>Resûlullah <span class="sav">ﷺ</span>, Yahudi olan Ka'b bin Eşref gibi Müslümanlara büyük zarar veren kişileri, o şerri ortadan kaldırmak ve selameti yaymak için öldürttü.</p>
+    <div class="blok hadis">
+      <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+      <p class="ar">«مَنْ لِكَعْبِ بْنِ الْأَشْرَفِ، فَإِنَّهُ قَدْ آذَى اللَّهَ وَرَسُولَهُ»</p>
+      <p class="tr">"Ka'b bin Eşref'in hakkından kim gelecek? Çünkü o, Allah'a ve Resûlü'ne eziyet etti."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/1681/6045" target="_blank" rel="noopener">Buhârî, 4037</a>.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">5</span><span>İnsanları fitnelerden, zulümden ve fesattan korumak</span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Gazvelerin hedeflerinden biri de insanları fitne ve fesattan korumaktır. Bu koruma yalnızca Müslümanlarla sınırlı olmayıp gayrimüslimlerin de zulüm ve haksızlıklardan korunmasını kapsar.</li>
+      <li>Bu fesatlar arasında, insanların kâfirler tarafından işkenceye uğraması, hakka ulaşmalarının engellenmesi ve fıtratlarının bozulması (zinaya ve içkiye ilgi duymaya başlamaları) gibi kötülükler bulunmaktadır.</li>
+      <li>Bu tür kötülüklerin insanlar arasında yayılmasına engel olmak da zikredilen hedeflerdendir.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">6</span><span>Münafıkların gerçek yüzlerinin ortaya çıkması</span></h4>
+  <div class="kisim-govde">
+    <p>Tevhid ve cihad konuları gündeme geldiğinde münafıkların gerçek yüzleri ortaya çıkar. Resûlullah <span class="sav">ﷺ</span> zamanında da durum böyleydi.</p>
+    <p>Allah Teâlâ, Muhammed Sûresi'nde şöyle buyurmuştur:</p>
+    <div class="blok ayet">
+      <span class="soyleyen">Muhammed Sûresi, 20. âyet</span>
+      <p class="ar">﴿فَإِذَا أُنْزِلَتْ سُورَةٌ مُحْكَمَةٌ وَذُكِرَ فِيهَا الْقِتَالُ رَأَيْتَ الَّذِينَ فِي قُلُوبِهِمْ مَرَضٌ يَنْظُرُونَ إِلَيْكَ نَظَرَ الْمَغْشِيِّ عَلَيْهِ مِنَ الْمَوْتِ﴾</p>
+      <p class="tr">"Muhkem bir sûre indirilip de içinde savaştan söz edildiğinde, kalplerinde hastalık bulunanların sana, ölüm baygınlığına girmiş bir kimsenin bakışı gibi baktıklarını görürsün."</p>
+      <p class="kaynak">📚 Muhammed, 20.</p>
+    </div>
+  </div>
+
+</section>
+
+</div>
+</body>
+</html>

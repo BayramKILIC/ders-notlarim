@@ -168,7 +168,24 @@
       "yazar": "İbn Ebi'l-İzz el-Hanefî",
       "alt": "el-Urcûzetu'l-Mi'iyye",
       "renk": "#245A63",
-      "bolumler": []
+      "bolumler": [
+        {
+          "id": "47",
+          "no": 47,
+          "kisa": "47. Beyit",
+          "baslik": "Âişe radıyallahu anhâ ile zifaf ve ezanın meşru kılınması",
+          "ar": "ثُمَّ بَنَى بِابْنَةِ خَيْرِ صَحْبِهِ . . . وَشُرِعَ الْأَذَانُ فَاقْتَدِ بِهِ",
+          "dosya": "beyit-47.html"
+        },
+        {
+          "id": "48",
+          "no": 48,
+          "kisa": "48. Beyit",
+          "baslik": "Ebvâ Gazvesi ve ikinci yılın gazveleri",
+          "ar": "وَغَزْوَةُ الْأَبْوَاءِ بَعْدُ فِي صَفَرْ . . . هَذَا وَفِي الثَّانِيَةِ الْغَزْوُ اشْتَهَرْ",
+          "dosya": "beyit-48.html"
+        }
+      ]
     },
     {
       "slug": "usul-u-tefsir",
