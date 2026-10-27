@@ -608,10 +608,68 @@
     .metin,.blok,.ozet,.vurgu-buyuk,.tanim{page-break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
     h3.altbolum,.serh-ayrac{page-break-after:avoid;}
   }
+  /* KAYNAK LİNKLERİ */
+  .kaynak a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;}
+  .kaynak a:hover{color:var(--navy-soft);}
+  .lafz + p.kaynak{font-size:.9rem;color:var(--ink-soft);font-style:italic;text-align:center;margin:-14px 0 30px;}
+  .sayfa p a,.sayfa li a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;}
+  .sayfa p a:hover,.sayfa li a:hover{color:var(--navy-soft);}
+  .ar-ic{white-space:nowrap;}
+  .ar-par{white-space:nowrap;}
+  @media (max-width:620px){.ar-ic,.ar-par{white-space:normal;}}
+  /* ---------- MESELE MENÜSÜ ---------- */
+  html{scroll-behavior:smooth;}
+  h3.altbolum{scroll-margin-top:24px;}
+  .menu{position:fixed;top:0;left:0;bottom:0;width:290px;background:var(--card);border-right:1px solid var(--rule);
+        overflow-y:auto;padding:26px 18px 40px;z-index:50;font-size:.86rem;line-height:1.5;}
+  .menu-baslik{font-weight:700;color:var(--bordo);letter-spacing:.04em;font-size:.95rem;margin:0 6px 14px;padding-bottom:10px;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center;}
+  .menu-kapat{display:none;background:none;border:0;font-size:1.6rem;line-height:1;color:var(--ink-soft);cursor:pointer;padding:0 4px;}
+  .menu ol{list-style:none;margin:0;padding:0;}
+  .menu li{margin:0;}
+  .menu a{display:flex;gap:10px;align-items:flex-start;text-decoration:none;color:var(--ink);padding:8px 8px;border-radius:6px;}
+  .menu a:hover{background:var(--blue-bg);color:var(--navy);}
+  .menu a.aktif{background:var(--blue-bg);color:var(--navy);font-weight:600;}
+  .menu .m-no{flex:0 0 auto;min-width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;font-size:.75rem;
+              display:inline-flex;align-items:center;justify-content:center;margin-top:1px;font-weight:600;}
+  .menu-dugme{display:none;position:fixed;bottom:18px;right:18px;z-index:60;background:var(--navy);color:#fff;border:0;border-radius:999px;
+              padding:11px 18px;font:inherit;font-size:.95rem;font-weight:600;box-shadow:0 4px 14px rgba(0,0,0,.22);cursor:pointer;}
+  .menu-perde{display:none;position:fixed;inset:0;background:rgba(20,26,34,.45);z-index:55;}
+  @media (min-width:1181px){ body{padding-left:290px;} }
+  @media (max-width:1180px){
+    .menu{top:auto;left:0;right:0;width:auto;max-height:78vh;border-right:0;border-top:1px solid var(--rule);
+          border-radius:16px 16px 0 0;box-shadow:0 -6px 24px rgba(0,0,0,.18);transform:translateY(105%);transition:transform .25s ease;
+          padding:18px 14px calc(24px + env(safe-area-inset-bottom));font-size:.95rem;z-index:70;}
+    body.menu-acik .menu{transform:none;}
+    body.menu-acik .menu-perde{display:block;}
+    .menu-kapat{display:block;}
+    .menu-dugme{display:block;}
+    .menu a{padding:10px 8px;}
+  }
+  @media print{ .menu,.menu-dugme,.menu-perde{display:none !important;} body{padding-left:0 !important;} }
 </style>
 <style>.sayfa > section.nakid:first-of-type{margin-top:32px;}</style>
 </head>
 <body>
+<nav class="menu" aria-label="Meseleler">
+  <div class="menu-baslik"><span>Meseleler</span><button class="menu-kapat" aria-label="Kapat">×</button></div>
+  <ol>
+      <li><a href="#mesele-1"><span class="m-no">1</span><span>Bu ilmin ismi nedir?</span></a></li>
+      <li><a href="#mesele-2"><span class="m-no">2</span><span>"Usûlu't-Tefsîr" ibaresinin lugat ve ıstılah bakımından tanımı nedir?</span></a></li>
+      <li><a href="#mesele-3"><span class="m-no">3</span><span>Usûlu't-Tefsîr ilminin kaynakları nelerdir?</span></a></li>
+      <li><a href="#mesele-4"><span class="m-no">4</span><span>Usûlu't-Tefsîr'i öğrenmenin hükmü nedir?</span></a></li>
+      <li><a href="#mesele-5"><span class="m-no">5</span><span>Usûlu't-Tefsîr ilmini öğrenmenin fazileti nedir?</span></a></li>
+      <li><a href="#mesele-6"><span class="m-no">6</span><span>Usûlu't-Tefsîr ilmini öğrenmenin faydaları nelerdir? Bu ilmi neden öğreniyoruz?</span></a></li>
+      <li><a href="#mesele-7"><span class="m-no">7</span><span>Bu ilim, müstakil bir ilim dalı hâline gelene kadar hangi merhalelerden geçmiştir?</span></a></li>
+      <li><a href="#mesele-8"><span class="m-no">8</span><span>Usûlu't-Tefsîr alanında kimler eser yazmıştır?</span></a></li>
+      <li><a href="#mesele-9"><span class="m-no">9</span><span>Bu ilme Usûlu't-Tefsîr ismini kim vermiştir?</span></a></li>
+      <li><a href="#mesele-10"><span class="m-no">10</span><span>Bu ilme verilen isimler nelerdir?</span></a></li>
+      <li><a href="#mesele-11"><span class="m-no">11</span><span>Usûlu't-Tefsîr ile Usûlu'l-Fıkh arasındaki fark nedir?</span></a></li>
+      <li><a href="#mesele-12"><span class="m-no">12</span><span>Usûlu't-Tefsîr ile tefsir arasındaki fark nedir?</span></a></li>
+      <li><a href="#mesele-13"><span class="m-no">13</span><span>Usûlu't-Tefsîr ile Ulûmu'l-Kur'ân arasındaki fark nedir?</span></a></li>
+  </ol>
+</nav>
+<div class="menu-perde"></div>
+<button class="menu-dugme">☰ Meseleler</button>
 <div class="sayfa">
 
 <!-- ================= BİRİNCİ MUKADDİME ================= -->
@@ -622,29 +680,29 @@
   </div>
 
 
-  <h3 class="altbolum"><span class="no">1</span>Bu ilmin ismi nedir?</h3>
+  <h3 class="altbolum" id="mesele-1"><span class="no">1</span>Bu ilmin ismi nedir?</h3>
 
-  <p>Bu ilmin ismi <strong>Usûlu't-Tefsîr</strong>'dir (<span class="ar-ic" dir="rtl">أُصُولُ التَّفْسِيرِ</span>).</p>
+  <p>Bu ilmin ismi <strong>Usûlu't-Tefsîr</strong>'dir <span class="ar-par">(<span class="ar-ic" dir="rtl">أُصُولُ التَّفْسِيرِ</span>)</span>.</p>
 
   <p>Türkçe dilinde Tefsir usûlü diyebiliriz ama bizler devamında her zaman Usûlu't-Tefsîr ibaresini kullanacağız.</p>
 
-  <p><strong>Kavâidu't-Tefsîr</strong> (<span class="ar-ic" dir="rtl">قَوَاعِدُ التَّفْسِيرِ</span>) olarak da isimlendirilir. Ancak bu ifade daha genel bir anlam taşır.</p>
+  <p><strong>Kavâidu't-Tefsîr</strong> <span class="ar-par">(<span class="ar-ic" dir="rtl">قَوَاعِدُ التَّفْسِيرِ</span>)</span> olarak da isimlendirilir. Ancak bu ifade daha genel bir anlam taşır.</p>
 
 
-  <h3 class="altbolum"><span class="no">2</span>"Usûlu't-Tefsîr" ibaresinin lugat ve ıstılah bakımından tanımı nedir?</h3>
+  <h3 class="altbolum" id="mesele-2"><span class="no">2</span>"Usûlu't-Tefsîr" ibaresinin lugat ve ıstılah bakımından tanımı nedir?</h3>
 
-  <p>Usûlu't-Tefsîr (<span class="ar-ic" dir="rtl">أُصُولُ التَّفْسِيرِ</span>), usûl ve tefsir kelimelerinden oluşan bir isim tamlamasıdır. Bu sebeple Usûlu't-Tefsîr'in tanımını yapmadan önce her iki kelimenin anlamını ayrı ayrı ele almak gerekir.</p>
+  <p>Usûlu't-Tefsîr <span class="ar-par">(<span class="ar-ic" dir="rtl">أُصُولُ التَّفْسِيرِ</span>)</span>, usûl ve tefsir kelimelerinden oluşan bir isim tamlamasıdır. Bu sebeple Usûlu't-Tefsîr'in tanımını yapmadan önce her iki kelimenin anlamını ayrı ayrı ele almak gerekir.</p>
 
   <h4 class="kisim"><span class="no">1</span><span>Usûl kelimesinin lugat anlamı <span class="lafz-ar" dir="rtl">الْأُصُولُ</span></span></h4>
   <div class="kisim-govde">
-    <p>Usûl (<span class="ar-ic" dir="rtl">الْأُصُولُ</span>), asl (<span class="ar-ic" dir="rtl">أَصْلٌ</span>) kelimesinin çoğuludur.</p>
+    <p>Usûl <span class="ar-par">(<span class="ar-ic" dir="rtl">الْأُصُولُ</span>)</span>, asl <span class="ar-par">(<span class="ar-ic" dir="rtl">أَصْلٌ</span>)</span> kelimesinin çoğuludur.</p>
     <p>Asl, bir şeyin temeli, esası ve üzerine başka şeylerin bina edildiği kaide demektir.</p>
-    <p>Lugat âlimleri de asl (<span class="ar-ic" dir="rtl">أَصْلٌ</span>) kelimesinin anlamları arasında bir şeyin temeli ve kaidesinin bulunduğunu belirtmişlerdir.</p>
+    <p>Lugat âlimleri de asl <span class="ar-par">(<span class="ar-ic" dir="rtl">أَصْلٌ</span>)</span> kelimesinin anlamları arasında bir şeyin temeli ve kaidesinin bulunduğunu belirtmişlerdir.</p>
   </div>
 
   <h4 class="kisim"><span class="no">2</span><span>Tefsir kelimesinin lugat anlamı <span class="lafz-ar" dir="rtl">التَّفْسِيرُ</span></span></h4>
   <div class="kisim-govde">
-    <p>Tefsir (<span class="ar-ic" dir="rtl">التَّفْسِيرُ</span>), fesr (<span class="ar-ic" dir="rtl">الْفَسْرُ</span>) kelimesinden türemiştir. Lugatta bir şeyi açığa çıkarmak (<span class="ar-ic" dir="rtl">الْكَشْفُ</span>), açıklamak (<span class="ar-ic" dir="rtl">الْبَيَانُ</span>) ve izah etmek (<span class="ar-ic" dir="rtl">الْإِيضَاحُ</span>) anlamlarına gelir.</p>
+    <p>Tefsir <span class="ar-par">(<span class="ar-ic" dir="rtl">التَّفْسِيرُ</span>)</span>, fesr <span class="ar-par">(<span class="ar-ic" dir="rtl">الْفَسْرُ</span>)</span> kelimesinden türemiştir. Lugatta bir şeyi açığa çıkarmak <span class="ar-par">(<span class="ar-ic" dir="rtl">الْكَشْفُ</span>)</span>, açıklamak <span class="ar-par">(<span class="ar-ic" dir="rtl">الْبَيَانُ</span>)</span> ve izah etmek <span class="ar-par">(<span class="ar-ic" dir="rtl">الْإِيضَاحُ</span>)</span> anlamlarına gelir.</p>
     <p>Allah Teâlâ şöyle buyurmuştur:</p>
     <div class="blok ayet">
       <span class="soyleyen">Furkân Sûresi, 33. âyet</span>
@@ -673,7 +731,7 @@
   </div>
 
 
-  <h3 class="altbolum"><span class="no">3</span>Usûlu't-Tefsîr ilminin kaynakları nelerdir?</h3>
+  <h3 class="altbolum" id="mesele-3"><span class="no">3</span>Usûlu't-Tefsîr ilminin kaynakları nelerdir?</h3>
 
   <p>Usûlu't-Tefsîr ilmi, kaidelerini ve ölçülerini çeşitli kaynaklardan alır. Bunların en önemlileri şunlardır:</p>
 
@@ -707,8 +765,8 @@
     <p>Bu sebeple onların tefsirlerini ve Kur'ân'ı anlama yöntemlerini incelemek, Usûlu't-Tefsîr'in kaynaklarını öğrenmenin en önemli yollarından biridir.</p>
     <p>Bu konuda başvurulabilecek en önemli kaynaklardan bazıları şunlardır:</p>
     <ul class="madde">
-      <li>Taberî'nin <strong>Câmiu'l-Beyân</strong> (<span class="ar-ic" dir="rtl">جَامِعُ الْبَيَانِ</span>) adlı eseri.</li>
-      <li>İbn Ebî Hâtim'in <strong>Tefsîru'l-Kur'âni'l-Azîm</strong> (<span class="ar-ic" dir="rtl">تَفْسِيرُ الْقُرْآنِ الْعَظِيمِ</span>) adlı eseri.</li>
+      <li>Taberî'nin <strong>Câmiu'l-Beyân</strong> <span class="ar-par">(<span class="ar-ic" dir="rtl">جَامِعُ الْبَيَانِ</span>)</span> adlı eseri.</li>
+      <li>İbn Ebî Hâtim'in <strong>Tefsîru'l-Kur'âni'l-Azîm</strong> <span class="ar-par">(<span class="ar-ic" dir="rtl">تَفْسِيرُ الْقُرْآنِ الْعَظِيمِ</span>)</span> adlı eseri.</li>
     </ul>
   </div>
 
@@ -733,7 +791,7 @@
       <li>Taberî'nin Tefsiri.</li>
       <li>İbn Kesîr'in Tefsiri.</li>
       <li>Güvenilir tefsir kitaplarının mukaddimeleri.</li>
-      <li>Kurtubî'nin <strong>el-Câmi' li-Ahkâmi'l-Kur'ân</strong> (<span class="ar-ic" dir="rtl">الْجَامِعُ لِأَحْكَامِ الْقُرْآنِ</span>) adlı tefsiri.</li>
+      <li>Kurtubî'nin <strong>el-Câmi' li-Ahkâmi'l-Kur'ân</strong> <span class="ar-par">(<span class="ar-ic" dir="rtl">الْجَامِعُ لِأَحْكَامِ الْقُرْآنِ</span>)</span> adlı tefsiri.</li>
     </ul>
   </div>
 
@@ -741,16 +799,16 @@
   <div class="kisim-govde">
     <p>Kur'ân ilimlerine dair yazılmış eserler, müfessirin ihtiyaç duyduğu birçok konuyu içerir. Bunlardan bazıları şunlardır:</p>
     <ul class="madde">
-      <li>Esbâbu'n-Nuzûl (<span class="ar-ic" dir="rtl">أَسْبَابُ النُّزُولِ</span>), yani âyetlerin iniş sebepleri.</li>
-      <li>Mekkî ve Medenî (<span class="ar-ic" dir="rtl">الْمَكِّيُّ وَالْمَدَنِيُّ</span>) dönemlerinde indirilen âyetler.</li>
-      <li>Nâsih ve Mensûh (<span class="ar-ic" dir="rtl">النَّاسِخُ وَالْمَنْسُوخُ</span>).</li>
-      <li>Muhkem ve Müteşâbih (<span class="ar-ic" dir="rtl">الْمُحْكَمُ وَالْمُتَشَابِهُ</span>).</li>
-      <li>Kıraatler (<span class="ar-ic" dir="rtl">الْقِرَاءَاتُ</span>).</li>
+      <li>Esbâbu'n-Nuzûl <span class="ar-par">(<span class="ar-ic" dir="rtl">أَسْبَابُ النُّزُولِ</span>)</span>, yani âyetlerin iniş sebepleri.</li>
+      <li>Mekkî ve Medenî <span class="ar-par">(<span class="ar-ic" dir="rtl">الْمَكِّيُّ وَالْمَدَنِيُّ</span>)</span> dönemlerinde indirilen âyetler.</li>
+      <li>Nâsih ve Mensûh <span class="ar-par">(<span class="ar-ic" dir="rtl">النَّاسِخُ وَالْمَنْسُوخُ</span>)</span>.</li>
+      <li>Muhkem ve Müteşâbih <span class="ar-par">(<span class="ar-ic" dir="rtl">الْمُحْكَمُ وَالْمُتَشَابِهُ</span>)</span>.</li>
+      <li>Kıraatler <span class="ar-par">(<span class="ar-ic" dir="rtl">الْقِرَاءَاتُ</span>)</span>.</li>
     </ul>
     <p>Bu alanda yazılmış en meşhur eserlerden bazıları şunlardır:</p>
     <ul class="madde">
-      <li>Zerkeşî'nin <strong>el-Burhân fî Ulûmi'l-Kur'ân</strong> (<span class="ar-ic" dir="rtl">الْبُرْهَانُ فِي عُلُومِ الْقُرْآنِ</span>) adlı eseri.</li>
-      <li>Suyûtî'nin <strong>el-İtkân fî Ulûmi'l-Kur'ân</strong> (<span class="ar-ic" dir="rtl">الْإِتْقَانُ فِي عُلُومِ الْقُرْآنِ</span>) adlı eseri.</li>
+      <li>Zerkeşî'nin <strong>el-Burhân fî Ulûmi'l-Kur'ân</strong> <span class="ar-par">(<span class="ar-ic" dir="rtl">الْبُرْهَانُ فِي عُلُومِ الْقُرْآنِ</span>)</span> adlı eseri.</li>
+      <li>Suyûtî'nin <strong>el-İtkân fî Ulûmi'l-Kur'ân</strong> <span class="ar-par">(<span class="ar-ic" dir="rtl">الْإِتْقَانُ فِي عُلُومِ الْقُرْآنِ</span>)</span> adlı eseri.</li>
     </ul>
   </div>
 
@@ -758,11 +816,11 @@
   <div class="kisim-govde">
     <p>Usûlu't-Tefsîr ilmi, fıkıh usûlünün bazı konularından, özellikle de lafızların delâletleri ve nasların anlaşılmasıyla ilgili meselelerden faydalanır. Bunlardan bazıları şunlardır:</p>
     <ul class="madde">
-      <li>Âmm ve Hâss (<span class="ar-ic" dir="rtl">الْعَامُّ وَالْخَاصُّ</span>)</li>
-      <li>Mutlak ve Mukayyed (<span class="ar-ic" dir="rtl">الْمُطْلَقُ وَالْمُقَيَّدُ</span>)</li>
-      <li>Mücmel ve Mübeyyen (<span class="ar-ic" dir="rtl">الْمُجْمَلُ وَالْمُبَيَّنُ</span>)</li>
-      <li>Emir ve Nehiy (<span class="ar-ic" dir="rtl">الْأَمْرُ وَالنَّهْيُ</span>)</li>
-      <li>Mantûk ve Mefhûm (<span class="ar-ic" dir="rtl">الْمَنْطُوقُ وَالْمَفْهُومُ</span>)</li>
+      <li>Âmm ve Hâss <span class="ar-par">(<span class="ar-ic" dir="rtl">الْعَامُّ وَالْخَاصُّ</span>)</span></li>
+      <li>Mutlak ve Mukayyed <span class="ar-par">(<span class="ar-ic" dir="rtl">الْمُطْلَقُ وَالْمُقَيَّدُ</span>)</span></li>
+      <li>Mücmel ve Mübeyyen <span class="ar-par">(<span class="ar-ic" dir="rtl">الْمُجْمَلُ وَالْمُبَيَّنُ</span>)</span></li>
+      <li>Emir ve Nehiy <span class="ar-par">(<span class="ar-ic" dir="rtl">الْأَمْرُ وَالنَّهْيُ</span>)</span></li>
+      <li>Mantûk ve Mefhûm <span class="ar-par">(<span class="ar-ic" dir="rtl">الْمَنْطُوقُ وَالْمَفْهُومُ</span>)</span></li>
     </ul>
   </div>
 
@@ -772,7 +830,7 @@
   </div>
 
 
-  <h3 class="altbolum"><span class="no">4</span>Usûlu't-Tefsîr'i öğrenmenin hükmü nedir?</h3>
+  <h3 class="altbolum" id="mesele-4"><span class="no">4</span>Usûlu't-Tefsîr'i öğrenmenin hükmü nedir?</h3>
 
   <p>Usûlu't-Tefsîr'i öğrenmenin hükmü, ilim talebesinin durumuna ve bu ilme olan ihtiyacına göre değişir. Bu husus şu şekilde açıklanabilir:</p>
 
@@ -819,7 +877,7 @@
   </div>
 
 
-  <h3 class="altbolum"><span class="no">5</span>Usûlu't-Tefsîr ilmini öğrenmenin fazileti nedir?</h3>
+  <h3 class="altbolum" id="mesele-5"><span class="no">5</span>Usûlu't-Tefsîr ilmini öğrenmenin fazileti nedir?</h3>
 
   <h4 class="kisim"><span class="no">1</span><span>Kur'ân'ı tedebbür etmeye yardımcı olması</span></h4>
   <div class="kisim-govde">
@@ -858,7 +916,7 @@
   </div>
 
 
-  <h3 class="altbolum"><span class="no">6</span>Usûlu't-Tefsîr ilmini öğrenmenin faydaları nelerdir? Bu ilmi neden öğreniyoruz?</h3>
+  <h3 class="altbolum" id="mesele-6"><span class="no">6</span>Usûlu't-Tefsîr ilmini öğrenmenin faydaları nelerdir? Bu ilmi neden öğreniyoruz?</h3>
 
   <p>İmam Sa'dî rahimehullah, Tarîku'l-Vusûl ile'l-İlmi'l-Me'mûl bi-Ma'rifeti'l-Kavâid ve'd-Davâbıt ve'l-Usûl adlı eserinde şöyle demiştir:</p>
 
@@ -957,8 +1015,451 @@
     <span class="not-etiket">Tenbih</span>
     <p><strong>Usûlu't-Tefsîr ilminin fazileti ile faydaları arasındaki fark</strong></p>
     <ul class="madde">
-      <li><strong>Fazilet</strong> (<span class="ar-ic" dir="rtl">الْفَضْلُ</span>): Bu ilmin şerefi ve sahip olduğu mertebe ile ilgilidir.</li>
-      <li><strong>Semere</strong> (<span class="ar-ic" dir="rtl">الثَّمَرَةُ</span>): İlim talebesinin bu ilmi öğrenip kaidelerini uygulaması sonucunda elde ettiği fayda ve neticelerdir.</li>
+      <li><strong>Fazilet</strong> <span class="ar-par">(<span class="ar-ic" dir="rtl">الْفَضْلُ</span>)</span>: Bu ilmin şerefi ve sahip olduğu mertebe ile ilgilidir.</li>
+      <li><strong>Semere</strong> <span class="ar-par">(<span class="ar-ic" dir="rtl">الثَّمَرَةُ</span>)</span>: İlim talebesinin bu ilmi öğrenip kaidelerini uygulaması sonucunda elde ettiği fayda ve neticelerdir.</li>
+    </ul>
+  </div>
+
+
+
+  <h3 class="altbolum" id="mesele-7"><span class="no">7</span>Bu ilim, müstakil bir ilim dalı hâline gelene kadar hangi merhalelerden geçmiştir?</h3>
+
+  <p>Bu ilim, ortaya çıkışından itibaren çeşitli merhalelerden geçmiş ve sonunda hakkında müstakil eserler yazılan bir ilim dalı hâline gelmiştir.</p>
+
+  <h4 class="kisim"><span class="no">1</span><span>Birinci merhale</span></h4>
+  <div class="kisim-govde">
+    <p>Bu ilmin kaideleri, başlangıçta selefin sözleri arasında dağınık bir şekilde bulunuyordu.</p>
+    <p>Hadis, tefsir ve diğer eserlerde İbn Abbâs'tan bir söz, İbn Mes'ûd'dan başka bir söz veya tefsir kaideleriyle ilgili bir hadis zikrediliyordu. Böylece bu ilmin kaideleri, tefsir kitaplarında, selefin fetvalarında, akide ve fıkıh eserlerinde ve selefin sözlerini bir araya getiren kitaplarda dağınık bir şekilde yer alıyordu.</p>
+
+    <p><strong>Örnek:</strong></p>
+    <div class="blok alim">
+      <span class="soyleyen">İbn Abbâs radıyallahu anhumâ şöyle demiştir</span>
+      <p class="ar">«كُلُّ مَا وَرَدَ فِي الْقُرْآنِ مِنَ الْعِبَادَةِ فَمَعْنَاهَا التَّوْحِيدُ»</p>
+      <p class="tr">"Kur'ân'da geçen ibadet ifadelerinin manası tevhiddir."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/12217/86" target="_blank" rel="noopener">Beğavî, Me'âlimu't-Tenzîl, 1/93</a>.</p>
+    </div>
+
+    <p>Yine İbn Abbâs'tan, Allah Teâlâ'nın şu âyetinin tefsirinde şöyle dediği rivayet edilmiştir:</p>
+    <div class="blok ayet">
+      <span class="soyleyen">Bakara Sûresi, 21. âyet</span>
+      <p class="ar">﴿يَا أَيُّهَا النَّاسُ اعْبُدُوا رَبَّكُمْ﴾</p>
+      <p class="tr">"Ey insanlar! Rabbinize ibadet edin."</p>
+      <p class="kaynak">📚 Bakara, 21.</p>
+    </div>
+    <div class="lafz">
+      <span class="ar-buyuk" dir="rtl">«وَحِّدُوا رَبَّكُمْ»</span>
+      <span class="lafz-tr">"Rabbinizi birleyin."</span>
+    </div>
+    <p class="kaynak">📚 <a href="https://shamela.ws/book/7798/565" target="_blank" rel="noopener">Taberî, Câmi'u'l-Beyân, 1/385</a>.</p>
+
+    <p><strong>Başka bir örnek:</strong></p>
+    <div class="blok alim">
+      <span class="soyleyen">Abdullah bin Mes'ûd radıyallahu anh şöyle demiştir</span>
+      <p class="ar">«مَا أَنْتَ بِمُحَدِّثٍ قَوْمًا حَدِيثًا لَا تَبْلُغُهُ عُقُولُهُمْ، إِلَّا كَانَ لِبَعْضِهِمْ فِتْنَةً»</p>
+      <p class="tr">"Bir topluluğa, akıllarının kavrayamayacağı bir söz söylediğinde, bu mutlaka onların bir kısmı için fitne olur."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/1727/17" target="_blank" rel="noopener">Muslim, Sahîh'inin Mukaddimesi, 1/11</a>.</p>
+    </div>
+
+    <p>Bu rivayetten tefsir alanında çıkarılan kaide:</p>
+    <div class="tanim">
+      <span class="tanim-etiket">Kâide</span>
+      <p class="ar">«مُرَاعَاةُ أَفْهَامِ الْمُخَاطَبِينَ عِنْدَ بَيَانِ مَعَانِي الْقُرْآنِ الْكَرِيمِ»</p>
+      <p class="tr">Kur'ân'ın manalarını açıklarken muhatapların anlayış seviyelerini gözetmek gerekir.</p>
+    </div>
+    <p>Çünkü bilinen her şey, herkese söylenmez. Müfessir ve muallim, dinleyenlerin anlayış seviyesini dikkate almalı ve Kur'ân'ın manalarından onların kavrayabilecekleri hususları açıklamalıdır. Böylece onların yanlış anlamaya veya fitneye düşmelerinin önüne geçilmiş olur.</p>
+  </div>
+
+
+  <h4 class="kisim"><span class="no">2</span><span>İkinci merhale</span></h4>
+  <div class="kisim-govde">
+    <p>Âlimler, tefsir kitaplarının mukaddimelerinde Usûlu't-Tefsîr ile ilgili konulara yer vermeye başladılar. Böylece bir âlim tefsir yazdığında, eserinin mukaddimesinde tefsir usûlüne dair bazı meseleleri ele alıyordu.</p>
+
+    <div class="delil">
+      <div class="no">1</div>
+      <div class="govde">
+        <div class="delil-etiket">İmam İbn Cerîr et-Taberî (v. 310)</div>
+        <p>Câmi'u'l-Beyân an Te'vîli Âyi'l-Kur'ân <span class="ar-par">(<span class="ar-ic" dir="rtl">جَامِعُ الْبَيَانِ عَنْ تَأْوِيلِ آيِ الْقُرْآنِ</span>)</span> adlı eserinin mukaddimesinde Kur'ân'ın dili, âyetlerin tevil yöntemleri, hangi âyetlerin tefsir edilmesinin caiz olduğu ve hangilerinin olmadığı gibi Usûlu't-Tefsîr ile ilgili çeşitli meseleleri ele almıştır.</p>
+      </div>
+    </div>
+
+    <div class="delil">
+      <div class="no">2</div>
+      <div class="govde">
+        <div class="delil-etiket">İmam Ebû Muhammed İbn Atıyye el-Endelusî (v. 541)</div>
+        <p>el-Muharreru'l-Vecîz fî Tefsîri'l-Kitâbi'l-Azîz <span class="ar-par">(<span class="ar-ic" dir="rtl">الْمُحَرَّرُ الْوَجِيزُ فِي تَفْسِيرِ الْكِتَابِ الْعَزِيزِ</span>)</span> adlı tefsirinin mukaddimesinde Kur'ân'ı tefsir etmenin fazileti, müfessirlerin mertebeleri ve Ulûmu'l-Kur'ân ile Usûlu't-Tefsîr'e ilişkin çeşitli meseleleri ele almıştır.</p>
+      </div>
+    </div>
+
+    <div class="delil">
+      <div class="no">3</div>
+      <div class="govde">
+        <div class="delil-etiket">İmam Kurtubî (v. 671)</div>
+        <p>el-Câmi' li-Ahkâmi'l-Kur'ân <span class="ar-par">(<span class="ar-ic" dir="rtl">الْجَامِعُ لِأَحْكَامِ الْقُرْآنِ</span>)</span> adlı eserinin mukaddimesinde müfessirin edepleri, Kur'ân'ın fazileti, Kur'ân'ı şahsi görüşe dayanarak tefsir etmekten sakındırma ve Kur'ân'ın i'râbı gibi çeşitli konuları ele almıştır.</p>
+      </div>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Üçüncü merhale: Bu ilmin müstakil olarak eserlerde ele alınması</span></h4>
+  <div class="kisim-govde">
+    <p>Bu merhale iki kısma ayrılır:</p>
+
+    <p><strong>Birinci kısım: Ulûmu'l-Kur'ân eserleri</strong></p>
+    <p>Bu ilmin çeşitli konularını kapsamlı bir şekilde ele almadan bir araya getiren eserler yazılmaya başlandı. Bunlar, Ulûmu'l-Kur'ân (Kur'ân ilimleri) olarak isimlendirilen eserlerdir.</p>
+
+    <div class="delil">
+      <div class="no">1</div>
+      <div class="govde">
+        <div class="delil-etiket">İmam Muhammed bin Halef el-Merzubân (v. 309)</div>
+        <p>Ulûmu'l-Kur'ân'ı çeşitli konuları bir araya getiren kapsamlı bir ilim olarak ele alan ilk âlimlerden biri kabul edilir.</p>
+        <p>Bu konudaki eseri el-Hâvî fî Ulûmi'l-Kur'ân <span class="ar-par">(<span class="ar-ic" dir="rtl">الْحَاوِي فِي عُلُومِ الْقُرْآنِ</span>)</span> adlı kitaptır.</p>
+      </div>
+    </div>
+
+    <div class="delil">
+      <div class="no">2</div>
+      <div class="govde">
+        <div class="delil-etiket">İmam Ebu'l-Ferec Abdurrahman bin Ali İbnu'l-Cevzî (v. 597)</div>
+        <p>Funûnu'l-Efnân fî Uyûni Ulûmi'l-Kur'ân <span class="ar-par">(<span class="ar-ic" dir="rtl">فُنُونُ الْأَفْنَانِ فِي عُيُونِ عُلُومِ الْقُرْآنِ</span>)</span> adlı eserinde Usûlu't-Tefsîr ilmiyle ilgili birçok kaideyi bir araya getirmiştir.</p>
+      </div>
+    </div>
+
+    <p><strong>İkinci kısım: Bu ilim hakkında müstakil eserlerin yazılması</strong></p>
+
+    <div class="delil">
+      <div class="no">1</div>
+      <div class="govde">
+        <div class="delil-etiket">Fahru'd-Dîn İbn Teymiyye (v. 622)</div>
+        <p>Ebû Abdullah Muhammed bin Ebi'l-Kâsım el-Hadır bin Muhammed bin el-Hadır bin Ali bin Abdullah bin Teymiyye el-Harrânî el-Hanbelî.</p>
+        <ul class="madde">
+          <li>Fahru'd-Dîn lakabıyla tanınan bu âlim, Hanbelî mezhebine mensup bir hatip, vaiz ve fakihti. Hicrî 542 yılında Harran'da doğmuş ve hicrî 622 yılında yine orada vefat etmiştir.</li>
+          <li>Fahru'd-Dîn İbn Teymiyye, Şeyhu'l-İslâm Ahmed bin Abdulhalîm İbn Teymiyye'nin dedesi olan Mecdu'd-Dîn İbn Teymiyye'nin amcasıdır.</li>
+          <li>Dolayısıyla Fahru'd-Dîn İbn Teymiyye, Şeyhu'l-İslâm İbn Teymiyye'nin doğrudan amcası değil, dedesinin amcasıdır.</li>
+        </ul>
+        <p><strong>Eseri:</strong> Kavâidu't-Tefsîr <span class="ar-par">(<span class="ar-ic" dir="rtl">قَوَاعِدُ التَّفْسِيرِ</span>)</span>.</p>
+        <p>Bu eser günümüze ulaşmamıştır. Ancak Keşfu'z-Zunûn adlı eserin müellifi, kitabı bu isimle zikretmiştir.</p>
+      </div>
+    </div>
+
+    <div class="delil">
+      <div class="no">2</div>
+      <div class="govde">
+        <div class="delil-etiket">Şeyhu'l-İslâm İbn Teymiyye rahimehullah (v. 728)</div>
+        <p><strong>Eseri:</strong> Mukaddime fî Usûli't-Tefsîr <span class="ar-par">(<span class="ar-ic" dir="rtl">مُقَدِّمَةٌ فِي أُصُولِ التَّفْسِيرِ</span>)</span>.</p>
+        <p>Bu eser, Usûlu't-Tefsîr'in birçok kaidesini bir araya getiren ve günümüze ulaşmış en eski ve en önemli müstakil eserlerden biridir.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <h3 class="altbolum" id="mesele-8"><span class="no">8</span>Usûlu't-Tefsîr alanında kimler eser yazmıştır?</h3>
+
+  <p>Bu alanda yazılmış en önemli eserlerden bazıları, tarihî sıralamaya göre şunlardır:</p>
+
+  <h4 class="kisim"><span class="no">1</span><span>Fahru'd-Dîn İbn Teymiyye (v. 622)</span></h4>
+  <div class="kisim-govde">
+    <p><strong>Eseri:</strong> Kavâidu't-Tefsîr <span class="ar-par">(<span class="ar-ic" dir="rtl">قَوَاعِدُ التَّفْسِيرِ</span>)</span>. Bu eser günümüze ulaşmamıştır (<a href="https://shamela.ws/book/2118/1430" target="_blank" rel="noopener">Keşfu'z-Zunûn, 2/1358</a>).</p>
+    <p>Hayatı ve eseri hakkında bilgi 7. meselede geçti.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Şeyhu'l-İslâm İbn Teymiyye rahimehullah (v. 728)</span></h4>
+  <div class="kisim-govde">
+    <p><strong>Eseri:</strong> Mukaddime fî Usûli't-Tefsîr <span class="ar-par">(<span class="ar-ic" dir="rtl">مُقَدِّمَةٌ فِي أُصُولِ التَّفْسِيرِ</span>)</span>.</p>
+    <p>Bu eser, Usûlu't-Tefsîr'in birçok kaidesini bir araya getiren ve günümüze ulaşmış en eski ve en önemli müstakil eserlerden biridir.</p>
+    <p>İbn Teymiyye, eserinin başında bu mukaddimeyi yazmaktaki amacının, Kur'ân'ı anlamaya, onun tefsirini ve manalarını öğrenmeye yardımcı olan küllî kaideleri açıklamak olduğunu belirtmiştir (<a href="https://shamela.ws/book/7289/6968" target="_blank" rel="noopener">Mecmû'u'l-Fetâvâ, 13/329</a>; metni 2. meselede geçti).</p>
+    <div class="notkutu">
+      <span class="not-etiket">Tenbih</span>
+      <p>İbn Teymiyye'nin Usûlu't-Tefsîr alanında eser yazan ilk âlim olduğunu kesin olarak söyleyemeyiz. Çünkü bu ilmin konuları, ondan önce de tefsir, Ulûmu'l-Kur'ân ve diğer ilimlere ait eserlerde bulunuyordu.</p>
+      <p>Bu sebeple İbn Teymiyye'nin mukaddimesinin, Usûlu't-Tefsîr alanında günümüze ulaşmış en eski ve en meşhur müstakil eserlerden biri olduğunu söylemek daha doğrudur.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Şemsu'd-Dîn İbnu's-Sâiğ el-Hanefî (v. 777)</span></h4>
+  <div class="kisim-govde">
+    <p>Muhammed bin Abdurrahman el-Hanefî.</p>
+    <p><strong>Eseri:</strong> el-Menhecu'l-Kavîm fî Kavâidin Teteallaku bi'l-Kur'âni'l-Kerîm <span class="ar-par">(<span class="ar-ic" dir="rtl">الْمَنْهَجُ الْقَوِيمُ فِي قَوَاعِدَ تَتَعَلَّقُ بِالْقُرْآنِ الْكَرِيمِ</span>)</span>.</p>
+    <p>Keşfu'z-Zunûn adlı eserin müellifi bu kitabı zikretmiş, ancak eser hakkında başka bir bilgi vermemiştir (<a href="https://shamela.ws/book/2118/1955" target="_blank" rel="noopener">Keşfu'z-Zunûn, 2/1883</a>). En doğrusunu Allah bilir.</p>
+    <p>Araştırmacıların ulaşabildiği bilgilere göre bu eser kaybolmuş eserler arasındadır. Eserin herhangi bir yazma nüshasına veya tahkikli baskısına da rastlanmamıştır.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">4</span><span>Şâh Veliyyullah ed-Dihlevî rahimehullah (v. 1176)</span></h4>
+  <div class="kisim-govde">
+    <p><strong>Eseri:</strong> el-Fevzu'l-Kebîr fî Usûli't-Tefsîr <span class="ar-par">(<span class="ar-ic" dir="rtl">الْفَوْزُ الْكَبِيرُ فِي أُصُولِ التَّفْسِيرِ</span>)</span>.</p>
+    <ul class="madde">
+      <li>Bu eser, Usûlu't-Tefsîr alanında yazılmış müstakil ve önemli kitaplardan biridir.</li>
+      <li>Dihlevî, bu eseri yazmaktaki amacının, ilim talebesinin Kur'ân'ı tedebbür etmesine ve manalarını anlamasına yardımcı olacak faydaları ve kaideleri bir araya getirmek olduğunu belirtmiştir.</li>
+      <li>Şâh Veliyyullah ed-Dihlevî rahimehullah, bu eseri aslen Farsça olarak kaleme almıştır.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">5</span><span>Muasır dönemde yazılmış eserler</span></h4>
+  <div class="kisim-govde">
+    <p>Günümüzde Usûlu't-Tefsîr alanında müstakil eserlerin yazılması yaygınlaşmıştır. Bu eserlerin en meşhurlarından bazıları şunlardır:</p>
+    <ul class="madde">
+      <li><strong>Şeyh Muhammed bin Sâlih el-Useymîn rahimehullah:</strong> Usûl fi't-Tefsîr <span class="ar-par">(<span class="ar-ic" dir="rtl">أُصُولٌ فِي التَّفْسِيرِ</span>)</span> adlı eseri.</li>
+      <li><strong>Dr. Musâ'id bin Suleymân et-Tayyâr:</strong> Fusûl fî Usûli't-Tefsîr <span class="ar-par">(<span class="ar-ic" dir="rtl">فُصُولٌ فِي أُصُولِ التَّفْسِيرِ</span>)</span> adlı eseri. Bu kitabın ilk baskısı hicrî 1413 / miladi 1993 yılında yayımlanmıştır. Daha sonra müellif, bu alandaki çalışmalarını genişleterek başka eserler de kaleme almıştır. Bunlardan biri et-Tahrîr fî Usûli't-Tefsîr <span class="ar-par">(<span class="ar-ic" dir="rtl">التَّحْرِيرُ فِي أُصُولِ التَّفْسِيرِ</span>)</span> adlı kitabıdır.</li>
+    </ul>
+  </div>
+
+
+
+  <h3 class="altbolum" id="mesele-9"><span class="no">9</span>Bu ilme Usûlu't-Tefsîr ismini kim vermiştir?</h3>
+
+  <p>Bu ilim, sonraki dönemlerde yazılan eserlerde Usûlu't-Tefsîr <span class="ar-par">(<span class="ar-ic" dir="rtl">أُصُولُ التَّفْسِيرِ</span>)</span> ismiyle meşhur olmuştur.</p>
+  <p>Bu ismi taşıyan en meşhur eserlerden biri, Şeyhu'l-İslâm İbn Teymiyye rahimehullah'a nispet edilen Mukaddime fî Usûli't-Tefsîr adlı eserdir.</p>
+
+  <div class="notkutu">
+    <span class="not-etiket">Tenbih</span>
+    <p>Ancak bu ilme Usûlu't-Tefsîr ismini ilk veren kişinin İbn Teymiyye olduğunu kesin olarak söylemek doğru değildir.</p>
+    <ul class="madde">
+      <li>Çünkü bu ismi ilk kullanan kişinin kim olduğunu tespit etmek için daha önce yazılmış eserlerin ve yazma nüshaların kapsamlı bir şekilde incelenmesi gerekir.</li>
+      <li>Ayrıca İbn Teymiyye'nin Mukaddime fî Usûli't-Tefsîr adıyla meşhur olan eserinin ismi de araştırılmalıdır. Bu ismi bizzat İbn Teymiyye mi vermiştir, yoksa eser daha sonraki dönemlerde mi bu isimle meşhur olmuştur?</li>
+    </ul>
+  </div>
+
+
+
+  <h3 class="altbolum" id="mesele-10"><span class="no">10</span>Bu ilme verilen isimler nelerdir?</h3>
+
+  <p>Bu ilim, âlimlerin eserlerinde birbirine yakın çeşitli isimlerle anılmıştır. Bunların en meşhurları şunlardır:</p>
+
+  <h4 class="kisim"><span class="no">1</span><span>Usûlu't-Tefsîr <span class="lafz-ar" dir="rtl">أُصُولُ التَّفْسِيرِ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Bu ilmin en yaygın ismidir. Allah Teâlâ'nın kelamını doğru bir şekilde anlamak ve tefsir etmek için takip edilmesi gereken yöntemi belirleyen kaide ve esasları ifade eder.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Kavâidu't-Tefsîr <span class="lafz-ar" dir="rtl">قَوَاعِدُ التَّفْسِيرِ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Kur'ân'ı tefsir ederken ve farklı görüşler arasında tercih yaparken başvurulan küllî kaideleri ifade eder.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Ulûmu't-Tefsîr <span class="lafz-ar" dir="rtl">عُلُومُ التَّفْسِيرِ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Bazen Usûlu't-Tefsîr ile yakın anlamda kullanılır. Ancak kimi zaman ondan daha geniş bir anlam taşır.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">4</span><span>Menâhicu'l-Mufessirîn <span class="lafz-ar" dir="rtl">مَنَاهِجُ الْمُفَسِّرِينَ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Bu isim daha özel bir alanı ifade eder. Çünkü müfessirlerin tefsirde takip ettikleri yöntemleri, üsluplarını ve başvurdukları kaynakları inceler. Dolayısıyla Usûlu't-Tefsîr ile aynı şey değildir.</p>
+  </div>
+
+
+
+  <h3 class="altbolum" id="mesele-11"><span class="no">11</span>Usûlu't-Tefsîr ile Usûlu'l-Fıkh arasındaki fark nedir?</h3>
+
+  <p>Bu iki ilim arasında hem ortak noktalar hem de bazı farklılıklar bulunmaktadır.</p>
+
+  <h4 class="kisim"><span class="no">1</span><span>Birinci fark: İki ilmin konusu ve gayesi</span></h4>
+  <div class="kisim-govde">
+    <p><strong>Usûlu't-Tefsîr:</strong></p>
+    <div class="tanim">
+      <span class="tanim-etiket">Tanım</span>
+      <p class="ar">«هُوَ الْعِلْمُ بِالْقَوَاعِدِ وَالْأُصُولِ الَّتِي يُتَوَصَّلُ بِهَا إِلَى فَهْمِ كَلَامِ اللَّهِ تَعَالَى، وَبَيَانِ مَعَانِي الْقُرْآنِ، وَتَرْجِيحِ الْأَقْوَالِ فِي تَفْسِيرِهِ»</p>
+      <p class="tr">Allah Teâlâ'nın kelamını doğru anlamayı, Kur'ân'ın manalarını açıklamayı ve müfessirlerin farklı görüşleri arasında tercih yapmayı sağlayan kaideleri inceleyen ilimdir.</p>
+    </div>
+    <p>Bu ilmin temel gayesi, Kur'ân'ı doğru anlamak ve tefsir etmektir.</p>
+    <p>Ele aldığı konulardan bazıları şunlardır:</p>
+    <ul class="madde">
+      <li>Kur'ân'ın Kur'ân ile tefsir edilmesi.</li>
+      <li>Kur'ân'ın Sünnet ile tefsir edilmesi.</li>
+      <li>Sahâbe ve tâbiînin sözleri.</li>
+      <li>Esbâbu'n-Nuzûl (âyetlerin iniş sebepleri).</li>
+      <li>Siyak (bağlam).</li>
+      <li>Kıraatler ve Arap dili.</li>
+      <li>Müfessirlerin görüşleri arasında tercih yapma kaideleri.</li>
+    </ul>
+
+    <p><strong>Usûlu'l-Fıkh:</strong></p>
+    <div class="tanim">
+      <span class="tanim-etiket">Tanım</span>
+      <p class="ar">«هُوَ الْعِلْمُ بِالْقَوَاعِدِ الَّتِي يُتَوَصَّلُ بِهَا إِلَى اسْتِنْبَاطِ الْأَحْكَامِ الشَّرْعِيَّةِ الْعَمَلِيَّةِ مِنْ أَدِلَّتِهَا التَّفْصِيلِيَّةِ»</p>
+      <p class="tr">Tafsilî delillerden amelî şer'î hükümler çıkarmayı sağlayan kaideleri inceleyen ilimdir.</p>
+    </div>
+    <p>Bu ilmin temel gayesi, şer'î hükümlerin delillerden nasıl çıkarılacağını öğrenmektir.</p>
+    <p>Konusu ise Kitap, Sünnet, icmâ ve kıyas gibi fıkhın icmâlî delilleri ve bu delillerden nasıl istidlâl edileceğidir.</p>
+    <p>Ele aldığı konulardan bazıları şunlardır:</p>
+    <ul class="madde">
+      <li>Emir ve nehiy.</li>
+      <li>Âmm ve hâss.</li>
+      <li>Mutlak ve mukayyed.</li>
+      <li>Mucmel ve mubeyyen.</li>
+      <li>Kıyas ve icmâ.</li>
+      <li>Delâletu'l-Elfâz (lafızların delâletleri).</li>
+    </ul>
+    <p>Bu alandaki en meşhur ilk dönem eserlerinden biri, İmam Şâfiî rahimehullah'ın er-Risâle <span class="ar-par">(<span class="ar-ic" dir="rtl">الرِّسَالَةُ</span>)</span> adlı kitabıdır.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>İkinci fark: Kapsamlarının genişliği</span></h4>
+  <div class="kisim-govde">
+    <p>Usûlu'l-Fıkh, kullanım alanı bakımından Usûlu't-Tefsîr'den daha geniştir.</p>
+    <ul class="madde">
+      <li>Usûlu't-Tefsîr, yalnızca Kur'ân'ın manalarını anlamak ve onu tefsir etmekle ilgili kaideleri ele alır.</li>
+      <li>Usûlu'l-Fıkh ise Kur'ân, Sünnet, icmâ ve kıyas gibi delillerden şer'î hükümler çıkarmakla ilgili kaideleri ele alır.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>İki ilmin ortak noktaları</span></h4>
+  <div class="kisim-govde">
+    <p>Usûlu't-Tefsîr ile Usûlu'l-Fıkh, özellikle Delâletu'l-Elfâz konusunda birçok ortak meseleyi ele alır. Bunlardan bazıları şunlardır:</p>
+    <ul class="madde">
+      <li>Âmm ve hâss.</li>
+      <li>Mutlak ve mukayyed.</li>
+      <li>Emir ve nehiy.</li>
+      <li>Mucmel ve mubeyyen.</li>
+    </ul>
+    <p>Ancak bu meseleler, her iki ilimde farklı amaçlarla kullanılır:</p>
+    <ul class="madde">
+      <li>Müfessir, bu kaideleri âyetin manasını anlamak için kullanır.</li>
+      <li>Usûl âlimi ise bu kaideleri şer'î hükümleri çıkarmak için kullanır.</li>
+    </ul>
+
+    <p><strong>Aralarındaki farkı açıklayan bir örnek:</strong></p>
+    <p>Allah Teâlâ şöyle buyurmuştur:</p>
+    <div class="blok ayet">
+      <span class="soyleyen">Bakara Sûresi, 43. âyet</span>
+      <p class="ar">﴿وَأَقِيمُوا الصَّلَاةَ﴾</p>
+      <p class="tr">"Namazı dosdoğru kılın."</p>
+      <p class="kaynak">📚 Bakara, 43.</p>
+    </div>
+    <ul class="madde">
+      <li><strong>Usûlu't-Tefsîr:</strong> Âyetin manasını, siyakını ve Kur'ân ile Sünnet'te bu âyeti açıklayan diğer delilleri inceler.</li>
+      <li><strong>Usûlu'l-Fıkh:</strong> Âyetteki <span class="ar-ic" dir="rtl">﴿أَقِيمُوا﴾</span> ifadesinin emir sîgasını inceler. Bu emrin vucûb ifade edip etmediğini ve buradan hangi şer'î hükümlerin çıkarılabileceğini araştırır.</li>
+    </ul>
+  </div>
+
+
+
+  <h3 class="altbolum" id="mesele-12"><span class="no">12</span>Usûlu't-Tefsîr ile tefsir arasındaki fark nedir?</h3>
+
+  <p>Usûlu't-Tefsîr ile tefsir arasında güçlü bir ilişki bulunmakla birlikte, konu ve gayeleri bakımından bazı farklılıklar vardır.</p>
+
+  <h4 class="kisim"><span class="no">1</span><span>Tefsir</span></h4>
+  <div class="kisim-govde">
+    <div class="tanim">
+      <span class="tanim-etiket">Tanım</span>
+      <p class="ar">«هُوَ بَيَانُ مَعَانِي كَلَامِ اللَّهِ تَعَالَى، وَالْكَشْفُ عَنِ الْمُرَادِ مِنَ الْآيَاتِ بِحَسَبِ مَا تَدُلُّ عَلَيْهِ الْأَدِلَّةُ»</p>
+      <p class="tr">Allah Teâlâ'nın kelamının manalarını açıklamak ve delillere dayanarak âyetlerden kastedilen manayı ortaya koymaktır.</p>
+    </div>
+    <p>Bir müfessir, bir âyetin manasını ve o âyetle neyin kastedildiğini açıkladığında buna tefsir denir.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Usûlu't-Tefsîr</span></h4>
+  <div class="kisim-govde">
+    <div class="tanim">
+      <span class="tanim-etiket">Tanım</span>
+      <p class="ar">«هِيَ الْقَوَاعِدُ وَالضَّوَابِطُ وَالْمَصَادِرُ الَّتِي يَعْتَمِدُ عَلَيْهَا الْمُفَسِّرُ فِي فَهْمِ الْقُرْآنِ الْكَرِيمِ وَتَفْسِيرِهِ تَفْسِيرًا صَحِيحًا، وَالتَّرْجِيحِ بَيْنَ أَقْوَالِ الْمُفَسِّرِينَ»</p>
+      <p class="tr">Kur'ân'ı doğru anlamak, tefsir etmek ve müfessirlerin görüşleri arasında tercih yapmak için başvurulan kaideler, ölçüler ve kaynaklardır.</p>
+    </div>
+    <p>Bunlardan bazıları şunlardır:</p>
+    <ul class="madde">
+      <li>Kur'ân'ın Kur'ân ile tefsir edilmesi.</li>
+      <li>Kur'ân'ın Sünnet ile tefsir edilmesi.</li>
+      <li>Selefin sözlerinin dikkate alınması.</li>
+      <li>Arap dili.</li>
+      <li>Siyak (bağlam).</li>
+      <li>Esbâbu'n-Nuzûl (âyetlerin iniş sebepleri).</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Aralarındaki ilişki</span></h4>
+  <div class="kisim-govde">
+    <p>Tefsir, elde edilen semere ve neticedir. Usûlu't-Tefsîr ise bu neticeye ulaşmayı sağlayan kaidelerdir.</p>
+    <p>Dolayısıyla:</p>
+    <ul class="madde">
+      <li>Tefsir şu soruya cevap verir: "Bu âyetin manası nedir?"</li>
+      <li>Usûlu't-Tefsîr ise şu sorulara cevap verir: "Bu âyetin doğru manasına nasıl ulaşırız ve hangi kaidelere dayanırız?"</li>
+    </ul>
+
+    <p><strong>Örnek:</strong></p>
+    <p>Bir müfessire Allah Teâlâ'nın şu âyetinin manası sorulduğunda:</p>
+    <div class="blok ayet">
+      <span class="soyleyen">Fâtiha Sûresi, 6. âyet</span>
+      <p class="ar">﴿اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ﴾</p>
+      <p class="tr">"Bizi dosdoğru yola ilet."</p>
+      <p class="kaynak">📚 Fâtiha, 6.</p>
+    </div>
+    <p>Şöyle cevap verir: "Sırât-ı müstakîm, Allah'ın rızasına ve cennetine ulaştıran hak yoldur. Bu yol, İslâm yoludur."</p>
+    <p>Bu, tefsirdir. Çünkü âyetin manasını açıklamaktadır.</p>
+    <p>Ancak müfessire "Bu manaya nasıl ulaştın?" diye sorulduğunda şöyle cevap verir: "Çünkü Nebevî Sünnet, sırât-ı müstakîmin İslâm olduğunu açıklamıştır."</p>
+    <p>Nitekim Nevvâs bin Sem'ân radıyallahu anh'tan rivayet edilen bir hadiste Nebî <span class="sav">ﷺ</span> şöyle buyurmuştur:</p>
+    <div class="blok hadis">
+      <span class="soyleyen">Nebî <span class="sav">ﷺ</span> buyurdu</span>
+      <p class="ar">«ضَرَبَ اللَّهُ مَثَلًا صِرَاطًا مُسْتَقِيمًا»</p>
+      <p class="tr">"Allah, dosdoğru bir yolu misal verdi."</p>
+      <p class="tr">Hadisin devamında ise şöyle buyurmuştur:</p>
+      <p class="ar">«وَالصِّرَاطُ الْإِسْلَامُ»</p>
+      <p class="tr">"Bu yol, İslâm'dır."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/25794/14134" target="_blank" rel="noopener">Ahmed, el-Musned, 17634</a>.</p>
+    </div>
+    <p>Bu, Usûlu't-Tefsîr'in uygulanmasına bir örnektir. Çünkü müfessir, Kur'ân'ı Sünnet ile tefsir etmiştir. Bu da tefsirde kabul edilen muteber yöntemlerden biridir.</p>
+  </div>
+
+  <div class="ozet">
+    <h4>Kısaca</h4>
+    <ul>
+      <li>Usûlu't-Tefsîr, âyetin manasına nasıl ulaşılacağını öğretir. Tefsir ise âyetin manasını açıklar.</li>
+      <li>Usûlu't-Tefsîr'in tefsirle olan ilişkisi, nahiv ilminin Arapça konuşma ve yazmayla olan ilişkisine benzer.</li>
+      <li>Nasıl ki nahiv ilmi, konuşmayı ve yazmayı belirli kaidelere bağlayarak kişiyi hatalardan koruyorsa, Usûlu't-Tefsîr de Allah'ın kelamını anlamayı belirli kaidelere bağlayarak müfessiri tefsirde hata yapmaktan korur.</li>
+      <li>Aynı durum, fıkıh ilmi ile onun kaideleri arasındaki ilişki için de geçerlidir.</li>
+    </ul>
+  </div>
+
+
+
+  <h3 class="altbolum" id="mesele-13"><span class="no">13</span>Usûlu't-Tefsîr ile Ulûmu'l-Kur'ân arasındaki fark nedir?</h3>
+
+  <p>Usûlu't-Tefsîr ile Ulûmu'l-Kur'ân arasında güçlü bir ilişki bulunsa da bu iki ilim aynı değildir.</p>
+
+  <h4 class="kisim"><span class="no">1</span><span>Usûlu't-Tefsîr daha özel bir ilimdir</span></h4>
+  <div class="kisim-govde">
+    <div class="tanim">
+      <span class="tanim-etiket">Tanım</span>
+      <p class="ar">«هِيَ الْقَوَاعِدُ وَالْأُصُولُ الَّتِي تَضْبِطُ فَهْمَ الْقُرْآنِ الْكَرِيمِ وَتَفْسِيرَهُ، وَتُعِينُ الْمُفَسِّرَ عَلَى الْوُصُولِ إِلَى الْمَعْنَى الصَّحِيحِ»</p>
+      <p class="tr">Kur'ân-ı Kerîm'i doğru anlamayı ve tefsir etmeyi sağlayan, müfessirin doğru manaya ulaşmasına yardımcı olan kaide ve esasları inceleyen ilimdir.</p>
+    </div>
+    <p>Bu ilmin temel konusu şu soruya cevap vermektir: "Kur'ân'ı nasıl doğru bir şekilde anlar ve tefsir ederiz?"</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Ulûmu'l-Kur'ân daha genel bir ilimdir</span></h4>
+  <div class="kisim-govde">
+    <div class="tanim">
+      <span class="tanim-etiket">Tanım</span>
+      <p class="ar">«هِيَ الْعُلُومُ وَالْمَبَاحِثُ الْمُتَعَلِّقَةُ بِالْقُرْآنِ الْكَرِيمِ مِنْ جِهَاتٍ مُتَعَدِّدَةٍ»</p>
+      <p class="tr">Kur'ân-ı Kerîm'i farklı yönlerden ele alan ilimleri ve meseleleri kapsar.</p>
+    </div>
+    <p>Bu konulardan bazıları şunlardır:</p>
+    <ul class="madde">
+      <li>Kur'ân'ın nüzulü (indirilişi).</li>
+      <li>Mekkî ve Medenî.</li>
+      <li>Esbâbu'n-Nuzûl (âyetlerin iniş sebepleri).</li>
+      <li>Kur'ân'ın cem edilmesi ve yazılması.</li>
+      <li>Kıraatler.</li>
+      <li>Nâsih ve Mensûh.</li>
+      <li>Muhkem ve Muteşâbih.</li>
+      <li>İ'câzu'l-Kur'ân (Kur'ân'ın mucize oluşu).</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>İki ilim arasındaki fark</span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Ulûmu'l-Kur'ân, ele aldığı konular bakımından daha geniştir. Çünkü Kur'ân ile ilgili birçok farklı meseleyi inceler.</li>
+      <li>Usûlu't-Tefsîr ise müfessirin Kur'ân'ı anlamak ve manalarını açıklamak için ihtiyaç duyduğu kaide ve yöntemlere odaklanır.</li>
+    </ul>
+    <p>Bununla birlikte iki ilim arasında ortak konular da bulunmaktadır. Çünkü Ulûmu'l-Kur'ân'ın bazı meseleleri, Kur'ân'ın tefsirinde de kullanılır. Esbâbu'n-Nuzûl, Nâsih ve Mensûh, Mekkî ve Medenî gibi konular bunlara örnektir.</p>
+
+    <p><strong>Aralarındaki farkı açıklayan bir örnek:</strong></p>
+    <ul class="madde">
+      <li>Bir sûrenin Mekkî veya Medenî olduğunu bilmek, Ulûmu'l-Kur'ân'ın konusudur.</li>
+      <li>Ancak bir âyetin Mekkî veya Medenî olmasından faydalanarak onun manasını anlamak veya tefsirindeki farklı görüşler arasında tercih yapmak, Usûlu't-Tefsîr'in konusuna girer.</li>
+    </ul>
+  </div>
+
+  <div class="ozet">
+    <h4>Sonuç olarak</h4>
+    <ul>
+      <li>Ulûmu'l-Kur'ân, Kur'ân'ı ve onunla ilgili meseleleri farklı yönlerden inceler. Usûlu't-Tefsîr ise Kur'ân'ı doğru anlamayı ve tefsir etmeyi sağlayan kaideleri ele alır.</li>
+      <li>Her iki ilim de Allah Teâlâ'nın kitabına hizmet eder. Ancak Ulûmu'l-Kur'ân ele aldığı konular bakımından daha genel, Usûlu't-Tefsîr ise tefsirdeki görevi bakımından daha özeldir.</li>
     </ul>
   </div>
 
@@ -970,5 +1471,29 @@
 </footer>
 
 </div>
+<script>
+(function(){
+  var b=document.body, perde=document.querySelector('.menu-perde');
+  function ac(){b.classList.add('menu-acik');}
+  function kapat(){b.classList.remove('menu-acik');}
+  document.querySelector('.menu-dugme').addEventListener('click',ac);
+  document.querySelector('.menu-kapat').addEventListener('click',kapat);
+  perde.addEventListener('click',kapat);
+  var linkler=[].slice.call(document.querySelectorAll('.menu a'));
+  linkler.forEach(function(a){a.addEventListener('click',kapat);});
+  var basliklar=linkler.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
+  function guncelle(){
+    var i=-1;
+    basliklar.forEach(function(h,k){ if(h.getBoundingClientRect().top<=window.innerHeight*0.3) i=k; });
+    linkler.forEach(function(a,k){a.classList.toggle('aktif',k===i);});
+    if(i>=0 && window.innerWidth>1180){
+      var a=linkler[i], m=document.querySelector('.menu'), r=a.getBoundingClientRect(), mr=m.getBoundingClientRect();
+      if(r.top<mr.top||r.bottom>mr.bottom) a.scrollIntoView({block:'nearest'});
+    }
+  }
+  window.addEventListener('scroll',guncelle,{passive:true});
+  guncelle();
+})();
+</script>
 </body>
 </html>
