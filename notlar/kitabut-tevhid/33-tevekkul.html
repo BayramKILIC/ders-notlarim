@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kitâbu't-Tevhîd — Tevekkül Bâbı</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#123a5f;
+    --navy-soft:#1d5183;
+    --ink:#20262e;
+    --ink-soft:#4a5462;
+    --paper:#fbfaf7;
+    --card:#ffffff;
+    --rule:#e2ddd3;
+
+    --green:#1e6b46;
+    --green-bg:#eef7f1;
+    --green-edge:#a8d3bb;
+
+    --amber:#8a5a12;
+    --amber-bg:#fdf5e6;
+    --amber-edge:#e2c184;
+
+    --blue:#1a4f80;
+    --blue-bg:#eef4fa;
+    --blue-edge:#a9c6e2;
+
+    --bordo:#75194c;
+    --bordo-bg:#fbf2f6;
+    --bordo-edge:#e3c3d4;
+
+    --red:#8d2f2f;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Source Serif 4","Cambria","Georgia",serif;
+    font-size:18px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .sayfa{
+    max-width:820px;
+    margin:0 auto;
+    padding:0 26px 90px;
+  }
+
+  /* ---------- KAPAK ---------- */
+  header.kapak{
+    color:var(--bordo);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:56px 0;
+    margin-bottom:60px;
+  }
+  header.kapak .marka{
+    font-size:.95rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:#d54220;
+    font-weight:600;
+    line-height:1.7;
+    max-width:26ch;
+  }
+  header.kapak .marka-cizgi{
+    width:120px;
+    height:1px;
+    background:var(--rule);
+    margin:26px auto 34px;
+  }
+  header.kapak h1{
+    font-size:clamp(3.3rem,9.5vw,5.8rem);
+    line-height:1.1;
+    color:var(--bordo);
+    margin:0;
+    font-weight:700;
+    letter-spacing:-.015em;
+    max-width:15ch;
+  }
+  header.kapak .altbaslik{
+    font-size:1.16rem;
+    color:var(--bordo);
+    font-style:italic;
+    margin:34px 0 0;
+    max-width:38ch;
+    line-height:1.7;
+  }
+  header.kapak .kunye{
+    margin-top:0;
+    padding-top:72px;
+    font-size:.94rem;
+    color:var(--bordo);
+    letter-spacing:.09em;
+  }
+  header.kapak .kapak-ayet{
+    max-width:540px;
+    margin:0 auto 10px;
+    font-size:1.04rem;
+    line-height:1.75;
+    letter-spacing:0;
+    font-style:italic;
+    color:var(--bordo);
+  }
+  header.kapak .kapak-ayet-kaynak{
+    margin:0;
+    font-size:.86rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  header.kapak .kunye .cizgi{
+    width:56px;
+    height:2px;
+    background:var(--bordo);
+    margin:0 auto 18px;
+  }
+  .besmele{
+    font-family:"Scheherazade New",serif;
+    font-size:2.5rem;
+    color:var(--bordo);
+    direction:rtl;
+    margin:0 0 46px;
+  }
+
+  /* ---------- NÂKID ---------- */
+  section.nakid{margin-bottom:70px;}
+
+  .nakid-baslik{
+    background:var(--navy);
+    color:#fff;
+    border-radius:4px;
+    padding:22px 28px;
+    margin-bottom:34px;
+  }
+  .nakid-baslik .etiket{
+    display:block;
+    font-size:.74rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    opacity:.72;
+    margin-bottom:8px;
+  }
+  .nakid-baslik h2{
+    margin:0;
+    font-size:1.42rem;
+    line-height:1.45;
+    font-weight:600;
+  }
+
+  /* ---------- METİN (müellifin sözü) ---------- */
+  .metin{
+    background:var(--bordo-bg);
+    border:1px solid var(--bordo-edge);
+    border-top:5px solid var(--bordo);
+    border-radius:4px;
+    padding:28px 32px 26px;
+    margin:0 0 20px;
+  }
+  .metin .metin-etiket{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px 12px;
+    font-size:.78rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--bordo);
+    margin-bottom:18px;
+  }
+  .metin .metin-etiket .rozet{
+    background:var(--bordo);
+    color:#fff;
+    padding:3px 11px;
+    border-radius:3px;
+    letter-spacing:.2em;
+  }
+  .metin .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:2rem;
+    line-height:2.1;
+    direction:rtl;
+    text-align:right;
+    color:var(--bordo);
+    margin:0 0 18px;
+  }
+  .metin .tr{
+    margin:0;
+    padding-top:16px;
+    border-top:1px dotted var(--bordo-edge);
+    font-size:1.06rem;
+  }
+
+  /* ---------- ŞERH AYRACI ---------- */
+  .serh-ayrac{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin:54px 0 10px;
+    color:var(--navy);
+  }
+  .serh-ayrac::before,.serh-ayrac::after{
+    content:"";
+    flex:1;
+    height:2px;
+    background:var(--navy-soft);
+    opacity:.35;
+  }
+  .serh-ayrac span{
+    font-size:1.05rem;
+    font-weight:700;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+  }
+
+  h3.altbolum{
+    font-size:1.55rem;
+    line-height:1.4;
+    color:var(--navy);
+    margin:60px 0 20px;
+    padding-bottom:12px;
+    border-bottom:3px solid var(--rule);
+    font-weight:700;
+  }
+  h3.altbolum .no{
+    display:inline-block;
+    min-width:38px;
+    height:38px;
+    line-height:38px;
+    text-align:center;
+    background:var(--navy-soft);
+    color:#fff;
+    border-radius:50%;
+    font-size:1rem;
+    margin-right:13px;
+    vertical-align:3px;
+  }
+
+  p{margin:0 0 17px;}
+
+  h4.kisim{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:1.2rem;
+    color:var(--navy-soft);
+    margin:34px 0 12px;
+    font-weight:700;
+  }
+  h4.kisim .no{
+    flex:0 0 auto;
+    width:28px;
+    height:28px;
+    line-height:25px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    background:var(--card);
+    font-size:.82rem;
+  }
+  .kisim-govde{
+    border-left:2px solid var(--rule);
+    margin-left:13px;
+    padding-left:27px;
+  }
+
+  .delil{
+    display:grid;
+    grid-template-columns:34px 1fr;
+    gap:0 18px;
+    margin:30px 0;
+    padding-bottom:8px;
+    border-bottom:1px dotted var(--rule);
+  }
+  .delil:last-of-type{border-bottom:none;}
+  .delil > .no{
+    width:34px;
+    height:34px;
+    line-height:34px;
+    text-align:center;
+    border-radius:50%;
+    background:var(--navy);
+    color:#fff;
+    font-size:.88rem;
+    font-weight:700;
+    margin-top:2px;
+  }
+  .delil > .govde > .blok:first-child{margin-top:0;}
+  .delil-etiket{
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--navy);
+    margin:6px 0 12px;
+  }
+  .delil > .govde > .delil-etiket + .blok{margin-top:0;}
+
+  .ikaz{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-left:5px solid var(--red);
+    border-radius:4px;
+    padding:20px 26px 6px;
+    margin:28px 0;
+  }
+  .ikaz .ikaz-etiket{
+    display:block;
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--red);
+    margin-bottom:10px;
+  }
+  .ikaz ol.sayili{margin:10px 0 14px;}
+  ol.sayili li p.alt-tanim{margin:10px 0 0;padding-left:14px;border-left:2px solid var(--rule);}
+  ol.sayili > li > p{margin:12px 0 0;}
+  ol.sayili li .blok{margin:16px 0 8px;}
+  ul.madde li .blok{margin:14px 0 8px;}
+  ol.sayili > li ul.madde{margin:12px 0 4px;}
+  h4.kisim .baslik-alt{font-weight:400;color:var(--ink);}
+  h4.kisim .lafz-ar{font-family:"Scheherazade New",serif;font-weight:700;font-size:1.08em;line-height:1;color:var(--bordo);margin-left:8px;white-space:nowrap;}
+  .ar-ic{font-family:"Scheherazade New",serif;font-size:1.25em;line-height:1;unicode-bidi:isolate;display:inline-block;white-space:nowrap;}
+  .lafz{margin:22px 0;text-align:center;}
+  .lafz .ar-buyuk{display:block;font-family:"Scheherazade New",serif;font-size:1.7rem;line-height:1.9;color:var(--bordo);}
+  .lafz .lafz-tr{display:block;margin-top:2px;color:var(--ink-soft);}
+  .bolum-baslik{
+    margin:60px 0 28px;
+    padding:15px 18px;
+    text-align:center;
+    font-size:1.3rem;
+    font-weight:700;
+    line-height:1.4;
+    color:var(--navy);
+    background:var(--card);
+    border-top:2px solid var(--navy-soft);
+    border-bottom:2px solid var(--navy-soft);
+  }
+  .notkutu{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--navy-soft);border-radius:3px;padding:22px 24px 6px;margin:32px 0;}
+  .notkutu .not-etiket{display:block;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--navy-soft);margin-bottom:12px;}
+  ul.ikili{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:9px 30px;list-style:none;margin:26px 0;padding:0;}
+  ul.ikili li{position:relative;padding-left:18px;line-height:1.7;}
+  ul.ikili li::before{content:"";position:absolute;left:0;top:11px;width:6px;height:6px;background:var(--navy-soft);transform:rotate(45deg);}
+
+  /* ---------- VURGU ---------- */
+  .vurgu{
+    font-size:1.24rem;
+    line-height:1.7;
+    color:var(--navy);
+    font-weight:600;
+    border-left:4px solid var(--navy-soft);
+    padding:6px 0 6px 20px;
+    margin:30px 0;
+  }
+  .vurgu-buyuk{
+    font-size:1.42rem;
+    line-height:1.6;
+    text-align:center;
+    color:var(--navy);
+    font-weight:700;
+    margin:38px 0;
+    padding:26px 22px;
+    background:var(--card);
+    border-top:2px solid var(--navy-soft);
+    border-bottom:2px solid var(--navy-soft);
+  }
+  strong{color:var(--navy);font-weight:700;}
+  .sav{font-family:"Scheherazade New",serif;font-size:1.2em;line-height:1;font-weight:400;}
+
+  /* ---------- ALINTI BLOKLARI ---------- */
+  .blok{
+    border-radius:4px;
+    padding:22px 26px;
+    margin:26px 0;
+    border-left-width:5px;
+    border-left-style:solid;
+  }
+  .blok .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:1.75rem;
+    line-height:2.05;
+    direction:rtl;
+    text-align:right;
+    margin-bottom:14px;
+  }
+  .blok .tr{margin:0 0 12px;}
+  .blok .kaynak{
+    font-size:.9rem;
+    color:var(--ink-soft);
+    font-style:italic;
+    margin:0;
+    padding-top:10px;
+    border-top:1px dotted currentColor;
+  }
+  .blok .soyleyen{
+    display:block;
+    font-size:.79rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:600;
+    margin-bottom:13px;
+  }
+
+  .ayet{background:var(--green-bg);border-left-color:var(--green-edge);}
+  .ayet .ar,.ayet .soyleyen{color:var(--green);}
+
+  .alim{background:var(--amber-bg);border-left-color:var(--amber-edge);}
+  .alim .ar,.alim .soyleyen{color:var(--amber);}
+
+  .hadis{background:var(--blue-bg);border-left-color:var(--blue-edge);}
+  .hadis .ar,.hadis .soyleyen{color:var(--blue);}
+
+  /* ---------- LİSTELER ---------- */
+  ul.madde{
+    list-style:none;
+    padding:0;
+    margin:20px 0;
+  }
+  ul.madde li{
+    position:relative;
+    padding:7px 0 7px 26px;
+  }
+  ul.madde li::before{
+    content:"◆";
+    position:absolute;
+    left:2px;
+    color:var(--navy-soft);
+    font-size:.68rem;
+    top:12px;
+  }
+
+  ul.madde.yildiz{margin:22px 0;}
+  ul.madde.yildiz > li{padding:10px 0 10px 28px;}
+  ul.madde.yildiz > li::before{
+    content:"✦";
+    left:0;
+    color:var(--amber);
+    font-size:.85rem;
+    top:9px;
+  }
+  ul.madde.yildiz > li + li{border-top:1px solid var(--rule);}
+  ul.madde.yildiz > li .notkutu{margin:14px 0 4px;}
+
+  ol.sayili{
+    list-style:none;
+    counter-reset:sira;
+    padding:0;
+    margin:22px 0;
+  }
+  ol.sayili > li{
+    counter-increment:sira;
+    position:relative;
+    padding:10px 0 10px 46px;
+    border-bottom:1px dotted var(--rule);
+  }
+  ol.sayili > li:last-child{border-bottom:none;}
+  ol.sayili > li::before{
+    content:counter(sira);
+    position:absolute;
+    left:0;
+    top:13px;
+    width:30px;
+    height:30px;
+    line-height:27px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    color:var(--navy-soft);
+    background:var(--card);
+    font-size:.84rem;
+    font-weight:700;
+  }
+
+  /* ---------- ÖZET ---------- */
+  .ozet{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-top:4px solid var(--navy);
+    border-radius:4px;
+    padding:26px 30px;
+    margin-top:34px;
+  }
+  .ozet h4{
+    margin:0 0 16px;
+    color:var(--navy);
+    font-size:1.06rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+  .ozet ul{margin:0;padding-left:22px;}
+  .ozet li{margin-bottom:11px;}
+  .ozet li:last-child{margin-bottom:0;}
+
+  .ayirac{
+    text-align:center;
+    color:var(--rule);
+    letter-spacing:.5em;
+    margin:38px 0;
+    font-size:.8rem;
+  }
+
+  footer{
+    margin-top:70px;
+    padding-top:26px;
+    border-top:3px double var(--rule);
+    text-align:center;
+    color:#d54220;
+    font-size:.9rem;
+  }
+  footer .marka{
+    font-size:1rem;
+    color:#d54220;
+    font-weight:600;
+    letter-spacing:.1em;
+    margin-bottom:6px;
+  }
+
+  @media (max-width:620px){
+    body{font-size:16.5px;}
+    .sayfa{padding:0 16px 60px;}
+    header.kapak h1{font-size:2.8rem;}
+    .besmele{font-size:2rem;}
+    .nakid-baslik h2{font-size:1.16rem;}
+    h3.altbolum{font-size:1.3rem;margin:48px 0 16px;}
+    h3.altbolum .no{min-width:32px;height:32px;line-height:32px;font-size:.9rem;}
+    .metin{padding:22px 18px 20px;}
+    .metin .ar{font-size:1.65rem;line-height:2;}
+    .blok{padding:18px 18px;}
+    .ikaz{padding:18px 18px 4px;}
+    .kisim-govde{margin-left:0;padding-left:14px;}
+    .delil{grid-template-columns:28px 1fr;gap:0 10px;}
+    .delil > .no{width:28px;height:28px;line-height:28px;font-size:.8rem;}
+    .blok .ar{font-size:1.5rem;line-height:1.95;}
+    .vurgu-buyuk{font-size:1.18rem;padding:20px 16px;}
+    .vurgu{font-size:1.1rem;}
+  }
+
+  @media print{
+    @page{margin:18mm 16mm;}
+    body{background:#fff;font-size:11.5pt;}
+    .sayfa{max-width:none;padding:0;}
+    section.nakid{page-break-before:always;}
+    section.nakid:first-of-type{page-break-before:auto;}
+    .ayirac{display:none;}
+    header.kapak{
+      min-height:238mm;
+      page-break-after:always;
+      margin-bottom:0;
+    }
+    header.kapak h1{font-size:54pt;}
+    .besmele{font-size:26pt;}
+    section.nakid{page-break-inside:auto;}
+    .nakid-baslik{page-break-after:avoid;background:var(--navy) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .metin,.blok,.ozet,.vurgu-buyuk{page-break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    h3.altbolum,.serh-ayrac{page-break-after:avoid;}
+  }
+</style>
+<style>.sayfa > section.nakid:first-of-type{margin-top:32px;}</style>
+</head>
+<body>
+<div class="sayfa">
+
+
+<!-- ================= BÂB ================= -->
+<section class="nakid">
+  <div class="nakid-baslik">
+    <span class="etiket">Kitâbu't-Tevhîd</span>
+    <h2>Bâbu kavlillâhi teâlâ: Ve alallâhi fe tevekkelû</h2>
+  </div>
+
+  <!-- ---------- METİN ---------- -->
+  <div class="metin">
+    <div class="metin-etiket"><span class="rozet">Bâb</span>Müellif rahimehullah dedi ki</div>
+    <p class="ar">«بَابُ قَوْلِ اللَّهِ تَعَالَى: ﴿وَعَلَى اللَّهِ فَتَوَكَّلُوا إِنْ كُنْتُمْ مُؤْمِنِينَ﴾ [المائدة: ٢٣]»</p>
+    <p class="tr">Allah Teâlâ'nın "Eğer müminler iseniz yalnızca Allah'a tevekkül edin." buyruğu hakkında bâb. (Mâide, 23)</p>
+  </div>
+
+  <!-- ---------- ŞERH ---------- -->
+  <div class="serh-ayrac"><span>Şerh</span></div>
+
+  <div class="bolum-baslik">Bâb için önsöz</div>
+
+
+  <h3 class="altbolum"><span class="no">1</span>Bu bâbın Kitâbu't-Tevhîd ile alakası</h3>
+
+  <p>Tevekkül <span class="ar-ic" dir="rtl">(التَّوَكُّلُ)</span>, Allah'ın farz kıldığı en büyük ibadetlerden ve tevhidin en yüksek makamlarından biridir.</p>
+
+  <p>Bu nedenle kişi, ibadet olan tevekkülü yalnızca Allah'a yöneltmelidir. Kim bu tevekkülü Allah'tan başkasına sarf ederse şirk koşmuş olur.</p>
+
+
+  <h3 class="altbolum"><span class="no">2</span>Müellif, muhabbet ve havf bâblarından sonra neden tevekkül bâbını zikretmiştir?</h3>
+
+  <p>Çünkü insan Allah'ı sevip O'ndan korktuğunda, bunun meyvelerinden biri de Allah'a tevekkül etmesidir.</p>
+
+  <div class="vurgu">Muhabbet ve havf, tevekkülü gerektirir.</div>
+
+
+  <h3 class="altbolum"><span class="no">3</span>Müellif bu bâb başlığıyla neyi açıklamak istemiştir?</h3>
+
+  <p>Müellif, tevekkül ibadetinin ihlâsla yalnızca Allah'a yöneltilmesinin vacip ve farz olduğunu açıklamak istemiştir. Âlimler tevekkülün dindeki yerini şöyle beyan etmişlerdir:</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">İbnu'l-Kayyim rahimehullah (v. 751)</span>
+    <p class="ar">«فَالتَّوَكُّلُ أَصْلٌ لِجَمِيعِ مَقَامَاتِ الْإِيمَانِ وَالْإِحْسَانِ، وَلِجَمِيعِ أَعْمَالِ الْإِسْلَامِ، وَأَنَّ مَنْزِلَتَهُ مِنْهَا مَنْزِلَةُ الْجَسَدِ مِنَ الرَّأْسِ»</p>
+    <p class="tr">"Tevekkül, imanın ve ihsanın bütün makamlarının ve İslâm'ın bütün amellerinin temelidir. Tevekkülün bunlar arasındaki konumu, bedenin başa olan konumu gibidir."</p>
+    <p class="kaynak">📚 İbnu'l-Kayyim, Tarîku'l-Hicreteyn ve Bâbu's-Sa'âdeteyn, s. 258.</p>
+  </div>
+
+  <div class="blok alim">
+    <span class="soyleyen">İbn Hibbân rahimehullah (v. 354)</span>
+    <p class="ar">«التَّوَكُّلُ هُوَ نِظَامُ الْإِيمَانِ، وَقَرِينُ التَّوْحِيدِ»</p>
+    <p class="tr">"Tevekkül, imanı ayakta tutan esas ve tevhidin ayrılmaz bir parçasıdır."</p>
+    <p class="kaynak">📚 İbn Hibbân, Ravdatu'l-Ukalâ ve Nuzhetu'l-Fudalâ, tevekkül bölümü.</p>
+  </div>
+
+  <div class="blok alim">
+    <span class="soyleyen">Saîd bin Cubeyr rahimehullah (v. 95)</span>
+    <p class="ar">«التَّوَكُّلُ عَلَى اللَّهِ جِمَاعُ الْإِيمَانِ»</p>
+    <p class="tr">"Allah'a tevekkül etmek, imanın bütününü kendisinde toplayan bir esastır."</p>
+    <p class="kaynak">📚 Ahmed bin Hanbel, ez-Zuhd, 103.</p>
+  </div>
+
+  <p>İbnu'l-Kayyim rahimehullah, tevekkülün din içindeki yerini şöyle açıklamıştır:</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">İbnu'l-Kayyim rahimehullah (v. 751)</span>
+    <p class="ar">«التَّوَكُّلُ نِصْفُ الدِّينِ، وَالنِّصْفُ الثَّانِي الْإِنَابَةُ، فَإِنَّ الدِّينَ اسْتِعَانَةٌ وَعِبَادَةٌ، فَالتَّوَكُّلُ هُوَ الِاسْتِعَانَةُ، وَالْإِنَابَةُ هِيَ الْعِبَادَةُ»</p>
+    <p class="tr">"Tevekkül dinin yarısıdır, diğer yarısı ise inâbedir. Çünkü din, Allah'tan yardım istemek ve O'na ibadet etmekten oluşur. Tevekkül, Allah'tan yardım istemektir. İnâbe ise Allah'a ibadet etmektir."</p>
+    <p class="kaynak">📚 İbnu'l-Kayyim, Medâricu's-Sâlikîn, tevekkül menzilesi.</p>
+  </div>
+
+  <h3 class="altbolum"><span class="no">4</span>Tevekkülün şer'î manası nedir?</h3>
+
+  <p>İbn Receb rahimehullah tevekkülün hakikatini şöyle tarif etmiştir:</p>
+
+  <div class="blok alim">
+    <span class="soyleyen">İbn Receb rahimehullah (v. 795)</span>
+    <p class="ar">«وَحَقِيقَةُ التَّوَكُّلِ: هُوَ صِدْقُ اعْتِمَادِ الْقَلْبِ عَلَى اللَّهِ عَزَّ وَجَلَّ فِي اسْتِجْلَابِ الْمَصَالِحِ، وَدَفْعِ الْمَضَارِّ مِنْ أُمُورِ الدُّنْيَا وَالْآخِرَةِ كُلِّهَا»</p>
+    <p class="tr">"Tevekkül, dünya ve âhiretle ilgili bütün işlerde faydaları elde etmek ve zararları gidermek için kalbin Allah Azze ve Celle'ye samimi ve gerçek bir şekilde dayanmasıdır."</p>
+    <p class="kaynak">📚 İbn Receb, Câmi'u'l-Ulûm ve'l-Hikem, 2/497.</p>
+  </div>
+
+  <p>Bazı âlimler bu tanımın sonuna şu ifadeyi eklemişlerdir:</p>
+
+  <div class="lafz">
+    <span class="ar-buyuk" dir="rtl">مَعَ الْأَخْذِ بِالْأَسْبَابِ الْمَشْرُوعَةِ</span>
+    <span class="lafz-tr">"Meşru sebeplere başvurmakla birlikte."</span>
+  </div>
+
+  <p>Böylece tevekkülün tanımı şu şekilde olur:</p>
+
+  <div class="vurgu-buyuk">Tevekkül, dünya ve âhiretle ilgili bütün işlerde faydaları elde etmek ve zararları gidermek için, meşru sebeplere başvurmakla birlikte, kalbin Allah'a samimi ve gerçek bir şekilde dayanmasıdır.</div>
+
+  <h3 class="altbolum"><span class="no">5</span>Bazı meseleler</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Birinci mesele <span class="baslik-alt">&mdash; İbadet ve tevekkül kelimelerinin birlikte ve ayrı kullanılması</span></span></h4>
+  <div class="kisim-govde">
+    <p>İbn Teymiyye rahimehullah, <em>Mecmû'u'l-Fetâvâ</em> adlı eserinde, bazı kelimelerin birlikte veya ayrı zikredilmelerine göre manalarının değişebileceğini açıklamıştır. Bu konuda meşhur kaide şöyledir:</p>
+
+    <div class="lafz">
+      <span class="ar-buyuk" dir="rtl">إِذَا اجْتَمَعَا افْتَرَقَا، وَإِذَا افْتَرَقَا اجْتَمَعَا</span>
+      <span class="lafz-tr"><em>İzâ'cteme'â ifterakâ, ve izâ'fterakâ'cteme'â.</em><br>"İki kelime birlikte zikredildiğinde manaları ayrılır, ayrı ayrı zikredildiğinde ise manaları birleşir."</span>
+    </div>
+
+    <p><strong>1. İbadet ve tevekkülün birlikte zikredilmesi.</strong> Allah Teâlâ şöyle buyurmuştur:</p>
+
+    <div class="blok ayet">
+      <span class="soyleyen">Hûd Sûresi, 123. âyet</span>
+      <p class="ar">﴿فَاعْبُدْهُ وَتَوَكَّلْ عَلَيْهِ﴾</p>
+      <p class="tr">"Öyleyse O'na ibadet et ve O'na tevekkül et."</p>
+      <p class="kaynak">📚 Hûd, 123.</p>
+    </div>
+
+    <p>Tevekkül, ibadetin bir çeşididir. Ancak bu âyette ibadetle birlikte ayrıca zikredilmiştir. Bunun sebebi, tevekkülün önemini ve ibadetler arasındaki özel konumunu göstermektir.</p>
+
+    <p><strong>2. İbadetin tek başına zikredilmesi.</strong> Allah Teâlâ şöyle buyurmuştur:</p>
+
+    <div class="blok ayet">
+      <span class="soyleyen">Fâtiha Sûresi, 5. âyet</span>
+      <p class="ar">﴿إِيَّاكَ نَعْبُدُ﴾</p>
+      <p class="tr">"Yalnızca Sana ibadet ederiz."</p>
+      <p class="kaynak">📚 Fâtiha, 5.</p>
+    </div>
+
+    <p>Bu âyette ibadet genel manada zikredilmiştir. Dolayısıyla tevekkül de bu ibadetin kapsamına girer.</p>
+
+    <div class="ozet">
+      <p>Yani "Yalnızca Sana ibadet ederiz." ifadesinin içerisinde, "Yalnızca Sana tevekkül ederiz." manası da bulunmaktadır.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>İkinci mesele <span class="baslik-alt">&mdash; Tevekkül ibadetinin tahkik edilmesi için gerekli dört husus</span></span></h4>
+  <div class="kisim-govde">
+    <ol class="sayili">
+      <li><strong>Rubûbiyetin manalarını ve Allah'ın fiilî sıfatlarını tahkik etmek</strong> <span class="ar-ic" dir="rtl" style="white-space:normal">(تَحْقِيقُ مَعَانِي الرُّبُوبِيَّةِ وَصِفَاتِ الْأَفْعَالِ)</span>
+        <p>Kişi, fayda ve zararın yalnızca Allah'ın elinde olduğunu, her şeyin O'nun iradesi ve kudreti altında bulunduğunu bilirse Allah'a olan tevekkülü güçlenir. Dolayısıyla Allah'ın rubûbiyetini ve fiilî sıfatlarını tahkik etmek, tevekkülü de güçlendirir.</p>
+      </li>
+      <li><strong>Kulların ellerindekine göz dikmemek ve onlardan müstağni olmak</strong>
+        <p>Kişi, insanların ellerindekine göz dikmez ve onlardan bir şey beklemez. Bilakis ihtiyaçlarını yalnızca Allah'tan bekler ve O'na dayanır. İmam Makrîzî rahimehullah şöyle demiştir:</p>
+        <div class="blok alim">
+          <span class="soyleyen">Takiyyuddîn el-Makrîzî rahimehullah (v. 845)</span>
+          <p class="ar">«فَإِنَّ التَّوْحِيدَ حَقِيقَتُهُ أَنْ تَرَى الْأُمُورَ كُلَّهَا مِنَ اللَّهِ تَعَالَى رُؤْيَةً تَقْطَعُ الِالْتِفَاتَ إِلَى الْأَسْبَابِ وَالْوَسَائِطِ، فَلَا تَرَى الْخَيْرَ وَالشَّرَّ إِلَّا مِنْهُ تَعَالَى، وَهَذَا الْمَقَامُ يُثْمِرُ التَّوَكُّلَ»</p>
+          <p class="tr">"Çünkü tevhidin hakikati, bütün işlerin Allah Teâlâ'dan geldiğini bilmek ve sebeplere ve vasıtalara kalben bağlanmayı bırakmaktır. Böylece kişi, hayrın ve şerrin yalnızca Allah'tan geldiğini bilir. İşte bu makam, tevekkülü meydana getirir."</p>
+          <p class="kaynak">📚 el-Makrîzî, Tecrîdu't-Tevhîdi'l-Mufîd, s. 6.</p>
+        </div>
+      </li>
+      <li><strong>Allah'a hüsnüzan beslemek ve O'na tam olarak güvenmek</strong>
+        <p>Kişi, Allah hakkında hüsnüzan sahibi olur, O'na tam bir güven duyar ve bütün işlerinde yalnızca O'na dayanır.</p>
+      </li>
+      <li><strong>Kadere iman etmek</strong>
+        <p>Kişi, her şeyin Allah'ın takdiriyle gerçekleştiğini ve meydana gelen bütün olayların O'nun takdiri altında olduğunu bilir. Böylece kadere olan imanı, Allah'a tevekkül etmesini güçlendirir.</p>
+        <div class="blok alim">
+          <span class="soyleyen">İbnu'l-Kayyim rahimehullah (v. 751)</span>
+          <p class="ar">«وَالْإِيمَانُ بِالْقَدَرِ يُثْمِرُ التَّوَكُّلَ»</p>
+          <p class="tr">"Kadere iman etmek, tevekkülü meydana getirir."</p>
+          <p class="kaynak">📚 İbnu'l-Kayyim, Medâricu's-Sâlikîn, 2/30.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Üçüncü mesele <span class="baslik-alt">&mdash; Tevekkül, kalbin ilmi ve ameliyle gerçekleşir</span></span></h4>
+  <div class="kisim-govde">
+    <p>İbnu'l-Kayyim rahimehullah, <em>Tarîku'l-Hicreteyn</em> adlı eserinde şöyle demiştir:</p>
+
+    <div class="blok alim">
+      <span class="soyleyen">İbnu'l-Kayyim rahimehullah (v. 751)</span>
+      <p class="ar">«فَإِنَّ التَّوَكُّلَ يَجْمَعُ أَصْلَيْنِ: عِلْمَ الْقَلْبِ وَعَمَلَهُ»</p>
+      <p class="tr">"Şüphesiz tevekkül, iki esası bir araya getirir: kalbin ilmi ve kalbin ameli."</p>
+      <p class="kaynak">📚 İbnu'l-Kayyim, Tarîku'l-Hicreteyn ve Bâbu's-Sa'âdeteyn.</p>
+    </div>
+
+    <ol class="sayili">
+      <li><strong>Kalbin ilmi</strong> <span class="ar-ic" dir="rtl">(عِلْمُ الْقَلْبِ)</span>
+        <p>Bu, yakîndir. Kişinin Allah'ın kendisine yeterli olduğuna, işlerini en mükemmel şekilde idare ettiğine ve bu hususta hiçbir kimsenin O'nun yerini tutamayacağına kesin olarak inanmasıdır.</p>
+      </li>
+      <li><strong>Kalbin ameli</strong> <span class="ar-ic" dir="rtl">(عَمَلُ الْقَلْبِ)</span>
+        <p>İbnu'l-Kayyim rahimehullah şöyle demiştir:</p>
+        <div class="blok alim">
+          <span class="soyleyen">İbnu'l-Kayyim rahimehullah (v. 751)</span>
+          <p class="ar">«وَأَمَّا عَمَلُهُ: فَسُكُونُهُ إِلَى وَكِيلِهِ، وَطُمَأْنِينَتُهُ إِلَيْهِ»</p>
+          <p class="tr">"Kalbin ameline gelince, bu da vekiline dayanarak sükûnete ermesi ve O'na karşı mutmain olmasıdır."</p>
+          <p class="kaynak">📚 İbnu'l-Kayyim, Tarîku'l-Hicreteyn ve Bâbu's-Sa'âdeteyn.</p>
+        </div>
+        <p>Yani kişinin kalbinin Allah'a dayanması, O'na güvenerek huzur ve sükûnet bulması, işlerini O'na havale etmesi ve O'nun takdirine teslim olmasıdır.</p>
+      </li>
+    </ol>
+
+    <div class="ozet">
+      <p>Dolayısıyla tevekkül, kalbin hem ilmi hem de ameliyle tahkik edilir. Kişi Allah'ın kendisine yeterli olduğunu kesin olarak bilmeli ve kalbi de bu bilgiye uygun şekilde Allah'a dayanarak mutmain olmalıdır.</p>
+    </div>
+  </div>
+
+
+  <div class="bolum-baslik">Mâide, 23</div>
+
+  <div class="blok ayet">
+    <span class="soyleyen">Mâide Sûresi, 23. âyet</span>
+    <p class="ar">﴿وَعَلَى اللَّهِ فَتَوَكَّلُوا إِنْ كُنْتُمْ مُؤْمِنِينَ﴾</p>
+    <p class="tr">"Eğer müminler iseniz yalnızca Allah'a tevekkül edin."</p>
+    <p class="kaynak">📚 Mâide, 23.</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">1</span>Âyetin genel manası</h3>
+
+  <p>Allah Teâlâ bu âyette, İsrâiloğullarından iki kişinin kavimlerine verdikleri nasihatten haber vermektedir.</p>
+
+  <p>Bu iki kişi, kavimlerine Beytü'l-Makdis'e girmelerini, oradaki düşmanlardan korkmamalarını ve Allah'a güvenmelerini nasihat etmişlerdir. Şöyle demişlerdir:</p>
+
+  <div class="vurgu">"Eğer gerçekten Allah'a iman ediyorsanız yalnızca O'na tevekkül edin. Çünkü Allah, verdiği vaatten dönmez."</div>
+
+
+  <h3 class="altbolum"><span class="no">2</span>Bu âyetin Kitâbu't-Tevhîd ile münasebeti</h3>
+
+  <p>Tevekkül bir ibadettir. Kim bu ibadeti Allah'tan başkasına sarf ederse şirk koşmuş olur. Çünkü Allah Teâlâ, Kur'ân'da kendisine tevekkül etmeyi imanla ilişkilendirmiştir:</p>
+
+  <div class="lafz">
+    <span class="ar-buyuk" dir="rtl">إِنْ كُنْتُمْ مُؤْمِنِينَ</span>
+    <span class="lafz-tr">"Eğer müminler iseniz."</span>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">3</span>Bu âyetin bâbla münasebeti</h3>
+
+  <p>Tevekkül ibadetinin ihlâsla yalnızca Allah'a yöneltilmesi gerekir. Allah'tan başkasına ibadet olan tevekkül yöneltilmez.</p>
+
+
+  <h3 class="altbolum"><span class="no">4</span>Âyetin detaylı manası</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Ve alallâhi fe tevekkelû <span class="lafz-ar" dir="rtl">وَعَلَى اللَّهِ فَتَوَكَّلُوا</span></span></h4>
+  <div class="kisim-govde">
+    <p>"Yalnızca Allah'a tevekkül edin."</p>
+    <ul class="madde">
+      <li>Normalde cümle <span class="ar-ic" dir="rtl">(فَتَوَكَّلُوا عَلَى اللَّهِ)</span> şeklinde gelebilirdi. Ancak <span class="ar-ic" dir="rtl">(عَلَى اللَّهِ)</span> ifadesi öne alındığı için hasr, yani sınırlandırma manası ifade etmektedir.</li>
+    </ul>
+    <div class="ozet">
+      <p>Yani "Allah'a tevekkül edin." ifadesinden daha özel olarak "Yalnızca Allah'a tevekkül edin." manası anlaşılmaktadır.</p>
+    </div>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">5</span>Âyet ile ilgili meseleler</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Birinci mesele <span class="baslik-alt">&mdash; Tevekkülün kısımları nelerdir?</span></span></h4>
+  <div class="kisim-govde">
+    <p><strong>Tevekkül, hükmü bakımından üç kısma ayrılır:</strong></p>
+
+    <ol class="sayili">
+      <li><strong>Vacip olan tevekkül.</strong>
+        <p>Allah'ın farz kıldığı amelleri yerine getirirken ve haram kıldığı fiilleri terk ederken O'na tevekkül etmektir.</p>
+      </li>
+      <li><strong>Müstehap olan tevekkül.</strong>
+        <p>Müstehap olan amelleri yerine getirirken ve mekruhları terk ederken Allah'a tevekkül etmektir.</p>
+        <p class="alt-tanim">Örnek: Bir kişinin nafile sadaka verirken Allah'a tevekkül etmesi.</p>
+      </li>
+      <li><strong>Yasak olan tevekkül.</strong> Bu da kendi içerisinde üç kısma ayrılır:
+        <ul class="madde">
+          <li><strong>Büyük şirk olan tevekkül</strong> <span class="ar-ic" dir="rtl">(الشِّرْكُ الْأَكْبَرُ)</span>: Yalnızca Allah'ın yapabileceği işlerde mahlûklara tevekkül etmektir. Aynı şekilde, sebeplerin Allah'tan bağımsız olarak fayda ve zarar verebildiğine inanmak da büyük şirktir.</li>
+          <li><strong>Küçük şirk olan tevekkül</strong> <span class="ar-ic" dir="rtl">(الشِّرْكُ الْأَصْغَرُ)</span>: Kişinin, sebepleri Allah'ın yarattığını ve onlara etki etme gücünü O'nun verdiğini bilmesine rağmen kalben bu sebeplere dayanması ve onları yaratan Allah'tan gafil olmasıdır.
+            <p class="alt-tanim">Yani kişi, fayda ve zararın Allah'ın elinde olduğunu kabul eder. Ancak kalbini Allah'a değil, sebeplere bağlar ve onlara gereğinden fazla itimat eder.</p>
+          </li>
+          <li><strong>Haram olan tevekkül</strong> <span class="ar-ic" dir="rtl">(التَّوَكُّلُ الْمُحَرَّمُ)</span>: Şirk olmamakla birlikte haram olan tevekküldür. Kişinin haram ve kötü işleri gerçekleştirmek için Allah'a tevekkül etmesi, yani günah işlemek amacıyla Allah'tan yardım beklemesi ve bu hususta O'na dayanmasıdır.
+            <p class="alt-tanim">Bu tür tevekkül haramdır. Çünkü kişi, Allah'ın yasakladığı bir fiili gerçekleştirmek için O'ndan yardım istemektedir.</p>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+
+  <h4 class="kisim"><span class="no">2</span><span>İkinci mesele <span class="baslik-alt">&mdash; Tevekkül bakımından Müslümanlar üç kısma ayrılır</span></span></h4>
+  <div class="kisim-govde">
+    <ol class="sayili">
+      <li><strong>Sâbikûn bi'l-hayrât</strong> <span class="ar-ic" dir="rtl">(السَّابِقُونَ بِالْخَيْرَاتِ)</span>
+        <p>Bunlar, tevekkülü en yüksek derecede tahkik eden kimselerdir. Hem dinî hem de dünyevî işlerinde Allah'a tam anlamıyla güvenip dayanırlar. Tevekkülün hem vacip hem de müstehap olan mertebelerini gerçekleştirirler.</p>
+        <p>Bu mertebenin en üstünde peygamberler bulunur. Bu kimselerin tevekkülleri, özellikle dinî meselelerde kendisini gösterir.</p>
+      </li>
+      <li><strong>el-Muktesid</strong> <span class="ar-ic" dir="rtl">(الْمُقْتَصِدُ)</span>
+        <p>Bunlar, tevekkülün vacip olan kısmını yerine getiren, özellikle dünyevî işlerinde Allah'a güvenip dayanan, ancak tevekkülün müstehap olan kemâl mertebesine ulaşamayan kimselerdir.</p>
+      </li>
+      <li><strong>Zâlimun li-nefsihî</strong> <span class="ar-ic" dir="rtl">(الظَّالِمُ لِنَفْسِهِ)</span>
+        <p>Bunlar, tevekkülü gerektiği şekilde yerine getirmeyerek kendilerine zulmeden kimselerdir.</p>
+        <p>Tevekkülün vacip olan kısmında eksiklik gösterirler. Haram olan tevekkül türlerine veya küçük şirk kapsamına giren tevekküle düşebilirler.</p>
+      </li>
+    </ol>
+  </div>
+
+
+  <h4 class="kisim"><span class="no">3</span><span>Üçüncü mesele <span class="baslik-alt">&mdash; Sebepler konusunda uyulması gereken kurallar</span></span></h4>
+  <div class="kisim-govde">
+    <ol class="sayili">
+      <li><strong>Sebeplerin bağımsız bir etkiye sahip olmadığına iman etmek</strong>
+        <p>Kişi, sebeplerin kendi başlarına fayda veya zarar meydana getiremeyeceğine iman etmelidir. Kalbini sebeplere bağlamamalı ve onlara bağımsız bir güç atfetmemelidir.</p>
+      </li>
+      <li><strong>Sebeplerin varlığını inkâr etmemek</strong>
+        <p>Allah Teâlâ, bazı şeyleri başka şeylerin gerçekleşmesine sebep kılmıştır. Dolayısıyla Allah'ın koyduğu sebeplerin varlığını ve etkilerini inkâr etmemek gerekir.</p>
+      </li>
+      <li><strong>Sebeplerden tamamen yüz çevirmemek</strong>
+        <p>Kişi, sebeplerin varlığını ve Allah'ın onları sebep kıldığını bildiği hâlde bu sebepleri tamamen terk etmemelidir.</p>
+        <p><strong>Sebeplere başvurmalı, ancak kalbini sebeplere değil, Allah'a bağlamalıdır.</strong> Nitekim Resûlullah ﷺ ve sahâbe sebeplere başvurmuşlar, ancak kalben onlara dayanmamışlardır.</p>
+        <p>İbn Teymiyye rahimehullah, bazı âlimlerin şu sözünü nakletmiştir:</p>
+        <div class="blok alim">
+          <span class="soyleyen">İbn Teymiyye rahimehullah (v. 728)</span>
+          <p class="ar">«الِالْتِفَاتُ إِلَى الْأَسْبَابِ شِرْكٌ فِي التَّوْحِيدِ، وَمَحْوُ الْأَسْبَابِ أَنْ تَكُونَ أَسْبَابًا نَقْصٌ فِي الْعَقْلِ، وَالْإِعْرَاضُ عَنِ الْأَسْبَابِ بِالْكُلِّيَّةِ قَدْحٌ فِي الشَّرْعِ»</p>
+          <p class="tr">"Sebeplere kalben bağlanmak tevhidde şirktir. Sebeplerin sebep olma özelliğini inkâr etmek akılda bir eksikliktir. Sebeplerden tamamen yüz çevirmek ise şeriata aykırıdır."</p>
+          <p class="kaynak">📚 İbn Teymiyye, Mecmû'u'l-Fetâvâ, 8/169.</p>
+        </div>
+      </li>
+      <li><strong>Sebep olduğu ilimle sabit olan şeylere başvurmak</strong>
+        <p>Kişi, gerçekten sebep olduğu ilimle sabit olan şeylere başvurmalıdır. Bir şeyin sebep olduğu bilinmeden onu sebep olarak kabul etmemelidir.</p>
+        <p>Özellikle dinî meselelerde, sebeplerin <strong>Kitap ve Sünnet ile sabit olması</strong> gerekir.</p>
+      </li>
+    </ol>
+  </div>
+
+
+  <h4 class="kisim"><span class="no">4</span><span>Dördüncü mesele <span class="baslik-alt">&mdash; Tevekkül ile tevkîl arasındaki fark</span></span></h4>
+  <div class="kisim-govde">
+    <p>Fıkıh kitaplarında vekâlet <span class="ar-ic" dir="rtl">(الْوَكَالَةُ)</span> konusu bulunmaktadır. Ancak bu konu, bizim işlediğimiz tevekkül ibadetiyle aynı değildir. Çünkü tevekkül <span class="ar-ic" dir="rtl">(التَّوَكُّلُ)</span> ile tevkîl <span class="ar-ic" dir="rtl">(التَّوْكِيلُ)</span> birbirinden farklıdır.</p>
+
+    <ol class="sayili">
+      <li><strong>Tevekkül</strong> <span class="ar-ic" dir="rtl">(التَّوَكُّلُ)</span>
+        <p>Kalbin Allah'a güvenmesi, O'na dayanması ve işlerini O'na havale etmesidir. Bu, yalnızca Allah'a yöneltilmesi gereken bir ibadettir.</p>
+      </li>
+      <li><strong>Tevkîl</strong> <span class="ar-ic" dir="rtl">(التَّوْكِيلُ)</span>
+        <p>Bir kişinin, kendi adına belirli bir işi yapması için başka birini vekil tayin etmesidir. Bu, şeriatta caiz olan bir muameledir.</p>
+        <p class="alt-tanim">Örnek: Bir kişinin evini satması için başka birine vekâlet vermesi, tevkîl olarak isimlendirilir.</p>
+      </li>
+    </ol>
+
+    <p>Bu nedenle böyle bir durumda şu ifadelerin birbirinden ayırt edilmesi gerekir. Şöyle denmez:</p>
+
+    <div class="lafz">
+      <span class="ar-buyuk" dir="rtl">تَوَكَّلْتُ عَلَيْكَ</span>
+      <span class="lafz-tr"><em>Tevekkeltu aleyke.</em><br>"Sana tevekkül ettim."</span>
+    </div>
+
+    <p>Bunun yerine şu ifadenin kullanılması daha uygundur:</p>
+
+    <div class="lafz">
+      <span class="ar-buyuk" dir="rtl">وَكَّلْتُكَ فِي بَيْعِ بَيْتِي</span>
+      <span class="lafz-tr"><em>Vekkeltuke fî bey'i beytî.</em><br>"Evimi satman için seni vekil tayin ettim."</span>
+    </div>
+
+    <div class="ozet">
+      <p>Dolayısıyla tevekkül, kalbin bir ibadeti; tevkîl ise bir kişiyi belirli bir işte vekil tayin etmektir. Bu iki kavram birbirine karıştırılmamalıdır.</p>
+    </div>
+
+    <p class="kaynak">📚 İbn Bâz rahimehullah, el-Farku beyne't-Tevekkuli ve'l-Vekâle.</p>
+  </div>
+
+
+  <h4 class="kisim"><span class="no">5</span><span>Beşinci mesele <span class="baslik-alt">&mdash; Tevâkül ile tevekkül arasındaki fark</span></span></h4>
+  <div class="kisim-govde">
+    <ol class="sayili">
+      <li><strong>Tevekkül</strong> <span class="ar-ic" dir="rtl">(التَّوَكُّلُ)</span>
+        <p>Kişinin meşru sebeplere başvurarak kalben Allah'a güvenmesi ve O'na dayanmasıdır.</p>
+      </li>
+      <li><strong>Tevâkül</strong> <span class="ar-ic" dir="rtl">(التَّوَاكُلُ)</span>
+        <p>Kişinin tevekkül ettiğini iddia ederek sebepleri terk etmesi ve işlerini başkalarına bırakmasıdır.</p>
+      </li>
+    </ol>
+
+    <p>Tevâkül, bazı durumlarda mahlûklara dayanmak veya bâtıl sebeplere bağlanmakla birlikte ortaya çıkabilir. Bu tür bir dayanma, kişinin inancına ve kalbinin neye bağlandığına göre büyük şirk veya küçük şirk kapsamına girebilir.</p>
+
+    <div class="blok hadis">
+      <span class="soyleyen">Ömer bin el-Hattâb radıyallâhu anh'tan rivâyet</span>
+      <p class="ar">«أَنَّ عُمَرَ بْنَ الْخَطَّابِ لَقِيَ نَاسًا مِنْ أَهْلِ الْيَمَنِ، فَقَالَ: مَنْ أَنْتُمْ؟ قَالُوا: نَحْنُ الْمُتَوَكِّلُونَ. فَقَالَ: بَلْ أَنْتُمُ الْمُتَّكِلُونَ، إِنَّمَا الْمُتَوَكِّلُ الَّذِي يُلْقِي حَبَّهُ فِي الْأَرْضِ وَيَتَوَكَّلُ عَلَى اللَّهِ»</p>
+      <p class="tr">"Ömer bin el-Hattâb, Yemen halkından bazı kimselerle karşılaştı ve onlara: 'Siz kimsiniz?' diye sordu. Onlar: 'Biz tevekkül eden kimseleriz.' dediler. Bunun üzerine Ömer şöyle dedi: 'Hayır! Siz başkalarına dayanan kimselersiniz. Gerçek tevekkül sahibi, tohumunu toprağa eken ve ardından Allah'a tevekkül eden kimsedir.'"</p>
+      <p class="kaynak">📚 İbn Ebi'd-Dunyâ, Kitâbu't-Tevekkul, 10.</p>
+    </div>
+
+    <p><strong>Tevekkül ile tevâkül arasındaki en önemli farklar:</strong></p>
+
+    <ol class="sayili">
+      <li><strong>Meşru sebeplere başvurmayı terk etmek</strong>
+        <p>Tevekkül sahibi kişi, meşru sebeplere başvurur ancak kalben Allah'a dayanır. Tevâkül sahibi ise tevekkül ettiğini ileri sürerek sebepleri terk eder ve gerekli çabayı göstermez.</p>
+      </li>
+      <li><strong>Şer'î veya hakikî olarak sabit olmayan bâtıl sebeplere başvurmak</strong>
+        <p>Kişi, gerçekte sebep olmayan şeyleri sebep olarak kabul edip onlara dayanabilir. Hâlbuki bir şeyin sebep olarak kabul edilebilmesi için <strong>ya şeriatla ya da gerçeklik ve tecrübeyle sabit olması gerekir.</strong></p>
+      </li>
+    </ol>
+  </div>
+
+
+  <h4 class="kisim"><span class="no">6</span><span>Altıncı mesele <span class="baslik-alt">&mdash; Allah'a tevekkül etmek, istenilen şeyi elde etmenin en büyük sebeplerinden biridir</span></span></h4>
+  <div class="kisim-govde">
+    <p>Bir kişi, ister dünyevî ister uhrevî bir şeyi elde etmek istesin, Allah'a tevekkül ettiğinde o şeyi elde etmenin en büyük sebeplerinden birine sarılmış olur. Nitekim Allah Teâlâ şöyle buyurmuştur:</p>
+
+    <div class="blok ayet">
+      <span class="soyleyen">Talâk Sûresi, 3. âyet</span>
+      <p class="ar">﴿وَمَنْ يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ﴾</p>
+      <p class="tr">"Kim Allah'a tevekkül ederse, O kendisine yeter."</p>
+      <p class="kaynak">📚 Talâk, 3.</p>
+    </div>
+
+    <p>Allah'a dayanıp tevekkül eden kişiyi Allah alıkoymayacaktır. Resûlullah ﷺ şöyle buyurmuştur:</p>
+
+    <div class="blok hadis">
+      <span class="soyleyen">Resûlullah ﷺ buyurdu</span>
+      <p class="ar">«لَوْ أَنَّكُمْ كُنْتُمْ تَوَكَّلُونَ عَلَى اللَّهِ حَقَّ تَوَكُّلِهِ لَرُزِقْتُمْ كَمَا تُرْزَقُ الطَّيْرُ، تَغْدُو خِمَاصًا وَتَرُوحُ بِطَانًا»</p>
+      <p class="tr">"Eğer siz Allah'a hakkıyla tevekkül etseydiniz, sabahleyin aç olarak çıkıp akşamleyin tok olarak dönen kuşlar gibi Allah sizi de rızıklandırırdı."</p>
+      <p class="kaynak">📚 Tirmizî, 2344.</p>
+    </div>
+
+    <p>Ancak kişi Allah'a değil de O'nun dışındaki sebeplere güvenirse, Allah onu elde etmek istediği şeyden mahrum bırakabilir.</p>
+
+    <p>Buna örnek olarak Huneyn Gazvesi'nde Müslümanlar, sayıca çok olmalarına güvenmişlerdi. Ancak bu çokluk onlara hiçbir fayda sağlamamış ve savaşın başında geri çekilmek zorunda kalmışlardı. Nitekim Allah Teâlâ şöyle buyurmuştur:</p>
+
+    <div class="blok ayet">
+      <span class="soyleyen">Tevbe Sûresi, 25. âyet</span>
+      <p class="ar">﴿لَقَدْ نَصَرَكُمُ اللَّهُ فِي مَوَاطِنَ كَثِيرَةٍ وَيَوْمَ حُنَيْنٍ إِذْ أَعْجَبَتْكُمْ كَثْرَتُكُمْ فَلَمْ تُغْنِ عَنْكُمْ شَيْئًا وَضَاقَتْ عَلَيْكُمُ الْأَرْضُ بِمَا رَحُبَتْ ثُمَّ وَلَّيْتُمْ مُدْبِرِينَ﴾</p>
+      <p class="tr">"Andolsun ki Allah, birçok yerde ve Huneyn gününde size yardım etmişti. Hani çokluğunuz sizi hoşnut etmişti. Fakat bu çokluk size hiçbir fayda sağlamamış, yeryüzü bütün genişliğine rağmen size dar gelmişti. Sonra da arkanızı dönüp kaçmıştınız."</p>
+      <p class="kaynak">📚 Tevbe, 25.</p>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <div class="marka">İlim Dersleri</div>
+  <div>Kitâbu't-Tevhîd</div>
+</footer>
+
+</div>
+</body>
+</html>
