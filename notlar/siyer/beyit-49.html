@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siyer Dersi · 49. Beyit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#123a5f;
+    --navy-soft:#1d5183;
+    --ink:#20262e;
+    --ink-soft:#4a5462;
+    --paper:#fbfaf7;
+    --card:#ffffff;
+    --rule:#e2ddd3;
+
+    --green:#1e6b46;
+    --green-bg:#eef7f1;
+    --green-edge:#a8d3bb;
+
+    --amber:#8a5a12;
+    --amber-bg:#fdf5e6;
+    --amber-edge:#e2c184;
+
+    --blue:#1a4f80;
+    --blue-bg:#eef4fa;
+    --blue-edge:#a9c6e2;
+
+    --bordo:#75194c;
+    --bordo-bg:#fbf2f6;
+    --bordo-edge:#e3c3d4;
+
+    --red:#8d2f2f;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Source Serif 4","Cambria","Georgia",serif;
+    font-size:18px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .sayfa{
+    max-width:820px;
+    margin:0 auto;
+    padding:0 26px 90px;
+  }
+
+  /* ---------- KAPAK ---------- */
+  header.kapak{
+    color:var(--bordo);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:56px 0;
+    margin-bottom:60px;
+  }
+  header.kapak .marka{
+    font-size:.95rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:#d54220;
+    font-weight:600;
+    line-height:1.7;
+    max-width:26ch;
+  }
+  header.kapak .marka-cizgi{
+    width:120px;
+    height:1px;
+    background:var(--rule);
+    margin:26px auto 34px;
+  }
+  header.kapak h1{
+    font-size:clamp(3.3rem,9.5vw,5.8rem);
+    line-height:1.1;
+    color:var(--bordo);
+    margin:0;
+    font-weight:700;
+    letter-spacing:-.015em;
+    max-width:15ch;
+  }
+  header.kapak .altbaslik{
+    font-size:1.16rem;
+    color:var(--bordo);
+    font-style:italic;
+    margin:34px 0 0;
+    max-width:38ch;
+    line-height:1.7;
+  }
+  header.kapak .kunye{
+    margin-top:0;
+    padding-top:72px;
+    font-size:.94rem;
+    color:var(--bordo);
+    letter-spacing:.09em;
+  }
+  header.kapak .kapak-ayet{
+    max-width:540px;
+    margin:0 auto 10px;
+    font-size:1.04rem;
+    line-height:1.75;
+    letter-spacing:0;
+    font-style:italic;
+    color:var(--bordo);
+  }
+  header.kapak .kapak-ayet-kaynak{
+    margin:0;
+    font-size:.86rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  header.kapak .kunye .cizgi{
+    width:56px;
+    height:2px;
+    background:var(--bordo);
+    margin:0 auto 18px;
+  }
+  .besmele{
+    font-family:"Scheherazade New",serif;
+    font-size:2.5rem;
+    color:var(--bordo);
+    direction:rtl;
+    margin:0 0 46px;
+  }
+
+  /* ---------- NÂKID ---------- */
+  section.nakid{margin-bottom:70px;}
+
+  .nakid-baslik{
+    background:var(--navy);
+    color:#fff;
+    border-radius:4px;
+    padding:22px 28px;
+    margin-bottom:34px;
+  }
+  .nakid-baslik .etiket{
+    display:block;
+    font-size:.74rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    opacity:.72;
+    margin-bottom:8px;
+  }
+  .nakid-baslik h2{
+    margin:0;
+    font-size:1.42rem;
+    line-height:1.45;
+    font-weight:600;
+  }
+
+  /* ---------- METİN (müellifin sözü) ---------- */
+  .metin{
+    background:var(--bordo-bg);
+    border:1px solid var(--bordo-edge);
+    border-top:5px solid var(--bordo);
+    border-radius:4px;
+    padding:28px 32px 26px;
+    margin:0 0 20px;
+  }
+  .metin .metin-etiket{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px 12px;
+    font-size:.78rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--bordo);
+    margin-bottom:18px;
+  }
+  .metin .metin-etiket .rozet{
+    background:var(--bordo);
+    color:#fff;
+    padding:3px 11px;
+    border-radius:3px;
+    letter-spacing:.2em;
+  }
+  .metin .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:2rem;
+    line-height:2.1;
+    direction:rtl;
+    text-align:right;
+    color:var(--bordo);
+    margin:0 0 18px;
+  }
+  .metin .tr{
+    margin:0;
+    padding-top:16px;
+    border-top:1px dotted var(--bordo-edge);
+    font-size:1.06rem;
+  }
+
+  /* ---------- ŞERH AYRACI ---------- */
+  .serh-ayrac{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin:54px 0 10px;
+    color:var(--navy);
+  }
+  .serh-ayrac::before,.serh-ayrac::after{
+    content:"";
+    flex:1;
+    height:2px;
+    background:var(--navy-soft);
+    opacity:.35;
+  }
+  .serh-ayrac span{
+    font-size:1.05rem;
+    font-weight:700;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+  }
+
+  h3.altbolum{
+    font-size:1.55rem;
+    line-height:1.4;
+    color:var(--navy);
+    margin:60px 0 20px;
+    padding-bottom:12px;
+    border-bottom:3px solid var(--rule);
+    font-weight:700;
+  }
+  h3.altbolum .no{
+    display:inline-block;
+    min-width:38px;
+    height:38px;
+    line-height:38px;
+    text-align:center;
+    background:var(--navy-soft);
+    color:#fff;
+    border-radius:50%;
+    font-size:1rem;
+    margin-right:13px;
+    vertical-align:3px;
+  }
+
+  p{margin:0 0 17px;}
+
+  h4.kisim{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:1.2rem;
+    color:var(--navy-soft);
+    margin:34px 0 12px;
+    font-weight:700;
+  }
+  h4.kisim .no{
+    flex:0 0 auto;
+    width:28px;
+    height:28px;
+    line-height:25px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    background:var(--card);
+    font-size:.82rem;
+  }
+  .kisim-govde{
+    border-left:2px solid var(--rule);
+    margin-left:13px;
+    padding-left:27px;
+  }
+
+  .delil{
+    display:grid;
+    grid-template-columns:34px 1fr;
+    gap:0 18px;
+    margin:30px 0;
+    padding-bottom:8px;
+    border-bottom:1px dotted var(--rule);
+  }
+  .delil:last-of-type{border-bottom:none;}
+  .delil > .no{
+    width:34px;
+    height:34px;
+    line-height:34px;
+    text-align:center;
+    border-radius:50%;
+    background:var(--navy);
+    color:#fff;
+    font-size:.88rem;
+    font-weight:700;
+    margin-top:2px;
+  }
+  .delil > .govde > .blok:first-child{margin-top:0;}
+  .delil-etiket{
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--navy);
+    margin:6px 0 12px;
+  }
+  .delil > .govde > .delil-etiket + .blok{margin-top:0;}
+
+  .ikaz{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-left:5px solid var(--red);
+    border-radius:4px;
+    padding:20px 26px 6px;
+    margin:28px 0;
+  }
+  .ikaz .ikaz-etiket{
+    display:block;
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--red);
+    margin-bottom:10px;
+  }
+  .ikaz ol.sayili{margin:10px 0 14px;}
+  ol.sayili li p.alt-tanim{margin:10px 0 0;padding-left:14px;border-left:2px solid var(--rule);}
+  ol.sayili > li > p{margin:12px 0 0;}
+  ol.sayili li .blok{margin:16px 0 8px;}
+  ul.madde li .blok{margin:14px 0 8px;}
+  ol.sayili > li ul.madde{margin:12px 0 4px;}
+  h4.kisim .baslik-alt{font-weight:400;color:var(--ink);}
+  h4.kisim .lafz-ar{font-family:"Scheherazade New",serif;font-weight:700;font-size:1.08em;line-height:1;color:var(--bordo);margin-left:8px;white-space:nowrap;}
+  .ar-ic{font-family:"Scheherazade New",serif;font-size:1.25em;line-height:1;unicode-bidi:isolate;display:inline-block;white-space:nowrap;}
+  .lafz{margin:22px 0;text-align:center;}
+  .lafz .ar-buyuk{display:block;font-family:"Scheherazade New",serif;font-size:1.7rem;line-height:1.9;color:var(--bordo);}
+  .lafz .lafz-tr{display:block;margin-top:2px;color:var(--ink-soft);}
+  .bolum-baslik{
+    margin:60px 0 28px;
+    padding:15px 18px;
+    text-align:center;
+    font-size:1.3rem;
+    font-weight:700;
+    line-height:1.4;
+    color:var(--navy);
+    background:var(--card);
+    border-top:2px solid var(--navy-soft);
+    border-bottom:2px solid var(--navy-soft);
+  }
+  .notkutu{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--navy-soft);border-radius:3px;padding:22px 24px 6px;margin:32px 0;}
+  .notkutu .not-etiket{display:block;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--navy-soft);margin-bottom:12px;}
+  ul.ikili{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:9px 30px;list-style:none;margin:26px 0;padding:0;}
+  ul.ikili li{position:relative;padding-left:18px;line-height:1.7;}
+  ul.ikili li::before{content:"";position:absolute;left:0;top:11px;width:6px;height:6px;background:var(--navy-soft);transform:rotate(45deg);}
+
+  /* ---------- VURGU ---------- */
+  .vurgu{
+    font-size:1.24rem;
+    line-height:1.7;
+    color:var(--navy);
+    font-weight:600;
+    border-left:4px solid var(--navy-soft);
+    padding:6px 0 6px 20px;
+    margin:30px 0;
+  }
+  .vurgu-buyuk{
+    font-size:1.42rem;
+    line-height:1.6;
+    text-align:center;
+    color:var(--navy);
+    font-weight:700;
+    margin:38px 0;
+    padding:26px 22px;
+    background:var(--card);
+    border-top:2px solid var(--navy-soft);
+    border-bottom:2px solid var(--navy-soft);
+  }
+  strong{color:var(--navy);font-weight:700;}
+  .sav{font-family:"Scheherazade New",serif;font-size:1.2em;line-height:1;font-weight:400;}
+
+  /* ---------- ALINTI BLOKLARI ---------- */
+  .blok{
+    border-radius:4px;
+    padding:22px 26px;
+    margin:26px 0;
+    border-left-width:5px;
+    border-left-style:solid;
+  }
+  .blok .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:1.75rem;
+    line-height:2.05;
+    direction:rtl;
+    text-align:right;
+    margin-bottom:14px;
+  }
+  .blok .tr{margin:0 0 12px;}
+  .blok .kaynak{
+    font-size:.9rem;
+    color:var(--ink-soft);
+    font-style:italic;
+    margin:0;
+    padding-top:10px;
+    border-top:1px dotted currentColor;
+  }
+  .blok .soyleyen{
+    display:block;
+    font-size:.79rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:600;
+    margin-bottom:13px;
+  }
+
+  .ayet{background:var(--green-bg);border-left-color:var(--green-edge);}
+  .ayet .ar,.ayet .soyleyen{color:var(--green);}
+
+  .alim{background:var(--amber-bg);border-left-color:var(--amber-edge);}
+  .alim .ar,.alim .soyleyen{color:var(--amber);}
+
+  .hadis{background:var(--blue-bg);border-left-color:var(--blue-edge);}
+  .hadis .ar,.hadis .soyleyen{color:var(--blue);}
+
+  /* ---------- LİSTELER ---------- */
+  ul.madde{
+    list-style:none;
+    padding:0;
+    margin:20px 0;
+  }
+  ul.madde li{
+    position:relative;
+    padding:7px 0 7px 26px;
+  }
+  ul.madde li::before{
+    content:"◆";
+    position:absolute;
+    left:2px;
+    color:var(--navy-soft);
+    font-size:.68rem;
+    top:12px;
+  }
+
+  ul.madde.yildiz{margin:22px 0;}
+  ul.madde.yildiz > li{padding:10px 0 10px 28px;}
+  ul.madde.yildiz > li::before{
+    content:"✦";
+    left:0;
+    color:var(--amber);
+    font-size:.85rem;
+    top:9px;
+  }
+  ul.madde.yildiz > li + li{border-top:1px solid var(--rule);}
+  ul.madde.yildiz > li .notkutu{margin:14px 0 4px;}
+
+  ol.sayili{
+    list-style:none;
+    counter-reset:sira;
+    padding:0;
+    margin:22px 0;
+  }
+  ol.sayili > li{
+    counter-increment:sira;
+    position:relative;
+    padding:10px 0 10px 46px;
+    border-bottom:1px dotted var(--rule);
+  }
+  ol.sayili > li:last-child{border-bottom:none;}
+  ol.sayili > li::before{
+    content:counter(sira);
+    position:absolute;
+    left:0;
+    top:13px;
+    width:30px;
+    height:30px;
+    line-height:27px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    color:var(--navy-soft);
+    background:var(--card);
+    font-size:.84rem;
+    font-weight:700;
+  }
+
+  /* ---------- ÖZET ---------- */
+  .ozet{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-top:4px solid var(--navy);
+    border-radius:4px;
+    padding:26px 30px;
+    margin-top:34px;
+  }
+  .ozet h4{
+    margin:0 0 16px;
+    color:var(--navy);
+    font-size:1.06rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+  .ozet ul{margin:0;padding-left:22px;}
+  .ozet li{margin-bottom:11px;}
+  .ozet li:last-child{margin-bottom:0;}
+
+  .ayirac{
+    text-align:center;
+    color:var(--rule);
+    letter-spacing:.5em;
+    margin:38px 0;
+    font-size:.8rem;
+  }
+
+  footer{
+    margin-top:70px;
+    padding-top:26px;
+    border-top:3px double var(--rule);
+    text-align:center;
+    color:#d54220;
+    font-size:.9rem;
+  }
+  footer .marka{
+    font-size:1rem;
+    color:#d54220;
+    font-weight:600;
+    letter-spacing:.1em;
+    margin-bottom:6px;
+  }
+
+  @media (max-width:620px){
+    body{font-size:16.5px;}
+    .sayfa{padding:0 16px 60px;}
+    header.kapak h1{font-size:2.8rem;}
+    .besmele{font-size:2rem;}
+    .nakid-baslik h2{font-size:1.16rem;}
+    h3.altbolum{font-size:1.3rem;margin:48px 0 16px;}
+    h3.altbolum .no{min-width:32px;height:32px;line-height:32px;font-size:.9rem;}
+    .metin{padding:22px 18px 20px;}
+    .metin .ar{font-size:1.65rem;line-height:2;}
+    .blok{padding:18px 18px;}
+    .ikaz{padding:18px 18px 4px;}
+    .kisim-govde{margin-left:0;padding-left:14px;}
+    .delil{grid-template-columns:28px 1fr;gap:0 10px;}
+    .delil > .no{width:28px;height:28px;line-height:28px;font-size:.8rem;}
+    .blok .ar{font-size:1.5rem;line-height:1.95;}
+    .vurgu-buyuk{font-size:1.18rem;padding:20px 16px;}
+    .vurgu{font-size:1.1rem;}
+  }
+
+  @media print{
+    @page{margin:18mm 16mm;}
+    body{background:#fff;font-size:11.5pt;}
+    .sayfa{max-width:none;padding:0;}
+    section.nakid{page-break-before:always;}
+    section.nakid:first-of-type{page-break-before:auto;}
+    .ayirac{display:none;}
+    header.kapak{
+      min-height:238mm;
+      page-break-after:always;
+      margin-bottom:0;
+    }
+    header.kapak h1{font-size:54pt;}
+    .besmele{font-size:26pt;}
+    section.nakid{page-break-inside:auto;}
+    .nakid-baslik{page-break-after:avoid;background:var(--navy) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .metin,.blok,.ozet,.vurgu-buyuk{page-break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    h3.altbolum,.serh-ayrac{page-break-after:avoid;}
+  }
+
+  /* ---------- BEYİT EKLERİ ---------- */
+  .metin .okunus{margin:0 0 14px;font-style:italic;color:var(--ink-soft);font-size:1rem;}
+  .metin .ar{font-size:1.72rem;}
+  .blok .kaynak a,.kaynak a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;}
+  .blok .kaynak a:hover,.kaynak a:hover{color:var(--navy-soft);}
+  .lafz + p.kaynak{font-size:.9rem;color:var(--ink-soft);font-style:italic;text-align:center;margin:-14px 0 30px;}
+  ul.ikili li{padding-top:2px;padding-bottom:2px;}
+  @media (max-width:620px){h4.kisim .lafz-ar,.ar-ic{white-space:normal;}}
+  .sayfa p a,.sayfa li a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;}
+  .sayfa p a:hover,.sayfa li a:hover{color:var(--navy-soft);}
+  /* TANIM KUTUSU */
+  .tanim{margin:30px 0;padding:20px 28px 22px;background:var(--card);border:1px solid var(--rule);border-top:4px solid var(--navy-soft);border-radius:4px;text-align:center;}
+  .tanim .tanim-etiket{display:block;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--navy-soft);margin-bottom:10px;}
+  .tanim .ar{font-family:"Scheherazade New",serif;font-size:1.7rem;line-height:2;direction:rtl;color:var(--bordo);margin:0 0 14px;}
+  .tanim .tr{margin:0;padding-top:14px;border-top:1px dotted var(--rule);font-size:1.12rem;line-height:1.7;font-weight:600;color:var(--navy);}
+  @media (max-width:620px){.tanim{padding:18px 16px;}.tanim .ar{font-size:1.45rem;line-height:1.95;}.tanim .tr{font-size:1.02rem;}}
+  @media print{.tanim{page-break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact;}}
+  /* FÂİDE TABLOSU */
+  .fayda-tablo{width:100%;border-collapse:collapse;margin:4px 0 18px;font-size:.98rem;}
+  .fayda-tablo th,.fayda-tablo td{padding:9px 12px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top;line-height:1.5;}
+  .fayda-tablo th{color:var(--navy);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;border-bottom:2px solid var(--navy-soft);}
+  .fayda-tablo tr:last-child td{border-bottom:none;}
+  @media (max-width:620px){.fayda-tablo th,.fayda-tablo td{padding:8px 6px;font-size:.9rem;}.fayda-tablo th{font-size:.7rem;letter-spacing:.05em;}}
+</style>
+<style>.sayfa > section.nakid:first-of-type{margin-top:32px;}</style>
+</head>
+<body>
+<div class="sayfa">
+
+<section class="nakid">
+
+  <div class="nakid-baslik">
+    <span class="etiket">49. Beyit</span>
+    <h2>Buvât ve Bedru'l-Ûlâ gazveleri, kıblenin değiştirilmesi</h2>
+  </div>
+
+  <div class="metin">
+    <div class="metin-etiket"><span class="rozet">Beyit 49</span>Şeyh rahimehullah dedi ki</div>
+    <p class="ar">إِلَى بُوَاطٍ ثُمَّ بَدْرٍ وَوَجَبْ . . . تَحَوُّلُ الْقِبْلَةِ فِي نِصْفِ رَجَبْ</p>
+    <p class="okunus">İlâ Buvâtin sümme Bedrin ve veceb, tehavvulu'l-kıbleti fî nısfi Receb.</p>
+    <p class="tr">"Ardından Buvât ve Bedir gazveleri gerçekleşti. Kıblenin değiştirilmesi ise Receb ayının ortasında farz kılındı."</p>
+  </div>
+
+
+  <div class="serh-ayrac"><span>Şerh</span></div>
+
+
+  <h3 class="altbolum"><span class="no">1</span>Bu beyitte kaç hadise vardır?</h3>
+
+  <p>Bu beyitte üç hadiseden bahsedilmektedir:</p>
+  <ol class="sayili">
+    <li>Buvât Gazvesi.</li>
+    <li>Bedru'l-Ûlâ Gazvesi (Bedr-i Suğrâ veya Sefevân Gazvesi de denilir).</li>
+    <li>Kıblenin Beytülmakdis'ten Kâbe yönüne çevrilmesi.</li>
+  </ol>
+
+
+  <h3 class="altbolum"><span class="no">2</span>Beytin detaylı manası</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>İlâ Buvâtin <span class="lafz-ar" dir="rtl">إِلَى بُوَاطٍ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Bâ harfinin üzerinde damme vardır. "Bevât" da denilir ancak en meşhur kullanımı "Buvât"tır.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Sümme Bedrin <span class="lafz-ar" dir="rtl">ثُمَّ بَدْرٍ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Burada kastedilen büyük Bedir Gazvesi değildir. Ondan önce meydana gelen ilk Bedir Gazvesi'dir.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Ve vecebe <span class="lafz-ar" dir="rtl">وَوَجَبْ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Yani vacip oldu (Kâbe'ye yönelmeleri).</p>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">3</span>Buvât Gazvesi ile ilgili meseleler</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Bu gazvenin ismi nereden gelmektedir?</span></h4>
+  <div class="kisim-govde">
+    <div class="notkutu">
+      <span class="not-etiket">Not</span>
+      <p>Buvât Gazvesi, Resûlullah'ın <span class="sav">ﷺ</span> Ebvâ Gazvesi'nden sonra çıktığı ikinci gazvedir.</p>
+    </div>
+    <p>Buvât (<span class="ar-ic" dir="rtl">بُوَاط</span>), Yenbu (<span class="ar-ic" dir="rtl">يَنْبُع</span>) yakınlarında bulunan Radva Dağı (<span class="ar-ic" dir="rtl">جَبَلُ رَضْوَى</span>) civarındaki dağlardan birinin ismidir.</p>
+    <p>Gazve bu bölgeye kadar ilerlediği için bu ismi almıştır ve Buvât Gazvesi olarak isimlendirilmiştir.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Bu gazve nerede gerçekleşmiştir?</span></h4>
+  <div class="kisim-govde">
+    <p>Buvât Gazvesi'nin gerçekleştiği yer hakkında tarih âlimleri arasında ihtilaf bulunmaktadır.</p>
+    <ol class="sayili">
+      <li><strong>Meşhur olan ve cumhurun görüşü:</strong> Buvât, Yenbu şehrine yaklaşık 100 km, Medine'ye ise yaklaşık 150 km uzaklıkta, Radva Dağı yakınlarında bulunan bir bölgedir.</li>
+      <li><strong>Diğer görüş:</strong> Buvât, Medine'ye yaklaşık 40 km uzaklıkta, Tebûk yolu üzerinde bulunan bir bölgedir.</li>
+    </ol>
+    <p class="vurgu">Râcih görüş: Birinci görüş daha kuvvetlidir.</p>
+    <p>Çünkü tarih âlimlerinin çoğu, Buvât'ın Radva Dağı yakınlarında bulunduğunu belirtmiştir.</p>
+
+    <div class="notkutu">
+      <span class="not-etiket">İkaz</span>
+      <ol class="sayili">
+        <li>Ancak Buvât bölgesinin tam olarak nerede bulunduğunu kesin bir şekilde bilmiyoruz. Sadece yaklaşık olarak tahmin edebiliriz.</li>
+        <li>Medine'ye yaklaşık 40 km uzaklıkta Buvât adında bir vadi de bulunmaktadır. Aynı şekilde Radva Dağı'nın bir parçası olan Buvât adında bir dağ da vardır.</li>
+        <li>Resûlullah'ın <span class="sav">ﷺ</span> gazveleri çoğu zaman kıyı bölgelerinde gerçekleşmiştir.</li>
+      </ol>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Bu gazve ne zaman gerçekleşmiştir?</span></h4>
+  <div class="kisim-govde">
+    <p>Buvât Gazvesi'nin hicretin ikinci yılında gerçekleştiği konusunda ihtilaf olmadığı söylenebilir. Ancak hangi ayda gerçekleştiği konusunda âlimler arasında ihtilaf bulunmaktadır.</p>
+    <ol class="sayili">
+      <li><strong>Rebîülevvel ayında gerçekleştiği görüşü:</strong> Cumhur âlimlere, İbn İshâk, İbn Sa'd, İbnu'l-Kayyim ve İbn Kesîr'e göre gazve, hicretin ikinci yılının Rebîülevvel ayında gerçekleşmiştir. İbn Kesîr bu görüşü el-Bidâye ve'n-Nihâye'de İbn İshâk'tan nakletmiştir.</li>
+      <li><strong>Rebîülâhir ayında gerçekleştiği görüşü:</strong> İbn Kesîr, el-Fusûl fi's-Sîre adlı eserinde gazvenin hicretin ikinci yılının Rebîülâhir ayında gerçekleştiğini zikretmiştir. (Bu aynı zamanda İbn Hazm ve İbnu'l-Esîr'in görüşüdür. Taberî ve Beyhakî de İbn İshâk'tan bu şekilde nakletmiştir.)</li>
+    </ol>
+  </div>
+
+  <h4 class="kisim"><span class="no">4</span><span>Bu gazvenin komutanı kimdi?</span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Gazvenin komutanı bizzat Resûlullah <span class="sav">ﷺ</span> idi.</li>
+      <li>Kureyş'in ticaret kervanının başında ise Umeyye bin Halef el-Cumahî bulunuyordu.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">5</span><span>Bu gazveye kaç sahâbe katıldı?</span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Resûlullah <span class="sav">ﷺ</span>, 200 sahâbe ile gazveye çıktı. Siyer kaynaklarında bu sahâbelerin Muhâcirlerden olduğu zikredilmiştir.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">6</span><span>Bu gazvede sancağı kim taşıdı?</span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Sancağı Sa'd bin Ebî Vakkâs radıyallahu anh taşıdı. Sancağın rengi beyazdı.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">7</span><span>Resûlullah <span class="sav">ﷺ</span> Medine'ye kimi vali tayin etti?</span></h4>
+  <div class="kisim-govde">
+    <p>Resûlullah'ın <span class="sav">ﷺ</span> Buvât Gazvesi'ne çıkarken Medine'ye kimi vali tayin ettiği konusunda üç farklı rivayet bulunmaktadır:</p>
+    <ol class="sayili">
+      <li><strong>Sa'd bin Muâz</strong> (<span class="ar-ic" dir="rtl">سَعْدُ بْنُ مُعَاذٍ</span>): İbnu'l-Kayyim ve Vâkıdî'nin rivayetlerine göre Resûlullah <span class="sav">ﷺ</span>, Sa'd bin Muâz radıyallahu anh'ı Medine'ye vali tayin etmiştir.</li>
+      <li><strong>Sâib bin Osman bin Maz'ûn</strong> (<span class="ar-ic" dir="rtl">السَّائِبُ بْنُ عُثْمَانَ بْنِ مَظْعُونٍ</span>): İbn Hişâm, İbn Kesîr ve Zehebî'nin nakillerine göre Medine'ye vali tayin edilen kişi, Osman bin Maz'ûn'un oğlu Sâib bin Osman bin Maz'ûn'dur.</li>
+      <li><strong>Sâib bin Maz'ûn</strong> (<span class="ar-ic" dir="rtl">السَّائِبُ بْنُ مَظْعُونٍ</span>): Süheylî, er-Ravdu'l-Unuf adlı eserinde Medine'ye vali tayin edilen kişinin Osman bin Maz'ûn'un kardeşi Sâib bin Maz'ûn olduğunu zikretmiştir.</li>
+    </ol>
+  </div>
+
+  <h4 class="kisim"><span class="no">8</span><span>Resûlullah <span class="sav">ﷺ</span> Medine'den kaç gün ayrı kaldı?</span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Siyer âlimleri, Buvât Gazvesi sırasında Resûlullah'ın <span class="sav">ﷺ</span> Medine dışında kaç gün kaldığına dair belirli bir süre zikretmemişlerdir.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">9</span><span>Bu gazvenin sebebi nedir?</span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Resûlullah <span class="sav">ﷺ</span>, Umeyye bin Halef el-Cumahî'nin liderliğindeki Kureyş'e ait ticaret kervanına el koymak amacıyla bu gazveye çıktı. Şam ticaret yolu üzerinde bulunan bu kervanda 100 Kureyşli ve 2.500 deve bulunuyordu.</li>
+    </ul>
+    <div class="blok alim">
+      <span class="soyleyen">İbn Kesîr rahimehullah (v. 774)</span>
+      <p class="ar">«وَكَانَ مَقْصِدُهُ أَنْ يَعْتَرِضَ لِعِيرِ قُرَيْشٍ، وَكَانَ فِيهِ أُمَيَّةُ بْنُ خَلَفٍ وَمِائَةُ رَجُلٍ وَأَلْفَانِ وَخَمْسُمِائَةِ بَعِيرٍ»</p>
+      <p class="tr">"Onun maksadı Kureyş'in kervanının önünü kesmekti. Kervanda Umeyye bin Halef, yüz adam ve iki bin beş yüz deve bulunuyordu."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/23708/939" target="_blank" rel="noopener">İbn Kesîr, el-Bidâye ve'n-Nihâye, 3/246</a>.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">10</span><span>Bu gazvenin hedefleri nelerdir?</span></h4>
+  <div class="kisim-govde">
+    <ol class="sayili">
+      <li><strong>Kureyş'e ekonomik baskı uygulamak:</strong> Kureyş'in ticaret kervanlarını hedef alarak onları ekonomik açıdan baskı altına almak.</li>
+      <li><strong>Muhâcirlerin gasp edilen mallarını geri almak:</strong> Muhâcirler, Mekke'den hicret ederken mallarını yanlarında götürememişlerdi. Bu gazvenin hedeflerinden biri de Kureyş tarafından gasp edilen bu malları geri almaktı.</li>
+      <li><strong>Sahâbeleri daha büyük gazvelere hazırlamak:</strong> Sahâbelerin askerî tecrübe kazanmalarını sağlamak ve onları ileride gerçekleşecek daha büyük gazvelere hazırlamak.</li>
+    </ol>
+  </div>
+
+  <h4 class="kisim"><span class="no">11</span><span>Buvât Gazvesi'nde yaşanan hadiseler</span></h4>
+  <div class="kisim-govde">
+    <ol class="sayili">
+      <li><strong>Resûlullah'ın <span class="sav">ﷺ</span> Medine'den yola çıkması:</strong> Resûlullah <span class="sav">ﷺ</span>, 200 sahâbe ile birlikte Medine'den yola çıktı ve Buvât bölgesine doğru ilerledi.</li>
+      <li><strong>Kureyş kervanının yol değiştirmesi:</strong> Umeyye bin Halef el-Cumahî'nin liderliğindeki Kureyş kervanı, Müslümanların hareketinden haberdar olunca güzergâhını değiştirdi.</li>
+      <li><strong>Resûlullah'ın <span class="sav">ﷺ</span> Medine'ye geri dönmesi:</strong> Resûlullah <span class="sav">ﷺ</span>, Buvât bölgesine ulaştığında Kureyş kervanını bulamadı. Bunun üzerine herhangi bir çatışma yaşanmadan Medine'ye geri döndü.</li>
+    </ol>
+  </div>
+
+  <h4 class="kisim"><span class="no">12</span><span>Buvât Gazvesi'nin neticeleri nelerdir?</span></h4>
+  <div class="kisim-govde">
+    <ol class="sayili">
+      <li><strong>Herhangi bir savaşın yaşanmaması:</strong> Kureyş'in gözcüleri, Müslümanların hareketinden haberdar olup kervana haber verdiler. Bunun üzerine kervan güzergâhını değiştirdi ve herhangi bir savaş meydana gelmedi.</li>
+    </ol>
+  </div>
+
+  <h4 class="kisim"><span class="no">13</span><span>Buvât Gazvesi'nden alınan dersler</span></h4>
+  <div class="kisim-govde">
+    <ol class="sayili">
+      <li><strong>Resûlullah'ın <span class="sav">ﷺ</span> güzel planlama yapması:</strong> Resûlullah <span class="sav">ﷺ</span>, şer'î sebeplere başvurarak düşmanın üzerine yürümüştür. Bu durum, onun güzel bir planlama yaptığını ve sürekli hareket hâlinde olarak müşrikleri yıprattığını göstermektedir.</li>
+      <li><strong>Görevlerin ehil olan kişilere verilmesi:</strong> Resûlullah <span class="sav">ﷺ</span>, görevleri o işi yapabilecek ehil kimselere vermiştir. Örnekler:
+        <ul class="madde">
+          <li>Sancağı taşıma görevi: Sa'd bin Ebî Vakkâs radıyallahu anh.</li>
+          <li>Medine valiliği: Sa'd bin Muâz radıyallahu anh (İbn Sa'd'ın rivayetine göre).</li>
+        </ul>
+      </li>
+      <li><strong>Sahâbeleri farklı görevlere alıştırması:</strong> Resûlullah <span class="sav">ﷺ</span>, sancağı taşıma ve Medine'de vali olarak kalma görevlerini her seferinde aynı kişilere bırakmamış, gazveden gazveye bu görevleri farklı sahâbeler arasında değiştirmiştir.
+        <p>Böylece sahâbelerin her biri sorumluluk almaya alışmış ve ileride üstlenecekleri daha büyük görevlere hazırlanmışlardır.</p>
+        <div class="notkutu">
+          <span class="not-etiket">Fâide</span>
+          <table class="fayda-tablo">
+            <thead>
+              <tr><th>Gazve</th><th>Sancağı taşıyan</th><th>Medine'de vali bırakılan</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Ebvâ</td><td>Hamza bin Abdilmuttalib</td><td>Sa'd bin Ubâde</td></tr>
+              <tr><td>Buvât</td><td>Sa'd bin Ebî Vakkâs</td><td>Sa'd bin Muâz</td></tr>
+              <tr><td>Uşeyre</td><td>Hamza bin Abdilmuttalib</td><td>Ebû Seleme bin Abdilesed</td></tr>
+              <tr><td>Bedru'l-Ûlâ</td><td>Ali bin Ebî Tâlib</td><td>Zeyd bin Hârise</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <li><strong>Düşmanı zayıflatma stratejisi:</strong> Resûlullah'ın <span class="sav">ﷺ</span> askerî hareketleri, Kureyş müşrikleri üzerinde baskı oluşturmuştur. Nitekim Kureyş kervanı, Müslümanlarla karşılaşmaktan çekindiği için yolunu değiştirmiştir.
+        <p>Bu durum, Müslümanların hareketlerinin düşman üzerinde hem maddi hem de manevi etkileri olduğunu göstermektedir.</p>
+      </li>
+      <li><strong>Maslahat ve mefsedeyi gözetmek:</strong> Resûlullah <span class="sav">ﷺ</span>, Kureyş kervanına ulaşamadığında peşinden gitmeyerek Medine'ye dönmüştür.
+        <p>Bu durum, maslahat ve mefsedeyi gözetmek açısından değerlendirilebilir. Çünkü düşmanın peşinden gitmek, tuzağa düşmek veya daha kalabalık düşman kuvvetleriyle karşılaşmak gibi mefsedelere yol açabilirdi.</p>
+      </li>
+      <li><strong>Sebeplere başvurulsa bile sonucun Allah'ın takdirinde olması:</strong> İnsan, bütün meşru sebeplere başvursa bile her zaman hedefine ulaşamayabilir. Çünkü sonuç, Allah'ın kaza ve kaderine bağlıdır.
+        <p>Nitekim Resûlullah <span class="sav">ﷺ</span>, bu gazvede gerekli sebeplere başvurmuş ancak Allah, hedeflediği kervana ulaşmasını takdir etmemiştir.</p>
+        <p>Her şey Allah'ın iradesi ve kudreti altındadır.</p>
+      </li>
+    </ol>
+  </div>
+
+</section>
+
+</div>
+</body>
+</html>
