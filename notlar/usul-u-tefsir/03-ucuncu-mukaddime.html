@@ -675,6 +675,17 @@
 <style>.sayfa > section.nakid:first-of-type{margin-top:32px;}</style>
 </head>
 <body>
+<nav class="menu" aria-label="Meseleler">
+  <div class="menu-baslik"><span>Meseleler</span><button class="menu-kapat" aria-label="Kapat">×</button></div>
+  <ol>
+      <li><a href="#mesele-1"><span class="m-no">1</span><span>İsmi</span></a></li>
+      <li><a href="#mesele-2"><span class="m-no">2</span><span>Kabilesi</span></a></li>
+      <li><a href="#mesele-3"><span class="m-no">3</span><span>Doğduğu yer</span></a></li>
+      <li><a href="#mesele-4"><span class="m-no">4</span><span>Çocukluğu</span></a></li>
+  </ol>
+</nav>
+<div class="menu-perde"></div>
+<button class="menu-dugme">☰ Meseleler</button>
 <div class="sayfa">
 
 <!-- ================= ÜÇÜNCÜ MUKADDİME ================= -->
@@ -684,6 +695,39 @@
     <h2>Şeyh Abdurrahman bin Nâsır es-Sa'dî'nin Kısa Biyografisi</h2>
   </div>
 
+
+  <h3 class="altbolum" id="mesele-1"><span class="no">1</span>İsmi</h3>
+
+  <div class="lafz">
+    <span class="ar-buyuk" dir="rtl">عَبْدُ الرَّحْمَنِ بْنُ نَاصِرٍ السَّعْدِيُّ التَّمِيمِيُّ</span>
+    <span class="lafz-tr">Abdurrahman bin Nâsır es-Sa'dî et-Temîmî</span>
+  </div>
+
+
+  <h3 class="altbolum" id="mesele-2"><span class="no">2</span>Kabilesi</h3>
+
+  <p>Temîm kabilesine mensuptur. Temîm, Arapların eski ve köklü kabilelerinden biridir.</p>
+  <p>Sahâbî Habbâb bin Eret et-Temîmî radıyallahu anh ve Şeyh Muhammed bin Abdulvehhâb da bu kabileye mensuptur.</p>
+  <p>Resûlullah <span class="sav">ﷺ</span>, Temîm kabilesi hakkında şöyle buyurmuştur:</p>
+  <div class="blok hadis">
+    <span class="soyleyen">Resûlullah <span class="sav">ﷺ</span> buyurdu</span>
+    <p class="ar">«هُمْ أَشَدُّ أُمَّتِي عَلَى الدَّجَّالِ»</p>
+    <p class="tr">"Onlar, ümmetim içinde Deccâl'e karşı en çetin olanlardır."</p>
+    <p class="kaynak">📚 <a href="https://shamela.ws/book/1681/6396" target="_blank" rel="noopener">Buhârî, 4366</a>; <a href="https://shamela.ws/book/1727/6386" target="_blank" rel="noopener">Müslim, 2525</a>.</p>
+  </div>
+
+
+  <h3 class="altbolum" id="mesele-3"><span class="no">3</span>Doğduğu yer</h3>
+
+  <p>H.&nbsp;1307 yılında, Kasîm bölgesinin Uneyze şehrinde doğmuştur.</p>
+
+
+  <h3 class="altbolum" id="mesele-4"><span class="no">4</span>Çocukluğu</h3>
+
+  <p>Dört yaşındayken annesi, yedi yaşındayken de babası vefat etmiş ve küçük yaşta yetim kalmıştır.</p>
+  <p>Önce babasının diğer eşi, ardından ağabeyi Hamed tarafından yetiştirilmiştir. Ağabeyinin teşvikiyle küçük yaşta ilim öğrenmeye başlamıştır.</p>
+  <p>11 yaşında Kur'ân'ın tamamını ezberleyerek hafız olmuştur.</p>
+
 </section>
 
 <footer>
@@ -692,5 +736,30 @@
 </footer>
 
 </div>
+
+<script>
+(function(){
+  var b=document.body, perde=document.querySelector('.menu-perde');
+  function ac(){b.classList.add('menu-acik');}
+  function kapat(){b.classList.remove('menu-acik');}
+  document.querySelector('.menu-dugme').addEventListener('click',ac);
+  document.querySelector('.menu-kapat').addEventListener('click',kapat);
+  perde.addEventListener('click',kapat);
+  var linkler=[].slice.call(document.querySelectorAll('.menu a'));
+  linkler.forEach(function(a){a.addEventListener('click',kapat);});
+  var basliklar=linkler.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
+  function guncelle(){
+    var i=-1;
+    basliklar.forEach(function(h,k){ if(h.getBoundingClientRect().top<=window.innerHeight*0.3) i=k; });
+    linkler.forEach(function(a,k){a.classList.toggle('aktif',k===i);});
+    if(i>=0 && window.innerWidth>1180){
+      var a=linkler[i], m=document.querySelector('.menu'), r=a.getBoundingClientRect(), mr=m.getBoundingClientRect();
+      if(r.top<mr.top||r.bottom>mr.bottom) a.scrollIntoView({block:'nearest'});
+    }
+  }
+  window.addEventListener('scroll',guncelle,{passive:true});
+  guncelle();
+})();
+</script>
 </body>
 </html>
