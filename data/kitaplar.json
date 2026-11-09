@@ -227,6 +227,22 @@
           "baslik": "Usûlu't-Tefsîr ilmine ilişkin meseleler",
           "alt": "Birinci Mukaddime",
           "dosya": "01-birinci-mukaddime.html"
+        },
+        {
+          "id": "2",
+          "etiket": "2",
+          "kisa": "İkinci Mukaddime",
+          "baslik": "el-Kavâidu'l-Hisân kitabına ilişkin meseleler",
+          "alt": "İkinci Mukaddime",
+          "dosya": "02-ikinci-mukaddime.html"
+        },
+        {
+          "id": "3",
+          "etiket": "3",
+          "kisa": "Üçüncü Mukaddime",
+          "baslik": "Şeyh Abdurrahman bin Nâsır es-Sa'dî'nin kısa biyografisi",
+          "alt": "Üçüncü Mukaddime",
+          "dosya": "03-ucuncu-mukaddime.html"
         }
       ]
     }

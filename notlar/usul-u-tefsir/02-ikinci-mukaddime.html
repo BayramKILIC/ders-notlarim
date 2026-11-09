@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Usul-u Tefsir Dersi · İkinci Mukaddime</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#123a5f;
+    --navy-soft:#1d5183;
+    --ink:#20262e;
+    --ink-soft:#4a5462;
+    --paper:#fbfaf7;
+    --card:#ffffff;
+    --rule:#e2ddd3;
+
+    --green:#1e6b46;
+    --green-bg:#eef7f1;
+    --green-edge:#a8d3bb;
+
+    --amber:#8a5a12;
+    --amber-bg:#fdf5e6;
+    --amber-edge:#e2c184;
+
+    --blue:#1a4f80;
+    --blue-bg:#eef4fa;
+    --blue-edge:#a9c6e2;
+
+    --bordo:#75194c;
+    --bordo-bg:#fbf2f6;
+    --bordo-edge:#e3c3d4;
+
+    --red:#8d2f2f;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Source Serif 4","Cambria","Georgia",serif;
+    font-size:18px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .sayfa{
+    max-width:820px;
+    margin:0 auto;
+    padding:0 26px 90px;
+  }
+
+  /* ---------- KAPAK ---------- */
+  header.kapak{
+    color:var(--bordo);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:56px 0;
+    margin-bottom:60px;
+  }
+  header.kapak .marka{
+    font-size:.95rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:#d54220;
+    font-weight:600;
+    line-height:1.7;
+    max-width:26ch;
+  }
+  header.kapak .marka-cizgi{
+    width:120px;
+    height:1px;
+    background:var(--rule);
+    margin:26px auto 34px;
+  }
+  header.kapak h1{
+    font-size:clamp(3.3rem,9.5vw,5.8rem);
+    line-height:1.1;
+    color:var(--bordo);
+    margin:0;
+    font-weight:700;
+    letter-spacing:-.015em;
+    max-width:15ch;
+  }
+  header.kapak .altbaslik{
+    font-size:1.16rem;
+    color:var(--bordo);
+    font-style:italic;
+    margin:34px 0 0;
+    max-width:38ch;
+    line-height:1.7;
+  }
+  header.kapak .kunye{
+    margin-top:0;
+    padding-top:72px;
+    font-size:.94rem;
+    color:var(--bordo);
+    letter-spacing:.09em;
+  }
+  header.kapak .kapak-ayet{
+    max-width:540px;
+    margin:0 auto 10px;
+    font-size:1.04rem;
+    line-height:1.75;
+    letter-spacing:0;
+    font-style:italic;
+    color:var(--bordo);
+  }
+  header.kapak .kapak-ayet-kaynak{
+    margin:0;
+    font-size:.86rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  header.kapak .kunye .cizgi{
+    width:56px;
+    height:2px;
+    background:var(--bordo);
+    margin:0 auto 18px;
+  }
+  .besmele{
+    font-family:"Scheherazade New",serif;
+    font-size:2.5rem;
+    color:var(--bordo);
+    direction:rtl;
+    margin:0 0 46px;
+  }
+
+  /* ---------- NÂKID ---------- */
+  section.nakid{margin-bottom:70px;}
+
+  .nakid-baslik{
+    background:var(--navy);
+    color:#fff;
+    border-radius:4px;
+    padding:22px 28px;
+    margin-bottom:34px;
+  }
+  .nakid-baslik .etiket{
+    display:block;
+    font-size:.74rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    opacity:.72;
+    margin-bottom:8px;
+  }
+  .nakid-baslik h2{
+    margin:0;
+    font-size:1.42rem;
+    line-height:1.45;
+    font-weight:600;
+  }
+
+  /* ---------- METİN (müellifin sözü) ---------- */
+  .metin{
+    background:var(--bordo-bg);
+    border:1px solid var(--bordo-edge);
+    border-top:5px solid var(--bordo);
+    border-radius:4px;
+    padding:28px 32px 26px;
+    margin:0 0 20px;
+  }
+  .metin .metin-etiket{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px 12px;
+    font-size:.78rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--bordo);
+    margin-bottom:18px;
+  }
+  .metin .metin-etiket .rozet{
+    background:var(--bordo);
+    color:#fff;
+    padding:3px 11px;
+    border-radius:3px;
+    letter-spacing:.2em;
+  }
+  .metin .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:2rem;
+    line-height:2.1;
+    direction:rtl;
+    text-align:right;
+    color:var(--bordo);
+    margin:0 0 18px;
+  }
+  .metin .tr{
+    margin:0;
+    padding-top:16px;
+    border-top:1px dotted var(--bordo-edge);
+    font-size:1.06rem;
+  }
+
+  /* ---------- ŞERH AYRACI ---------- */
+  .serh-ayrac{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin:54px 0 10px;
+    color:var(--navy);
+  }
+  .serh-ayrac::before,.serh-ayrac::after{
+    content:"";
+    flex:1;
+    height:2px;
+    background:var(--navy-soft);
+    opacity:.35;
+  }
+  .serh-ayrac span{
+    font-size:1.05rem;
+    font-weight:700;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+  }
+
+  h3.altbolum{
+    font-size:1.55rem;
+    line-height:1.4;
+    color:var(--navy);
+    margin:60px 0 20px;
+    padding-bottom:12px;
+    border-bottom:3px solid var(--rule);
+    font-weight:700;
+  }
+  h3.altbolum .no{
+    display:inline-block;
+    min-width:38px;
+    height:38px;
+    line-height:38px;
+    text-align:center;
+    background:var(--navy-soft);
+    color:#fff;
+    border-radius:50%;
+    font-size:1rem;
+    margin-right:13px;
+    vertical-align:3px;
+  }
+
+  p{margin:0 0 17px;}
+
+  h4.kisim{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:1.2rem;
+    color:var(--navy-soft);
+    margin:34px 0 12px;
+    font-weight:700;
+  }
+  h4.kisim .no{
+    flex:0 0 auto;
+    width:28px;
+    height:28px;
+    line-height:25px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    background:var(--card);
+    font-size:.82rem;
+  }
+  .kisim-govde{
+    border-left:2px solid var(--rule);
+    margin-left:13px;
+    padding-left:27px;
+  }
+
+  .delil{
+    display:grid;
+    grid-template-columns:34px 1fr;
+    gap:0 18px;
+    margin:30px 0;
+    padding-bottom:8px;
+    border-bottom:1px dotted var(--rule);
+  }
+  .delil:last-of-type{border-bottom:none;}
+  .delil > .no{
+    width:34px;
+    height:34px;
+    line-height:34px;
+    text-align:center;
+    border-radius:50%;
+    background:var(--navy);
+    color:#fff;
+    font-size:.88rem;
+    font-weight:700;
+    margin-top:2px;
+  }
+  .delil > .govde > .blok:first-child{margin-top:0;}
+  .delil-etiket{
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--navy);
+    margin:6px 0 12px;
+  }
+  .delil > .govde > .delil-etiket + .blok{margin-top:0;}
+
+  .ikaz{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-left:5px solid var(--red);
+    border-radius:4px;
+    padding:20px 26px 6px;
+    margin:28px 0;
+  }
+  .ikaz .ikaz-etiket{
+    display:block;
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--red);
+    margin-bottom:10px;
+  }
+  .ikaz ol.sayili{margin:10px 0 14px;}
+  ol.sayili li p.alt-tanim{margin:10px 0 0;padding-left:14px;border-left:2px solid var(--rule);}
+  ol.sayili > li > p{margin:12px 0 0;}
+  ol.sayili li .blok{margin:16px 0 8px;}
+  ul.madde li .blok{margin:14px 0 8px;}
+  ol.sayili > li ul.madde{margin:12px 0 4px;}
+  h4.kisim .baslik-alt{font-weight:400;color:var(--ink);}
+  h4.kisim .lafz-ar{font-family:"Scheherazade New",serif;font-weight:700;font-size:1.08em;line-height:1;color:var(--bordo);margin-left:8px;white-space:nowrap;}
+  .ar-ic{font-family:"Scheherazade New",serif;font-size:1.25em;line-height:1;unicode-bidi:isolate;display:inline-block;white-space:nowrap;}
+  .lafz{margin:22px 0;text-align:center;}
+  .lafz .ar-buyuk{display:block;font-family:"Scheherazade New",serif;font-size:1.7rem;line-height:1.9;color:var(--bordo);}
+  .lafz .lafz-tr{display:block;margin-top:2px;color:var(--ink-soft);}
+  .bolum-baslik{
+    margin:60px 0 28px;
+    padding:15px 18px;
+    text-align:center;
+    font-size:1.3rem;
+    font-weight:700;
+    line-height:1.4;
+    color:var(--navy);
+    background:var(--card);
+    border-top:2px solid var(--navy-soft);
+    border-bottom:2px solid var(--navy-soft);
+  }
+  .notkutu{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--navy-soft);border-radius:3px;padding:22px 24px 6px;margin:32px 0;}
+  .notkutu .not-etiket{display:block;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--navy-soft);margin-bottom:12px;}
+  ul.ikili{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:9px 30px;list-style:none;margin:26px 0;padding:0;}
+  ul.ikili li{position:relative;padding-left:18px;line-height:1.7;}
+  ul.ikili li::before{content:"";position:absolute;left:0;top:11px;width:6px;height:6px;background:var(--navy-soft);transform:rotate(45deg);}
+
+  /* ---------- VURGU ---------- */
+  .vurgu{
+    font-size:1.24rem;
+    line-height:1.7;
+    color:var(--navy);
+    font-weight:600;
+    border-left:4px solid var(--navy-soft);
+    padding:6px 0 6px 20px;
+    margin:30px 0;
+  }
+  .vurgu-buyuk{
+    font-size:1.42rem;
+    line-height:1.6;
+    text-align:center;
+    color:var(--navy);
+    font-weight:700;
+    margin:38px 0;
+    padding:26px 22px;
+    background:var(--card);
+    border-top:2px solid var(--navy-soft);
+    border-bottom:2px solid var(--navy-soft);
+  }
+  /* ---------- TANIM (arapça + türkçe) ---------- */
+  .tanim{
+    margin:30px 0;
+    padding:20px 28px 22px;
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-top:4px solid var(--navy-soft);
+    border-radius:4px;
+    text-align:center;
+  }
+  .tanim .tanim-etiket{
+    display:block;
+    font-size:.78rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--navy-soft);
+    margin-bottom:10px;
+  }
+  .tanim .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:1.85rem;
+    line-height:2;
+    direction:rtl;
+    color:var(--bordo);
+    margin:0 0 14px;
+  }
+  .tanim .tr{
+    margin:0;
+    padding-top:14px;
+    border-top:1px dotted var(--rule);
+    font-size:1.18rem;
+    line-height:1.7;
+    font-weight:600;
+    color:var(--navy);
+  }
+  strong{color:var(--navy);font-weight:700;}
+  .sav{font-family:"Scheherazade New",serif;font-size:1.2em;line-height:1;font-weight:400;}
+
+  /* ---------- ALINTI BLOKLARI ---------- */
+  .blok{
+    border-radius:4px;
+    padding:22px 26px;
+    margin:26px 0;
+    border-left-width:5px;
+    border-left-style:solid;
+  }
+  .blok .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:1.75rem;
+    line-height:2.05;
+    direction:rtl;
+    text-align:right;
+    margin-bottom:14px;
+  }
+  .blok .tr{margin:0 0 12px;}
+  .blok .kaynak{
+    font-size:.9rem;
+    color:var(--ink-soft);
+    font-style:italic;
+    margin:0;
+    padding-top:10px;
+    border-top:1px dotted currentColor;
+  }
+  .blok .soyleyen{
+    display:block;
+    font-size:.79rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:600;
+    margin-bottom:13px;
+  }
+
+  .ayet{background:var(--green-bg);border-left-color:var(--green-edge);}
+  .ayet .ar,.ayet .soyleyen{color:var(--green);}
+
+  .alim{background:var(--amber-bg);border-left-color:var(--amber-edge);}
+  .alim .ar,.alim .soyleyen{color:var(--amber);}
+
+  .hadis{background:var(--blue-bg);border-left-color:var(--blue-edge);}
+  .hadis .ar,.hadis .soyleyen{color:var(--blue);}
+
+  /* ---------- LİSTELER ---------- */
+  ul.madde{
+    list-style:none;
+    padding:0;
+    margin:20px 0;
+  }
+  ul.madde li{
+    position:relative;
+    padding:7px 0 7px 26px;
+  }
+  ul.madde li::before{
+    content:"◆";
+    position:absolute;
+    left:2px;
+    color:var(--navy-soft);
+    font-size:.68rem;
+    top:12px;
+  }
+
+  ul.madde.yildiz{margin:22px 0;}
+  ul.madde.yildiz > li{padding:10px 0 10px 28px;}
+  ul.madde.yildiz > li::before{
+    content:"✦";
+    left:0;
+    color:var(--amber);
+    font-size:.85rem;
+    top:9px;
+  }
+  ul.madde.yildiz > li + li{border-top:1px solid var(--rule);}
+  ul.madde.yildiz > li .notkutu{margin:14px 0 4px;}
+
+  ol.sayili{
+    list-style:none;
+    counter-reset:sira;
+    padding:0;
+    margin:22px 0;
+  }
+  ol.sayili > li{
+    counter-increment:sira;
+    position:relative;
+    padding:10px 0 10px 46px;
+    border-bottom:1px dotted var(--rule);
+  }
+  ol.sayili > li:last-child{border-bottom:none;}
+  ol.sayili > li::before{
+    content:counter(sira);
+    position:absolute;
+    left:0;
+    top:13px;
+    width:30px;
+    height:30px;
+    line-height:27px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    color:var(--navy-soft);
+    background:var(--card);
+    font-size:.84rem;
+    font-weight:700;
+  }
+
+  /* ---------- ÖZET ---------- */
+  .ozet{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-top:4px solid var(--navy);
+    border-radius:4px;
+    padding:26px 30px;
+    margin-top:34px;
+  }
+  .ozet h4{
+    margin:0 0 16px;
+    color:var(--navy);
+    font-size:1.06rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+  .ozet ul{margin:0;padding-left:22px;}
+  .ozet li{margin-bottom:11px;}
+  .ozet li:last-child{margin-bottom:0;}
+
+  .ayirac{
+    text-align:center;
+    color:var(--rule);
+    letter-spacing:.5em;
+    margin:38px 0;
+    font-size:.8rem;
+  }
+
+  footer{
+    margin-top:70px;
+    padding-top:26px;
+    border-top:3px double var(--rule);
+    text-align:center;
+    color:#d54220;
+    font-size:.9rem;
+  }
+  footer .marka{
+    font-size:1rem;
+    color:#d54220;
+    font-weight:600;
+    letter-spacing:.1em;
+    margin-bottom:6px;
+  }
+
+  @media (max-width:620px){
+    body{font-size:16.5px;}
+    .sayfa{padding:0 16px 60px;}
+    header.kapak h1{font-size:2.8rem;}
+    .besmele{font-size:2rem;}
+    .nakid-baslik h2{font-size:1.16rem;}
+    h3.altbolum{font-size:1.3rem;margin:48px 0 16px;}
+    h3.altbolum .no{min-width:32px;height:32px;line-height:32px;font-size:.9rem;}
+    .metin{padding:22px 18px 20px;}
+    .metin .ar{font-size:1.65rem;line-height:2;}
+    .blok{padding:18px 18px;}
+    .ikaz{padding:18px 18px 4px;}
+    .kisim-govde{margin-left:0;padding-left:14px;}
+    .delil{grid-template-columns:28px 1fr;gap:0 10px;}
+    .delil > .no{width:28px;height:28px;line-height:28px;font-size:.8rem;}
+    .blok .ar{font-size:1.5rem;line-height:1.95;}
+    .vurgu-buyuk{font-size:1.18rem;padding:20px 16px;}
+    .vurgu{font-size:1.1rem;}
+    .tanim{padding:18px 16px 18px;}
+    .tanim .ar{font-size:1.5rem;line-height:1.95;}
+    .tanim .tr{font-size:1.05rem;}
+  }
+
+  @media print{
+    @page{margin:18mm 16mm;}
+    body{background:#fff;font-size:11.5pt;}
+    .sayfa{max-width:none;padding:0;}
+    section.nakid{page-break-before:always;}
+    section.nakid:first-of-type{page-break-before:auto;}
+    .ayirac{display:none;}
+    header.kapak{
+      min-height:238mm;
+      page-break-after:always;
+      margin-bottom:0;
+    }
+    header.kapak h1{font-size:54pt;}
+    .besmele{font-size:26pt;}
+    section.nakid{page-break-inside:auto;}
+    .nakid-baslik{page-break-after:avoid;background:var(--navy) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .metin,.blok,.ozet,.vurgu-buyuk,.tanim{page-break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    h3.altbolum,.serh-ayrac{page-break-after:avoid;}
+  }
+  /* KAYNAK LİNKLERİ */
+  .kaynak a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;}
+  .kaynak a:hover{color:var(--navy-soft);}
+  .lafz + p.kaynak{font-size:.9rem;color:var(--ink-soft);font-style:italic;text-align:center;margin:-14px 0 30px;}
+  .sayfa p a,.sayfa li a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;}
+  .sayfa p a:hover,.sayfa li a:hover{color:var(--navy-soft);}
+  .ar-ic{white-space:nowrap;}
+  .ar-par{white-space:nowrap;}
+  @media (max-width:620px){.ar-ic,.ar-par{white-space:normal;}}
+  /* ---------- MESELE MENÜSÜ ---------- */
+  html{scroll-behavior:smooth;}
+  h3.altbolum{scroll-margin-top:24px;}
+  .menu{position:fixed;top:0;left:0;bottom:0;width:290px;background:var(--card);border-right:1px solid var(--rule);
+        overflow-y:auto;padding:26px 18px 40px;z-index:50;font-size:.86rem;line-height:1.5;}
+  .menu-baslik{font-weight:700;color:var(--bordo);letter-spacing:.04em;font-size:.95rem;margin:0 6px 14px;padding-bottom:10px;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center;}
+  .menu-kapat{display:none;background:none;border:0;font-size:1.6rem;line-height:1;color:var(--ink-soft);cursor:pointer;padding:0 4px;}
+  .menu ol{list-style:none;margin:0;padding:0;}
+  .menu li{margin:0;}
+  .menu a{display:flex;gap:10px;align-items:flex-start;text-decoration:none;color:var(--ink);padding:8px 8px;border-radius:6px;}
+  .menu a:hover{background:var(--blue-bg);color:var(--navy);}
+  .menu a.aktif{background:var(--blue-bg);color:var(--navy);font-weight:600;}
+  .menu .m-no{flex:0 0 auto;min-width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;font-size:.75rem;
+              display:inline-flex;align-items:center;justify-content:center;margin-top:1px;font-weight:600;}
+  .menu-dugme{display:none;position:fixed;bottom:18px;right:18px;z-index:60;background:var(--navy);color:#fff;border:0;border-radius:999px;
+              padding:11px 18px;font:inherit;font-size:.95rem;font-weight:600;box-shadow:0 4px 14px rgba(0,0,0,.22);cursor:pointer;}
+  .menu-perde{display:none;position:fixed;inset:0;background:rgba(20,26,34,.45);z-index:55;}
+  @media (min-width:1181px){ body{padding-left:290px;} }
+  @media (max-width:1180px){
+    .menu{top:auto;left:0;right:0;width:auto;max-height:78vh;border-right:0;border-top:1px solid var(--rule);
+          border-radius:16px 16px 0 0;box-shadow:0 -6px 24px rgba(0,0,0,.18);transform:translateY(105%);transition:transform .25s ease;
+          padding:18px 14px calc(24px + env(safe-area-inset-bottom));font-size:.95rem;z-index:70;}
+    body.menu-acik .menu{transform:none;}
+    body.menu-acik .menu-perde{display:block;}
+    .menu-kapat{display:block;}
+    .menu-dugme{display:block;}
+    .menu a{padding:10px 8px;}
+  }
+  @media print{ .menu,.menu-dugme,.menu-perde{display:none !important;} body{padding-left:0 !important;} }
+  /* ---------- MERHALE AKIŞI ---------- */
+  .akis{margin:26px auto 40px;max-width:600px;}
+  .akis-kutu{background:var(--card);border:1px solid var(--rule);border-top:3px solid var(--navy);border-radius:8px;
+             padding:16px 22px 14px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.04);}
+  .akis-etiket{display:block;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);margin-bottom:6px;}
+  .akis-kutu p{margin:0;font-size:1rem;line-height:1.7;}
+  .akis-ok{position:relative;height:40px;}
+  .akis-ok::before{content:"";position:absolute;left:50%;top:5px;bottom:12px;width:2px;margin-left:-1px;background:var(--navy);}
+  .akis-ok::after{content:"";position:absolute;left:50%;bottom:4px;margin-left:-7px;border-left:7px solid transparent;border-right:7px solid transparent;border-top:10px solid var(--navy);}
+  @media (max-width:620px){ .akis-kutu{padding:14px 16px 12px;} }
+  @media print{ .akis{page-break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact;} }
+  .ozet.bas{margin:10px 0 34px;}
+  .ozet p{margin:0;}
+  .tanim .kaynak{margin-top:12px;font-size:.88rem;color:var(--ink-soft);font-style:italic;}
+  /* ---------- TABLO ---------- */
+  table.tablo{width:100%;border-collapse:collapse;margin:16px 0 4px;font-size:1rem;}
+  table.tablo th,table.tablo td{padding:11px 14px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top;}
+  table.tablo th:last-child,table.tablo td:last-child{text-align:center;width:90px;}
+  table.tablo thead th{background:var(--navy);color:#fff;font-weight:600;font-size:.92rem;letter-spacing:.02em;}
+  table.tablo tbody tr:nth-child(even) td{background:var(--blue-bg);}
+  table.tablo tfoot td{font-weight:700;color:var(--navy);border-top:2px solid var(--navy);border-bottom:none;}
+  .ozet > p{margin:0 0 6px;}
+  @media (max-width:620px){ table.tablo th,table.tablo td{padding:9px 10px;font-size:.92rem;} table.tablo th:last-child,table.tablo td:last-child{width:64px;} }
+  .tanim .tanim-etiket + .tr{border-top:0;padding-top:4px;}
+</style>
+<style>.sayfa > section.nakid:first-of-type{margin-top:32px;}</style>
+</head>
+<body>
+<nav class="menu" aria-label="Meseleler">
+  <div class="menu-baslik"><span>Meseleler</span><button class="menu-kapat" aria-label="Kapat">×</button></div>
+  <ol>
+      <li><a href="#mesele-1"><span class="m-no">1</span><span>Kitabın tam ismi nedir ve bu ismi kim vermiştir?</span></a></li>
+      <li><a href="#mesele-2"><span class="m-no">2</span><span>Şeyh Sa'dî rahimehullah bu kitabı neden yazmıştır?</span></a></li>
+      <li><a href="#mesele-3"><span class="m-no">3</span><span>Şeyh Sa'dî rahimehullah bu kitabı ne zaman yazmıştır ve o sırada kaç yaşındaydı?</span></a></li>
+      <li><a href="#mesele-4"><span class="m-no">4</span><span>Şeyh Sa'dî rahimehullah el-Kavâidu'l-Hisân kitabını ne kadar sürede yazmıştır?</span></a></li>
+      <li><a href="#mesele-5"><span class="m-no">5</span><span>Şeyh Abdurrahman es-Sa'dî rahimehullah, el-Kavâidu'l-Hisân kitabında kaç kaide zikretmiştir?</span></a></li>
+      <li><a href="#mesele-6"><span class="m-no">6</span><span>Şeyh Sa'dî rahimehullah, kitaptaki kaidelerin sayısını kendisi mi belirlemiştir?</span></a></li>
+      <li><a href="#mesele-7"><span class="m-no">7</span><span>Kitaptaki kaideleri Şeyh Sa'dî rahimehullah'ın kendisi mi numaralandırmıştır ve kaide şeklinde ayırmıştır?</span></a></li>
+      <li><a href="#mesele-8"><span class="m-no">8</span><span>el-Kavâidu'l-Hisân kitabında hangi tür kaideler bulunmaktadır?</span></a></li>
+      <li><a href="#mesele-9"><span class="m-no">9</span><span>Kitabın başlığındaki kelimelerin anlamları ve başlığın genel manası</span></a></li>
+  </ol>
+</nav>
+<div class="menu-perde"></div>
+<button class="menu-dugme">☰ Meseleler</button>
+<div class="sayfa">
+
+<!-- ================= İKİNCİ MUKADDİME ================= -->
+<section class="nakid">
+  <div class="nakid-baslik">
+    <span class="etiket">İkinci Mukaddime</span>
+    <h2>el-Kavâidu'l-Hisân Kitabına İlişkin Meseleler</h2>
+  </div>
+
+
+  <h3 class="altbolum" id="mesele-1"><span class="no">1</span>Kitabın tam ismi nedir ve bu ismi kim vermiştir?</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Kitabın ismi</span></h4>
+  <div class="kisim-govde">
+    <p>Şeyh Sa'dî rahimehullah'ın oğulları tarafından onaylanan baskıda kitabın ismi şu şekilde geçmektedir:</p>
+    <div class="lafz">
+      <span class="ar-buyuk" dir="rtl">الْقَوَاعِدُ الْحِسَانُ الْمُتَعَلِّقَةُ بِتَفْسِيرِ الْقُرْآنِ</span>
+      <span class="lafz-tr">el-Kavâidu'l-Hisân el-Muteallika bi-Tefsîri'l-Kur'ân</span>
+    </div>
+    <p>Ancak kitap, bazı baskılarda ve kütüphanelerde daha kısa bir isimle meşhur olmuştur:</p>
+    <div class="lafz">
+      <span class="ar-buyuk" dir="rtl">الْقَوَاعِدُ الْحِسَانُ لِتَفْسِيرِ الْقُرْآنِ</span>
+      <span class="lafz-tr">el-Kavâidu'l-Hisân li-Tefsîri'l-Kur'ân</span>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Kitaba bu ismi kim vermiştir?</span></h4>
+  <div class="kisim-govde">
+    <p>Müellifin oğulları tarafından onaylandığı belirtilen baskıda kitabın isminin <strong>el-Kavâidu'l-Hisân el-Muteallika bi-Tefsîri'l-Kur'ân</strong> olduğu sabittir.</p>
+    <p>Buna karşılık müellif, kitabın ön sözünde şöyle başlamıştır ve kitabın ismini açıkça zikretmemiştir:</p>
+    <div class="blok alim">
+      <span class="soyleyen">Şeyh Abdurrahman es-Sa'dî rahimehullah (v. 1376)</span>
+      <p class="ar">«فَهَذِهِ أُصُولٌ وَقَوَاعِدُ فِي تَفْسِيرِ الْقُرْآنِ الْكَرِيمِ»</p>
+      <p class="tr">"Bunlar, Kur'ân-ı Kerîm'in tefsiriyle ilgili usûl ve kaidelerdir."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/9077/2" target="_blank" rel="noopener">es-Sa'dî, el-Kavâidu'l-Hisân li-Tefsîri'l-Kur'ân, s. 7</a></p>
+    </div>
+    <p>Dolayısıyla <strong>el-Kavâidu'l-Hisân el-Muteallika bi-Tefsîri'l-Kur'ân</strong> ismi, Şeyhin oğulları tarafından onaylanan baskıda yer almaktadır.</p>
+    <div class="notkutu">
+      <span class="not-etiket">Not</span>
+      <p>Şeyh Berrâk, Şeyh Sa'dî'nin mukaddimesini okurken kitabın isminde geçen <span class="ar-par">«<span class="ar-ic" dir="rtl">الْمُتَعَلِّقَة</span>»</span> (el-muteallika) lafzının, kendisine göre esas alınan başlığın bir parçası olmadığını belirtmiştir.</p>
+    </div>
+  </div>
+
+
+  <h3 class="altbolum" id="mesele-2"><span class="no">2</span>Şeyh Sa'dî rahimehullah bu kitabı neden yazmıştır?</h3>
+
+  <div class="ozet bas">
+    <h4>Meselenin özeti</h4>
+    <p>Kitabın yazılış amacı, Kur'ân-ı Kerîm'i anlamaya, manalarını öğrenmeye, doğru bir şekilde tefsir ve tedebbür etmeye yardımcı olacak küllî usûl ve kaideleri ortaya koymaktır.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">1</span><span>Kitabın yazılış sebebi</span></h4>
+  <div class="kisim-govde">
+    <p>Şeyh Abdurrahman bin Nâsır es-Sa'dî rahimehullah, bu kitabı Kur'ân-ı Kerîm'in tefsiriyle ilgili birtakım usûl ve küllî kaideleri bir araya getirmek amacıyla yazmıştır.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Bu kaidelerin amacı</span></h4>
+  <div class="kisim-govde">
+    <p>Bu kaidelerin amacı, ilim talebesine Allah Teâlâ'nın kitabını anlamada, manalarını öğrenmede, onu güzel bir şekilde tedebbür etmede ve tefsirin fer'î meselelerini genel usûl ve kaideleriyle ilişkilendirmede yardımcı olmaktır.</p>
+    <p>Şeyh rahimehullah, kitabın mukaddimesinde bu amacını açıklamış ve söz konusu usûl ve kaidelerin Kur'ân'ı anlamaya ve manalarını öğrenmeye yardımcı olduğunu belirtmiştir:</p>
+    <div class="blok alim">
+      <span class="soyleyen">Şeyh Abdurrahman es-Sa'dî rahimehullah (v. 1376)</span>
+      <p class="ar">«فَهَذِهِ أُصُولٌ وَقَوَاعِدُ فِي تَفْسِيرِ الْقُرْآنِ الْكَرِيمِ، جَلِيلَةُ الْمِقْدَارِ، عَظِيمَةُ النَّفْعِ، تُعِينُ قَارِئَهَا وَمُتَأَمِّلَهَا عَلَى فَهْمِ كَلَامِ اللَّهِ وَالِاهْتِدَاءِ بِهِ»</p>
+      <p class="tr">"Bunlar, Kur'ân-ı Kerîm'in tefsiriyle ilgili, kadri yüce ve faydası büyük usûl ve kaidelerdir. Onları okuyan ve üzerinde düşünen kimseye, Allah'ın kelamını anlamada ve onunla hidayete ermede yardımcı olurlar."</p>
+      <p class="kaynak">📚 <a href="https://shamela.ws/book/9077/2" target="_blank" rel="noopener">es-Sa'dî, el-Kavâidu'l-Hisân li-Tefsîri'l-Kur'ân, s. 7</a></p>
+    </div>
+    <p>Dolayısıyla bu kitabın amacı, Kur'ân'ı âyet âyet tefsir etmek değil, müfessirin ve ilim talebesinin Kur'ân'daki birçok âyeti doğru anlamak ve tefsir etmek için faydalanabileceği kapsamlı usûl ve kaideleri ortaya koymaktır.</p>
+  </div>
+
+
+  <h3 class="altbolum" id="mesele-3"><span class="no">3</span>Şeyh Sa'dî rahimehullah bu kitabı ne zaman yazmıştır ve o sırada kaç yaşındaydı?</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>58 yaşında yazdı</span></h4>
+  <div class="kisim-govde">
+    <p>Şeyh Abdurrahman bin Nâsır es-Sa'dî rahimehullah, el-Kavâidu'l-Hisân adlı eserini yaklaşık <strong>H.&nbsp;1365</strong> yılında kaleme almıştır.</p>
+    <p>Şeyh, <strong>H.&nbsp;1307</strong> yılında doğmuştur. Buna göre kitabı yazdığında yaklaşık <strong>58 yaşındaydı</strong>.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>İlmî hayatının son döneminde yazdı</span></h4>
+  <div class="kisim-govde">
+    <p>Şeyh Abdurrahman bin Nâsır es-Sa'dî rahimehullah, el-Kavâidu'l-Hisân adlı eserini ilmî hayatının ileri bir döneminde yazmıştır.</p>
+    <p>Şeyh, uzun yıllar boyunca Kur'ân-ı Kerîm'i ve tefsirini öğretmiş, Kur'ân ilimleri hakkında eserler kaleme almıştır. Bu sebeple söz konusu kitap, onun tefsir alanındaki uzun tecrübesinin bir ürünü olarak kabul edilir.</p>
+    <p>el-Kavâidu'l-Hisân, Şeyh Sa'dî'nin tefsir ilmindeki olgunluğunu ve Kur'ân'ı öğretme ve manalarını tedebbür etme konusundaki birikimini yansıtan eserlerden biridir.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Tefsir kitabından sonra yazmıştır</span></h4>
+  <div class="kisim-govde">
+    <p>Şeyh Abdurrahman bin Nâsır es-Sa'dî rahimehullah, Teysîru'l-Kerîmi'r-Rahmân fî Tefsîri Kelâmi'l-Mennân adlı tefsirini yaklaşık <strong>iki yılda</strong> kaleme almıştır.</p>
+    <p>Denildi ki: Şeyh rahimehullah, bu mübarek tefsirini <strong>H.&nbsp;1342</strong> yılında yazmaya başlamış ve <strong>H.&nbsp;1344</strong> yılında <strong>37 yaşında</strong> tamamlamıştır.</p>
+    <p>Buna göre Şeyh, el-Kavâidu'l-Hisân adlı eserini Teysîru'l-Kerîmi'r-Rahmân tefsirini tamamladıktan <strong>21 yıl</strong> sonra yazmıştır.</p>
+    <p>Şeyh rahimehullah, yaklaşık <strong>69 yaşında</strong> vefat etmiştir.</p>
+  </div>
+
+
+  <h3 class="altbolum" id="mesele-4"><span class="no">4</span>Şeyh Sa'dî rahimehullah el-Kavâidu'l-Hisân kitabını ne kadar sürede yazmıştır?</h3>
+
+  <p>Şeyh Abdurrahman es-Sa'dî rahimehullah, kitabı H.&nbsp;1365 yılının Ramazan ayının ilk gününde yazmaya başlamıştır ve kitabın sonunda bizzat yazdığı gibi aynı yılın Şevval ayının 6. gününde tamamlamıştır.</p>
+
+  <p><strong>Buna göre kitabı yalnızca bir ay beş gün, yani yaklaşık 35 gün içerisinde kaleme almıştır.</strong></p>
+
+  <p><em>Kitabın muhakkiki Hâlid bin Osman es-Sebt, müellifin kendi el yazısıyla yazılmış nüshasına dayanarak bu bilgiyi belirtmiştir.</em></p>
+
+
+  <h3 class="altbolum" id="mesele-5"><span class="no">5</span>Şeyh Abdurrahman es-Sa'dî rahimehullah, el-Kavâidu'l-Hisân kitabında kaç kaide zikretmiştir?</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Bu soru için 2 cevap vardır</span></h4>
+  <div class="kisim-govde">
+    <p>Şeyh Abdurrahman es-Sa'dî rahimehullah, el-Kavâidu'l-Hisân el-Muteallika bi-Tefsîri'l-Kur'ân adlı eserinde 70 kaide zikretmiştir. Nitekim Şeyh Abdulaziz er-Râcihî hafizahullah da kitabın şerhinde bunu belirtmiştir.</p>
+    <p>Bazı âlimler ise kitapta 71 kaide bulunduğunu söylemiştir.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Bu ihtilafın sebebi</span></h4>
+  <div class="kisim-govde">
+    <p>Kaide sayısındaki bu ihtilafın sebebi, kitabın el yazması nüshaları arasındaki farklılıktır.</p>
+    <p>Kitabın muhakkiki, müellifin kendi el yazısıyla yazılmış iki nüshasına ulaştığını belirtmiştir. Bu nüshalar şunlardır:</p>
+    <ol class="sayili">
+      <li><strong>Birinci Nüsha (A):</strong> Tam bir nüshadır. Muhakkik, kitabın tahkikinde bu nüshayı esas almıştır.</li>
+      <li><strong>İkinci Nüsha (B):</strong> Müellif rahimehullah, bu nüshada 68. kaideyi zikretmemiştir. Söz konusu kaide şöyledir:
+        <div class="tanim">
+          <span class="tanim-etiket">Kâide 68</span>
+          <p class="ar">«ذِكْرُ الْأَوْصَافِ الْمُتَقَابِلَاتِ يُغْنِي عَنِ التَّصْرِيحِ بِالْمُفَاضَلَةِ إِذَا كَانَ الْفَرْقُ مَعْلُومًا»</p>
+          <p class="tr">Birbirine zıt vasıflar zikredildiğinde, aralarındaki fark biliniyorsa hangisinin daha üstün olduğunu açıkça belirtmeye gerek kalmaz.</p>
+          <p class="kaynak">📚 <a href="https://shamela.ws/book/9077/157" target="_blank" rel="noopener">es-Sa'dî, el-Kavâidu'l-Hisân li-Tefsîri'l-Kur'ân, s. 162</a></p>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Netice</span></h4>
+  <div class="kisim-govde">
+    <p>Bu durum, iki el yazması nüsha arasında 68. kaidenin bulunup bulunmaması bakımından bir farklılık olduğunu göstermektedir. 68. kaideyi sayarsak toplam 71 kaide vardır, saymazsak 70 kaide vardır.</p>
+  </div>
+
+
+  <h3 class="altbolum" id="mesele-6"><span class="no">6</span>Şeyh Sa'dî rahimehullah, kitaptaki kaidelerin sayısını kendisi mi belirlemiştir?</h3>
+
+  <p>Şeyh Sa'dî rahimehullah, kitabını kaidelere ayırmış ve bunları birinci kaide, ikinci kaide şeklinde numaralandırmıştır.</p>
+
+  <p>Ancak kitabın mukaddimesinde, kaidelerin toplam sayısının 71 olduğunu açıkça belirtmemiştir.</p>
+
+
+  <h3 class="altbolum" id="mesele-7"><span class="no">7</span>Kitaptaki kaideleri Şeyh Sa'dî rahimehullah'ın kendisi mi numaralandırmıştır ve kaide şeklinde ayırmıştır?</h3>
+
+  <p>Kitabın metninden anlaşıldığı kadarıyla, eseri kaidelere ayıran Şeyh Sa'dî rahimehullah'ın kendisidir.</p>
+
+  <p>Nitekim 71. kaidede söylediği şu söz de bunu desteklemektedir:</p>
+  <div class="blok alim">
+    <span class="soyleyen">Şeyh Abdurrahman es-Sa'dî rahimehullah (v. 1376)</span>
+    <p class="ar">«اعْلَمْ أَنَّ مَا مَضَى مِنَ الْقَوَاعِدِ السَّابِقَةِ هِيَ الْمَقْصُودُ بِوَضْعِ هَذَا الْكِتَابِ»</p>
+    <p class="tr">"Bil ki, önceki kaidelerden zikredilenler, bu kitabın yazılmasından asıl kastedilen hususlardır."</p>
+    <p class="kaynak">📚 <a href="https://shamela.ws/book/9077/163" target="_blank" rel="noopener">es-Sa'dî, el-Kavâidu'l-Hisân li-Tefsîri'l-Kur'ân, s. 168</a></p>
+  </div>
+
+
+  <h3 class="altbolum" id="mesele-8"><span class="no">8</span>el-Kavâidu'l-Hisân kitabında hangi tür kaideler bulunmaktadır?</h3>
+
+  <p>Şeyh Abdurrahman es-Sa'dî rahimehullah'ın el-Kavâidu'l-Hisân li-Tefsîri'l-Kur'ân adlı eserinde zikrettiği 71 kaide incelendiğinde, konularına göre dört kısma ayrılabilir:</p>
+
+  <h4 class="kisim"><span class="no">1</span><span>Yalnızca Usûlu'l-Fıkh'a ait kaideler</span></h4>
+  <div class="kisim-govde">
+    <p>Bunlar, Usûlu'l-Fıkh ve istinbât (hüküm çıkarma) konularıyla ilgili kaidelerdir.</p>
+    <p>Bu incelemeye göre sayıları yaklaşık 10'dur.</p>
+    <p>Bunlara maslahatlar ve mefsedetler, maksatlar, kayıtlar, emir ve nehiy ile ilgili kaideler örnek verilebilir.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Yalnızca Arap diline ait kaideler</span></h4>
+  <div class="kisim-govde">
+    <p>Bunlar, Arap dilinin üslupları, lafızların delâletleri ve cümle yapılarıyla ilgili kaidelerdir.</p>
+    <p>Bu incelemeye göre bu kısımda yalnızca 1 kaide bulunmaktadır.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Arap dili ile Usûlu'l-Fıkh arasında ortak olan kaideler</span></h4>
+  <div class="kisim-govde">
+    <p>Bunlar, Arap dilindeki lafızların delâletlerine dayanan ve usûl âlimlerinin nasları anlamak ve şer'î hükümler çıkarmak için kullandıkları kaidelerdir.</p>
+    <p>Bu incelemeye göre sayıları yaklaşık 15'tir.</p>
+    <p>Bunlardan bazıları şunlardır:</p>
+    <ul class="madde">
+      <li><strong><a href="https://shamela.ws/book/9077/6" target="_blank" rel="noopener">İkinci Kaide</a>:</strong> İtibar, sebeplerin hususiliğine değil, lafızların umumiliğinedir.</li>
+      <li><strong><a href="https://shamela.ws/book/9077/8" target="_blank" rel="noopener">Üçüncü Kaide</a>:</strong> Vasıfların ve cins isimlerinin başına gelen <span class="ar-par">«<span class="ar-ic" dir="rtl">ال</span>»</span> takısının istiğrâka (kapsamına giren bütün fertleri içine almaya) delâlet etmesi.</li>
+      <li><strong><a href="https://shamela.ws/book/9077/11" target="_blank" rel="noopener">Dördüncü Kaide</a>:</strong> Nefiy, nehiy, şart veya istifham (soru) bağlamında gelen nekre lafızların umuma delâlet etmesi.</li>
+      <li><strong><a href="https://shamela.ws/book/9077/13" target="_blank" rel="noopener">Beşinci Kaide</a>:</strong> Muzaf olan mufred lafzın umuma delâlet etmesi.</li>
+      <li><strong><a href="https://shamela.ws/book/9077/27" target="_blank" rel="noopener">On Birinci Kaide</a>:</strong> Delâletu'l-Mutâbaka, Delâletu't-Tazammun ve Delâletu'l-İltizâm.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">4</span><span>Yalnızca Usûlu't-Tefsîr'e ait kaideler</span></h4>
+  <div class="kisim-govde">
+    <p>Bunlar, Kur'ân-ı Kerîm'i anlamak ve tefsir etmekle ilgili olan, ayrıca Kur'ân'ın manaları, hidayeti ve açıklamaları ortaya koyarken takip ettiği yöntemleri ele alan kaidelerdir.</p>
+    <p>Bu incelemeye göre sayıları yaklaşık 45'tir.</p>
+    <p>Bunlardan bazıları şunlardır:</p>
+    <ul class="madde">
+      <li>Tefsirin nasıl öğrenilip alınacağıyla ilgili kaideler.</li>
+      <li>Kur'ân'ın tevhidi, nübüvveti ve âhireti açıklama yöntemleri.</li>
+      <li>Âyetler arasında var olduğu zannedilen çelişkilerin giderilmesi.</li>
+      <li>Muhkem ve muteşâbih.</li>
+      <li>Kur'ân'daki misaller.</li>
+      <li>Âyetlerin siyakı (bağlamı).</li>
+      <li>Kur'ân kıssaları.</li>
+    </ul>
+  </div>
+
+  <div class="ozet">
+    <h4>Özet</h4>
+    <p>Bu incelemeye dayanan tasnife göre kaidelerin dağılımı şöyledir:</p>
+    <table class="tablo">
+      <thead><tr><th>Kaidelerin türü</th><th>Sayısı</th></tr></thead>
+      <tbody>
+        <tr><td>Usûlu'l-Fıkh kaideleri</td><td>10</td></tr>
+        <tr><td>Arap dili kaideleri</td><td>1</td></tr>
+        <tr><td>Arap dili ile Usûlu'l-Fıkh arasında ortak kaideler</td><td>15</td></tr>
+        <tr><td>Usûlu't-Tefsîr kaideleri</td><td>45</td></tr>
+      </tbody>
+      <tfoot><tr><td>Toplam</td><td>71</td></tr></tfoot>
+    </table>
+  </div>
+
+  <div class="notkutu">
+    <span class="not-etiket">Uyarı</span>
+    <p>Kaidelerin bu dört kısma ayrılması ve her kısımdaki kaide sayısının belirlenmesi, inceleme ve içtihada dayanan bir tasniftir.</p>
+    <p>Bu tasnif, Şeyh Sa'dî rahimehullah'ın bizzat belirttiği bir sınıflandırma değildir. Bu sebeple bazı kaidelerin hangi kısma ait olduğu konusunda araştırmacılar arasında farklılıklar bulunabilir.</p>
+  </div>
+
+
+  <h3 class="altbolum" id="mesele-9"><span class="no">9</span>Kitabın başlığındaki kelimelerin anlamları ve başlığın genel manası</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Kitabın ismi</span></h4>
+  <div class="kisim-govde">
+    <div class="lafz">
+      <span class="ar-buyuk" dir="rtl">الْقَوَاعِدُ الْحِسَانُ الْمُتَعَلِّقَةُ بِتَفْسِيرِ الْقُرْآنِ</span>
+      <span class="lafz-tr">el-Kavâidu'l-Hisân el-Muteallika bi-Tefsîri'l-Kur'ân</span>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>el-Kavâid <span class="lafz-ar" dir="rtl">الْقَوَاعِدُ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Kaide kelimesinin çoğuludur.</p>
+    <div class="tanim">
+      <span class="tanim-etiket">Tanım</span>
+      <p class="ar">«هِيَ أَصْلٌ كُلِّيٌّ أَوْ ضَابِطٌ عَامٌّ تُعْرَفُ بِهِ أَحْكَامُ جُزْئِيَّاتٍ كَثِيرَةٍ»</p>
+      <p class="tr">Birçok fer'î meselenin hükümlerinin öğrenilmesini sağlayan küllî bir esas veya genel bir ölçüdür.</p>
+    </div>
+    <p>Örneğin, lafızların umuma delâletiyle ilgili tek bir kaide öğrendiğimizde, bu kaideden birçok âyetin manasını anlamada faydalanabiliriz.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>el-Hisân <span class="lafz-ar" dir="rtl">الْحِسَانُ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Manası güzel, faydası büyük olan ve doğru anlamaya yardımcı olan kaideler demektir.</p>
+    <p>Hisân, hasen <span class="ar-par">(<span class="ar-ic" dir="rtl">حَسَنٌ</span>)</span> kelimesinin çoğuludur. Fiâl <span class="ar-par">(<span class="ar-ic" dir="rtl">فِعَالٌ</span>)</span> vezninde gelen bir cem-i teksîrdir (kırık çoğul).</p>
+    <p>Dolayısıyla el-Kavâidu'l-Hisân, güzel, değerli ve faydalı kaideler anlamına gelir.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">4</span><span>el-Muteallika <span class="lafz-ar" dir="rtl">الْمُتَعَلِّقَةُ</span></span></h4>
+  <div class="kisim-govde">
+    <p>Belirli bir ilimle bağlantılı veya ilgili olan demektir. Burada kastedilen ilim, Kur'ân tefsiri ilmidir.</p>
+  </div>
+
+  <h4 class="kisim"><span class="no">5</span><span>Tefsîru'l-Kur'ân <span class="lafz-ar" dir="rtl">تَفْسِيرُ الْقُرْآنِ</span></span></h4>
+  <div class="kisim-govde">
+    <div class="tanim">
+      <span class="tanim-etiket">Tanım</span>
+      <p class="tr">Allah Teâlâ'nın kelamının manalarını açıklamak ve nasların delâletleri ile seleften nakledilen rivayetlere dayanarak Allah'ın muradını öğrenmektir.</p>
+    </div>
+  </div>
+
+  <h4 class="kisim"><span class="no">6</span><span>Kitabın başlığının genel manası</span></h4>
+  <div class="kisim-govde">
+    <p>İlim talebesinin Kur'ân-ı Kerîm'i doğru anlamasına ve âyetlerini doğru bir şekilde tefsir etmesine yardımcı olan faydalı ilmî esaslar ve kaideler bütünüdür.</p>
+  </div>
+
+</section>
+
+<footer>
+  <div class="marka">İlim Dersleri</div>
+  <div>el-Kavâidu'l-Hisân</div>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var b=document.body, perde=document.querySelector('.menu-perde');
+  function ac(){b.classList.add('menu-acik');}
+  function kapat(){b.classList.remove('menu-acik');}
+  document.querySelector('.menu-dugme').addEventListener('click',ac);
+  document.querySelector('.menu-kapat').addEventListener('click',kapat);
+  perde.addEventListener('click',kapat);
+  var linkler=[].slice.call(document.querySelectorAll('.menu a'));
+  linkler.forEach(function(a){a.addEventListener('click',kapat);});
+  var basliklar=linkler.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
+  function guncelle(){
+    var i=-1;
+    basliklar.forEach(function(h,k){ if(h.getBoundingClientRect().top<=window.innerHeight*0.3) i=k; });
+    linkler.forEach(function(a,k){a.classList.toggle('aktif',k===i);});
+    if(i>=0 && window.innerWidth>1180){
+      var a=linkler[i], m=document.querySelector('.menu'), r=a.getBoundingClientRect(), mr=m.getBoundingClientRect();
+      if(r.top<mr.top||r.bottom>mr.bottom) a.scrollIntoView({block:'nearest'});
+    }
+  }
+  window.addEventListener('scroll',guncelle,{passive:true});
+  guncelle();
+})();
+</script>
+</body>
+</html>
