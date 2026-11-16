@@ -243,6 +243,14 @@
           "baslik": "Şeyh Abdurrahman bin Nâsır es-Sa'dî'nin kısa biyografisi",
           "alt": "Üçüncü Mukaddime",
           "dosya": "03-ucuncu-mukaddime.html"
+        },
+        {
+          "id": "4",
+          "etiket": "4",
+          "kisa": "Kitabın Mukaddimesi",
+          "baslik": "Şeyh Sa'dî rahimehullah'ın mukaddimesi",
+          "alt": "Kitabın Mukaddimesi",
+          "dosya": "04-kitabin-mukaddimesi.html"
         }
       ]
     }
