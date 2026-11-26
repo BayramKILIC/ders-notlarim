@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siyer Dersi · 50. Beyit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#123a5f;
+    --navy-soft:#1d5183;
+    --ink:#20262e;
+    --ink-soft:#4a5462;
+    --paper:#fbfaf7;
+    --card:#ffffff;
+    --rule:#e2ddd3;
+
+    --green:#1e6b46;
+    --green-bg:#eef7f1;
+    --green-edge:#a8d3bb;
+
+    --amber:#8a5a12;
+    --amber-bg:#fdf5e6;
+    --amber-edge:#e2c184;
+
+    --blue:#1a4f80;
+    --blue-bg:#eef4fa;
+    --blue-edge:#a9c6e2;
+
+    --bordo:#75194c;
+    --bordo-bg:#fbf2f6;
+    --bordo-edge:#e3c3d4;
+
+    --red:#8d2f2f;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Source Serif 4","Cambria","Georgia",serif;
+    font-size:18px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .sayfa{
+    max-width:820px;
+    margin:0 auto;
+    padding:0 26px 90px;
+  }
+
+  /* ---------- KAPAK ---------- */
+  header.kapak{
+    color:var(--bordo);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:56px 0;
+    margin-bottom:60px;
+  }
+  header.kapak .marka{
+    font-size:.95rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:#d54220;
+    font-weight:600;
+    line-height:1.7;
+    max-width:26ch;
+  }
+  header.kapak .marka-cizgi{
+    width:120px;
+    height:1px;
+    background:var(--rule);
+    margin:26px auto 34px;
+  }
+  header.kapak h1{
+    font-size:clamp(3.3rem,9.5vw,5.8rem);
+    line-height:1.1;
+    color:var(--bordo);
+    margin:0;
+    font-weight:700;
+    letter-spacing:-.015em;
+    max-width:15ch;
+  }
+  header.kapak .altbaslik{
+    font-size:1.16rem;
+    color:var(--bordo);
+    font-style:italic;
+    margin:34px 0 0;
+    max-width:38ch;
+    line-height:1.7;
+  }
+  header.kapak .kunye{
+    margin-top:0;
+    padding-top:72px;
+    font-size:.94rem;
+    color:var(--bordo);
+    letter-spacing:.09em;
+  }
+  header.kapak .kapak-ayet{
+    max-width:540px;
+    margin:0 auto 10px;
+    font-size:1.04rem;
+    line-height:1.75;
+    letter-spacing:0;
+    font-style:italic;
+    color:var(--bordo);
+  }
+  header.kapak .kapak-ayet-kaynak{
+    margin:0;
+    font-size:.86rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  header.kapak .kunye .cizgi{
+    width:56px;
+    height:2px;
+    background:var(--bordo);
+    margin:0 auto 18px;
+  }
+  .besmele{
+    font-family:"Scheherazade New",serif;
+    font-size:2.5rem;
+    color:var(--bordo);
+    direction:rtl;
+    margin:0 0 46px;
+  }
+
+  /* ---------- NÂKID ---------- */
+  section.nakid{margin-bottom:70px;}
+
+  .nakid-baslik{
+    background:var(--navy);
+    color:#fff;
+    border-radius:4px;
+    padding:22px 28px;
+    margin-bottom:34px;
+  }
+  .nakid-baslik .etiket{
+    display:block;
+    font-size:.74rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    opacity:.72;
+    margin-bottom:8px;
+  }
+  .nakid-baslik h2{
+    margin:0;
+    font-size:1.42rem;
+    line-height:1.45;
+    font-weight:600;
+  }
+
+  /* ---------- METİN (müellifin sözü) ---------- */
+  .metin{
+    background:var(--bordo-bg);
+    border:1px solid var(--bordo-edge);
+    border-top:5px solid var(--bordo);
+    border-radius:4px;
+    padding:28px 32px 26px;
+    margin:0 0 20px;
+  }
+  .metin .metin-etiket{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px 12px;
+    font-size:.78rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--bordo);
+    margin-bottom:18px;
+  }
+  .metin .metin-etiket .rozet{
+    background:var(--bordo);
+    color:#fff;
+    padding:3px 11px;
+    border-radius:3px;
+    letter-spacing:.2em;
+  }
+  .metin .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:2rem;
+    line-height:2.1;
+    direction:rtl;
+    text-align:right;
+    color:var(--bordo);
+    margin:0 0 18px;
+  }
+  .metin .tr{
+    margin:0;
+    padding-top:16px;
+    border-top:1px dotted var(--bordo-edge);
+    font-size:1.06rem;
+  }
+
+  /* ---------- ŞERH AYRACI ---------- */
+  .serh-ayrac{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin:54px 0 10px;
+    color:var(--navy);
+  }
+  .serh-ayrac::before,.serh-ayrac::after{
+    content:"";
+    flex:1;
+    height:2px;
+    background:var(--navy-soft);
+    opacity:.35;
+  }
+  .serh-ayrac span{
+    font-size:1.05rem;
+    font-weight:700;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+  }
+
+  h3.altbolum{
+    font-size:1.55rem;
+    line-height:1.4;
+    color:var(--navy);
+    margin:60px 0 20px;
+    padding-bottom:12px;
+    border-bottom:3px solid var(--rule);
+    font-weight:700;
+  }
+  h3.altbolum .no{
+    display:inline-block;
+    min-width:38px;
+    height:38px;
+    line-height:38px;
+    text-align:center;
+    background:var(--navy-soft);
+    color:#fff;
+    border-radius:50%;
+    font-size:1rem;
+    margin-right:13px;
+    vertical-align:3px;
+  }
+
+  p{margin:0 0 17px;}
+
+  h4.kisim{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:1.2rem;
+    color:var(--navy-soft);
+    margin:34px 0 12px;
+    font-weight:700;
+  }
+  h4.kisim .no{
+    flex:0 0 auto;
+    width:28px;
+    height:28px;
+    line-height:25px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    background:var(--card);
+    font-size:.82rem;
+  }
+  .kisim-govde{
+    border-left:2px solid var(--rule);
+    margin-left:13px;
+    padding-left:27px;
+  }
+
+  .delil{
+    display:grid;
+    grid-template-columns:34px 1fr;
+    gap:0 18px;
+    margin:30px 0;
+    padding-bottom:8px;
+    border-bottom:1px dotted var(--rule);
+  }
+  .delil:last-of-type{border-bottom:none;}
+  .delil > .no{
+    width:34px;
+    height:34px;
+    line-height:34px;
+    text-align:center;
+    border-radius:50%;
+    background:var(--navy);
+    color:#fff;
+    font-size:.88rem;
+    font-weight:700;
+    margin-top:2px;
+  }
+  .delil > .govde > .blok:first-child{margin-top:0;}
+  .delil-etiket{
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--navy);
+    margin:6px 0 12px;
+  }
+  .delil > .govde > .delil-etiket + .blok{margin-top:0;}
+
+  .ikaz{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-left:5px solid var(--red);
+    border-radius:4px;
+    padding:20px 26px 6px;
+    margin:28px 0;
+  }
+  .ikaz .ikaz-etiket{
+    display:block;
+    font-size:.8rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--red);
+    margin-bottom:10px;
+  }
+  .ikaz ol.sayili{margin:10px 0 14px;}
+  ol.sayili li p.alt-tanim{margin:10px 0 0;padding-left:14px;border-left:2px solid var(--rule);}
+  ol.sayili > li > p{margin:12px 0 0;}
+  ol.sayili li .blok{margin:16px 0 8px;}
+  ul.madde li .blok{margin:14px 0 8px;}
+  ol.sayili > li ul.madde{margin:12px 0 4px;}
+  h4.kisim .baslik-alt{font-weight:400;color:var(--ink);}
+  h4.kisim .lafz-ar{font-family:"Scheherazade New",serif;font-weight:700;font-size:1.08em;line-height:1;color:var(--bordo);margin-left:8px;white-space:nowrap;}
+  .ar-ic{font-family:"Scheherazade New",serif;font-size:1.25em;line-height:1;unicode-bidi:isolate;display:inline-block;white-space:nowrap;}
+  .lafz{margin:22px 0;text-align:center;}
+  .lafz .ar-buyuk{display:block;font-family:"Scheherazade New",serif;font-size:1.7rem;line-height:1.9;color:var(--bordo);}
+  .lafz .lafz-tr{display:block;margin-top:2px;color:var(--ink-soft);}
+  .bolum-baslik{
+    margin:60px 0 28px;
+    padding:15px 18px;
+    text-align:center;
+    font-size:1.3rem;
+    font-weight:700;
+    line-height:1.4;
+    color:var(--navy);
+    background:var(--card);
+    border-top:2px solid var(--navy-soft);
+    border-bottom:2px solid var(--navy-soft);
+  }
+  .notkutu{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--navy-soft);border-radius:3px;padding:22px 24px 6px;margin:32px 0;}
+  .notkutu .not-etiket{display:block;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--navy-soft);margin-bottom:12px;}
+  ul.ikili{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:9px 30px;list-style:none;margin:26px 0;padding:0;}
+  ul.ikili li{position:relative;padding-left:18px;line-height:1.7;}
+  ul.ikili li::before{content:"";position:absolute;left:0;top:11px;width:6px;height:6px;background:var(--navy-soft);transform:rotate(45deg);}
+
+  /* ---------- VURGU ---------- */
+  .vurgu{
+    font-size:1.24rem;
+    line-height:1.7;
+    color:var(--navy);
+    font-weight:600;
+    border-left:4px solid var(--navy-soft);
+    padding:6px 0 6px 20px;
+    margin:30px 0;
+  }
+  .vurgu-buyuk{
+    font-size:1.42rem;
+    line-height:1.6;
+    text-align:center;
+    color:var(--navy);
+    font-weight:700;
+    margin:38px 0;
+    padding:26px 22px;
+    background:var(--card);
+    border-top:2px solid var(--navy-soft);
+    border-bottom:2px solid var(--navy-soft);
+  }
+  strong{color:var(--navy);font-weight:700;}
+  .sav{font-family:"Scheherazade New",serif;font-size:1.2em;line-height:1;font-weight:400;}
+
+  /* ---------- ALINTI BLOKLARI ---------- */
+  .blok{
+    border-radius:4px;
+    padding:22px 26px;
+    margin:26px 0;
+    border-left-width:5px;
+    border-left-style:solid;
+  }
+  .blok .ar{
+    font-family:"Scheherazade New",serif;
+    font-size:1.75rem;
+    line-height:2.05;
+    direction:rtl;
+    text-align:right;
+    margin-bottom:14px;
+  }
+  .blok .tr{margin:0 0 12px;}
+  .blok .kaynak{
+    font-size:.9rem;
+    color:var(--ink-soft);
+    font-style:italic;
+    margin:0;
+    padding-top:10px;
+    border-top:1px dotted currentColor;
+  }
+  .blok .soyleyen{
+    display:block;
+    font-size:.79rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:600;
+    margin-bottom:13px;
+  }
+
+  .ayet{background:var(--green-bg);border-left-color:var(--green-edge);}
+  .ayet .ar,.ayet .soyleyen{color:var(--green);}
+
+  .alim{background:var(--amber-bg);border-left-color:var(--amber-edge);}
+  .alim .ar,.alim .soyleyen{color:var(--amber);}
+
+  .hadis{background:var(--blue-bg);border-left-color:var(--blue-edge);}
+  .hadis .ar,.hadis .soyleyen{color:var(--blue);}
+
+  /* ---------- LİSTELER ---------- */
+  ul.madde{
+    list-style:none;
+    padding:0;
+    margin:20px 0;
+  }
+  ul.madde li{
+    position:relative;
+    padding:7px 0 7px 26px;
+  }
+  ul.madde li::before{
+    content:"◆";
+    position:absolute;
+    left:2px;
+    color:var(--navy-soft);
+    font-size:.68rem;
+    top:12px;
+  }
+
+  ul.madde.yildiz{margin:22px 0;}
+  ul.madde.yildiz > li{padding:10px 0 10px 28px;}
+  ul.madde.yildiz > li::before{
+    content:"✦";
+    left:0;
+    color:var(--amber);
+    font-size:.85rem;
+    top:9px;
+  }
+  ul.madde.yildiz > li + li{border-top:1px solid var(--rule);}
+  ul.madde.yildiz > li .notkutu{margin:14px 0 4px;}
+
+  ol.sayili{
+    list-style:none;
+    counter-reset:sira;
+    padding:0;
+    margin:22px 0;
+  }
+  ol.sayili > li{
+    counter-increment:sira;
+    position:relative;
+    padding:10px 0 10px 46px;
+    border-bottom:1px dotted var(--rule);
+  }
+  ol.sayili > li:last-child{border-bottom:none;}
+  ol.sayili > li::before{
+    content:counter(sira);
+    position:absolute;
+    left:0;
+    top:13px;
+    width:30px;
+    height:30px;
+    line-height:27px;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid var(--navy-soft);
+    color:var(--navy-soft);
+    background:var(--card);
+    font-size:.84rem;
+    font-weight:700;
+  }
+
+  /* ---------- ÖZET ---------- */
+  .ozet{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-top:4px solid var(--navy);
+    border-radius:4px;
+    padding:26px 30px;
+    margin-top:34px;
+  }
+  .ozet h4{
+    margin:0 0 16px;
+    color:var(--navy);
+    font-size:1.06rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+  .ozet ul{margin:0;padding-left:22px;}
+  .ozet li{margin-bottom:11px;}
+  .ozet li:last-child{margin-bottom:0;}
+
+  .ayirac{
+    text-align:center;
+    color:var(--rule);
+    letter-spacing:.5em;
+    margin:38px 0;
+    font-size:.8rem;
+  }
+
+  footer{
+    margin-top:70px;
+    padding-top:26px;
+    border-top:3px double var(--rule);
+    text-align:center;
+    color:#d54220;
+    font-size:.9rem;
+  }
+  footer .marka{
+    font-size:1rem;
+    color:#d54220;
+    font-weight:600;
+    letter-spacing:.1em;
+    margin-bottom:6px;
+  }
+
+  @media (max-width:620px){
+    body{font-size:16.5px;}
+    .sayfa{padding:0 16px 60px;}
+    header.kapak h1{font-size:2.8rem;}
+    .besmele{font-size:2rem;}
+    .nakid-baslik h2{font-size:1.16rem;}
+    h3.altbolum{font-size:1.3rem;margin:48px 0 16px;}
+    h3.altbolum .no{min-width:32px;height:32px;line-height:32px;font-size:.9rem;}
+    .metin{padding:22px 18px 20px;}
+    .metin .ar{font-size:1.65rem;line-height:2;}
+    .blok{padding:18px 18px;}
+    .ikaz{padding:18px 18px 4px;}
+    .kisim-govde{margin-left:0;padding-left:14px;}
+    .delil{grid-template-columns:28px 1fr;gap:0 10px;}
+    .delil > .no{width:28px;height:28px;line-height:28px;font-size:.8rem;}
+    .blok .ar{font-size:1.5rem;line-height:1.95;}
+    .vurgu-buyuk{font-size:1.18rem;padding:20px 16px;}
+    .vurgu{font-size:1.1rem;}
+  }
+
+  @media print{
+    @page{margin:18mm 16mm;}
+    body{background:#fff;font-size:11.5pt;}
+    .sayfa{max-width:none;padding:0;}
+    section.nakid{page-break-before:always;}
+    section.nakid:first-of-type{page-break-before:auto;}
+    .ayirac{display:none;}
+    header.kapak{
+      min-height:238mm;
+      page-break-after:always;
+      margin-bottom:0;
+    }
+    header.kapak h1{font-size:54pt;}
+    .besmele{font-size:26pt;}
+    section.nakid{page-break-inside:auto;}
+    .nakid-baslik{page-break-after:avoid;background:var(--navy) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .metin,.blok,.ozet,.vurgu-buyuk{page-break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    h3.altbolum,.serh-ayrac{page-break-after:avoid;}
+  }
+
+  /* ---------- BEYİT EKLERİ ---------- */
+  .metin .okunus{margin:0 0 14px;font-style:italic;color:var(--ink-soft);font-size:1rem;}
+  .metin .ar{font-size:1.72rem;}
+  .blok .kaynak a,.kaynak a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;}
+  .blok .kaynak a:hover,.kaynak a:hover{color:var(--navy-soft);}
+  .lafz + p.kaynak{font-size:.9rem;color:var(--ink-soft);font-style:italic;text-align:center;margin:-14px 0 30px;}
+  ul.ikili li{padding-top:2px;padding-bottom:2px;}
+  @media (max-width:620px){h4.kisim .lafz-ar,.ar-ic{white-space:normal;}}
+  .sayfa p a,.sayfa li a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;}
+  .sayfa p a:hover,.sayfa li a:hover{color:var(--navy-soft);}
+  /* TANIM KUTUSU */
+  .tanim{margin:30px 0;padding:20px 28px 22px;background:var(--card);border:1px solid var(--rule);border-top:4px solid var(--navy-soft);border-radius:4px;text-align:center;}
+  .tanim .tanim-etiket{display:block;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--navy-soft);margin-bottom:10px;}
+  .tanim .ar{font-family:"Scheherazade New",serif;font-size:1.7rem;line-height:2;direction:rtl;color:var(--bordo);margin:0 0 14px;}
+  .tanim .tr{margin:0;padding-top:14px;border-top:1px dotted var(--rule);font-size:1.12rem;line-height:1.7;font-weight:600;color:var(--navy);}
+  @media (max-width:620px){.tanim{padding:18px 16px;}.tanim .ar{font-size:1.45rem;line-height:1.95;}.tanim .tr{font-size:1.02rem;}}
+  @media print{.tanim{page-break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact;}}
+  /* FÂİDE TABLOSU */
+  .fayda-tablo{width:100%;border-collapse:collapse;margin:4px 0 18px;font-size:.98rem;}
+  .fayda-tablo th,.fayda-tablo td{padding:9px 12px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top;line-height:1.5;}
+  .fayda-tablo th{color:var(--navy);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;border-bottom:2px solid var(--navy-soft);}
+  .fayda-tablo tr:last-child td{border-bottom:none;}
+  @media (max-width:620px){.fayda-tablo th,.fayda-tablo td{padding:8px 6px;font-size:.9rem;}.fayda-tablo th{font-size:.7rem;letter-spacing:.05em;}}
+  /* KİŞİSEL NOT (küçük yazı) */
+  .kisisel{background:var(--card);border:1px dashed var(--rule);border-left:4px solid var(--ink-soft);border-radius:3px;padding:18px 22px 8px;margin:30px 0;font-size:.86rem;line-height:1.7;color:var(--ink-soft);}
+  .kisisel .kisisel-etiket{display:block;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--ink-soft);margin-bottom:10px;}
+  .kisisel p{margin:0 0 12px;}
+  .kisisel ul.madde{margin:8px 0;}
+  .kisisel ul.madde li{padding:5px 0 5px 22px;}
+  .kisisel ul.madde li::before{top:9px;}
+  .kisisel .blok{padding:14px 18px;margin:14px 0;}
+  .kisisel .blok .ar{font-size:1.35rem;line-height:1.9;margin-bottom:8px;}
+  .kisisel .blok .kaynak{font-size:.8rem;}
+  @media (max-width:620px){.kisisel{padding:14px 14px 6px;}.kisisel .blok .ar{font-size:1.2rem;}}
+</style>
+<style>.sayfa > section.nakid:first-of-type{margin-top:32px;}</style>
+</head>
+<body>
+<div class="sayfa">
+
+<section class="nakid">
+
+  <div class="nakid-baslik">
+    <span class="etiket">50. Beyit</span>
+    <h2>Zu'l-Uşeyra Gazvesi ve Ramazan orucunun farz kılınması</h2>
+  </div>
+
+  <div class="metin">
+    <div class="metin-etiket"><span class="rozet">Beyit 50</span>Şeyh rahimehullah dedi ki</div>
+    <p class="ar">مِنْ بَعْدِ ذِي الْعُشَيْرِ يَا إِخْوَانِي . . . وَفَرْضُ شَهْرِ الصَّوْمِ فِي شَعْبَانِ</p>
+    <p class="okunus">Min ba'di zi'l-Uşeyri yâ ihvânî, ve farzu şehri's-savmi fî Şa'bânî.</p>
+    <p class="tr">"Ey kardeşlerim! Bu olaylar Zu'l-Uşeyra Gazvesi'nden sonra gerçekleşti. Ramazan orucu ise Şa'bân ayında farz kılındı."</p>
+  </div>
+
+
+  <div class="serh-ayrac"><span>Şerh</span></div>
+
+
+  <h3 class="altbolum"><span class="no">1</span>Bu beyitte kaç hadise vardır?</h3>
+
+  <p>Bu beyitte iki hadiseden bahsedilmektedir:</p>
+  <ol class="sayili">
+    <li>Uşeyra Gazvesi (Aşîra olarak da okunur).</li>
+    <li>Ramazan orucunun Şa'bân ayında farz kılınması.</li>
+  </ol>
+  <p>Bunlar hicretin ikinci yılında vuku bulmuştur.</p>
+
+
+  <h3 class="altbolum"><span class="no">2</span>Beytin detaylı manası</h3>
+
+  <h4 class="kisim"><span class="no">1</span><span>Min ba'du <span class="lafz-ar" dir="rtl">مِنْ بَعْدُ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>«Ba'du» kelimesini damme ile okursak, i'râb bakımından Bedru'l-Ûlâ Gazvesi'nin Uşeyra Gazvesi'nden önce gerçekleştiğini söylemiş oluruz.</li>
+      <li>«Ba'di» kelimesini kesra ile okursak, Uşeyra Gazvesi'nin Bedru'l-Ûlâ Gazvesi'nden önce gerçekleştiğini söylemiş oluruz.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">2</span><span>Yâ ihvânî <span class="lafz-ar" dir="rtl">يَا إِخْوَانِي</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Şiirin kafiyesini sağlamak için kullanılmıştır.</li>
+    </ul>
+  </div>
+
+  <h4 class="kisim"><span class="no">3</span><span>Ve farzu şehri <span class="lafz-ar" dir="rtl">وَفَرْضُ شَهْرِ</span></span></h4>
+  <div class="kisim-govde">
+    <ul class="madde">
+      <li>Ramazan orucunun Şa'bân ayında farz kılındığını söylersek, kıblenin Kâbe'ye çevrilmesinden (Receb ayında) bir ay sonra farz kılındığını söylemiş oluruz.</li>
+      <li><strong>Şeyhin görüşü:</strong> Kıblenin yönü Receb ayında değiştirilmiş, Ramazan orucu ise bundan bir ay sonra, Şa'bân ayında farz kılınmıştır.</li>
+    </ul>
+  </div>
+
+
+  <div class="bolum-baslik">Uşeyra Gazvesi ile ilgili meseleler</div>
+
+  <div class="notkutu">
+    <span class="not-etiket">Ön Söz</span>
+    <p><a href="https://shamela.ws/book/23833/1345" target="_blank" rel="noopener">İbn İshâk</a>'a göre Uşeyra Gazvesi, Resûlullah'ın <span class="sav">ﷺ</span> üçüncü gazvesidir.</p>
+    <ol class="sayili">
+      <li>Ebvâ Gazvesi.</li>
+      <li>Buvât Gazvesi.</li>
+      <li>Uşeyra Gazvesi (Bedru'l-Ûlâ değil).</li>
+      <li>Bedru'l-Ûlâ Gazvesi.</li>
+    </ol>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">1</span>Neden bu ismi aldı?</h3>
+
+  <p>Gazve, Uşeyra bölgesinde gerçekleştiği ve Resûlullah <span class="sav">ﷺ</span> bu bölgede konakladığı için bu isimle anılmıştır.</p>
+
+
+  <h3 class="altbolum"><span class="no">2</span>Bu gazvenin isimleri</h3>
+
+  <ol class="sayili">
+    <li><strong>Gazvetu'l-Uşeyra</strong> (<span class="ar-ic" dir="rtl">غَزْوَةُ الْعُشَيْرَةِ</span>)
+      <ul class="madde"><li><a href="https://shamela.ws/book/23833/1345" target="_blank" rel="noopener">İbn İshâk</a> ve <a href="https://shamela.ws/book/1681/5948" target="_blank" rel="noopener">İmam Buhârî</a> bu ismi zikretmişlerdir.</li></ul></li>
+    <li><strong>Gazvetu'l-Uşeyr</strong> (<span class="ar-ic" dir="rtl">غَزْوَةُ الْعُشَيْرِ</span>): Sonunda tâ-i merbûta (<span class="ar-ic" dir="rtl">ة</span>) bulunmaz.
+      <ul class="madde"><li>Zeyd bin Erkam radıyallahu anh'ın hadisinde bu isim geçmektedir (<a href="https://shamela.ws/book/1681/5949" target="_blank" rel="noopener">Buhârî</a>).</li></ul></li>
+    <li><strong>Gazvetu Zâti'l-Uşeyra</strong> (<span class="ar-ic" dir="rtl">غَزْوَةُ ذَاتِ الْعُشَيْرَةِ</span>): «Uşera» (<span class="ar-ic" dir="rtl">عُشَرَة</span>), bu bölgede bulunan bir ağacın ismidir. Bu ağaç bölgede çok bulunduğu için buraya Zâtu'l-Uşeyra denilmiştir. Uşeyra, Uşera kelimesinin ism-i tasğîridir (küçültme şeklidir).
+      <ul class="madde"><li><a href="https://shamela.ws/book/1727/4633" target="_blank" rel="noopener">Sahîh-i Muslim</a>'de ve <a href="https://shamela.ws/book/23691/1228" target="_blank" rel="noopener">İbnu'l-Esîr</a>'in eserinde bu isim zikredilmektedir.</li></ul></li>
+    <li><strong>Gazvetu'l-Uşeyrâ</strong> (<span class="ar-ic" dir="rtl">غَزْوَةُ الْعُشَيْرَاءِ</span>): Sonunda elif-i memdûde (<span class="ar-ic" dir="rtl">اء</span>) bulunur.
+      <ul class="madde"><li><a href="https://shamela.ws/book/6864/1844" target="_blank" rel="noopener">Suheylî</a>, er-Ravdu'l-Unuf adlı eserinde bu ismi zikretmiştir.</li></ul></li>
+    <li><strong>Gazvetu'l-Useyra</strong> (<span class="ar-ic" dir="rtl">غَزْوَةُ الْعُسَيْرَةِ</span>): Şîn (<span class="ar-ic" dir="rtl">ش</span>) yerine sîn (<span class="ar-ic" dir="rtl">س</span>) harfi kullanılır.
+      <ul class="madde"><li><a href="https://shamela.ws/book/6864/1844" target="_blank" rel="noopener">Suheylî</a> ve İbnu'l-Arabî el-Mâlikî bu ismi zikretmişlerdir.</li></ul></li>
+    <li><strong>Gazvetu'l-Useyrâ</strong> (<span class="ar-ic" dir="rtl">غَزْوَةُ الْعُسَيْرَاءِ</span>): Şîn (<span class="ar-ic" dir="rtl">ش</span>) yerine sîn (<span class="ar-ic" dir="rtl">س</span>) harfi kullanılır ve sonunda elif-i memdûde (<span class="ar-ic" dir="rtl">اء</span>) bulunur.
+      <ul class="madde"><li><a href="https://shamela.ws/book/6864/1844" target="_blank" rel="noopener">Suheylî</a> ve İbnu'l-Arabî el-Mâlikî bu ismi zikretmişlerdir.</li></ul></li>
+  </ol>
+
+  <div class="notkutu">
+    <span class="not-etiket">İkaz</span>
+    <ul class="madde">
+      <li>Müennes (dişil) isim, o bölgede bulunan vadinin ismidir.</li>
+      <li>Müzekker (eril) isim de aynı bölgeyi ifade etmek için kullanılmaktadır. Nitekim <a href="https://shamela.ws/book/1673/4109" target="_blank" rel="noopener">İbn Hacer</a>, bu yerin isminin hem müzekker hem de müennes olarak kullanıldığını belirtmiştir.</li>
+    </ul>
+  </div>
+
+
+  <h3 class="altbolum"><span class="no">3</span>Bu gazve nerede gerçekleşti?</h3>
+
+  <p>Gazve, Yenbu en-Nahl (Yenbu el-Bahr değil, ondan yaklaşık 40 km uzaklıkta) bölgesinde gerçekleşmiştir. Bu bölge, Medine'ye yaklaşık 120 km uzaklıktadır.</p>
+  <p>Günümüzde bu yerin tam konumu bilinmemektedir. Ancak Aynu'l-Bereke köyüne yakın olduğu söylenmektedir.</p>
+
+
+  <h3 class="altbolum"><span class="no">4</span>Bu gazve ne zaman gerçekleşti?</h3>
+
+  <p>Uşeyra Gazvesi ile Bedru'l-Ûlâ Gazvesi arasında yaklaşık 10 gün olduğu söylenmektedir. Hangisinin önce gerçekleştiği konusunda ihtilaf bulunsa da bu iki gazve birbirine yakın tarihlerde meydana gelmiştir.</p>
+  <p>Bu konuda iki farklı görüş bulunmaktadır:</p>
+  <ol class="sayili">
+    <li><strong>Bedru'l-Ûlâ Gazvesi'nin önce gerçekleştiği görüşü:</strong> <a href="https://shamela.ws/book/23680/53" target="_blank" rel="noopener">Vâkıdî</a>, <a href="https://shamela.ws/book/9351/506" target="_blank" rel="noopener">İbn Sa'd</a>, <a href="https://shamela.ws/book/9783/1032" target="_blank" rel="noopener">İbn Cerîr</a>, <a href="https://shamela.ws/book/197/1570" target="_blank" rel="noopener">İbnu'l-Kayyim</a>, <a href="https://shamela.ws/book/1524/113" target="_blank" rel="noopener">Makrîzî</a> ve <a href="https://shamela.ws/book/122236/185" target="_blank" rel="noopener">Moğultay</a>.
+      <ul class="madde"><li>Bedru'l-Ûlâ Gazvesi, Rebîulevvel ayında gerçekleşmiştir. Uşeyra Gazvesi ise ondan sonra meydana gelmiştir. Çünkü Uşeyra Gazvesi, Cumâde'l-Ûlâ (Cemâziyelevvel) veya Cumâde'l-Âhire (Cemâziyelâhir) ayında gerçekleşmiştir.</li></ul></li>
+    <li><strong>Uşeyra Gazvesi'nin önce gerçekleştiği görüşü:</strong> <a href="https://shamela.ws/book/23833/622" target="_blank" rel="noopener">İbn İshâk</a>, <a href="https://shamela.ws/book/10695/92" target="_blank" rel="noopener">İbn Abdilberr</a>, <a href="https://shamela.ws/book/23708/939" target="_blank" rel="noopener">İbn Kesîr</a> ve <a href="https://shamela.ws/book/35100/361" target="_blank" rel="noopener">Zehebî</a>.
+      <ul class="madde"><li>Uşeyra Gazvesi, Cumâde'l-Ûlâ veya Cumâde'l-Âhire ayında; Bedru'l-Ûlâ Gazvesi ise Cumâde'l-Âhire ayında gerçekleşmiştir.</li></ul></li>
+  </ol>
+
+  <p>Uşeyra Gazvesi'nin hangi ayda gerçekleştiği konusunda da iki görüş vardır:</p>
+  <ol class="sayili">
+    <li><strong>Cumâde'l-Ûlâ ayında gerçekleştiği görüşü:</strong> <a href="https://shamela.ws/book/23833/622" target="_blank" rel="noopener">İbn İshâk</a>, <a href="https://shamela.ws/book/10695/92" target="_blank" rel="noopener">İbn Abdilberr</a>, <a href="https://shamela.ws/book/1036/124" target="_blank" rel="noopener">İbn Hazm</a>, <a href="https://shamela.ws/book/23653/259" target="_blank" rel="noopener">Ebu'l-Feth İbn Seyyidinnâs el-Ya'murî</a>, <a href="https://shamela.ws/book/35100/361" target="_blank" rel="noopener">Zehebî</a>, <a href="https://shamela.ws/book/23708/939" target="_blank" rel="noopener">İbn Kesîr</a> ve <a href="https://shamela.ws/book/1673/4108" target="_blank" rel="noopener">İbn Hacer</a>.
+      <div class="blok alim">
+        <span class="soyleyen">İbn İshâk rahimehullah (v. 151)</span>
+        <p class="ar">«فَلَبِثَ بِهَا بَقِيَّةَ شَهْرِ رَبِيعٍ الْآخَرِ وَبَعْضَ جُمَادَى الْأُولَى ... ثُمَّ غَزَا قُرَيْشًا ... حَتَّى نَزَلَ الْعُشَيْرَةَ مِنْ بَطْنِ يَنْبُعَ، فَأَقَامَ بِهَا جُمَادَى الْأُولَى وَلَيَالِيَ مِنْ جُمَادَى الْآخِرَةِ، وَوَادَعَ فِيهَا بَنِي مُدْلِجٍ وَحُلَفَاءَهُمْ مِنْ بَنِي ضَمْرَةَ، ثُمَّ رَجَعَ إِلَى الْمَدِينَةِ وَلَمْ يَلْقَ كَيْدًا»</p>
+        <p class="tr">"(Resûlullah <span class="sav">ﷺ</span> Buvât'tan döndükten sonra) Medine'de Rebîulâhir ayının geri kalanını ve Cumâde'l-Ûlâ ayının bir kısmını geçirdi... Sonra Kureyş'e karşı gazveye çıktı... Nihayet Yenbu vadisindeki Uşeyra'ya kondu. Orada Cumâde'l-Ûlâ ayını ve Cumâde'l-Âhire ayından birkaç geceyi geçirdi. Orada Benî Mudlic ve onların Benî Damra'dan olan müttefikleriyle anlaşma yaptı. Sonra hiçbir savaşla karşılaşmadan Medine'ye döndü."</p>
+        <p class="kaynak">📚 <a href="https://shamela.ws/book/23833/621" target="_blank" rel="noopener">İbn Hişâm, es-Sîretu'n-Nebeviyye, 1/598</a>–<a href="https://shamela.ws/book/23833/622" target="_blank" rel="noopener">599</a>.</p>
+      </div></li>
+    <li><strong>Cumâde'l-Âhire ayında gerçekleştiği görüşü:</strong> <a href="https://shamela.ws/book/23680/53" target="_blank" rel="noopener">Vâkıdî</a>, <a href="https://shamela.ws/book/9351/506" target="_blank" rel="noopener">İbn Sa'd</a>, <a href="https://shamela.ws/book/197/1566" target="_blank" rel="noopener">Dimyâtî</a>, <a href="https://shamela.ws/book/197/1570" target="_blank" rel="noopener">İbnu'l-Kayyim</a>, <a href="https://shamela.ws/book/1524/113" target="_blank" rel="noopener">Makrîzî</a> ve <a href="https://shamela.ws/book/122236/185" target="_blank" rel="noopener">Moğultay</a>.</li>
+  </ol>
+
+  <p><strong>Ebu'l-Feth İbn Seyyidinnâs el-Ya'murî'nin iki görüşü cem etmesi:</strong></p>
+  <ul class="madde">
+    <li><a href="https://shamela.ws/book/23653/260" target="_blank" rel="noopener">Ebu'l-Feth İbn Seyyidinnâs el-Ya'murî</a>, bu iki görüşün arasını şöyle cem etmiştir: Resûlullah <span class="sav">ﷺ</span>, Cumâde'l-Ûlâ ayında Medine'den çıkmış ve gazve Cumâde'l-Âhire ayında sona ermiştir.</li>
+  </ul>
+
+
+  <h3 class="altbolum"><span class="no">5</span>Bu gazvenin komutanı</h3>
+
+  <ul class="madde">
+    <li><strong>Müslümanların komutanı:</strong> Resûlullah <span class="sav">ﷺ</span>.</li>
+    <li><strong>Müşriklerin komutanı:</strong> Ebû Sufyân bin Harb.</li>
+  </ul>
+
+</section>
+
+</div>
+</body>
+</html>
